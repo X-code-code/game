@@ -28,7 +28,7 @@ const worldToNormalized = (p) => ({
 const city = {
     schemaVersion: 1,
     cityId: scene.id,
-    cityName: '活街区·茶摊灰盒',
+    cityName: '茶摊街区',
     background: 'greybox_ground_from_blueprint',
     mapSize: { width: scene.map.width, height: scene.map.height },
     view: { minZoom: scene.camera.minZoom, maxZoom: scene.camera.maxZoom,

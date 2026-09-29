@@ -1,10 +1,11 @@
-import { AssetManager, Color, Graphics, JsonAsset, Label, Node, UITransform, warn } from 'cc';
+import { AssetManager, Color, Graphics, JsonAsset, Label, Node, UITransform, Vec3, warn } from 'cc';
 import { CelAnimationPlayer } from '../character/CelAnimationPlayer';
 import type { CelClipName } from '../character/CelAnimationPlayer';
 import { paintAmbientChicken } from '../character/AmbientChickenPainter';
 import type { AmbientChickenHeading } from '../character/AmbientChickenPainter';
 import { loadSceneArtSlot } from './SceneArtSlot';
 import type { SceneDepthLayer } from './SceneDepthLayer';
+import type { TapTarget, TargetClicked } from '../gameplay/TargetInput';
 
 type Point = { x: number; y: number };
 type ArtSlot = { id: string; layer: string; center: Point; size: { width: number; height: number };
@@ -45,6 +46,12 @@ const SLOT_COLOR: Record<string, Color> = {
     effects: new Color(105, 165, 174, 155),
     target_foreground: new Color(139, 104, 74, 180),
 };
+const NPC_CLUES: Record<string, string> = {
+    tea_vendor: '茶香里有只不会飞的小鸟，\n可别把它当茶杯。',
+    flower_buyer: '裁缝铺的针线盘里，\n有件东西正好套在指尖。',
+    lantern_watcher: '抬头看看街上的布幅，\n系布的人留下了个小结。',
+    chestnut_seller: '栗子纸包旁少了一把铁器，\n烫手时我总靠它。',
+};
 
 function addGraphics(parent: Node, name: string): { node: Node; graphic: Graphics } {
     const node = new Node(name);
@@ -83,9 +90,22 @@ export class LivingCityGreybox {
     private cupMarker: Node | null = null;
     private ambientFx: Graphics | null = null;
     private ambientSeconds = 0;
+    private clueBubble: Node | null = null;
+    private clueText: Label | null = null;
+    private clueNpcId: string | null = null;
+    private clueSeconds = 0;
     private debugLabel: Node | null = null;
     private artGroundLoaded = false;
     private blueprint: Blueprint | null = null;
+
+    /** Same gesture router as the hidden objects, with lower hit priority. */
+    public readonly clueTarget: TapTarget = {
+        hitTest: (uiX, uiY) => this.clueNpcAt(uiX, uiY) !== null,
+        activate: (uiX, uiY): TargetClicked | null => {
+            const npc = this.clueNpcAt(uiX, uiY);
+            return npc ? { type: 'scene', id: npc.plan.id, tags: ['npc_clue'] } : null;
+        },
+    };
 
     public constructor(private readonly map: Node, private readonly depth: SceneDepthLayer,
         private readonly bundle: AssetManager.Bundle, private readonly targetNodes: readonly Node[],
@@ -218,7 +238,66 @@ export class LivingCityGreybox {
         this.cupMarker = cup.node;
         this.debugLabel = label(front.node, 'GREYBOX / GEOMETRY ONLY', 0, 940, 22);
         this.debugLabel.active = !this.artGroundLoaded;
+        this.createClueBubble(front.node);
         this.depth.sort();
+    }
+
+    private clueNpcAt(uiX: number, uiY: number): NpcRuntime | null {
+        if (this.disposed || !this.blueprint) return null;
+        const point = new Vec3(uiX, uiY, 0);
+        for (const npc of this.npcs) {
+            if (!NPC_CLUES[npc.plan.id] || !npc.node.isValid) continue;
+            const local = npc.node.getComponent(UITransform)?.convertToNodeSpaceAR(point);
+            if (local && Math.abs(local.x) <= 42 && local.y >= 0 &&
+                local.y <= npc.plan.actorHeight + 10) return npc;
+        }
+        return null;
+    }
+
+    private createClueBubble(parent: Node): void {
+        const { node, graphic } = addGraphics(parent, 'LivingCityNpcClue');
+        node.getComponent(UITransform)?.setContentSize(330, 112);
+        graphic.fillColor = new Color(255, 247, 224, 250);
+        graphic.strokeColor = COLOR.outline;
+        graphic.lineWidth = 3;
+        graphic.roundRect(-165, -48, 330, 96, 15);
+        graphic.fill();
+        graphic.stroke();
+        graphic.moveTo(-15, -48);
+        graphic.lineTo(-5, -61);
+        graphic.lineTo(4, -48);
+        graphic.fill();
+        graphic.stroke();
+        const textNode = new Node('ClueText');
+        node.addChild(textNode);
+        textNode.addComponent(UITransform).setContentSize(310, 82);
+        const text = textNode.addComponent(Label);
+        text.fontSize = 25;
+        text.lineHeight = 32;
+        text.color = new Color(76, 56, 41, 255);
+        text.horizontalAlign = Label.HorizontalAlign.CENTER;
+        text.verticalAlign = Label.VerticalAlign.CENTER;
+        this.clueBubble = node;
+        this.clueText = text;
+        node.active = false;
+    }
+
+    public showNpcClue(npcId: string): void {
+        const npc = this.npcs.find(item => item.plan.id === npcId);
+        const text = NPC_CLUES[npcId];
+        if (!npc || !text || !this.clueBubble?.isValid || !this.clueText) return;
+        this.clueNpcId = npcId;
+        this.clueSeconds = 4;
+        this.clueText.string = text;
+        this.clueBubble.active = true;
+        this.positionClueBubble(npc);
+    }
+
+    private positionClueBubble(npc: NpcRuntime): void {
+        const x = npc.node.position.x;
+        const sideOffset = x < -300 ? 125 : x > 300 ? -125 : 0;
+        this.clueBubble?.setPosition(Math.max(-590, Math.min(590, x + sideOffset)),
+            Math.min(924, npc.node.position.y + npc.plan.actorHeight + 105), 0);
     }
 
     private drawSlot(parent: Node, slot: ArtSlot): void {
@@ -327,6 +406,12 @@ export class LivingCityGreybox {
         const delta = Math.min(dt, 0.08);
         this.ambientSeconds += delta;
         this.paintAmbientFx();
+        if (this.clueSeconds > 0) {
+            this.clueSeconds = Math.max(0, this.clueSeconds - delta);
+            const speaker = this.npcs.find(npc => npc.plan.id === this.clueNpcId);
+            if (speaker) this.positionClueBubble(speaker);
+            if (this.clueSeconds === 0 && this.clueBubble?.isValid) this.clueBubble.active = false;
+        }
         if (this.eventSeconds >= 0) {
             this.eventSeconds += delta;
             if (this.eventSeconds >= 1.9) {
@@ -437,6 +522,10 @@ export class LivingCityGreybox {
         this.frontRoot = null;
         this.cupMarker = null;
         this.ambientFx = null;
+        this.clueBubble = null;
+        this.clueText = null;
+        this.clueNpcId = null;
+        this.clueSeconds = 0;
         this.debugLabel = null;
         this.artGroundLoaded = false;
     }

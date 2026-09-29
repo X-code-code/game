@@ -239,6 +239,90 @@ def south_storefront(a, kind):
     a.im.alpha_composite(sub.im,(0,top_clearance*S))
 
 
+def south_post_house(a):
+    # A low civic workshop at the end of the tailor row. The parcel shelves
+    # and envelope crest tell its function without labels or collectible icons.
+    w,h=a.w,a.h
+    a.ellipse((24,h-32,w-22,h-7),rgb(DEEP,36),None)
+    a.poly([(15,85),(w-17,81),(w-20,h-28),(15,h-26)],"#E7D5B6",INK,3)
+    a.poly([(7,91),(34,17),(w-46,13),(w-8,89),(w-16,113),(14,116)],SLATE,INK,3)
+    a.poly([(40,24),(w-49,21),(w-65,83),(26,88)],"#8DA5A3",None)
+    roof_tiles(a,30,37,w-34,91,"#607A84",29)
+    a.poly([(17,104),(w-20,101),(w-23,126),(18,128)],"#8B7565",INK,2)
+    a.line([(25,111),(w-28,108)],"#D8C5A6",2)
+    # Two sorting windows, with parcels resting on their shelves.
+    for x0 in (36,w-151):
+        a.box((x0,152,x0+115,265),"#655B4D",INK,2.6,3)
+        a.line([(x0+7,200),(x0+108,198)],"#D1A97D",4)
+        a.line([(x0+8,244),(x0+106,243)],"#D1A97D",3)
+        for x,y,c in ((x0+20,169,GOLD),(x0+57,171,TERRACOTTA),(x0+87,166,SAGE),
+                      (x0+32,213,CREAM),(x0+73,216,GOLD)):
+            a.poly([(x,y),(x+20,y-2),(x+23,y+20),(x-2,y+20)],c,INK_LIGHT,1.1)
+            a.line([(x+10,y),(x+11,y+19)],"#C9A77E",1)
+        a.line([(x0+5,151),(x0+5,264)],WOOD,2)
+        a.line([(x0+109,151),(x0+109,264)],WOOD,2)
+    # Dark arched doorway and a stamped envelope crest over the lintel.
+    mid=w/2
+    a.box((mid-40,181,mid+40,h-31),"#665449",INK,2.6)
+    a.ellipse((mid-40,159,mid+40,209),"#665449",INK,2.6)
+    a.box((mid-27,183,mid+27,h-31),"#775E4A",None)
+    a.ellipse((mid+17,242,mid+23,248),GOLD,INK_LIGHT,1)
+    a.poly([(mid-21,131),(mid+22,131),(mid+22,153),(mid-21,153)],CREAM,INK,1.4)
+    a.line([(mid-20,134),(mid,145),(mid+21,134)],TERRACOTTA,1.6)
+    a.box((19,h-28,w-19,h-17),"#BA9A78",INK_LIGHT,1.3)
+
+
+def south_grain_house(a):
+    # Different roof and opening rhythm from the post house, with the same
+    # near-parallel projection and warm 2D palette as the older shop row.
+    w,h=a.w,a.h
+    a.ellipse((19,h-31,w-13,h-7),rgb(DEEP,36),None)
+    a.poly([(13,92),(w-13,91),(w-15,h-26),(14,h-27)],"#E6D7B9",INK,3)
+    a.poly([(3,103),(w*.5,12),(w-4,103),(w-14,122),(12,122)],"#A96F54",INK,3)
+    a.poly([(37,96),(w*.5,30),(w-38,97)],"#C48B69",INK_LIGHT,1.7)
+    for y in (62,85,105):
+        span=(y-12)/91*(w*.5-15)
+        a.line([(w*.5-span,y),(w*.5+span,y)],"#865C4A",1.5)
+    a.poly([(18,118),(w-18,118),(w-19,140),(20,140)],"#B67A5A",INK,2)
+    a.line([(30,127),(w-29,127)],"#E1B48E",1.7)
+    # A wide service arch and visible working interior.
+    a.box((w*.27,181,w*.73,h-29),"#675648",INK,2.5)
+    a.ellipse((w*.27,153,w*.73,215),"#675648",INK,2.5)
+    a.box((w*.31,200,w*.69,h-30),"#8F7155",None)
+    for x in (w*.35,w*.49,w*.61):
+        a.poly([(x-20,240),(x+18,239),(x+23,276),(x-22,277)],GOLD,INK_LIGHT,1.5)
+        a.line([(x-18,249),(x+18,249)],"#DBBF88",1.5)
+        a.line([(x-14,258),(x+15,258)],"#B8875B",1.5)
+    # Shallow wings carry baskets, leaving the arch recognisable at phone zoom.
+    for x in (45,w-88):
+        a.box((x,167,x+43,224),"#65594D",INK,2)
+        a.line([(x+4,189),(x+39,189)],"#C19E75",3)
+        jar(a,x+12,174,19,20,POT)
+        jar(a,x+15,196,18,19,CREAM)
+        a.poly([(x-3,249),(x+45,248),(x+40,279),(x+2,279)],"#B68C60",INK,1.6)
+        for yy in (256,266): a.line([(x+4,yy),(x+39,yy)],"#D0AF80",1)
+    a.box((17,h-29,w-17,h-18),"#B99A77",INK_LIGHT,1.3)
+
+
+def east_pottery_annex(a):
+    # A roofed annex on the existing east shop, behind the separate depth
+    # display. Avoid a copied storefront silhouette in this short gap.
+    w,h=a.w,a.h
+    a.ellipse((15,h-29,w-17,h-7),rgb(DEEP,29),None)
+    a.poly([(15,63),(w-17,62),(w-18,h-22),(16,h-20)],"#DCC9A8",INK,2.5)
+    a.poly([(7,72),(28,18),(w-30,16),(w-5,70),(w-15,90),(15,91)],SLATE,INK,2.5)
+    roof_tiles(a,25,31,w-24,70,"#5F7A83",24)
+    a.box((23,103,w-22,h-36),"#665B4C",INK,2)
+    a.line([(27,133),(w-26,132)],"#C99F73",4)
+    a.line([(27,165),(w-26,164)],"#C99F73",4)
+    for x,y,c in ((40,112,TERRACOTTA),(81,109,CREAM),(119,112,SAGE),(158,110,POT),
+                  (55,143,POT),(97,143,TERRACOTTA),(141,141,CREAM)):
+        jar(a,x-8,y,18,22,c)
+    a.line([(17,88),(17,h-22)],WOOD,5)
+    a.line([(w-17,87),(w-17,h-22)],WOOD,5)
+    a.box((13,h-26,w-13,h-17),"#AF9071",INK_LIGHT,1.2)
+
+
 def tea_back(a):
     w,h=a.w,a.h
     # Open-sided timber stall, awning exported separately.
@@ -656,6 +740,9 @@ DRAW = {
  "lc_east_bun_cart_front":east_bun_cart_front,
  "lc_west_market_handcart":west_market_handcart,
  "lc_street_water_station":street_water_station,
+ "lc_south_post_house_back":south_post_house,
+ "lc_south_grain_house_back":south_grain_house,
+ "lc_east_pottery_annex_back":east_pottery_annex,
  "lc_tea_whistle_foreground":tea_whistle_foreground,
  "lc_tailor_thimble_foreground":tailor_thimble_foreground,
  "lc_banner_knot_foreground":banner_knot_foreground,

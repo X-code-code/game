@@ -1,7 +1,7 @@
 import { EventMouse, EventTouch, Input, input } from 'cc';
 
 export interface TargetClicked {
-    type: 'hiddenObject' | 'chicken';
+    type: 'hiddenObject' | 'chicken' | 'scene';
     id: string;
     tags: readonly string[];
 }

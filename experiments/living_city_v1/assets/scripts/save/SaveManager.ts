@@ -2,6 +2,8 @@ import type { LocalStorageAdapter } from '../platform/LocalStorageAdapter';
 
 export const SAVE_VERSION = 1 as const;
 export const DEFAULT_SAVE_KEY = 'chicken_city_exploration_save';
+/** This independent playable slice must never overwrite the original project's save. */
+export const LIVING_CITY_SAVE_KEY = 'chriken_living_city_v1_save_v1';
 
 /** Names match MapBrowserDemo's serializable progress DTO. */
 export interface CityProgressSnapshot {
@@ -39,7 +41,13 @@ function validId(value: unknown): value is string {
 }
 
 function uniqueIds(values: readonly string[]): string[] {
-    return [...new Set(values.filter(validId))];
+    // Creator's script transpilation does not reliably spread a Set in the Web
+    // Mobile target. Keep this as an array loop so persisted IDs stay strings.
+    const result: string[] = [];
+    for (const value of values) {
+        if (validId(value) && result.indexOf(value) < 0) result.push(value);
+    }
+    return result;
 }
 
 function stringRecord(): Record<string, string> {
@@ -250,4 +258,11 @@ export class SaveManager {
         this.data = next;
         return true;
     }
+}
+
+/** A saved city may disappear from a later catalog; then start at the catalog's entry city. */
+export function chooseStartupCityId(save: SaveManager, availableCityIds: readonly string[],
+    initialCityId: string): string {
+    const savedId = save.getCurrentCityId();
+    return availableCityIds.indexOf(savedId) >= 0 && save.isCityUnlocked(savedId) ? savedId : initialCityId;
 }

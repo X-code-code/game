@@ -1,7 +1,7 @@
 {
   "batchId": "simple_city_scene_v1",
   "status": "mechanical_pass_visual_pending",
-  "checkedAssets": 35,
+  "checkedAssets": 38,
   "source": "render_scene.py",
   "processing": "2x supersample Pillow drawing, Lanczos downsample, optimized PNG RGBA",
   "results": [
@@ -406,6 +406,45 @@
         255
       ],
       "sha256": "9622edae2366df62cc25526ad74738720fb4aa69d3c2ae429665d96fc300a8a2",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_south_post_house_back",
+      "dimensions": [
+        416,
+        320
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "e48f9edc2b59b76075d3d8f4c0dbcd4b7b8fa70cf7cc91a602d3b8069acb73d5",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_south_grain_house_back",
+      "dimensions": [
+        404,
+        320
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "ed76a41ad6da08cf235f5fe12f1fa6ffa2dafb970760184d87e5ce2315b73e36",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_east_pottery_annex_back",
+      "dimensions": [
+        200,
+        210
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "cd8348a8b57f1b28f126297a077f79234eee76ae3ee1007e9986b20232a15679",
       "bundleCopyMatches": true
     },
     {

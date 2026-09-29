@@ -2,6 +2,7 @@ import { _decorator, Component, director, Director, Node, UITransform, warn } fr
 import type { CityContentLoader, LoadedCity } from '../config/CityContentLoader';
 import { MapBrowserDemo } from '../map/MapBrowserDemo';
 import { CityCompletionPanel } from '../ui/CityCompletionPanel';
+import type { SaveManager } from '../save/SaveManager';
 
 const { ccclass } = _decorator;
 interface CityInstance { content: LoadedCity; root: Node; view: MapBrowserDemo }
@@ -10,6 +11,7 @@ interface CityInstance { content: LoadedCity; root: Node; view: MapBrowserDemo }
 @ccclass('CityManager')
 export class CityManager extends Component {
     private loader: CityContentLoader | null = null;
+    private save: SaveManager | null = null;
     private current: CityInstance | null = null;
     private ui: CityCompletionPanel | null = null;
     private completionShown = false;
@@ -17,13 +19,16 @@ export class CityManager extends Component {
     private failed = false;
     private generation = 0;
     private disposed = false;
+    private saveWarningShown = false;
 
-    public initialize(loader: CityContentLoader, initial: LoadedCity): void {
+    public initialize(loader: CityContentLoader, initial: LoadedCity, save?: SaveManager): void {
         this.loader = loader;
+        this.save = save ?? null;
         this.ui = new CityCompletionPanel(this.node, () => this.continueExploring(),
             () => { void this.goNext(); }, () => this.showCompletion());
         this.current = this.prepare(initial);
         this.current.root.active = true;
+        this.persist(() => this.save?.setCurrentCity(initial.config.cityId));
         this.ui.root.setSiblingIndex(this.node.children.length - 1);
         this.checkCompletion();
     }
@@ -49,6 +54,8 @@ export class CityManager extends Component {
         const nextId = old?.content.config.nextCityId;
         if (this.disposed || this.loading || !old || !nextId || !old.view.progress.allRequiredComplete || !this.loader) return;
         const request = ++this.generation;
+        this.recordProgress(old);
+        this.persist(() => this.save?.recordCityCompletion(old.content.config.cityId, nextId));
         this.loading = true;
         this.failed = false;
         this.showCompletion();
@@ -69,6 +76,7 @@ export class CityManager extends Component {
             return;
         }
         this.current = staged;
+        this.persist(() => this.save?.setCurrentCity(nextId));
         this.loading = false;
         this.failed = false;
         this.completionShown = false;
@@ -89,8 +97,11 @@ export class CityManager extends Component {
         const instance = { content, root, view };
         try {
             view.mount(content.config, content.bundle, () => {
-                if (this.current === instance) this.checkCompletion();
-            }, (x, y) => this.loading || !!this.ui?.blocksInput(x, y));
+                if (this.current !== instance) return;
+                this.recordProgress(instance);
+                this.checkCompletion();
+            }, (x, y) => this.loading || !!this.ui?.blocksInput(x, y),
+            this.save?.getCityProgress(content.config.cityId));
             return instance;
         } catch (mountError) {
             this.retire(instance);
@@ -99,9 +110,29 @@ export class CityManager extends Component {
     }
 
     private checkCompletion(): void {
-        if (this.completionShown || !this.current?.view.progress.allRequiredComplete) return;
+        const current = this.current;
+        if (this.completionShown || !current?.view.progress.allRequiredComplete) return;
         this.completionShown = true;
+        this.recordProgress(current);
+        this.persist(() => this.save?.recordCityCompletion(current.content.config.cityId,
+            current.content.config.nextCityId));
         this.showCompletion();
+    }
+
+    private recordProgress(instance: CityInstance): void {
+        this.persist(() => this.save?.recordCityProgress(instance.content.config.cityId,
+            instance.view.getProgressSnapshot()));
+    }
+
+    private persist(write: () => void): void {
+        if (!this.save) return;
+        try {
+            write();
+        } catch (saveError) {
+            // Full/disabled storage cannot interrupt tapping, completion or city travel.
+            if (!this.saveWarningShown) warn('Local city progress could not be saved', saveError);
+            this.saveWarningShown = true;
+        }
     }
 
     private showCompletion(): void {
@@ -134,6 +165,7 @@ export class CityManager extends Component {
         if (this.current) this.retire(this.current);
         this.current = null;
         this.loader = null;
+        this.save = null;
         this.ui?.dispose();
         this.ui = null;
     }

@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { SaveManager, DEFAULT_SAVE_KEY } from '../assets/scripts/save/SaveManager.ts';
+import { SaveManager, DEFAULT_SAVE_KEY, LIVING_CITY_SAVE_KEY, chooseStartupCityId } from
+    '../assets/scripts/save/SaveManager.ts';
 import { WechatLocalStorageAdapter } from '../assets/scripts/platform/LocalStorageAdapter.ts';
 
 function memoryStorage() {
@@ -89,4 +90,55 @@ test('the WeChat adapter maps empty and string values through synchronous storag
     assert.equal(adapter.loadLocal('missing'), null);
     adapter.saveLocal('progress', '{"version":1}');
     assert.equal(adapter.loadLocal('progress'), '{"version":1}');
+});
+
+test('independent living city key keeps progress per city and away from the original project', () => {
+    const storage = memoryStorage();
+    const original = new SaveManager(storage, 'demo_city');
+    original.recordCityProgress('demo_city', {
+        completedTaskIds: ['find_original'], foundHiddenObjectIds: ['original_prop'],
+        discoveredChickenIds: [],
+    });
+    const living = new SaveManager(storage, 'living_city_street_block_01', LIVING_CITY_SAVE_KEY);
+    assert.equal(chooseStartupCityId(living,
+        ['living_city_street_block_01', 'demo_city'], 'living_city_street_block_01'),
+    'living_city_street_block_01');
+    living.recordCityProgress('living_city_street_block_01', {
+        completedTaskIds: ['find_whistle'], foundHiddenObjectIds: ['tea_clay_whistle'],
+        discoveredChickenIds: [],
+    });
+    living.recordCityProgress('living_city_street_block_01', {
+        completedTaskIds: ['find_whistle'], foundHiddenObjectIds: ['tea_clay_whistle'],
+        discoveredChickenIds: [],
+    });
+    living.recordCityCompletion('living_city_street_block_01', 'demo_city');
+    living.setCurrentCity('demo_city');
+    living.recordCityProgress('demo_city', {
+        completedTaskIds: ['find_demo'], foundHiddenObjectIds: [], discoveredChickenIds: ['demo_chicken'],
+    });
+
+    const restored = new SaveManager(storage, 'living_city_street_block_01', LIVING_CITY_SAVE_KEY);
+    assert.equal(chooseStartupCityId(restored,
+        ['living_city_street_block_01', 'demo_city'], 'living_city_street_block_01'), 'demo_city');
+    assert.deepEqual(restored.getCityProgress('living_city_street_block_01').completedTaskIds,
+        ['find_whistle']);
+    assert.deepEqual(restored.getCityProgress('demo_city').completedTaskIds, ['find_demo']);
+    assert.deepEqual(restored.getCityProgress('demo_city').foundHiddenObjectIds, []);
+    assert.deepEqual(original.getCityProgress('demo_city').completedTaskIds, ['find_original']);
+    assert.notEqual(storage.data.get(DEFAULT_SAVE_KEY), storage.data.get(LIVING_CITY_SAVE_KEY));
+});
+
+test('corrupt or removed saved city falls back to the living city entry', () => {
+    const storage = memoryStorage();
+    storage.data.set(LIVING_CITY_SAVE_KEY, '{');
+    const corrupt = new SaveManager(storage, 'living_city_street_block_01', LIVING_CITY_SAVE_KEY);
+    assert.equal(corrupt.loadStatus, 'reset');
+    assert.equal(chooseStartupCityId(corrupt, ['living_city_street_block_01'],
+        'living_city_street_block_01'), 'living_city_street_block_01');
+
+    corrupt.recordCityCompletion('living_city_street_block_01', 'removed_city');
+    corrupt.setCurrentCity('removed_city');
+    const stale = new SaveManager(storage, 'living_city_street_block_01', LIVING_CITY_SAVE_KEY);
+    assert.equal(chooseStartupCityId(stale, ['living_city_street_block_01'],
+        'living_city_street_block_01'), 'living_city_street_block_01');
 });

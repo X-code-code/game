@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "cityId": "living_city_street_block_01",
-  "cityName": "活街区·茶摊灰盒",
+  "cityName": "茶摊街区",
   "background": "greybox_ground_from_blueprint",
   "mapSize": {
     "width": 1536,

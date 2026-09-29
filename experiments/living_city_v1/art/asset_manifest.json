@@ -114,12 +114,12 @@
       "category": "layered_scene_batch",
       "status": "trial_unapproved",
       "sourceType": "codex_authored_2d_code",
-      "assetCount": 35,
+      "assetCount": 38,
       "idManifestPath": "art/production/simple_city_scene_v1/scene_manifest.json",
       "sourcePath": "art/production/simple_city_scene_v1/render_scene.py",
       "bundleFolder": "assets/bundles/city_living_city_street_block_01/simple2d_scene",
       "reviewPath": "art/production/simple_city_scene_v1/AUTHORING_AND_REVIEW.md",
-      "description": "35 aligned near-top-down street layers exported from editable drawing code, including five new street-furnishing layers and four small target-foreground overlays. Mechanical, route, target-alpha-overlap, and 444x960 assembled Cocos loading checks passed; player visual approval pending."
+      "description": "38 aligned near-top-down street layers exported from editable drawing code, including two distinct southern houses, an east shop pottery annex, and four small target-foreground overlays. Mechanical, route, and target-alpha-overlap checks passed for 38 layers; all 38 loaded in the integrated Cocos Web Mobile browser check. Player visual approval is pending."
     },
     {
       "id": "simple_chicken_courier_v1",

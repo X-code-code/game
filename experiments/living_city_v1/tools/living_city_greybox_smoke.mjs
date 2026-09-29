@@ -112,6 +112,13 @@ try {
                     hitRadiusPx:Math.hypot(edge.x-center.x,edge.y-center.y),
                     active:node.activeInHierarchy};
             };
+            const speaker=box.npcs.find(n=>n.plan.id==='tea_vendor');
+            const speakerWorld=speaker?.node.worldPosition.clone();
+            if (speakerWorld) speakerWorld.y+=speaker.plan.actorHeight*.65*speaker.node.worldScale.y;
+            const speakerScreen=speakerWorld?camera.worldToScreen(speakerWorld):null;
+            let savedCompleted=null;
+            try { savedCompleted=JSON.parse(localStorage.getItem('chriken_living_city_v1_save_v1'))
+                ?.cities?.living_city_street_block_01?.completedTaskIds?.length??null; } catch {}
             return {ready:true,city:city.content.config.cityId,viewport:{width:innerWidth,height:innerHeight},
                 map:{x:map.position.x,y:map.position.y,scale:map.scale.x},
                 npcCount:box.npcs.length,npcs:box.npcs.map(n=>({id:n.plan.id,x:n.node.position.x,y:n.node.position.y,
@@ -122,6 +129,15 @@ try {
                     targetSprites:count(map,n=>n.name==='PropArt'),
                     messengerCels:!!box.npcs.find(n=>n.plan.id==='messenger_customer')?.cels?.isReady,
                     ground:!!box.artGroundLoaded,debugLabelVisible:!!box.debugLabel?.active},
+                stickers:[...city.view.stickerCards].map(([id,card])=>({id,
+                    screen:screen(card.node),hasImage:!!card.icon.spriteFrame,found:card.stamp.active})),
+                stickerClue:city.view.stickerClueLabel?.string,
+                npcClue:{active:!!box.clueBubble?.active,text:box.clueText?.string,
+                    speakerScreen:speakerScreen?{x:speakerScreen.x,y:innerHeight-speakerScreen.y}:null},
+                savedCompleted,
+                memorySavedCompleted:manager.save?.getCityProgress(city.content.config.cityId)
+                    ?.completedTaskIds?.length??null,
+                snapshotCompleted:city.view.getProgressSnapshot().completedTaskIds.length,
                 targets:['tea_clay_whistle','tailor_thimble','banner_knot','chestnut_tongs'].map(target),
                 progress:city.view.progress};
         })()`);
@@ -155,14 +171,37 @@ try {
     assert.equal(current.viewport.width, 444);
     assert.equal(current.viewport.height, 960);
     const ambientStart = new Map(current.npcs.map(npc => [npc.id, {x:npc.x,y:npc.y}]));
+    const messengerStart = current.npcs.find(n => n.id === 'messenger_customer');
     if (process.env.LIVING_CITY_REQUIRE_ART === '1') {
         current = await until(s => s.art?.sceneSlots === s.slotCount && s.art?.targetSprites === 4 &&
             s.art?.messengerCels && s.art?.ground && !s.art?.debugLabelVisible,
         'Complete simplified 2D art did not activate');
     }
+    current = await until(s => s.stickers.length === 4 && s.stickers.every(sticker => sticker.hasImage),
+        'Four item stickers did not load');
+    assert.deepEqual(current.stickers.map(sticker => sticker.id),
+        ['tea_clay_whistle','tailor_thimble','banner_knot','chestnut_tongs']);
     await evaluate(`(() => { cc.profiler?.hideStats?.(); return true; })()`);
     await wait(600);
     await screenshot('initial_444x960.png');
+    const speaker = current.npcClue.speakerScreen;
+    assert.ok(speaker?.x > 0 && speaker.x < 444 && speaker.y > 0 && speaker.y < 790,
+        `Tea vendor cannot be tapped in the playfield: ${JSON.stringify(speaker)}`);
+    await click(speaker.x, speaker.y);
+    current = await state();
+    assert.ok(current.npcClue.active && current.npcClue.text.includes('茶香'),
+        'Tapping the tea vendor did not show the contextual clue');
+    assert.equal(current.progress.requiredCompleted, 0, 'NPC clue changed task progress');
+    await screenshot('npc_clue_444x960.png');
+    const firstSticker = current.stickers[0];
+    const mapBeforeSticker = current.map;
+    await click(firstSticker.screen.x, firstSticker.screen.y);
+    current = await state();
+    assert.ok(current.stickerClue.includes('陶哨'), 'Tapping a sticker did not reveal its clue');
+    assert.equal(current.progress.requiredCompleted, 0, 'Sticker tap changed task progress');
+    assert.ok(Math.abs(current.map.x - mapBeforeSticker.x) < 0.5 &&
+        Math.abs(current.map.y - mapBeforeSticker.y) < 0.5, 'Sticker tap moved the map');
+    await screenshot('sticker_clue_444x960.png');
     await evaluate(`(() => { const c=cc.director.getScene().getChildByName('Canvas').getComponent('CityManager');
         const v=c.current.view.controller;v.viewport.zoomAt(1/1.4,0,0);v.applyState();v.focusAt(0,20);return true; })()`);
     await wait(100);
@@ -182,7 +221,6 @@ try {
     assert.ok(Math.abs((await state()).map.scale / initialScale - 1) < 0.02,
         'Initial zoom could not be restored');
     assert.equal((await state()).progress.requiredCompleted, 0, 'Zoom completed a task');
-    const messengerStart = current.npcs.find(n => n.id === 'messenger_customer');
     current = await until(s => s.eventSeconds >= 0 || s.eventCompleted,
         'Messenger never arrived at tea counter', 180);
     const messengerAtCounter = current.npcs.find(n => n.id === 'messenger_customer');
@@ -241,14 +279,24 @@ try {
         nearMissChecks.push({id,dx:offset.dx,dy:offset.dy,
             hitRadiusPx:Math.round(target.hitRadiusPx*10)/10});
         await click(target.screen.x,target.screen.y);
-        const progress = (await state()).progress.requiredCompleted;
+        const afterHit = await state();
+        const progress = afterHit.progress.requiredCompleted;
         assert.equal(progress, ['tea_clay_whistle','tailor_thimble','banner_knot','chestnut_tongs'].indexOf(id)+1,
             `${id} click did not update progress`);
+        assert.equal(afterHit.memorySavedCompleted, progress,
+            `${id} was not saved after tap: ${JSON.stringify({
+                memory:afterHit.memorySavedCompleted,snapshot:afterHit.snapshotCompleted,warnings})}`);
+        assert.equal((await state()).stickers.find(sticker => sticker.id === id)?.found, true,
+            `${id} sticker did not receive its found stamp`);
         await click(target.screen.x,target.screen.y);
         assert.equal((await state()).progress.requiredCompleted, progress, `${id} counted twice`);
     }
     current = await state();
     assert.equal(current.progress.allRequiredComplete, true);
+    assert.equal(current.savedCompleted, 4,
+        `Completed stickers were not saved locally: ${JSON.stringify({
+            saved:current.savedCompleted,memory:current.memorySavedCompleted,
+            snapshot:current.snapshotCompleted})}`);
     const hintButton = await evaluate(`(() => {
         const canvas=cc.director.getScene().getChildByName('Canvas');
         const manager=canvas.getComponent('CityManager');
@@ -266,13 +314,21 @@ try {
     })()`);
     assert.equal(hintMessage, '本城所有目标已找到', 'Hint button did not react to click');
     assert.equal((await state()).progress.requiredCompleted, 4, 'Hint button changed task progress');
+    const completedRun = current;
+    await send('Page.reload');
+    current = await until(s => s.ready && s.progress.requiredCompleted === 4 &&
+        s.stickers.length === 4 && s.stickers.every(sticker => sticker.found) &&
+        s.art.sceneSlots === s.slotCount && s.art.messengerCels && s.art.ground,
+    'Saved progress and sticker stamps did not survive a reload');
+    await screenshot('restored_stickers_444x960.png');
     assert.deepEqual(warnings, [], 'Runtime warnings');
     assert.deepEqual(errors, [], 'Runtime errors');
     assert.deepEqual(failedRequests, [], 'Failed requests');
     console.log(JSON.stringify({status:'passed',city:current.city,viewport:current.viewport,
-        slotCount:current.slotCount,npcCount:current.npcCount,eventCompleted:current.eventCompleted,
+        slotCount:current.slotCount,npcCount:current.npcCount,eventCompleted:completedRun.eventCompleted,
         art:current.art,
-        completed:current.progress.requiredCompleted,errors:errors.length,warnings:warnings.length,
+        completed:current.progress.requiredCompleted,savedCompleted:current.savedCompleted,
+        stickers:current.stickers.length,errors:errors.length,warnings:warnings.length,
         failedRequests:failedRequests.length,nearMissChecks,
         screenshots:fs.readdirSync(out).filter(x=>x.endsWith('.png'))}));
 } finally {

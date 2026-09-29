@@ -1,6 +1,9 @@
-import { _decorator, Color, Component, director, error, Label, Node, UITransform } from 'cc';
+import { _decorator, Color, Component, director, error, Label, Node, UITransform, warn } from 'cc';
 import { CityContentLoader } from '../config/CityContentLoader';
+import type { LoadedCity } from '../config/CityContentLoader';
 import { CityManager } from '../city/CityManager';
+import { createLocalStorageAdapter } from '../platform/LocalStorageAdapter';
+import { chooseStartupCityId, LIVING_CITY_SAVE_KEY, SaveManager } from '../save/SaveManager';
 
 const { ccclass } = _decorator;
 
@@ -18,7 +21,16 @@ export class Bootstrap extends Component {
         const loader = await CityContentLoader.create();
         const cityId = loader.catalog.initialCityId;
         if (!cityId) throw new Error('City catalog has no initial city');
-        const initial = await loader.load(cityId);
+        const save = new SaveManager(createLocalStorageAdapter(), cityId, LIVING_CITY_SAVE_KEY);
+        const startId = chooseStartupCityId(save, loader.catalog.cities.map(city => city.cityId), cityId);
+        let initial: LoadedCity;
+        try {
+            initial = await loader.load(startId);
+        } catch (loadError) {
+            if (startId === cityId) throw loadError;
+            warn(`Saved city ${startId} could not load; starting at ${cityId}`, loadError);
+            initial = await loader.load(cityId);
+        }
         if (!this.isValid) { initial.release(); return; }
 
         await new Promise<void>((resolve, reject) => {
@@ -33,7 +45,7 @@ export class Bootstrap extends Component {
                     return;
                 }
                 try {
-                    canvas.addComponent(CityManager).initialize(loader, initial);
+                    canvas.addComponent(CityManager).initialize(loader, initial, save);
                     resolve();
                 } catch (mountError) {
                     reject(mountError);

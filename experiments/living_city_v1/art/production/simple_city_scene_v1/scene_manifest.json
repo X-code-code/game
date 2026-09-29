@@ -876,6 +876,90 @@
       "status": "candidate_visual_review"
     },
     {
+      "id": "lc_south_post_house_back",
+      "filename": "png/lc_south_post_house_back.png",
+      "layer": "building_back",
+      "center": {
+        "x": -560,
+        "y": -863
+      },
+      "size": {
+        "width": 416,
+        "height": 320
+      },
+      "transparent": true,
+      "authoringBrief": "Southern west post house joins the tailor row: blue slate hip roof, parcel sorting window and arched door, with no sign text or object-like target.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "832x640"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "416x320",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_south_post_house_back/spriteFrame"
+      },
+      "sha256": "e48f9edc2b59b76075d3d8f4c0dbcd4b7b8fa70cf7cc91a602d3b8069acb73d5",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_south_grain_house_back",
+      "filename": "png/lc_south_grain_house_back.png",
+      "layer": "building_back",
+      "center": {
+        "x": 566,
+        "y": -863
+      },
+      "size": {
+        "width": 404,
+        "height": 320
+      },
+      "transparent": true,
+      "authoringBrief": "Southern east grain house joins the food shop row: warm tile roof, broad service arch and grain baskets, leaving the main street open.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "808x640"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "404x320",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_south_grain_house_back/spriteFrame"
+      },
+      "sha256": "ed76a41ad6da08cf235f5fe12f1fa6ffa2dafb970760184d87e5ce2315b73e36",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_east_pottery_annex_back",
+      "filename": "png/lc_east_pottery_annex_back.png",
+      "layer": "building_back",
+      "center": {
+        "x": 556,
+        "y": 297
+      },
+      "size": {
+        "width": 200,
+        "height": 210
+      },
+      "transparent": true,
+      "authoringBrief": "A small roofed pottery annex attached below the northeast shop; the existing pot display remains its independent front depth layer.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "400x420"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "200x210",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_east_pottery_annex_back/spriteFrame"
+      },
+      "sha256": "cd8348a8b57f1b28f126297a077f79234eee76ae3ee1007e9986b20232a15679",
+      "status": "candidate_visual_review"
+    },
+    {
       "id": "lc_tea_whistle_foreground",
       "filename": "png/lc_tea_whistle_foreground.png",
       "layer": "target_foreground",

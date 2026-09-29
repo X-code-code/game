@@ -1,4 +1,4 @@
-import { _decorator, AssetManager, Color, Component, Graphics, Label, Node, Sprite, SpriteFrame, Tween, UITransform, Vec3, warn } from 'cc';
+import { _decorator, AssetManager, Color, Component, EventMouse, EventTouch, Graphics, Input, input, Label, Node, Sprite, SpriteFrame, Tween, UITransform, Vec3, warn } from 'cc';
 import type { ChickenConfig, CityConfig, HiddenObjectConfig, Size } from '../config/CityTypes';
 import { ChickenCharacter } from '../character/ChickenCharacter';
 import { TargetInput } from '../gameplay/TargetInput';
@@ -41,6 +41,27 @@ const LIVING_CITY_TARGET_SIZE: Record<string, { width: number; height: number }>
     banner_knot: { width: 27, height: 33 },
     chestnut_tongs: { width: 36, height: 32 },
 };
+const LIVING_CITY_STICKERS = [
+    { id: 'tea_clay_whistle', name: '陶哨', clue: '茶摊的杯盏附近' },
+    { id: 'tailor_thimble', name: '顶针', clue: '裁缝铺摆货的地方' },
+    { id: 'banner_knot', name: '绳结', clue: '街口悬挂的横幅旁' },
+    { id: 'chestnut_tongs', name: '栗子夹', clue: '卖栗子的推车附近' },
+] as const;
+
+interface StickerCard {
+    node: Node;
+    background: Graphics;
+    icon: Sprite;
+    name: Label;
+    stamp: Node;
+}
+
+interface StickerPress {
+    x: number;
+    y: number;
+    targetId: string | null;
+    eligible: boolean;
+}
 
 /** Plain data persisted per city; IDs are scoped to the city whose config is mounted. */
 export interface CityProgressSnapshot {
@@ -60,6 +81,11 @@ export class MapBrowserDemo extends Component {
     private taskPanelGraphics: Graphics | null = null;
     private taskTitleLabel: Label | null = null;
     private taskItemsLabel: Label | null = null;
+    private stickerClueLabel: Label | null = null;
+    private readonly stickerCards = new Map<string, StickerCard>();
+    private readonly stickerTouches = new Map<number, StickerPress>();
+    private stickerMousePress: StickerPress | null = null;
+    private stickerInputAttached = false;
     private foundCount = 0;
     private lastChickenClickedId: string | null = null;
     private lastWidth = 0;
@@ -162,7 +188,12 @@ export class MapBrowserDemo extends Component {
         const view = config.view;
         this.controller = new CityViewController(this.node, map, view.minZoom, view.maxZoom,
             view.initialZoom ?? view.minZoom, isBlocked);
-        this.targetInput = new TargetInput([...(this.conversations?.targets ?? []), ...objects, ...chickens], hit => {
+        this.targetInput = new TargetInput([...(this.livingGreybox?.clueTarget ? [this.livingGreybox.clueTarget] : []),
+            ...(this.conversations?.targets ?? []), ...objects, ...chickens], hit => {
+            if (hit.type === 'scene') {
+                this.livingGreybox?.showNpcClue(hit.id);
+                return;
+            }
             let newlyDiscovered: boolean;
             if (hit.type === 'hiddenObject') {
                 newlyDiscovered = !this.foundHiddenObjectIds.has(hit.id);
@@ -199,6 +230,7 @@ export class MapBrowserDemo extends Component {
         this.hintPanel?.update(hint);
         // Keep edge targets reachable while the hint is visible; restore the list afterward.
         if (this.taskPanel) this.taskPanel.active = !hint;
+        if (!hint) this.positionStreetHintButton();
     }
 
     public requestHint(): void {
@@ -249,6 +281,8 @@ export class MapBrowserDemo extends Component {
     public cancelGestures(): void {
         this.targetInput?.cancelGestures();
         this.controller?.cancelGestures();
+        this.stickerTouches.clear();
+        this.stickerMousePress = null;
     }
 
     /** Detach global input immediately, before deferred node destruction or resource release. */
@@ -260,6 +294,9 @@ export class MapBrowserDemo extends Component {
         this.hintTargets.clear();
         this.hintPanel?.dispose();
         this.hintPanel = null;
+        this.detachStickerInput();
+        this.stickerCards.clear();
+        this.stickerClueLabel = null;
         this.conversations?.dispose();
         this.conversations = null;
         this.teaEvent?.dispose();
@@ -304,13 +341,13 @@ export class MapBrowserDemo extends Component {
         const compact = this.cityConfig?.cityId === 'demo_city';
         const margin = portrait ? 18 : 12;
         const width = portrait ? Math.max(280, size.width - margin * 2) : Math.min(400, Math.max(280, size.width - 24));
-        const height = greybox ? (portrait ? 330 : 172) : trial ? (portrait ? 200 : 116)
+        const height = greybox ? (portrait ? 320 : 166) : trial ? (portrait ? 200 : 116)
             : compact ? (portrait ? 390 : 182) : (portrait ? 590 : 268);
         panel.setPosition(-size.width / 2 + width / 2 + margin,
             ((trial || greybox) ? -size.height / 2 + height / 2 + margin : size.height / 2 - height / 2 - margin), 0);
         panel.getComponent(UITransform)?.setContentSize(width, height);
         graphics.clear();
-        graphics.fillColor = greybox ? new Color(247, 238, 214, 247)
+        graphics.fillColor = greybox ? new Color(247, 238, 214, 249)
             : new Color(255, 250, 235, trial ? 225 : compact ? 218 : 238);
         if (greybox) graphics.roundRect(-width / 2, -height / 2, width, height, 18);
         else graphics.rect(-width / 2, -height / 2, width, height);
@@ -322,14 +359,14 @@ export class MapBrowserDemo extends Component {
         graphics.stroke();
         const padding = greybox ? 18 : portrait ? 30 : 16;
         if (this.taskTitleLabel) {
-            this.taskTitleLabel.fontSize = greybox ? (portrait ? 56 : 32) : trial ? (portrait ? 34 : 24)
+            this.taskTitleLabel.fontSize = greybox ? (portrait ? 48 : 25) : trial ? (portrait ? 34 : 24)
                 : compact ? (portrait ? 62 : 28) : (portrait ? 70 : 32);
-            this.taskTitleLabel.lineHeight = greybox ? (portrait ? 63 : 38) : trial ? (portrait ? 42 : 29)
+            this.taskTitleLabel.lineHeight = greybox ? (portrait ? 55 : 31) : trial ? (portrait ? 42 : 29)
                 : compact ? (portrait ? 72 : 34) : (portrait ? 82 : 38);
             this.taskTitleLabel.node.setPosition(-width / 2 + padding,
-                height / 2 - (greybox ? 16 : trial ? 14 : portrait ? 27 : 14), 0);
+                height / 2 - (greybox ? 12 : trial ? 14 : portrait ? 27 : 14), 0);
             this.taskTitleLabel.node.getComponent(UITransform)?.setContentSize(width - padding * 2,
-                greybox ? (portrait ? 70 : 45) : trial ? (portrait ? 48 : 30) : portrait ? 90 : 46);
+                greybox ? (portrait ? 58 : 31) : trial ? (portrait ? 48 : 30) : portrait ? 90 : 46);
         }
         if (this.taskItemsLabel) {
             this.taskItemsLabel.fontSize = greybox ? (portrait ? 44 : 25) : trial ? (portrait ? 28 : 19)
@@ -340,6 +377,10 @@ export class MapBrowserDemo extends Component {
                 (greybox ? (portrait ? 90 : 55) : trial ? (portrait ? 66 : 43) : portrait ? 119 : 61), 0);
             this.taskItemsLabel.node.getComponent(UITransform)?.setContentSize(width - padding * 2,
                 height - (greybox ? (portrait ? 96 : 59) : trial ? (portrait ? 72 : 48) : portrait ? 135 : 70));
+        }
+        if (greybox) {
+            this.layoutStickerCards(width, height, portrait);
+            this.positionStreetHintButton();
         }
     }
 
@@ -361,34 +402,290 @@ export class MapBrowserDemo extends Component {
         titleLabel.verticalAlign = Label.VerticalAlign.TOP;
         this.taskTitleLabel = titleLabel;
 
-        const items = new Node('TaskItems');
-        panel.addChild(items);
-        items.addComponent(UITransform).setAnchorPoint(0, 1);
-        const itemsLabel = items.addComponent(Label);
-        itemsLabel.fontSize = 28;
-        itemsLabel.lineHeight = 37;
-        itemsLabel.color = new Color(75, 54, 39, 255);
-        itemsLabel.horizontalAlign = Label.HorizontalAlign.LEFT;
-        itemsLabel.verticalAlign = Label.VerticalAlign.TOP;
-        this.taskItemsLabel = itemsLabel;
+        if (this.cityConfig?.cityId === 'living_city_street_block_01') {
+            this.createStickerCards(panel);
+            this.attachStickerInput();
+        } else {
+            const items = new Node('TaskItems');
+            panel.addChild(items);
+            items.addComponent(UITransform).setAnchorPoint(0, 1);
+            const itemsLabel = items.addComponent(Label);
+            itemsLabel.fontSize = 28;
+            itemsLabel.lineHeight = 37;
+            itemsLabel.color = new Color(75, 54, 39, 255);
+            itemsLabel.horizontalAlign = Label.HorizontalAlign.LEFT;
+            itemsLabel.verticalAlign = Label.VerticalAlign.TOP;
+            this.taskItemsLabel = itemsLabel;
+        }
         this.renderTaskPanel();
     }
 
     private renderTaskPanel(): void {
         const manager = this.taskManager;
-        if (!manager || !this.taskTitleLabel || !this.taskItemsLabel) return;
+        if (!manager || !this.taskTitleLabel) return;
         const progress = manager.getProgress();
-        this.taskTitleLabel.string = this.cityConfig?.cityId === 'living_city_street_block_01'
-            ? `街区寻物  ${progress.requiredCompleted} / ${progress.requiredTotal}`
-            : this.cityConfig?.cityId === 'demo_city'
+        if (this.cityConfig?.cityId === 'living_city_street_block_01') {
+            this.taskTitleLabel.string = `寻物贴纸  ${progress.requiredCompleted} / ${progress.requiredTotal}`;
+            const states = manager.getTaskStates();
+            for (const sticker of LIVING_CITY_STICKERS) {
+                const completed = states.some(state => state.config.type === 'hiddenObject' &&
+                    state.config.targetId === sticker.id && state.completed);
+                const card = this.stickerCards.get(sticker.id);
+                if (card) this.drawStickerCard(card, completed);
+            }
+            return;
+        }
+        if (!this.taskItemsLabel) return;
+        this.taskTitleLabel.string = this.cityConfig?.cityId === 'demo_city'
             ? `雪灯街市 · ${progress.requiredCompleted}/${progress.requiredTotal}`
             : this.cityConfig?.cityId === 'winter_market_block_trial_001'
                 ? `街区试样 · ${progress.requiredCompleted}/${progress.requiredTotal}`
                 : `探索目标 ${progress.requiredCompleted} / ${progress.requiredTotal}`;
         this.taskItemsLabel.string = manager.getTaskStates()
-            .map(state => `${state.completed ? '✓' : '○'} ${this.cityConfig?.cityId === 'living_city_street_block_01'
-                ? state.config.label.replace(/^找到/, '') : state.config.label}${state.config.required ? '' : '（隐藏）'}`)
+            .map(state => `${state.completed ? '✓' : '○'} ${state.config.label}${state.config.required ? '' : '（隐藏）'}`)
             .join('\n');
+    }
+
+    private createStickerCards(panel: Node): void {
+        const clueNode = new Node('StickerClue');
+        panel.addChild(clueNode);
+        clueNode.addComponent(UITransform).setAnchorPoint(0, 1);
+        const clue = clueNode.addComponent(Label);
+        clue.color = new Color(112, 78, 53, 255);
+        clue.horizontalAlign = Label.HorizontalAlign.LEFT;
+        clue.verticalAlign = Label.VerticalAlign.CENTER;
+        clue.overflow = Label.Overflow.SHRINK;
+        clue.string = '轻点贴纸，听听街坊线索';
+        this.stickerClueLabel = clue;
+
+        for (const sticker of LIVING_CITY_STICKERS) {
+            const cardNode = new Node(`Sticker_${sticker.id}`);
+            panel.addChild(cardNode);
+            cardNode.addComponent(UITransform);
+            const background = cardNode.addComponent(Graphics);
+
+            const artNode = new Node('ItemArt');
+            cardNode.addChild(artNode);
+            artNode.addComponent(UITransform);
+            const icon = artNode.addComponent(Sprite);
+            icon.sizeMode = Sprite.SizeMode.CUSTOM;
+            icon.trim = false;
+
+            const nameNode = new Node('ItemName');
+            cardNode.addChild(nameNode);
+            nameNode.addComponent(UITransform);
+            const name = nameNode.addComponent(Label);
+            name.string = sticker.name;
+            name.color = new Color(72, 54, 41, 255);
+            name.horizontalAlign = Label.HorizontalAlign.CENTER;
+            name.verticalAlign = Label.VerticalAlign.CENTER;
+            name.overflow = Label.Overflow.SHRINK;
+
+            const stamp = new Node('FoundStamp');
+            cardNode.addChild(stamp);
+            stamp.addComponent(UITransform).setContentSize(42, 42);
+            const stampGround = stamp.addComponent(Graphics);
+            stampGround.fillColor = new Color(92, 151, 110, 255);
+            stampGround.circle(0, 0, 21);
+            stampGround.fill();
+            const checkNode = new Node('Check');
+            stamp.addChild(checkNode);
+            checkNode.addComponent(UITransform).setContentSize(40, 40);
+            const check = checkNode.addComponent(Label);
+            check.string = '✓';
+            check.fontSize = 30;
+            check.lineHeight = 36;
+            check.color = Color.WHITE;
+            check.horizontalAlign = Label.HorizontalAlign.CENTER;
+            check.verticalAlign = Label.VerticalAlign.CENTER;
+            stamp.active = false;
+
+            this.stickerCards.set(sticker.id, { node: cardNode, background, icon, name, stamp });
+            this.loadPrototypeFrame(`targets/${sticker.id}/spriteFrame`, frame => {
+                if (cardNode.isValid) icon.spriteFrame = frame;
+            });
+        }
+    }
+
+    private layoutStickerCards(width: number, height: number, portrait: boolean): void {
+        const inset = portrait ? 16 : 12;
+        const gap = portrait ? 12 : 6;
+        const columns = 4;
+        const cardWidth = (width - inset * 2 - gap * (columns - 1)) / columns;
+        const cardHeight = portrait ? 150 : 75;
+        const clue = this.stickerClueLabel;
+        if (clue) {
+            clue.fontSize = portrait ? 25 : 18;
+            clue.lineHeight = portrait ? 30 : 22;
+            clue.node.setPosition(-width / 2 + 18, height / 2 - (portrait ? 75 : 43), 0);
+            clue.node.getComponent(UITransform)?.setContentSize(width - 36, portrait ? 31 : 22);
+        }
+        LIVING_CITY_STICKERS.forEach((sticker, index) => {
+            const card = this.stickerCards.get(sticker.id);
+            if (!card) return;
+            const column = index % columns;
+            const x = -width / 2 + inset + cardWidth / 2 + column * (cardWidth + gap);
+            const y = portrait ? -40 : -22;
+            card.node.setPosition(x, y, 0);
+            card.node.getComponent(UITransform)?.setContentSize(cardWidth, cardHeight);
+            if (portrait) {
+                const artSize = Math.min(88, cardWidth - 20);
+                card.icon.node.setPosition(0, 21, 0);
+                card.icon.node.getComponent(UITransform)?.setContentSize(artSize, artSize);
+                card.name.node.setPosition(0, -51, 0);
+                card.name.node.getComponent(UITransform)?.setContentSize(cardWidth - 10, 36);
+                card.name.fontSize = cardWidth < 170 ? 22 : 28;
+                card.name.lineHeight = 33;
+            } else {
+                card.icon.node.setPosition(0, 8, 0);
+                card.icon.node.getComponent(UITransform)?.setContentSize(47, 47);
+                card.name.node.setPosition(0, -27, 0);
+                card.name.node.getComponent(UITransform)?.setContentSize(cardWidth - 8, 25);
+                card.name.fontSize = 17;
+                card.name.lineHeight = 21;
+            }
+            card.stamp.setPosition(cardWidth / 2 - 23, cardHeight / 2 - 23, 0);
+        });
+        this.renderTaskPanel();
+    }
+
+    private drawStickerCard(card: StickerCard, completed: boolean): void {
+        const size = card.node.getComponent(UITransform)?.contentSize;
+        if (!size || size.width <= 0 || size.height <= 0) return;
+        const width = size.width;
+        const height = size.height;
+        const graphics = card.background;
+        graphics.clear();
+        graphics.fillColor = completed ? new Color(224, 239, 218, 255) : new Color(255, 252, 242, 255);
+        graphics.roundRect(-width / 2, -height / 2, width, height, 12);
+        graphics.fill();
+        graphics.lineWidth = 2;
+        graphics.strokeColor = completed ? new Color(111, 157, 112, 255) : new Color(177, 138, 97, 255);
+        graphics.roundRect(-width / 2, -height / 2, width, height, 12);
+        graphics.stroke();
+        card.icon.color = completed ? new Color(190, 209, 186, 255) : Color.WHITE;
+        card.stamp.active = completed;
+    }
+
+    private positionStreetHintButton(): void {
+        if (this.cityConfig?.cityId !== 'living_city_street_block_01' || this.hintManager?.active) return;
+        const viewport = this.node.getComponent(UITransform)?.contentSize;
+        const panel = this.taskPanel;
+        const hint = this.hintPanel?.root;
+        if (!viewport || !panel || !hint || viewport.height <= viewport.width) return;
+        const height = panel.getComponent(UITransform)?.height ?? 0;
+        const scale = hint.scale.x;
+        hint.setPosition(viewport.width / 2 - 18 - 80 * scale,
+            panel.position.y + height / 2 + 8 + 31 * scale, 0);
+    }
+
+    private stickerAt(uiX: number, uiY: number): string | null {
+        if (!this.isOverTaskPanel(uiX, uiY) || this.hintPanel?.blocksInput(uiX, uiY)) return null;
+        for (const [id, card] of this.stickerCards) {
+            const transform = card.node.getComponent(UITransform);
+            if (!card.node.activeInHierarchy || !transform) continue;
+            const point = transform.convertToNodeSpaceAR(new Vec3(uiX, uiY, 0));
+            if (Math.abs(point.x) <= transform.width / 2 && Math.abs(point.y) <= transform.height / 2) return id;
+        }
+        return null;
+    }
+
+    private showStickerClue(id: string): void {
+        const sticker = LIVING_CITY_STICKERS.find(item => item.id === id);
+        if (!sticker || !this.stickerClueLabel) return;
+        const found = this.taskManager?.getTaskStates().some(state => state.config.type === 'hiddenObject' &&
+            state.config.targetId === id && state.completed);
+        this.stickerClueLabel.string = found ? `${sticker.name}已找到，收入贴纸册啦`
+            : `${sticker.name}：${sticker.clue}`;
+    }
+
+    private attachStickerInput(): void {
+        if (this.stickerInputAttached) return;
+        this.stickerInputAttached = true;
+        input.on(Input.EventType.TOUCH_START, this.onStickerTouchStart, this);
+        input.on(Input.EventType.TOUCH_MOVE, this.onStickerTouchMove, this);
+        input.on(Input.EventType.TOUCH_END, this.onStickerTouchEnd, this);
+        input.on(Input.EventType.TOUCH_CANCEL, this.onStickerTouchCancel, this);
+        input.on(Input.EventType.MOUSE_DOWN, this.onStickerMouseDown, this);
+        input.on(Input.EventType.MOUSE_MOVE, this.onStickerMouseMove, this);
+        input.on(Input.EventType.MOUSE_UP, this.onStickerMouseUp, this);
+    }
+
+    private detachStickerInput(): void {
+        if (!this.stickerInputAttached) return;
+        this.stickerInputAttached = false;
+        input.off(Input.EventType.TOUCH_START, this.onStickerTouchStart, this);
+        input.off(Input.EventType.TOUCH_MOVE, this.onStickerTouchMove, this);
+        input.off(Input.EventType.TOUCH_END, this.onStickerTouchEnd, this);
+        input.off(Input.EventType.TOUCH_CANCEL, this.onStickerTouchCancel, this);
+        input.off(Input.EventType.MOUSE_DOWN, this.onStickerMouseDown, this);
+        input.off(Input.EventType.MOUSE_MOVE, this.onStickerMouseMove, this);
+        input.off(Input.EventType.MOUSE_UP, this.onStickerMouseUp, this);
+        this.stickerTouches.clear();
+        this.stickerMousePress = null;
+    }
+
+    private onStickerTouchStart(event: EventTouch): void {
+        if (event.simulate) return;
+        const id = event.getID();
+        if (id === null) return;
+        const point = event.getUILocation();
+        this.stickerTouches.set(id, { x: point.x, y: point.y, targetId: this.stickerAt(point.x, point.y),
+            eligible: this.stickerTouches.size === 0 });
+        if (this.stickerTouches.size > 1) this.stickerTouches.forEach(press => { press.eligible = false; });
+        this.stickerMousePress = null;
+    }
+
+    private onStickerTouchMove(event: EventTouch): void {
+        if (event.simulate) return;
+        const id = event.getID();
+        if (id === null) return;
+        const press = this.stickerTouches.get(id);
+        if (press) this.checkStickerMovement(press, event.getUILocation());
+    }
+
+    private onStickerTouchEnd(event: EventTouch): void {
+        if (event.simulate) return;
+        const id = event.getID();
+        if (id === null) return;
+        const press = this.stickerTouches.get(id);
+        this.stickerTouches.delete(id);
+        if (!press || this.stickerTouches.size > 0) return;
+        const point = event.getUILocation();
+        if (this.checkStickerMovement(press, point) && press.targetId === this.stickerAt(point.x, point.y)) {
+            if (press.targetId) this.showStickerClue(press.targetId);
+        }
+    }
+
+    private onStickerTouchCancel(event: EventTouch): void {
+        if (event.simulate) return;
+        const id = event.getID();
+        if (id !== null) this.stickerTouches.delete(id);
+    }
+
+    private onStickerMouseDown(event: EventMouse): void {
+        if (event.getButton() !== EventMouse.BUTTON_LEFT || this.stickerTouches.size > 0) return;
+        const point = event.getUILocation();
+        this.stickerMousePress = { x: point.x, y: point.y, targetId: this.stickerAt(point.x, point.y), eligible: true };
+    }
+
+    private onStickerMouseMove(event: EventMouse): void {
+        if (this.stickerMousePress) this.checkStickerMovement(this.stickerMousePress, event.getUILocation());
+    }
+
+    private onStickerMouseUp(event: EventMouse): void {
+        const press = this.stickerMousePress;
+        this.stickerMousePress = null;
+        if (!press || event.getButton() !== EventMouse.BUTTON_LEFT || this.stickerTouches.size > 0) return;
+        const point = event.getUILocation();
+        if (this.checkStickerMovement(press, point) && press.targetId === this.stickerAt(point.x, point.y)) {
+            if (press.targetId) this.showStickerClue(press.targetId);
+        }
+    }
+
+    private checkStickerMovement(press: StickerPress, point: { x: number; y: number }): boolean {
+        if (Math.hypot(point.x - press.x, point.y - press.y) > 12) press.eligible = false;
+        return press.eligible;
     }
 
     private isOverTaskPanel(uiX: number, uiY: number): boolean {

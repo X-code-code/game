@@ -69,6 +69,9 @@
     { "id": "lc_east_bun_cart_front", "layer": "depth", "center": { "x": 25, "y": 504 }, "size": { "width": 150, "height": 70 }, "alpha": true, "footY": 470, "purpose": "Low apron, wheel and counter lip of the bun cart; a separate occluder below the cart work surface." },
     { "id": "lc_west_market_handcart", "layer": "depth", "center": { "x": -468, "y": -40 }, "size": { "width": 155, "height": 110 }, "alpha": true, "footY": -86, "purpose": "Used market handcart in the west cross lane, carrying tied produce sacks and an empty crate between the tea patio and the bench." },
     { "id": "lc_street_water_station", "layer": "depth", "center": { "x": 5, "y": -245 }, "size": { "width": 105, "height": 165 }, "alpha": true, "footY": -314, "purpose": "Public chicken drinking point: low glazed basin, feed scoop, folded cloth and slim timber stand, beside rather than on NPC routes." },
+    { "id": "lc_south_post_house_back", "layer": "building_back", "center": { "x": -560, "y": -863 }, "size": { "width": 416, "height": 320 }, "alpha": true, "purpose": "Southern west post house joins the tailor row: blue slate hip roof, parcel sorting window and arched door, with no sign text or object-like target." },
+    { "id": "lc_south_grain_house_back", "layer": "building_back", "center": { "x": 566, "y": -863 }, "size": { "width": 404, "height": 320 }, "alpha": true, "purpose": "Southern east grain house joins the food shop row: warm tile roof, broad service arch and grain baskets, leaving the main street open." },
+    { "id": "lc_east_pottery_annex_back", "layer": "building_back", "center": { "x": 556, "y": 297 }, "size": { "width": 200, "height": 210 }, "alpha": true, "purpose": "A small roofed pottery annex attached below the northeast shop; the existing pot display remains its independent front depth layer." },
     { "id": "lc_tea_whistle_foreground", "layer": "target_foreground", "targetId": "tea_clay_whistle", "center": { "x": -342, "y": 393 }, "size": { "width": 48, "height": 42 }, "alpha": true, "purpose": "Thin tea-cup rim and saucer edge over the clay whistle's lower contour, with most of the item still visible and hit testing independent." },
     { "id": "lc_tailor_thimble_foreground", "layer": "target_foreground", "targetId": "tailor_thimble", "center": { "x": -395, "y": -380 }, "size": { "width": 44, "height": 40 }, "alpha": true, "purpose": "Short sewing-tray lip and nearby thread edge crossing only the thimble's base." },
     { "id": "lc_banner_knot_foreground", "layer": "target_foreground", "targetId": "banner_knot", "center": { "x": 45, "y": 620 }, "size": { "width": 48, "height": 48 }, "alpha": true, "purpose": "A narrow banner fold overlapping one low knot tail but leaving knot loops and center clear." },
@@ -98,7 +101,10 @@
     { "id": "north_herb_stand_block", "artSlotId": "lc_north_herb_stand", "polygon": [[-335, 550], [-248, 550], [-248, 605], [-335, 605]] },
     { "id": "east_bun_cart_block", "artSlotId": "lc_east_bun_cart_back", "polygon": [[10, 475], [65, 475], [65, 520], [10, 520]] },
     { "id": "west_market_handcart_block", "artSlotId": "lc_west_market_handcart", "polygon": [[-527, -80], [-410, -80], [-410, -22], [-527, -22]] },
-    { "id": "street_water_station_block", "artSlotId": "lc_street_water_station", "polygon": [[-30, -315], [42, -315], [42, -265], [-30, -265]] }
+    { "id": "street_water_station_block", "artSlotId": "lc_street_water_station", "polygon": [[-30, -315], [42, -315], [42, -265], [-30, -265]] },
+    { "id": "south_post_house_block", "artSlotId": "lc_south_post_house_back", "polygon": [[-750, -1008], [-370, -1008], [-370, -747], [-750, -747]] },
+    { "id": "south_grain_house_block", "artSlotId": "lc_south_grain_house_back", "polygon": [[380, -1008], [748, -1008], [748, -747], [380, -747]] },
+    { "id": "east_pottery_annex_block", "artSlotId": "lc_east_pottery_annex_back", "polygon": [[490, 207], [640, 207], [640, 304], [490, 304]] }
   ],
   "standingSpots": [
     { "id": "tea_vendor_foot", "at": { "x": -410, "y": 350 }, "access": "vendor_only", "facing": "right", "clearRadius": 18 },

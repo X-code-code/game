@@ -31,7 +31,7 @@ function parseManifest(value: unknown, actorId: string): CelManifest | null {
     const data = value as Partial<CelManifest>;
     const canvas = data.canvasPx;
     const footpoint = data.footpointPx;
-    if (data.schemaVersion !== 1 || data.actorId !== actorId ||
+    if (!canvas || !footpoint || data.schemaVersion !== 1 || data.actorId !== actorId ||
         !positiveInteger(canvas?.width) || !positiveInteger(canvas?.height) ||
         !Number.isFinite(footpoint?.x) || !Number.isFinite(footpoint?.y) ||
         typeof footpoint?.x !== 'number' || typeof footpoint?.y !== 'number' ||

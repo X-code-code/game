@@ -1,6 +1,6 @@
 # 简化 2D 活街区试产工程
 
-这是独立的 Cocos Creator 3.8.8 源工程。当前可玩小样包含 35 层近俯视街景、8 只会转向与活动的小鸡、3 处程序绘制环境动态、4 件带局部前景遮挡的寻物。它用于验证新的 2D 制作方法，尚未获玩家美术批准，也尚未在微信真机运行。原工程位于仓库根目录，两者各有自己的 `assets/`、`settings/` 和项目 UUID。
+这是独立的 Cocos Creator 3.8.8 源工程。当前可玩小样包含 38 层近俯视街景、8 只会转向与活动的小鸡、3 处程序绘制环境动态、4 件带局部前景遮挡的寻物。底部以四张物品贴纸显示目标，部分街坊能提供线索，进度可自动保存。它用于验证新的 2D 制作方法，尚未获玩家美术批准，也尚未在微信真机运行。原工程位于仓库根目录，两者各有自己的 `assets/`、`settings/` 和项目 UUID。
 
 ## 打开与验证
 
@@ -10,4 +10,4 @@
 
 角色、场景和隐藏物的可编辑绘制代码、逐 ID 规格、导出记录与机械验收保留在 `art/production/`；游戏使用的 PNG 与 Cocos `.meta` 位于 `assets/bundles/city_living_city_street_block_01/`。参考图、旧候选和录屏审核文件未上传。`art/asset_manifest.json` 的历史条目可能指向这些未随仓库分发的本地参考，当前运行资产可独立构建。
 
-详见 [`docs/SIMPLE_2D_STYLE.md`](docs/SIMPLE_2D_STYLE.md) 和 [`docs/SIMPLE_2D_PLAYABLE_SLICE_REPORT.md`](docs/SIMPLE_2D_PLAYABLE_SLICE_REPORT.md)。
+详见 [`docs/SIMPLE_2D_STYLE.md`](docs/SIMPLE_2D_STYLE.md) 和 [`docs/LIVING_CITY_ITERATION_02.md`](docs/LIVING_CITY_ITERATION_02.md)。
