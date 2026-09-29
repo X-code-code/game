@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "cityId": "winter_market_block_trial_001",
+  "cityName": "雪灯街区 · 分层试玩",
+  "background": "winter_slice_background",
+  "mapSize": {
+    "width": 1024,
+    "height": 1536
+  },
+  "view": {
+    "minZoom": 1,
+    "maxZoom": 1.5,
+    "initialZoom": 1.08
+  },
+  "hiddenObjects": [
+    {
+      "id": "winter_slice_whistle",
+      "asset": "winter_slice_whistle",
+      "x": 0.8,
+      "y": 0.56,
+      "scale": 1,
+      "rotation": -6,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 32
+      },
+      "tags": ["whistle", "pottery", "clay"],
+      "targetable": true
+    }
+  ],
+  "chickens": [
+    {
+      "id": "winter_slice_vendor",
+      "skin": "winter_slice_vendor_idle",
+      "x": 0.3125,
+      "y": 0.52,
+      "scale": 0.68,
+      "visualSize": { "width": 175, "height": 210 },
+      "facing": "right",
+      "behaviorType": "idle",
+      "behaviorConfig": {
+        "bobHeight": 1,
+        "blinkInterval": 3
+      },
+      "animation": {
+        "frames": [
+          "winter_slice_vendor_idle",
+          "winter_slice_vendor_pour"
+        ],
+        "frameDurationSeconds": 0.45
+      },
+      "accessories": [],
+      "clickArea": {
+        "shape": "circle",
+        "radius": 82
+      },
+      "tags": ["tea_vendor", "teahouse"],
+      "targetable": true
+    },
+    {
+      "id": "winter_slice_messenger",
+      "skin": "winter_slice_messenger_walk_a",
+      "x": 0.58,
+      "y": 0.67,
+      "scale": 0.67,
+      "visualSize": { "width": 175, "height": 210 },
+      "facing": "right",
+      "behaviorType": "walk",
+      "behaviorConfig": {
+        "bobHeight": 1,
+        "pauseSeconds": 0
+      },
+      "animation": {
+        "frames": [
+          "winter_slice_messenger_walk_a",
+          "winter_slice_messenger_walk_b"
+        ],
+        "frameDurationSeconds": 0.22
+      },
+      "speed": 75,
+      "movementRange": {
+        "minX": 0.505,
+        "maxX": 0.58
+      },
+      "accessories": [],
+      "clickArea": {
+        "shape": "circle",
+        "radius": 88
+      },
+      "tags": ["messenger", "walking"],
+      "targetable": false
+    }
+  ],
+  "interactiveObjects": [],
+  "foregroundSprites": [
+    {
+      "id": "tea_steamer_occluder",
+      "asset": "winter_slice_tea_steamer_front",
+      "x": -241,
+      "y": 80,
+      "width": 88,
+      "height": 136,
+      "footY": 15
+    },
+    {
+      "id": "tea_counter_occluder",
+      "asset": "winter_slice_tea_counter_front",
+      "x": -280.5,
+      "y": -25.5,
+      "width": 387,
+      "height": 155,
+      "footY": -100
+    },
+    {
+      "id": "berry_cart_occluder",
+      "asset": "winter_slice_berry_cart_front",
+      "x": 63.5,
+      "y": -187.5,
+      "width": 239,
+      "height": 335,
+      "footY": -352
+    }
+  ],
+  "tasks": [
+    {
+      "id": "find_winter_slice_whistle",
+      "type": "hiddenObject",
+      "targetId": "winter_slice_whistle",
+      "label": "找到陶摊的小陶哨",
+      "required": true
+    },
+    {
+      "id": "meet_winter_slice_vendor",
+      "type": "chickenId",
+      "targetId": "winter_slice_vendor",
+      "label": "找到茶铺老板娘",
+      "required": true
+    }
+  ],
+  "nextCityId": "demo_city",
+  "travelType": "other"
+}

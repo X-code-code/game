@@ -1,0 +1,995 @@
+{
+  "schemaVersion": 1,
+  "batchId": "simple_city_scene_v1",
+  "styleId": "chicken_simple_2d_v1",
+  "status": "candidate_visual_review",
+  "source": "render_scene.py",
+  "blueprint": "design/street_block_01.json",
+  "scaleFactorForAntialiasing": 2,
+  "assets": [
+    {
+      "id": "lc_ground_paving",
+      "filename": "png/lc_ground_paving.png",
+      "layer": "ground",
+      "center": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "width": 1536,
+        "height": 2048
+      },
+      "transparent": false,
+      "authoringBrief": "Continuous ground, curb and street texture only; no baked characters, stalls or trees.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "3072x4096"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "1536x2048",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_ground_paving/spriteFrame"
+      },
+      "sha256": "8990e084feda5a33bb8a07070d4d9908fd9d0831b5e725c6010ed4b0fca7c5b1",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_west_storefront_back",
+      "filename": "png/lc_west_storefront_back.png",
+      "layer": "building_back",
+      "center": {
+        "x": -558,
+        "y": 678
+      },
+      "size": {
+        "width": 420,
+        "height": 520
+      },
+      "transparent": true,
+      "authoringBrief": "Northwest shop roof and facade; leaves the tea service spur clear.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "840x1040"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "420x520",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_west_storefront_back/spriteFrame"
+      },
+      "sha256": "3c0857c754d0d2f3f240a0b6a082d57ebe22b3568cc5e10ac66c84e76311fa50",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_east_storefront_back",
+      "filename": "png/lc_east_storefront_back.png",
+      "layer": "building_back",
+      "center": {
+        "x": 565,
+        "y": 650
+      },
+      "size": {
+        "width": 406,
+        "height": 560
+      },
+      "transparent": true,
+      "authoringBrief": "Northeast shop roof and facade, connected visually to cross lane.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "812x1120"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "406x560",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_east_storefront_back/spriteFrame"
+      },
+      "sha256": "0900205da499617ab8cc7c1ca722fff1389d5a5fe9e3a7670c05a8d18abc9efc",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_west_tailor_back",
+      "filename": "png/lc_west_tailor_back.png",
+      "layer": "building_back",
+      "center": {
+        "x": -556,
+        "y": -420
+      },
+      "size": {
+        "width": 424,
+        "height": 580
+      },
+      "transparent": true,
+      "authoringBrief": "Southwest tailor shop; upper shelves behind the street details.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "848x1160"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "424x580",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_west_tailor_back/spriteFrame"
+      },
+      "sha256": "b14688efd2930712cb0842e4fc609c71a26eb3e2bd5f2e6f48317e3db5033073",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_east_food_shop_back",
+      "filename": "png/lc_east_food_shop_back.png",
+      "layer": "building_back",
+      "center": {
+        "x": 566,
+        "y": -415
+      },
+      "size": {
+        "width": 404,
+        "height": 580
+      },
+      "transparent": true,
+      "authoringBrief": "Southeast food shop, distinct from the chestnut cart.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "808x1160"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "404x580",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_east_food_shop_back/spriteFrame"
+      },
+      "sha256": "f60aab347c10e5c739d3ce2a6cce592bec30824aea807ce7a1b187767db49108",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_tea_stall_back",
+      "filename": "png/lc_tea_stall_back.png",
+      "layer": "street_back",
+      "center": {
+        "x": -430,
+        "y": 367
+      },
+      "size": {
+        "width": 265,
+        "height": 300
+      },
+      "transparent": true,
+      "authoringBrief": "Tea stall rear shelves and kettle behind vendor.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "530x600"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "265x300",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_tea_stall_back/spriteFrame"
+      },
+      "sha256": "eb6c4d13112f0ff78e6f49f0c623003578342e5f44ae7b22c120164f6d8b3810",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_tea_counter_front",
+      "filename": "png/lc_tea_counter_front.png",
+      "layer": "depth",
+      "center": {
+        "x": -348,
+        "y": 354
+      },
+      "size": {
+        "width": 56,
+        "height": 171
+      },
+      "transparent": true,
+      "authoringBrief": "Narrow counter front; hides vendor lower body without covering customer foot.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "112x342"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "56x171",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_tea_counter_front/spriteFrame"
+      },
+      "sha256": "766f27757e30f892ac5c0050b2d7d17ce9b4b07e841b4045df7c00ceecee7730",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_tea_patio_front",
+      "filename": "png/lc_tea_patio_front.png",
+      "layer": "depth",
+      "center": {
+        "x": -425,
+        "y": 163
+      },
+      "size": {
+        "width": 160,
+        "height": 136
+      },
+      "transparent": true,
+      "authoringBrief": "A low tea table, two stools and used ceramics on the stall's west patio; outside cross-lane and customer spur.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "320x272"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "160x136",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_tea_patio_front/spriteFrame"
+      },
+      "sha256": "f9733fdf460543979868da33cb3b0f3259ef6d6fb444822631fce3da8544c671",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_tea_awning_front",
+      "filename": "png/lc_tea_awning_front.png",
+      "layer": "overhead",
+      "center": {
+        "x": -430,
+        "y": 475
+      },
+      "size": {
+        "width": 280,
+        "height": 100
+      },
+      "transparent": true,
+      "authoringBrief": "Separate overhead valance. Do not paint over the customer's face or the service pad.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "560x200"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "280x100",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_tea_awning_front/spriteFrame"
+      },
+      "sha256": "217bd175f713f55bc7cd6206a9dc19b29edd34c594d3638fa5b82907345429c3",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_chestnut_cart_back",
+      "filename": "png/lc_chestnut_cart_back.png",
+      "layer": "street_back",
+      "center": {
+        "x": 447,
+        "y": -430
+      },
+      "size": {
+        "width": 185,
+        "height": 205
+      },
+      "transparent": true,
+      "authoringBrief": "East plaza cart body, tray and steam kettle.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "370x410"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "185x205",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_chestnut_cart_back/spriteFrame"
+      },
+      "sha256": "2e8ed077e658826f4cf3d02f11741ad25c374a1c90d0bdf122bc3ac3a552f23b",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_chestnut_cart_front",
+      "filename": "png/lc_chestnut_cart_front.png",
+      "layer": "depth",
+      "center": {
+        "x": 447,
+        "y": -482
+      },
+      "size": {
+        "width": 185,
+        "height": 110
+      },
+      "transparent": true,
+      "authoringBrief": "Near lip and wheel occluder; seller stands behind.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "370x220"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "185x110",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_chestnut_cart_front/spriteFrame"
+      },
+      "sha256": "e9d7d5580813a6d0a018f001d096d4716b04732303f655670d75412620f1c2c3",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_tree_front",
+      "filename": "png/lc_tree_front.png",
+      "layer": "depth",
+      "center": {
+        "x": -608,
+        "y": 193
+      },
+      "size": {
+        "width": 205,
+        "height": 290
+      },
+      "transparent": true,
+      "authoringBrief": "Tree trunk and separated branches at west crossing; root stays out of the public lane.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "410x580"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "205x290",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_tree_front/spriteFrame"
+      },
+      "sha256": "2cf49f994a61fa8d2112b4e6a775c7fe50bd3bd3de00986c3c7b8548874a2bdc",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_planter_front",
+      "filename": "png/lc_planter_front.png",
+      "layer": "depth",
+      "center": {
+        "x": 184,
+        "y": -74
+      },
+      "size": {
+        "width": 105,
+        "height": 115
+      },
+      "transparent": true,
+      "authoringBrief": "Small street-edge planter, limited collision footprint.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "210x230"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "105x115",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_planter_front/spriteFrame"
+      },
+      "sha256": "5c75d9b7b6ea89e217dc5b5e1e693612f2b1badfddbd978750a570e40ed47b1b",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_bench_front",
+      "filename": "png/lc_bench_front.png",
+      "layer": "depth",
+      "center": {
+        "x": -478,
+        "y": -188
+      },
+      "size": {
+        "width": 190,
+        "height": 95
+      },
+      "transparent": true,
+      "authoringBrief": "Bench outside the cross-lane walking polygon.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "380x190"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "190x95",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_bench_front/spriteFrame"
+      },
+      "sha256": "e0b49643ab7dcc3d9273ed28de7955792b52e0f90ce9a908f129e4a8175371aa",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_curb_flower_display",
+      "filename": "png/lc_curb_flower_display.png",
+      "layer": "depth",
+      "center": {
+        "x": -340,
+        "y": -265
+      },
+      "size": {
+        "width": 128,
+        "height": 132
+      },
+      "transparent": true,
+      "authoringBrief": "Grouped cut flowers, leaf pots and a low crate on the west curb, outside the main walking lane.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "256x264"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "128x132",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_curb_flower_display/spriteFrame"
+      },
+      "sha256": "08de6eb716883a97db9336dff5f9423ee96145a35132f5b1b9eb1306a06729d1",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_tailor_goods",
+      "filename": "png/lc_tailor_goods.png",
+      "layer": "depth",
+      "center": {
+        "x": -413,
+        "y": -401
+      },
+      "size": {
+        "width": 145,
+        "height": 125
+      },
+      "transparent": true,
+      "authoringBrief": "Fabric, buttons and sewing tray; supports thimble search target.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "290x250"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "145x125",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_tailor_goods/spriteFrame"
+      },
+      "sha256": "dcb3f3bb63a61731dca8aca062a4056e39261c93ddd70f22ade50cc48ec48b46",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_tailor_work_rack",
+      "filename": "png/lc_tailor_work_rack.png",
+      "layer": "depth",
+      "center": {
+        "x": -510,
+        "y": -335
+      },
+      "size": {
+        "width": 110,
+        "height": 150
+      },
+      "transparent": true,
+      "authoringBrief": "Tailor work rack with folded bolts, swatches and an open work basket, west of existing crates.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "220x300"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "110x150",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_tailor_work_rack/spriteFrame"
+      },
+      "sha256": "dbeccca1c093d3d95f9ac558d8977a174355be882c4c595c508afeb73dfc384e",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_crates_front",
+      "filename": "png/lc_crates_front.png",
+      "layer": "depth",
+      "center": {
+        "x": -430,
+        "y": -343
+      },
+      "size": {
+        "width": 105,
+        "height": 96
+      },
+      "transparent": true,
+      "authoringBrief": "Small stack next to tailor wall, off the messenger route.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "210x192"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "105x96",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_crates_front/spriteFrame"
+      },
+      "sha256": "a4cd1f972248a43eac5876587f6ffe6503ca488f128e471a6a9af2e28078205d",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_shop_goods_east",
+      "filename": "png/lc_shop_goods_east.png",
+      "layer": "depth",
+      "center": {
+        "x": 550,
+        "y": 248
+      },
+      "size": {
+        "width": 165,
+        "height": 150
+      },
+      "transparent": true,
+      "authoringBrief": "East shop goods for scale and search density.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "330x300"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "165x150",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_shop_goods_east/spriteFrame"
+      },
+      "sha256": "3f368287ee6354edcf2d8360f060ff52fafb4e7ad47ef72690db21f1c983e7de",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_curb_pottery_west",
+      "filename": "png/lc_curb_pottery_west.png",
+      "layer": "depth",
+      "center": {
+        "x": -226,
+        "y": -270
+      },
+      "size": {
+        "width": 90,
+        "height": 110
+      },
+      "transparent": true,
+      "authoringBrief": "Small grouped pots at the west curb, outside the courier path.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "180x220"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "90x110",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_curb_pottery_west/spriteFrame"
+      },
+      "sha256": "92897a63265e35e810222b86bba3a1688bd2141580547624e73e228187c26931",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_curb_produce_east",
+      "filename": "png/lc_curb_produce_east.png",
+      "layer": "depth",
+      "center": {
+        "x": 231,
+        "y": -260
+      },
+      "size": {
+        "width": 112,
+        "height": 130
+      },
+      "transparent": true,
+      "authoringBrief": "Produce baskets along the east curb, outside the shopper path.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "224x260"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "112x130",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_curb_produce_east/spriteFrame"
+      },
+      "sha256": "925a3919169aea2a71ffe949c74b7739a918ca2db3520181fdbc7e3e5a149a04",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_wayfinding_sign",
+      "filename": "png/lc_wayfinding_sign.png",
+      "layer": "depth",
+      "center": {
+        "x": -238,
+        "y": 84
+      },
+      "size": {
+        "width": 78,
+        "height": 145
+      },
+      "transparent": true,
+      "authoringBrief": "Narrow post at the cross street edge; no text is needed in greybox.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "156x290"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "78x145",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_wayfinding_sign/spriteFrame"
+      },
+      "sha256": "074798de808b84e9cd1579c4c78d2b578efb521caeacc12307cfa81b56628058",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_lantern_post_front",
+      "filename": "png/lc_lantern_post_front.png",
+      "layer": "depth",
+      "center": {
+        "x": 356,
+        "y": 531
+      },
+      "size": {
+        "width": 105,
+        "height": 265
+      },
+      "transparent": true,
+      "authoringBrief": "Independent post/lantern with stable ground contact.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "210x530"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "105x265",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_lantern_post_front/spriteFrame"
+      },
+      "sha256": "c940c8000a82e69142640e7813a86f1261e88a718a3ba48f36c21696cdf9a0a0",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_street_banner_front",
+      "filename": "png/lc_street_banner_front.png",
+      "layer": "overhead",
+      "center": {
+        "x": -35,
+        "y": 620
+      },
+      "size": {
+        "width": 500,
+        "height": 80
+      },
+      "transparent": true,
+      "authoringBrief": "Narrow hanging banner over the lane; support for one hidden knot.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "1000x160"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "500x80",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_street_banner_front/spriteFrame"
+      },
+      "sha256": "183da05da14785d9093d51594764a0bdbbdf0b40c5271d2ed4dcfe2798c5ba8e",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_crossing_pennants",
+      "filename": "png/lc_crossing_pennants.png",
+      "layer": "overhead",
+      "center": {
+        "x": 0,
+        "y": -215
+      },
+      "size": {
+        "width": 455,
+        "height": 55
+      },
+      "transparent": true,
+      "authoringBrief": "Overhead string of separate pennants; small sway can be authored later.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "910x110"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "455x55",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_crossing_pennants/spriteFrame"
+      },
+      "sha256": "9f80d92ca3a3a8342541d74ec13ccac8743aa261541972d02b9888b4c0acc04c",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_tea_steam_fx",
+      "filename": "png/lc_tea_steam_fx.png",
+      "layer": "effects",
+      "center": {
+        "x": -393,
+        "y": 475
+      },
+      "size": {
+        "width": 65,
+        "height": 95
+      },
+      "transparent": true,
+      "authoringBrief": "Small loop from kettle spout; effect anchor is fixed to stall.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "130x190"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "65x95",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_tea_steam_fx/spriteFrame"
+      },
+      "sha256": "c7e428627c9e624a01fe830c099ed449d1ffe2177e352e261acd47947425fe20",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_north_herb_stand",
+      "filename": "png/lc_north_herb_stand.png",
+      "layer": "building_back",
+      "center": {
+        "x": -296,
+        "y": 646
+      },
+      "size": {
+        "width": 145,
+        "height": 190
+      },
+      "transparent": true,
+      "authoringBrief": "Herb grower's narrow work stand joins the northwest shop to the tea district; small pots, drying leaves and a basket, with its feet clear of the courier exit route.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "290x380"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "145x190",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_north_herb_stand/spriteFrame"
+      },
+      "sha256": "71b6d243abd772b96f7547ed473be6e3f5392af5fc01e3f6b13c7ee4d3a51eb3",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_east_bun_cart_back",
+      "filename": "png/lc_east_bun_cart_back.png",
+      "layer": "street_back",
+      "center": {
+        "x": 25,
+        "y": 570
+      },
+      "size": {
+        "width": 150,
+        "height": 195
+      },
+      "transparent": true,
+      "authoringBrief": "A warm food pushcart partly facing the main street: canopy, steamer, stacked bowls and kettle behind pedestrians, without a task-like marker.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "300x390"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "150x195",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_east_bun_cart_back/spriteFrame"
+      },
+      "sha256": "bdbe379ad401825ba1e14d9182e0d900c6a4eabc9a43140d1285712fe2bd57df",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_east_bun_cart_front",
+      "filename": "png/lc_east_bun_cart_front.png",
+      "layer": "depth",
+      "center": {
+        "x": 25,
+        "y": 504
+      },
+      "size": {
+        "width": 150,
+        "height": 70
+      },
+      "transparent": true,
+      "authoringBrief": "Low apron, wheel and counter lip of the bun cart; a separate occluder below the cart work surface.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "300x140"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "150x70",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_east_bun_cart_front/spriteFrame"
+      },
+      "sha256": "e6254ed2526fcfb0f9f0e1dc517c38ebe5ff7e46a31b93e561b26e3e38db8eb6",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_west_market_handcart",
+      "filename": "png/lc_west_market_handcart.png",
+      "layer": "depth",
+      "center": {
+        "x": -468,
+        "y": -40
+      },
+      "size": {
+        "width": 155,
+        "height": 110
+      },
+      "transparent": true,
+      "authoringBrief": "Used market handcart in the west cross lane, carrying tied produce sacks and an empty crate between the tea patio and the bench.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "310x220"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "155x110",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_west_market_handcart/spriteFrame"
+      },
+      "sha256": "de40918779bcedbca4bd6f722d30f5e4816d6f783856883b90dde0ffc336c963",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_street_water_station",
+      "filename": "png/lc_street_water_station.png",
+      "layer": "depth",
+      "center": {
+        "x": 5,
+        "y": -245
+      },
+      "size": {
+        "width": 105,
+        "height": 165
+      },
+      "transparent": true,
+      "authoringBrief": "Public chicken drinking point: low glazed basin, feed scoop, folded cloth and slim timber stand, beside rather than on NPC routes.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "210x330"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "105x165",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_street_water_station/spriteFrame"
+      },
+      "sha256": "9622edae2366df62cc25526ad74738720fb4aa69d3c2ae429665d96fc300a8a2",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_tea_whistle_foreground",
+      "filename": "png/lc_tea_whistle_foreground.png",
+      "layer": "target_foreground",
+      "center": {
+        "x": -342,
+        "y": 393
+      },
+      "size": {
+        "width": 48,
+        "height": 42
+      },
+      "transparent": true,
+      "authoringBrief": "Thin tea-cup rim and saucer edge over the clay whistle's lower contour, with most of the item still visible and hit testing independent.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "96x84"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "48x42",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_tea_whistle_foreground/spriteFrame"
+      },
+      "sha256": "7a2184e2d16f412f083aa41cb50f32746257f38016c1a4e2ef8de54299e65629",
+      "status": "candidate_visual_review",
+      "targetId": "tea_clay_whistle"
+    },
+    {
+      "id": "lc_tailor_thimble_foreground",
+      "filename": "png/lc_tailor_thimble_foreground.png",
+      "layer": "target_foreground",
+      "center": {
+        "x": -395,
+        "y": -380
+      },
+      "size": {
+        "width": 44,
+        "height": 40
+      },
+      "transparent": true,
+      "authoringBrief": "Short sewing-tray lip and nearby thread edge crossing only the thimble's base.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "88x80"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "44x40",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_tailor_thimble_foreground/spriteFrame"
+      },
+      "sha256": "aa05b4c2a9f52dee7ecd5133bdf31569b55f852344c09b3f4a2375e7fcd6eec8",
+      "status": "candidate_visual_review",
+      "targetId": "tailor_thimble"
+    },
+    {
+      "id": "lc_banner_knot_foreground",
+      "filename": "png/lc_banner_knot_foreground.png",
+      "layer": "target_foreground",
+      "center": {
+        "x": 45,
+        "y": 620
+      },
+      "size": {
+        "width": 48,
+        "height": 48
+      },
+      "transparent": true,
+      "authoringBrief": "A narrow banner fold overlapping one low knot tail but leaving knot loops and center clear.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "96x96"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "48x48",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_banner_knot_foreground/spriteFrame"
+      },
+      "sha256": "44738e540cab0dce642e43c42dbac93315e58d856efb0ac713d9f1ded5e5764b",
+      "status": "candidate_visual_review",
+      "targetId": "banner_knot"
+    },
+    {
+      "id": "lc_chestnut_tongs_foreground",
+      "filename": "png/lc_chestnut_tongs_foreground.png",
+      "layer": "target_foreground",
+      "center": {
+        "x": 430,
+        "y": -407
+      },
+      "size": {
+        "width": 56,
+        "height": 50
+      },
+      "transparent": true,
+      "authoringBrief": "Folded packet edge and one chestnut partly over the tongs' lower handle, without hiding their prongs.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "112x100"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "56x50",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_chestnut_tongs_foreground/spriteFrame"
+      },
+      "sha256": "a9e7319ebfd4927c6676fa92bfdc6073c955786233b9a5ed7adc9a135e4815ac",
+      "status": "candidate_visual_review",
+      "targetId": "chestnut_tongs"
+    }
+  ]
+}

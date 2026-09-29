@@ -1,0 +1,485 @@
+{
+  "styleId": "chicken_simple_2d_v1",
+  "actorId": "messenger_customer",
+  "authoringBrief": "Original simplified 2-D courier chick; near-top-down parallel view; 3 distinct directions; leg weight shift, wing counter-swing, breathing, blink and staged tea handoff. Warm uneven ink, cream feathers, slate short vest, terracotta satchel; no model imagery or baked shadow.",
+  "sourceRenderer": "render_courier.py",
+  "canvasPx": [
+    256,
+    256
+  ],
+  "footpointPx": [
+    128,
+    215
+  ],
+  "paintedHeightPx": 186,
+  "generationSpec": "Hand-authored Pillow geometry at 4x supersampling; SVG curves exported for every cel.",
+  "finalGameAssetSpec": "256x256 straight-alpha RGBA PNG, shared footpoint, nominal painted height 186 px; Cocos SpriteFrame at 120 world-unit painted height.",
+  "processing": "Draw at 1024x1024 RGBA and downsample LANCZOS once to 256x256; no automatic trim, no baked ground shadow.",
+  "assets": [
+    {
+      "id": "courier_walk_n_00",
+      "clip": "walk_n",
+      "authoringBrief": "Courier chicken walking n; right foot contact and wing recoil; retain 3-feather tuft, slate vest, terracotta satchel, 128,215 shared footpoint.",
+      "sourceSvg": "svg_source/courier_walk_n_00.svg",
+      "sourceSvgSha256": "25eeac2bcacc8e977414760572f9e5560b69dce3ba6491f3b56a692faa39e0a2",
+      "exportPng": "export/courier_walk_n_00.png",
+      "sha256": "297812110a2437c8f028dfeeab0dff53e66494e0042211f0c1ee8ef4aad1fe44",
+      "alphaBoundsPx": [
+        59,
+        32,
+        190,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_walk_n_01",
+      "clip": "walk_n",
+      "authoringBrief": "Courier chicken walking n; passing stride with lifted body; retain 3-feather tuft, slate vest, terracotta satchel, 128,215 shared footpoint.",
+      "sourceSvg": "svg_source/courier_walk_n_01.svg",
+      "sourceSvgSha256": "878685012840a6a163ece9f39b1106f63c4b358fb2e9bdab6d3d28d1e56aa073",
+      "exportPng": "export/courier_walk_n_01.png",
+      "sha256": "ac00bbb730ab5d3dce81a58de1d24cac527834de2c3f6f3085c0a99ede3ccfa8",
+      "alphaBoundsPx": [
+        62,
+        26,
+        190,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_walk_n_02",
+      "clip": "walk_n",
+      "authoringBrief": "Courier chicken walking n; left foot contact and opposite wing recoil; retain 3-feather tuft, slate vest, terracotta satchel, 128,215 shared footpoint.",
+      "sourceSvg": "svg_source/courier_walk_n_02.svg",
+      "sourceSvgSha256": "f2ca5a86d6f7981d380e7a292b17bd54b037d1460d1194752aa6d3d164717b40",
+      "exportPng": "export/courier_walk_n_02.png",
+      "sha256": "4f04c7add1100f5508efd1687791fb2fe9a817dc19aec54aa1d208a127d7cc4e",
+      "alphaBoundsPx": [
+        69,
+        32,
+        197,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_walk_n_03",
+      "clip": "walk_n",
+      "authoringBrief": "Courier chicken walking n; opposite passing stride with lifted body; retain 3-feather tuft, slate vest, terracotta satchel, 128,215 shared footpoint.",
+      "sourceSvg": "svg_source/courier_walk_n_03.svg",
+      "sourceSvgSha256": "948999e9d68141992d5945f0f222111cd9098cd017e3c68bb859d3a6ed86d8e3",
+      "exportPng": "export/courier_walk_n_03.png",
+      "sha256": "0a6154e45d707f51d5adea89aaf17f4c20daefa30de9b302d77a6978533698d4",
+      "alphaBoundsPx": [
+        66,
+        26,
+        194,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_walk_nw_00",
+      "clip": "walk_nw",
+      "authoringBrief": "Courier chicken walking nw; right foot contact and wing recoil; retain 3-feather tuft, slate vest, terracotta satchel, 128,215 shared footpoint.",
+      "sourceSvg": "svg_source/courier_walk_nw_00.svg",
+      "sourceSvgSha256": "3a00c6dec1c9d07dd3d4448db7d7b5e7b57e1d6d1727ac17b73ad1d2fecc87cd",
+      "exportPng": "export/courier_walk_nw_00.png",
+      "sha256": "3fdc7f45492778c8cec1e317e297b98b0a1da6a804ec612820cf6936f779e05f",
+      "alphaBoundsPx": [
+        59,
+        32,
+        190,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_walk_nw_01",
+      "clip": "walk_nw",
+      "authoringBrief": "Courier chicken walking nw; passing stride with lifted body; retain 3-feather tuft, slate vest, terracotta satchel, 128,215 shared footpoint.",
+      "sourceSvg": "svg_source/courier_walk_nw_01.svg",
+      "sourceSvgSha256": "cdd6c5239c2c1969c2600fffacbbbe73538060a6182a2bceff922ba5980ae7c3",
+      "exportPng": "export/courier_walk_nw_01.png",
+      "sha256": "87806c174c64fee947f3e3760cfdb50e73d3364912a740f2ee867ae79acb7760",
+      "alphaBoundsPx": [
+        62,
+        26,
+        190,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_walk_nw_02",
+      "clip": "walk_nw",
+      "authoringBrief": "Courier chicken walking nw; left foot contact and opposite wing recoil; retain 3-feather tuft, slate vest, terracotta satchel, 128,215 shared footpoint.",
+      "sourceSvg": "svg_source/courier_walk_nw_02.svg",
+      "sourceSvgSha256": "db0b876978c430b0e864a7d13bbeb62d296f6e07c70858ace96b6e7702965250",
+      "exportPng": "export/courier_walk_nw_02.png",
+      "sha256": "02e4b41316282226dddbeb3fa0e1dbba43d9ecc0d5f5ba21d7e5160146c282dd",
+      "alphaBoundsPx": [
+        69,
+        32,
+        197,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_walk_nw_03",
+      "clip": "walk_nw",
+      "authoringBrief": "Courier chicken walking nw; opposite passing stride with lifted body; retain 3-feather tuft, slate vest, terracotta satchel, 128,215 shared footpoint.",
+      "sourceSvg": "svg_source/courier_walk_nw_03.svg",
+      "sourceSvgSha256": "c52e28bf82b97ec646a04b3a745fae16566e4e5dc91c66f05c941406277f6eed",
+      "exportPng": "export/courier_walk_nw_03.png",
+      "sha256": "6fa6348e4be1a0248e111c2791bb418ad89e9d564878b34a5c08a1550e85e92e",
+      "alphaBoundsPx": [
+        66,
+        26,
+        194,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_walk_ne_00",
+      "clip": "walk_ne",
+      "authoringBrief": "Courier chicken walking ne; right foot contact and wing recoil; retain 3-feather tuft, slate vest, terracotta satchel, 128,215 shared footpoint.",
+      "sourceSvg": "svg_source/courier_walk_ne_00.svg",
+      "sourceSvgSha256": "72dd93916b40afe179ab68597684ae02398283ca3353b8ba4e950171bb23a7cc",
+      "exportPng": "export/courier_walk_ne_00.png",
+      "sha256": "e8e24e2582787f939094e44e461ae0db9205654e7133658761abb11d4ebf060f",
+      "alphaBoundsPx": [
+        59,
+        32,
+        187,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_walk_ne_01",
+      "clip": "walk_ne",
+      "authoringBrief": "Courier chicken walking ne; passing stride with lifted body; retain 3-feather tuft, slate vest, terracotta satchel, 128,215 shared footpoint.",
+      "sourceSvg": "svg_source/courier_walk_ne_01.svg",
+      "sourceSvgSha256": "55f0d1c7be048ed84426f459ba8fd5c16fc1803174d22c75f2b0f863258e3d03",
+      "exportPng": "export/courier_walk_ne_01.png",
+      "sha256": "2785fd5e699a834b4b1f8253db62b1e6c2f88881202f6e52de0564e2ddda6c14",
+      "alphaBoundsPx": [
+        62,
+        26,
+        190,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_walk_ne_02",
+      "clip": "walk_ne",
+      "authoringBrief": "Courier chicken walking ne; left foot contact and opposite wing recoil; retain 3-feather tuft, slate vest, terracotta satchel, 128,215 shared footpoint.",
+      "sourceSvg": "svg_source/courier_walk_ne_02.svg",
+      "sourceSvgSha256": "68ba002bd0e330abac3a6a3c099102aac4b24148007707f77577f31a3f008f73",
+      "exportPng": "export/courier_walk_ne_02.png",
+      "sha256": "630077b539917a747712553c730fb594f2a6d71c9e1baeb882a03c25c687ec96",
+      "alphaBoundsPx": [
+        66,
+        32,
+        197,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_walk_ne_03",
+      "clip": "walk_ne",
+      "authoringBrief": "Courier chicken walking ne; opposite passing stride with lifted body; retain 3-feather tuft, slate vest, terracotta satchel, 128,215 shared footpoint.",
+      "sourceSvg": "svg_source/courier_walk_ne_03.svg",
+      "sourceSvgSha256": "c6506e4a03ae707ced9340080b76030ca5e6c6d4be585c1d492050201fed5633",
+      "exportPng": "export/courier_walk_ne_03.png",
+      "sha256": "b54236728fc40e2fbb1ec57226d2c4c73c8f41b82e33cf61ab36ab48c5674d7c",
+      "alphaBoundsPx": [
+        66,
+        26,
+        194,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_turn_nw_w_00",
+      "clip": "turn_nw_w",
+      "authoringBrief": "Courier chicken turn_nw_w pose 1 of 3; coherent costume, shared footpoint, no baked shadow.",
+      "sourceSvg": "svg_source/courier_turn_nw_w_00.svg",
+      "sourceSvgSha256": "1dd9c8243f76dd0fdf941473f72e73d6ef6f8f864d1a00a0fe68476e7b6abb6f",
+      "exportPng": "export/courier_turn_nw_w_00.png",
+      "sha256": "bff9b5996622ea9cc4824f3d499cfb667b04c1452992746781657189d1b42616",
+      "alphaBoundsPx": [
+        61,
+        31,
+        190,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_turn_nw_w_01",
+      "clip": "turn_nw_w",
+      "authoringBrief": "Courier chicken turn_nw_w pose 2 of 3; coherent costume, shared footpoint, no baked shadow.",
+      "sourceSvg": "svg_source/courier_turn_nw_w_01.svg",
+      "sourceSvgSha256": "1d060b77e91a9ecf89040c02ddecb24a10b0839c689af25ef9216669e7bf8987",
+      "exportPng": "export/courier_turn_nw_w_01.png",
+      "sha256": "1d89febab98de59ed56e188227ab6ddbaab3d8c2d5971d28fdda4a5cdcc0846c",
+      "alphaBoundsPx": [
+        63,
+        29,
+        191,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_turn_nw_w_02",
+      "clip": "turn_nw_w",
+      "authoringBrief": "Courier chicken turn_nw_w pose 3 of 3; coherent costume, shared footpoint, no baked shadow.",
+      "sourceSvg": "svg_source/courier_turn_nw_w_02.svg",
+      "sourceSvgSha256": "dd0aeb6229f2931c20629bb793ec45df41e8233510c5d98155dd67e7083d3c7b",
+      "exportPng": "export/courier_turn_nw_w_02.png",
+      "sha256": "5d0a082529d41f8986b00edffba3b6c7b68ead98c68f8b5fdeff7eb5e56c3e5f",
+      "alphaBoundsPx": [
+        67,
+        30,
+        195,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_idle_w_00",
+      "clip": "idle_w",
+      "authoringBrief": "Courier chicken idle_w pose 1 of 3; coherent costume, shared footpoint, no baked shadow.",
+      "sourceSvg": "svg_source/courier_idle_w_00.svg",
+      "sourceSvgSha256": "9ac9e0008f18ce9c1af50b16e4009a9ebca9a21a3f6c89267409dab7f8dae7f1",
+      "exportPng": "export/courier_idle_w_00.png",
+      "sha256": "37d2c3e4d6856ca262dd335fbfff8e7200fa36b2e9c2ef66e77729644d7d52bc",
+      "alphaBoundsPx": [
+        64,
+        31,
+        192,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_idle_w_01",
+      "clip": "idle_w",
+      "authoringBrief": "Courier chicken idle_w pose 2 of 3; coherent costume, shared footpoint, no baked shadow.",
+      "sourceSvg": "svg_source/courier_idle_w_01.svg",
+      "sourceSvgSha256": "7c5b147e6cd40c0e29bcf80f146555bae9e46942b1d33450fefba06c3d7634c8",
+      "exportPng": "export/courier_idle_w_01.png",
+      "sha256": "1f66427372578ac316283b82180575ce71f692bef9630066648b8933acd779ad",
+      "alphaBoundsPx": [
+        64,
+        30,
+        192,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_idle_w_02",
+      "clip": "idle_w",
+      "authoringBrief": "Courier chicken idle_w pose 3 of 3; coherent costume, shared footpoint, no baked shadow.",
+      "sourceSvg": "svg_source/courier_idle_w_02.svg",
+      "sourceSvgSha256": "b7d22adc1469db7de1d1e97c6ad93c88341b9edf26118f496ca9a6ae0a695cd9",
+      "exportPng": "export/courier_idle_w_02.png",
+      "sha256": "69ae50a4f488221d44ef2eacdce1d48a897fea7ff3ad2ac9700a7ba4892c5825",
+      "alphaBoundsPx": [
+        64,
+        29,
+        192,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_receive_w_00",
+      "clip": "receive_w",
+      "authoringBrief": "West-facing courier tea handoff: pause and look left; keep shoulder connected and feet registered.",
+      "sourceSvg": "svg_source/courier_receive_w_00.svg",
+      "sourceSvgSha256": "d0556ad7411a5188033d7eebc9eb84a1a67d7122f3d4b2754223743690ae048c",
+      "exportPng": "export/courier_receive_w_00.png",
+      "sha256": "bb5c1d6addb8d25a598816fb5fa0d52f154f9face287e3aa3d63dbcdaa6bbb36",
+      "alphaBoundsPx": [
+        62,
+        31,
+        190,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_receive_w_01",
+      "clip": "receive_w",
+      "authoringBrief": "West-facing courier tea handoff: extend feather wing; keep shoulder connected and feet registered.",
+      "sourceSvg": "svg_source/courier_receive_w_01.svg",
+      "sourceSvgSha256": "4f723e3d285d3330b89e4bb1c145bae3e4e6a587a014ba552e3f172d60e66f30",
+      "exportPng": "export/courier_receive_w_01.png",
+      "sha256": "8bcfe102521617f99d495c9726fe1e779166703822076f99d223a396a21da3f7",
+      "alphaBoundsPx": [
+        63,
+        31,
+        191,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_receive_w_02",
+      "clip": "receive_w",
+      "authoringBrief": "West-facing courier tea handoff: cup appears at feather tips; keep shoulder connected and feet registered.",
+      "sourceSvg": "svg_source/courier_receive_w_02.svg",
+      "sourceSvgSha256": "97b33f3c61ce81d884bf4596b9ca31d87b8eb1438cc413e86d6391ad53eb90bf",
+      "exportPng": "export/courier_receive_w_02.png",
+      "sha256": "6134906223170476069509f6e98ebe0617742a00e04ed4d2b1e1b1f31a75ad0e",
+      "alphaBoundsPx": [
+        50,
+        29,
+        190,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_receive_w_03",
+      "clip": "receive_w",
+      "authoringBrief": "West-facing courier tea handoff: hold cup and blink; keep shoulder connected and feet registered.",
+      "sourceSvg": "svg_source/courier_receive_w_03.svg",
+      "sourceSvgSha256": "92e171bd542b04855d13f361199c595044eac2fc90c0176eeeb5bf8797180173",
+      "exportPng": "export/courier_receive_w_03.png",
+      "sha256": "1e9331a91eb586ab39153406fc064b1a8899a5b19677ac510ae4f2093e3eec8a",
+      "alphaBoundsPx": [
+        50,
+        29,
+        193,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_receive_w_04",
+      "clip": "receive_w",
+      "authoringBrief": "West-facing courier tea handoff: return wing toward torso; keep shoulder connected and feet registered.",
+      "sourceSvg": "svg_source/courier_receive_w_04.svg",
+      "sourceSvgSha256": "8a6c585921f3bccf2a354114476c8d0385f5f67ec534d06f81384afdf3368def",
+      "exportPng": "export/courier_receive_w_04.png",
+      "sha256": "3ba34967b2dc4ffab510a842af66ac9d8adfb6e84041adc242aaabe0728c92f7",
+      "alphaBoundsPx": [
+        66,
+        31,
+        194,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_turn_w_ne_00",
+      "clip": "turn_w_ne",
+      "authoringBrief": "Courier chicken turn_w_ne pose 1 of 3; coherent costume, shared footpoint, no baked shadow.",
+      "sourceSvg": "svg_source/courier_turn_w_ne_00.svg",
+      "sourceSvgSha256": "fdb657e2e73e0deaac0beda43ad22b06ad557332609e979ac58a4de2fa6d66b4",
+      "exportPng": "export/courier_turn_w_ne_00.png",
+      "sha256": "0dc2f60abe66a024d079c26c1c6a345f56ef5a3074967e27d3999e8d3d0df267",
+      "alphaBoundsPx": [
+        61,
+        31,
+        190,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_turn_w_ne_01",
+      "clip": "turn_w_ne",
+      "authoringBrief": "Courier chicken turn_w_ne pose 2 of 3; coherent costume, shared footpoint, no baked shadow.",
+      "sourceSvg": "svg_source/courier_turn_w_ne_01.svg",
+      "sourceSvgSha256": "c467d77591f04509f1db6352d931c905cdaaf2ba3e9e66c93189f9350f3ef84c",
+      "exportPng": "export/courier_turn_w_ne_01.png",
+      "sha256": "5a41b50bb730842989252d64e426f7638647a2841130a17329ead3deee6ea9a1",
+      "alphaBoundsPx": [
+        63,
+        29,
+        191,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_turn_w_ne_02",
+      "clip": "turn_w_ne",
+      "authoringBrief": "Courier chicken turn_w_ne pose 3 of 3; coherent costume, shared footpoint, no baked shadow.",
+      "sourceSvg": "svg_source/courier_turn_w_ne_02.svg",
+      "sourceSvgSha256": "277b593008b4aeb0ff990bec26143c65f82ef1c1014f9509c76422ba482b564d",
+      "exportPng": "export/courier_turn_w_ne_02.png",
+      "sha256": "892a0f08aab4848e15b5dd2dc5b4bf56c2c3aae85c5b71a8db07d268220df07b",
+      "alphaBoundsPx": [
+        66,
+        30,
+        195,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_idle_ne_00",
+      "clip": "idle_ne",
+      "authoringBrief": "Courier chicken idle_ne pose 1 of 3; coherent costume, shared footpoint, no baked shadow.",
+      "sourceSvg": "svg_source/courier_idle_ne_00.svg",
+      "sourceSvgSha256": "97310a27f452209895b7f0bc621728dc4e63cbe45e6c8319cda55d595c70c3ba",
+      "exportPng": "export/courier_idle_ne_00.png",
+      "sha256": "00853961f270d7f2fb8169b98186945ffdb04ed73821362372bd4c4725e80d10",
+      "alphaBoundsPx": [
+        64,
+        31,
+        192,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_idle_ne_01",
+      "clip": "idle_ne",
+      "authoringBrief": "Courier chicken idle_ne pose 2 of 3; coherent costume, shared footpoint, no baked shadow.",
+      "sourceSvg": "svg_source/courier_idle_ne_01.svg",
+      "sourceSvgSha256": "c02e0a72a7a882fc413d549fa4a53449d1d4a964e0dcb423c4c0f09927965ae2",
+      "exportPng": "export/courier_idle_ne_01.png",
+      "sha256": "79249144ccd7614b76360cb0633e0aed1e9a1b095541898b56595e20c04d4ddf",
+      "alphaBoundsPx": [
+        64,
+        30,
+        192,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    },
+    {
+      "id": "courier_idle_ne_02",
+      "clip": "idle_ne",
+      "authoringBrief": "Courier chicken idle_ne pose 3 of 3; coherent costume, shared footpoint, no baked shadow.",
+      "sourceSvg": "svg_source/courier_idle_ne_02.svg",
+      "sourceSvgSha256": "6dac348b35f0735575337e227b17ab066831b457efc21512d6b12206819a3716",
+      "exportPng": "export/courier_idle_ne_02.png",
+      "sha256": "b54b5e6ed3a3673e14d6ac41744f5e32c46a73efd77b1e7cfcec73dee7617b7f",
+      "alphaBoundsPx": [
+        64,
+        29,
+        192,
+        215
+      ],
+      "reviewStatus": "trial_unapproved"
+    }
+  ],
+  "reviewStatus": "trial_unapproved_pending_game_review"
+}

@@ -1,0 +1,14 @@
+{
+  "ver": "1.2.0",
+  "importer": "directory",
+  "imported": true,
+  "uuid": "ee3b0bec-fc0a-4fb4-9648-83f133c05789",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "bundleConfigID": "wechat_city_subpackage",
+    "bundleName": "city_living_city_street_block_01",
+    "priority": 7,
+    "isBundle": true
+  }
+}

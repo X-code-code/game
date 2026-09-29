@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 1,
+  "id": "living_city_street_block_01",
+  "status": "greybox_review",
+  "coordinateSystem": {
+    "origin": "map_center",
+    "xPositive": "right",
+    "yPositive": "up",
+    "unit": "authored_map_pixel",
+    "projection": "near_top_down_parallel",
+    "actorAnchor": "ground_contact_between_feet",
+    "note": "All coordinates below are world units, not the normalized 0..1 entity coordinates in CityConfig v1. A renderer must convert explicitly."
+  },
+  "map": {
+    "width": 1536,
+    "height": 2048,
+    "safeOuterMargin": 60
+  },
+  "camera": {
+    "referenceViewport": { "width": 444, "height": 960 },
+    "fitMode": "cover",
+    "minZoom": 1,
+    "initialZoom": 1.4,
+    "maxZoom": 2.25,
+    "initialFocus": { "x": -230, "y": 20 },
+    "detailPreviewFocus": { "x": -295, "y": 350 },
+    "hudBottomReserveScreenPx": 156,
+    "normalActorWorldHeight": 120,
+    "normalTargetWorldWidth": 28
+  },
+  "renderLayers": [
+    { "id": "ground", "order": 0, "rule": "fixed" },
+    { "id": "building_back", "order": 10, "rule": "fixed" },
+    { "id": "street_back", "order": 20, "rule": "fixed" },
+    { "id": "depth", "order": 30, "rule": "sort_descending_foot_y" },
+    { "id": "overhead", "order": 40, "rule": "fixed" },
+    { "id": "target_foreground", "order": 45, "rule": "fixed_after_independent_target_sprite" },
+    { "id": "effects", "order": 50, "rule": "local_pivot" }
+  ],
+  "artSlots": [
+    { "id": "lc_ground_paving", "layer": "ground", "center": { "x": 0, "y": 0 }, "size": { "width": 1536, "height": 2048 }, "alpha": false, "purpose": "Continuous ground, curb and street texture only; no baked characters, stalls or trees." },
+    { "id": "lc_west_storefront_back", "layer": "building_back", "center": { "x": -558, "y": 678 }, "size": { "width": 420, "height": 520 }, "alpha": true, "purpose": "Northwest shop roof and facade; leaves the tea service spur clear." },
+    { "id": "lc_east_storefront_back", "layer": "building_back", "center": { "x": 565, "y": 650 }, "size": { "width": 406, "height": 560 }, "alpha": true, "purpose": "Northeast shop roof and facade, connected visually to cross lane." },
+    { "id": "lc_west_tailor_back", "layer": "building_back", "center": { "x": -556, "y": -420 }, "size": { "width": 424, "height": 580 }, "alpha": true, "purpose": "Southwest tailor shop; upper shelves behind the street details." },
+    { "id": "lc_east_food_shop_back", "layer": "building_back", "center": { "x": 566, "y": -415 }, "size": { "width": 404, "height": 580 }, "alpha": true, "purpose": "Southeast food shop, distinct from the chestnut cart." },
+    { "id": "lc_tea_stall_back", "layer": "street_back", "center": { "x": -430, "y": 367 }, "size": { "width": 265, "height": 300 }, "alpha": true, "purpose": "Tea stall rear shelves and kettle behind vendor." },
+    { "id": "lc_tea_counter_front", "layer": "depth", "center": { "x": -348, "y": 354 }, "size": { "width": 56, "height": 171 }, "alpha": true, "footY": 284, "purpose": "Narrow counter front; hides vendor lower body without covering customer foot." },
+    { "id": "lc_tea_patio_front", "layer": "depth", "center": { "x": -425, "y": 163 }, "size": { "width": 160, "height": 136 }, "alpha": true, "footY": 110, "purpose": "A low tea table, two stools and used ceramics on the stall's west patio; outside cross-lane and customer spur." },
+    { "id": "lc_tea_awning_front", "layer": "overhead", "center": { "x": -430, "y": 475 }, "size": { "width": 280, "height": 100 }, "alpha": true, "purpose": "Separate overhead valance. Do not paint over the customer's face or the service pad." },
+    { "id": "lc_chestnut_cart_back", "layer": "street_back", "center": { "x": 447, "y": -430 }, "size": { "width": 185, "height": 205 }, "alpha": true, "purpose": "East plaza cart body, tray and steam kettle." },
+    { "id": "lc_chestnut_cart_front", "layer": "depth", "center": { "x": 447, "y": -482 }, "size": { "width": 185, "height": 110 }, "alpha": true, "footY": -510, "purpose": "Near lip and wheel occluder; seller stands behind." },
+    { "id": "lc_tree_front", "layer": "depth", "center": { "x": -608, "y": 193 }, "size": { "width": 205, "height": 290 }, "alpha": true, "footY": 110, "purpose": "Tree trunk and separated branches at west crossing; root stays out of the public lane." },
+    { "id": "lc_planter_front", "layer": "depth", "center": { "x": 184, "y": -74 }, "size": { "width": 105, "height": 115 }, "alpha": true, "footY": -142, "purpose": "Small street-edge planter, limited collision footprint." },
+    { "id": "lc_bench_front", "layer": "depth", "center": { "x": -478, "y": -188 }, "size": { "width": 190, "height": 95 }, "alpha": true, "footY": -235, "purpose": "Bench outside the cross-lane walking polygon." },
+    { "id": "lc_curb_flower_display", "layer": "depth", "center": { "x": -340, "y": -265 }, "size": { "width": 128, "height": 132 }, "alpha": true, "footY": -310, "purpose": "Grouped cut flowers, leaf pots and a low crate on the west curb, outside the main walking lane." },
+    { "id": "lc_tailor_goods", "layer": "depth", "center": { "x": -413, "y": -401 }, "size": { "width": 145, "height": 125 }, "alpha": true, "footY": -455, "purpose": "Fabric, buttons and sewing tray; supports thimble search target." },
+    { "id": "lc_tailor_work_rack", "layer": "depth", "center": { "x": -510, "y": -335 }, "size": { "width": 110, "height": 150 }, "alpha": true, "footY": -390, "purpose": "Tailor work rack with folded bolts, swatches and an open work basket, west of existing crates." },
+    { "id": "lc_crates_front", "layer": "depth", "center": { "x": -430, "y": -343 }, "size": { "width": 105, "height": 96 }, "alpha": true, "footY": -385, "purpose": "Small stack next to tailor wall, off the messenger route." },
+    { "id": "lc_shop_goods_east", "layer": "depth", "center": { "x": 550, "y": 248 }, "size": { "width": 165, "height": 150 }, "alpha": true, "footY": 180, "purpose": "East shop goods for scale and search density." },
+    { "id": "lc_curb_pottery_west", "layer": "depth", "center": { "x": -226, "y": -270 }, "size": { "width": 90, "height": 110 }, "alpha": true, "footY": -315, "purpose": "Small grouped pots at the west curb, outside the courier path." },
+    { "id": "lc_curb_produce_east", "layer": "depth", "center": { "x": 231, "y": -260 }, "size": { "width": 112, "height": 130 }, "alpha": true, "footY": -320, "purpose": "Produce baskets along the east curb, outside the shopper path." },
+    { "id": "lc_wayfinding_sign", "layer": "depth", "center": { "x": -238, "y": 84 }, "size": { "width": 78, "height": 145 }, "alpha": true, "footY": -10, "purpose": "Narrow post at the cross street edge; no text is needed in greybox." },
+    { "id": "lc_lantern_post_front", "layer": "depth", "center": { "x": 356, "y": 531 }, "size": { "width": 105, "height": 265 }, "alpha": true, "footY": 410, "purpose": "Independent post/lantern with stable ground contact." },
+    { "id": "lc_street_banner_front", "layer": "overhead", "center": { "x": -35, "y": 620 }, "size": { "width": 500, "height": 80 }, "alpha": true, "purpose": "Narrow hanging banner over the lane; support for one hidden knot." },
+    { "id": "lc_crossing_pennants", "layer": "overhead", "center": { "x": 0, "y": -215 }, "size": { "width": 455, "height": 55 }, "alpha": true, "purpose": "Overhead string of separate pennants; small sway can be authored later." },
+    { "id": "lc_tea_steam_fx", "layer": "effects", "center": { "x": -393, "y": 475 }, "size": { "width": 65, "height": 95 }, "alpha": true, "purpose": "Small loop from kettle spout; effect anchor is fixed to stall." },
+    { "id": "lc_north_herb_stand", "layer": "building_back", "center": { "x": -296, "y": 646 }, "size": { "width": 145, "height": 190 }, "alpha": true, "purpose": "Herb grower's narrow work stand joins the northwest shop to the tea district; small pots, drying leaves and a basket, with its feet clear of the courier exit route." },
+    { "id": "lc_east_bun_cart_back", "layer": "street_back", "center": { "x": 25, "y": 570 }, "size": { "width": 150, "height": 195 }, "alpha": true, "purpose": "A warm food pushcart partly facing the main street: canopy, steamer, stacked bowls and kettle behind pedestrians, without a task-like marker." },
+    { "id": "lc_east_bun_cart_front", "layer": "depth", "center": { "x": 25, "y": 504 }, "size": { "width": 150, "height": 70 }, "alpha": true, "footY": 470, "purpose": "Low apron, wheel and counter lip of the bun cart; a separate occluder below the cart work surface." },
+    { "id": "lc_west_market_handcart", "layer": "depth", "center": { "x": -468, "y": -40 }, "size": { "width": 155, "height": 110 }, "alpha": true, "footY": -86, "purpose": "Used market handcart in the west cross lane, carrying tied produce sacks and an empty crate between the tea patio and the bench." },
+    { "id": "lc_street_water_station", "layer": "depth", "center": { "x": 5, "y": -245 }, "size": { "width": 105, "height": 165 }, "alpha": true, "footY": -314, "purpose": "Public chicken drinking point: low glazed basin, feed scoop, folded cloth and slim timber stand, beside rather than on NPC routes." },
+    { "id": "lc_tea_whistle_foreground", "layer": "target_foreground", "targetId": "tea_clay_whistle", "center": { "x": -342, "y": 393 }, "size": { "width": 48, "height": 42 }, "alpha": true, "purpose": "Thin tea-cup rim and saucer edge over the clay whistle's lower contour, with most of the item still visible and hit testing independent." },
+    { "id": "lc_tailor_thimble_foreground", "layer": "target_foreground", "targetId": "tailor_thimble", "center": { "x": -395, "y": -380 }, "size": { "width": 44, "height": 40 }, "alpha": true, "purpose": "Short sewing-tray lip and nearby thread edge crossing only the thimble's base." },
+    { "id": "lc_banner_knot_foreground", "layer": "target_foreground", "targetId": "banner_knot", "center": { "x": 45, "y": 620 }, "size": { "width": 48, "height": 48 }, "alpha": true, "purpose": "A narrow banner fold overlapping one low knot tail but leaving knot loops and center clear." },
+    { "id": "lc_chestnut_tongs_foreground", "layer": "target_foreground", "targetId": "chestnut_tongs", "center": { "x": 430, "y": -407 }, "size": { "width": 56, "height": 50 }, "alpha": true, "purpose": "Folded packet edge and one chestnut partly over the tongs' lower handle, without hiding their prongs." }
+  ],
+  "walkableRegions": [
+    { "id": "main_street", "access": "public", "polygon": [[-280, -900], [310, -900], [310, 900], [-280, 900]] },
+    { "id": "cross_lane", "access": "public", "polygon": [[-700, -150], [700, -150], [700, 100], [-700, 100]] },
+    { "id": "tea_customer_spur", "access": "public", "polygon": [[-325, 220], [-175, 220], [-175, 470], [-325, 470]] },
+    { "id": "east_market_plaza", "access": "public", "polygon": [[260, -650], [650, -650], [650, -230], [260, -230]] },
+    { "id": "tea_vendor_stage", "access": "vendor_only", "polygon": [[-480, 270], [-365, 270], [-365, 460], [-480, 460]] }
+  ],
+  "physicalFootprints": [
+    { "id": "tea_counter_block", "artSlotId": "lc_tea_counter_front", "polygon": [[-363, 285], [-333, 285], [-333, 425], [-363, 425]] },
+    { "id": "chestnut_cart_block", "artSlotId": "lc_chestnut_cart_back", "polygon": [[390, -510], [505, -510], [505, -367], [390, -367]] },
+    { "id": "tree_trunk_block", "artSlotId": "lc_tree_front", "polygon": [[-620, 110], [-590, 110], [-590, 160], [-620, 160]] },
+    { "id": "planter_block", "artSlotId": "lc_planter_front", "polygon": [[160, -142], [207, -142], [207, -86], [160, -86]] },
+    { "id": "bench_block", "artSlotId": "lc_bench_front", "polygon": [[-560, -235], [-395, -235], [-395, -170], [-560, -170]] },
+    { "id": "tea_patio_block", "artSlotId": "lc_tea_patio_front", "polygon": [[-485, 110], [-365, 110], [-365, 208], [-485, 208]] },
+    { "id": "curb_flower_block", "artSlotId": "lc_curb_flower_display", "polygon": [[-380, -310], [-298, -310], [-298, -220], [-380, -220]] },
+    { "id": "tailor_work_rack_block", "artSlotId": "lc_tailor_work_rack", "polygon": [[-555, -390], [-480, -390], [-480, -285], [-555, -285]] },
+    { "id": "tailor_crates_block", "artSlotId": "lc_crates_front", "polygon": [[-470, -385], [-385, -385], [-385, -305], [-470, -305]] },
+    { "id": "curb_pottery_block", "artSlotId": "lc_curb_pottery_west", "polygon": [[-251, -315], [-211, -315], [-211, -275], [-251, -275]] },
+    { "id": "curb_produce_block", "artSlotId": "lc_curb_produce_east", "polygon": [[215, -320], [270, -320], [270, -275], [215, -275]] },
+    { "id": "wayfinding_sign_block", "artSlotId": "lc_wayfinding_sign", "polygon": [[-255, -10], [-225, -10], [-225, 30], [-255, 30]] },
+    { "id": "lantern_post_block", "artSlotId": "lc_lantern_post_front", "polygon": [[335, 410], [365, 410], [365, 460], [335, 460]] },
+    { "id": "north_herb_stand_block", "artSlotId": "lc_north_herb_stand", "polygon": [[-335, 550], [-248, 550], [-248, 605], [-335, 605]] },
+    { "id": "east_bun_cart_block", "artSlotId": "lc_east_bun_cart_back", "polygon": [[10, 475], [65, 475], [65, 520], [10, 520]] },
+    { "id": "west_market_handcart_block", "artSlotId": "lc_west_market_handcart", "polygon": [[-527, -80], [-410, -80], [-410, -22], [-527, -22]] },
+    { "id": "street_water_station_block", "artSlotId": "lc_street_water_station", "polygon": [[-30, -315], [42, -315], [42, -265], [-30, -265]] }
+  ],
+  "standingSpots": [
+    { "id": "tea_vendor_foot", "at": { "x": -410, "y": 350 }, "access": "vendor_only", "facing": "right", "clearRadius": 18 },
+    { "id": "tea_customer_foot", "at": { "x": -285, "y": 350 }, "access": "public", "facing": "left", "clearRadius": 18 },
+    { "id": "tea_cup_handoff", "at": { "x": -340, "y": 382 }, "access": "counter_surface", "facing": "front", "clearRadius": 0 },
+    { "id": "chestnut_seller_foot", "at": { "x": 535, "y": -510 }, "access": "public", "facing": "left", "clearRadius": 18 },
+    { "id": "lantern_watcher_foot", "at": { "x": 20, "y": 410 }, "access": "public", "facing": "right", "clearRadius": 18 }
+  ],
+  "npcPlans": [
+    {
+      "id": "messenger_customer",
+      "role": "tea_customer",
+      "actorHeight": 120,
+      "footRadius": 18,
+      "route": [
+        { "x": -100, "y": -300 }, { "x": -130, "y": -150 }, { "x": -130, "y": 80 },
+        { "x": -210, "y": 210 }, { "x": -285, "y": 350 },
+        { "x": -220, "y": 500 }, { "x": -145, "y": 700 }
+      ],
+      "speedWorldUnitsPerSecond": 125,
+      "onWaypoint": { "4": "tea_exchange" },
+      "loop": false
+    },
+    {
+      "id": "tea_vendor",
+      "role": "vendor",
+      "actorHeight": 120,
+      "footRadius": 18,
+      "route": [{ "x": -410, "y": 350 }],
+      "idleActions": ["look_at_passersby", "arrange_cups"],
+      "eventAction": "tea_exchange"
+    },
+    {
+      "id": "crossing_shopper",
+      "role": "ambient_shopper",
+      "actorHeight": 118,
+      "footRadius": 18,
+      "route": [
+        { "x": 90, "y": -175 }, { "x": 105, "y": 65 }, { "x": 125, "y": 235 },
+        { "x": 105, "y": 65 }, { "x": 90, "y": -175 }, { "x": 110, "y": -320 },
+        { "x": 78, "y": -540 }, { "x": 110, "y": -320 }
+      ],
+      "speedWorldUnitsPerSecond": 62,
+      "pauseSecondsAtWaypoints": { "2": 2.5, "6": 1.3 },
+      "loop": true
+    },
+    {
+      "id": "chestnut_seller",
+      "role": "ambient_vendor",
+      "actorHeight": 122,
+      "footRadius": 18,
+      "route": [{ "x": 535, "y": -510 }],
+      "idleActions": ["tend_cart", "short_pause"]
+    },
+    {
+      "id": "lantern_watcher",
+      "role": "ambient_watcher",
+      "actorHeight": 105,
+      "footRadius": 18,
+      "route": [{ "x": 20, "y": 410 }],
+      "idleActions": ["look_up_at_banner", "wave_at_passersby", "short_pause"]
+    },
+    {
+      "id": "tea_regular",
+      "role": "tea_regular",
+      "actorHeight": 112,
+      "footRadius": 18,
+      "route": [
+        { "x": -345, "y": -55 }, { "x": -345, "y": 75 },
+        { "x": -290, "y": 75 }, { "x": -290, "y": -55 }
+      ],
+      "speedWorldUnitsPerSecond": 52,
+      "pauseSecondsAtWaypoints": { "1": 1.2, "3": 1.0 },
+      "loop": true,
+      "idleActions": ["sip_tea", "watch_market"]
+    },
+    {
+      "id": "flower_buyer",
+      "role": "flower_buyer",
+      "actorHeight": 114,
+      "footRadius": 18,
+      "route": [
+        { "x": -180, "y": -500 }, { "x": -170, "y": -300 },
+        { "x": -180, "y": -100 }, { "x": -160, "y": 75 },
+        { "x": -180, "y": -100 }, { "x": -170, "y": -300 }
+      ],
+      "speedWorldUnitsPerSecond": 63,
+      "pauseSecondsAtWaypoints": { "1": 1.0, "3": 1.6 },
+      "loop": true,
+      "idleActions": ["adjust_basket", "look_at_flowers"]
+    },
+    {
+      "id": "lane_child",
+      "role": "lane_child",
+      "actorHeight": 103,
+      "footRadius": 16,
+      "route": [
+        { "x": -30, "y": 520 }, { "x": -40, "y": 350 },
+        { "x": 40, "y": 250 }, { "x": 0, "y": 100 },
+        { "x": -40, "y": 350 }
+      ],
+      "speedWorldUnitsPerSecond": 84,
+      "pauseSecondsAtWaypoints": { "2": 0.5, "3": 0.7 },
+      "loop": true,
+      "idleActions": ["skip", "look_up"]
+    }
+  ],
+  "sceneEvents": [
+    {
+      "id": "tea_exchange",
+      "trigger": { "npcId": "messenger_customer", "waypointIndex": 4, "distanceTolerance": 8 },
+      "participants": ["messenger_customer", "tea_vendor"],
+      "beats": [
+        { "atSeconds": 0, "durationSeconds": 0.35, "action": "stop_and_face_counter" },
+        { "atSeconds": 0.35, "durationSeconds": 0.45, "action": "vendor_reaches_for_cup" },
+        { "atSeconds": 0.8, "durationSeconds": 0.55, "action": "cup_handoff_at_tea_cup_handoff" },
+        { "atSeconds": 1.35, "durationSeconds": 0.55, "action": "customer_accepts_and_turns" }
+      ],
+      "resumeRouteAfterSeconds": 1.9
+    }
+  ],
+  "hiddenObjectSlots": [
+    { "id": "tea_clay_whistle", "supportArtSlotId": "lc_tea_counter_front", "at": { "x": -342, "y": 393 }, "visualWorldSize": { "width": 30, "height": 28 }, "clickRadiusWorld": 26, "semanticContext": "among cups on tea counter, partially sheltered by upper shelf", "occlusionTargetFraction": 0.2, "canBeSeenAtInitialZoom": true },
+    { "id": "tailor_thimble", "supportArtSlotId": "lc_tailor_goods", "at": { "x": -395, "y": -380 }, "visualWorldSize": { "width": 26, "height": 27 }, "clickRadiusWorld": 26, "semanticContext": "in a sewing tray among matching buttons and thread", "occlusionTargetFraction": 0.15, "canBeSeenAtInitialZoom": true },
+    { "id": "banner_knot", "supportArtSlotId": "lc_street_banner_front", "at": { "x": 45, "y": 620 }, "visualWorldSize": { "width": 27, "height": 33 }, "clickRadiusWorld": 28, "semanticContext": "one tied fabric knot in the hanging banner fringe", "occlusionTargetFraction": 0.2, "canBeSeenAtInitialZoom": true },
+    { "id": "chestnut_tongs", "supportArtSlotId": "lc_chestnut_cart_back", "at": { "x": 430, "y": -407 }, "visualWorldSize": { "width": 36, "height": 32 }, "clickRadiusWorld": 30, "semanticContext": "on the cart tray among packets, reachable after panning east", "occlusionTargetFraction": 0.15, "canBeSeenAtInitialZoom": false }
+  ],
+  "reviewGates": {
+    "atNormalZoom": ["Vendor and approaching customer appear in the initial portrait view.", "At least three distinct activities are visible without a tap.", "The customer approach and service pad contain no prop footprint."],
+    "atDetailZoom": ["Tea handoff is legible at a 444x960 viewport.", "Whistle stays recognizable and tappable among counter goods.", "Feet remain at world anchor during head and wing motion."],
+    "tenSecondNoInput": ["Messenger reaches the counter, pauses for a real handoff, then leaves.", "Shopper follows a separate route with pauses.", "No character slides through counter, cart, planter, or tree trunk."],
+    "status": "Blueprint geometry only; no final art or player visual approval implied."
+  }
+}

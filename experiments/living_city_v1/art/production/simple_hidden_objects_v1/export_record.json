@@ -1,0 +1,48 @@
+{
+  "styleId": "chicken_simple_2d_v1",
+  "source": "render_targets.py",
+  "generationSpec": "96x96 RGBA painted via Pillow at 4x supersampling",
+  "finalGameAssetSpec": "Blueprint visualWorldSize per target, independent hit radius",
+  "assets": [
+    {
+      "id": "tea_clay_whistle",
+      "path": "assets/bundles/city_living_city_street_block_01/targets/tea_clay_whistle.png",
+      "size": [
+        96,
+        96
+      ],
+      "transparent": true,
+      "sha256": "cb18fd5deb72177bca2c61dcdfc99405d217c53c765dd9f007d78098115fa752"
+    },
+    {
+      "id": "tailor_thimble",
+      "path": "assets/bundles/city_living_city_street_block_01/targets/tailor_thimble.png",
+      "size": [
+        96,
+        96
+      ],
+      "transparent": true,
+      "sha256": "d806116a27a8abd157391e2250b62306af48d3cf7aeeedc45584fd8a80cb4bc0"
+    },
+    {
+      "id": "banner_knot",
+      "path": "assets/bundles/city_living_city_street_block_01/targets/banner_knot.png",
+      "size": [
+        96,
+        96
+      ],
+      "transparent": true,
+      "sha256": "b755aaeca3b63f0aaa7ee45f26ea1448a6e3e5db3553ec1f84012c28b1a0f31c"
+    },
+    {
+      "id": "chestnut_tongs",
+      "path": "assets/bundles/city_living_city_street_block_01/targets/chestnut_tongs.png",
+      "size": [
+        96,
+        96
+      ],
+      "transparent": true,
+      "sha256": "94ece3e1d72281ad382d2537a75abb0f9e9fc53a7b0c4d8e30e55b7af8a3b76a"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "0c510c06-6ece-41ba-8847-922a2037151c",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "0c510c06-6ece-41ba-8847-922a2037151c@6c48a",
+      "displayName": "lc_tea_patio_front",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "imageUuidOrDatabaseUri": "0c510c06-6ece-41ba-8847-922a2037151c",
+        "isUuid": true,
+        "visible": false,
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "0c510c06-6ece-41ba-8847-922a2037151c@f9941",
+      "displayName": "lc_tea_patio_front",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 1.5,
+        "offsetY": -14,
+        "trimX": 9,
+        "trimY": 32,
+        "width": 145,
+        "height": 100,
+        "rawWidth": 160,
+        "rawHeight": 136,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -72.5,
+            -50,
+            0,
+            72.5,
+            -50,
+            0,
+            -72.5,
+            50,
+            0,
+            72.5,
+            50,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            9,
+            104,
+            154,
+            104,
+            9,
+            4,
+            154,
+            4
+          ],
+          "nuv": [
+            0.05625,
+            0.029411764705882353,
+            0.9625,
+            0.029411764705882353,
+            0.05625,
+            0.7647058823529411,
+            0.9625,
+            0.7647058823529411
+          ],
+          "minPos": [
+            -72.5,
+            -50,
+            0
+          ],
+          "maxPos": [
+            72.5,
+            50,
+            0
+          ]
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "0c510c06-6ece-41ba-8847-922a2037151c@6c48a",
+        "atlasUuid": "",
+        "trimType": "auto"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "fixAlphaTransparencyArtifacts": false,
+    "hasAlpha": true,
+    "redirect": "0c510c06-6ece-41ba-8847-922a2037151c@6c48a"
+  }
+}

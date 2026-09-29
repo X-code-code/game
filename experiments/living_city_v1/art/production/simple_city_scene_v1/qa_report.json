@@ -1,0 +1,464 @@
+{
+  "batchId": "simple_city_scene_v1",
+  "status": "mechanical_pass_visual_pending",
+  "checkedAssets": 35,
+  "source": "render_scene.py",
+  "processing": "2x supersample Pillow drawing, Lanczos downsample, optimized PNG RGBA",
+  "results": [
+    {
+      "id": "lc_ground_paving",
+      "dimensions": [
+        1536,
+        2048
+      ],
+      "alphaExtrema": [
+        255,
+        255
+      ],
+      "sha256": "8990e084feda5a33bb8a07070d4d9908fd9d0831b5e725c6010ed4b0fca7c5b1",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_west_storefront_back",
+      "dimensions": [
+        420,
+        520
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "3c0857c754d0d2f3f240a0b6a082d57ebe22b3568cc5e10ac66c84e76311fa50",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_east_storefront_back",
+      "dimensions": [
+        406,
+        560
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "0900205da499617ab8cc7c1ca722fff1389d5a5fe9e3a7670c05a8d18abc9efc",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_west_tailor_back",
+      "dimensions": [
+        424,
+        580
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "b14688efd2930712cb0842e4fc609c71a26eb3e2bd5f2e6f48317e3db5033073",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_east_food_shop_back",
+      "dimensions": [
+        404,
+        580
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "f60aab347c10e5c739d3ce2a6cce592bec30824aea807ce7a1b187767db49108",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_tea_stall_back",
+      "dimensions": [
+        265,
+        300
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "eb6c4d13112f0ff78e6f49f0c623003578342e5f44ae7b22c120164f6d8b3810",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_tea_counter_front",
+      "dimensions": [
+        56,
+        171
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "766f27757e30f892ac5c0050b2d7d17ce9b4b07e841b4045df7c00ceecee7730",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_tea_patio_front",
+      "dimensions": [
+        160,
+        136
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "f9733fdf460543979868da33cb3b0f3259ef6d6fb444822631fce3da8544c671",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_tea_awning_front",
+      "dimensions": [
+        280,
+        100
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "217bd175f713f55bc7cd6206a9dc19b29edd34c594d3638fa5b82907345429c3",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_chestnut_cart_back",
+      "dimensions": [
+        185,
+        205
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "2e8ed077e658826f4cf3d02f11741ad25c374a1c90d0bdf122bc3ac3a552f23b",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_chestnut_cart_front",
+      "dimensions": [
+        185,
+        110
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "e9d7d5580813a6d0a018f001d096d4716b04732303f655670d75412620f1c2c3",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_tree_front",
+      "dimensions": [
+        205,
+        290
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "2cf49f994a61fa8d2112b4e6a775c7fe50bd3bd3de00986c3c7b8548874a2bdc",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_planter_front",
+      "dimensions": [
+        105,
+        115
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "5c75d9b7b6ea89e217dc5b5e1e693612f2b1badfddbd978750a570e40ed47b1b",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_bench_front",
+      "dimensions": [
+        190,
+        95
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "e0b49643ab7dcc3d9273ed28de7955792b52e0f90ce9a908f129e4a8175371aa",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_curb_flower_display",
+      "dimensions": [
+        128,
+        132
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "08de6eb716883a97db9336dff5f9423ee96145a35132f5b1b9eb1306a06729d1",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_tailor_goods",
+      "dimensions": [
+        145,
+        125
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "dcb3f3bb63a61731dca8aca062a4056e39261c93ddd70f22ade50cc48ec48b46",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_tailor_work_rack",
+      "dimensions": [
+        110,
+        150
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "dbeccca1c093d3d95f9ac558d8977a174355be882c4c595c508afeb73dfc384e",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_crates_front",
+      "dimensions": [
+        105,
+        96
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "a4cd1f972248a43eac5876587f6ffe6503ca488f128e471a6a9af2e28078205d",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_shop_goods_east",
+      "dimensions": [
+        165,
+        150
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "3f368287ee6354edcf2d8360f060ff52fafb4e7ad47ef72690db21f1c983e7de",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_curb_pottery_west",
+      "dimensions": [
+        90,
+        110
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "92897a63265e35e810222b86bba3a1688bd2141580547624e73e228187c26931",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_curb_produce_east",
+      "dimensions": [
+        112,
+        130
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "925a3919169aea2a71ffe949c74b7739a918ca2db3520181fdbc7e3e5a149a04",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_wayfinding_sign",
+      "dimensions": [
+        78,
+        145
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "074798de808b84e9cd1579c4c78d2b578efb521caeacc12307cfa81b56628058",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_lantern_post_front",
+      "dimensions": [
+        105,
+        265
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "c940c8000a82e69142640e7813a86f1261e88a718a3ba48f36c21696cdf9a0a0",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_street_banner_front",
+      "dimensions": [
+        500,
+        80
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "183da05da14785d9093d51594764a0bdbbdf0b40c5271d2ed4dcfe2798c5ba8e",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_crossing_pennants",
+      "dimensions": [
+        455,
+        55
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "9f80d92ca3a3a8342541d74ec13ccac8743aa261541972d02b9888b4c0acc04c",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_tea_steam_fx",
+      "dimensions": [
+        65,
+        95
+      ],
+      "alphaExtrema": [
+        0,
+        169
+      ],
+      "sha256": "c7e428627c9e624a01fe830c099ed449d1ffe2177e352e261acd47947425fe20",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_north_herb_stand",
+      "dimensions": [
+        145,
+        190
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "71b6d243abd772b96f7547ed473be6e3f5392af5fc01e3f6b13c7ee4d3a51eb3",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_east_bun_cart_back",
+      "dimensions": [
+        150,
+        195
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "bdbe379ad401825ba1e14d9182e0d900c6a4eabc9a43140d1285712fe2bd57df",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_east_bun_cart_front",
+      "dimensions": [
+        150,
+        70
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "e6254ed2526fcfb0f9f0e1dc517c38ebe5ff7e46a31b93e561b26e3e38db8eb6",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_west_market_handcart",
+      "dimensions": [
+        155,
+        110
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "de40918779bcedbca4bd6f722d30f5e4816d6f783856883b90dde0ffc336c963",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_street_water_station",
+      "dimensions": [
+        105,
+        165
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "9622edae2366df62cc25526ad74738720fb4aa69d3c2ae429665d96fc300a8a2",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_tea_whistle_foreground",
+      "dimensions": [
+        48,
+        42
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "7a2184e2d16f412f083aa41cb50f32746257f38016c1a4e2ef8de54299e65629",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_tailor_thimble_foreground",
+      "dimensions": [
+        44,
+        40
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "aa05b4c2a9f52dee7ecd5133bdf31569b55f852344c09b3f4a2375e7fcd6eec8",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_banner_knot_foreground",
+      "dimensions": [
+        48,
+        48
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "44738e540cab0dce642e43c42dbac93315e58d856efb0ac713d9f1ded5e5764b",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_chestnut_tongs_foreground",
+      "dimensions": [
+        56,
+        50
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "a9e7319ebfd4927c6676fa92bfdc6073c955786233b9a5ed7adc9a135e4815ac",
+      "bundleCopyMatches": true
+    }
+  ]
+}

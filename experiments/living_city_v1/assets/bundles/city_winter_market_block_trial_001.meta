@@ -1,0 +1,14 @@
+{
+  "ver": "1.2.0",
+  "importer": "directory",
+  "imported": true,
+  "uuid": "f7fdc78e-6dd8-49bf-81aa-ddbe4804972c",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "bundleConfigID": "wechat_city_subpackage",
+    "bundleName": "city_winter_market_block_trial_001",
+    "priority": 7,
+    "isBundle": true
+  }
+}

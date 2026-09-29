@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "initialCityId": "winter_market_block_trial_001",
+  "cities": [
+    { "cityId": "winter_market_block_trial_001", "bundleName": "city_winter_market_block_trial_001" },
+    { "cityId": "demo_city", "bundleName": "city_demo" },
+    { "cityId": "harbor_test", "bundleName": "city_harbor_test" }
+  ]
+}

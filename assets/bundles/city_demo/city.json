@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "cityId": "demo_city",
+  "cityName": "雪灯街市",
+  "background": "winter_market_background",
+  "mapSize": {
+    "width": 2400,
+    "height": 1600
+  },
+  "view": {
+    "minZoom": 1,
+    "maxZoom": 3,
+    "initialZoom": 1.35
+  },
+  "hiddenObjects": [
+    {
+      "id": "winter_brass_bell",
+      "asset": "winter_item_bell",
+      "x": 0.638,
+      "y": 0.45,
+      "scale": 1,
+      "rotation": -7,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 38
+      },
+      "tags": [
+        "bell",
+        "lantern_stall",
+        "bronze"
+      ],
+      "targetable": true
+    },
+    {
+      "id": "winter_blue_mitten",
+      "asset": "winter_item_mitten",
+      "x": 0.371,
+      "y": 0.375,
+      "scale": 1,
+      "rotation": 13,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 38
+      },
+      "tags": [
+        "mitten",
+        "courier",
+        "blue"
+      ],
+      "targetable": true
+    },
+    {
+      "id": "winter_rooster_whistle",
+      "asset": "winter_item_whistle",
+      "x": 0.687,
+      "y": 0.227,
+      "scale": 1,
+      "rotation": -10,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 38
+      },
+      "tags": [
+        "whistle",
+        "pottery",
+        "clay"
+      ],
+      "targetable": true
+    }
+  ],
+  "chickens": [],
+  "interactiveObjects": [],
+  "foregroundSprites": [],
+  "tasks": [
+    {
+      "id": "find_winter_brass_bell",
+      "type": "hiddenObject",
+      "targetId": "winter_brass_bell",
+      "label": "灯摊老板的铜铃",
+      "required": true
+    },
+    {
+      "id": "find_winter_blue_mitten",
+      "type": "hiddenObject",
+      "targetId": "winter_blue_mitten",
+      "label": "邮差的蓝手套",
+      "required": true
+    },
+    {
+      "id": "find_winter_rooster_whistle",
+      "type": "hiddenObject",
+      "targetId": "winter_rooster_whistle",
+      "label": "陶匠的小陶哨",
+      "required": true
+    }
+  ],
+  "nextCityId": "harbor_test",
+  "travelType": "boat"
+}

@@ -1,0 +1,143 @@
+import { Button, Color, Graphics, Label, Node, UITransform, Vec3 } from 'cc';
+import type { TaskProgress } from '../task/TaskManager';
+
+export interface CompletionSummary {
+    cityName: string;
+    hasNext: boolean;
+    progress: TaskProgress;
+    chickens: number;
+    objects: number;
+}
+
+/** City-specific presentation; no task mutation or asset loading lives in this UI. */
+export class CityCompletionPanel {
+    public readonly root = new Node('CityCompletionUI');
+    public readonly modal = new Node('CompletionModal');
+    private readonly card = new Node('CompletionCard');
+    private readonly entry: Node;
+    private readonly title: Label;
+    private readonly summary: Label;
+    private readonly message: Label;
+    private readonly continueButton: Node;
+    private readonly nextButton: Node;
+    private width = 0;
+    private height = 0;
+
+    public constructor(parent: Node, onContinue: () => void, onNext: () => void, onOpen: () => void) {
+        parent.addChild(this.root);
+        this.root.addComponent(UITransform);
+        this.root.addChild(this.modal);
+        this.modal.addComponent(UITransform);
+        this.modal.addComponent(Graphics);
+        this.modal.addChild(this.card);
+        this.card.addComponent(UITransform).setContentSize(660, 480);
+        const background = this.card.addComponent(Graphics);
+        background.fillColor = new Color(255, 250, 235, 255);
+        background.roundRect(-330, -240, 660, 480, 24);
+        background.fill();
+        this.title = this.label(this.card, 'CompletionTitle', 37, 166, 580, 64);
+        this.summary = this.label(this.card, 'CompletionSummary', 27, 73, 580, 106);
+        this.message = this.label(this.card, 'CompletionMessage', 23, -15, 580, 58);
+        this.continueButton = this.button(this.card, 'ContinueExploring', '继续探索', 540, onContinue);
+        this.continueButton.setPosition(0, -100, 0);
+        this.nextButton = this.button(this.card, 'NextCity', '前往下一座城市', 540, onNext);
+        this.nextButton.setPosition(0, -184, 0);
+        this.entry = this.button(this.root, 'OpenCompletion', '探索完成 · 查看旅程', 340, onOpen);
+        this.modal.active = false;
+        this.entry.active = false;
+        this.resize();
+    }
+
+    public get isOpen(): boolean { return this.modal.active; }
+
+    public show(data: CompletionSummary, loading = false, failed = false): void {
+        this.modal.active = true;
+        this.entry.active = false;
+        this.title.string = `${data.cityName}探索完成`;
+        const p = data.progress;
+        this.summary.string = `主要目标：${p.requiredCompleted} / ${p.requiredTotal}\n` +
+            `发现小鸡：${data.chickens}    隐藏物：${data.objects}\n` +
+            `隐藏目标：${p.optionalCompleted} / ${p.optionalTotal}`;
+        this.message.string = loading ? '正在准备下一座城市…\n也可以留在当前城市继续探索' : failed
+            ? '下一座城市暂时未能加载\n当前进度已保留，可以重试' : data.hasNext
+                ? '可以继续寻找，也可以启程前往下一站' : '已到达本次旅程的最后一站\n仍可留在这里继续探索';
+        this.nextButton.active = data.hasNext;
+        this.nextButton.getComponent(Button)!.interactable = !loading;
+        this.nextButton.getChildByName('Text')!.getComponent(Label)!.string = loading
+            ? '正在准备…' : failed ? '重试前往下一座城市' : '前往下一座城市';
+        this.continueButton.getChildByName('Text')!.getComponent(Label)!.string = loading ? '留在当前城市' : '继续探索';
+        this.resize();
+    }
+
+    public close(): void {
+        this.modal.active = false;
+        this.entry.active = true;
+    }
+
+    public reset(): void {
+        this.modal.active = false;
+        this.entry.active = false;
+    }
+
+    public blocksInput(x: number, y: number): boolean {
+        if (this.isOpen) return true;
+        if (!this.entry.activeInHierarchy) return false;
+        const t = this.entry.getComponent(UITransform)!;
+        const p = t.convertToNodeSpaceAR(new Vec3(x, y, 0));
+        return Math.abs(p.x) <= t.width / 2 && Math.abs(p.y) <= t.height / 2;
+    }
+
+    public resize(): void {
+        const size = this.root.parent?.getComponent(UITransform)?.contentSize;
+        if (!size || (size.width === this.width && size.height === this.height)) return;
+        this.width = size.width;
+        this.height = size.height;
+        this.root.getComponent(UITransform)!.setContentSize(size);
+        this.modal.getComponent(UITransform)!.setContentSize(size);
+        const g = this.modal.getComponent(Graphics)!;
+        g.clear();
+        g.fillColor = new Color(50, 46, 35, 155);
+        g.rect(-size.width / 2, -size.height / 2, size.width, size.height);
+        g.fill();
+        const scale = Math.min(size.width * 0.92 / 660, size.height * 0.85 / 480);
+        this.card.setScale(scale, scale, 1);
+        const entryScale = size.height > size.width ? size.width * 0.7 / 340 : 1;
+        this.entry.setScale(entryScale, entryScale, 1);
+        this.entry.setPosition(0, -size.height / 2 + 54 * entryScale, 0);
+    }
+
+    public dispose(): void {
+        if (!this.root.isValid) return;
+        this.root.active = false;
+        this.root.destroy();
+    }
+
+    private label(parent: Node, name: string, font: number, y: number, width: number, height: number): Label {
+        const node = new Node(name);
+        parent.addChild(node);
+        node.setPosition(0, y, 0);
+        node.addComponent(UITransform).setContentSize(width, height);
+        const label = node.addComponent(Label);
+        label.fontSize = font;
+        label.lineHeight = font + 8;
+        label.color = new Color(75, 54, 39, 255);
+        label.horizontalAlign = Label.HorizontalAlign.CENTER;
+        label.verticalAlign = Label.VerticalAlign.CENTER;
+        label.overflow = Label.Overflow.SHRINK;
+        return label;
+    }
+
+    private button(parent: Node, name: string, text: string, width: number, click: () => void): Node {
+        const node = new Node(name);
+        parent.addChild(node);
+        node.addComponent(UITransform).setContentSize(width, 64);
+        const g = node.addComponent(Graphics);
+        g.fillColor = new Color(239, 207, 130, 255);
+        g.roundRect(-width / 2, -32, width, 64, 14);
+        g.fill();
+        node.addComponent(Button);
+        this.label(node, 'Text', 27, 0, width - 16, 60).string = text;
+        node.on(Button.EventType.CLICK, click);
+        return node;
+    }
+}

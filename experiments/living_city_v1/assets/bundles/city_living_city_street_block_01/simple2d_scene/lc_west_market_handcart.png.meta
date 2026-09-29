@@ -1,0 +1,134 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "be900218-bbfc-42eb-a0de-38201af2d8db",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "importer": "texture",
+      "uuid": "be900218-bbfc-42eb-a0de-38201af2d8db@6c48a",
+      "displayName": "lc_west_market_handcart",
+      "id": "6c48a",
+      "name": "texture",
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "imageUuidOrDatabaseUri": "be900218-bbfc-42eb-a0de-38201af2d8db",
+        "isUuid": true,
+        "visible": false,
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0
+      },
+      "ver": "1.0.22",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    },
+    "f9941": {
+      "importer": "sprite-frame",
+      "uuid": "be900218-bbfc-42eb-a0de-38201af2d8db@f9941",
+      "displayName": "lc_west_market_handcart",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "userData": {
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": -1,
+        "offsetY": -8.5,
+        "trimX": 4,
+        "trimY": 19,
+        "width": 145,
+        "height": 89,
+        "rawWidth": 155,
+        "rawHeight": 110,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "vertices": {
+          "rawPosition": [
+            -72.5,
+            -44.5,
+            0,
+            72.5,
+            -44.5,
+            0,
+            -72.5,
+            44.5,
+            0,
+            72.5,
+            44.5,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ],
+          "uv": [
+            4,
+            91,
+            149,
+            91,
+            4,
+            2,
+            149,
+            2
+          ],
+          "nuv": [
+            0.025806451612903226,
+            0.01818181818181818,
+            0.9612903225806452,
+            0.01818181818181818,
+            0.025806451612903226,
+            0.8272727272727273,
+            0.9612903225806452,
+            0.8272727272727273
+          ],
+          "minPos": [
+            -72.5,
+            -44.5,
+            0
+          ],
+          "maxPos": [
+            72.5,
+            44.5,
+            0
+          ]
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "be900218-bbfc-42eb-a0de-38201af2d8db@6c48a",
+        "atlasUuid": "",
+        "trimType": "auto"
+      },
+      "ver": "1.0.12",
+      "imported": true,
+      "files": [
+        ".json"
+      ],
+      "subMetas": {}
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "fixAlphaTransparencyArtifacts": false,
+    "hasAlpha": true,
+    "redirect": "be900218-bbfc-42eb-a0de-38201af2d8db@6c48a"
+  }
+}

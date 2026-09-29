@@ -1,0 +1,14 @@
+{
+  "ver": "1.2.0",
+  "importer": "directory",
+  "imported": true,
+  "uuid": "22d65958-c90e-4a95-ac31-9ba121ed5a55",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "bundleConfigID": "wechat_city_subpackage",
+    "bundleName": "city_harbor_test",
+    "priority": 7,
+    "isBundle": true
+  }
+}

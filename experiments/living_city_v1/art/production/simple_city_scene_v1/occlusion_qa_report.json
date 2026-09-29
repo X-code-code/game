@@ -1,0 +1,31 @@
+{
+  "method": "center-aligned target visualWorldSize alpha versus authored foreground alpha",
+  "scale": 8,
+  "status": "alpha_overlap_pass",
+  "results": [
+    {
+      "targetId": "tea_clay_whistle",
+      "foregroundArtSlotId": "lc_tea_whistle_foreground",
+      "coveredTargetOpaqueFraction": 0.1532,
+      "targetOpaqueSamples": 10370
+    },
+    {
+      "targetId": "tailor_thimble",
+      "foregroundArtSlotId": "lc_tailor_thimble_foreground",
+      "coveredTargetOpaqueFraction": 0.1807,
+      "targetOpaqueSamples": 10354
+    },
+    {
+      "targetId": "banner_knot",
+      "foregroundArtSlotId": "lc_banner_knot_foreground",
+      "coveredTargetOpaqueFraction": 0.1982,
+      "targetOpaqueSamples": 9297
+    },
+    {
+      "targetId": "chestnut_tongs",
+      "foregroundArtSlotId": "lc_chestnut_tongs_foreground",
+      "coveredTargetOpaqueFraction": 0.1941,
+      "targetOpaqueSamples": 12141
+    }
+  ]
+}

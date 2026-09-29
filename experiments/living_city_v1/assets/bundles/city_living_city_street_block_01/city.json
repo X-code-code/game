@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "cityId": "living_city_street_block_01",
+  "cityName": "活街区·茶摊灰盒",
+  "background": "greybox_ground_from_blueprint",
+  "mapSize": {
+    "width": 1536,
+    "height": 2048
+  },
+  "view": {
+    "minZoom": 1,
+    "maxZoom": 2.25,
+    "initialZoom": 1.4
+  },
+  "hiddenObjects": [
+    {
+      "id": "tea_clay_whistle",
+      "asset": "greybox_tea_clay_whistle",
+      "x": 0.27734375,
+      "y": 0.69189453,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 26
+      },
+      "depthY": 283,
+      "tags": [
+        "tea_clay_whistle",
+        "greybox_target"
+      ],
+      "targetable": true
+    },
+    {
+      "id": "tailor_thimble",
+      "asset": "greybox_tailor_thimble",
+      "x": 0.24283854,
+      "y": 0.31445313,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 26
+      },
+      "depthY": -456,
+      "tags": [
+        "tailor_thimble",
+        "greybox_target"
+      ],
+      "targetable": true
+    },
+    {
+      "id": "banner_knot",
+      "asset": "greybox_banner_knot",
+      "x": 0.52929688,
+      "y": 0.80273438,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 28
+      },
+      "depthY": 620,
+      "tags": [
+        "banner_knot",
+        "greybox_target"
+      ],
+      "targetable": true
+    },
+    {
+      "id": "chestnut_tongs",
+      "asset": "greybox_chestnut_tongs",
+      "x": 0.77994792,
+      "y": 0.30126953,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 30
+      },
+      "depthY": -407,
+      "tags": [
+        "chestnut_tongs",
+        "greybox_target"
+      ],
+      "targetable": true
+    }
+  ],
+  "chickens": [],
+  "interactiveObjects": [],
+  "foregroundSprites": [],
+  "tasks": [
+    {
+      "id": "find_tea_clay_whistle",
+      "type": "hiddenObject",
+      "targetId": "tea_clay_whistle",
+      "label": "找到茶摊陶哨",
+      "required": true
+    },
+    {
+      "id": "find_tailor_thimble",
+      "type": "hiddenObject",
+      "targetId": "tailor_thimble",
+      "label": "找到裁缝顶针",
+      "required": true
+    },
+    {
+      "id": "find_banner_knot",
+      "type": "hiddenObject",
+      "targetId": "banner_knot",
+      "label": "找到横幅绳结",
+      "required": true
+    },
+    {
+      "id": "find_chestnut_tongs",
+      "type": "hiddenObject",
+      "targetId": "chestnut_tongs",
+      "label": "找到栗子夹",
+      "required": true
+    }
+  ],
+  "nextCityId": null,
+  "travelType": "other"
+}

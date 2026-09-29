@@ -1,0 +1,9 @@
+/library/
+/temp/
+/local/
+/build/
+/logs/
+/profiles/
+/project.config.json
+/project.private.config.json
+/node_modules/

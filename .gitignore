@@ -1,0 +1,62 @@
+
+#///////////////////////////
+# Cocos Creator Project
+#///////////////////////////
+
+/library/
+/temp/
+/local/
+/build/
+/profiles/
+/project.config.json
+/project.private.config.json
+/native/engine/android/**/*/assets
+
+#//////////////////////////
+# NPM
+#//////////////////////////
+node_modules/
+**/__pycache__/
+*.pyc
+
+# Local art references, superseded experiments and review media are not part
+# of the reproducible source release. Runtime art is kept in assets/ and the
+# current editable 2D source is kept in experiments/living_city_v1/art/production/.
+/art/archive/
+/art/generated/
+/art/reference/
+/art/review/
+/art/runtime_prototype/
+/art_requests/
+/experiments/*/art/generated/
+/experiments/*/art/reference/
+/experiments/*/art/review/
+/experiments/*/art/baseline_manifest_snapshot.json
+/experiments/*/art/production/courier_chicken_v1/
+/experiments/*/art/production/*/review/
+
+# Historical reports contain local paths and test media references. The
+# current specifications and playable-slice report remain versioned.
+/docs/STAGE_*.md
+/docs/TARGET_VIDEO_GAP_ANALYSIS.md
+/docs/PROJECT_FEASIBILITY_REVIEW_*.md
+/docs/WECHAT_BUILD_NOTES.md
+/experiments/*/docs/STAGE_*.md
+/experiments/*/docs/TARGET_VIDEO_GAP_ANALYSIS.md
+/experiments/*/docs/PROJECT_FEASIBILITY_REVIEW_*.md
+/experiments/*/docs/WECHAT_BUILD_NOTES.md
+/experiments/*/docs/ISOLATION_BASELINE_REPORT.md
+/experiments/*/docs/GREYBOX_RUNTIME_REPORT.md
+
+# Superseded art conversion scripts require local unpublished inputs.
+**/tools/art_pipeline/
+
+#//////////////////////////
+# VSCode
+#//////////////////////////
+.vscode/
+
+#//////////////////////////
+# WebStorm
+#//////////////////////////
+.idea/
