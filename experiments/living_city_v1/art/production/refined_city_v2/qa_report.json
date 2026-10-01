@@ -1,0 +1,92 @@
+{
+  "assetsChecked": 62,
+  "sourceRuntimeMatches": true,
+  "dimensionsAlphaHashAndMeta": true,
+  "revealVisibility": [
+    {
+      "id": "sealed_letter",
+      "coveredAlphaFraction": {
+        "closed": 1,
+        "opened": 0.19
+      }
+    },
+    {
+      "id": "seed_packet",
+      "coveredAlphaFraction": {
+        "closed": 0.532,
+        "opened": 0.063
+      }
+    },
+    {
+      "id": "golden_bun",
+      "coveredAlphaFraction": {
+        "closed": 1,
+        "opened": 0.025
+      }
+    }
+  ],
+  "runtimeAcceptance": "passed_web_mobile",
+  "playerVisualApproval": "rejected",
+  "wechatPhone": "not_run",
+  "runtimeEvidence": "art/review/refined_city_v2/runtime_report.json",
+  "runtimeSummary": {
+    "portrait": "444x960",
+    "smallPhone": {
+      "width": 360,
+      "height": 780,
+      "visibleStickers": 12
+    },
+    "sceneLayers": 44,
+    "npcs": 8,
+    "collected": 12,
+    "reveals": 3,
+    "motion": {
+      "durationSeconds": 10,
+      "moved": [
+        "messenger_customer",
+        "crossing_shopper",
+        "tea_regular",
+        "flower_buyer",
+        "lane_child"
+      ]
+    },
+    "teaEventCompleted": true,
+    "prerequisiteHints": [
+      {
+        "id": "sealed_letter",
+        "resolved": "parcel_chest",
+        "expected": "parcel_chest"
+      },
+      {
+        "id": "seed_packet",
+        "resolved": "flower_leaves",
+        "expected": "flower_leaves"
+      },
+      {
+        "id": "golden_bun",
+        "resolved": "bun_lid",
+        "expected": "bun_lid"
+      }
+    ],
+    "restored": {
+      "collected": 12,
+      "opened": 3,
+      "noRepeatedFlights": true
+    },
+    "runtimeErrors": 0,
+    "runtimeWarnings": 0,
+    "failedRequests": 0,
+    "finalLandingWait": true
+  },
+  "validatedFiles": [
+    {
+      "file": "assets/bundles/city_living_city_street_block_01/city.json",
+      "sha256": "461c296852b7c3af8b28fc84de209d2c32b5c0bdb99e085750ca228fd3f8af09"
+    },
+    {
+      "file": "build/web-mobile/assets/main/index.js",
+      "sha256": "40936959b7a3a6405f30c966e8c8a1abefcc4120cc76dacf4a783c97e5427d5a"
+    }
+  ],
+  "supersededBy": "clean_cartoon_v3"
+}

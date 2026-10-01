@@ -1,0 +1,134 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "44062c8c-57cb-4a37-b05d-c29f7593e26b",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "ver": "1.0.22",
+      "importer": "texture",
+      "imported": true,
+      "uuid": "44062c8c-57cb-4a37-b05d-c29f7593e26b@6c48a",
+      "displayName": "lc_harbor_tea_table",
+      "id": "6c48a",
+      "name": "texture",
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "imageUuidOrDatabaseUri": "44062c8c-57cb-4a37-b05d-c29f7593e26b",
+        "isUuid": true,
+        "visible": false
+      }
+    },
+    "f9941": {
+      "ver": "1.0.12",
+      "importer": "sprite-frame",
+      "imported": true,
+      "uuid": "44062c8c-57cb-4a37-b05d-c29f7593e26b@f9941",
+      "displayName": "lc_harbor_tea_table",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "trimType": "custom",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 200,
+        "height": 165,
+        "rawWidth": 200,
+        "rawHeight": 165,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "44062c8c-57cb-4a37-b05d-c29f7593e26b@6c48a",
+        "atlasUuid": "",
+        "vertices": {
+          "rawPosition": [
+            -100,
+            -82.5,
+            0,
+            100,
+            -82.5,
+            0,
+            -100,
+            82.5,
+            0,
+            100,
+            82.5,
+            0
+          ],
+          "uv": [
+            0,
+            165,
+            200,
+            165,
+            0,
+            0,
+            200,
+            0
+          ],
+          "nuv": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "minPos": [
+            -100,
+            -82.5,
+            0
+          ],
+          "maxPos": [
+            100,
+            82.5,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ]
+        }
+      }
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "fixAlphaTransparencyArtifacts": false,
+    "hasAlpha": true,
+    "redirect": "44062c8c-57cb-4a37-b05d-c29f7593e26b@6c48a"
+  }
+}

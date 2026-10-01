@@ -1,0 +1,2 @@
+undefined
+Asset ID: grain_house. Subject: A DISTINCT low wide SINGLE-STOREY grain merchant. Warm honey plaster, broad sage tile gable roof, two square shutters flanking a wide open service arch, small built-in wall shelves with wheat sacks and woven grain baskets, wheat-ear pictogram sign. Rustic brown timber. Low wide proportions, about 1.4 width to height. No second floor, no cafe awning; distinctive architecture.

@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "actorId": "crossing_shopper",
+  "canvasPx": {
+    "width": 384,
+    "height": 256
+  },
+  "footpointPx": {
+    "x": 192,
+    "y": 215
+  },
+  "paintedHeightPx": 186,
+  "clips": {
+    "walk_n": [
+      {
+        "asset": "chicken_shopper_frame_05",
+        "durationSeconds": 0.12
+      },
+      {
+        "asset": "chicken_shopper_frame_06",
+        "durationSeconds": 0.12
+      },
+      {
+        "asset": "chicken_shopper_frame_07",
+        "durationSeconds": 0.12
+      },
+      {
+        "asset": "chicken_shopper_frame_08",
+        "durationSeconds": 0.12
+      }
+    ],
+    "walk_nw": [
+      {
+        "asset": "chicken_shopper_frame_01",
+        "durationSeconds": 0.12
+      },
+      {
+        "asset": "chicken_shopper_frame_02",
+        "durationSeconds": 0.12
+      },
+      {
+        "asset": "chicken_shopper_frame_03",
+        "durationSeconds": 0.12
+      },
+      {
+        "asset": "chicken_shopper_frame_04",
+        "durationSeconds": 0.12
+      }
+    ],
+    "walk_ne": [
+      {
+        "asset": "chicken_shopper_frame_09",
+        "durationSeconds": 0.12
+      },
+      {
+        "asset": "chicken_shopper_frame_10",
+        "durationSeconds": 0.12
+      },
+      {
+        "asset": "chicken_shopper_frame_11",
+        "durationSeconds": 0.12
+      },
+      {
+        "asset": "chicken_shopper_frame_12",
+        "durationSeconds": 0.12
+      }
+    ],
+    "idle_w": [
+      {
+        "asset": "chicken_shopper_frame_13",
+        "durationSeconds": 0.4
+      },
+      {
+        "asset": "chicken_shopper_frame_14",
+        "durationSeconds": 0.4
+      }
+    ],
+    "receive_w": [
+      {
+        "asset": "chicken_shopper_frame_15",
+        "durationSeconds": 0.45
+      },
+      {
+        "asset": "chicken_shopper_frame_16",
+        "durationSeconds": 0.45
+      }
+    ],
+    "turn_nw_w": [
+      {
+        "asset": "chicken_shopper_frame_01",
+        "durationSeconds": 0.15
+      },
+      {
+        "asset": "chicken_shopper_frame_13",
+        "durationSeconds": 0.15
+      }
+    ],
+    "turn_w_ne": [
+      {
+        "asset": "chicken_shopper_frame_13",
+        "durationSeconds": 0.15
+      },
+      {
+        "asset": "chicken_shopper_frame_01",
+        "durationSeconds": 0.15
+      }
+    ],
+    "idle_ne": [
+      {
+        "asset": "chicken_shopper_frame_13",
+        "durationSeconds": 0.4
+      },
+      {
+        "asset": "chicken_shopper_frame_14",
+        "durationSeconds": 0.4
+      }
+    ]
+  }
+}

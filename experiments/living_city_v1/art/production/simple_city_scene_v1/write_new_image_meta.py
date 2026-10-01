@@ -23,6 +23,8 @@ NEW_IDS = (
     "lc_south_post_house_back",
     "lc_south_grain_house_back",
     "lc_east_pottery_annex_back",
+    "lc_tea_delivery_nook",
+    "lc_tailor_delivery_stool",
 )
 
 

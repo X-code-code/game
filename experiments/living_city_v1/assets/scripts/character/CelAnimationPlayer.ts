@@ -68,8 +68,8 @@ export class CelAnimationPlayer {
 
     public get isReady(): boolean { return this.clips !== null; }
 
-    public constructor(private readonly actor: Node, private readonly fallback: Graphics,
-        private readonly fallbackLabel: Node, private readonly bundle: AssetManager.Bundle,
+    public constructor(private readonly actor: Node, private readonly fallback: Graphics | null,
+        private readonly fallbackLabel: Node | null, private readonly bundle: AssetManager.Bundle,
         private readonly actorId: string, private readonly folder: string,
         private readonly figureHeightWorld: number) {
         if (!Number.isFinite(figureHeightWorld) || figureHeightWorld <= 0) return;
@@ -148,8 +148,8 @@ export class CelAnimationPlayer {
         this.clips = clips;
         this.visual = visual;
         this.sprite = sprite;
-        this.fallback.enabled = false;
-        this.fallbackLabel.active = false;
+        if (this.fallback) this.fallback.enabled = false;
+        if (this.fallbackLabel) this.fallbackLabel.active = false;
         this.showRequestedClip();
     }
 
@@ -157,6 +157,11 @@ export class CelAnimationPlayer {
     public setState(clip: CelClipName): void {
         this.requestedClip = clip;
         if (this.clips) this.showRequestedClip();
+    }
+
+    /** Mirrors loaded PNGs around their registered footpoint; draws no anatomy. */
+    public setFacing(direction: number): void {
+        this.visual?.setScale(direction < 0 ? -1 : 1, 1, 1);
     }
 
     private showRequestedClip(): void {

@@ -1,5 +1,7 @@
 # 游戏美术资源规格（试产草案）
 
+> **2026-10-01 当前规则：** 游戏美术全部使用内置图像生成制作，最终 PNG 保存到主线 `assets/generated/`；禁止代码绘图重画建筑、角色和场景物。当前规格与验收见 [AI 生图流程](../experiments/living_city_v1/docs/AI_ART_PIPELINE.md)。本文较早风格、分层绘制和 Web 等待流程仅为历史记录，不覆盖最新用户授权。
+
 **状态：试产草案。** 源图尺寸是向 ChatGPT Web 推荐的生成画布，最终游戏尺寸由 Codex 对收到的源图后处理并实测。精确像素、PNG/WebP/JPG 编码及 Alpha 不能仅凭生成模型的描述认定达标。
 
 | 资源类型 | Generation Spec | Final Game Asset Spec | 透明背景 |

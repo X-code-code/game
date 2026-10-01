@@ -1,4 +1,4 @@
-import { _decorator, Component, director, Director, Node, UITransform, warn } from 'cc';
+import { _decorator, Component, director, Director, Node, profiler, UITransform, warn } from 'cc';
 import type { CityContentLoader, LoadedCity } from '../config/CityContentLoader';
 import { MapBrowserDemo } from '../map/MapBrowserDemo';
 import { CityCompletionPanel } from '../ui/CityCompletionPanel';
@@ -22,10 +22,11 @@ export class CityManager extends Component {
     private saveWarningShown = false;
 
     public initialize(loader: CityContentLoader, initial: LoadedCity, save?: SaveManager): void {
+        profiler.hideStats();
         this.loader = loader;
         this.save = save ?? null;
         this.ui = new CityCompletionPanel(this.node, () => this.continueExploring(),
-            () => { void this.goNext(); }, () => this.showCompletion());
+            () => { void this.goNext(); }, () => this.showCompletion(), initial.bundle);
         this.current = this.prepare(initial);
         this.current.root.active = true;
         this.persist(() => this.save?.setCurrentCity(initial.config.cityId));
@@ -99,7 +100,11 @@ export class CityManager extends Component {
             view.mount(content.config, content.bundle, () => {
                 if (this.current !== instance) return;
                 this.recordProgress(instance);
-                this.checkCompletion();
+                // Save the discovery immediately, but let a collected item land
+                // in its sticker slot before the completion panel covers it.
+                instance.view.afterCollectionFlight(() => {
+                    if (!this.disposed && this.current === instance) this.checkCompletion();
+                });
             }, (x, y) => this.loading || !!this.ui?.blocksInput(x, y),
             this.save?.getCityProgress(content.config.cityId));
             return instance;
@@ -141,6 +146,7 @@ export class CityManager extends Component {
         current.view.cancelGestures();
         current.view.setHintsEnabled(false);
         this.ui?.show({ cityName: current.content.config.cityName, hasNext: !!current.content.config.nextCityId,
+            chapterIndex: current.content.config.chapterIndex, chapterCount: current.content.config.chapterCount,
             progress: current.view.progress, ...current.view.discoveries }, this.loading, this.failed);
     }
 

@@ -73,6 +73,13 @@ function optionalCondition(value: unknown, context: string, path: string): void 
     nonEmptyString(condition.state, context, `${path}.state`);
 }
 
+function optionalVisualSize(value: unknown, context: string, path: string): void {
+    if (value === undefined) return;
+    const size = record(value, context, path);
+    positiveNumber(size.width, context, `${path}.width`);
+    positiveNumber(size.height, context, `${path}.height`);
+}
+
 function clickArea(value: unknown, context: string, path: string): void {
     const area = record(value, context, path);
     const shape = oneOf(area.shape, ['rect', 'circle'], context, `${path}.shape`);
@@ -167,6 +174,14 @@ export function validateCityConfig(raw: unknown, catalog: CityCatalog, expectedC
     }
     nonEmptyString(city.cityName, context, '$.cityName');
     nonEmptyString(city.background, context, '$.background');
+    if (city.sceneBlueprint !== undefined) nonEmptyString(city.sceneBlueprint, context, '$.sceneBlueprint');
+    if (city.chapterIndex !== undefined || city.chapterCount !== undefined) {
+        const index = positiveNumber(city.chapterIndex, context, '$.chapterIndex');
+        const total = positiveNumber(city.chapterCount, context, '$.chapterCount');
+        if (!Number.isInteger(index) || !Number.isInteger(total) || index > total) {
+            invalid(context, '$.chapterIndex', 'chapter numbers must be integers with index at most count');
+        }
+    }
     const mapSize = record(city.mapSize, context, '$.mapSize');
     const mapWidth = positiveNumber(mapSize.width, context, '$.mapSize.width');
     const mapHeight = positiveNumber(mapSize.height, context, '$.mapSize.height');
@@ -202,6 +217,9 @@ export function validateCityConfig(raw: unknown, catalog: CityCatalog, expectedC
         remember(id, path);
         hiddenIds.add(id);
         nonEmptyString(object.asset, context, `${path}.asset`);
+        optionalVisualSize(object.visualSize, context, `${path}.visualSize`);
+        if (object.displayName !== undefined) nonEmptyString(object.displayName, context, `${path}.displayName`);
+        if (object.clue !== undefined) nonEmptyString(object.clue, context, `${path}.clue`);
         finiteNumber(object.rotation, context, `${path}.rotation`);
         if (object.depthY !== undefined) {
             const depthY = finiteNumber(object.depthY, context, `${path}.depthY`);
@@ -249,6 +267,11 @@ export function validateCityConfig(raw: unknown, catalog: CityCatalog, expectedC
         remember(id, path);
         interactiveIds.add(id);
         nonEmptyString(object.asset, context, `${path}.asset`);
+        if (object.openAsset !== undefined) nonEmptyString(object.openAsset, context, `${path}.openAsset`);
+        optionalVisualSize(object.visualSize, context, `${path}.visualSize`);
+        if (object.depthY !== undefined && Math.abs(finiteNumber(object.depthY, context, `${path}.depthY`)) > mapHeight / 2) {
+            invalid(context, `${path}.depthY`, 'outside map');
+        }
         finiteNumber(object.rotation, context, `${path}.rotation`);
         const initialState = nonEmptyString(object.initialState, context, `${path}.initialState`);
         interactiveStates.set(id, new Set([initialState]));

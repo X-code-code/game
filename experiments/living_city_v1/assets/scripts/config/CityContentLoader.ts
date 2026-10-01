@@ -1,4 +1,4 @@
-import { assetManager, AssetManager, JsonAsset, resources } from 'cc';
+import { assetManager, AssetManager, JsonAsset, resources, SpriteFrame } from 'cc';
 import type { CityCatalog, CityConfig } from './CityTypes';
 import { validateCityCatalog, validateCityConfig } from './CityConfigValidator';
 
@@ -51,6 +51,52 @@ function loadCityJson(bundle: AssetManager.Bundle, cityId: string): Promise<Json
             resolve(asset);
         });
     });
+}
+
+/** Finish dependency downloads while the city's lease is still reserved.
+ * A restored completed city can be left immediately after mounting. */
+async function loadGeneratedCityArt(bundle: AssetManager.Bundle, config: CityConfig): Promise<void> {
+    if (!config.sceneBlueprint) return;
+    const finish = async (requests: Promise<void>[]): Promise<void> => {
+        const failures: unknown[] = [];
+        await Promise.all(requests.map(request => request.catch(reason => { failures.push(reason); })));
+        if (failures.length) throw failures[0];
+    };
+    const json = (assetPath: string): Promise<JsonAsset> => new Promise((resolve, reject) => {
+        bundle.load(assetPath, JsonAsset, (error, asset) => {
+            if (error || !asset) reject(failure(`Cannot load ${bundle.name}/${assetPath}`, error));
+            else resolve(asset);
+        });
+    });
+    const blueprint = (await json(config.sceneBlueprint)).json as {
+        artSlots: { id: string }[]; npcPlans: { id: string }[];
+    };
+    const paths = new Set<string>(blueprint.artSlots.map(slot => `simple2d_scene/${slot.id}/spriteFrame`));
+    for (const target of config.hiddenObjects) paths.add(`${target.asset}/spriteFrame`);
+    for (const reveal of config.interactiveObjects) {
+        paths.add(`${reveal.asset}/spriteFrame`);
+        if (reveal.openAsset) paths.add(`${reveal.openAsset}/spriteFrame`);
+    }
+    for (const name of ['ui_panel', 'ui_button', 'ui_hint_ring', 'ui_backdrop']) paths.add(`ui/${name}/spriteFrame`);
+    const cup = 'event_cup/spriteFrame';
+    if (bundle.getInfoWithPath(cup, SpriteFrame)) paths.add(cup);
+    await finish(blueprint.npcPlans.map(async actor => {
+        const folder = `cels/${actor.id}`;
+        const manifest = (await json(`${folder}/manifest`)).json as {
+            clips: Record<string, { asset: string }[]>;
+        };
+        for (const clip of Object.keys(manifest.clips)) {
+            for (const cel of manifest.clips[clip]) paths.add(`${folder}/${cel.asset}/spriteFrame`);
+        }
+    }));
+    // Keep the bundle registered until every dependency request has
+    // finished, including the error path. No old, unreferenced artwork is loaded.
+    await finish(Array.from(paths).map(assetPath => new Promise<void>((resolve, reject) => {
+        bundle.load(assetPath, SpriteFrame, (error, frame) => {
+            if (error || !frame) reject(failure(`Cannot load ${bundle.name}/${assetPath}`, error));
+            else resolve();
+        });
+    })));
 }
 
 export interface LoadedCity {
@@ -108,6 +154,7 @@ export class CityContentLoader {
             reservation.bundle = bundle;
             asset = await loadCityJson(bundle, cityId);
             const config = validateCityConfig(asset.json, this.catalog, cityId);
+            await loadGeneratedCityArt(bundle, config);
             return { config, bundle, release };
         } catch (loadError) {
             release();

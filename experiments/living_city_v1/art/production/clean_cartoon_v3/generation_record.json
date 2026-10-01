@@ -1,0 +1,12 @@
+{
+  "id": "lc_clean_cartoon_direction_v3",
+  "actualSize": [
+    1081,
+    1455
+  ],
+  "mode": "RGB",
+  "sha256": "96b94f32b7acd958f578b9d06f2eb07e246c61d29b0d8b64d8adae5c8b836dcb",
+  "status": "concept_reference_only",
+  "runtimeAsset": false,
+  "promptPath": "art/production/clean_cartoon_v3/PROMPT.md"
+}

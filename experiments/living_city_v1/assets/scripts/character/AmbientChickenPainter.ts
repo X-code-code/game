@@ -19,21 +19,21 @@ type Command = ['M' | 'L', number, number] | ['Q', number, number, number, numbe
     | ['C', number, number, number, number, number, number] | ['Z'];
 
 const C = {
-    ink: new Color(99, 74, 59, 255),
-    lightInk: new Color(149, 109, 75, 255),
-    cream: new Color(243, 230, 198, 255),
-    pale: new Color(255, 242, 211, 255),
-    honey: new Color(226, 191, 121, 255),
-    russet: new Color(198, 151, 91, 255),
-    cheek: new Color(222, 152, 111, 255),
-    terracotta: new Color(185, 104, 77, 255),
-    sage: new Color(143, 167, 137, 255),
-    slate: new Color(111, 139, 149, 255),
-    wood: new Color(136, 101, 74, 255),
-    orange: new Color(216, 133, 69, 255),
-    orangeLight: new Color(244, 170, 94, 255),
-    eye: new Color(55, 49, 43, 255),
-    shadow: new Color(93, 75, 54, 46),
+    ink: new Color(87, 73, 84, 255),
+    lightInk: new Color(132, 114, 122, 255),
+    cream: new Color(255, 245, 223, 255),
+    pale: new Color(255, 250, 235, 255),
+    honey: new Color(248, 224, 164, 255),
+    russet: new Color(242, 194, 103, 255),
+    cheek: new Color(238, 158, 145, 255),
+    terracotta: new Color(238, 139, 127, 255),
+    sage: new Color(125, 187, 131, 255),
+    slate: new Color(117, 191, 200, 255),
+    wood: new Color(201, 144, 100, 255),
+    orange: new Color(230, 161, 82, 255),
+    orangeLight: new Color(242, 194, 103, 255),
+    eye: new Color(87, 73, 84, 255),
+    shadow: new Color(87, 73, 84, 42),
 };
 
 /** Commands stay in a shared, foot-anchored 120-unit character coordinate system. */

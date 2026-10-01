@@ -1,0 +1,50 @@
+{
+  "source": "C:/Users/24627/Desktop/bg-png",
+  "approvalScope": "visual_direction_only",
+  "assets": [
+    {
+      "id": "bg_png_ref_1",
+      "path": "art/reference/bg_png_20260930/Snipaste_2026-09-30_23-16-05.png",
+      "size": [
+        1004,
+        1351
+      ],
+      "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+      "status": "user_selected_direction",
+      "runtimeAsset": false
+    },
+    {
+      "id": "bg_png_ref_2",
+      "path": "art/reference/bg_png_20260930/Snipaste_2026-09-30_23-16-36.png",
+      "size": [
+        1011,
+        1352
+      ],
+      "sha256": "8e24bc26ea18bbb801f5b517e76de19b46469939d2478ffddcb90061afd9a637",
+      "status": "user_selected_direction",
+      "runtimeAsset": false
+    },
+    {
+      "id": "bg_png_ref_3",
+      "path": "art/reference/bg_png_20260930/Snipaste_2026-09-30_23-16-50.png",
+      "size": [
+        1007,
+        1337
+      ],
+      "sha256": "e59ea154d1e805d29b5162a1b2e4e2d5736c1d8749f547410bac11a171121539",
+      "status": "user_selected_direction",
+      "runtimeAsset": false
+    },
+    {
+      "id": "bg_png_ref_4",
+      "path": "art/reference/bg_png_20260930/Snipaste_2026-09-30_23-17-04.png",
+      "size": [
+        1015,
+        1353
+      ],
+      "sha256": "92a1366df87e5c994f02804168b753d8f7e88c95e5102123c98a3f5817c3f365",
+      "status": "user_selected_direction",
+      "runtimeAsset": false
+    }
+  ]
+}

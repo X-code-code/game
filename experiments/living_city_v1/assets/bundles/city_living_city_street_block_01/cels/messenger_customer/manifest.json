@@ -2,145 +2,121 @@
   "schemaVersion": 1,
   "actorId": "messenger_customer",
   "canvasPx": {
-    "width": 256,
+    "width": 384,
     "height": 256
   },
   "footpointPx": {
-    "x": 128,
+    "x": 192,
     "y": 215
   },
   "paintedHeightPx": 186,
   "clips": {
     "walk_n": [
       {
-        "asset": "courier_walk_n_00",
-        "durationSeconds": 0.11
+        "asset": "chicken_mailman_frame_01",
+        "durationSeconds": 0.12
       },
       {
-        "asset": "courier_walk_n_01",
-        "durationSeconds": 0.11
+        "asset": "chicken_mailman_frame_02",
+        "durationSeconds": 0.12
       },
       {
-        "asset": "courier_walk_n_02",
-        "durationSeconds": 0.11
+        "asset": "chicken_mailman_frame_03",
+        "durationSeconds": 0.12
       },
       {
-        "asset": "courier_walk_n_03",
-        "durationSeconds": 0.11
+        "asset": "chicken_mailman_frame_04",
+        "durationSeconds": 0.12
       }
     ],
     "walk_nw": [
       {
-        "asset": "courier_walk_nw_00",
-        "durationSeconds": 0.11
+        "asset": "chicken_mailman_frame_05",
+        "durationSeconds": 0.12
       },
       {
-        "asset": "courier_walk_nw_01",
-        "durationSeconds": 0.11
+        "asset": "chicken_mailman_frame_06",
+        "durationSeconds": 0.12
       },
       {
-        "asset": "courier_walk_nw_02",
-        "durationSeconds": 0.11
+        "asset": "chicken_mailman_frame_07",
+        "durationSeconds": 0.12
       },
       {
-        "asset": "courier_walk_nw_03",
-        "durationSeconds": 0.11
+        "asset": "chicken_mailman_frame_08",
+        "durationSeconds": 0.12
       }
     ],
     "walk_ne": [
       {
-        "asset": "courier_walk_ne_00",
-        "durationSeconds": 0.11
+        "asset": "chicken_mailman_frame_09",
+        "durationSeconds": 0.12
       },
       {
-        "asset": "courier_walk_ne_01",
-        "durationSeconds": 0.11
+        "asset": "chicken_mailman_frame_10",
+        "durationSeconds": 0.12
       },
       {
-        "asset": "courier_walk_ne_02",
-        "durationSeconds": 0.11
+        "asset": "chicken_mailman_frame_11",
+        "durationSeconds": 0.12
       },
       {
-        "asset": "courier_walk_ne_03",
-        "durationSeconds": 0.11
-      }
-    ],
-    "turn_nw_w": [
-      {
-        "asset": "courier_turn_nw_w_00",
-        "durationSeconds": 0.11
-      },
-      {
-        "asset": "courier_turn_nw_w_01",
-        "durationSeconds": 0.11
-      },
-      {
-        "asset": "courier_turn_nw_w_02",
-        "durationSeconds": 0.11
+        "asset": "chicken_mailman_frame_12",
+        "durationSeconds": 0.12
       }
     ],
     "idle_w": [
       {
-        "asset": "courier_idle_w_00",
-        "durationSeconds": 0.35
+        "asset": "chicken_mailman_frame_17",
+        "durationSeconds": 0.38
       },
       {
-        "asset": "courier_idle_w_01",
-        "durationSeconds": 0.35
-      },
-      {
-        "asset": "courier_idle_w_02",
-        "durationSeconds": 0.35
+        "asset": "chicken_mailman_frame_18",
+        "durationSeconds": 0.38
       }
     ],
     "receive_w": [
       {
-        "asset": "courier_receive_w_00",
-        "durationSeconds": 0.18
+        "asset": "chicken_mailman_frame_13",
+        "durationSeconds": 0.25
       },
       {
-        "asset": "courier_receive_w_01",
-        "durationSeconds": 0.18
+        "asset": "chicken_mailman_frame_14",
+        "durationSeconds": 0.25
       },
       {
-        "asset": "courier_receive_w_02",
-        "durationSeconds": 0.26
+        "asset": "chicken_mailman_frame_15",
+        "durationSeconds": 0.25
       },
       {
-        "asset": "courier_receive_w_03",
-        "durationSeconds": 0.18
+        "asset": "chicken_mailman_frame_16",
+        "durationSeconds": 0.25
+      }
+    ],
+    "turn_nw_w": [
+      {
+        "asset": "chicken_mailman_frame_05",
+        "durationSeconds": 0.16
       },
       {
-        "asset": "courier_receive_w_04",
-        "durationSeconds": 0.18
+        "asset": "chicken_mailman_frame_17",
+        "durationSeconds": 0.16
       }
     ],
     "turn_w_ne": [
       {
-        "asset": "courier_turn_w_ne_00",
-        "durationSeconds": 0.11
+        "asset": "chicken_mailman_frame_19",
+        "durationSeconds": 0.16
       },
       {
-        "asset": "courier_turn_w_ne_01",
-        "durationSeconds": 0.11
-      },
-      {
-        "asset": "courier_turn_w_ne_02",
-        "durationSeconds": 0.11
+        "asset": "chicken_mailman_frame_20",
+        "durationSeconds": 0.16
       }
     ],
     "idle_ne": [
       {
-        "asset": "courier_idle_ne_00",
-        "durationSeconds": 0.35
-      },
-      {
-        "asset": "courier_idle_ne_01",
-        "durationSeconds": 0.35
-      },
-      {
-        "asset": "courier_idle_ne_02",
-        "durationSeconds": 0.35
+        "asset": "chicken_mailman_frame_20",
+        "durationSeconds": 0.5
       }
     ]
   }

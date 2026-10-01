@@ -1,0 +1,134 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "7855dcc3-8353-4511-a5aa-5e9e9df4688c",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "ver": "1.0.22",
+      "importer": "texture",
+      "imported": true,
+      "uuid": "7855dcc3-8353-4511-a5aa-5e9e9df4688c@6c48a",
+      "displayName": "herb_stand",
+      "id": "6c48a",
+      "name": "texture",
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "imageUuidOrDatabaseUri": "7855dcc3-8353-4511-a5aa-5e9e9df4688c",
+        "isUuid": true,
+        "visible": false
+      }
+    },
+    "f9941": {
+      "ver": "1.0.12",
+      "importer": "sprite-frame",
+      "imported": true,
+      "uuid": "7855dcc3-8353-4511-a5aa-5e9e9df4688c@f9941",
+      "displayName": "herb_stand",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "trimType": "custom",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 145,
+        "height": 190,
+        "rawWidth": 145,
+        "rawHeight": 190,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "7855dcc3-8353-4511-a5aa-5e9e9df4688c@6c48a",
+        "atlasUuid": "",
+        "vertices": {
+          "rawPosition": [
+            -72.5,
+            -95,
+            0,
+            72.5,
+            -95,
+            0,
+            -72.5,
+            95,
+            0,
+            72.5,
+            95,
+            0
+          ],
+          "uv": [
+            0,
+            190,
+            145,
+            190,
+            0,
+            0,
+            145,
+            0
+          ],
+          "nuv": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "minPos": [
+            -72.5,
+            -95,
+            0
+          ],
+          "maxPos": [
+            72.5,
+            95,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ]
+        }
+      }
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "fixAlphaTransparencyArtifacts": false,
+    "hasAlpha": true,
+    "redirect": "7855dcc3-8353-4511-a5aa-5e9e9df4688c@6c48a"
+  }
+}

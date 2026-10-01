@@ -1,4 +1,5 @@
-import { Button, Color, Graphics, Label, Node, UITransform, Vec3 } from 'cc';
+import { AssetManager, Button, Color, Label, Node, UITransform, Vec3 } from 'cc';
+import { generatedUi } from './GeneratedUi';
 import type { TaskProgress } from '../task/TaskManager';
 
 export interface CompletionSummary {
@@ -7,6 +8,8 @@ export interface CompletionSummary {
     progress: TaskProgress;
     chickens: number;
     objects: number;
+    chapterIndex?: number;
+    chapterCount?: number;
 }
 
 /** City-specific presentation; no task mutation or asset loading lives in this UI. */
@@ -23,18 +26,19 @@ export class CityCompletionPanel {
     private width = 0;
     private height = 0;
 
-    public constructor(parent: Node, onContinue: () => void, onNext: () => void, onOpen: () => void) {
+    public constructor(parent: Node, onContinue: () => void, onNext: () => void, onOpen: () => void,
+        private readonly artBundle?: AssetManager.Bundle) {
         parent.addChild(this.root);
         this.root.addComponent(UITransform);
         this.root.addChild(this.modal);
         this.modal.addComponent(UITransform);
-        this.modal.addComponent(Graphics);
+        const dimmer = new Node('CompletionDimmer');
+        this.modal.addChild(dimmer);
+        dimmer.addComponent(UITransform);
+        generatedUi(dimmer, 'ui_backdrop', this.artBundle, false).color = new Color(50, 46, 35, 155);
         this.modal.addChild(this.card);
         this.card.addComponent(UITransform).setContentSize(660, 480);
-        const background = this.card.addComponent(Graphics);
-        background.fillColor = new Color(255, 250, 235, 255);
-        background.roundRect(-330, -240, 660, 480, 24);
-        background.fill();
+        generatedUi(this.card, 'ui_panel', this.artBundle);
         this.title = this.label(this.card, 'CompletionTitle', 37, 166, 580, 64);
         this.summary = this.label(this.card, 'CompletionSummary', 27, 73, 580, 106);
         this.message = this.label(this.card, 'CompletionMessage', 23, -15, 580, 58);
@@ -55,9 +59,12 @@ export class CityCompletionPanel {
         this.entry.active = false;
         this.title.string = `${data.cityName}探索完成`;
         const p = data.progress;
-        this.summary.string = `主要目标：${p.requiredCompleted} / ${p.requiredTotal}\n` +
-            `发现小鸡：${data.chickens}    隐藏物：${data.objects}\n` +
-            `隐藏目标：${p.optionalCompleted} / ${p.optionalTotal}`;
+        this.summary.string = data.chapterIndex && data.chapterCount
+            ? `本关贴纸已集齐：${p.requiredCompleted} / ${p.requiredTotal}\n` +
+                `旅程：第 ${data.chapterIndex} 关 / 共 ${data.chapterCount} 关`
+            : `主要目标：${p.requiredCompleted} / ${p.requiredTotal}\n` +
+                `发现小鸡：${data.chickens}    隐藏物：${data.objects}\n` +
+                `隐藏目标：${p.optionalCompleted} / ${p.optionalTotal}`;
         this.message.string = loading ? '正在准备下一座城市…\n也可以留在当前城市继续探索' : failed
             ? '下一座城市暂时未能加载\n当前进度已保留，可以重试' : data.hasNext
                 ? '可以继续寻找，也可以启程前往下一站' : '已到达本次旅程的最后一站\n仍可留在这里继续探索';
@@ -94,11 +101,7 @@ export class CityCompletionPanel {
         this.height = size.height;
         this.root.getComponent(UITransform)!.setContentSize(size);
         this.modal.getComponent(UITransform)!.setContentSize(size);
-        const g = this.modal.getComponent(Graphics)!;
-        g.clear();
-        g.fillColor = new Color(50, 46, 35, 155);
-        g.rect(-size.width / 2, -size.height / 2, size.width, size.height);
-        g.fill();
+        this.modal.getChildByName('CompletionDimmer')?.getComponent(UITransform)?.setContentSize(size);
         const scale = Math.min(size.width * 0.92 / 660, size.height * 0.85 / 480);
         this.card.setScale(scale, scale, 1);
         const entryScale = size.height > size.width ? size.width * 0.7 / 340 : 1;
@@ -131,10 +134,7 @@ export class CityCompletionPanel {
         const node = new Node(name);
         parent.addChild(node);
         node.addComponent(UITransform).setContentSize(width, 64);
-        const g = node.addComponent(Graphics);
-        g.fillColor = new Color(239, 207, 130, 255);
-        g.roundRect(-width / 2, -32, width, 64, 14);
-        g.fill();
+        generatedUi(node, 'ui_button', this.artBundle);
         node.addComponent(Button);
         this.label(node, 'Text', 27, 0, width - 16, 60).string = text;
         node.on(Button.EventType.CLICK, click);

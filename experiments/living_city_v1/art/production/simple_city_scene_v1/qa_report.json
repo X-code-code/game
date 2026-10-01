@@ -1,7 +1,7 @@
 {
   "batchId": "simple_city_scene_v1",
   "status": "mechanical_pass_visual_pending",
-  "checkedAssets": 38,
+  "checkedAssets": 40,
   "source": "render_scene.py",
   "processing": "2x supersample Pillow drawing, Lanczos downsample, optimized PNG RGBA",
   "results": [
@@ -15,7 +15,7 @@
         255,
         255
       ],
-      "sha256": "8990e084feda5a33bb8a07070d4d9908fd9d0831b5e725c6010ed4b0fca7c5b1",
+      "sha256": "5590c5c0367f6936e9eeb5c415644efb2bd7e3b50cb6da58e0fc403721f2c18a",
       "bundleCopyMatches": true
     },
     {
@@ -28,7 +28,7 @@
         0,
         255
       ],
-      "sha256": "3c0857c754d0d2f3f240a0b6a082d57ebe22b3568cc5e10ac66c84e76311fa50",
+      "sha256": "83d80a58b67d0975ec707a7f75e8919d1064a237dd165111c7ab90de49157ab6",
       "bundleCopyMatches": true
     },
     {
@@ -41,7 +41,7 @@
         0,
         255
       ],
-      "sha256": "0900205da499617ab8cc7c1ca722fff1389d5a5fe9e3a7670c05a8d18abc9efc",
+      "sha256": "50afa11a38bc2b97a5e253a874bf3d4de0e9e89c70d4cac6d18a4e5f5d9855b1",
       "bundleCopyMatches": true
     },
     {
@@ -54,7 +54,7 @@
         0,
         255
       ],
-      "sha256": "b14688efd2930712cb0842e4fc609c71a26eb3e2bd5f2e6f48317e3db5033073",
+      "sha256": "094d9b36845f5e18b0bba9f905563449d5459d7568cf7361e2689319440dc04b",
       "bundleCopyMatches": true
     },
     {
@@ -67,7 +67,7 @@
         0,
         255
       ],
-      "sha256": "f60aab347c10e5c739d3ce2a6cce592bec30824aea807ce7a1b187767db49108",
+      "sha256": "0b9d361550e000f7b8082711f1d200adcac321e24ef5455c5633558bcd7d50db",
       "bundleCopyMatches": true
     },
     {
@@ -132,7 +132,7 @@
         0,
         255
       ],
-      "sha256": "2e8ed077e658826f4cf3d02f11741ad25c374a1c90d0bdf122bc3ac3a552f23b",
+      "sha256": "23467d013163d7134611d34c96616b67670aa2294a18e4454eaa3e6b1c581808",
       "bundleCopyMatches": true
     },
     {
@@ -418,7 +418,7 @@
         0,
         255
       ],
-      "sha256": "e48f9edc2b59b76075d3d8f4c0dbcd4b7b8fa70cf7cc91a602d3b8069acb73d5",
+      "sha256": "0801b6367bda8757fd0394c85412214a002baef137e032b8ec948103553f5f5f",
       "bundleCopyMatches": true
     },
     {
@@ -431,7 +431,7 @@
         0,
         255
       ],
-      "sha256": "ed76a41ad6da08cf235f5fe12f1fa6ffa2dafb970760184d87e5ce2315b73e36",
+      "sha256": "eb61b2e45df761cb6d0e45ada667bc0ddfe22e57358b1e8c20b682261bdd32dc",
       "bundleCopyMatches": true
     },
     {
@@ -445,6 +445,32 @@
         255
       ],
       "sha256": "cd8348a8b57f1b28f126297a077f79234eee76ae3ee1007e9986b20232a15679",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_tea_delivery_nook",
+      "dimensions": [
+        105,
+        98
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "5445316f5f395b7ef8ba7a7f5fb81752c5ea00d933a7bfc82eaaa85bdfc83243",
+      "bundleCopyMatches": true
+    },
+    {
+      "id": "lc_tailor_delivery_stool",
+      "dimensions": [
+        92,
+        88
+      ],
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "sha256": "ed02dab2a3eaead1ae6de4abcc3a8a81509c30db8077542ac634806f26a2eca6",
       "bundleCopyMatches": true
     },
     {

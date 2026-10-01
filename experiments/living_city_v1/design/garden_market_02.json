@@ -1,0 +1,922 @@
+{
+  "schemaVersion": 1,
+  "id": "living_city_garden_market_02",
+  "name": "花园集市",
+  "chapterIndex": 2,
+  "map": {
+    "width": 1536,
+    "height": 2048
+  },
+  "camera": {
+    "minZoom": 1,
+    "maxZoom": 2.25,
+    "initialZoom": 1.4,
+    "initialFocus": {
+      "x": -180,
+      "y": 180
+    }
+  },
+  "artSlots": [
+    {
+      "id": "lc_garden_ground",
+      "source": "garden_ground",
+      "center": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "width": 1536,
+        "height": 2048
+      },
+      "layer": "ground",
+      "alpha": false
+    },
+    {
+      "id": "lc_greenhouse",
+      "source": "garden_greenhouse",
+      "center": {
+        "x": -500,
+        "y": 640
+      },
+      "size": {
+        "width": 490,
+        "height": 500
+      },
+      "layer": "building_back",
+      "alpha": true
+    },
+    {
+      "id": "lc_flower_shop",
+      "source": "garden_flower_shop",
+      "center": {
+        "x": 490,
+        "y": 530
+      },
+      "size": {
+        "width": 455,
+        "height": 510
+      },
+      "layer": "building_back",
+      "alpha": true
+    },
+    {
+      "id": "lc_garden_cafe",
+      "source": "shop_red",
+      "center": {
+        "x": -505,
+        "y": -580
+      },
+      "size": {
+        "width": 420,
+        "height": 460
+      },
+      "layer": "building_back",
+      "alpha": true
+    },
+    {
+      "id": "lc_garden_workshop",
+      "source": "pottery_annex",
+      "center": {
+        "x": 510,
+        "y": -550
+      },
+      "size": {
+        "width": 340,
+        "height": 360
+      },
+      "layer": "building_back",
+      "alpha": true
+    },
+    {
+      "id": "lc_garden_barn",
+      "source": "grain_house",
+      "center": {
+        "x": 490,
+        "y": -860
+      },
+      "size": {
+        "width": 370,
+        "height": 280
+      },
+      "layer": "building_back",
+      "alpha": true
+    },
+    {
+      "id": "lc_herb_workstand",
+      "source": "herb_stand",
+      "center": {
+        "x": -330,
+        "y": 420
+      },
+      "size": {
+        "width": 185,
+        "height": 225
+      },
+      "layer": "depth",
+      "footY": 311.5,
+      "alpha": true
+    },
+    {
+      "id": "lc_flower_display",
+      "source": "flower_display",
+      "center": {
+        "x": -335,
+        "y": -120
+      },
+      "size": {
+        "width": 210,
+        "height": 190
+      },
+      "layer": "depth",
+      "footY": -211,
+      "alpha": true
+    },
+    {
+      "id": "lc_orchard_produce",
+      "source": "produce_display",
+      "center": {
+        "x": 350,
+        "y": 155
+      },
+      "size": {
+        "width": 185,
+        "height": 170
+      },
+      "layer": "depth",
+      "footY": 74,
+      "alpha": true
+    },
+    {
+      "id": "lc_tea_table",
+      "source": "tea_patio",
+      "center": {
+        "x": 340,
+        "y": -90
+      },
+      "size": {
+        "width": 200,
+        "height": 160
+      },
+      "layer": "depth",
+      "footY": -166,
+      "alpha": true
+    },
+    {
+      "id": "lc_garden_bench",
+      "source": "town_bench",
+      "center": {
+        "x": -465,
+        "y": -330
+      },
+      "size": {
+        "width": 230,
+        "height": 115
+      },
+      "layer": "depth",
+      "footY": -383.5,
+      "alpha": true
+    },
+    {
+      "id": "lc_tool_crates",
+      "source": "wood_crates",
+      "center": {
+        "x": -330,
+        "y": -820
+      },
+      "size": {
+        "width": 165,
+        "height": 145
+      },
+      "layer": "depth",
+      "footY": -888.5,
+      "alpha": true
+    },
+    {
+      "id": "lc_hat_basket",
+      "source": "wood_crates",
+      "center": {
+        "x": 320,
+        "y": -615
+      },
+      "size": {
+        "width": 170,
+        "height": 155
+      },
+      "layer": "depth",
+      "footY": -688.5,
+      "alpha": true
+    },
+    {
+      "id": "lc_garden_sign",
+      "source": "town_signpost",
+      "center": {
+        "x": -190,
+        "y": 600
+      },
+      "size": {
+        "width": 85,
+        "height": 165
+      },
+      "layer": "depth",
+      "footY": 521.5,
+      "alpha": true
+    },
+    {
+      "id": "lc_garden_tree_west",
+      "source": "town_tree",
+      "center": {
+        "x": -585,
+        "y": 120
+      },
+      "size": {
+        "width": 260,
+        "height": 350
+      },
+      "layer": "depth",
+      "footY": -51,
+      "alpha": true
+    },
+    {
+      "id": "lc_garden_tree_east",
+      "source": "town_tree",
+      "center": {
+        "x": 660,
+        "y": -130
+      },
+      "size": {
+        "width": 220,
+        "height": 310
+      },
+      "layer": "depth",
+      "footY": -281,
+      "alpha": true
+    },
+    {
+      "id": "lc_flower_pots_nw",
+      "source": "flower_pot",
+      "center": {
+        "x": -675,
+        "y": 550
+      },
+      "size": {
+        "width": 125,
+        "height": 240
+      },
+      "layer": "street_back",
+      "alpha": true
+    },
+    {
+      "id": "lc_flower_pots_ne",
+      "source": "flower_pot",
+      "center": {
+        "x": 675,
+        "y": 470
+      },
+      "size": {
+        "width": 120,
+        "height": 235
+      },
+      "layer": "street_back",
+      "alpha": true
+    },
+    {
+      "id": "lc_flower_pots_sw",
+      "source": "flower_pot",
+      "center": {
+        "x": -665,
+        "y": -615
+      },
+      "size": {
+        "width": 115,
+        "height": 220
+      },
+      "layer": "street_back",
+      "alpha": true
+    },
+    {
+      "id": "lc_flower_pots_se",
+      "source": "flower_pot",
+      "center": {
+        "x": 680,
+        "y": -790
+      },
+      "size": {
+        "width": 110,
+        "height": 215
+      },
+      "layer": "street_back",
+      "alpha": true
+    },
+    {
+      "id": "lc_garden_cart",
+      "source": "town_handcart",
+      "center": {
+        "x": -360,
+        "y": 60
+      },
+      "size": {
+        "width": 180,
+        "height": 130
+      },
+      "layer": "depth",
+      "footY": -1,
+      "alpha": true
+    },
+    {
+      "id": "lc_garden_fountain",
+      "source": "water_station",
+      "center": {
+        "x": 330,
+        "y": -390
+      },
+      "size": {
+        "width": 140,
+        "height": 195
+      },
+      "layer": "depth",
+      "footY": -483.5,
+      "alpha": true
+    },
+    {
+      "id": "lc_garden_pottery",
+      "source": "pottery_display",
+      "center": {
+        "x": 470,
+        "y": -730
+      },
+      "size": {
+        "width": 145,
+        "height": 140
+      },
+      "layer": "depth",
+      "footY": -796,
+      "alpha": true
+    },
+    {
+      "id": "lc_flower_rack",
+      "source": "tailor_rack",
+      "center": {
+        "x": 480,
+        "y": 310
+      },
+      "size": {
+        "width": 145,
+        "height": 180
+      },
+      "layer": "depth",
+      "footY": 224,
+      "alpha": true
+    },
+    {
+      "id": "lc_garden_lantern",
+      "source": "lantern_post",
+      "center": {
+        "x": 320,
+        "y": 700
+      },
+      "size": {
+        "width": 110,
+        "height": 240
+      },
+      "layer": "depth",
+      "footY": 584,
+      "alpha": true
+    },
+    {
+      "id": "lc_garden_pennants",
+      "source": "street_pennants",
+      "center": {
+        "x": 20,
+        "y": 755
+      },
+      "size": {
+        "width": 450,
+        "height": 55
+      },
+      "layer": "overhead",
+      "alpha": true
+    }
+  ],
+  "hiddenObjectSlots": [
+    {
+      "id": "watering_can",
+      "label": "浇水壶",
+      "at": {
+        "x": -320,
+        "y": 449
+      },
+      "supportArtSlotId": "lc_herb_workstand",
+      "semanticContext": "温室外的小工作台，有人刚浇完花。",
+      "clue": "温室外的小工作台，有人刚浇完花。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      }
+    },
+    {
+      "id": "garden_gloves",
+      "label": "园艺手套",
+      "at": {
+        "x": -465,
+        "y": -316
+      },
+      "supportArtSlotId": "lc_garden_bench",
+      "semanticContext": "长椅上留着一双软软的手套。",
+      "clue": "长椅上留着一双软软的手套。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      }
+    },
+    {
+      "id": "garden_trowel",
+      "label": "小花铲",
+      "at": {
+        "x": -330,
+        "y": -805
+      },
+      "supportArtSlotId": "lc_tool_crates",
+      "semanticContext": "先打开咖啡店旁的工具箱。",
+      "clue": "先打开咖啡店旁的工具箱。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      },
+      "visibleCondition": {
+        "objectId": "parcel_chest",
+        "state": "opened"
+      }
+    },
+    {
+      "id": "rose_bloom",
+      "label": "玫瑰花",
+      "at": {
+        "x": -337,
+        "y": -105
+      },
+      "supportArtSlotId": "lc_flower_display",
+      "semanticContext": "花摊的叶子下，藏着一朵特别的花。",
+      "clue": "花摊的叶子下，藏着一朵特别的花。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      },
+      "visibleCondition": {
+        "objectId": "flower_leaves",
+        "state": "opened"
+      }
+    },
+    {
+      "id": "yellow_pear",
+      "label": "黄梨",
+      "at": {
+        "x": 352,
+        "y": 185
+      },
+      "supportArtSlotId": "lc_orchard_produce",
+      "semanticContext": "水果篮里，找找像小葫芦的果子。",
+      "clue": "水果篮里，找找像小葫芦的果子。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      }
+    },
+    {
+      "id": "honey_jar",
+      "label": "蜂蜜罐",
+      "at": {
+        "x": 352,
+        "y": -63
+      },
+      "supportArtSlotId": "lc_tea_table",
+      "semanticContext": "喝茶的桌上，有一罐甜甜的东西。",
+      "clue": "喝茶的桌上，有一罐甜甜的东西。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      }
+    },
+    {
+      "id": "garden_key",
+      "label": "温室钥匙",
+      "at": {
+        "x": -513,
+        "y": 440
+      },
+      "supportArtSlotId": "lc_greenhouse",
+      "semanticContext": "温室门槛旁，有把叶形的小钥匙。",
+      "clue": "温室门槛旁，有把叶形的小钥匙。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      }
+    },
+    {
+      "id": "butterfly_badge",
+      "label": "蝴蝶徽章",
+      "at": {
+        "x": -186,
+        "y": 650
+      },
+      "supportArtSlotId": "lc_garden_sign",
+      "semanticContext": "路牌上停着一只不会飞的蝴蝶。",
+      "clue": "路牌上停着一只不会飞的蝴蝶。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      }
+    },
+    {
+      "id": "ribbon_spool",
+      "label": "丝带卷",
+      "at": {
+        "x": 480,
+        "y": 360
+      },
+      "supportArtSlotId": "lc_flower_rack",
+      "semanticContext": "花店外的货架上，找一卷紫色丝带。",
+      "clue": "花店外的货架上，找一卷紫色丝带。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      }
+    },
+    {
+      "id": "straw_hat",
+      "label": "草帽",
+      "at": {
+        "x": 320,
+        "y": -590
+      },
+      "supportArtSlotId": "lc_hat_basket",
+      "semanticContext": "掀开南边藤篮的盖子，再看看里面。",
+      "clue": "掀开南边藤篮的盖子，再看看里面。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      },
+      "visibleCondition": {
+        "objectId": "bun_lid",
+        "state": "opened"
+      }
+    },
+    {
+      "id": "acorn",
+      "label": "小橡果",
+      "at": {
+        "x": -573,
+        "y": -45
+      },
+      "supportArtSlotId": "lc_garden_tree_west",
+      "semanticContext": "大树根旁的草地上，藏着一颗橡果。",
+      "clue": "大树根旁的草地上，藏着一颗橡果。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      }
+    },
+    {
+      "id": "lavender_sachet",
+      "label": "香草袋",
+      "at": {
+        "x": 500,
+        "y": -820
+      },
+      "supportArtSlotId": "lc_garden_barn",
+      "semanticContext": "南边的小屋窗口，有一只紫色香袋。",
+      "clue": "南边的小屋窗口，有一只紫色香袋。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      }
+    }
+  ],
+  "interactiveSlots": [
+    {
+      "id": "parcel_chest",
+      "label": "打开工具箱",
+      "at": {
+        "x": -330,
+        "y": -818
+      },
+      "visualWorldSize": {
+        "width": 110,
+        "height": 98
+      },
+      "supportArtSlotId": "lc_tool_crates",
+      "depthY": -871
+    },
+    {
+      "id": "flower_leaves",
+      "label": "拨开花叶",
+      "at": {
+        "x": -337,
+        "y": -108
+      },
+      "visualWorldSize": {
+        "width": 100,
+        "height": 90
+      },
+      "supportArtSlotId": "lc_flower_display",
+      "depthY": -157
+    },
+    {
+      "id": "bun_lid",
+      "label": "掀开藤篮",
+      "at": {
+        "x": 320,
+        "y": -600
+      },
+      "visualWorldSize": {
+        "width": 100,
+        "height": 82
+      },
+      "supportArtSlotId": "lc_hat_basket",
+      "depthY": -645
+    }
+  ],
+  "npcPlans": [
+    {
+      "id": "messenger_customer",
+      "role": "tea_customer",
+      "actorHeight": 120,
+      "footRadius": 18,
+      "route": [
+        {
+          "x": -120,
+          "y": -630
+        },
+        {
+          "x": -125,
+          "y": -240
+        },
+        {
+          "x": -130,
+          "y": 120
+        },
+        {
+          "x": -125,
+          "y": 570
+        },
+        {
+          "x": -110,
+          "y": 810
+        }
+      ],
+      "speedWorldUnitsPerSecond": 95,
+      "onWaypoint": {
+        "4": "tea_exchange"
+      },
+      "loop": false,
+      "pauseSecondsAtWaypoints": {
+        "1": 1.2,
+        "2": 1.6
+      }
+    },
+    {
+      "id": "tea_vendor",
+      "role": "vendor",
+      "actorHeight": 120,
+      "footRadius": 18,
+      "route": [
+        {
+          "x": -420,
+          "y": 400
+        }
+      ],
+      "idleActions": [
+        "look_at_passersby",
+        "arrange_cups"
+      ],
+      "eventAction": "tea_exchange",
+      "loop": false,
+      "speedWorldUnitsPerSecond": 58,
+      "pauseSecondsAtWaypoints": {
+        "1": 1.2,
+        "2": 1.6
+      }
+    },
+    {
+      "id": "crossing_shopper",
+      "role": "ambient_shopper",
+      "actorHeight": 118,
+      "footRadius": 18,
+      "route": [
+        {
+          "x": 100,
+          "y": -500
+        },
+        {
+          "x": 120,
+          "y": -170
+        },
+        {
+          "x": 100,
+          "y": 130
+        },
+        {
+          "x": 120,
+          "y": 650
+        },
+        {
+          "x": 100,
+          "y": 130
+        }
+      ],
+      "speedWorldUnitsPerSecond": 61,
+      "pauseSecondsAtWaypoints": {
+        "1": 1.2,
+        "2": 1.6
+      },
+      "loop": true
+    },
+    {
+      "id": "chestnut_seller",
+      "role": "ambient_vendor",
+      "actorHeight": 122,
+      "footRadius": 18,
+      "route": [
+        {
+          "x": 240,
+          "y": -120
+        }
+      ],
+      "idleActions": [
+        "tend_cart",
+        "short_pause"
+      ],
+      "loop": false,
+      "speedWorldUnitsPerSecond": 64,
+      "pauseSecondsAtWaypoints": {
+        "1": 1.2,
+        "2": 1.6
+      }
+    },
+    {
+      "id": "lantern_watcher",
+      "role": "ambient_watcher",
+      "actorHeight": 105,
+      "footRadius": 18,
+      "route": [
+        {
+          "x": 10,
+          "y": 470
+        }
+      ],
+      "idleActions": [
+        "look_up_at_banner",
+        "wave_at_passersby",
+        "short_pause"
+      ],
+      "loop": false,
+      "speedWorldUnitsPerSecond": 67,
+      "pauseSecondsAtWaypoints": {
+        "1": 1.2,
+        "2": 1.6
+      }
+    },
+    {
+      "id": "tea_regular",
+      "role": "tea_regular",
+      "actorHeight": 112,
+      "footRadius": 18,
+      "route": [
+        {
+          "x": -220,
+          "y": 80
+        },
+        {
+          "x": -230,
+          "y": 190
+        },
+        {
+          "x": -220,
+          "y": 80
+        }
+      ],
+      "speedWorldUnitsPerSecond": 70,
+      "pauseSecondsAtWaypoints": {
+        "1": 1.2,
+        "2": 1.6
+      },
+      "loop": true,
+      "idleActions": [
+        "sip_tea",
+        "watch_market"
+      ]
+    },
+    {
+      "id": "flower_buyer",
+      "role": "flower_buyer",
+      "actorHeight": 114,
+      "footRadius": 18,
+      "route": [
+        {
+          "x": -110,
+          "y": -560
+        },
+        {
+          "x": -100,
+          "y": -210
+        },
+        {
+          "x": -110,
+          "y": 150
+        },
+        {
+          "x": -100,
+          "y": -210
+        }
+      ],
+      "speedWorldUnitsPerSecond": 73,
+      "pauseSecondsAtWaypoints": {
+        "1": 1.2,
+        "2": 1.6
+      },
+      "loop": true,
+      "idleActions": [
+        "adjust_basket",
+        "look_at_flowers"
+      ]
+    },
+    {
+      "id": "lane_child",
+      "role": "lane_child",
+      "actorHeight": 103,
+      "footRadius": 16,
+      "route": [
+        {
+          "x": 30,
+          "y": -160
+        },
+        {
+          "x": 45,
+          "y": 160
+        },
+        {
+          "x": 20,
+          "y": 460
+        },
+        {
+          "x": 45,
+          "y": 160
+        }
+      ],
+      "speedWorldUnitsPerSecond": 76,
+      "pauseSecondsAtWaypoints": {
+        "1": 1.2,
+        "2": 1.6
+      },
+      "loop": true,
+      "idleActions": [
+        "skip",
+        "look_up"
+      ]
+    }
+  ],
+  "npcClues": {
+    "tea_vendor": "温室钥匙还没还回去，\n也许落在门槛旁。",
+    "flower_buyer": "花叶里有一朵玫瑰，\n轻轻拨开就能看见。",
+    "lantern_watcher": "路牌上的蝴蝶只是徽章，\n它可不会飞走。",
+    "chestnut_seller": "工具箱里的小花铲，\n可以帮我们种新花。"
+  },
+  "sceneEvents": [],
+  "walkableRegions": [
+    {
+      "id": "main_lane",
+      "access": "public",
+      "polygon": [
+        [
+          -170,
+          -960
+        ],
+        [
+          170,
+          -960
+        ],
+        [
+          170,
+          960
+        ],
+        [
+          -170,
+          960
+        ]
+      ]
+    }
+  ],
+  "physicalFootprints": [],
+  "standingSpots": []
+}

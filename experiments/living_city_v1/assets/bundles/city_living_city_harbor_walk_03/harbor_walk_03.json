@@ -1,0 +1,906 @@
+{
+  "schemaVersion": 1,
+  "id": "living_city_harbor_walk_03",
+  "name": "河畔码头",
+  "chapterIndex": 3,
+  "map": {
+    "width": 1536,
+    "height": 2048
+  },
+  "camera": {
+    "minZoom": 1,
+    "maxZoom": 2.25,
+    "initialZoom": 1.4,
+    "initialFocus": {
+      "x": -210,
+      "y": 290
+    }
+  },
+  "artSlots": [
+    {
+      "id": "lc_harbor_ground",
+      "source": "harbor_ground",
+      "center": {
+        "x": 0,
+        "y": 0
+      },
+      "size": {
+        "width": 1536,
+        "height": 2048
+      },
+      "layer": "ground",
+      "alpha": false
+    },
+    {
+      "id": "lc_ferry_house",
+      "source": "harbor_ferry_house",
+      "center": {
+        "x": -332,
+        "y": 590
+      },
+      "size": {
+        "width": 300,
+        "height": 330
+      },
+      "layer": "building_back",
+      "alpha": true
+    },
+    {
+      "id": "lc_boathouse",
+      "source": "harbor_boathouse",
+      "center": {
+        "x": 480,
+        "y": 650
+      },
+      "size": {
+        "width": 430,
+        "height": 450
+      },
+      "layer": "building_back",
+      "alpha": true
+    },
+    {
+      "id": "lc_harbor_cafe",
+      "source": "shop_blue",
+      "center": {
+        "x": -332,
+        "y": -610
+      },
+      "size": {
+        "width": 300,
+        "height": 340
+      },
+      "layer": "building_back",
+      "alpha": true
+    },
+    {
+      "id": "lc_harbor_bakery",
+      "source": "shop_bakery",
+      "center": {
+        "x": 510,
+        "y": -520
+      },
+      "size": {
+        "width": 425,
+        "height": 455
+      },
+      "layer": "building_back",
+      "alpha": true
+    },
+    {
+      "id": "lc_harbor_post",
+      "source": "post_house",
+      "center": {
+        "x": 465,
+        "y": -875
+      },
+      "size": {
+        "width": 390,
+        "height": 270
+      },
+      "layer": "building_back",
+      "alpha": true
+    },
+    {
+      "id": "lc_quay_tree",
+      "source": "town_tree",
+      "center": {
+        "x": 650,
+        "y": 200
+      },
+      "size": {
+        "width": 240,
+        "height": 325
+      },
+      "layer": "depth",
+      "footY": 41.5,
+      "alpha": true
+    },
+    {
+      "id": "lc_ferry_lantern",
+      "source": "lantern_post",
+      "center": {
+        "x": -205,
+        "y": 610
+      },
+      "size": {
+        "width": 85,
+        "height": 215
+      },
+      "layer": "depth",
+      "footY": 506.5,
+      "alpha": true
+    },
+    {
+      "id": "lc_quay_lantern",
+      "source": "lantern_post",
+      "center": {
+        "x": 300,
+        "y": -600
+      },
+      "size": {
+        "width": 105,
+        "height": 245
+      },
+      "layer": "depth",
+      "footY": -718.5,
+      "alpha": true
+    },
+    {
+      "id": "lc_harbor_bench",
+      "source": "town_bench",
+      "center": {
+        "x": -350,
+        "y": 135
+      },
+      "size": {
+        "width": 225,
+        "height": 120
+      },
+      "layer": "depth",
+      "footY": 79,
+      "alpha": true
+    },
+    {
+      "id": "lc_harbor_tea_table",
+      "source": "tea_patio",
+      "center": {
+        "x": 350,
+        "y": 130
+      },
+      "size": {
+        "width": 200,
+        "height": 165
+      },
+      "layer": "depth",
+      "footY": 51.5,
+      "alpha": true
+    },
+    {
+      "id": "lc_harbor_food_cart",
+      "source": "bun_cart",
+      "center": {
+        "x": 315,
+        "y": -160
+      },
+      "size": {
+        "width": 175,
+        "height": 230
+      },
+      "layer": "street_back",
+      "alpha": true
+    },
+    {
+      "id": "lc_captain_crate",
+      "source": "wood_crates",
+      "center": {
+        "x": 375,
+        "y": -535
+      },
+      "size": {
+        "width": 155,
+        "height": 145
+      },
+      "layer": "depth",
+      "footY": -603.5,
+      "alpha": true
+    },
+    {
+      "id": "lc_quay_flowers",
+      "source": "flower_display",
+      "center": {
+        "x": -320,
+        "y": -270
+      },
+      "size": {
+        "width": 190,
+        "height": 165
+      },
+      "layer": "depth",
+      "footY": -348.5,
+      "alpha": true
+    },
+    {
+      "id": "lc_dock_rope_goods",
+      "source": "wood_crates",
+      "center": {
+        "x": -387,
+        "y": -530
+      },
+      "size": {
+        "width": 150,
+        "height": 150
+      },
+      "layer": "depth",
+      "footY": -601,
+      "alpha": true
+    },
+    {
+      "id": "lc_harbor_pottery",
+      "source": "pottery_display",
+      "center": {
+        "x": 350,
+        "y": -755
+      },
+      "size": {
+        "width": 180,
+        "height": 180
+      },
+      "layer": "depth",
+      "footY": -841,
+      "alpha": true
+    },
+    {
+      "id": "lc_quay_handcart",
+      "source": "town_handcart",
+      "center": {
+        "x": -315,
+        "y": 360
+      },
+      "size": {
+        "width": 180,
+        "height": 135
+      },
+      "layer": "depth",
+      "footY": 296.5,
+      "alpha": true
+    },
+    {
+      "id": "lc_ferry_sign",
+      "source": "town_signpost",
+      "center": {
+        "x": 190,
+        "y": 310
+      },
+      "size": {
+        "width": 85,
+        "height": 160
+      },
+      "layer": "depth",
+      "footY": 234,
+      "alpha": true
+    },
+    {
+      "id": "lc_harbor_water",
+      "source": "water_station",
+      "center": {
+        "x": 350,
+        "y": 375
+      },
+      "size": {
+        "width": 125,
+        "height": 175
+      },
+      "layer": "depth",
+      "footY": 291.5,
+      "alpha": true
+    },
+    {
+      "id": "lc_pier_crates",
+      "source": "wood_crates",
+      "center": {
+        "x": -390,
+        "y": -740
+      },
+      "size": {
+        "width": 155,
+        "height": 155
+      },
+      "layer": "depth",
+      "footY": -813.5,
+      "alpha": true
+    },
+    {
+      "id": "lc_ferry_vine",
+      "source": "flower_pot",
+      "center": {
+        "x": -435,
+        "y": 510
+      },
+      "size": {
+        "width": 80,
+        "height": 150
+      },
+      "layer": "street_back",
+      "alpha": true
+    },
+    {
+      "id": "lc_boathouse_vine",
+      "source": "flower_pot",
+      "center": {
+        "x": 670,
+        "y": 565
+      },
+      "size": {
+        "width": 110,
+        "height": 220
+      },
+      "layer": "street_back",
+      "alpha": true
+    },
+    {
+      "id": "lc_harbor_cafe_vine",
+      "source": "flower_pot",
+      "center": {
+        "x": -445,
+        "y": -615
+      },
+      "size": {
+        "width": 85,
+        "height": 170
+      },
+      "layer": "street_back",
+      "alpha": true
+    },
+    {
+      "id": "lc_quay_pennants",
+      "source": "street_pennants",
+      "center": {
+        "x": 20,
+        "y": 45
+      },
+      "size": {
+        "width": 470,
+        "height": 65
+      },
+      "layer": "overhead",
+      "alpha": true
+    },
+    {
+      "id": "lc_harbor_banner",
+      "source": "street_banner",
+      "center": {
+        "x": 5,
+        "y": 820
+      },
+      "size": {
+        "width": 440,
+        "height": 80
+      },
+      "layer": "overhead",
+      "alpha": true
+    }
+  ],
+  "hiddenObjectSlots": [
+    {
+      "id": "seashell",
+      "label": "贝壳",
+      "at": {
+        "x": -330,
+        "y": -425
+      },
+      "supportArtSlotId": "lc_quay_flowers",
+      "semanticContext": "沿着花盆往河边看，有枚浅色贝壳。",
+      "clue": "沿着花盆往河边看，有枚浅色贝壳。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      }
+    },
+    {
+      "id": "compass",
+      "label": "指南针",
+      "at": {
+        "x": 375,
+        "y": -518
+      },
+      "supportArtSlotId": "lc_captain_crate",
+      "semanticContext": "船长的箱子里，藏着一枚小指南针。",
+      "clue": "船长的箱子里，藏着一枚小指南针。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      },
+      "visibleCondition": {
+        "objectId": "parcel_chest",
+        "state": "opened"
+      }
+    },
+    {
+      "id": "boat_rope",
+      "label": "船绳",
+      "at": {
+        "x": -405,
+        "y": -494
+      },
+      "supportArtSlotId": "lc_dock_rope_goods",
+      "semanticContext": "河边的货箱上，找一圈船绳。",
+      "clue": "河边的货箱上，找一圈船绳。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      }
+    },
+    {
+      "id": "fishing_float",
+      "label": "鱼漂",
+      "at": {
+        "x": -315,
+        "y": 393
+      },
+      "supportArtSlotId": "lc_quay_handcart",
+      "semanticContext": "搬货推车里，有个红白色的小鱼漂。",
+      "clue": "搬货推车里，有个红白色的小鱼漂。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      }
+    },
+    {
+      "id": "blue_mug",
+      "label": "蓝杯子",
+      "at": {
+        "x": 365,
+        "y": 162
+      },
+      "supportArtSlotId": "lc_harbor_tea_table",
+      "semanticContext": "露天茶桌上，找一只蓝色小杯子。",
+      "clue": "露天茶桌上，找一只蓝色小杯子。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      }
+    },
+    {
+      "id": "harbor_ticket",
+      "label": "船票",
+      "at": {
+        "x": -291,
+        "y": 492
+      },
+      "supportArtSlotId": "lc_ferry_house",
+      "semanticContext": "候船小屋的窗口，留着一张小船票。",
+      "clue": "候船小屋的窗口，留着一张小船票。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      }
+    },
+    {
+      "id": "brass_bell",
+      "label": "手摇铃",
+      "at": {
+        "x": 490,
+        "y": 500
+      },
+      "supportArtSlotId": "lc_boathouse",
+      "semanticContext": "船屋门前，有个提醒开船的小铃铛。",
+      "clue": "船屋门前，有个提醒开船的小铃铛。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      }
+    },
+    {
+      "id": "starfish",
+      "label": "海星",
+      "at": {
+        "x": -320,
+        "y": -254
+      },
+      "supportArtSlotId": "lc_quay_flowers",
+      "semanticContext": "码头花叶下，还有一位五角的小客人。",
+      "clue": "码头花叶下，还有一位五角的小客人。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      },
+      "visibleCondition": {
+        "objectId": "flower_leaves",
+        "state": "opened"
+      }
+    },
+    {
+      "id": "lemon",
+      "label": "柠檬",
+      "at": {
+        "x": 315,
+        "y": -128
+      },
+      "supportArtSlotId": "lc_harbor_food_cart",
+      "semanticContext": "掀开点心车的盖子，找一颗柠檬。",
+      "clue": "掀开点心车的盖子，找一颗柠檬。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      },
+      "visibleCondition": {
+        "objectId": "bun_lid",
+        "state": "opened"
+      }
+    },
+    {
+      "id": "folded_map",
+      "label": "折叠地图",
+      "at": {
+        "x": -350,
+        "y": 149
+      },
+      "supportArtSlotId": "lc_harbor_bench",
+      "semanticContext": "候船长椅上，旅人忘记了自己的地图。",
+      "clue": "候船长椅上，旅人忘记了自己的地图。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      }
+    },
+    {
+      "id": "fish_charm",
+      "label": "小鱼挂饰",
+      "at": {
+        "x": 355,
+        "y": -709
+      },
+      "supportArtSlotId": "lc_harbor_pottery",
+      "semanticContext": "陶器架上，有一条不能游泳的小鱼。",
+      "clue": "陶器架上，有一条不能游泳的小鱼。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      }
+    },
+    {
+      "id": "bottle_message",
+      "label": "漂流瓶",
+      "at": {
+        "x": -385,
+        "y": -701
+      },
+      "supportArtSlotId": "lc_pier_crates",
+      "semanticContext": "南边码头的木箱旁，有封装在瓶里的信。",
+      "clue": "南边码头的木箱旁，有封装在瓶里的信。",
+      "clickRadiusWorld": 36,
+      "visualWorldSize": {
+        "width": 38,
+        "height": 36
+      }
+    }
+  ],
+  "interactiveSlots": [
+    {
+      "id": "parcel_chest",
+      "label": "打开船长箱",
+      "at": {
+        "x": 375,
+        "y": -530
+      },
+      "visualWorldSize": {
+        "width": 110,
+        "height": 100
+      },
+      "supportArtSlotId": "lc_captain_crate",
+      "depthY": -584
+    },
+    {
+      "id": "flower_leaves",
+      "label": "拨开码头花叶",
+      "at": {
+        "x": -320,
+        "y": -258
+      },
+      "visualWorldSize": {
+        "width": 105,
+        "height": 95
+      },
+      "supportArtSlotId": "lc_quay_flowers",
+      "depthY": -309.5
+    },
+    {
+      "id": "bun_lid",
+      "label": "掀开点心盖",
+      "at": {
+        "x": 315,
+        "y": -140
+      },
+      "visualWorldSize": {
+        "width": 90,
+        "height": 78
+      },
+      "supportArtSlotId": "lc_harbor_food_cart",
+      "depthY": -183
+    }
+  ],
+  "npcPlans": [
+    {
+      "id": "messenger_customer",
+      "role": "tea_customer",
+      "actorHeight": 120,
+      "footRadius": 18,
+      "route": [
+        {
+          "x": -120,
+          "y": -650
+        },
+        {
+          "x": -120,
+          "y": -180
+        },
+        {
+          "x": -150,
+          "y": 160
+        },
+        {
+          "x": -145,
+          "y": 520
+        },
+        {
+          "x": -120,
+          "y": 790
+        }
+      ],
+      "speedWorldUnitsPerSecond": 95,
+      "onWaypoint": {
+        "4": "tea_exchange"
+      },
+      "loop": false,
+      "pauseSecondsAtWaypoints": {
+        "1": 1.2,
+        "2": 1.6
+      }
+    },
+    {
+      "id": "tea_vendor",
+      "role": "vendor",
+      "actorHeight": 120,
+      "footRadius": 18,
+      "route": [
+        {
+          "x": 215,
+          "y": -230
+        }
+      ],
+      "idleActions": [
+        "look_at_passersby",
+        "arrange_cups"
+      ],
+      "eventAction": "tea_exchange",
+      "loop": false,
+      "speedWorldUnitsPerSecond": 58,
+      "pauseSecondsAtWaypoints": {
+        "1": 1.2,
+        "2": 1.6
+      }
+    },
+    {
+      "id": "crossing_shopper",
+      "role": "ambient_shopper",
+      "actorHeight": 118,
+      "footRadius": 18,
+      "route": [
+        {
+          "x": 110,
+          "y": -480
+        },
+        {
+          "x": 100,
+          "y": -120
+        },
+        {
+          "x": 110,
+          "y": 320
+        },
+        {
+          "x": 110,
+          "y": 680
+        },
+        {
+          "x": 100,
+          "y": 120
+        }
+      ],
+      "speedWorldUnitsPerSecond": 61,
+      "pauseSecondsAtWaypoints": {
+        "1": 1.2,
+        "2": 1.6
+      },
+      "loop": true
+    },
+    {
+      "id": "chestnut_seller",
+      "role": "ambient_vendor",
+      "actorHeight": 122,
+      "footRadius": 18,
+      "route": [
+        {
+          "x": 250,
+          "y": -490
+        }
+      ],
+      "idleActions": [
+        "tend_cart",
+        "short_pause"
+      ],
+      "loop": false,
+      "speedWorldUnitsPerSecond": 64,
+      "pauseSecondsAtWaypoints": {
+        "1": 1.2,
+        "2": 1.6
+      }
+    },
+    {
+      "id": "lantern_watcher",
+      "role": "ambient_watcher",
+      "actorHeight": 105,
+      "footRadius": 18,
+      "route": [
+        {
+          "x": 30,
+          "y": 510
+        }
+      ],
+      "idleActions": [
+        "look_up_at_banner",
+        "wave_at_passersby",
+        "short_pause"
+      ],
+      "loop": false,
+      "speedWorldUnitsPerSecond": 67,
+      "pauseSecondsAtWaypoints": {
+        "1": 1.2,
+        "2": 1.6
+      }
+    },
+    {
+      "id": "tea_regular",
+      "role": "tea_regular",
+      "actorHeight": 112,
+      "footRadius": 18,
+      "route": [
+        {
+          "x": -250,
+          "y": 40
+        },
+        {
+          "x": -200,
+          "y": 130
+        },
+        {
+          "x": -250,
+          "y": 40
+        }
+      ],
+      "speedWorldUnitsPerSecond": 70,
+      "pauseSecondsAtWaypoints": {
+        "1": 1.2,
+        "2": 1.6
+      },
+      "loop": true,
+      "idleActions": [
+        "sip_tea",
+        "watch_market"
+      ]
+    },
+    {
+      "id": "flower_buyer",
+      "role": "flower_buyer",
+      "actorHeight": 114,
+      "footRadius": 18,
+      "route": [
+        {
+          "x": -110,
+          "y": -590
+        },
+        {
+          "x": -100,
+          "y": -230
+        },
+        {
+          "x": -115,
+          "y": 200
+        },
+        {
+          "x": -100,
+          "y": -230
+        }
+      ],
+      "speedWorldUnitsPerSecond": 73,
+      "pauseSecondsAtWaypoints": {
+        "1": 1.2,
+        "2": 1.6
+      },
+      "loop": true,
+      "idleActions": [
+        "adjust_basket",
+        "look_at_flowers"
+      ]
+    },
+    {
+      "id": "lane_child",
+      "role": "lane_child",
+      "actorHeight": 103,
+      "footRadius": 16,
+      "route": [
+        {
+          "x": 40,
+          "y": -180
+        },
+        {
+          "x": 30,
+          "y": 160
+        },
+        {
+          "x": 60,
+          "y": 410
+        },
+        {
+          "x": 40,
+          "y": 170
+        }
+      ],
+      "speedWorldUnitsPerSecond": 76,
+      "pauseSecondsAtWaypoints": {
+        "1": 1.2,
+        "2": 1.6
+      },
+      "loop": true,
+      "idleActions": [
+        "skip",
+        "look_up"
+      ]
+    }
+  ],
+  "npcClues": {
+    "tea_vendor": "船票落在候船小屋，\n别误了下一班小船。",
+    "flower_buyer": "叶子下面有一颗海星，\n它正在这里歇脚。",
+    "lantern_watcher": "长椅上留着一张地图，\n河流弯弯很好认。",
+    "chestnut_seller": "我把指南针放进箱子里了，\n开盖看看就能找到。"
+  },
+  "sceneEvents": [],
+  "walkableRegions": [
+    {
+      "id": "main_lane",
+      "access": "public",
+      "polygon": [
+        [
+          -170,
+          -960
+        ],
+        [
+          170,
+          -960
+        ],
+        [
+          170,
+          960
+        ],
+        [
+          -170,
+          960
+        ]
+      ]
+    }
+  ],
+  "physicalFootprints": [],
+  "standingSpots": []
+}

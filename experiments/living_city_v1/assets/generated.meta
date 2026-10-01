@@ -1,0 +1,13 @@
+{
+  "ver": "1.2.0",
+  "importer": "directory",
+  "imported": true,
+  "uuid": "33fcc22d-2900-4c90-a621-7fb48ec7fb42",
+  "files": [],
+  "subMetas": {},
+  "userData": {
+    "isBundle": true,
+    "bundleName": "generated_art_v4",
+    "priority": 8
+  }
+}

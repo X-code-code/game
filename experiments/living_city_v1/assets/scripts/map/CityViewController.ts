@@ -11,6 +11,7 @@ export class CityViewController {
     private readonly viewport: CityViewport;
     private mouseDragging = false;
     private lastMouse: PointerPosition | null = null;
+    private bottomInset = 0;
 
     public constructor(private readonly viewNode: Node, private readonly mapNode: Node, minZoom = 1, maxZoom = 3,
         initialZoom = minZoom, private readonly isBlocked?: (uiX: number, uiY: number) => boolean) {
@@ -48,6 +49,13 @@ export class CityViewController {
     public focusAt(mapX: number, mapY: number): void {
         this.cancelGestures();
         this.viewport.focusAt(mapX, mapY);
+        this.applyState();
+    }
+
+    public setBottomInset(inset: number): void {
+        if (this.bottomInset === inset) return;
+        this.bottomInset = inset;
+        this.viewport.setBottomInset(inset);
         this.applyState();
     }
 

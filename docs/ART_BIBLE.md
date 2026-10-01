@@ -1,5 +1,7 @@
 # 鸡仔城市探索视觉规范（定向试产）
 
+> **2026-10-01 当前规则：** 游戏美术全部使用内置图像生成制作，最终 PNG 保存到主线 `assets/generated/`；禁止代码绘图重画建筑、角色和场景物。当前规格与验收见 [AI 生图流程](../experiments/living_city_v1/docs/AI_ART_PIPELINE.md)。本文较早风格、分层绘制和 Web 等待流程仅为历史记录，不覆盖最新用户授权。
+
 **状态：用户已选定画风方向，鸡母版与城市样张尚未获批。** 风格参考为用户提供的 [chicken_cast_style_guide_v1.png](../art/reference/chicken_cast_style_guide_v1.png)。它确定绘画语言，不表示直接复制图中任一角色、服装或八人排版。工作标识仍为 `styleId: chicken_trip_v1`；正式角色比例与生产参数须由新母版和手机缩图小样确认。
 
 ## 视觉世界

@@ -1,0 +1,2361 @@
+{
+  "batchId": "clean_cartoon_v3",
+  "styleId": "chicken_clean_cartoon_v3",
+  "status": "trial_unapproved",
+  "editableSource": "art/production/clean_cartoon_v3/render_clean.py",
+  "sourceDependencies": [
+    "art/production/simple_city_scene_v1/render_scene.py",
+    "art/production/simple_hidden_objects_v1/render_targets.py",
+    "art/production/refined_city_v2/render_refined.py",
+    "art/production/simple_chicken_v1/render_courier.py"
+  ],
+  "conceptReference": "lc_clean_cartoon_direction_v3_source.png",
+  "assets": [
+    {
+      "id": "lc_ground_paving",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_ground_paving.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_ground_paving.png",
+      "size": [
+        1536,
+        2048
+      ],
+      "sha256": "8e848651431037690a099639bd9a8a1123856fc212c66768760cd6174030b52c",
+      "authoringBrief": "Continuous ground and shopfront paving; 416-unit north-south traffic lane and 190-unit cross lane sit inside walkable sidewalks. No baked characters, stalls or trees. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          1536,
+          2048
+        ],
+        "spriteFrame": "simple2d_scene/lc_ground_paving/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_west_storefront_back",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_west_storefront_back.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_west_storefront_back.png",
+      "size": [
+        420,
+        520
+      ],
+      "sha256": "5e14f9cae18b0864386b458e3ec71a432f7da30355bd058a307076471f687b8d",
+      "authoringBrief": "Northwest shop roof and facade; leaves the tea service spur clear. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          420,
+          520
+        ],
+        "spriteFrame": "simple2d_scene/lc_west_storefront_back/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_east_storefront_back",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_east_storefront_back.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_east_storefront_back.png",
+      "size": [
+        406,
+        560
+      ],
+      "sha256": "4a7e53843a8b95b6bed325013fac8e9b55a3627ed6652d3f413e54e0bd3987b9",
+      "authoringBrief": "Northeast shop roof and facade, connected visually to cross lane. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          406,
+          560
+        ],
+        "spriteFrame": "simple2d_scene/lc_east_storefront_back/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_west_tailor_back",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_west_tailor_back.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_west_tailor_back.png",
+      "size": [
+        424,
+        580
+      ],
+      "sha256": "fefc0f06436acaa91095f024c555a1726766b802b9a956118d7a670ccfdd4b32",
+      "authoringBrief": "Southwest tailor shop; upper shelves behind the street details. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          424,
+          580
+        ],
+        "spriteFrame": "simple2d_scene/lc_west_tailor_back/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_east_food_shop_back",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_east_food_shop_back.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_east_food_shop_back.png",
+      "size": [
+        404,
+        580
+      ],
+      "sha256": "8784fa3425f8b7446ef9e9d020f04a9879b294ec319a2cff3512f8bcb4413500",
+      "authoringBrief": "Southeast food shop, distinct from the chestnut cart. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          404,
+          580
+        ],
+        "spriteFrame": "simple2d_scene/lc_east_food_shop_back/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_tea_stall_back",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_tea_stall_back.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tea_stall_back.png",
+      "size": [
+        265,
+        300
+      ],
+      "sha256": "361053685b3ec163ca883d0ba1140f82ef80b90b0d45d2d692431f5cb27713fb",
+      "authoringBrief": "Tea stall rear shelves and kettle behind vendor. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          265,
+          300
+        ],
+        "spriteFrame": "simple2d_scene/lc_tea_stall_back/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_tea_counter_front",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_tea_counter_front.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tea_counter_front.png",
+      "size": [
+        56,
+        171
+      ],
+      "sha256": "1e047eef7749cb55dcd3d2c68e5259adb1198eb84376649f1a6cb7bfd456e172",
+      "authoringBrief": "Narrow counter front; hides vendor lower body without covering customer foot. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          56,
+          171
+        ],
+        "spriteFrame": "simple2d_scene/lc_tea_counter_front/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_tea_patio_front",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_tea_patio_front.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tea_patio_front.png",
+      "size": [
+        160,
+        136
+      ],
+      "sha256": "3db618e79c255949c0fb2d60f0a8b81e95424a58f555d0777929ba022a7e8d78",
+      "authoringBrief": "A low tea table, two stools and used ceramics on the stall's west patio; outside cross-lane and customer spur. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          160,
+          136
+        ],
+        "spriteFrame": "simple2d_scene/lc_tea_patio_front/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_tea_awning_front",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_tea_awning_front.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tea_awning_front.png",
+      "size": [
+        280,
+        100
+      ],
+      "sha256": "5098d1b08198fbda72d1eb18e8842102e739f6d56cd8e8847ca0b3cdfcb6aafb",
+      "authoringBrief": "Separate overhead valance. Do not paint over the customer's face or the service pad. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          280,
+          100
+        ],
+        "spriteFrame": "simple2d_scene/lc_tea_awning_front/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_chestnut_cart_back",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_chestnut_cart_back.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_chestnut_cart_back.png",
+      "size": [
+        185,
+        205
+      ],
+      "sha256": "72aa25ae243101c465348d1c45c757d34d03eef084a3d89ed5a0408d3bc46d4d",
+      "authoringBrief": "Street-edge chestnut cart body and tray, on the apron between the narrower traffic lane and southeast shop. The seller stands on the open lane beside it. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          185,
+          205
+        ],
+        "spriteFrame": "simple2d_scene/lc_chestnut_cart_back/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_chestnut_cart_front",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_chestnut_cart_front.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_chestnut_cart_front.png",
+      "size": [
+        185,
+        110
+      ],
+      "sha256": "fbafd131d3472a0a07b84863c311cbd148f3ee57f2b6433895f17e405249d270",
+      "authoringBrief": "Near lip and visible near-side wheels; no duplicate wheels on the cart back layer. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          185,
+          110
+        ],
+        "spriteFrame": "simple2d_scene/lc_chestnut_cart_front/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_tree_front",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_tree_front.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tree_front.png",
+      "size": [
+        205,
+        290
+      ],
+      "sha256": "a5b72a59fd4e0ad8145e3bbd7a8c5b9dafa846a86f84c1457e524d4f82b4cf13",
+      "authoringBrief": "Tree trunk and separated branches at west crossing; root stays out of the public lane. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          205,
+          290
+        ],
+        "spriteFrame": "simple2d_scene/lc_tree_front/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_planter_front",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_planter_front.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_planter_front.png",
+      "size": [
+        105,
+        115
+      ],
+      "sha256": "4ced236546a0c6e7f20a3cb58c8f8852e5d6fd7c3a818d323cfc36c62fba7cc1",
+      "authoringBrief": "Small street-edge planter, limited collision footprint. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          105,
+          115
+        ],
+        "spriteFrame": "simple2d_scene/lc_planter_front/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_bench_front",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_bench_front.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_bench_front.png",
+      "size": [
+        190,
+        95
+      ],
+      "sha256": "3744e3eae649508addb7eea95947f9743610fbbf04f19f7df4109e170755788d",
+      "authoringBrief": "Bench outside the cross-lane walking polygon. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          190,
+          95
+        ],
+        "spriteFrame": "simple2d_scene/lc_bench_front/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_curb_flower_display",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_curb_flower_display.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_curb_flower_display.png",
+      "size": [
+        128,
+        132
+      ],
+      "sha256": "39a584e8b94728b0dc22e96f922fb350555d5de5d22ae29ee6edcfec5b735cee",
+      "authoringBrief": "Grouped cut flowers, leaf pots and a low crate on the west curb, outside the main walking lane. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          128,
+          132
+        ],
+        "spriteFrame": "simple2d_scene/lc_curb_flower_display/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_tailor_goods",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_tailor_goods.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tailor_goods.png",
+      "size": [
+        145,
+        125
+      ],
+      "sha256": "126d456ed7e928aa688a7cb6463b4d4ea91c610f62614452af10149cd365a34b",
+      "authoringBrief": "Fabric, buttons and sewing tray; supports thimble search target. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          145,
+          125
+        ],
+        "spriteFrame": "simple2d_scene/lc_tailor_goods/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_tailor_work_rack",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_tailor_work_rack.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tailor_work_rack.png",
+      "size": [
+        110,
+        150
+      ],
+      "sha256": "dd9c67e2607d01a1652a52a56901b105f71b55d1e55d4b8f7c0b8fb090df3cf0",
+      "authoringBrief": "Tailor work rack with folded bolts, swatches and an open work basket, west of existing crates. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          110,
+          150
+        ],
+        "spriteFrame": "simple2d_scene/lc_tailor_work_rack/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_crates_front",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_crates_front.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_crates_front.png",
+      "size": [
+        105,
+        96
+      ],
+      "sha256": "e12edbd3d19548713730ce7c50dffc9395e16a658446a2536fdaad9267b1b304",
+      "authoringBrief": "Small stack next to tailor wall, off the messenger route. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          105,
+          96
+        ],
+        "spriteFrame": "simple2d_scene/lc_crates_front/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_shop_goods_east",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_shop_goods_east.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_shop_goods_east.png",
+      "size": [
+        165,
+        150
+      ],
+      "sha256": "9d1d4f6e9a24c81095df1e5af79c6319bf76350975f4491fd26a5ab8dbd1e98f",
+      "authoringBrief": "East shop goods for scale and search density. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          165,
+          150
+        ],
+        "spriteFrame": "simple2d_scene/lc_shop_goods_east/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_curb_pottery_west",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_curb_pottery_west.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_curb_pottery_west.png",
+      "size": [
+        90,
+        110
+      ],
+      "sha256": "c68e797e08dfe616b827b44b59043fc5d1ba590d7e670a87e17772578248cb2a",
+      "authoringBrief": "Small grouped pots at the west curb, outside the courier path. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          90,
+          110
+        ],
+        "spriteFrame": "simple2d_scene/lc_curb_pottery_west/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_curb_produce_east",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_curb_produce_east.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_curb_produce_east.png",
+      "size": [
+        112,
+        130
+      ],
+      "sha256": "8cc86e0c16afdcd5916a01ff9d1b47215e6e9f50aca20be24ba74940f6afe3fc",
+      "authoringBrief": "Produce baskets along the east curb, outside the shopper path. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          112,
+          130
+        ],
+        "spriteFrame": "simple2d_scene/lc_curb_produce_east/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_wayfinding_sign",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_wayfinding_sign.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_wayfinding_sign.png",
+      "size": [
+        78,
+        145
+      ],
+      "sha256": "b95b13af30e29248379057691c428cfabb2a7663bc86b594c6092f9d63f88e5a",
+      "authoringBrief": "Narrow post at the cross street edge; no text is needed in greybox. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          78,
+          145
+        ],
+        "spriteFrame": "simple2d_scene/lc_wayfinding_sign/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_lantern_post_front",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_lantern_post_front.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_lantern_post_front.png",
+      "size": [
+        105,
+        265
+      ],
+      "sha256": "a159809e0c56c9fc2ae478c2382791135938aeb1efa712ffbd2c0a55023f2d89",
+      "authoringBrief": "Independent post/lantern with stable ground contact. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          105,
+          265
+        ],
+        "spriteFrame": "simple2d_scene/lc_lantern_post_front/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_street_banner_front",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_street_banner_front.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_street_banner_front.png",
+      "size": [
+        500,
+        80
+      ],
+      "sha256": "9b993482b8713904c98027a83146cb83afe89334cded2f9f341e17d3895a03e4",
+      "authoringBrief": "Narrow hanging banner over the lane; support for one hidden knot. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          500,
+          80
+        ],
+        "spriteFrame": "simple2d_scene/lc_street_banner_front/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_crossing_pennants",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_crossing_pennants.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_crossing_pennants.png",
+      "size": [
+        455,
+        55
+      ],
+      "sha256": "8ff85338ee0978f36ec7502a3266c5dccc8b82529f1f4b7bc764b763f96c7e3f",
+      "authoringBrief": "Overhead string of separate pennants; small sway can be authored later. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          455,
+          55
+        ],
+        "spriteFrame": "simple2d_scene/lc_crossing_pennants/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_tea_steam_fx",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_tea_steam_fx.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tea_steam_fx.png",
+      "size": [
+        65,
+        95
+      ],
+      "sha256": "6581d513f354fe19d9a11d8dc37d3a02879f365e89443fcaca311e77cb1b25bd",
+      "authoringBrief": "Small loop from kettle spout; effect anchor is fixed to stall. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          65,
+          95
+        ],
+        "spriteFrame": "simple2d_scene/lc_tea_steam_fx/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_north_herb_stand",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_north_herb_stand.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_north_herb_stand.png",
+      "size": [
+        145,
+        190
+      ],
+      "sha256": "054fef992ca61b46b0665bb8847be92c1d0f0fffbf50c333576a569432e01664",
+      "authoringBrief": "Herb grower's narrow work stand joins the northwest shop to the tea district; small pots, drying leaves and a basket, with its feet clear of the courier exit route. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          145,
+          190
+        ],
+        "spriteFrame": "simple2d_scene/lc_north_herb_stand/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_east_bun_cart_back",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_east_bun_cart_back.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_east_bun_cart_back.png",
+      "size": [
+        150,
+        195
+      ],
+      "sha256": "4fd8392b5da6a6722a6bc632108e118797b8bf1c1189744317344b89c387cb8a",
+      "authoringBrief": "A warm food pushcart partly facing the main street: canopy, steamer, stacked bowls and kettle behind pedestrians, without a task-like marker. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          150,
+          195
+        ],
+        "spriteFrame": "simple2d_scene/lc_east_bun_cart_back/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_east_bun_cart_front",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_east_bun_cart_front.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_east_bun_cart_front.png",
+      "size": [
+        150,
+        70
+      ],
+      "sha256": "6177ca3ddad53cecf48c55ca32e987730601626a24440be9e496e6fd5bf5d413",
+      "authoringBrief": "Low apron, wheel and counter lip of the bun cart; a separate occluder below the cart work surface. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          150,
+          70
+        ],
+        "spriteFrame": "simple2d_scene/lc_east_bun_cart_front/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_west_market_handcart",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_west_market_handcart.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_west_market_handcart.png",
+      "size": [
+        155,
+        110
+      ],
+      "sha256": "d3d3e79eede0478becb9803f2d8d710426efb88f078ab5e9244ba79fa0296009",
+      "authoringBrief": "Used market handcart in the west cross lane, carrying tied produce sacks and an empty crate between the tea patio and the bench. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          155,
+          110
+        ],
+        "spriteFrame": "simple2d_scene/lc_west_market_handcart/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_street_water_station",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_street_water_station.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_street_water_station.png",
+      "size": [
+        105,
+        165
+      ],
+      "sha256": "527ae6665abfb48994e23696fa70be5f577ae9ce9cc31b5ad997de967b50c6e2",
+      "authoringBrief": "Public chicken drinking point: low glazed basin, feed scoop, folded cloth and slim timber stand, beside rather than on NPC routes. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          105,
+          165
+        ],
+        "spriteFrame": "simple2d_scene/lc_street_water_station/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_south_post_house_back",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_south_post_house_back.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_south_post_house_back.png",
+      "size": [
+        416,
+        320
+      ],
+      "sha256": "876c1ae683d27ce763d16824e66f15b8fb128769a27e256dfe772359eafe594b",
+      "authoringBrief": "Southern west post house joins the tailor row: blue slate hip roof, parcel sorting window and arched door, with no sign text or object-like target. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          416,
+          320
+        ],
+        "spriteFrame": "simple2d_scene/lc_south_post_house_back/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_south_grain_house_back",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_south_grain_house_back.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_south_grain_house_back.png",
+      "size": [
+        404,
+        320
+      ],
+      "sha256": "b6d05b7094258de61ec34f6712b221e355120ba232afc98f853c4f5e2d9fddc5",
+      "authoringBrief": "Southern east grain house joins the food shop row: warm tile roof, broad service arch and grain baskets, leaving the main street open. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          404,
+          320
+        ],
+        "spriteFrame": "simple2d_scene/lc_south_grain_house_back/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_east_pottery_annex_back",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_east_pottery_annex_back.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_east_pottery_annex_back.png",
+      "size": [
+        200,
+        210
+      ],
+      "sha256": "72079f59f9bed28739e635b9ddf65453f1f297f8facfbde6e6fce33e94a4f180",
+      "authoringBrief": "A small roofed pottery annex attached below the northeast shop; the existing pot display remains its independent front depth layer. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          200,
+          210
+        ],
+        "spriteFrame": "simple2d_scene/lc_east_pottery_annex_back/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_tea_delivery_nook",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_tea_delivery_nook.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tea_delivery_nook.png",
+      "size": [
+        105,
+        98
+      ],
+      "sha256": "d21e4214cb7425d6ca5f2f7cdbd087fbf2e5988d396731b5f15f21bdfc9a3a3d",
+      "authoringBrief": "Tea stall's refill baskets and used-cup crate form a small working nook at the west street corner, outside the tea regular's loop and the public cross-lane. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          105,
+          98
+        ],
+        "spriteFrame": "simple2d_scene/lc_tea_delivery_nook/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_tailor_delivery_stool",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_tailor_delivery_stool.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tailor_delivery_stool.png",
+      "size": [
+        92,
+        88
+      ],
+      "sha256": "4da5bdf014e1132c2530c1fb6f7b3fe1932b6d2cfadebb53481cf8bb33d3065a",
+      "authoringBrief": "A low tailor's delivery stool carries folded fabric and a tied bundle by the shop threshold; no task-like loose objects. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          92,
+          88
+        ],
+        "spriteFrame": "simple2d_scene/lc_tailor_delivery_stool/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_tea_whistle_foreground",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_tea_whistle_foreground.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tea_whistle_foreground.png",
+      "size": [
+        48,
+        42
+      ],
+      "sha256": "e0976a77e324955db6239dbcfd2b0239b8fff8cebf0e52116246aea7444d7b69",
+      "authoringBrief": "Thin tea-cup rim and saucer edge over the clay whistle's lower contour, with most of the item still visible and hit testing independent. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          48,
+          42
+        ],
+        "spriteFrame": "simple2d_scene/lc_tea_whistle_foreground/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_tailor_thimble_foreground",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_tailor_thimble_foreground.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tailor_thimble_foreground.png",
+      "size": [
+        44,
+        40
+      ],
+      "sha256": "d3bba339dce9173f1952cf23168776f0a79e953e930b94166624291440589fe2",
+      "authoringBrief": "Short sewing-tray lip and nearby thread edge crossing only the thimble's base. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          44,
+          40
+        ],
+        "spriteFrame": "simple2d_scene/lc_tailor_thimble_foreground/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_banner_knot_foreground",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_banner_knot_foreground.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_banner_knot_foreground.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "34e4ad424f63412cbabe66a8c5608f94a8e5c250e67334397e9c3408b9dc784e",
+      "authoringBrief": "A narrow banner fold overlapping one low knot tail but leaving knot loops and center clear. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          48,
+          48
+        ],
+        "spriteFrame": "simple2d_scene/lc_banner_knot_foreground/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_chestnut_tongs_foreground",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_chestnut_tongs_foreground.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_chestnut_tongs_foreground.png",
+      "size": [
+        56,
+        50
+      ],
+      "sha256": "c077884f729d62cf82c88fc3d67286ed613cc54935cac32e358731fd8395b18c",
+      "authoringBrief": "Folded packet edge and one chestnut partly over the tongs' lower handle, without hiding their prongs. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          56,
+          50
+        ],
+        "spriteFrame": "simple2d_scene/lc_chestnut_tongs_foreground/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_tea_flower_vine",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_tea_flower_vine.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tea_flower_vine.png",
+      "size": [
+        94,
+        230
+      ],
+      "sha256": "edf3fc6aad3b24777bfefe5af7bf33f193a700124f7c6a6d4a5e91313774c4f5",
+      "authoringBrief": "Independent potted bamboo and broad doorway leaves; registered to the retained planting slot. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          94,
+          230
+        ],
+        "spriteFrame": "simple2d_scene/lc_tea_flower_vine/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_tailor_flower_vine",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_tailor_flower_vine.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tailor_flower_vine.png",
+      "size": [
+        92,
+        265
+      ],
+      "sha256": "f128d87b0e64dfb86333471a21407da053ecef492ef38d9d033ecbd867173a17",
+      "authoringBrief": "Independent potted bamboo and broad doorway leaves; registered to the retained planting slot. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          92,
+          265
+        ],
+        "spriteFrame": "simple2d_scene/lc_tailor_flower_vine/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_east_flower_vine",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_east_flower_vine.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_east_flower_vine.png",
+      "size": [
+        98,
+        300
+      ],
+      "sha256": "edde8e7cd04cbad1a200a62dc55f09ea0a6b539d5b76835737b0ff3c9bb8d4b5",
+      "authoringBrief": "Independent potted bamboo and broad doorway leaves; registered to the retained planting slot. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          98,
+          300
+        ],
+        "spriteFrame": "simple2d_scene/lc_east_flower_vine/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "lc_post_flower_vine",
+      "source": "art/production/clean_cartoon_v3/png/simple2d_scene/lc_post_flower_vine.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_post_flower_vine.png",
+      "size": [
+        94,
+        245
+      ],
+      "sha256": "7082fbeff8942adbfba96a6acea357077d8bd4bcb7b20ec1526ef87f11907bc2",
+      "authoringBrief": "Independent potted bamboo and broad doorway leaves; registered to the retained planting slot. Clean cartoon geometry revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          94,
+          245
+        ],
+        "spriteFrame": "simple2d_scene/lc_post_flower_vine/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "tea_clay_whistle",
+      "source": "art/production/clean_cartoon_v3/png/targets/tea_clay_whistle.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/tea_clay_whistle.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "4c0f1d9e76330d0f5c6ec043a31d4d46611a6728c7902591e5d6565333dfb9e2",
+      "authoringBrief": "茶摊的杯盏附近; clean flat cartoon color revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/tea_clay_whistle/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "tailor_thimble",
+      "source": "art/production/clean_cartoon_v3/png/targets/tailor_thimble.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/tailor_thimble.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "7aa868fd2956ba28a31a7d9fd15aa1adba8468e14251276aeb13257d807a4142",
+      "authoringBrief": "裁缝铺的针线盘里; clean flat cartoon color revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/tailor_thimble/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "banner_knot",
+      "source": "art/production/clean_cartoon_v3/png/targets/banner_knot.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/banner_knot.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "089e33581ed85006b83e8c9997ef02b7ba6ca8cf3457c8f8ee7e8ef652420cab",
+      "authoringBrief": "抬头看看街口的横幅; clean flat cartoon color revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/banner_knot/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "chestnut_tongs",
+      "source": "art/production/clean_cartoon_v3/png/targets/chestnut_tongs.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/chestnut_tongs.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "759dbd7493f2109686a9287aa95b5ca41e571cf556c10e43d22ab36c6b041e25",
+      "authoringBrief": "栗子车上的纸包旁; clean flat cartoon color revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/chestnut_tongs/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "pocket_watch",
+      "source": "art/production/clean_cartoon_v3/png/targets/pocket_watch.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/pocket_watch.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "d3162be84988c4480c0d109a85dbb0b7eec120cb661ae4b9f588635b5db2d8cb",
+      "authoringBrief": "茶桌上，有位茶客忘了时间; clean flat cartoon color revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/pocket_watch/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "sewing_scissors",
+      "source": "art/production/clean_cartoon_v3/png/targets/sewing_scissors.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/sewing_scissors.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "3bcfdeaead5aef5996a4c385595d6e1b57e1a0b01194174febe4f774d375487e",
+      "authoringBrief": "裁缝的布料工作架上; clean flat cartoon color revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/sewing_scissors/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "blue_feather",
+      "source": "art/production/clean_cartoon_v3/png/targets/blue_feather.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/blue_feather.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "2d6ed1b03eb376a47c90d382ce34828565c987a5e962f585d1f16359d4610d1d",
+      "authoringBrief": "长凳上有一片旅人的羽毛; clean flat cartoon color revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/blue_feather/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "sealed_letter",
+      "source": "art/production/clean_cartoon_v3/png/targets/sealed_letter.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/sealed_letter.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "457cf9f09f2d3dc78c0a2b2ef900d28747300813b63be5910bcebc5fbdba0cac",
+      "authoringBrief": "南边邮舍的包裹箱，试着打开它; clean flat cartoon color revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/sealed_letter/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "honey_dipper",
+      "source": "art/production/clean_cartoon_v3/png/targets/honey_dipper.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/honey_dipper.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "42d0d6a3c3d70d58a724b69706d633ae904351ab5da226a0a0998dbe157f8abe",
+      "authoringBrief": "茶摊补给角的蜂蜜罐旁; clean flat cartoon color revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/honey_dipper/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "seed_packet",
+      "source": "art/production/clean_cartoon_v3/png/targets/seed_packet.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/seed_packet.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "ed215b3aa3ce374f9eaec5ce46d338c581735f4278f72c758063393ba00b2175",
+      "authoringBrief": "花架的叶子后，拨开看看; clean flat cartoon color revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/seed_packet/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "orchard_apple",
+      "source": "art/production/clean_cartoon_v3/png/targets/orchard_apple.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/orchard_apple.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "126b3e522843636480c2296539eb43157132b8644aa76be96f3cd07bd0e30182",
+      "authoringBrief": "路边果蔬筐里的红果子; clean flat cartoon color revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/orchard_apple/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "golden_bun",
+      "source": "art/production/clean_cartoon_v3/png/targets/golden_bun.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/golden_bun.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "b06bf6f7c2997cd800ee205048bf0fa00f835154ef8405a8f0480e53021c6ffa",
+      "authoringBrief": "热食车的蒸笼，掀开盖布; clean flat cartoon color revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/golden_bun/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "parcel_chest_closed",
+      "source": "art/production/clean_cartoon_v3/png/interactions/parcel_chest_closed.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/interactions/parcel_chest_closed.png",
+      "size": [
+        100,
+        88
+      ],
+      "sha256": "c3cd31558c4a6c963be187a4217d99bdc5dde8ef9a3d23b4c35641185463f511",
+      "authoringBrief": "Registered 打开包裹箱 state; independent flat-color layer, target painted separately.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          100,
+          88
+        ],
+        "spriteFrame": "interactions/parcel_chest_closed/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "parcel_chest_opened",
+      "source": "art/production/clean_cartoon_v3/png/interactions/parcel_chest_opened.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/interactions/parcel_chest_opened.png",
+      "size": [
+        100,
+        88
+      ],
+      "sha256": "eb24fc09e4ae3ffe75669a4b3c147673688ec26ecaffbae1e97ab83406dfc7ee",
+      "authoringBrief": "Registered 打开包裹箱 state; independent flat-color layer, target painted separately.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          100,
+          88
+        ],
+        "spriteFrame": "interactions/parcel_chest_opened/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "flower_leaves_closed",
+      "source": "art/production/clean_cartoon_v3/png/interactions/flower_leaves_closed.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/interactions/flower_leaves_closed.png",
+      "size": [
+        76,
+        85
+      ],
+      "sha256": "fb0960f9b260726b3bf48c02d0984bf1e66c8d0ac663670bab0022d38af4a4f3",
+      "authoringBrief": "Registered 拨开花叶 state; independent flat-color layer, target painted separately.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          76,
+          85
+        ],
+        "spriteFrame": "interactions/flower_leaves_closed/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "flower_leaves_opened",
+      "source": "art/production/clean_cartoon_v3/png/interactions/flower_leaves_opened.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/interactions/flower_leaves_opened.png",
+      "size": [
+        76,
+        85
+      ],
+      "sha256": "b644e59dbd4242ccc41bc07890e5aa7caacf6c17bcfed986b99b44a94f22bcb3",
+      "authoringBrief": "Registered 拨开花叶 state; independent flat-color layer, target painted separately.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          76,
+          85
+        ],
+        "spriteFrame": "interactions/flower_leaves_opened/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "bun_lid_closed",
+      "source": "art/production/clean_cartoon_v3/png/interactions/bun_lid_closed.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/interactions/bun_lid_closed.png",
+      "size": [
+        76,
+        62
+      ],
+      "sha256": "81383e79ec1f0fd48a8870881828d1ce2c8c6bc7dc2398cf357cec28d7ffd43b",
+      "authoringBrief": "Registered 掀开盖布 state; independent flat-color layer, target painted separately.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          76,
+          62
+        ],
+        "spriteFrame": "interactions/bun_lid_closed/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "bun_lid_opened",
+      "source": "art/production/clean_cartoon_v3/png/interactions/bun_lid_opened.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/interactions/bun_lid_opened.png",
+      "size": [
+        76,
+        62
+      ],
+      "sha256": "f053e3d09c7fb51f79416bad4776d5568ce1ac6eb19f8851402d584808de0f30",
+      "authoringBrief": "Registered 掀开盖布 state; independent flat-color layer, target painted separately.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 3
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          76,
+          62
+        ],
+        "spriteFrame": "interactions/bun_lid_opened/spriteFrame"
+      },
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_walk_n_00",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_walk_n_00.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_walk_n_00.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "c327ac72a01aec4532058a1d7378b87a50922a9dbd43f898a0980059d9d13f55",
+      "authoringBrief": "Clean cartoon courier walk_n frame 0; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_walk_n_00/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_walk_n_00.svg",
+      "sourceSvgSha256": "f27f22583edfe72bdb1ce9cb114a3fd625a056f6964e78f296f2a6746b0dda32",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_walk_n_01",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_walk_n_01.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_walk_n_01.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "0f07d079557b637af4c66447fbcad8fd426e68f0bedde4555228ee870dd808ae",
+      "authoringBrief": "Clean cartoon courier walk_n frame 1; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_walk_n_01/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_walk_n_01.svg",
+      "sourceSvgSha256": "eb944608c88ef3c0e2b8e88653771c4d01490358db372de953318ec487486477",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_walk_n_02",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_walk_n_02.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_walk_n_02.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "d28ab2a80603eb6e54f08bff1d118dfd494fa012255aedf2e2af8ef43067448a",
+      "authoringBrief": "Clean cartoon courier walk_n frame 2; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_walk_n_02/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_walk_n_02.svg",
+      "sourceSvgSha256": "b9522c1429fdb75f4c66ef196aafceeff326495eee606584bc38565a42014969",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_walk_n_03",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_walk_n_03.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_walk_n_03.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "fae2f64aa2143894fb50811cd742afdcf1a97df77ec3e984020503bc3f0b26fa",
+      "authoringBrief": "Clean cartoon courier walk_n frame 3; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_walk_n_03/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_walk_n_03.svg",
+      "sourceSvgSha256": "933c3d066231b817971e8a3005c361f3c1a5f1e015f98309c9dd62ad929174be",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_walk_nw_00",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_walk_nw_00.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_walk_nw_00.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "142feb3d8966b11cf7b0693d08ff29ab0f3e21894d858246c97a547503761283",
+      "authoringBrief": "Clean cartoon courier walk_nw frame 0; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_walk_nw_00/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_walk_nw_00.svg",
+      "sourceSvgSha256": "594afb013d4982f6d68e933110bad58fc7658a3fad6f415f668443f1e31dc68c",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_walk_nw_01",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_walk_nw_01.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_walk_nw_01.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "0f95858558f096e6131dc418abcaff34d60e5e675f71987758063b28e42680be",
+      "authoringBrief": "Clean cartoon courier walk_nw frame 1; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_walk_nw_01/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_walk_nw_01.svg",
+      "sourceSvgSha256": "0624147242f3c9d16da5b4dae371ed853fc43a707fd932d4b9925f7f427e03ac",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_walk_nw_02",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_walk_nw_02.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_walk_nw_02.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "9d39dcf11e9f16b2c44611a1a31b15e340abe015cae90c5fdf233470ac81d0f6",
+      "authoringBrief": "Clean cartoon courier walk_nw frame 2; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_walk_nw_02/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_walk_nw_02.svg",
+      "sourceSvgSha256": "ce8023856991a4669513ba2a727970014bbcb15a71600e410168b52e19e32083",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_walk_nw_03",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_walk_nw_03.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_walk_nw_03.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "43b65484ce5a086c677ac2a0014e7509afe264b47cde28e6bd62f58b8577b968",
+      "authoringBrief": "Clean cartoon courier walk_nw frame 3; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_walk_nw_03/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_walk_nw_03.svg",
+      "sourceSvgSha256": "bd4992b7c79914ca58563f5e7bb407141e65b24d379dd05c793ec83dcfab43f2",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_walk_ne_00",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_walk_ne_00.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_walk_ne_00.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "a6a771da0e390e4bc8a16cd696d8853f823019a2028cc109a44870ef5c9a239b",
+      "authoringBrief": "Clean cartoon courier walk_ne frame 0; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_walk_ne_00/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_walk_ne_00.svg",
+      "sourceSvgSha256": "c3ca3231bf6b62e1eda6e4519c042cb017ee7179f3f49b09d683c05a1599db7c",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_walk_ne_01",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_walk_ne_01.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_walk_ne_01.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "a7dba835ca9a24f774a59e5972720ff1e19753ef16b494d82b71d7c2b9062b55",
+      "authoringBrief": "Clean cartoon courier walk_ne frame 1; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_walk_ne_01/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_walk_ne_01.svg",
+      "sourceSvgSha256": "98bcb1bc5c5396fae40dc1ac696c0c4ba36c3a8613f2d2c254ba00b9423e035a",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_walk_ne_02",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_walk_ne_02.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_walk_ne_02.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "1b6a655ed568bab26b39fc96f849e4b6ee8f340a94bdb4f5358d0daed1ddddab",
+      "authoringBrief": "Clean cartoon courier walk_ne frame 2; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_walk_ne_02/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_walk_ne_02.svg",
+      "sourceSvgSha256": "23b25e09bfd7e56ced46cbee8bb6b7ed657bcf7d0407d160b5f33e7a88862006",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_walk_ne_03",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_walk_ne_03.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_walk_ne_03.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "4c8e6f74986e7a31170f92e55293d222486372b02eed4572d6f8d2aeaac63796",
+      "authoringBrief": "Clean cartoon courier walk_ne frame 3; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_walk_ne_03/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_walk_ne_03.svg",
+      "sourceSvgSha256": "2900b7f88ea1258adaeae5b5dd2f8650163491d24faa97d080e2d4f66c3a647c",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_turn_nw_w_00",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_turn_nw_w_00.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_turn_nw_w_00.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "6d64b0c01a5db1c1fde45d7d706f7eabe01d4a225cd9765fb4c9cc54af42ded2",
+      "authoringBrief": "Clean cartoon courier turn_nw_w frame 0; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_turn_nw_w_00/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_turn_nw_w_00.svg",
+      "sourceSvgSha256": "d02e7ac2a43f060dd9620ff94b0bf2b4fbed5a97a3b32f0b86204b9409c95d5a",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_turn_nw_w_01",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_turn_nw_w_01.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_turn_nw_w_01.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "bebce4a8f868b9cea9676cd6d7b02100cc8588413a8413ecf86b04025a819ae5",
+      "authoringBrief": "Clean cartoon courier turn_nw_w frame 1; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_turn_nw_w_01/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_turn_nw_w_01.svg",
+      "sourceSvgSha256": "8c098e599aab9090f80636829a01ffc64659fc6d75c45dc1792f775f89841162",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_turn_nw_w_02",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_turn_nw_w_02.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_turn_nw_w_02.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "58164f1fd731e9149ddf13f681f49e9866528c69ee45e5e26316a56c195d9660",
+      "authoringBrief": "Clean cartoon courier turn_nw_w frame 2; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_turn_nw_w_02/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_turn_nw_w_02.svg",
+      "sourceSvgSha256": "a23b50e4e0e5dfea7721072bdcad7dee8ecfb44b008cd82c3a61d4616bb1bc12",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_idle_w_00",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_idle_w_00.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_idle_w_00.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "158d0c5b3f521878a1531486fbd3ff4731fc388f197c8b98bebbf09792ba6da5",
+      "authoringBrief": "Clean cartoon courier idle_w frame 0; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_idle_w_00/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_idle_w_00.svg",
+      "sourceSvgSha256": "46960b574b654957fadbbea234918a6170599c80cbf0db12028bf4bf8d51e131",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_idle_w_01",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_idle_w_01.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_idle_w_01.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "7a16597d5873fff291dd34a23652fdce4645a8e53508b3742dbdc9db6e040854",
+      "authoringBrief": "Clean cartoon courier idle_w frame 1; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_idle_w_01/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_idle_w_01.svg",
+      "sourceSvgSha256": "f77d28eeb40111bb1e5d5b266839267e1b59fc7b578e21ac7e39df9eefd5423d",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_idle_w_02",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_idle_w_02.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_idle_w_02.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "2591243ff3f37fc6a2a58f48fc10c7ac00145f2cf54c99d7df1f13874eca22f8",
+      "authoringBrief": "Clean cartoon courier idle_w frame 2; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_idle_w_02/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_idle_w_02.svg",
+      "sourceSvgSha256": "c9aeeab593254472d336ececccdb95db5531504c004b133a407428a587914db6",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_receive_w_00",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_receive_w_00.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_receive_w_00.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "c9ce9068799664fea9651de8c16875206fbe7d0e323d2b7753bc388c2d72cf60",
+      "authoringBrief": "Clean cartoon courier receive_w frame 0; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_receive_w_00/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_receive_w_00.svg",
+      "sourceSvgSha256": "755ec78770cde4e37b2e6ece8cf369189ac3335b62dc2f7af9b081866f836ec2",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_receive_w_01",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_receive_w_01.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_receive_w_01.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "b9bdaab7a11f29eda47f503c64e9c63b309be29424483c553543a5a7e1433da7",
+      "authoringBrief": "Clean cartoon courier receive_w frame 1; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_receive_w_01/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_receive_w_01.svg",
+      "sourceSvgSha256": "a8705448b6e140a94bf4e1bcecbcb1eaac3231fbdc6d35c7d37d5ba323eafacb",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_receive_w_02",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_receive_w_02.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_receive_w_02.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "0c471295761a96ac5f127a1870f551dcdf1f34419ae2f5c35ea8f18915c9c395",
+      "authoringBrief": "Clean cartoon courier receive_w frame 2; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_receive_w_02/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_receive_w_02.svg",
+      "sourceSvgSha256": "e54125db8dd449df45b176f864a4ba0cf5dcb349cfa5658502cf17c2f9f5183d",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_receive_w_03",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_receive_w_03.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_receive_w_03.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "34f88e7cb1438354a8652b723c5fc072e89f7ef21af921ee0f72f6a7238e7367",
+      "authoringBrief": "Clean cartoon courier receive_w frame 3; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_receive_w_03/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_receive_w_03.svg",
+      "sourceSvgSha256": "8a7d536c5a7a983d72fb716db8d37a43d06accdca2870d95b8e5a0ddb0071e81",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_receive_w_04",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_receive_w_04.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_receive_w_04.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "2c626209343f96abefbf81b36871f5cd601e029898214841e4014c54b8aa0a8b",
+      "authoringBrief": "Clean cartoon courier receive_w frame 4; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_receive_w_04/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_receive_w_04.svg",
+      "sourceSvgSha256": "b21251023acb19be3c804266a2f9bc96e0ead63ebb36e665b49c710c3d3844aa",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_turn_w_ne_00",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_turn_w_ne_00.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_turn_w_ne_00.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "db93206b9e16add3157b2b0cf839b0b14729196adaa1ef6eb77c86ed650cba5f",
+      "authoringBrief": "Clean cartoon courier turn_w_ne frame 0; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_turn_w_ne_00/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_turn_w_ne_00.svg",
+      "sourceSvgSha256": "5bad31ad02471a417b9475c00ab43e7fcd0d47118f6b5f69678565a78162ae5c",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_turn_w_ne_01",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_turn_w_ne_01.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_turn_w_ne_01.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "dc09f3ccb12deac2cbae4af03f1e2f065db10f52c066fb1c354c849da0fdc677",
+      "authoringBrief": "Clean cartoon courier turn_w_ne frame 1; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_turn_w_ne_01/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_turn_w_ne_01.svg",
+      "sourceSvgSha256": "38a4291a403f4bb927fb6998ca0820542c9317a21d8a6ce967959b006fc73277",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_turn_w_ne_02",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_turn_w_ne_02.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_turn_w_ne_02.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "9444abec4526830fe52d92df6adb8319c92c0b3b220223c5baccf5e95e6f4973",
+      "authoringBrief": "Clean cartoon courier turn_w_ne frame 2; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_turn_w_ne_02/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_turn_w_ne_02.svg",
+      "sourceSvgSha256": "712dd1b231aad8604ffa733779986f6e5544a529cffbfd42701c1d142c4d93c9",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_idle_ne_00",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_idle_ne_00.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_idle_ne_00.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "1d4df05dfd8b9b887c9a1a2c86f8442658f14a376fdd7c13f0273daa0adeff1a",
+      "authoringBrief": "Clean cartoon courier idle_ne frame 0; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_idle_ne_00/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_idle_ne_00.svg",
+      "sourceSvgSha256": "9bd600c88ed6b0eee43c3e47a502bfb0d048368555875a1fda99c0dedcc42d2b",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_idle_ne_01",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_idle_ne_01.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_idle_ne_01.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "bcd1a290ca73f18709827806578c85acb1eddfc1783b8f2c869e817a0692b75c",
+      "authoringBrief": "Clean cartoon courier idle_ne frame 1; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_idle_ne_01/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_idle_ne_01.svg",
+      "sourceSvgSha256": "8c4f930ebca0e6c70087bc2269b5b2f85b8624e9934a9940d935dbbbbe606b23",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    },
+    {
+      "id": "courier_idle_ne_02",
+      "source": "art/production/clean_cartoon_v3/png/cels/messenger_customer/courier_idle_ne_02.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer/courier_idle_ne_02.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "848684dc81d4b99e0f7ac961d0d9b456cd538e65ef5457ebeabdb0e65e60674b",
+      "authoringBrief": "Clean cartoon courier idle_ne frame 2; shared footpoint 128,215; continuous authored action.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored geometry",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          256,
+          256
+        ],
+        "spriteFrame": "cels/messenger_customer/courier_idle_ne_02/spriteFrame"
+      },
+      "sourceSvg": "art/production/clean_cartoon_v3/svg_source/courier_idle_ne_02.svg",
+      "sourceSvgSha256": "713f1e1bd85042f2bd64ca04c1272a2012de33feaf60b4e595bad74699589dde",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json"
+    }
+  ],
+  "processing": [
+    "3x scene and interaction states/4x props and cels authored geometry",
+    "Lanczos to explicit final canvas",
+    "lossless PNG",
+    "Cocos metadata refresh preserving UUID",
+    "no reference screenshot pixels"
+  ],
+  "review": {
+    "runtime": "passed_web_mobile",
+    "phone": "not_run",
+    "playerApproval": "pending",
+    "runtimeEvidence": "art/review/clean_cartoon_v3/runtime_report.json"
+  }
+}

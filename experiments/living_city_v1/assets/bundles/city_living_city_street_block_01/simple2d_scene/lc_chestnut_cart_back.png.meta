@@ -9,44 +9,51 @@
   ],
   "subMetas": {
     "6c48a": {
+      "ver": "1.0.22",
       "importer": "texture",
+      "imported": true,
       "uuid": "922144b0-153e-4c2a-9ea4-8d309a9e494e@6c48a",
       "displayName": "lc_chestnut_cart_back",
       "id": "6c48a",
       "name": "texture",
-      "userData": {
-        "wrapModeS": "clamp-to-edge",
-        "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "922144b0-153e-4c2a-9ea4-8d309a9e494e",
-        "isUuid": true,
-        "visible": false,
-        "minfilter": "linear",
-        "magfilter": "linear",
-        "mipfilter": "none",
-        "anisotropy": 0
-      },
-      "ver": "1.0.22",
-      "imported": true,
       "files": [
         ".json"
       ],
-      "subMetas": {}
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "imageUuidOrDatabaseUri": "922144b0-153e-4c2a-9ea4-8d309a9e494e",
+        "isUuid": true,
+        "visible": false
+      }
     },
     "f9941": {
+      "ver": "1.0.12",
       "importer": "sprite-frame",
+      "imported": true,
       "uuid": "922144b0-153e-4c2a-9ea4-8d309a9e494e@f9941",
       "displayName": "lc_chestnut_cart_back",
       "id": "f9941",
       "name": "spriteFrame",
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
       "userData": {
+        "trimType": "custom",
         "trimThreshold": 1,
         "rotated": false,
-        "offsetX": 3.5,
-        "offsetY": -15,
-        "trimX": 14,
-        "trimY": 34,
-        "width": 164,
-        "height": 167,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 185,
+        "height": 205,
         "rawWidth": 185,
         "rawHeight": 205,
         "borderTop": 0,
@@ -58,19 +65,52 @@
         "pivotX": 0.5,
         "pivotY": 0.5,
         "meshType": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "922144b0-153e-4c2a-9ea4-8d309a9e494e@6c48a",
+        "atlasUuid": "",
         "vertices": {
           "rawPosition": [
-            -82,
-            -83.5,
+            -92.5,
+            -102.5,
             0,
-            82,
-            -83.5,
+            92.5,
+            -102.5,
             0,
-            -82,
-            83.5,
+            -92.5,
+            102.5,
             0,
-            82,
-            83.5,
+            92.5,
+            102.5,
+            0
+          ],
+          "uv": [
+            0,
+            205,
+            185,
+            205,
+            0,
+            0,
+            185,
+            0
+          ],
+          "nuv": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "minPos": [
+            -92.5,
+            -102.5,
+            0
+          ],
+          "maxPos": [
+            92.5,
+            102.5,
             0
           ],
           "indexes": [
@@ -80,49 +120,9 @@
             2,
             1,
             3
-          ],
-          "uv": [
-            14,
-            171,
-            178,
-            171,
-            14,
-            4,
-            178,
-            4
-          ],
-          "nuv": [
-            0.07567567567567568,
-            0.01951219512195122,
-            0.9621621621621622,
-            0.01951219512195122,
-            0.07567567567567568,
-            0.8341463414634146,
-            0.9621621621621622,
-            0.8341463414634146
-          ],
-          "minPos": [
-            -82,
-            -83.5,
-            0
-          ],
-          "maxPos": [
-            82,
-            83.5,
-            0
           ]
-        },
-        "isUuid": true,
-        "imageUuidOrDatabaseUri": "922144b0-153e-4c2a-9ea4-8d309a9e494e@6c48a",
-        "atlasUuid": "",
-        "trimType": "auto"
-      },
-      "ver": "1.0.12",
-      "imported": true,
-      "files": [
-        ".json"
-      ],
-      "subMetas": {}
+        }
+      }
     }
   },
   "userData": {

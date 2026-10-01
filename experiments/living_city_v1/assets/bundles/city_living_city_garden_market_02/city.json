@@ -1,0 +1,508 @@
+{
+  "schemaVersion": 1,
+  "cityId": "living_city_garden_market_02",
+  "cityName": "花园集市",
+  "background": "simple2d_scene/lc_garden_ground",
+  "sceneBlueprint": "garden_market_02",
+  "chapterIndex": 2,
+  "chapterCount": 3,
+  "mapSize": {
+    "width": 1536,
+    "height": 2048
+  },
+  "view": {
+    "minZoom": 1,
+    "maxZoom": 2.25,
+    "initialZoom": 1.4
+  },
+  "hiddenObjects": [
+    {
+      "id": "watering_can",
+      "asset": "targets/watering_can",
+      "x": 0.2916666666666667,
+      "y": 0.71923828125,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "watering_can",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "浇水壶",
+      "clue": "温室外的小工作台，有人刚浇完花。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": 310.5
+    },
+    {
+      "id": "garden_gloves",
+      "asset": "targets/garden_gloves",
+      "x": 0.197265625,
+      "y": 0.345703125,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "garden_gloves",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "园艺手套",
+      "clue": "长椅上留着一双软软的手套。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": -384.5
+    },
+    {
+      "id": "garden_trowel",
+      "asset": "targets/garden_trowel",
+      "x": 0.28515625,
+      "y": 0.10693359375,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "garden_trowel",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "小花铲",
+      "clue": "先打开咖啡店旁的工具箱。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": -889.5,
+      "visibleCondition": {
+        "objectId": "parcel_chest",
+        "state": "opened"
+      }
+    },
+    {
+      "id": "rose_bloom",
+      "asset": "targets/rose_bloom",
+      "x": 0.2805989583333333,
+      "y": 0.44873046875,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "rose_bloom",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "玫瑰花",
+      "clue": "花摊的叶子下，藏着一朵特别的花。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": -212,
+      "visibleCondition": {
+        "objectId": "flower_leaves",
+        "state": "opened"
+      }
+    },
+    {
+      "id": "yellow_pear",
+      "asset": "targets/yellow_pear",
+      "x": 0.7291666666666666,
+      "y": 0.59033203125,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "yellow_pear",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "黄梨",
+      "clue": "水果篮里，找找像小葫芦的果子。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": 73
+    },
+    {
+      "id": "honey_jar",
+      "asset": "targets/honey_jar",
+      "x": 0.7291666666666666,
+      "y": 0.46923828125,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "honey_jar",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "蜂蜜罐",
+      "clue": "喝茶的桌上，有一罐甜甜的东西。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": -167
+    },
+    {
+      "id": "garden_key",
+      "asset": "targets/garden_key",
+      "x": 0.166015625,
+      "y": 0.71484375,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "garden_key",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "温室钥匙",
+      "clue": "温室门槛旁，有把叶形的小钥匙。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": 440
+    },
+    {
+      "id": "butterfly_badge",
+      "asset": "targets/butterfly_badge",
+      "x": 0.37890625,
+      "y": 0.8173828125,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "butterfly_badge",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "蝴蝶徽章",
+      "clue": "路牌上停着一只不会飞的蝴蝶。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": 520.5
+    },
+    {
+      "id": "ribbon_spool",
+      "asset": "targets/ribbon_spool",
+      "x": 0.8125,
+      "y": 0.67578125,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "ribbon_spool",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "丝带卷",
+      "clue": "花店外的货架上，找一卷紫色丝带。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": 223
+    },
+    {
+      "id": "straw_hat",
+      "asset": "targets/straw_hat",
+      "x": 0.7083333333333334,
+      "y": 0.2119140625,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "straw_hat",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "草帽",
+      "clue": "掀开南边藤篮的盖子，再看看里面。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": -689.5,
+      "visibleCondition": {
+        "objectId": "bun_lid",
+        "state": "opened"
+      }
+    },
+    {
+      "id": "acorn",
+      "asset": "targets/acorn",
+      "x": 0.126953125,
+      "y": 0.47802734375,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "acorn",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "小橡果",
+      "clue": "大树根旁的草地上，藏着一颗橡果。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": -52
+    },
+    {
+      "id": "lavender_sachet",
+      "asset": "targets/lavender_sachet",
+      "x": 0.8255208333333334,
+      "y": 0.099609375,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "lavender_sachet",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "香草袋",
+      "clue": "南边的小屋窗口，有一只紫色香袋。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": -820
+    }
+  ],
+  "chickens": [],
+  "interactiveObjects": [
+    {
+      "id": "parcel_chest",
+      "asset": "interactions/parcel_chest_closed",
+      "openAsset": "interactions/parcel_chest_opened",
+      "x": 0.28515625,
+      "y": 0.1005859375,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "rect",
+        "width": 110,
+        "height": 98
+      },
+      "visualSize": {
+        "width": 110,
+        "height": 98
+      },
+      "depthY": -871,
+      "label": "打开工具箱",
+      "initialState": "closed",
+      "actions": [
+        {
+          "type": "setState",
+          "objectId": "parcel_chest",
+          "state": "opened"
+        }
+      ],
+      "tags": [
+        "reveal"
+      ],
+      "targetable": true
+    },
+    {
+      "id": "flower_leaves",
+      "asset": "interactions/flower_leaves_closed",
+      "openAsset": "interactions/flower_leaves_opened",
+      "x": 0.2805989583333333,
+      "y": 0.447265625,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "rect",
+        "width": 100,
+        "height": 90
+      },
+      "visualSize": {
+        "width": 100,
+        "height": 90
+      },
+      "depthY": -157,
+      "label": "拨开花叶",
+      "initialState": "closed",
+      "actions": [
+        {
+          "type": "setState",
+          "objectId": "flower_leaves",
+          "state": "opened"
+        }
+      ],
+      "tags": [
+        "reveal"
+      ],
+      "targetable": true
+    },
+    {
+      "id": "bun_lid",
+      "asset": "interactions/bun_lid_closed",
+      "openAsset": "interactions/bun_lid_opened",
+      "x": 0.7083333333333334,
+      "y": 0.20703125,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "rect",
+        "width": 100,
+        "height": 82
+      },
+      "visualSize": {
+        "width": 100,
+        "height": 82
+      },
+      "depthY": -645,
+      "label": "掀开藤篮",
+      "initialState": "closed",
+      "actions": [
+        {
+          "type": "setState",
+          "objectId": "bun_lid",
+          "state": "opened"
+        }
+      ],
+      "tags": [
+        "reveal"
+      ],
+      "targetable": true
+    }
+  ],
+  "foregroundSprites": [],
+  "tasks": [
+    {
+      "id": "find_watering_can",
+      "type": "hiddenObject",
+      "targetId": "watering_can",
+      "label": "找到浇水壶",
+      "required": true
+    },
+    {
+      "id": "find_garden_gloves",
+      "type": "hiddenObject",
+      "targetId": "garden_gloves",
+      "label": "找到园艺手套",
+      "required": true
+    },
+    {
+      "id": "find_garden_trowel",
+      "type": "hiddenObject",
+      "targetId": "garden_trowel",
+      "label": "找到小花铲",
+      "required": true
+    },
+    {
+      "id": "find_rose_bloom",
+      "type": "hiddenObject",
+      "targetId": "rose_bloom",
+      "label": "找到玫瑰花",
+      "required": true
+    },
+    {
+      "id": "find_yellow_pear",
+      "type": "hiddenObject",
+      "targetId": "yellow_pear",
+      "label": "找到黄梨",
+      "required": true
+    },
+    {
+      "id": "find_honey_jar",
+      "type": "hiddenObject",
+      "targetId": "honey_jar",
+      "label": "找到蜂蜜罐",
+      "required": true
+    },
+    {
+      "id": "find_garden_key",
+      "type": "hiddenObject",
+      "targetId": "garden_key",
+      "label": "找到温室钥匙",
+      "required": true
+    },
+    {
+      "id": "find_butterfly_badge",
+      "type": "hiddenObject",
+      "targetId": "butterfly_badge",
+      "label": "找到蝴蝶徽章",
+      "required": true
+    },
+    {
+      "id": "find_ribbon_spool",
+      "type": "hiddenObject",
+      "targetId": "ribbon_spool",
+      "label": "找到丝带卷",
+      "required": true
+    },
+    {
+      "id": "find_straw_hat",
+      "type": "hiddenObject",
+      "targetId": "straw_hat",
+      "label": "找到草帽",
+      "required": true
+    },
+    {
+      "id": "find_acorn",
+      "type": "hiddenObject",
+      "targetId": "acorn",
+      "label": "找到小橡果",
+      "required": true
+    },
+    {
+      "id": "find_lavender_sachet",
+      "type": "hiddenObject",
+      "targetId": "lavender_sachet",
+      "label": "找到香草袋",
+      "required": true
+    }
+  ],
+  "nextCityId": "living_city_harbor_walk_03",
+  "travelType": "boat"
+}

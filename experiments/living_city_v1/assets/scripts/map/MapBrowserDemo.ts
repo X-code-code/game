@@ -1,4 +1,4 @@
-import { _decorator, AssetManager, Color, Component, EventMouse, EventTouch, Graphics, Input, input, Label, Node, Sprite, SpriteFrame, Tween, UITransform, Vec3, warn } from 'cc';
+import { _decorator, AssetManager, Color, Component, EventMouse, EventTouch, Graphics, Input, input, Label, Node, Sprite, SpriteFrame, tween, Tween, UITransform, Vec3, warn } from 'cc';
 import type { ChickenConfig, CityConfig, HiddenObjectConfig, Size } from '../config/CityTypes';
 import { ChickenCharacter } from '../character/ChickenCharacter';
 import { TargetInput } from '../gameplay/TargetInput';
@@ -8,6 +8,7 @@ import type { TaskProgress } from '../task/TaskManager';
 import { HintManager } from '../hint/HintManager';
 import { HintTargetRegistry } from '../hint/HintTargetRegistry';
 import { HintPanel } from '../ui/HintPanel';
+import { generatedUi } from '../ui/GeneratedUi';
 import { CityViewController } from './CityViewController';
 import { CityAmbientLife } from './CityAmbientLife';
 import { populateWinterMarketCrowd } from './WinterMarketCrowd';
@@ -15,6 +16,7 @@ import { WinterMarketConversations } from './WinterMarketConversations';
 import { SceneDepthLayer } from './SceneDepthLayer';
 import { WinterMarketTeaEvent } from './WinterMarketTeaEvent';
 import { LivingCityGreybox } from './LivingCityGreybox';
+import { SceneInteraction } from '../interaction/SceneInteraction';
 
 const { ccclass } = _decorator;
 const PROTOTYPE_BACKGROUNDS: Record<string, string> = {
@@ -50,10 +52,10 @@ const LIVING_CITY_STICKERS = [
 
 interface StickerCard {
     node: Node;
-    background: Graphics;
+    background: Sprite;
     icon: Sprite;
     name: Label;
-    stamp: Node;
+    collected: boolean;
 }
 
 interface StickerPress {
@@ -68,21 +70,39 @@ export interface CityProgressSnapshot {
     completedTaskIds: string[];
     foundHiddenObjectIds: string[];
     discoveredChickenIds: string[];
+    interactiveStates?: Record<string, string>;
 }
 
 /** Displays a validated CityConfig with temporary code-drawn demo art. */
 @ccclass('MapBrowserDemo')
 export class MapBrowserDemo extends Component {
+    private readonly interactions = new Map<string, SceneInteraction>();
+    private get stickers(): Array<{ id: string; name: string; clue: string }> {
+        return (this.cityConfig?.hiddenObjects ?? []).map(item => ({ id: item.id,
+            name: item.displayName ?? LIVING_CITY_STICKERS.find(sticker => sticker.id === item.id)?.name ?? item.id,
+            clue: item.clue ?? LIVING_CITY_STICKERS.find(sticker => sticker.id === item.id)?.clue ?? '仔细看看街边的陈列' }));
+    }
+    private targetSize(id: string): Size {
+        return this.cityConfig?.hiddenObjects.find(item => item.id === id)?.visualSize ??
+            LIVING_CITY_TARGET_SIZE[id] ?? { width: 32, height: 32 };
+    }
     private cityConfig: CityConfig | null = null;
+    private get isLivingCity(): boolean {
+        return !!this.cityConfig?.sceneBlueprint || this.cityConfig?.cityId === 'living_city_street_block_01';
+    }
     private controller: CityViewController | null = null;
     private targetInput: TargetInput | null = null;
     private taskManager: TaskManager | null = null;
     private taskPanel: Node | null = null;
-    private taskPanelGraphics: Graphics | null = null;
+    private taskPanelGraphics: Graphics | Sprite | null = null;
+    private viewportBackground: Sprite | null = null;
     private taskTitleLabel: Label | null = null;
     private taskItemsLabel: Label | null = null;
     private stickerClueLabel: Label | null = null;
     private readonly stickerCards = new Map<string, StickerCard>();
+    private readonly collectionFlights = new Map<string, Node>();
+    private readonly collectionCompletionCallbacks: Array<() => void> = [];
+    private collectionLandingAnimations = 0;
     private readonly stickerTouches = new Map<number, StickerPress>();
     private stickerMousePress: StickerPress | null = null;
     private stickerInputAttached = false;
@@ -112,13 +132,19 @@ export class MapBrowserDemo extends Component {
         this.artBundle = artBundle;
         this.onProgress = onProgress ?? null;
         const mapSize = config.mapSize;
+        if (this.isLivingCity) {
+            const background = new Node('MapViewportBackground');
+            this.node.addChild(background);
+            background.addComponent(UITransform);
+            this.viewportBackground = generatedUi(background, 'ui_backdrop', artBundle, false);
+        }
         const map = new Node('TestMap');
         this.node.addChild(map);
         const transform = map.addComponent(UITransform);
         transform.setContentSize(mapSize.width, mapSize.height);
         transform.setAnchorPoint(0.5, 0.5);
         const graphics = map.addComponent(Graphics);
-        this.drawGrid(graphics, mapSize);
+        if (!this.isLivingCity) this.drawGrid(graphics, mapSize);
         const ambient = new Node('CityAmbientLife');
         map.addChild(ambient);
         ambient.addComponent(UITransform).setContentSize(mapSize.width, mapSize.height);
@@ -145,9 +171,10 @@ export class MapBrowserDemo extends Component {
         this.sceneDepth = sceneDepth;
         const objects = config.hiddenObjects.map(item => this.createObject(sceneDepth, item, mapSize));
         const chickens = config.chickens.map(chicken => this.createChicken(sceneDepth, chicken, mapSize));
-        if (config.cityId === 'living_city_street_block_01') {
+        if (this.isLivingCity) {
             this.livingGreybox = new LivingCityGreybox(map, sceneDepth, artBundle,
-                objects.map(object => object.node), focus => this.controller?.focusAt(focus.x, focus.y));
+                objects.map(object => object.node), focus => this.controller?.focusAt(focus.x, focus.y),
+                config.sceneBlueprint, config.cityId);
             graphics.enabled = false;
         }
         const winterCrowd = config.cityId === 'demo_city'
@@ -162,6 +189,16 @@ export class MapBrowserDemo extends Component {
 
         this.taskManager = new TaskManager(config.tasks);
         this.restoreProgressSnapshot(snapshot, objects, chickens);
+        for (const item of config.interactiveObjects) {
+            const interaction = new SceneInteraction(item, mapSize, artBundle, sceneDepth,
+                snapshot?.interactiveStates?.[item.id]);
+            this.interactions.set(item.id, interaction);
+            this.hintTargets.register({ id: item.id, kind: 'interactiveObject', tags: item.tags,
+                radius: Math.max(item.visualSize?.width ?? 100, item.visualSize?.height ?? 100) / 2 + 12,
+                isAvailable: () => !this.disposed && interaction.available,
+                getPosition: () => interaction.node.isValid ? { x: interaction.node.position.x, y: interaction.node.position.y } : null });
+        }
+        this.applyInteractionVisibility(objects);
         this.createTaskPanel();
 
         [...objects, ...chickens].forEach((entity, index) => {
@@ -177,8 +214,8 @@ export class MapBrowserDemo extends Component {
         });
         this.hintManager = new HintManager(() => this.taskManager?.getTaskStates() ?? [], task => this.hintTargets.resolve(task));
         this.hintPanel = new HintPanel(this.node, map, () => this.requestHint(),
-            config.cityId === 'demo_city' || config.cityId === 'living_city_street_block_01',
-            config.cityId === 'living_city_street_block_01');
+            config.cityId === 'demo_city' || this.isLivingCity,
+            this.isLivingCity, artBundle);
         if (winterCrowd) this.conversations = new WinterMarketConversations(this.node, winterCrowd);
 
         const isBlocked = (uiX: number, uiY: number): boolean =>
@@ -188,9 +225,19 @@ export class MapBrowserDemo extends Component {
         const view = config.view;
         this.controller = new CityViewController(this.node, map, view.minZoom, view.maxZoom,
             view.initialZoom ?? view.minZoom, isBlocked);
-        this.targetInput = new TargetInput([...(this.livingGreybox?.clueTarget ? [this.livingGreybox.clueTarget] : []),
-            ...(this.conversations?.targets ?? []), ...objects, ...chickens], hit => {
+        this.targetInput = new TargetInput([...objects, ...Array.from(this.interactions.values()),
+            ...(this.livingGreybox?.clueTarget ? [this.livingGreybox.clueTarget] : []),
+            ...(this.conversations?.targets ?? []), ...chickens], hit => {
             if (hit.type === 'scene') {
+                const interaction = this.interactions.get(hit.id);
+                if (interaction) {
+                    for (const action of interaction.config.actions) this.interactions.get(action.objectId)?.setState(action.state);
+                    this.applyInteractionVisibility(objects);
+                    this.hintManager?.clear();
+                    if (this.stickerClueLabel) this.stickerClueLabel.string = `${interaction.config.label ?? '翻找'}：有新发现，仔细看看里面！`;
+                    this.onProgress?.(this.taskManager!.getProgress());
+                    return;
+                }
                 this.livingGreybox?.showNpcClue(hit.id);
                 return;
             }
@@ -199,6 +246,10 @@ export class MapBrowserDemo extends Component {
                 newlyDiscovered = !this.foundHiddenObjectIds.has(hit.id);
                 this.foundHiddenObjectIds.add(hit.id);
                 this.foundCount = this.foundHiddenObjectIds.size;
+                if (newlyDiscovered && this.isLivingCity) {
+                    const object = objects.find(item => item.node.name === hit.id);
+                    if (object) this.startCollectionFlight(hit.id, object);
+                }
             }
             else {
                 this.lastChickenClickedId = hit.id;
@@ -230,11 +281,13 @@ export class MapBrowserDemo extends Component {
         this.hintPanel?.update(hint);
         // Keep edge targets reachable while the hint is visible; restore the list afterward.
         if (this.taskPanel) this.taskPanel.active = !hint;
+        this.updateMapBottomInset();
         if (!hint) this.positionStreetHintButton();
     }
 
     public requestHint(): void {
         if (!this.hintsEnabled || this.disposed || !this.node.activeInHierarchy) return;
+        if (this.collectionFlights.size > 0 || this.collectionLandingAnimations > 0) return;
         this.cancelGestures();
         const result = this.hintManager?.requestHint();
         if (!result) return;
@@ -269,13 +322,31 @@ export class MapBrowserDemo extends Component {
     /** Returns fresh arrays in city-config order so callers can save without holding view state. */
     public getProgressSnapshot(): CityProgressSnapshot {
         if (!this.cityConfig || !this.taskManager) throw new Error('City is not mounted');
+        const interactiveStates: Record<string, string> = {};
+        this.interactions.forEach((item, id) => { interactiveStates[id] = item.state; });
         return {
             completedTaskIds: this.taskManager.getCompletedTaskIds(),
             foundHiddenObjectIds: this.cityConfig.hiddenObjects
                 .filter(item => this.foundHiddenObjectIds.has(item.id)).map(item => item.id),
             discoveredChickenIds: this.cityConfig.chickens
                 .filter(item => this.discoveredChickens.has(item.id)).map(item => item.id),
+            interactiveStates,
         };
+    }
+
+    private applyInteractionVisibility(objects: readonly HiddenObject[]): void {
+        for (const item of this.cityConfig?.hiddenObjects ?? []) {
+            if (!item.visibleCondition) continue;
+            const visible = this.interactions.get(item.visibleCondition.objectId)?.state === item.visibleCondition.state;
+            objects.find(object => object.node.name === item.id)?.setVisible(visible);
+        }
+    }
+
+    /** Defer end-of-city overlays until collected objects finish entering the tray. */
+    public afterCollectionFlight(callback: () => void): void {
+        if (this.disposed) return;
+        if (this.collectionFlights.size === 0 && this.collectionLandingAnimations === 0) callback();
+        else this.collectionCompletionCallbacks.push(callback);
     }
 
     public cancelGestures(): void {
@@ -295,7 +366,15 @@ export class MapBrowserDemo extends Component {
         this.hintPanel?.dispose();
         this.hintPanel = null;
         this.detachStickerInput();
+        for (const flight of this.collectionFlights.values()) {
+            Tween.stopAllByTarget(flight);
+            if (flight.isValid) flight.destroy();
+        }
+        this.collectionFlights.clear();
+        this.collectionLandingAnimations = 0;
+        this.collectionCompletionCallbacks.length = 0;
         this.stickerCards.clear();
+        this.interactions.clear();
         this.stickerClueLabel = null;
         this.conversations?.dispose();
         this.conversations = null;
@@ -329,6 +408,9 @@ export class MapBrowserDemo extends Component {
         if (!size) return;
         this.lastWidth = size.width;
         this.lastHeight = size.height;
+        if (this.viewportBackground) {
+            this.viewportBackground.node.getComponent(UITransform)?.setContentSize(size.width, size.height);
+        }
         this.controller?.resizeIfNeeded();
         this.hintPanel?.resize();
         this.conversations?.resize();
@@ -336,27 +418,29 @@ export class MapBrowserDemo extends Component {
         const graphics = this.taskPanelGraphics;
         if (!panel || !graphics) return;
         const portrait = size.height > size.width;
-        const greybox = this.cityConfig?.cityId === 'living_city_street_block_01';
+        const greybox = this.isLivingCity;
         const trial = this.cityConfig?.cityId === 'winter_market_block_trial_001';
         const compact = this.cityConfig?.cityId === 'demo_city';
         const margin = portrait ? 18 : 12;
         const width = portrait ? Math.max(280, size.width - margin * 2) : Math.min(400, Math.max(280, size.width - 24));
-        const height = greybox ? (portrait ? 320 : 166) : trial ? (portrait ? 200 : 116)
+        const height = greybox ? (portrait ? 390 : 235) : trial ? (portrait ? 200 : 116)
             : compact ? (portrait ? 390 : 182) : (portrait ? 590 : 268);
         panel.setPosition(-size.width / 2 + width / 2 + margin,
             ((trial || greybox) ? -size.height / 2 + height / 2 + margin : size.height / 2 - height / 2 - margin), 0);
         panel.getComponent(UITransform)?.setContentSize(width, height);
+        if (graphics instanceof Graphics) {
         graphics.clear();
-        graphics.fillColor = greybox ? new Color(247, 238, 214, 249)
+        graphics.fillColor = greybox ? new Color(255, 246, 221, 255)
             : new Color(255, 250, 235, trial ? 225 : compact ? 218 : 238);
         if (greybox) graphics.roundRect(-width / 2, -height / 2, width, height, 18);
         else graphics.rect(-width / 2, -height / 2, width, height);
         graphics.fill();
         graphics.lineWidth = 2;
-        graphics.strokeColor = new Color(132, 99, 68, 255);
+        graphics.strokeColor = new Color(87, 73, 84, 255);
         if (greybox) graphics.roundRect(-width / 2, -height / 2, width, height, 18);
         else graphics.rect(-width / 2, -height / 2, width, height);
         graphics.stroke();
+        }
         const padding = greybox ? 18 : portrait ? 30 : 16;
         if (this.taskTitleLabel) {
             this.taskTitleLabel.fontSize = greybox ? (portrait ? 48 : 25) : trial ? (portrait ? 34 : 24)
@@ -381,14 +465,25 @@ export class MapBrowserDemo extends Component {
         if (greybox) {
             this.layoutStickerCards(width, height, portrait);
             this.positionStreetHintButton();
+            this.updateMapBottomInset();
         }
+    }
+
+    private updateMapBottomInset(): void {
+        const view = this.node.getComponent(UITransform);
+        const panel = this.taskPanel;
+        const reserve = this.isLivingCity &&
+            view && view.height > view.width && panel?.activeInHierarchy
+            ? (panel.getComponent(UITransform)?.height ?? 0) + 18 : 0;
+        this.controller?.setBottomInset(reserve);
     }
 
     private createTaskPanel(): void {
         const panel = new Node('TaskPanel');
         this.node.addChild(panel);
         panel.addComponent(UITransform);
-        this.taskPanelGraphics = panel.addComponent(Graphics);
+        this.taskPanelGraphics = this.isLivingCity
+            ? generatedUi(panel, 'ui_panel', this.artBundle!) : panel.addComponent(Graphics);
         this.taskPanel = panel;
 
         const title = new Node('TaskTitle');
@@ -402,7 +497,7 @@ export class MapBrowserDemo extends Component {
         titleLabel.verticalAlign = Label.VerticalAlign.TOP;
         this.taskTitleLabel = titleLabel;
 
-        if (this.cityConfig?.cityId === 'living_city_street_block_01') {
+        if (this.isLivingCity) {
             this.createStickerCards(panel);
             this.attachStickerInput();
         } else {
@@ -424,14 +519,15 @@ export class MapBrowserDemo extends Component {
         const manager = this.taskManager;
         if (!manager || !this.taskTitleLabel) return;
         const progress = manager.getProgress();
-        if (this.cityConfig?.cityId === 'living_city_street_block_01') {
-            this.taskTitleLabel.string = `寻物贴纸  ${progress.requiredCompleted} / ${progress.requiredTotal}`;
+        if (this.isLivingCity) {
+            this.taskTitleLabel.string = `${this.cityConfig?.chapterIndex ? `${this.cityConfig.chapterIndex}/${this.cityConfig.chapterCount} · ${this.cityConfig.cityName}` : '寻物贴纸'}  ${Math.max(0, progress.requiredCompleted - this.collectionFlights.size)}/${progress.requiredTotal}`;
+            this.taskTitleLabel.overflow = Label.Overflow.SHRINK;
             const states = manager.getTaskStates();
-            for (const sticker of LIVING_CITY_STICKERS) {
+            for (const sticker of this.stickers) {
                 const completed = states.some(state => state.config.type === 'hiddenObject' &&
                     state.config.targetId === sticker.id && state.completed);
                 const card = this.stickerCards.get(sticker.id);
-                if (card) this.drawStickerCard(card, completed);
+                if (card) this.drawStickerCard(card, completed && !this.collectionFlights.has(sticker.id));
             }
             return;
         }
@@ -455,14 +551,14 @@ export class MapBrowserDemo extends Component {
         clue.horizontalAlign = Label.HorizontalAlign.LEFT;
         clue.verticalAlign = Label.VerticalAlign.CENTER;
         clue.overflow = Label.Overflow.SHRINK;
-        clue.string = '轻点贴纸，听听街坊线索';
+        clue.string = '轻点贴纸看线索 · 箱子、盖布和花叶也能翻找';
         this.stickerClueLabel = clue;
 
-        for (const sticker of LIVING_CITY_STICKERS) {
+        for (const sticker of this.stickers) {
             const cardNode = new Node(`Sticker_${sticker.id}`);
             panel.addChild(cardNode);
             cardNode.addComponent(UITransform);
-            const background = cardNode.addComponent(Graphics);
+            const background = generatedUi(cardNode, 'ui_panel', this.artBundle!);
 
             const artNode = new Node('ItemArt');
             cardNode.addChild(artNode);
@@ -481,26 +577,7 @@ export class MapBrowserDemo extends Component {
             name.verticalAlign = Label.VerticalAlign.CENTER;
             name.overflow = Label.Overflow.SHRINK;
 
-            const stamp = new Node('FoundStamp');
-            cardNode.addChild(stamp);
-            stamp.addComponent(UITransform).setContentSize(42, 42);
-            const stampGround = stamp.addComponent(Graphics);
-            stampGround.fillColor = new Color(92, 151, 110, 255);
-            stampGround.circle(0, 0, 21);
-            stampGround.fill();
-            const checkNode = new Node('Check');
-            stamp.addChild(checkNode);
-            checkNode.addComponent(UITransform).setContentSize(40, 40);
-            const check = checkNode.addComponent(Label);
-            check.string = '✓';
-            check.fontSize = 30;
-            check.lineHeight = 36;
-            check.color = Color.WHITE;
-            check.horizontalAlign = Label.HorizontalAlign.CENTER;
-            check.verticalAlign = Label.VerticalAlign.CENTER;
-            stamp.active = false;
-
-            this.stickerCards.set(sticker.id, { node: cardNode, background, icon, name, stamp });
+            this.stickerCards.set(sticker.id, { node: cardNode, background, icon, name, collected: false });
             this.loadPrototypeFrame(`targets/${sticker.id}/spriteFrame`, frame => {
                 if (cardNode.isValid) icon.spriteFrame = frame;
             });
@@ -510,41 +587,41 @@ export class MapBrowserDemo extends Component {
     private layoutStickerCards(width: number, height: number, portrait: boolean): void {
         const inset = portrait ? 16 : 12;
         const gap = portrait ? 12 : 6;
-        const columns = 4;
+        const columns = 6;
         const cardWidth = (width - inset * 2 - gap * (columns - 1)) / columns;
-        const cardHeight = portrait ? 150 : 75;
+        const cardHeight = portrait ? 110 : 62;
         const clue = this.stickerClueLabel;
         if (clue) {
-            clue.fontSize = portrait ? 25 : 18;
+            clue.fontSize = portrait ? 28 : 18;
             clue.lineHeight = portrait ? 30 : 22;
             clue.node.setPosition(-width / 2 + 18, height / 2 - (portrait ? 75 : 43), 0);
             clue.node.getComponent(UITransform)?.setContentSize(width - 36, portrait ? 31 : 22);
         }
-        LIVING_CITY_STICKERS.forEach((sticker, index) => {
+        this.stickers.forEach((sticker, index) => {
             const card = this.stickerCards.get(sticker.id);
             if (!card) return;
             const column = index % columns;
             const x = -width / 2 + inset + cardWidth / 2 + column * (cardWidth + gap);
-            const y = portrait ? -40 : -22;
+            const y = height / 2 - (portrait ? 165 : 92) - Math.floor(index / columns) * (cardHeight + gap);
             card.node.setPosition(x, y, 0);
             card.node.getComponent(UITransform)?.setContentSize(cardWidth, cardHeight);
+            const artSize = portrait ? Math.min(72, cardWidth - 20) : 35;
+            const targetSize = this.targetSize(sticker.id);
+            const fit = artSize / Math.max(targetSize.width, targetSize.height);
+            card.icon.node.getComponent(UITransform)?.setContentSize(targetSize.width * fit, targetSize.height * fit);
             if (portrait) {
-                const artSize = Math.min(88, cardWidth - 20);
-                card.icon.node.setPosition(0, 21, 0);
-                card.icon.node.getComponent(UITransform)?.setContentSize(artSize, artSize);
-                card.name.node.setPosition(0, -51, 0);
+                card.icon.node.setPosition(0, 16, 0);
+                card.name.node.setPosition(0, -35, 0);
                 card.name.node.getComponent(UITransform)?.setContentSize(cardWidth - 10, 36);
-                card.name.fontSize = cardWidth < 170 ? 22 : 28;
+                card.name.fontSize = 30;
                 card.name.lineHeight = 33;
             } else {
                 card.icon.node.setPosition(0, 8, 0);
-                card.icon.node.getComponent(UITransform)?.setContentSize(47, 47);
-                card.name.node.setPosition(0, -27, 0);
+                card.name.node.setPosition(0, -21, 0);
                 card.name.node.getComponent(UITransform)?.setContentSize(cardWidth - 8, 25);
                 card.name.fontSize = 17;
                 card.name.lineHeight = 21;
             }
-            card.stamp.setPosition(cardWidth / 2 - 23, cardHeight / 2 - 23, 0);
         });
         this.renderTaskPanel();
     }
@@ -552,23 +629,96 @@ export class MapBrowserDemo extends Component {
     private drawStickerCard(card: StickerCard, completed: boolean): void {
         const size = card.node.getComponent(UITransform)?.contentSize;
         if (!size || size.width <= 0 || size.height <= 0) return;
-        const width = size.width;
-        const height = size.height;
-        const graphics = card.background;
-        graphics.clear();
-        graphics.fillColor = completed ? new Color(224, 239, 218, 255) : new Color(255, 252, 242, 255);
-        graphics.roundRect(-width / 2, -height / 2, width, height, 12);
-        graphics.fill();
-        graphics.lineWidth = 2;
-        graphics.strokeColor = completed ? new Color(111, 157, 112, 255) : new Color(177, 138, 97, 255);
-        graphics.roundRect(-width / 2, -height / 2, width, height, 12);
-        graphics.stroke();
-        card.icon.color = completed ? new Color(190, 209, 186, 255) : Color.WHITE;
-        card.stamp.active = completed;
+        card.background.color = completed ? new Color(222, 242, 210, 255) : Color.WHITE;
+        // The pale preview tells the player what to search for. The collected
+        // object becomes the vivid sticker only after the flight lands.
+        card.icon.color = completed ? Color.WHITE : new Color(175, 164, 159, 110);
+        card.name.color = completed ? new Color(87, 73, 84, 255) : new Color(139, 119, 121, 255);
+        card.collected = completed;
+    }
+
+    private startCollectionFlight(id: string, object: HiddenObject): void {
+        const card = this.stickerCards.get(id);
+        const rootTransform = this.node.getComponent(UITransform);
+        const destination = card?.icon.node.getComponent(UITransform);
+        const artNode = object.node.getChildByName('PropArt') ?? object.node;
+        const source = artNode.getComponent(UITransform);
+        const frame = artNode.getComponent(Sprite)?.spriteFrame ?? card?.icon.spriteFrame;
+        if (!card || !rootTransform || !destination || !source || !frame || this.collectionFlights.has(id)) return;
+        this.hintManager?.clear();
+        this.hintPanel?.update(null);
+        if (this.taskPanel) this.taskPanel.active = true;
+
+        // Capture both ends in the common UI root's coordinates. The new sprite
+        // is outside TestMap, so further map panning or zooming cannot pull it
+        // away from the tray while it flies.
+        const start = rootTransform.convertToNodeSpaceAR(source.convertToWorldSpaceAR(new Vec3(0, 0, 0)));
+        const end = rootTransform.convertToNodeSpaceAR(destination.convertToWorldSpaceAR(new Vec3(0, 0, 0)));
+        const visualWidth = source.width || this.targetSize(id).width;
+        const visualHeight = source.height || this.targetSize(id).height;
+        const startScale = new Vec3(Math.abs(artNode.worldScale.x) / (Math.abs(this.node.worldScale.x) || 1),
+            Math.abs(artNode.worldScale.y) / (Math.abs(this.node.worldScale.y) || 1), 1);
+        const flight = new Node(`CollectionFly_${id}`);
+        this.node.addChild(flight);
+        flight.addComponent(UITransform).setContentSize(visualWidth, visualHeight);
+        const sprite = flight.addComponent(Sprite);
+        sprite.sizeMode = Sprite.SizeMode.CUSTOM;
+        sprite.trim = false;
+        sprite.spriteFrame = frame;
+        flight.setPosition(start);
+        flight.setScale(startScale);
+        this.collectionFlights.set(id, flight);
+
+        tween(flight).to(0.60, {
+            position: end,
+        }, {
+            easing: 'sineInOut',
+            onUpdate: (_target, ratio) => {
+                if (!flight.isValid) return;
+                const t = Math.min(1, Math.max(0, ratio ?? 0));
+                const u = 1 - t;
+                // A resized viewport can move the tray while this sprite is airborne.
+                const currentEnd = rootTransform.convertToNodeSpaceAR(destination.convertToWorldSpaceAR(new Vec3(0, 0, 0)));
+                const controlX = start.x + (currentEnd.x - start.x) * 0.34;
+                const controlY = Math.max(start.y, currentEnd.y) +
+                    Math.min(105, Math.max(45, Math.abs(currentEnd.y - start.y) * 0.15));
+                flight.setPosition(u * u * start.x + 2 * u * t * controlX + t * t * currentEnd.x,
+                    u * u * start.y + 2 * u * t * controlY + t * t * currentEnd.y, 0);
+                const endScaleX = Math.abs(card.icon.node.worldScale.x) /
+                    (Math.abs(this.node.worldScale.x) || 1) * destination.width / visualWidth;
+                const endScaleY = Math.abs(card.icon.node.worldScale.y) /
+                    (Math.abs(this.node.worldScale.y) || 1) * destination.height / visualHeight;
+                flight.setScale(startScale.x + (endScaleX - startScale.x) * t,
+                    startScale.y + (endScaleY - startScale.y) * t, 1);
+            },
+        }).call(() => {
+            if (flight.isValid) flight.destroy();
+            this.collectionFlights.delete(id);
+            if (this.disposed) return;
+            this.renderTaskPanel();
+            if (card.icon.node.isValid) {
+                Tween.stopAllByTarget(card.icon.node);
+                this.collectionLandingAnimations += 1;
+                card.icon.node.setScale(0.84, 0.84, 1);
+                tween(card.icon.node).to(0.12, { scale: new Vec3(1.12, 1.12, 1) }, { easing: 'quadOut' })
+                    .to(0.16, { scale: new Vec3(1, 1, 1) }, { easing: 'sineInOut' })
+                    .call(() => {
+                        this.collectionLandingAnimations -= 1;
+                        this.flushCollectionCompletionCallbacks();
+                    }).start();
+            }
+            this.flushCollectionCompletionCallbacks();
+        }).start();
+    }
+
+    private flushCollectionCompletionCallbacks(): void {
+        if (this.disposed || this.collectionFlights.size > 0 || this.collectionLandingAnimations > 0) return;
+        const callbacks = this.collectionCompletionCallbacks.splice(0);
+        callbacks.forEach(callback => callback());
     }
 
     private positionStreetHintButton(): void {
-        if (this.cityConfig?.cityId !== 'living_city_street_block_01' || this.hintManager?.active) return;
+        if (!this.isLivingCity || this.hintManager?.active) return;
         const viewport = this.node.getComponent(UITransform)?.contentSize;
         const panel = this.taskPanel;
         const hint = this.hintPanel?.root;
@@ -591,7 +741,7 @@ export class MapBrowserDemo extends Component {
     }
 
     private showStickerClue(id: string): void {
-        const sticker = LIVING_CITY_STICKERS.find(item => item.id === id);
+        const sticker = this.stickers.find(item => item.id === id);
         if (!sticker || !this.stickerClueLabel) return;
         const found = this.taskManager?.getTaskStates().some(state => state.config.type === 'hiddenObject' &&
             state.config.targetId === id && state.completed);
@@ -736,19 +886,12 @@ export class MapBrowserDemo extends Component {
     private createObject(depthLayer: SceneDepthLayer, config: HiddenObjectConfig, mapSize: Size): HiddenObject {
         const node = new Node(config.id);
         depthLayer.addActor(node, () => config.depthY ?? node.position.y);
-        const graphic = node.addComponent(Graphics);
         const greybox = config.asset.startsWith('greybox_');
-        if (greybox) {
-            graphic.fillColor = new Color(79, 164, 178, 255);
-            graphic.strokeColor = new Color(25, 91, 100, 255);
-            graphic.lineWidth = 2;
-            graphic.circle(0, 0, 7);
-            graphic.fill();
-            graphic.stroke();
-        } else this.drawTemporaryProp(graphic, config.asset);
+        const livingTarget = this.isLivingCity;
+        const graphic = livingTarget ? null : node.addComponent(Graphics);
+        if (graphic) this.drawTemporaryProp(graphic, config.asset);
         const object = node.addComponent(HiddenObject);
-        object.configure(config, mapSize);
-        const livingTarget = greybox && this.cityConfig?.cityId === 'living_city_street_block_01';
+        object.configure(config, mapSize, undefined, livingTarget);
         if (greybox && !livingTarget) return object;
         const artPath = livingTarget ? `targets/${config.id}/spriteFrame`
             : PROTOTYPE_PROPS[config.asset] ?? `${config.asset}/spriteFrame`;
@@ -760,14 +903,14 @@ export class MapBrowserDemo extends Component {
             // The target keeps a finger-sized hit area while market trinkets stay small in the scene.
             const artScale = config.asset.startsWith('winter_item_') ? 0.60
                 : config.asset === 'winter_slice_whistle' ? 0.75 : 1;
-            const gameSize = livingTarget ? LIVING_CITY_TARGET_SIZE[config.id] : null;
+            const gameSize = livingTarget ? this.targetSize(config.id) : null;
             visual.addComponent(UITransform).setContentSize(gameSize?.width ?? (hitSize?.width ?? 128) * artScale,
                 gameSize?.height ?? (hitSize?.height ?? 128) * artScale);
             const sprite = visual.addComponent(Sprite);
             sprite.sizeMode = Sprite.SizeMode.CUSTOM;
             sprite.trim = false;
             sprite.spriteFrame = frame;
-            graphic.enabled = false;
+            if (graphic) graphic.enabled = false;
         });
         return object;
     }

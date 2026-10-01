@@ -216,6 +216,33 @@ for (const npc of scene.npcPlans) {
     }
 }
 
+// The chestnut seller must stand on the street beside the cart's front lip.
+// A foot circle alone did not catch the earlier pose on the food shop facade.
+const chestnutCart = art.get('lc_chestnut_cart_back');
+const chestnutFront = art.get('lc_chestnut_cart_front');
+const foodShop = art.get('lc_east_food_shop_back');
+const seller = npcs.get('chestnut_seller');
+const sellerSpot = spots.get('chestnut_seller_foot');
+if (chestnutCart && chestnutFront && foodShop && seller?.route[0] && sellerSpot) {
+    const shopLeft = foodShop.center.x - foodShop.size.width / 2;
+    const cartLeft = chestnutCart.center.x - chestnutCart.size.width / 2;
+    const cartRight = chestnutCart.center.x + chestnutCart.size.width / 2;
+    const foot = seller.route[0];
+    check(cartRight <= shopLeft, 'Chestnut cart overlaps the food shop facade');
+    check(foot.x + seller.footRadius <= shopLeft,
+        'Chestnut seller stands on the food shop facade');
+    check(foot.y > chestnutFront.footY + seller.footRadius,
+        'Chestnut seller foot must be behind the cart front lip');
+    const leftOfCart = foot.x + seller.footRadius <= cartLeft &&
+        cartLeft - foot.x - seller.footRadius <= 80;
+    const rightOfCart = foot.x - seller.footRadius >= cartRight &&
+        foot.x - seller.footRadius - cartRight <= 80;
+    check(leftOfCart || rightOfCart,
+        'Chestnut seller feet must stand beside the cart, within working reach');
+    check(distSq(foot, sellerSpot.at) < 1,
+        'Chestnut seller standing spot differs from the NPC route');
+}
+
 for (const event of scene.sceneEvents) {
     unique(event.id, 'sceneEvents');
     const actor = npcs.get(event.trigger.npcId);

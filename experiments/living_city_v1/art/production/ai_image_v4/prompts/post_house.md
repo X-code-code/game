@@ -1,0 +1,2 @@
+undefined
+Asset ID: post_house. Subject: A DISTINCT wide SINGLE-STOREY village post office with a broad dusty-blue tiled hip roof, warm cream plaster, a central open arched red-brown door, two small square service windows on either side, pigeon-hole mail shelves visible inside, subtle envelope pictogram sign above entrance, parcel basket and wooden mailbox attached to facade. Low wide proportions about 1.4 width to height. Do not repeat the two-storey master silhouette.

@@ -1,0 +1,1493 @@
+{
+  "assets": [
+    {
+      "name": "shop_red",
+      "stage": "buildings",
+      "width": 420,
+      "height": 520,
+      "align": "bottom",
+      "inset": 8,
+      "runtime": "simple2d_scene/lc_west_storefront_back.png"
+    },
+    {
+      "name": "shop_blue",
+      "stage": "buildings",
+      "width": 406,
+      "height": 560,
+      "align": "bottom",
+      "inset": 8,
+      "runtime": "simple2d_scene/lc_east_storefront_back.png"
+    },
+    {
+      "name": "shop_tailor",
+      "stage": "buildings",
+      "width": 424,
+      "height": 580,
+      "align": "bottom",
+      "inset": 8,
+      "runtime": "simple2d_scene/lc_west_tailor_back.png"
+    },
+    {
+      "name": "shop_bakery",
+      "stage": "buildings",
+      "width": 404,
+      "height": 580,
+      "align": "bottom",
+      "inset": 8,
+      "runtime": "simple2d_scene/lc_east_food_shop_back.png"
+    },
+    {
+      "name": "post_house",
+      "stage": "buildings",
+      "width": 416,
+      "height": 320,
+      "align": "bottom",
+      "inset": 6,
+      "runtime": "simple2d_scene/lc_south_post_house_back.png"
+    },
+    {
+      "name": "grain_house",
+      "stage": "buildings",
+      "width": 404,
+      "height": 320,
+      "align": "bottom",
+      "inset": 6,
+      "runtime": "simple2d_scene/lc_south_grain_house_back.png"
+    },
+    {
+      "name": "pottery_annex",
+      "stage": "buildings",
+      "width": 200,
+      "height": 210,
+      "align": "bottom",
+      "inset": 5,
+      "runtime": "simple2d_scene/lc_east_pottery_annex_back.png"
+    },
+    {
+      "name": "tea_stall",
+      "stage": "stalls",
+      "width": 265,
+      "height": 300,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_tea_stall_back.png"
+    },
+    {
+      "name": "tea_stall_counter",
+      "source": "tea_stall",
+      "deriveFrom": "tea_stall",
+      "stage": "stalls",
+      "width": 56,
+      "height": 171,
+      "crop": {
+        "left": 187,
+        "top": 78,
+        "width": 56,
+        "height": 171
+      },
+      "keepFullCanvas": true,
+      "runtime": "simple2d_scene/lc_tea_counter_front.png"
+    },
+    {
+      "name": "tea_stall_awning",
+      "source": "tea_stall",
+      "deriveFrom": "tea_stall",
+      "stage": "stalls",
+      "width": 280,
+      "height": 100,
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 265,
+        "height": 92
+      },
+      "keepFullCanvas": true,
+      "runtime": "simple2d_scene/lc_tea_awning_front.png"
+    },
+    {
+      "name": "herb_stand",
+      "stage": "stalls",
+      "width": 145,
+      "height": 190,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_north_herb_stand.png"
+    },
+    {
+      "name": "bun_cart",
+      "stage": "stalls",
+      "width": 150,
+      "height": 195,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_east_bun_cart_back.png"
+    },
+    {
+      "name": "bun_cart_front",
+      "source": "bun_cart",
+      "deriveFrom": "bun_cart",
+      "stage": "stalls",
+      "width": 150,
+      "height": 70,
+      "crop": {
+        "left": 0,
+        "top": 125,
+        "width": 150,
+        "height": 70
+      },
+      "keepFullCanvas": true,
+      "runtime": "simple2d_scene/lc_east_bun_cart_front.png"
+    },
+    {
+      "name": "town_ground",
+      "source": "town_ground",
+      "stage": "scene",
+      "width": 1536,
+      "height": 2048,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_ground_paving.png",
+      "transparent": false,
+      "keepFullCanvas": true
+    },
+    {
+      "name": "tea_patio",
+      "source": "tea_patio",
+      "stage": "scene",
+      "width": 160,
+      "height": 136,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_tea_patio_front.png",
+      "footpoint": {
+        "x": 80,
+        "y": 121
+      }
+    },
+    {
+      "name": "chestnut_cart",
+      "source": "chestnut_cart",
+      "stage": "scene",
+      "width": 185,
+      "height": 205,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_chestnut_cart_back.png"
+    },
+    {
+      "name": "town_tree",
+      "source": "town_tree",
+      "stage": "scene",
+      "width": 205,
+      "height": 290,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_tree_front.png",
+      "footpoint": {
+        "x": 102.5,
+        "y": 228
+      }
+    },
+    {
+      "name": "street_planter",
+      "source": "flower_pot",
+      "stage": "scene",
+      "width": 105,
+      "height": 115,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_planter_front.png",
+      "footpoint": {
+        "x": 52.5,
+        "y": 111
+      }
+    },
+    {
+      "name": "town_bench",
+      "source": "town_bench",
+      "stage": "scene",
+      "width": 190,
+      "height": 95,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_bench_front.png",
+      "footpoint": {
+        "x": 95,
+        "y": 91
+      }
+    },
+    {
+      "name": "flower_display",
+      "source": "flower_display",
+      "stage": "scene",
+      "width": 128,
+      "height": 132,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_curb_flower_display.png",
+      "footpoint": {
+        "x": 64,
+        "y": 111
+      }
+    },
+    {
+      "name": "sewing_goods",
+      "source": "sewing_goods",
+      "stage": "scene",
+      "width": 145,
+      "height": 125,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_tailor_goods.png",
+      "footpoint": {
+        "x": 72.5,
+        "y": 117
+      }
+    },
+    {
+      "name": "tailor_rack",
+      "source": "tailor_rack",
+      "stage": "scene",
+      "width": 110,
+      "height": 150,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_tailor_work_rack.png",
+      "footpoint": {
+        "x": 55,
+        "y": 130
+      }
+    },
+    {
+      "name": "wood_crates",
+      "source": "wood_crates",
+      "stage": "scene",
+      "width": 105,
+      "height": 96,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_crates_front.png",
+      "footpoint": {
+        "x": 52.5,
+        "y": 90
+      }
+    },
+    {
+      "name": "pottery_display",
+      "source": "pottery_display",
+      "stage": "scene",
+      "width": 165,
+      "height": 150,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_shop_goods_east.png",
+      "footpoint": {
+        "x": 82.5,
+        "y": 143
+      }
+    },
+    {
+      "name": "pottery_curb_display",
+      "source": "pottery_display",
+      "stage": "scene",
+      "width": 90,
+      "height": 110,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_curb_pottery_west.png",
+      "footpoint": {
+        "x": 45,
+        "y": 100
+      }
+    },
+    {
+      "name": "produce_display",
+      "source": "produce_display",
+      "stage": "scene",
+      "width": 112,
+      "height": 130,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_curb_produce_east.png",
+      "footpoint": {
+        "x": 56,
+        "y": 125
+      }
+    },
+    {
+      "name": "town_signpost",
+      "source": "town_signpost",
+      "stage": "scene",
+      "width": 78,
+      "height": 145,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_wayfinding_sign.png",
+      "footpoint": {
+        "x": 39,
+        "y": 141
+      }
+    },
+    {
+      "name": "lantern_post",
+      "source": "lantern_post",
+      "stage": "scene",
+      "width": 105,
+      "height": 265,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_lantern_post_front.png",
+      "footpoint": {
+        "x": 52.5,
+        "y": 254
+      }
+    },
+    {
+      "name": "street_banner",
+      "source": "street_banner",
+      "stage": "scene",
+      "width": 500,
+      "height": 80,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_street_banner_front.png"
+    },
+    {
+      "name": "street_pennants",
+      "source": "street_pennants",
+      "stage": "scene",
+      "width": 455,
+      "height": 55,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_crossing_pennants.png"
+    },
+    {
+      "name": "steam_fx",
+      "source": "steam_fx",
+      "stage": "scene",
+      "width": 65,
+      "height": 95,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_tea_steam_fx.png"
+    },
+    {
+      "name": "town_handcart",
+      "source": "town_handcart",
+      "stage": "scene",
+      "width": 155,
+      "height": 110,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_west_market_handcart.png",
+      "footpoint": {
+        "x": 77.5,
+        "y": 101
+      }
+    },
+    {
+      "name": "water_station",
+      "source": "water_station",
+      "stage": "scene",
+      "width": 105,
+      "height": 165,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_street_water_station.png",
+      "footpoint": {
+        "x": 52.5,
+        "y": 152
+      }
+    },
+    {
+      "name": "tea_delivery_box",
+      "source": "wood_crates",
+      "stage": "scene",
+      "width": 105,
+      "height": 98,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_tea_delivery_nook.png",
+      "footpoint": {
+        "x": 52.5,
+        "y": 92
+      }
+    },
+    {
+      "name": "tailor_delivery_stool",
+      "source": "sewing_goods",
+      "stage": "scene",
+      "width": 92,
+      "height": 88,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_tailor_delivery_stool.png",
+      "footpoint": {
+        "x": 46,
+        "y": 84
+      }
+    },
+    {
+      "name": "tea_flower_vine",
+      "source": "flower_pot",
+      "stage": "scene",
+      "width": 94,
+      "height": 230,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_tea_flower_vine.png"
+    },
+    {
+      "name": "tailor_flower_vine",
+      "source": "flower_pot",
+      "stage": "scene",
+      "width": 92,
+      "height": 265,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_tailor_flower_vine.png"
+    },
+    {
+      "name": "east_flower_vine",
+      "source": "flower_pot",
+      "stage": "scene",
+      "width": 98,
+      "height": 300,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_east_flower_vine.png"
+    },
+    {
+      "name": "post_flower_vine",
+      "source": "flower_pot",
+      "stage": "scene",
+      "width": 94,
+      "height": 245,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_post_flower_vine.png"
+    },
+    {
+      "name": "chestnut_cart_front",
+      "source": "chestnut_cart",
+      "deriveFrom": "chestnut_cart",
+      "stage": "scene",
+      "width": 185,
+      "height": 110,
+      "crop": {
+        "left": 0,
+        "top": 95,
+        "width": 185,
+        "height": 110
+      },
+      "keepFullCanvas": true,
+      "runtime": "simple2d_scene/lc_chestnut_cart_front.png"
+    },
+    {
+      "name": "tea_whistle_overlap",
+      "source": "event_cup",
+      "stage": "scene",
+      "width": 48,
+      "height": 42,
+      "maxVisualHeight": 8,
+      "inset": 1,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_tea_whistle_foreground.png"
+    },
+    {
+      "name": "tailor_thimble_overlap",
+      "source": "sewing_goods",
+      "stage": "scene",
+      "width": 44,
+      "height": 40,
+      "maxVisualHeight": 8,
+      "inset": 1,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_tailor_thimble_foreground.png"
+    },
+    {
+      "name": "banner_knot_overlap",
+      "source": "street_banner",
+      "stage": "scene",
+      "width": 48,
+      "height": 48,
+      "maxVisualHeight": 8,
+      "inset": 1,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_banner_knot_foreground.png"
+    },
+    {
+      "name": "chestnut_tongs_overlap",
+      "source": "chestnut_cart",
+      "stage": "scene",
+      "width": 56,
+      "height": 50,
+      "maxVisualHeight": 8,
+      "inset": 1,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_chestnut_tongs_foreground.png"
+    },
+    {
+      "name": "target_tea_clay_whistle",
+      "stage": "targets",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/tea_clay_whistle.png"
+    },
+    {
+      "name": "target_tailor_thimble",
+      "stage": "targets",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/tailor_thimble.png"
+    },
+    {
+      "name": "target_banner_knot",
+      "stage": "targets",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/banner_knot.png"
+    },
+    {
+      "name": "target_chestnut_tongs",
+      "stage": "targets",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/chestnut_tongs.png"
+    },
+    {
+      "name": "target_pocket_watch",
+      "stage": "targets",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/pocket_watch.png"
+    },
+    {
+      "name": "target_sewing_scissors",
+      "stage": "targets",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/sewing_scissors.png"
+    },
+    {
+      "name": "target_blue_feather",
+      "stage": "targets",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/blue_feather.png"
+    },
+    {
+      "name": "target_sealed_letter",
+      "stage": "targets",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/sealed_letter.png"
+    },
+    {
+      "name": "target_honey_dipper",
+      "stage": "targets",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/honey_dipper.png"
+    },
+    {
+      "name": "target_seed_packet",
+      "stage": "targets",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/seed_packet.png"
+    },
+    {
+      "name": "target_orchard_apple",
+      "stage": "targets",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/orchard_apple.png"
+    },
+    {
+      "name": "target_golden_bun",
+      "stage": "targets",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/golden_bun.png"
+    },
+    {
+      "name": "parcel_chest_closed",
+      "source": "parcel_chest_states",
+      "stage": "interactions",
+      "width": 256,
+      "height": 256,
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 887,
+        "height": 887
+      },
+      "keepFullCanvas": true,
+      "runtime": "interactions/parcel_chest_closed.png"
+    },
+    {
+      "name": "parcel_chest_opened",
+      "source": "parcel_chest_states",
+      "stage": "interactions",
+      "width": 256,
+      "height": 256,
+      "crop": {
+        "left": 887,
+        "top": 0,
+        "width": 887,
+        "height": 887
+      },
+      "keepFullCanvas": true,
+      "runtime": "interactions/parcel_chest_opened.png"
+    },
+    {
+      "name": "flower_leaves_closed",
+      "source": "flower_leaves_states",
+      "stage": "interactions",
+      "width": 256,
+      "height": 256,
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 887,
+        "height": 887
+      },
+      "keepFullCanvas": true,
+      "runtime": "interactions/flower_leaves_closed.png"
+    },
+    {
+      "name": "flower_leaves_opened",
+      "source": "flower_leaves_states",
+      "stage": "interactions",
+      "width": 256,
+      "height": 256,
+      "crop": {
+        "left": 887,
+        "top": 0,
+        "width": 887,
+        "height": 887
+      },
+      "keepFullCanvas": true,
+      "runtime": "interactions/flower_leaves_opened.png"
+    },
+    {
+      "name": "bun_lid_closed",
+      "source": "bun_lid_states",
+      "stage": "interactions",
+      "width": 256,
+      "height": 256,
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 887,
+        "height": 887
+      },
+      "keepFullCanvas": true,
+      "runtime": "interactions/bun_lid_closed.png"
+    },
+    {
+      "name": "bun_lid_opened",
+      "source": "bun_lid_states",
+      "stage": "interactions",
+      "width": 256,
+      "height": 256,
+      "crop": {
+        "left": 887,
+        "top": 0,
+        "width": 887,
+        "height": 887
+      },
+      "keepFullCanvas": true,
+      "runtime": "interactions/bun_lid_opened.png"
+    },
+    {
+      "name": "event_cup",
+      "stage": "extras",
+      "width": 64,
+      "height": 64,
+      "inset": 4,
+      "runtime": "event_cup.png"
+    },
+    {
+      "name": "ui_panel",
+      "stage": "ui",
+      "width": 256,
+      "height": 256,
+      "inset": 0,
+      "nineSliceBorder": 40,
+      "runtime": "ui/ui_panel.png"
+    },
+    {
+      "name": "ui_button",
+      "stage": "ui",
+      "width": 256,
+      "height": 256,
+      "inset": 0,
+      "nineSliceBorder": 40,
+      "runtime": "ui/ui_button.png"
+    },
+    {
+      "name": "ui_hint_ring",
+      "stage": "ui",
+      "width": 256,
+      "height": 256,
+      "inset": 0,
+      "runtime": "ui/ui_hint_ring.png"
+    },
+    {
+      "name": "ui_backdrop",
+      "source": "town_ground",
+      "stage": "ui",
+      "width": 128,
+      "height": 128,
+      "crop": {
+        "left": 20,
+        "top": 20,
+        "width": 200,
+        "height": 200
+      },
+      "keepFullCanvas": true,
+      "transparent": false,
+      "runtime": "ui/ui_backdrop.png"
+    },
+    {
+      "name": "garden_market_02_garden_ground",
+      "source": "garden_ground",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 1536,
+      "height": 2048,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_garden_ground.png",
+      "transparent": false,
+      "keepFullCanvas": true
+    },
+    {
+      "name": "garden_market_02_greenhouse",
+      "source": "garden_greenhouse",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 490,
+      "height": 500,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_greenhouse.png"
+    },
+    {
+      "name": "garden_market_02_flower_shop",
+      "source": "garden_flower_shop",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 455,
+      "height": 510,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_flower_shop.png"
+    },
+    {
+      "name": "garden_market_02_garden_cafe",
+      "source": "shop_red",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 420,
+      "height": 460,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_garden_cafe.png"
+    },
+    {
+      "name": "garden_market_02_garden_workshop",
+      "source": "pottery_annex",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 340,
+      "height": 360,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_garden_workshop.png"
+    },
+    {
+      "name": "garden_market_02_garden_barn",
+      "source": "grain_house",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 370,
+      "height": 280,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_garden_barn.png"
+    },
+    {
+      "name": "garden_market_02_herb_workstand",
+      "source": "herb_stand",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 185,
+      "height": 225,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_herb_workstand.png"
+    },
+    {
+      "name": "garden_market_02_flower_display",
+      "source": "flower_display",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 210,
+      "height": 190,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_flower_display.png"
+    },
+    {
+      "name": "garden_market_02_orchard_produce",
+      "source": "produce_display",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 185,
+      "height": 170,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_orchard_produce.png"
+    },
+    {
+      "name": "garden_market_02_tea_table",
+      "source": "tea_patio",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 200,
+      "height": 160,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_tea_table.png"
+    },
+    {
+      "name": "garden_market_02_garden_bench",
+      "source": "town_bench",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 230,
+      "height": 115,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_garden_bench.png"
+    },
+    {
+      "name": "garden_market_02_tool_crates",
+      "source": "wood_crates",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 165,
+      "height": 145,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_tool_crates.png"
+    },
+    {
+      "name": "garden_market_02_hat_basket",
+      "source": "wood_crates",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 170,
+      "height": 155,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_hat_basket.png"
+    },
+    {
+      "name": "garden_market_02_garden_sign",
+      "source": "town_signpost",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 85,
+      "height": 165,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_garden_sign.png"
+    },
+    {
+      "name": "garden_market_02_garden_tree_west",
+      "source": "town_tree",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 260,
+      "height": 350,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_garden_tree_west.png"
+    },
+    {
+      "name": "garden_market_02_garden_tree_east",
+      "source": "town_tree",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 220,
+      "height": 310,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_garden_tree_east.png"
+    },
+    {
+      "name": "garden_market_02_flower_pots_nw",
+      "source": "flower_pot",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 125,
+      "height": 240,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_flower_pots_nw.png"
+    },
+    {
+      "name": "garden_market_02_flower_pots_ne",
+      "source": "flower_pot",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 120,
+      "height": 235,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_flower_pots_ne.png"
+    },
+    {
+      "name": "garden_market_02_flower_pots_sw",
+      "source": "flower_pot",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 115,
+      "height": 220,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_flower_pots_sw.png"
+    },
+    {
+      "name": "garden_market_02_flower_pots_se",
+      "source": "flower_pot",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 110,
+      "height": 215,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_flower_pots_se.png"
+    },
+    {
+      "name": "garden_market_02_garden_cart",
+      "source": "town_handcart",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 180,
+      "height": 130,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_garden_cart.png"
+    },
+    {
+      "name": "garden_market_02_garden_fountain",
+      "source": "water_station",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 140,
+      "height": 195,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_garden_fountain.png"
+    },
+    {
+      "name": "garden_market_02_garden_pottery",
+      "source": "pottery_display",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 145,
+      "height": 140,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_garden_pottery.png"
+    },
+    {
+      "name": "garden_market_02_flower_rack",
+      "source": "tailor_rack",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 145,
+      "height": 180,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_flower_rack.png"
+    },
+    {
+      "name": "garden_market_02_garden_lantern",
+      "source": "lantern_post",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 110,
+      "height": 240,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_garden_lantern.png"
+    },
+    {
+      "name": "garden_market_02_garden_pennants",
+      "source": "street_pennants",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 450,
+      "height": 55,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_garden_pennants.png"
+    },
+    {
+      "name": "garden_market_02_target_watering_can",
+      "source": "target_watering_can",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/watering_can.png"
+    },
+    {
+      "name": "garden_market_02_target_garden_gloves",
+      "source": "target_garden_gloves",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/garden_gloves.png"
+    },
+    {
+      "name": "garden_market_02_target_garden_trowel",
+      "source": "target_garden_trowel",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/garden_trowel.png"
+    },
+    {
+      "name": "garden_market_02_target_rose_bloom",
+      "source": "target_rose_bloom",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/rose_bloom.png"
+    },
+    {
+      "name": "garden_market_02_target_yellow_pear",
+      "source": "target_yellow_pear",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/yellow_pear.png"
+    },
+    {
+      "name": "garden_market_02_target_honey_jar",
+      "source": "target_honey_jar",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/honey_jar.png"
+    },
+    {
+      "name": "garden_market_02_target_garden_key",
+      "source": "target_garden_key",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/garden_key.png"
+    },
+    {
+      "name": "garden_market_02_target_butterfly_badge",
+      "source": "target_butterfly_badge",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/butterfly_badge.png"
+    },
+    {
+      "name": "garden_market_02_target_ribbon_spool",
+      "source": "target_ribbon_spool",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/ribbon_spool.png"
+    },
+    {
+      "name": "garden_market_02_target_straw_hat",
+      "source": "target_straw_hat",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/straw_hat.png"
+    },
+    {
+      "name": "garden_market_02_target_acorn",
+      "source": "target_acorn",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/acorn.png"
+    },
+    {
+      "name": "garden_market_02_target_lavender_sachet",
+      "source": "target_lavender_sachet",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/lavender_sachet.png"
+    },
+    {
+      "name": "harbor_walk_03_harbor_ground",
+      "source": "harbor_ground",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 1536,
+      "height": 2048,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_harbor_ground.png",
+      "transparent": false,
+      "keepFullCanvas": true
+    },
+    {
+      "name": "harbor_walk_03_ferry_house",
+      "source": "harbor_ferry_house",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 300,
+      "height": 330,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_ferry_house.png"
+    },
+    {
+      "name": "harbor_walk_03_boathouse",
+      "source": "harbor_boathouse",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 430,
+      "height": 450,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_boathouse.png"
+    },
+    {
+      "name": "harbor_walk_03_harbor_cafe",
+      "source": "shop_blue",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 300,
+      "height": 340,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_harbor_cafe.png"
+    },
+    {
+      "name": "harbor_walk_03_harbor_bakery",
+      "source": "shop_bakery",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 425,
+      "height": 455,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_harbor_bakery.png"
+    },
+    {
+      "name": "harbor_walk_03_harbor_post",
+      "source": "post_house",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 390,
+      "height": 270,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_harbor_post.png"
+    },
+    {
+      "name": "harbor_walk_03_quay_tree",
+      "source": "town_tree",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 240,
+      "height": 325,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_quay_tree.png"
+    },
+    {
+      "name": "harbor_walk_03_ferry_lantern",
+      "source": "lantern_post",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 85,
+      "height": 215,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_ferry_lantern.png"
+    },
+    {
+      "name": "harbor_walk_03_quay_lantern",
+      "source": "lantern_post",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 105,
+      "height": 245,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_quay_lantern.png"
+    },
+    {
+      "name": "harbor_walk_03_harbor_bench",
+      "source": "town_bench",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 225,
+      "height": 120,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_harbor_bench.png"
+    },
+    {
+      "name": "harbor_walk_03_harbor_tea_table",
+      "source": "tea_patio",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 200,
+      "height": 165,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_harbor_tea_table.png"
+    },
+    {
+      "name": "harbor_walk_03_harbor_food_cart",
+      "source": "bun_cart",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 175,
+      "height": 230,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_harbor_food_cart.png"
+    },
+    {
+      "name": "harbor_walk_03_captain_crate",
+      "source": "wood_crates",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 155,
+      "height": 145,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_captain_crate.png"
+    },
+    {
+      "name": "harbor_walk_03_quay_flowers",
+      "source": "flower_display",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 190,
+      "height": 165,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_quay_flowers.png"
+    },
+    {
+      "name": "harbor_walk_03_dock_rope_goods",
+      "source": "wood_crates",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 150,
+      "height": 150,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_dock_rope_goods.png"
+    },
+    {
+      "name": "harbor_walk_03_harbor_pottery",
+      "source": "pottery_display",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 180,
+      "height": 180,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_harbor_pottery.png"
+    },
+    {
+      "name": "harbor_walk_03_quay_handcart",
+      "source": "town_handcart",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 180,
+      "height": 135,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_quay_handcart.png"
+    },
+    {
+      "name": "harbor_walk_03_ferry_sign",
+      "source": "town_signpost",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 85,
+      "height": 160,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_ferry_sign.png"
+    },
+    {
+      "name": "harbor_walk_03_harbor_water",
+      "source": "water_station",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 125,
+      "height": 175,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_harbor_water.png"
+    },
+    {
+      "name": "harbor_walk_03_pier_crates",
+      "source": "wood_crates",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 155,
+      "height": 155,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_pier_crates.png"
+    },
+    {
+      "name": "harbor_walk_03_ferry_vine",
+      "source": "flower_pot",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 80,
+      "height": 150,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_ferry_vine.png"
+    },
+    {
+      "name": "harbor_walk_03_boathouse_vine",
+      "source": "flower_pot",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 110,
+      "height": 220,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_boathouse_vine.png"
+    },
+    {
+      "name": "harbor_walk_03_harbor_cafe_vine",
+      "source": "flower_pot",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 85,
+      "height": 170,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_harbor_cafe_vine.png"
+    },
+    {
+      "name": "harbor_walk_03_quay_pennants",
+      "source": "street_pennants",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 470,
+      "height": 65,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_quay_pennants.png"
+    },
+    {
+      "name": "harbor_walk_03_harbor_banner",
+      "source": "street_banner",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 440,
+      "height": 80,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc_harbor_banner.png"
+    },
+    {
+      "name": "harbor_walk_03_target_seashell",
+      "source": "target_seashell",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/seashell.png"
+    },
+    {
+      "name": "harbor_walk_03_target_compass",
+      "source": "target_compass",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/compass.png"
+    },
+    {
+      "name": "harbor_walk_03_target_boat_rope",
+      "source": "target_boat_rope",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/boat_rope.png"
+    },
+    {
+      "name": "harbor_walk_03_target_fishing_float",
+      "source": "target_fishing_float",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/fishing_float.png"
+    },
+    {
+      "name": "harbor_walk_03_target_blue_mug",
+      "source": "target_blue_mug",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/blue_mug.png"
+    },
+    {
+      "name": "harbor_walk_03_target_harbor_ticket",
+      "source": "target_harbor_ticket",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/harbor_ticket.png"
+    },
+    {
+      "name": "harbor_walk_03_target_brass_bell",
+      "source": "target_brass_bell",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/brass_bell.png"
+    },
+    {
+      "name": "harbor_walk_03_target_starfish",
+      "source": "target_starfish",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/starfish.png"
+    },
+    {
+      "name": "harbor_walk_03_target_lemon",
+      "source": "target_lemon",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/lemon.png"
+    },
+    {
+      "name": "harbor_walk_03_target_folded_map",
+      "source": "target_folded_map",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/folded_map.png"
+    },
+    {
+      "name": "harbor_walk_03_target_fish_charm",
+      "source": "target_fish_charm",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/fish_charm.png"
+    },
+    {
+      "name": "harbor_walk_03_target_bottle_message",
+      "source": "target_bottle_message",
+      "stage": "chapters",
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/bottle_message.png"
+    }
+  ]
+}

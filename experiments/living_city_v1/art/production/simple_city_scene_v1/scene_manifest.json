@@ -20,7 +20,7 @@
         "height": 2048
       },
       "transparent": false,
-      "authoringBrief": "Continuous ground, curb and street texture only; no baked characters, stalls or trees.",
+      "authoringBrief": "Continuous ground and shopfront paving; 416-unit north-south traffic lane and 190-unit cross lane sit inside walkable sidewalks. No baked characters, stalls or trees.",
       "generationSpec": {
         "method": "deterministic authored Pillow shapes",
         "supersampleScale": 2,
@@ -32,7 +32,7 @@
         "origin": "blueprint artSlot center",
         "bundlePath": "simple2d_scene/lc_ground_paving/spriteFrame"
       },
-      "sha256": "8990e084feda5a33bb8a07070d4d9908fd9d0831b5e725c6010ed4b0fca7c5b1",
+      "sha256": "5590c5c0367f6936e9eeb5c415644efb2bd7e3b50cb6da58e0fc403721f2c18a",
       "status": "candidate_visual_review"
     },
     {
@@ -60,7 +60,7 @@
         "origin": "blueprint artSlot center",
         "bundlePath": "simple2d_scene/lc_west_storefront_back/spriteFrame"
       },
-      "sha256": "3c0857c754d0d2f3f240a0b6a082d57ebe22b3568cc5e10ac66c84e76311fa50",
+      "sha256": "83d80a58b67d0975ec707a7f75e8919d1064a237dd165111c7ab90de49157ab6",
       "status": "candidate_visual_review"
     },
     {
@@ -88,7 +88,7 @@
         "origin": "blueprint artSlot center",
         "bundlePath": "simple2d_scene/lc_east_storefront_back/spriteFrame"
       },
-      "sha256": "0900205da499617ab8cc7c1ca722fff1389d5a5fe9e3a7670c05a8d18abc9efc",
+      "sha256": "50afa11a38bc2b97a5e253a874bf3d4de0e9e89c70d4cac6d18a4e5f5d9855b1",
       "status": "candidate_visual_review"
     },
     {
@@ -116,7 +116,7 @@
         "origin": "blueprint artSlot center",
         "bundlePath": "simple2d_scene/lc_west_tailor_back/spriteFrame"
       },
-      "sha256": "b14688efd2930712cb0842e4fc609c71a26eb3e2bd5f2e6f48317e3db5033073",
+      "sha256": "094d9b36845f5e18b0bba9f905563449d5459d7568cf7361e2689319440dc04b",
       "status": "candidate_visual_review"
     },
     {
@@ -144,7 +144,7 @@
         "origin": "blueprint artSlot center",
         "bundlePath": "simple2d_scene/lc_east_food_shop_back/spriteFrame"
       },
-      "sha256": "f60aab347c10e5c739d3ce2a6cce592bec30824aea807ce7a1b187767db49108",
+      "sha256": "0b9d361550e000f7b8082711f1d200adcac321e24ef5455c5633558bcd7d50db",
       "status": "candidate_visual_review"
     },
     {
@@ -264,7 +264,7 @@
       "filename": "png/lc_chestnut_cart_back.png",
       "layer": "street_back",
       "center": {
-        "x": 447,
+        "x": 270,
         "y": -430
       },
       "size": {
@@ -272,7 +272,7 @@
         "height": 205
       },
       "transparent": true,
-      "authoringBrief": "East plaza cart body, tray and steam kettle.",
+      "authoringBrief": "Street-edge chestnut cart body and tray, on the apron between the narrower traffic lane and southeast shop. The seller stands on the open lane beside it.",
       "generationSpec": {
         "method": "deterministic authored Pillow shapes",
         "supersampleScale": 2,
@@ -284,7 +284,7 @@
         "origin": "blueprint artSlot center",
         "bundlePath": "simple2d_scene/lc_chestnut_cart_back/spriteFrame"
       },
-      "sha256": "2e8ed077e658826f4cf3d02f11741ad25c374a1c90d0bdf122bc3ac3a552f23b",
+      "sha256": "23467d013163d7134611d34c96616b67670aa2294a18e4454eaa3e6b1c581808",
       "status": "candidate_visual_review"
     },
     {
@@ -292,7 +292,7 @@
       "filename": "png/lc_chestnut_cart_front.png",
       "layer": "depth",
       "center": {
-        "x": 447,
+        "x": 270,
         "y": -482
       },
       "size": {
@@ -300,7 +300,7 @@
         "height": 110
       },
       "transparent": true,
-      "authoringBrief": "Near lip and wheel occluder; seller stands behind.",
+      "authoringBrief": "Near lip and visible near-side wheels; no duplicate wheels on the cart back layer.",
       "generationSpec": {
         "method": "deterministic authored Pillow shapes",
         "supersampleScale": 2,
@@ -900,7 +900,7 @@
         "origin": "blueprint artSlot center",
         "bundlePath": "simple2d_scene/lc_south_post_house_back/spriteFrame"
       },
-      "sha256": "e48f9edc2b59b76075d3d8f4c0dbcd4b7b8fa70cf7cc91a602d3b8069acb73d5",
+      "sha256": "0801b6367bda8757fd0394c85412214a002baef137e032b8ec948103553f5f5f",
       "status": "candidate_visual_review"
     },
     {
@@ -928,7 +928,7 @@
         "origin": "blueprint artSlot center",
         "bundlePath": "simple2d_scene/lc_south_grain_house_back/spriteFrame"
       },
-      "sha256": "ed76a41ad6da08cf235f5fe12f1fa6ffa2dafb970760184d87e5ce2315b73e36",
+      "sha256": "eb61b2e45df761cb6d0e45ada667bc0ddfe22e57358b1e8c20b682261bdd32dc",
       "status": "candidate_visual_review"
     },
     {
@@ -957,6 +957,62 @@
         "bundlePath": "simple2d_scene/lc_east_pottery_annex_back/spriteFrame"
       },
       "sha256": "cd8348a8b57f1b28f126297a077f79234eee76ae3ee1007e9986b20232a15679",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_tea_delivery_nook",
+      "filename": "png/lc_tea_delivery_nook.png",
+      "layer": "depth",
+      "center": {
+        "x": -347,
+        "y": -132
+      },
+      "size": {
+        "width": 105,
+        "height": 98
+      },
+      "transparent": true,
+      "authoringBrief": "Tea stall's refill baskets and used-cup crate form a small working nook at the west street corner, outside the tea regular's loop and the public cross-lane.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "210x196"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "105x98",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_tea_delivery_nook/spriteFrame"
+      },
+      "sha256": "5445316f5f395b7ef8ba7a7f5fb81752c5ea00d933a7bfc82eaaa85bdfc83243",
+      "status": "candidate_visual_review"
+    },
+    {
+      "id": "lc_tailor_delivery_stool",
+      "filename": "png/lc_tailor_delivery_stool.png",
+      "layer": "depth",
+      "center": {
+        "x": -265,
+        "y": -535
+      },
+      "size": {
+        "width": 92,
+        "height": 88
+      },
+      "transparent": true,
+      "authoringBrief": "A low tailor's delivery stool carries folded fabric and a tied bundle by the shop threshold; no task-like loose objects.",
+      "generationSpec": {
+        "method": "deterministic authored Pillow shapes",
+        "supersampleScale": 2,
+        "nativeCanvasPx": "184x176"
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvasPx": "92x88",
+        "origin": "blueprint artSlot center",
+        "bundlePath": "simple2d_scene/lc_tailor_delivery_stool/spriteFrame"
+      },
+      "sha256": "ed02dab2a3eaead1ae6de4abcc3a8a81509c30db8077542ac634806f26a2eca6",
       "status": "candidate_visual_review"
     },
     {
@@ -1051,7 +1107,7 @@
       "filename": "png/lc_chestnut_tongs_foreground.png",
       "layer": "target_foreground",
       "center": {
-        "x": 430,
+        "x": 253,
         "y": -407
       },
       "size": {

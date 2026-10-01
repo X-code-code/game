@@ -9,44 +9,51 @@
   ],
   "subMetas": {
     "6c48a": {
+      "ver": "1.0.22",
       "importer": "texture",
+      "imported": true,
       "uuid": "a29d5d73-d84f-4a87-b893-991a22d6553c@6c48a",
       "displayName": "lc_curb_pottery_west",
       "id": "6c48a",
       "name": "texture",
-      "userData": {
-        "wrapModeS": "clamp-to-edge",
-        "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "a29d5d73-d84f-4a87-b893-991a22d6553c",
-        "isUuid": true,
-        "visible": false,
-        "minfilter": "linear",
-        "magfilter": "linear",
-        "mipfilter": "none",
-        "anisotropy": 0
-      },
-      "ver": "1.0.22",
-      "imported": true,
       "files": [
         ".json"
       ],
-      "subMetas": {}
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "imageUuidOrDatabaseUri": "a29d5d73-d84f-4a87-b893-991a22d6553c",
+        "isUuid": true,
+        "visible": false
+      }
     },
     "f9941": {
+      "ver": "1.0.12",
       "importer": "sprite-frame",
+      "imported": true,
       "uuid": "a29d5d73-d84f-4a87-b893-991a22d6553c@f9941",
       "displayName": "lc_curb_pottery_west",
       "id": "f9941",
       "name": "spriteFrame",
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
       "userData": {
+        "trimType": "custom",
         "trimThreshold": 1,
         "rotated": false,
-        "offsetX": 1,
-        "offsetY": -9.5,
-        "trimX": 3,
-        "trimY": 19,
-        "width": 86,
-        "height": 91,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 90,
+        "height": 110,
         "rawWidth": 90,
         "rawHeight": 110,
         "borderTop": 0,
@@ -58,19 +65,52 @@
         "pivotX": 0.5,
         "pivotY": 0.5,
         "meshType": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "a29d5d73-d84f-4a87-b893-991a22d6553c@6c48a",
+        "atlasUuid": "",
         "vertices": {
           "rawPosition": [
-            -43,
-            -45.5,
+            -45,
+            -55,
             0,
-            43,
-            -45.5,
+            45,
+            -55,
             0,
-            -43,
-            45.5,
+            -45,
+            55,
             0,
-            43,
-            45.5,
+            45,
+            55,
+            0
+          ],
+          "uv": [
+            0,
+            110,
+            90,
+            110,
+            0,
+            0,
+            90,
+            0
+          ],
+          "nuv": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "minPos": [
+            -45,
+            -55,
+            0
+          ],
+          "maxPos": [
+            45,
+            55,
             0
           ],
           "indexes": [
@@ -80,49 +120,9 @@
             2,
             1,
             3
-          ],
-          "uv": [
-            3,
-            91,
-            89,
-            91,
-            3,
-            0,
-            89,
-            0
-          ],
-          "nuv": [
-            0.03333333333333333,
-            0,
-            0.9888888888888889,
-            0,
-            0.03333333333333333,
-            0.8272727272727273,
-            0.9888888888888889,
-            0.8272727272727273
-          ],
-          "minPos": [
-            -43,
-            -45.5,
-            0
-          ],
-          "maxPos": [
-            43,
-            45.5,
-            0
           ]
-        },
-        "isUuid": true,
-        "imageUuidOrDatabaseUri": "a29d5d73-d84f-4a87-b893-991a22d6553c@6c48a",
-        "atlasUuid": "",
-        "trimType": "auto"
-      },
-      "ver": "1.0.12",
-      "imported": true,
-      "files": [
-        ".json"
-      ],
-      "subMetas": {}
+        }
+      }
     }
   },
   "userData": {

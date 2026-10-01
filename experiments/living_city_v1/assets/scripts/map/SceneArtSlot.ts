@@ -3,12 +3,12 @@ import { AssetManager, Graphics, Node, Sprite, SpriteFrame, UITransform, warn } 
 type Size = { width: number; height: number };
 
 /**
- * Replace one blueprint rectangle with its authored cutout. The canvas and node
+ * Load one generated cutout. The canvas and node
  * have the same size and centre, so a transparent pixel never changes placement.
- * The diagnostic Graphics remain visible until a complete SpriteFrame loads.
+ * Production scenes pass no drawing fallback; missing art stays empty.
  */
 export function loadSceneArtSlot(bundle: AssetManager.Bundle, slotId: string, node: Node,
-    fallback: Graphics, size: Size, onLoaded?: () => void): void {
+    fallback: Graphics | null, size: Size, onLoaded?: () => void): void {
     const path = `simple2d_scene/${slotId}/spriteFrame`;
     // A city can still run as a greybox when its production artwork is absent.
     if (!bundle.getInfoWithPath(path, SpriteFrame)) return;
@@ -30,7 +30,7 @@ export function loadSceneArtSlot(bundle: AssetManager.Bundle, slotId: string, no
         sprite.sizeMode = Sprite.SizeMode.CUSTOM;
         sprite.trim = false;
         sprite.spriteFrame = frame;
-        fallback.enabled = false;
+        if (fallback) fallback.enabled = false;
         // The greybox name is a child Label, which is independent of Graphics.
         for (const child of node.children) {
             if (child.name.startsWith('Label_')) child.active = false;

@@ -1,9 +1,9 @@
-import { AssetManager, Color, Graphics, JsonAsset, Label, Node, UITransform, Vec3, warn } from 'cc';
+import { AssetManager, Color, JsonAsset, Label, Node, Sprite, SpriteFrame, UIOpacity, UITransform, Vec3, warn } from 'cc';
 import { CelAnimationPlayer } from '../character/CelAnimationPlayer';
 import type { CelClipName } from '../character/CelAnimationPlayer';
-import { paintAmbientChicken } from '../character/AmbientChickenPainter';
-import type { AmbientChickenHeading } from '../character/AmbientChickenPainter';
+type AmbientChickenHeading = 'side' | 'north' | 'south';
 import { loadSceneArtSlot } from './SceneArtSlot';
+import { generatedUi } from '../ui/GeneratedUi';
 import type { SceneDepthLayer } from './SceneDepthLayer';
 import type { TapTarget, TargetClicked } from '../gameplay/TargetInput';
 
@@ -14,6 +14,7 @@ type NpcPlan = { id: string; role: string; actorHeight: number; footRadius: numb
     speedWorldUnitsPerSecond?: number; pauseSecondsAtWaypoints?: Record<string, number>; loop?: boolean };
 type Blueprint = {
     id: string;
+    npcClues?: Record<string, string>;
     map: { width: number; height: number };
     camera: { initialFocus: Point };
     artSlots: ArtSlot[];
@@ -25,40 +26,17 @@ type Blueprint = {
         resumeRouteAfterSeconds: number }[];
     hiddenObjectSlots: { id: string; supportArtSlotId: string; at: Point }[];
 };
-type NpcRuntime = { plan: NpcPlan; node: Node; graphic: Graphics; nextIndex: number;
+type NpcRuntime = { plan: NpcPlan; node: Node; nextIndex: number;
     paused: number; motionSeconds: number; moving: boolean; eventDone: boolean; facing: number;
     heading: AmbientChickenHeading; cels: CelAnimationPlayer | null; walkClip: CelClipName;
     turnSeconds: number };
 
-const COLOR = {
-    outline: new Color(83, 66, 55, 255),
-    paving: new Color(226, 213, 187, 255),
-    lane: new Color(238, 227, 203, 255),
-    private: new Color(204, 190, 159, 255),
-    route: new Color(60, 115, 97, 205),
-    block: new Color(138, 67, 60, 140),
-};
-const SLOT_COLOR: Record<string, Color> = {
-    building_back: new Color(118, 143, 151, 255),
-    street_back: new Color(181, 130, 96, 255),
-    depth: new Color(139, 104, 74, 255),
-    overhead: new Color(176, 91, 76, 230),
-    effects: new Color(105, 165, 174, 155),
-    target_foreground: new Color(139, 104, 74, 180),
-};
 const NPC_CLUES: Record<string, string> = {
     tea_vendor: '茶香里有只不会飞的小鸟，\n可别把它当茶杯。',
     flower_buyer: '裁缝铺的针线盘里，\n有件东西正好套在指尖。',
     lantern_watcher: '抬头看看街上的布幅，\n系布的人留下了个小结。',
     chestnut_seller: '栗子纸包旁少了一把铁器，\n烫手时我总靠它。',
 };
-
-function addGraphics(parent: Node, name: string): { node: Node; graphic: Graphics } {
-    const node = new Node(name);
-    parent.addChild(node);
-    node.addComponent(UITransform);
-    return { node, graphic: node.addComponent(Graphics) };
-}
 
 function label(parent: Node, value: string, x: number, y: number, size = 18): Node {
     const node = new Node(`Label_${value}`);
@@ -73,13 +51,7 @@ function label(parent: Node, value: string, x: number, y: number, size = 18): No
     return node;
 }
 
-function polygon(graphic: Graphics, vertices: number[][]): void {
-    graphic.moveTo(vertices[0][0], vertices[0][1]);
-    for (const vertex of vertices.slice(1)) graphic.lineTo(vertex[0], vertex[1]);
-    graphic.close();
-}
-
-/** Flat diagnostic geometry for the isolated traditional-2D level blockout. */
+/** Generated PNG scene placement, depth, NPC routes and interaction state. */
 export class LivingCityGreybox {
     private disposed = false;
     private backRoot: Node | null = null;
@@ -88,7 +60,7 @@ export class LivingCityGreybox {
     private eventSeconds = -1;
     private eventCompleted = false;
     private cupMarker: Node | null = null;
-    private ambientFx: Graphics | null = null;
+    private ambientFx: Node | null = null;
     private ambientSeconds = 0;
     private clueBubble: Node | null = null;
     private clueText: Label | null = null;
@@ -97,6 +69,7 @@ export class LivingCityGreybox {
     private debugLabel: Node | null = null;
     private artGroundLoaded = false;
     private blueprint: Blueprint | null = null;
+    private get clues(): Record<string, string> { return this.blueprint?.npcClues ?? NPC_CLUES; }
 
     /** Same gesture router as the hidden objects, with lower hit priority. */
     public readonly clueTarget: TapTarget = {
@@ -109,15 +82,16 @@ export class LivingCityGreybox {
 
     public constructor(private readonly map: Node, private readonly depth: SceneDepthLayer,
         private readonly bundle: AssetManager.Bundle, private readonly targetNodes: readonly Node[],
-        private readonly onReady: (focus: Point) => void) {
-        this.bundle.load('street_block_01', JsonAsset, (loadError, asset) => {
+        private readonly onReady: (focus: Point) => void,
+        blueprintPath = 'street_block_01', cityId = 'living_city_street_block_01') {
+        this.bundle.load(blueprintPath, JsonAsset, (loadError, asset) => {
             if (this.disposed || !this.map.isValid) return;
             if (loadError || !asset) {
                 warn('Living city greybox blueprint unavailable', loadError);
                 return;
             }
             const data = asset.json as Blueprint;
-            if (data?.id !== 'living_city_street_block_01' ||
+            if (data?.id !== cityId ||
                 data.map?.width !== 1536 || data.map?.height !== 2048) {
                 warn('Living city greybox blueprint has an unexpected identity or map size');
                 return;
@@ -129,116 +103,47 @@ export class LivingCityGreybox {
     }
 
     private draw(data: Blueprint): void {
-        const back = addGraphics(this.map, 'LivingCityGreyboxBack');
-        this.map.insertChild(back.node, 0);
-        back.node.getComponent(UITransform)?.setContentSize(data.map.width, data.map.height);
-        this.backRoot = back.node;
-        const g = back.graphic;
-        g.fillColor = COLOR.paving;
-        g.rect(-data.map.width / 2, -data.map.height / 2, data.map.width, data.map.height);
-        g.fill();
-        for (const region of data.walkableRegions) {
-            g.fillColor = region.access === 'public' ? COLOR.lane : COLOR.private;
-            g.strokeColor = new Color(171, 148, 112, 255);
-            g.lineWidth = 3;
-            polygon(g, region.polygon);
-            g.fill();
-            g.stroke();
+        const back = new Node('LivingCityGreyboxBack');
+        this.map.insertChild(back, 0);
+        back.addComponent(UITransform).setContentSize(data.map.width, data.map.height);
+        this.backRoot = back;
+        const ground = data.artSlots.find(slot => slot.layer === 'ground');
+        if (ground) loadSceneArtSlot(this.bundle, ground.id, back, null, ground.size,
+            () => { this.artGroundLoaded = true; });
+        for (const slot of data.artSlots.filter(slot => slot.layer === 'building_back' || slot.layer === 'street_back')) {
+            this.drawSlot(back, slot);
         }
-        g.strokeColor = new Color(196, 179, 145, 180);
-        g.lineWidth = 2;
-        for (let y = -850; y <= 850; y += 90) {
-            g.moveTo(-280, y);
-            g.lineTo(310, y);
-        }
-        g.stroke();
-
-        for (const slot of data.artSlots) {
-            if (slot.layer === 'ground' || slot.layer === 'depth' ||
-                slot.layer === 'overhead' || slot.layer === 'effects' ||
-                slot.layer === 'target_foreground') continue;
-            this.drawSlot(back.node, slot);
-        }
-        g.strokeColor = COLOR.route;
-        g.lineWidth = 6;
-        for (const plan of data.npcPlans) {
-            if (plan.route.length < 2) continue;
-            g.moveTo(plan.route[0].x, plan.route[0].y);
-            for (const waypoint of plan.route.slice(1)) g.lineTo(waypoint.x, waypoint.y);
-            g.stroke();
-        }
-        for (const spot of data.standingSpots) {
-            const { x, y } = spot.at;
-            g.lineWidth = 3;
-            g.strokeColor = spot.access === 'counter_surface'
-                ? new Color(68, 129, 156, 255) : new Color(55, 113, 113, 255);
-            g.circle(x, y, Math.max(8, spot.clearRadius));
-            g.stroke();
-        }
-
-        // The continuous ground art occupies the same blueprint rectangle. Its
-        // successful load also removes the route and standing-spot diagnostics.
-        const groundSlot = data.artSlots.find(slot => slot.layer === 'ground');
-        if (groundSlot) loadSceneArtSlot(this.bundle, groundSlot.id, back.node, back.graphic,
-            groundSlot.size, () => {
-                this.artGroundLoaded = true;
-                if (this.debugLabel?.isValid) this.debugLabel.active = false;
-            });
-
         for (const slot of data.artSlots.filter(slot => slot.layer === 'depth')) {
-            const entry = addGraphics(this.depth.node, slot.id);
-            entry.node.setPosition(slot.center.x, slot.center.y, 0);
-            entry.node.getComponent(UITransform)?.setContentSize(slot.size.width, slot.size.height);
-            this.drawSlotShape(entry.graphic, slot);
-            loadSceneArtSlot(this.bundle, slot.id, entry.node, entry.graphic, slot.size);
-            this.depth.addActor(entry.node, () => slot.footY ?? slot.center.y);
+            const node = this.drawSlot(this.depth.node, slot);
+            this.depth.addActor(node, () => slot.footY ?? slot.center.y, true);
         }
         for (const plan of data.npcPlans) this.addNpc(plan);
-
-        const front = addGraphics(this.map, 'LivingCityGreyboxOverhead');
-        front.node.getComponent(UITransform)?.setContentSize(data.map.width, data.map.height);
-        this.frontRoot = front.node;
+        const front = new Node('LivingCityGreyboxOverhead');
+        this.map.addChild(front);
+        front.addComponent(UITransform).setContentSize(data.map.width, data.map.height);
+        this.frontRoot = front;
         for (const slot of data.artSlots.filter(slot => slot.layer === 'overhead' || slot.layer === 'effects')) {
-            this.drawSlot(front.node, slot);
+            const node = this.drawSlot(front, slot);
+            if (slot.layer === 'effects') { node.addComponent(UIOpacity); this.ambientFx = node; }
         }
         for (const target of data.hiddenObjectSlots) {
             const slot = data.artSlots.find(item => item.id === target.supportArtSlotId);
             if (slot?.layer !== 'overhead') continue;
-            const targetNode = this.targetNodes.find(node => node.name === target.id);
-            if (targetNode?.isValid) front.node.addChild(targetNode);
+            const node = this.targetNodes.find(node => node.name === target.id);
+            if (node?.isValid) front.addChild(node);
         }
-        // Tiny authored foreground fragments (cup lip, fabric fold, tray edge)
-        // sit above target art. They have no hit area, so a partly covered item
-        // remains tappable through its separate HiddenObject node.
-        for (const slot of data.artSlots.filter(slot => slot.layer === 'target_foreground')) {
-            this.drawSlot(front.node, slot);
-        }
-        // These curves are redrawn over time, independent of the static PNG
-        // layers: steam rises from two working stalls and water ripples in the
-        // roadside basin. The effect node has no touch handler or hit area.
-        this.ambientFx = addGraphics(front.node, 'LivingStreetAmbientFx').graphic;
-        this.paintAmbientFx();
-        const cup = addGraphics(front.node, 'TeaCupHandoffMarker');
-        cup.node.setPosition(-340, 382, 0);
-        cup.graphic.fillColor = new Color(243, 230, 198, 255);
-        cup.graphic.strokeColor = COLOR.outline;
-        cup.graphic.lineWidth = 2.5;
-        cup.graphic.moveTo(-8, 4);
-        cup.graphic.lineTo(8, 4);
-        cup.graphic.lineTo(6, -5);
-        cup.graphic.lineTo(-6, -5);
-        cup.graphic.close();
-        cup.graphic.fill();
-        cup.graphic.stroke();
-        cup.graphic.strokeColor = new Color(185, 104, 77, 255);
-        cup.graphic.moveTo(-5, 1);
-        cup.graphic.lineTo(5, 1);
-        cup.graphic.stroke();
-        cup.node.active = false;
-        this.cupMarker = cup.node;
-        this.debugLabel = label(front.node, 'GREYBOX / GEOMETRY ONLY', 0, 940, 22);
-        this.debugLabel.active = !this.artGroundLoaded;
-        this.createClueBubble(front.node);
+        for (const slot of data.artSlots.filter(slot => slot.layer === 'target_foreground')) this.drawSlot(front, slot);
+        const cup = new Node('TeaCupHandoffMarker');
+        front.addChild(cup);
+        cup.setPosition(-340, 382, 0);
+        cup.addComponent(UITransform).setContentSize(19, 19);
+        const sprite = cup.addComponent(Sprite);
+        sprite.sizeMode = Sprite.SizeMode.CUSTOM;
+        const cupPath = 'event_cup/spriteFrame';
+        if (this.bundle.getInfoWithPath(cupPath, SpriteFrame)) this.bundle.load(cupPath, SpriteFrame,
+            (_error, frame) => { if (cup.isValid && frame) sprite.spriteFrame = frame; });
+        cup.active = false; this.cupMarker = cup;
+        this.createClueBubble(front);
         this.depth.sort();
     }
 
@@ -246,7 +151,7 @@ export class LivingCityGreybox {
         if (this.disposed || !this.blueprint) return null;
         const point = new Vec3(uiX, uiY, 0);
         for (const npc of this.npcs) {
-            if (!NPC_CLUES[npc.plan.id] || !npc.node.isValid) continue;
+            if (!this.clues[npc.plan.id] || !npc.node.isValid) continue;
             const local = npc.node.getComponent(UITransform)?.convertToNodeSpaceAR(point);
             if (local && Math.abs(local.x) <= 42 && local.y >= 0 &&
                 local.y <= npc.plan.actorHeight + 10) return npc;
@@ -255,19 +160,10 @@ export class LivingCityGreybox {
     }
 
     private createClueBubble(parent: Node): void {
-        const { node, graphic } = addGraphics(parent, 'LivingCityNpcClue');
-        node.getComponent(UITransform)?.setContentSize(330, 112);
-        graphic.fillColor = new Color(255, 247, 224, 250);
-        graphic.strokeColor = COLOR.outline;
-        graphic.lineWidth = 3;
-        graphic.roundRect(-165, -48, 330, 96, 15);
-        graphic.fill();
-        graphic.stroke();
-        graphic.moveTo(-15, -48);
-        graphic.lineTo(-5, -61);
-        graphic.lineTo(4, -48);
-        graphic.fill();
-        graphic.stroke();
+        const node = new Node('LivingCityNpcClue');
+        parent.addChild(node);
+        node.addComponent(UITransform).setContentSize(330, 112);
+        generatedUi(node, 'ui_panel', this.bundle);
         const textNode = new Node('ClueText');
         node.addChild(textNode);
         textNode.addComponent(UITransform).setContentSize(310, 82);
@@ -284,7 +180,7 @@ export class LivingCityGreybox {
 
     public showNpcClue(npcId: string): void {
         const npc = this.npcs.find(item => item.plan.id === npcId);
-        const text = NPC_CLUES[npcId];
+        const text = this.clues[npcId];
         if (!npc || !text || !this.clueBubble?.isValid || !this.clueText) return;
         this.clueNpcId = npcId;
         this.clueSeconds = 4;
@@ -300,24 +196,13 @@ export class LivingCityGreybox {
             Math.min(924, npc.node.position.y + npc.plan.actorHeight + 105), 0);
     }
 
-    private drawSlot(parent: Node, slot: ArtSlot): void {
-        const entry = addGraphics(parent, slot.id);
-        entry.node.setPosition(slot.center.x, slot.center.y, 0);
-        entry.node.getComponent(UITransform)?.setContentSize(slot.size.width, slot.size.height);
-        this.drawSlotShape(entry.graphic, slot);
-        loadSceneArtSlot(this.bundle, slot.id, entry.node, entry.graphic, slot.size);
-    }
-
-    private drawSlotShape(g: Graphics, slot: ArtSlot): void {
-        const { width, height } = slot.size;
-        g.fillColor = SLOT_COLOR[slot.layer] ?? COLOR.paving;
-        g.strokeColor = COLOR.outline;
-        g.lineWidth = 3;
-        g.rect(-width / 2, -height / 2, width, height);
-        g.fill();
-        g.stroke();
-        const text = slot.id.replace('lc_', '').replace('_back', '').replace('_front', '');
-        if (width >= 90 && height >= 90) label(g.node, text, 0, 0, 14);
+    private drawSlot(parent: Node, slot: ArtSlot): Node {
+        const node = new Node(slot.id);
+        parent.addChild(node);
+        node.setPosition(slot.center.x, slot.center.y, 0);
+        node.addComponent(UITransform).setContentSize(slot.size.width, slot.size.height);
+        loadSceneArtSlot(this.bundle, slot.id, node, null, slot.size);
+        return node;
     }
 
     private addNpc(plan: NpcPlan): void {
@@ -325,80 +210,17 @@ export class LivingCityGreybox {
         const start = plan.route[0];
         node.setPosition(start.x, start.y, 0);
         node.addComponent(UITransform).setContentSize(100, plan.actorHeight);
-        const graphic = node.addComponent(Graphics);
         this.depth.addActor(node, () => node.position.y);
-        const nameLabel = label(node, plan.id.replace('_customer', '').replace('_seller', ''), 60,
-            plan.actorHeight * 0.65, 14);
-        nameLabel.active = plan.id === 'messenger_customer';
-        // Only the messenger is in the current character-production batch. A missing
-        // cel manifest keeps the existing route marker and diagnostic drawing.
-        const cels = plan.id === 'messenger_customer'
-            ? new CelAnimationPlayer(node, graphic, nameLabel, this.bundle, plan.id,
-                `cels/${plan.id}`, plan.actorHeight) : null;
+        const cels = new CelAnimationPlayer(node, null, null, this.bundle, plan.id,
+            `cels/${plan.id}`, plan.actorHeight);
         const firstDestination = plan.route[1];
-        const initialDx = firstDestination ? firstDestination.x - start.x : 0;
-        const initialDy = firstDestination ? firstDestination.y - start.y : 0;
-        const initialHeading: AmbientChickenHeading = Math.abs(initialDy) > Math.abs(initialDx)
-            ? initialDy > 0 ? 'north' : 'south' : 'side';
-        const runtime: NpcRuntime = { plan, node, graphic, nextIndex: 1, paused: 0,
-            motionSeconds: 0, moving: false, eventDone: false, facing: 1,
-            heading: initialHeading, cels,
-            walkClip: 'walk_nw', turnSeconds: 0 };
-        this.npcs.push(runtime);
-        this.drawNpc(runtime, 0);
-    }
-
-    private drawNpc(npc: NpcRuntime, time: number): void {
-        const g = npc.graphic;
-        const role = npc.plan.role;
-        if (role === 'vendor' || role === 'ambient_shopper' ||
-            role === 'ambient_vendor' || role === 'ambient_watcher' ||
-            role === 'tea_regular' || role === 'flower_buyer' || role === 'lane_child') {
-            paintAmbientChicken(g, {
-                role,
-                height: npc.plan.actorHeight,
-                facing: role === 'ambient_vendor' ? -1 : npc.facing,
-                heading: npc.heading,
-                time,
-                motionSeconds: npc.motionSeconds,
-                moving: npc.moving,
-                eventSeconds: this.eventSeconds,
-            });
-            return;
-        }
-        const h = npc.plan.actorHeight;
-        const step = npc.moving ? Math.sin(npc.motionSeconds * 12) * 11 : 0;
-        const vendorActive = role === 'vendor' && this.eventSeconds >= 0 && this.eventSeconds < 1.9;
-        const customerActive = role === 'tea_customer' && this.eventSeconds >= 0 && this.eventSeconds < 1.9;
-        const watcherWave = role === 'ambient_watcher' && Math.sin(time * 1.9) > 0.1;
-        g.clear();
-        g.strokeColor = COLOR.outline;
-        g.lineWidth = 4;
-        g.moveTo(-14 + step, 23); g.lineTo(-14 + step, 0);
-        g.moveTo(14 - step, 23); g.lineTo(14 - step, 0);
-        g.stroke();
-        g.fillColor = role === 'tea_customer' ? new Color(238, 211, 119, 255)
-            : role === 'vendor' ? new Color(213, 181, 122, 255)
-                : role === 'ambient_watcher' ? new Color(236, 209, 142, 255)
-                    : new Color(204, 209, 167, 255);
-        g.circle(0, h * 0.42, 30);
-        g.fill(); g.stroke();
-        g.circle(8 * npc.facing, h * 0.72, 22);
-        g.fill(); g.stroke();
-        g.fillColor = new Color(208, 126, 65, 255);
-        g.moveTo(26 * npc.facing, h * 0.7);
-        g.lineTo(40 * npc.facing, h * 0.66);
-        g.lineTo(25 * npc.facing, h * 0.62);
-        g.close(); g.fill();
-        g.strokeColor = new Color(65, 62, 53, 255);
-        g.lineWidth = 3;
-        const wingX = vendorActive || customerActive ? -24 : watcherWave ? 24 : 20;
-        const wingY = vendorActive || customerActive ? h * 0.60 : watcherWave ? h * 0.76 : h * 0.42;
-        g.moveTo(0, h * 0.45); g.lineTo(wingX, wingY); g.stroke();
-        g.strokeColor = new Color(48, 133, 144, 255);
-        g.lineWidth = 2;
-        g.circle(0, 0, npc.plan.footRadius);
-        g.stroke();
+        const dx = firstDestination ? firstDestination.x - start.x : 0;
+        const dy = firstDestination ? firstDestination.y - start.y : 0;
+        const heading: AmbientChickenHeading = Math.abs(dy) > Math.abs(dx)
+            ? dy > 0 ? 'north' : 'south' : 'side';
+        this.npcs.push({plan, node, nextIndex: 1, paused: 0, motionSeconds: 0,
+            moving: false, eventDone: false, facing: dx < 0 ? -1 : 1,
+            heading, cels, walkClip: 'walk_nw', turnSeconds: 0});
     }
 
     public update(dt: number): void {
@@ -425,7 +247,6 @@ export class LivingCityGreybox {
             }
         }
         if (this.cupMarker?.isValid) this.cupMarker.active = this.eventSeconds >= 0.8 && this.eventSeconds < 1.9;
-        const now = performance.now() / 1000;
         for (const npc of this.npcs) {
             if (!npc.node.isValid) continue;
             npc.motionSeconds += delta;
@@ -451,7 +272,8 @@ export class LivingCityGreybox {
                     npc.node.setPosition(destination.x, destination.y, 0);
                     const arrived = npc.nextIndex;
                     npc.nextIndex++;
-                    if (npc.plan.id === 'messenger_customer' && arrived === 4 && !npc.eventDone) {
+                    if (this.blueprint.sceneEvents.some(event => event.trigger.npcId === npc.plan.id &&
+                        event.trigger.waypointIndex === arrived) && !npc.eventDone) {
                         npc.eventDone = true;
                         npc.paused = 1.9;
                         this.eventSeconds = 0;
@@ -473,44 +295,31 @@ export class LivingCityGreybox {
                     : npc.moving ? npc.walkClip
                         : npc.plan.id === 'messenger_customer' && !npc.plan.loop &&
                             npc.nextIndex >= npc.plan.route.length ? 'idle_ne' : 'idle_w';
-            npc.cels?.setState(clip);
+            if (npc.plan.id === 'messenger_customer') {
+                npc.cels?.setState(clip);
+            } else {
+                const role = npc.plan.role;
+                const activity = role === 'vendor' ? this.eventSeconds >= 0.35 && this.eventSeconds < 1.9
+                    : (npc.motionSeconds % 5) >= 3;
+                const imageClip: CelClipName = npc.moving
+                    ? npc.heading === 'north' ? 'walk_n' : npc.heading === 'south' ? 'walk_ne' : 'walk_nw'
+                    : activity ? 'receive_w' : 'idle_w';
+                npc.cels?.setState(imageClip);
+                npc.cels?.setFacing(npc.heading === 'side' ? npc.facing : 1);
+            }
             npc.cels?.update(delta);
-            if (!npc.cels?.isReady) this.drawNpc(npc, now);
         }
     }
 
     private paintAmbientFx(): void {
-        const g = this.ambientFx;
-        if (!g?.node.isValid) return;
-        g.clear();
-        const t = this.ambientSeconds;
-        const sources = [
-            { x: -397, y: 438, spacing: 11, count: 3 },
-            { x: 10, y: 605, spacing: 13, count: 2 },
-        ];
-        for (const source of sources) {
-            for (let i = 0; i < source.count; i++) {
-                const phase = (t * 0.43 + i * 0.32) % 1;
-                const x = source.x + i * source.spacing + Math.sin(t * 2.1 + i) * 2.5;
-                const y = source.y + phase * 18;
-                g.strokeColor = new Color(255, 250, 229, Math.round((1 - phase) * 110));
-                g.lineWidth = 2.7 - phase * 0.8;
-                g.moveTo(x, y);
-                g.bezierCurveTo(x - 5, y + 7, x + 6, y + 14, x + 2, y + 24);
-                g.stroke();
-            }
-        }
-        for (let i = 0; i < 2; i++) {
-            const phase = (t * 0.58 + i * 0.5) % 1;
-            const radius = 4 + phase * 20;
-            const cy = -261 + i * 2;
-            g.strokeColor = new Color(246, 244, 223, Math.round((1 - phase) * 110));
-            g.lineWidth = 1.8;
-            g.moveTo(5 - radius, cy);
-            g.bezierCurveTo(5 - radius * 0.5, cy + radius * 0.32,
-                5 + radius * 0.5, cy + radius * 0.32, 5 + radius, cy);
-            g.stroke();
-        }
+        const node = this.ambientFx;
+        if (!node?.isValid || !this.blueprint) return;
+        const slot = this.blueprint.artSlots.find(slot => slot.layer === 'effects');
+        if (!slot) return;
+        const phase = (this.ambientSeconds * 0.45) % 1;
+        node.setPosition(slot.center.x, slot.center.y + phase * 12, 0);
+        const opacity = node.getComponent(UIOpacity);
+        if (opacity) opacity.opacity = Math.round(190 * (1 - phase));
     }
 
     public dispose(): void {

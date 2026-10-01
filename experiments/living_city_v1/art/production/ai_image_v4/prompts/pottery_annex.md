@@ -1,0 +1,2 @@
+undefined
+Asset ID: pottery_annex. Subject: A compact SINGLE-STOREY pottery workshop annex. Shallow dusty teal tiled roof, pale cream plaster, one wide recessed service window with few hand-made pitchers and bowls, small narrow arched side door, low wooden shelf attached beneath window and pitcher-pictogram plaque. Nearly square proportions. Complete isolated building. Distinct low workshop silhouette.

@@ -1,0 +1,134 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "1378bc60-1915-40db-aef7-12da570c64f1",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "ver": "1.0.22",
+      "importer": "texture",
+      "imported": true,
+      "uuid": "1378bc60-1915-40db-aef7-12da570c64f1@6c48a",
+      "displayName": "harbor_walk_03_harbor_bakery",
+      "id": "6c48a",
+      "name": "texture",
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "imageUuidOrDatabaseUri": "1378bc60-1915-40db-aef7-12da570c64f1",
+        "isUuid": true,
+        "visible": false
+      }
+    },
+    "f9941": {
+      "ver": "1.0.12",
+      "importer": "sprite-frame",
+      "imported": true,
+      "uuid": "1378bc60-1915-40db-aef7-12da570c64f1@f9941",
+      "displayName": "harbor_walk_03_harbor_bakery",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "trimType": "custom",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 425,
+        "height": 455,
+        "rawWidth": 425,
+        "rawHeight": 455,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "1378bc60-1915-40db-aef7-12da570c64f1@6c48a",
+        "atlasUuid": "",
+        "vertices": {
+          "rawPosition": [
+            -212.5,
+            -227.5,
+            0,
+            212.5,
+            -227.5,
+            0,
+            -212.5,
+            227.5,
+            0,
+            212.5,
+            227.5,
+            0
+          ],
+          "uv": [
+            0,
+            455,
+            425,
+            455,
+            0,
+            0,
+            425,
+            0
+          ],
+          "nuv": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "minPos": [
+            -212.5,
+            -227.5,
+            0
+          ],
+          "maxPos": [
+            212.5,
+            227.5,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ]
+        }
+      }
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "fixAlphaTransparencyArtifacts": false,
+    "hasAlpha": true,
+    "redirect": "1378bc60-1915-40db-aef7-12da570c64f1@6c48a"
+  }
+}

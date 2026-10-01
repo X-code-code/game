@@ -10,6 +10,7 @@ export interface CityProgressSnapshot {
     completedTaskIds: string[];
     foundHiddenObjectIds: string[];
     discoveredChickenIds: string[];
+    interactiveStates?: Record<string, string>;
 }
 
 export interface CitySaveState extends CityProgressSnapshot {
@@ -197,6 +198,10 @@ export class SaveManager {
             city.completedTaskIds = uniqueIds([...city.completedTaskIds, ...progress.completedTaskIds]);
             city.foundHiddenObjectIds = uniqueIds([...city.foundHiddenObjectIds, ...progress.foundHiddenObjectIds]);
             city.discoveredChickenIds = uniqueIds([...city.discoveredChickenIds, ...progress.discoveredChickenIds]);
+            for (const id of Object.keys(progress.interactiveStates ?? {})) {
+                const state = progress.interactiveStates![id];
+                if (validId(id) && typeof state === 'string') city.interactiveStates[id] = state;
+            }
         });
     }
 

@@ -2,6 +2,21 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { CityViewport } from '../assets/scripts/map/CityViewport.ts';
 
+test('bottom-edge search objects can pan above a tray without exposing an uncovered edge', () => {
+    const view = new CityViewport(1536, 2048, 444, 960, 1, 2.25);
+    view.zoomAt(1.4, 0, 0);
+    view.setBottomInset(142);
+    view.focusAt(-430, -835);
+    const state = view.value;
+    const screenY = 480 - (-835 * state.scale + state.y);
+    assert.ok(screenY < 960 - 142 - 30, `Parcel chest remains under tray: ${screenY}`);
+    view.panBy(0, 100000);
+    const bottomEdge = -1024 * view.value.scale + view.value.y;
+    assert.ok(Math.abs(bottomEdge - (-480 + 142)) < .001);
+    view.setBottomInset(0);
+    assert.ok(-1024 * view.value.scale + view.value.y <= -480);
+});
+
 test('map covers portrait and landscape viewports', () => {
     for (const [width, height] of [[960, 640], [360, 780], [1280, 720]]) {
         const view = new CityViewport(2400, 1600, width, height);

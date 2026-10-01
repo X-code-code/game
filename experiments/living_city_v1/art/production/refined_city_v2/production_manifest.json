@@ -1,0 +1,1573 @@
+{
+  "batchId": "refined_city_v2",
+  "styleId": "chicken_simple_2d_v1",
+  "status": "rejected",
+  "editableSource": "art/production/refined_city_v2/render_refined.py",
+  "conceptReference": "lc_refined_street_direction_v2_source.png",
+  "assets": [
+    {
+      "id": "lc_ground_paving",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_ground_paving.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_ground_paving.png",
+      "size": [
+        1536,
+        2048
+      ],
+      "sha256": "0a6c8aa137b8250cbc0c7e9703f234cb1ddd03095296e69a3a67cdd05a37353f",
+      "authoringBrief": "Continuous ground and shopfront paving; 416-unit north-south traffic lane and 190-unit cross lane sit inside walkable sidewalks. No baked characters, stalls or trees. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          1536,
+          2048
+        ],
+        "spriteFrame": "simple2d_scene/lc_ground_paving/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_west_storefront_back",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_west_storefront_back.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_west_storefront_back.png",
+      "size": [
+        420,
+        520
+      ],
+      "sha256": "33516348a0f9e29d59258a2a2d1655e021278ad5bc025f3f928a7a0a8c06c7cf",
+      "authoringBrief": "Northwest shop roof and facade; leaves the tea service spur clear. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          420,
+          520
+        ],
+        "spriteFrame": "simple2d_scene/lc_west_storefront_back/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_east_storefront_back",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_east_storefront_back.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_east_storefront_back.png",
+      "size": [
+        406,
+        560
+      ],
+      "sha256": "e73ebfc33b50e2878cc15c15f2919fc6191c2e4244e7262576999586171cd266",
+      "authoringBrief": "Northeast shop roof and facade, connected visually to cross lane. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          406,
+          560
+        ],
+        "spriteFrame": "simple2d_scene/lc_east_storefront_back/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_west_tailor_back",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_west_tailor_back.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_west_tailor_back.png",
+      "size": [
+        424,
+        580
+      ],
+      "sha256": "6d5788ceaeef77ba88d6ba5292c5a4c6c634b5815f4548900296d81f1ab3afa1",
+      "authoringBrief": "Southwest tailor shop; upper shelves behind the street details. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          424,
+          580
+        ],
+        "spriteFrame": "simple2d_scene/lc_west_tailor_back/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_east_food_shop_back",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_east_food_shop_back.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_east_food_shop_back.png",
+      "size": [
+        404,
+        580
+      ],
+      "sha256": "ce6c1c9f4f4d4a734fd86c3333a2ded0b81a98036b83e9eed1134a676159597e",
+      "authoringBrief": "Southeast food shop, distinct from the chestnut cart. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          404,
+          580
+        ],
+        "spriteFrame": "simple2d_scene/lc_east_food_shop_back/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_tea_stall_back",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_tea_stall_back.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tea_stall_back.png",
+      "size": [
+        265,
+        300
+      ],
+      "sha256": "bb24858f44dd863f928801d43e266d6de348f16f122e779f560210ebbede053c",
+      "authoringBrief": "Tea stall rear shelves and kettle behind vendor. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          265,
+          300
+        ],
+        "spriteFrame": "simple2d_scene/lc_tea_stall_back/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_tea_counter_front",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_tea_counter_front.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tea_counter_front.png",
+      "size": [
+        56,
+        171
+      ],
+      "sha256": "cbb1e360418903ff6dee42a5942c043d6e9f78ff9a3c600724a7138296cf6958",
+      "authoringBrief": "Narrow counter front; hides vendor lower body without covering customer foot. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          56,
+          171
+        ],
+        "spriteFrame": "simple2d_scene/lc_tea_counter_front/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_tea_patio_front",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_tea_patio_front.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tea_patio_front.png",
+      "size": [
+        160,
+        136
+      ],
+      "sha256": "0453ccd117f0e268324ec9c592d929748b104b74c1beef41757a8173cc4f4fd4",
+      "authoringBrief": "A low tea table, two stools and used ceramics on the stall's west patio; outside cross-lane and customer spur. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          160,
+          136
+        ],
+        "spriteFrame": "simple2d_scene/lc_tea_patio_front/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_tea_awning_front",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_tea_awning_front.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tea_awning_front.png",
+      "size": [
+        280,
+        100
+      ],
+      "sha256": "3b6ae71f4443bc959c36dcc604a14c82f8392666aafee033bb0a2dc0d22d7375",
+      "authoringBrief": "Separate overhead valance. Do not paint over the customer's face or the service pad. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          280,
+          100
+        ],
+        "spriteFrame": "simple2d_scene/lc_tea_awning_front/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_chestnut_cart_back",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_chestnut_cart_back.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_chestnut_cart_back.png",
+      "size": [
+        185,
+        205
+      ],
+      "sha256": "9a0a4825bb3716776c2f3c609f6d4bf4b61cd69d9fb7a0372ef98744996b44ad",
+      "authoringBrief": "Street-edge chestnut cart body and tray, on the apron between the narrower traffic lane and southeast shop. The seller stands on the open lane beside it. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          185,
+          205
+        ],
+        "spriteFrame": "simple2d_scene/lc_chestnut_cart_back/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_chestnut_cart_front",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_chestnut_cart_front.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_chestnut_cart_front.png",
+      "size": [
+        185,
+        110
+      ],
+      "sha256": "e0ed6716d197920703b14e5ca7d79937b2214429d22bb0f40f3913602e60ae56",
+      "authoringBrief": "Near lip and visible near-side wheels; no duplicate wheels on the cart back layer. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          185,
+          110
+        ],
+        "spriteFrame": "simple2d_scene/lc_chestnut_cart_front/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_tree_front",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_tree_front.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tree_front.png",
+      "size": [
+        205,
+        290
+      ],
+      "sha256": "0101008dc0456acf30931f375ec8ab286227d2d026f890f5102e7e5d55b9ee80",
+      "authoringBrief": "Tree trunk and separated branches at west crossing; root stays out of the public lane. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          205,
+          290
+        ],
+        "spriteFrame": "simple2d_scene/lc_tree_front/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_planter_front",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_planter_front.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_planter_front.png",
+      "size": [
+        105,
+        115
+      ],
+      "sha256": "d55a4c18f86a97607ddb7e777fc082264ca6b1cd093e16dc715a66c68fed12c7",
+      "authoringBrief": "Small street-edge planter, limited collision footprint. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          105,
+          115
+        ],
+        "spriteFrame": "simple2d_scene/lc_planter_front/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_bench_front",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_bench_front.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_bench_front.png",
+      "size": [
+        190,
+        95
+      ],
+      "sha256": "7269fafc8a92946fdc059c201ee602b3fb0cc7f75bd3a3c3a5cd7ab6e77a765b",
+      "authoringBrief": "Bench outside the cross-lane walking polygon. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          190,
+          95
+        ],
+        "spriteFrame": "simple2d_scene/lc_bench_front/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_curb_flower_display",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_curb_flower_display.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_curb_flower_display.png",
+      "size": [
+        128,
+        132
+      ],
+      "sha256": "1da4dcf2429c45759b190805650597b0e48e0782c71c9c85de2aa9360b937eb8",
+      "authoringBrief": "Grouped cut flowers, leaf pots and a low crate on the west curb, outside the main walking lane. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          128,
+          132
+        ],
+        "spriteFrame": "simple2d_scene/lc_curb_flower_display/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_tailor_goods",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_tailor_goods.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tailor_goods.png",
+      "size": [
+        145,
+        125
+      ],
+      "sha256": "a822a893adcf9a6c4c820650c04df6c8f8dad84e3d9dfbc4244eabdeeafdbad1",
+      "authoringBrief": "Fabric, buttons and sewing tray; supports thimble search target. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          145,
+          125
+        ],
+        "spriteFrame": "simple2d_scene/lc_tailor_goods/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_tailor_work_rack",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_tailor_work_rack.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tailor_work_rack.png",
+      "size": [
+        110,
+        150
+      ],
+      "sha256": "e0a3200fbff6c820820a3882ef200767d69618692d75ee83165bb7c92c77329b",
+      "authoringBrief": "Tailor work rack with folded bolts, swatches and an open work basket, west of existing crates. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          110,
+          150
+        ],
+        "spriteFrame": "simple2d_scene/lc_tailor_work_rack/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_crates_front",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_crates_front.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_crates_front.png",
+      "size": [
+        105,
+        96
+      ],
+      "sha256": "6684fce56f05682146a13b1359c4849d245fcff159244c9a4d768317d1a667c1",
+      "authoringBrief": "Small stack next to tailor wall, off the messenger route. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          105,
+          96
+        ],
+        "spriteFrame": "simple2d_scene/lc_crates_front/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_shop_goods_east",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_shop_goods_east.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_shop_goods_east.png",
+      "size": [
+        165,
+        150
+      ],
+      "sha256": "673d55575a58eee8e76d50fa61ac1e7d1b52a6c6b583261c0f7db58c839acf3a",
+      "authoringBrief": "East shop goods for scale and search density. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          165,
+          150
+        ],
+        "spriteFrame": "simple2d_scene/lc_shop_goods_east/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_curb_pottery_west",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_curb_pottery_west.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_curb_pottery_west.png",
+      "size": [
+        90,
+        110
+      ],
+      "sha256": "2de1f9af84139249ebcc9119a1a1894288d8a7af259e566d0c89c328ddfd0bf5",
+      "authoringBrief": "Small grouped pots at the west curb, outside the courier path. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          90,
+          110
+        ],
+        "spriteFrame": "simple2d_scene/lc_curb_pottery_west/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_curb_produce_east",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_curb_produce_east.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_curb_produce_east.png",
+      "size": [
+        112,
+        130
+      ],
+      "sha256": "4ee147ef8dc41ed3587332cd3d0e366f48db669deef6e4d1752f9ad3c8a48e97",
+      "authoringBrief": "Produce baskets along the east curb, outside the shopper path. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          112,
+          130
+        ],
+        "spriteFrame": "simple2d_scene/lc_curb_produce_east/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_wayfinding_sign",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_wayfinding_sign.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_wayfinding_sign.png",
+      "size": [
+        78,
+        145
+      ],
+      "sha256": "97aa4ceeff6af928b89ce9c8324271bf6911006ad72b020ca4da40dc885ea3a9",
+      "authoringBrief": "Narrow post at the cross street edge; no text is needed in greybox. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          78,
+          145
+        ],
+        "spriteFrame": "simple2d_scene/lc_wayfinding_sign/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_lantern_post_front",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_lantern_post_front.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_lantern_post_front.png",
+      "size": [
+        105,
+        265
+      ],
+      "sha256": "e97a4225b9844f8298855dca437147180ca3ebdb7c39a1e01590eb475249b6fe",
+      "authoringBrief": "Independent post/lantern with stable ground contact. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          105,
+          265
+        ],
+        "spriteFrame": "simple2d_scene/lc_lantern_post_front/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_street_banner_front",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_street_banner_front.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_street_banner_front.png",
+      "size": [
+        500,
+        80
+      ],
+      "sha256": "8932643f021dcaff232f2b0b45f8db0902edd93cef6f6c2ea77716324390ac55",
+      "authoringBrief": "Narrow hanging banner over the lane; support for one hidden knot. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          500,
+          80
+        ],
+        "spriteFrame": "simple2d_scene/lc_street_banner_front/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_crossing_pennants",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_crossing_pennants.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_crossing_pennants.png",
+      "size": [
+        455,
+        55
+      ],
+      "sha256": "0bd39f6e417948a48eb4fa6f042170fd32c21616c1363211126ed89faadd5265",
+      "authoringBrief": "Overhead string of separate pennants; small sway can be authored later. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          455,
+          55
+        ],
+        "spriteFrame": "simple2d_scene/lc_crossing_pennants/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_tea_steam_fx",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_tea_steam_fx.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tea_steam_fx.png",
+      "size": [
+        65,
+        95
+      ],
+      "sha256": "233410a18288d800c300ea74f5a4d50dfc266953ac51f23267365b2d3cbab655",
+      "authoringBrief": "Small loop from kettle spout; effect anchor is fixed to stall. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          65,
+          95
+        ],
+        "spriteFrame": "simple2d_scene/lc_tea_steam_fx/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_north_herb_stand",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_north_herb_stand.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_north_herb_stand.png",
+      "size": [
+        145,
+        190
+      ],
+      "sha256": "de9251a76895cfee0b56a06bef0358d81af9cb606c2be30ee0dba48c6d3ec241",
+      "authoringBrief": "Herb grower's narrow work stand joins the northwest shop to the tea district; small pots, drying leaves and a basket, with its feet clear of the courier exit route. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          145,
+          190
+        ],
+        "spriteFrame": "simple2d_scene/lc_north_herb_stand/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_east_bun_cart_back",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_east_bun_cart_back.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_east_bun_cart_back.png",
+      "size": [
+        150,
+        195
+      ],
+      "sha256": "e7a2c1e77d5788725bad4425e040d705cd834af9f2519b3d4c08c3c648ab6805",
+      "authoringBrief": "A warm food pushcart partly facing the main street: canopy, steamer, stacked bowls and kettle behind pedestrians, without a task-like marker. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          150,
+          195
+        ],
+        "spriteFrame": "simple2d_scene/lc_east_bun_cart_back/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_east_bun_cart_front",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_east_bun_cart_front.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_east_bun_cart_front.png",
+      "size": [
+        150,
+        70
+      ],
+      "sha256": "f4c448430c365089a64c965ee850e6fe8962886cead67dcf1d19bddc228eb42f",
+      "authoringBrief": "Low apron, wheel and counter lip of the bun cart; a separate occluder below the cart work surface. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          150,
+          70
+        ],
+        "spriteFrame": "simple2d_scene/lc_east_bun_cart_front/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_west_market_handcart",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_west_market_handcart.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_west_market_handcart.png",
+      "size": [
+        155,
+        110
+      ],
+      "sha256": "9edeab658a82bcca35419c08f9e21a15f3516e8bd7a1580fa12b1fe47f6db210",
+      "authoringBrief": "Used market handcart in the west cross lane, carrying tied produce sacks and an empty crate between the tea patio and the bench. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          155,
+          110
+        ],
+        "spriteFrame": "simple2d_scene/lc_west_market_handcart/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_street_water_station",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_street_water_station.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_street_water_station.png",
+      "size": [
+        105,
+        165
+      ],
+      "sha256": "0a6fec5efb14565b90148ca44d352c88c7579d01f2f9b63fdae62b90c80f3f90",
+      "authoringBrief": "Public chicken drinking point: low glazed basin, feed scoop, folded cloth and slim timber stand, beside rather than on NPC routes. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          105,
+          165
+        ],
+        "spriteFrame": "simple2d_scene/lc_street_water_station/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_south_post_house_back",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_south_post_house_back.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_south_post_house_back.png",
+      "size": [
+        416,
+        320
+      ],
+      "sha256": "d753c6e24efcb3c35be2fe48795dfbfc73515e8af014a8d69db69066b61dd6b8",
+      "authoringBrief": "Southern west post house joins the tailor row: blue slate hip roof, parcel sorting window and arched door, with no sign text or object-like target. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          416,
+          320
+        ],
+        "spriteFrame": "simple2d_scene/lc_south_post_house_back/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_south_grain_house_back",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_south_grain_house_back.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_south_grain_house_back.png",
+      "size": [
+        404,
+        320
+      ],
+      "sha256": "b6ac811203f5eb874242a5f08c7777fc9264db6e126497c4c26525d86f64ec7f",
+      "authoringBrief": "Southern east grain house joins the food shop row: warm tile roof, broad service arch and grain baskets, leaving the main street open. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          404,
+          320
+        ],
+        "spriteFrame": "simple2d_scene/lc_south_grain_house_back/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_east_pottery_annex_back",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_east_pottery_annex_back.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_east_pottery_annex_back.png",
+      "size": [
+        200,
+        210
+      ],
+      "sha256": "d619c835f08050e9fb4670522c64172fd9a6864cf01de4f86c475a6501276b8e",
+      "authoringBrief": "A small roofed pottery annex attached below the northeast shop; the existing pot display remains its independent front depth layer. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          200,
+          210
+        ],
+        "spriteFrame": "simple2d_scene/lc_east_pottery_annex_back/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_tea_delivery_nook",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_tea_delivery_nook.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tea_delivery_nook.png",
+      "size": [
+        105,
+        98
+      ],
+      "sha256": "7e70307a961cb0da19ca0feaa0f242c0749f924aaaa52e0335757c71f5820ce2",
+      "authoringBrief": "Tea stall's refill baskets and used-cup crate form a small working nook at the west street corner, outside the tea regular's loop and the public cross-lane. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          105,
+          98
+        ],
+        "spriteFrame": "simple2d_scene/lc_tea_delivery_nook/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_tailor_delivery_stool",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_tailor_delivery_stool.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tailor_delivery_stool.png",
+      "size": [
+        92,
+        88
+      ],
+      "sha256": "76300fe5c232e13f36da910eb585fb113eec4050763ebac2f09d7d87186d9b2e",
+      "authoringBrief": "A low tailor's delivery stool carries folded fabric and a tied bundle by the shop threshold; no task-like loose objects. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          92,
+          88
+        ],
+        "spriteFrame": "simple2d_scene/lc_tailor_delivery_stool/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_tea_whistle_foreground",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_tea_whistle_foreground.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tea_whistle_foreground.png",
+      "size": [
+        48,
+        42
+      ],
+      "sha256": "7a2184e2d16f412f083aa41cb50f32746257f38016c1a4e2ef8de54299e65629",
+      "authoringBrief": "Thin tea-cup rim and saucer edge over the clay whistle's lower contour, with most of the item still visible and hit testing independent. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          48,
+          42
+        ],
+        "spriteFrame": "simple2d_scene/lc_tea_whistle_foreground/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_tailor_thimble_foreground",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_tailor_thimble_foreground.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tailor_thimble_foreground.png",
+      "size": [
+        44,
+        40
+      ],
+      "sha256": "000f0616fad754f7a3eadfe3c7fc3cc41655fa08c9d3b911bb60237884ce391e",
+      "authoringBrief": "Short sewing-tray lip and nearby thread edge crossing only the thimble's base. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          44,
+          40
+        ],
+        "spriteFrame": "simple2d_scene/lc_tailor_thimble_foreground/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_banner_knot_foreground",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_banner_knot_foreground.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_banner_knot_foreground.png",
+      "size": [
+        48,
+        48
+      ],
+      "sha256": "44738e540cab0dce642e43c42dbac93315e58d856efb0ac713d9f1ded5e5764b",
+      "authoringBrief": "A narrow banner fold overlapping one low knot tail but leaving knot loops and center clear. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          48,
+          48
+        ],
+        "spriteFrame": "simple2d_scene/lc_banner_knot_foreground/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_chestnut_tongs_foreground",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_chestnut_tongs_foreground.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_chestnut_tongs_foreground.png",
+      "size": [
+        56,
+        50
+      ],
+      "sha256": "621cbb765c75e0af252d63e146d2acee63e3dd7f2c625931deba8926fa89a052",
+      "authoringBrief": "Folded packet edge and one chestnut partly over the tongs' lower handle, without hiding their prongs. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          56,
+          50
+        ],
+        "spriteFrame": "simple2d_scene/lc_chestnut_tongs_foreground/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_tea_flower_vine",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_tea_flower_vine.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tea_flower_vine.png",
+      "size": [
+        94,
+        230
+      ],
+      "sha256": "4ecd494227af9ed76a69247a782ff86f8e7e8562920d2518c785fb28c556fdac",
+      "authoringBrief": "Climbing tea-stall vine with cream blossoms, independent editable layer. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          94,
+          230
+        ],
+        "spriteFrame": "simple2d_scene/lc_tea_flower_vine/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_tailor_flower_vine",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_tailor_flower_vine.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_tailor_flower_vine.png",
+      "size": [
+        92,
+        265
+      ],
+      "sha256": "3ddae97eb783b7cf42d2ea7ad7f59b982cfb4b632f70b925f526bdaa2922cdf7",
+      "authoringBrief": "Tailor doorway ivy and small terracotta flowering pots. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          92,
+          265
+        ],
+        "spriteFrame": "simple2d_scene/lc_tailor_flower_vine/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_east_flower_vine",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_east_flower_vine.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_east_flower_vine.png",
+      "size": [
+        98,
+        300
+      ],
+      "sha256": "fbd990cb1ee896b2998b1f60127a74a7fbf239a758d65d4dfd21469a8be827ae",
+      "authoringBrief": "Pottery shop timber-side climbing leaves with warm blossoms. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          98,
+          300
+        ],
+        "spriteFrame": "simple2d_scene/lc_east_flower_vine/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "lc_post_flower_vine",
+      "source": "art/production/refined_city_v2/png/simple2d_scene/lc_post_flower_vine.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc_post_flower_vine.png",
+      "size": [
+        94,
+        245
+      ],
+      "sha256": "04a6a84ee9a0b44510a3454679633888c3e906ced009051c5d0c5f380484a76d",
+      "authoringBrief": "Post-house doorway plants and soft flower clusters. Fine material, edge and planting revision.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          94,
+          245
+        ],
+        "spriteFrame": "simple2d_scene/lc_post_flower_vine/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "tea_clay_whistle",
+      "source": "art/production/refined_city_v2/png/targets/tea_clay_whistle.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/tea_clay_whistle.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "cb18fd5deb72177bca2c61dcdfc99405d217c53c765dd9f007d78098115fa752",
+      "authoringBrief": "茶摊的杯盏附近",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/tea_clay_whistle/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "tailor_thimble",
+      "source": "art/production/refined_city_v2/png/targets/tailor_thimble.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/tailor_thimble.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "d806116a27a8abd157391e2250b62306af48d3cf7aeeedc45584fd8a80cb4bc0",
+      "authoringBrief": "裁缝铺的针线盘里",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/tailor_thimble/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "banner_knot",
+      "source": "art/production/refined_city_v2/png/targets/banner_knot.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/banner_knot.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "b755aaeca3b63f0aaa7ee45f26ea1448a6e3e5db3553ec1f84012c28b1a0f31c",
+      "authoringBrief": "抬头看看街口的横幅",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/banner_knot/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "chestnut_tongs",
+      "source": "art/production/refined_city_v2/png/targets/chestnut_tongs.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/chestnut_tongs.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "94ece3e1d72281ad382d2537a75abb0f9e9fc53a7b0c4d8e30e55b7af8a3b76a",
+      "authoringBrief": "栗子车上的纸包旁",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/chestnut_tongs/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "pocket_watch",
+      "source": "art/production/refined_city_v2/png/targets/pocket_watch.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/pocket_watch.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "2f6929471648937d1bf279f77f8efe9f9ba01fb4372c90913ff19234e3d93674",
+      "authoringBrief": "茶桌上，有位茶客忘了时间",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/pocket_watch/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "sewing_scissors",
+      "source": "art/production/refined_city_v2/png/targets/sewing_scissors.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/sewing_scissors.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "6c397c04bee770e9e07f1bdfe48ffc6f3d9ddeac3f061ff5bd50660b9d9309e6",
+      "authoringBrief": "裁缝的布料工作架上",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/sewing_scissors/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "blue_feather",
+      "source": "art/production/refined_city_v2/png/targets/blue_feather.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/blue_feather.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "552040d419c662d6cc2cd1eefb79dc64242217099b775c869ac4529d7fcb6115",
+      "authoringBrief": "长凳上有一片旅人的羽毛",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/blue_feather/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "sealed_letter",
+      "source": "art/production/refined_city_v2/png/targets/sealed_letter.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/sealed_letter.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "56ef31f97bb2c0f7e8dedb09360859037f2d069b594a6afcb5858fa221dd4d10",
+      "authoringBrief": "南边邮舍的包裹箱，试着打开它",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/sealed_letter/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "honey_dipper",
+      "source": "art/production/refined_city_v2/png/targets/honey_dipper.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/honey_dipper.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "b2815a69a88f6e7a6c0774f1c0afd0621185f6d8d95f752056eacb43d0bbd910",
+      "authoringBrief": "茶摊补给角的蜂蜜罐旁",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/honey_dipper/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "seed_packet",
+      "source": "art/production/refined_city_v2/png/targets/seed_packet.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/seed_packet.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "de270eb39a68b280224debecc93ee49925e1b597d06a7567decaca4c1fe57155",
+      "authoringBrief": "花架的叶子后，拨开看看",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/seed_packet/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "orchard_apple",
+      "source": "art/production/refined_city_v2/png/targets/orchard_apple.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/orchard_apple.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "2a330f049198888ddafa932743189f2b259c9cbb4e1b16bd80967de9b51b9a82",
+      "authoringBrief": "路边果蔬筐里的红果子",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/orchard_apple/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "golden_bun",
+      "source": "art/production/refined_city_v2/png/targets/golden_bun.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/golden_bun.png",
+      "size": [
+        96,
+        96
+      ],
+      "sha256": "b36a77831fd1e91ef55d25cf38bb40a1c3d8aeabbebaa3fd6f5795941825afa5",
+      "authoringBrief": "热食车的蒸笼，掀开盖布",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 4
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          96,
+          96
+        ],
+        "spriteFrame": "targets/golden_bun/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "parcel_chest_closed",
+      "source": "art/production/refined_city_v2/png/interactions/parcel_chest_closed.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/interactions/parcel_chest_closed.png",
+      "size": [
+        100,
+        88
+      ],
+      "sha256": "07f559045d7507118af29cfe4947fcac20a3ef36e9cd96210d32fae854d61e79",
+      "authoringBrief": "打开包裹箱; same registered canvas in both states, central reveal aperture.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          100,
+          88
+        ],
+        "spriteFrame": "interactions/parcel_chest_closed/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "parcel_chest_opened",
+      "source": "art/production/refined_city_v2/png/interactions/parcel_chest_opened.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/interactions/parcel_chest_opened.png",
+      "size": [
+        100,
+        88
+      ],
+      "sha256": "37f1a8795bd445b362f47f69e99e4ed0ffa0cb5805bb4f63939c9962b5428577",
+      "authoringBrief": "打开包裹箱; same registered canvas in both states, central reveal aperture.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          100,
+          88
+        ],
+        "spriteFrame": "interactions/parcel_chest_opened/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "flower_leaves_closed",
+      "source": "art/production/refined_city_v2/png/interactions/flower_leaves_closed.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/interactions/flower_leaves_closed.png",
+      "size": [
+        76,
+        85
+      ],
+      "sha256": "985f261052ed3d8c9682837b315dad721b091918e7f54f2ffd73bdb5f2fd568f",
+      "authoringBrief": "拨开花叶; same registered canvas in both states, central reveal aperture.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          76,
+          85
+        ],
+        "spriteFrame": "interactions/flower_leaves_closed/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "flower_leaves_opened",
+      "source": "art/production/refined_city_v2/png/interactions/flower_leaves_opened.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/interactions/flower_leaves_opened.png",
+      "size": [
+        76,
+        85
+      ],
+      "sha256": "6e8129ac1ff7325a7b12bf5734c5dac4e7bcc3606345752171f98a79200d5ca6",
+      "authoringBrief": "拨开花叶; same registered canvas in both states, central reveal aperture.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          76,
+          85
+        ],
+        "spriteFrame": "interactions/flower_leaves_opened/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "bun_lid_closed",
+      "source": "art/production/refined_city_v2/png/interactions/bun_lid_closed.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/interactions/bun_lid_closed.png",
+      "size": [
+        76,
+        62
+      ],
+      "sha256": "88f6bd86293551126aa734736a7bbfda56fe2efd7a5767ccec75d64bd96bb55c",
+      "authoringBrief": "掀开盖布; same registered canvas in both states, central reveal aperture.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          76,
+          62
+        ],
+        "spriteFrame": "interactions/bun_lid_closed/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    },
+    {
+      "id": "bun_lid_opened",
+      "source": "art/production/refined_city_v2/png/interactions/bun_lid_opened.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/interactions/bun_lid_opened.png",
+      "size": [
+        76,
+        62
+      ],
+      "sha256": "27e2b0d28ba3f71b623e28e9d1b1b46fcb74788b3e1309d665c598d51cb5e807",
+      "authoringBrief": "掀开盖布; same registered canvas in both states, central reveal aperture.",
+      "status": "trial_unapproved",
+      "generationSpec": {
+        "method": "editable authored Pillow drawing",
+        "supersample": 2
+      },
+      "finalGameAssetSpec": {
+        "format": "PNG RGBA",
+        "canvas": [
+          76,
+          62
+        ],
+        "spriteFrame": "interactions/bun_lid_opened/spriteFrame"
+      },
+      "reviewPath": "art/production/refined_city_v2/qa_report.json"
+    }
+  ],
+  "processing": [
+    "2x/4x supersampling",
+    "Lanczos resize to explicit canvas",
+    "lossless PNG",
+    "Cocos alpha trim refresh preserving existing UUIDs",
+    "source/runtime SHA match"
+  ],
+  "review": {
+    "runtime": "passed_web_mobile",
+    "phone": "not_run",
+    "playerApproval": "rejected_visual",
+    "runtimeEvidence": "art/review/refined_city_v2/runtime_report.json"
+  },
+  "supersededBy": "clean_cartoon_v3"
+}

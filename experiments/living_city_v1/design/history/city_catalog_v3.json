@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "initialCityId": "living_city_street_block_01",
+  "cities": [
+    {
+      "cityId": "living_city_street_block_01",
+      "bundleName": "city_living_city_street_block_01"
+    },
+    {
+      "cityId": "winter_market_block_trial_001",
+      "bundleName": "city_winter_market_block_trial_001"
+    },
+    {
+      "cityId": "demo_city",
+      "bundleName": "city_demo"
+    },
+    {
+      "cityId": "harbor_test",
+      "bundleName": "city_harbor_test"
+    },
+    {
+      "cityId": "living_city_garden_market_02",
+      "bundleName": "city_living_city_garden_market_02"
+    },
+    {
+      "cityId": "living_city_harbor_walk_03",
+      "bundleName": "city_living_city_harbor_walk_03"
+    }
+  ]
+}

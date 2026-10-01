@@ -1,4 +1,5 @@
-import { Button, Color, Graphics, Label, Node, UITransform, Vec3 } from 'cc';
+import { AssetManager, Button, Color, Label, Sprite, Node, UITransform, Vec3 } from 'cc';
+import { generatedUi } from './GeneratedUi';
 import type { ActiveHint, HintResult } from '../hint/HintManager';
 
 /** A free hint button and a map-local marker that follows the selected live target. */
@@ -6,23 +7,23 @@ export class HintPanel {
     public readonly root = new Node('HintPanel');
     public readonly marker = new Node('HintMarker');
     private readonly message: Label;
-    private readonly background: Graphics;
+    private readonly background: Sprite;
     private readonly button: Node;
-    private readonly ring: Graphics;
+    private readonly ring: Sprite;
     private lastRadius = 0;
     private tracking = false;
     private expanded = false;
     private laidOut = false;
 
     public constructor(parent: Node, map: Node, onRequest: () => void,
-        private readonly compact = false, private readonly streetCompact = false) {
+        private readonly compact = false, private readonly streetCompact = false, bundle?: AssetManager.Bundle) {
         map.addChild(this.marker);
         this.marker.addComponent(UITransform);
-        this.ring = this.marker.addComponent(Graphics);
+        this.ring = generatedUi(this.marker, 'ui_hint_ring', bundle, false);
         this.marker.active = false;
         parent.addChild(this.root);
         this.root.addComponent(UITransform).setContentSize(600, 74);
-        this.background = this.root.addComponent(Graphics);
+        this.background = generatedUi(this.root, 'ui_panel', bundle);
         const text = new Node('HintMessage');
         this.root.addChild(text);
         text.setPosition(-80, 0, 0);
@@ -40,10 +41,7 @@ export class HintPanel {
         this.root.addChild(button);
         button.setPosition(210, 0, 0);
         button.addComponent(UITransform).setContentSize(160, 62);
-        const g = button.addComponent(Graphics);
-        g.fillColor = new Color(239, 207, 130, 255);
-        g.roundRect(-80, -31, 160, 62, 12);
-        g.fill();
+        generatedUi(button, 'ui_button', bundle);
         button.addComponent(Button);
         const caption = new Node('Text');
         button.addChild(caption);
@@ -81,15 +79,7 @@ export class HintPanel {
         this.marker.setScale(pulse, pulse, 1);
         if (this.lastRadius === hint.radius) return;
         this.lastRadius = hint.radius;
-        this.ring.clear();
-        this.ring.lineWidth = 12;
-        this.ring.strokeColor = new Color(255, 255, 255, 245);
-        this.ring.circle(0, 0, hint.radius);
-        this.ring.stroke();
-        this.ring.lineWidth = 6;
-        this.ring.strokeColor = new Color(208, 91, 46, 255);
-        this.ring.circle(0, 0, hint.radius);
-        this.ring.stroke();
+        this.marker.getComponent(UITransform)?.setContentSize(hint.radius * 2.35, hint.radius * 2.35);
     }
 
     public resize(): void {
@@ -114,7 +104,7 @@ export class HintPanel {
         if (this.laidOut && this.expanded === expanded) return;
         this.expanded = expanded;
         this.laidOut = true;
-        this.background.clear();
+        this.background.enabled = !(this.compact && !expanded);
         if (this.compact && !expanded) {
             this.root.getComponent(UITransform)?.setContentSize(160, 62);
             this.message.node.active = false;
@@ -123,9 +113,6 @@ export class HintPanel {
             this.root.getComponent(UITransform)?.setContentSize(600, 74);
             this.message.node.active = true;
             this.button.setPosition(210, 0, 0);
-            this.background.fillColor = new Color(255, 250, 235, 238);
-            this.background.roundRect(-300, -37, 600, 74, 14);
-            this.background.fill();
         }
         this.resize();
     }

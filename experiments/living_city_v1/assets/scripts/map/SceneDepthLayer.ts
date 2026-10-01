@@ -5,6 +5,7 @@ interface DepthEntry {
     node: Node;
     footY: () => number;
     sequence: number;
+    frontAtEqualFoot: boolean;
 }
 
 /** Sort cutouts and moving characters together by their ground contact line. */
@@ -19,9 +20,10 @@ export class SceneDepthLayer {
         map.addChild(this.node);
     }
 
-    public addActor(node: Node, footY: () => number): void {
+    /** A foreground cutout wins a depth tie so feet cannot draw over its front edge. */
+    public addActor(node: Node, footY: () => number, frontAtEqualFoot = false): void {
         this.node.addChild(node);
-        this.entries.push({ node, footY, sequence: this.entries.length });
+        this.entries.push({ node, footY, sequence: this.entries.length, frontAtEqualFoot });
     }
 
     /**
@@ -51,7 +53,9 @@ export class SceneDepthLayer {
     /** Called in lateUpdate, after NPC routes have advanced for this frame. */
     public sort(): void {
         const nodes = this.entries.filter(entry => entry.node.isValid && entry.node.parent === this.node);
-        nodes.sort((a, b) => b.footY() - a.footY() || a.sequence - b.sequence);
+        nodes.sort((a, b) => b.footY() - a.footY() ||
+            Number(a.frontAtEqualFoot) - Number(b.frontAtEqualFoot) ||
+            a.sequence - b.sequence);
         // Cocos 2D draws later siblings over earlier siblings. Only mutate crossed pairs.
         nodes.forEach((entry, index) => {
             if (this.node.children[index] !== entry.node) entry.node.setSiblingIndex(index);

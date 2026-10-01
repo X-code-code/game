@@ -9,9 +9,12 @@ const { ccclass } = _decorator;
 @ccclass('HiddenObject')
 export class HiddenObject extends Component {
     private state: HiddenObjectState | null = null;
+    private hideWhenFound = false;
 
-    public configure(config: HiddenObjectConfig, mapSize: Size, spriteFrame?: SpriteFrame): void {
+    public configure(config: HiddenObjectConfig, mapSize: Size, spriteFrame?: SpriteFrame,
+        hideWhenFound = false): void {
         this.state = new HiddenObjectState(config);
+        this.hideWhenFound = hideWhenFound;
         this.node.name = config.id;
         const position = hiddenObjectMapPosition(config, mapSize);
         this.node.setPosition(position.x, position.y, 0);
@@ -31,7 +34,7 @@ export class HiddenObject extends Component {
     /** Stage 17 may reveal a conditionally visible object through this method. */
     public setVisible(visible: boolean): void {
         this.state?.setVisible(visible);
-        this.node.active = visible;
+        this.node.active = visible && !(this.hideWhenFound && this.state?.isFound);
     }
 
     public get hintAvailable(): boolean {
@@ -71,6 +74,12 @@ export class HiddenObject extends Component {
     }
 
     private showFoundFeedback(animate: boolean): void {
+        // Collectible street props leave the scene and are represented in the
+        // sticker tray. Other cities retain their existing discovery badge.
+        if (this.hideWhenFound) {
+            this.node.active = false;
+            return;
+        }
         const badge = new Node('FoundBadge');
         this.node.addChild(badge);
         badge.addComponent(UITransform).setContentSize(100, 100);

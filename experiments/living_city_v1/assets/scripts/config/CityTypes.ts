@@ -42,6 +42,10 @@ export interface HiddenObjectConfig {
     clickArea: ClickArea;
     tags: string[];
     targetable: boolean;
+    /** Authored appearance and clue; independent of the touch area. */
+    visualSize?: Size;
+    displayName?: string;
+    clue?: string;
     /** Optional map-local world Y used for depth ordering; defaults to the target's Y. */
     depthY?: number;
     visibleCondition?: VisibleCondition;
@@ -134,6 +138,10 @@ export interface InteractiveObjectConfig {
     rotation: number;
     clickArea: ClickArea;
     initialState: string;
+    openAsset?: AssetId;
+    visualSize?: Size;
+    depthY?: number;
+    label?: string;
     conditions?: VisibleCondition[];
     actions: InteractiveAction[];
     tags: string[];
@@ -164,6 +172,10 @@ export interface CityConfig {
     cityId: CityId;
     cityName: string;
     background: AssetId;
+    /** PNG scene placement blueprint within this city's bundle. */
+    sceneBlueprint?: AssetId;
+    chapterIndex?: number;
+    chapterCount?: number;
     mapSize: Size;
     view: CityViewConfig;
     hiddenObjects: HiddenObjectConfig[];

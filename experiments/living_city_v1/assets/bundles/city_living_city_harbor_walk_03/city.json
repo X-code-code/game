@@ -1,0 +1,508 @@
+{
+  "schemaVersion": 1,
+  "cityId": "living_city_harbor_walk_03",
+  "cityName": "河畔码头",
+  "background": "simple2d_scene/lc_harbor_ground",
+  "sceneBlueprint": "harbor_walk_03",
+  "chapterIndex": 3,
+  "chapterCount": 3,
+  "mapSize": {
+    "width": 1536,
+    "height": 2048
+  },
+  "view": {
+    "minZoom": 1,
+    "maxZoom": 2.25,
+    "initialZoom": 1.4
+  },
+  "hiddenObjects": [
+    {
+      "id": "seashell",
+      "asset": "targets/seashell",
+      "x": 0.28515625,
+      "y": 0.29248046875,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "seashell",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "贝壳",
+      "clue": "沿着花盆往河边看，有枚浅色贝壳。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": -349.5
+    },
+    {
+      "id": "compass",
+      "asset": "targets/compass",
+      "x": 0.744140625,
+      "y": 0.2470703125,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "compass",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "指南针",
+      "clue": "船长的箱子里，藏着一枚小指南针。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": -604.5,
+      "visibleCondition": {
+        "objectId": "parcel_chest",
+        "state": "opened"
+      }
+    },
+    {
+      "id": "boat_rope",
+      "asset": "targets/boat_rope",
+      "x": 0.236328125,
+      "y": 0.2587890625,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "boat_rope",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "船绳",
+      "clue": "河边的货箱上，找一圈船绳。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": -602
+    },
+    {
+      "id": "fishing_float",
+      "asset": "targets/fishing_float",
+      "x": 0.294921875,
+      "y": 0.69189453125,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "fishing_float",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "鱼漂",
+      "clue": "搬货推车里，有个红白色的小鱼漂。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": 295.5
+    },
+    {
+      "id": "blue_mug",
+      "asset": "targets/blue_mug",
+      "x": 0.7376302083333334,
+      "y": 0.5791015625,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "blue_mug",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "蓝杯子",
+      "clue": "露天茶桌上，找一只蓝色小杯子。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": 50.5
+    },
+    {
+      "id": "harbor_ticket",
+      "asset": "targets/harbor_ticket",
+      "x": 0.310546875,
+      "y": 0.740234375,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "harbor_ticket",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "船票",
+      "clue": "候船小屋的窗口，留着一张小船票。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": 492
+    },
+    {
+      "id": "brass_bell",
+      "asset": "targets/brass_bell",
+      "x": 0.8190104166666666,
+      "y": 0.744140625,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "brass_bell",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "手摇铃",
+      "clue": "船屋门前，有个提醒开船的小铃铛。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": 500
+    },
+    {
+      "id": "starfish",
+      "asset": "targets/starfish",
+      "x": 0.2916666666666667,
+      "y": 0.3759765625,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "starfish",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "海星",
+      "clue": "码头花叶下，还有一位五角的小客人。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": -349.5,
+      "visibleCondition": {
+        "objectId": "flower_leaves",
+        "state": "opened"
+      }
+    },
+    {
+      "id": "lemon",
+      "asset": "targets/lemon",
+      "x": 0.705078125,
+      "y": 0.4375,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "lemon",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "柠檬",
+      "clue": "掀开点心车的盖子，找一颗柠檬。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": -128,
+      "visibleCondition": {
+        "objectId": "bun_lid",
+        "state": "opened"
+      }
+    },
+    {
+      "id": "folded_map",
+      "asset": "targets/folded_map",
+      "x": 0.2721354166666667,
+      "y": 0.57275390625,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "folded_map",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "折叠地图",
+      "clue": "候船长椅上，旅人忘记了自己的地图。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": 78
+    },
+    {
+      "id": "fish_charm",
+      "asset": "targets/fish_charm",
+      "x": 0.7311197916666666,
+      "y": 0.15380859375,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "fish_charm",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "小鱼挂饰",
+      "clue": "陶器架上，有一条不能游泳的小鱼。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": -842
+    },
+    {
+      "id": "bottle_message",
+      "asset": "targets/bottle_message",
+      "x": 0.24934895833333334,
+      "y": 0.15771484375,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 36
+      },
+      "tags": [
+        "bottle_message",
+        "generated_target"
+      ],
+      "targetable": true,
+      "displayName": "漂流瓶",
+      "clue": "南边码头的木箱旁，有封装在瓶里的信。",
+      "visualSize": {
+        "width": 38,
+        "height": 36
+      },
+      "depthY": -814.5
+    }
+  ],
+  "chickens": [],
+  "interactiveObjects": [
+    {
+      "id": "parcel_chest",
+      "asset": "interactions/parcel_chest_closed",
+      "openAsset": "interactions/parcel_chest_opened",
+      "x": 0.744140625,
+      "y": 0.2412109375,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "rect",
+        "width": 110,
+        "height": 100
+      },
+      "visualSize": {
+        "width": 110,
+        "height": 100
+      },
+      "depthY": -584,
+      "label": "打开船长箱",
+      "initialState": "closed",
+      "actions": [
+        {
+          "type": "setState",
+          "objectId": "parcel_chest",
+          "state": "opened"
+        }
+      ],
+      "tags": [
+        "reveal"
+      ],
+      "targetable": true
+    },
+    {
+      "id": "flower_leaves",
+      "asset": "interactions/flower_leaves_closed",
+      "openAsset": "interactions/flower_leaves_opened",
+      "x": 0.2916666666666667,
+      "y": 0.3740234375,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "rect",
+        "width": 105,
+        "height": 95
+      },
+      "visualSize": {
+        "width": 105,
+        "height": 95
+      },
+      "depthY": -309.5,
+      "label": "拨开码头花叶",
+      "initialState": "closed",
+      "actions": [
+        {
+          "type": "setState",
+          "objectId": "flower_leaves",
+          "state": "opened"
+        }
+      ],
+      "tags": [
+        "reveal"
+      ],
+      "targetable": true
+    },
+    {
+      "id": "bun_lid",
+      "asset": "interactions/bun_lid_closed",
+      "openAsset": "interactions/bun_lid_opened",
+      "x": 0.705078125,
+      "y": 0.431640625,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "rect",
+        "width": 90,
+        "height": 78
+      },
+      "visualSize": {
+        "width": 90,
+        "height": 78
+      },
+      "depthY": -183,
+      "label": "掀开点心盖",
+      "initialState": "closed",
+      "actions": [
+        {
+          "type": "setState",
+          "objectId": "bun_lid",
+          "state": "opened"
+        }
+      ],
+      "tags": [
+        "reveal"
+      ],
+      "targetable": true
+    }
+  ],
+  "foregroundSprites": [],
+  "tasks": [
+    {
+      "id": "find_seashell",
+      "type": "hiddenObject",
+      "targetId": "seashell",
+      "label": "找到贝壳",
+      "required": true
+    },
+    {
+      "id": "find_compass",
+      "type": "hiddenObject",
+      "targetId": "compass",
+      "label": "找到指南针",
+      "required": true
+    },
+    {
+      "id": "find_boat_rope",
+      "type": "hiddenObject",
+      "targetId": "boat_rope",
+      "label": "找到船绳",
+      "required": true
+    },
+    {
+      "id": "find_fishing_float",
+      "type": "hiddenObject",
+      "targetId": "fishing_float",
+      "label": "找到鱼漂",
+      "required": true
+    },
+    {
+      "id": "find_blue_mug",
+      "type": "hiddenObject",
+      "targetId": "blue_mug",
+      "label": "找到蓝杯子",
+      "required": true
+    },
+    {
+      "id": "find_harbor_ticket",
+      "type": "hiddenObject",
+      "targetId": "harbor_ticket",
+      "label": "找到船票",
+      "required": true
+    },
+    {
+      "id": "find_brass_bell",
+      "type": "hiddenObject",
+      "targetId": "brass_bell",
+      "label": "找到手摇铃",
+      "required": true
+    },
+    {
+      "id": "find_starfish",
+      "type": "hiddenObject",
+      "targetId": "starfish",
+      "label": "找到海星",
+      "required": true
+    },
+    {
+      "id": "find_lemon",
+      "type": "hiddenObject",
+      "targetId": "lemon",
+      "label": "找到柠檬",
+      "required": true
+    },
+    {
+      "id": "find_folded_map",
+      "type": "hiddenObject",
+      "targetId": "folded_map",
+      "label": "找到折叠地图",
+      "required": true
+    },
+    {
+      "id": "find_fish_charm",
+      "type": "hiddenObject",
+      "targetId": "fish_charm",
+      "label": "找到小鱼挂饰",
+      "required": true
+    },
+    {
+      "id": "find_bottle_message",
+      "type": "hiddenObject",
+      "targetId": "bottle_message",
+      "label": "找到漂流瓶",
+      "required": true
+    }
+  ],
+  "nextCityId": null,
+  "travelType": "other"
+}

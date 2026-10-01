@@ -116,31 +116,57 @@ def leaf(a,x,y,r=8,color=SAGE):
 
 def draw_ground(a):
     w,h=a.w,a.h
-    # A north/south lane and a cross lane have distinct tones and paired curbs.
-    a.box((w/2-295,0,w/2+320,h),PAVING_LIGHT,None)
-    a.box((0,h/2-102,w,h/2+160),PAVING_LIGHT,None)
-    for x in (w/2-295,w/2+320):
-        a.line([(x,0),(x,h)],PAVING_SHADE,11)
-        a.line([(x+5,0),(x+5,h)],INK_LIGHT,1.5)
-    for y in (h/2-102,h/2+160):
-        a.line([(0,y),(w,y)],PAVING_SHADE,10)
-        a.line([(0,y+4),(w,y+4)],INK_LIGHT,1.5)
-    # Irregular pale stone slabs with grouped offsets, never a uniform grid.
+    # The public collision polygons include the sidewalks. The lighter traffic
+    # lanes are narrower: 416 px north/south, 190 px east/west. Keeping the
+    # sidewalks walkable preserves every authored NPC route.
+    west,east=w/2-208,w/2+208
+    north,south=h/2-94,h/2+96
+    a.box((west,0,east,h),PAVING_LIGHT,None)
+    a.box((0,north,w,south),PAVING_LIGHT,None)
+    # Shopfront paving is a succession of small, usable doorstep spaces,
+    # rather than an unbroken second road. These lie under separate props.
+    for x0,x1 in ((395,west-6),(east+6,1140)):
+        for y0,y1 in ((70,390),(450,north-18),(south+20,1490),(1530,1940)):
+            a.box((x0,y0,x1,y1),"#E2D5BB",None)
+            for yy in range(round(y0+14),round(y1-6),30):
+                a.line([(x0+9,yy),(x1-9,yy+2)],"#CDBB9D",1.2)
+            for yy in range(round(y0+27),round(y1-6),60):
+                for xx in range(round(x0+22),round(x1-8),52):
+                    a.line([(xx,yy-12),(xx+2,yy+5)],"#CCBA9D",1)
+    # Pair of low curb stones follows the traffic edge, with a rounded
+    # pedestrian crossing at the center. No height or collision is implied.
+    for x in (west,east):
+        for y0,y1 in ((20,north-10),(south+9,h-20)):
+            a.line([(x,y0),(x,y1)],PAVING_SHADE,7)
+            a.line([(x+3,y0),(x+3,y1)],INK_LIGHT,1)
+            for yy in range(round(y0+25),round(y1-14),58):
+                a.line([(x-2,yy),(x+5,yy+3)],"#BCAA8F",1)
+    for y in (north,south):
+        for x0,x1 in ((16,west-11),(east+11,w-16)):
+            a.line([(x0,y),(x1,y)],PAVING_SHADE,7)
+            a.line([(x0,y+3),(x1,y+3)],INK_LIGHT,1)
+    # Small worn slabs in the travel lanes: more frequent at shop doors and
+    # less contrast in the center so the moving chicks stay legible.
     rng=random.Random(43)
-    for row,y in enumerate(range(22,h-22,49)):
-        x=-30+(row%3)*19
-        while x<w+30:
-            length=rng.randint(66,133)
-            yy=y+rng.randint(-4,4)
-            a.line([(x+3,yy),(x+length-6,yy+rng.randint(-3,3))],"#D9CCB5",1.6)
-            if row%2 or rng.random()>.48:
-                a.line([(x+length,yy-38),(x+length+rng.randint(-5,5),yy)],"#DDCFB8",1.4)
-            x+=length+rng.randint(6,16)
-    # Cross-lane wheel wear and a quiet center seam provide spatial direction.
-    for x in (w/2-120,w/2+118):
-        a.line([(x,35),(x+15,h-40)],"#E2D4BB",11)
-    a.line([(w/2-271,43),(w/2-271,h-44)],"#CDBB9D",2)
-    a.line([(w/2+290,43),(w/2+290,h-44)],"#CDBB9D",2)
+    for row,y in enumerate(range(30,h-20,38)):
+        for x0,x1 in ((west+12,east-12),) if not north <= y <= south else ((12,w-12),):
+            x=x0+(row%3)*13
+            while x<x1-13:
+                length=min(rng.randint(42,92),x1-x-4)
+                yy=y+rng.randint(-3,3)
+                a.line([(x+3,yy),(x+length-6,yy+rng.randint(-2,2))],"#D8CAB1",1.2)
+                if rng.random()>.38:
+                    a.line([(x+length,yy-23),(x+length+rng.randint(-3,3),yy)],"#D9CCB4",1)
+                x+=length+rng.randint(4,13)
+    # Shallow wheel wear is confined to the travel lane, not across shopfronts.
+    for x in (w/2-82,w/2+84):
+        a.line([(x,30),(x+8,north-8)],"#E3D8C2",5)
+        a.line([(x+8,south+8),(x+15,h-38)],"#E3D8C2",5)
+    # Paired floor-only thresholds connect the many narrow fronts to paving.
+    for x0,x1 in ((22,171),(198,369),(1162,1325),(1350,1511)):
+        for yy in (374,1485):
+            a.poly([(x0,yy),(x1,yy),(x1-8,yy+19),(x0+7,yy+20)],"#D4C2A5",None)
+            a.line([(x0+11,yy+13),(x1-12,yy+12)],"#BAA386",1.3)
     # Low ground-only puddle/wear marks stay muted at normal phone scale.
     for cx,cy,rx,ry in [(748,308,42,10),(806,1390,31,8),(383,1595,49,8),(1077,930,36,8)]:
         a.ellipse((cx-rx,cy-ry,cx+rx,cy+ry),"#DDD4C1",None)
@@ -151,11 +177,10 @@ def draw_ground(a):
     # Inlaid stone crossing marker gives the otherwise broad public lane a
     # landmark while remaining flat, walkable ground, not a fake target prop.
     cx,cy=768,1024
-    a.ellipse((cx-92,cy-72,cx+92,cy+72),"#DCC9A9","#BBA787",2)
-    a.ellipse((cx-78,cy-61,cx+78,cy+61),PAVING_LIGHT,"#C3AF91",2)
-    a.ellipse((cx-54,cy-42,cx+54,cy+42),"#E2D6BD","#C7B59B",1.5)
-    a.poly([(cx,cy-51),(cx+12,cy-11),(cx+58,cy),(cx+12,cy+10),(cx,cy+48),(cx-12,cy+9),(cx-57,cy),(cx-13,cy-11)],"#BCA88E","#9F8E7B",2)
-    a.ellipse((cx-9,cy-9,cx+9,cy+9),PAVING_LIGHT,"#A6947D",1.5)
+    a.ellipse((cx-69,cy-53,cx+69,cy+53),"#DCC9A9","#BBA787",1.7)
+    a.ellipse((cx-58,cy-44,cx+58,cy+44),PAVING_LIGHT,"#C3AF91",1.5)
+    a.poly([(cx,cy-35),(cx+9,cy-8),(cx+39,cy),(cx+9,cy+8),(cx,cy+33),(cx-9,cy+8),(cx-38,cy),(cx-10,cy-8)],"#BCA88E","#9F8E7B",1.5)
+    a.ellipse((cx-6,cy-6,cx+6,cy+6),PAVING_LIGHT,"#A6947D",1)
     for xx,yy in [(624,1005),(652,1080),(927,1016),(892,1110),(747,852),(810,1166)]:
         a.line([(xx-17,yy),(xx+16,yy-2)],"#CBB99B",2)
         a.line([(xx+13,yy-3),(xx+18,yy-8)],"#CBB99B",1)
@@ -170,138 +195,184 @@ def draw_ground(a):
             a.ellipse((cx+dx-2,cy+dy-2,cx+dx+2,cy+dy+2),"#C8B89D",None)
 
 
-def storefront(a,kind):
+def narrow_shop(a, role, roof_kind, wall, roof, awning):
+    """A 1-door street house, authored at chick scale rather than a giant shop."""
     w,h=a.w,a.h
-    north=kind in ("west_north","east_north")
-    wall=CREAM if kind=="west_north" else ("#E4D7B8" if kind=="east_north" else "#E7D2B3" if kind=="tailor" else "#E5D8BC")
-    roof="#A87861" if kind=="west_north" else (SLATE if kind=="east_north" else ("#8A7263" if kind=="tailor" else "#B77A5A"))
-    fascia=TERRACOTTA if kind in ("west_north","food") else SLATE
-    # Taper only a little: parallel projection, not converging perspective.
-    a.poly([(10,118),(w-12,112),(w-18,h-33),(13,h-25)],wall,INK,3)
-    a.poly([(3,116),(28,16),(w-32,18),(w-5,113),(w-13,150),(13,153)],roof,INK,3)
-    a.poly([(28,27),(w-33,25),(w-40,104),(22,107)],"#B9937B" if kind!="east_north" else "#8CA3A7",None)
-    roof_tiles(a,20,42,w-20,112,INK_LIGHT,24)
-    a.poly([(10,132),(w-10,129),(w-11,169),(13,172)],fascia,INK,2.4)
-    a.line([(20,159),(w-19,156)],"#E6BC86",1.7)
-    # Lintel, two windows, one door; interior shelves are visible through openings.
-    a.box((w*.12,192,w*.41,h-82),"#645B50",INK,3,3)
-    a.box((w*.59,193,w*.88,h-83),"#665D51",INK,3,3)
-    for lo,hi in ((.12,.41),(.59,.88)):
-        x0,x1=w*lo,w*hi
-        a.line([(x0+5,250),(x1-5,250)],"#CFAD7B",4)
-        a.line([(x0+6,318),(x1-6,318)],"#CFAD7B",4)
-        for j in range(3):
-            cx=x0+19+j*(x1-x0-35)/2
-            if kind=="tailor":
-                a.ellipse((cx-10,222,cx+12,248),[SAGE,TERRACOTTA,SLATE][j],INK,1.3)
-                a.line([(cx-5,250),(cx+4,312)],[SAGE,TERRACOTTA,SLATE][j],9)
-            elif kind=="food":
-                a.ellipse((cx-9,225,cx+9,246),GOLD,INK,1.3)
-                a.ellipse((cx-10,285,cx+11,307),"#B77A53",INK,1.3)
-            else:
-                jar(a,cx-9,222,18,24,[POT,SAGE,TERRACOTTA][j])
-                a.ellipse((cx-8,288,cx+9,309),[GOLD,CREAM,SAGE][j],INK,1.2)
-        a.line([(x0+4,190),(x0+4,h-82)],INK,2)
-        a.line([(x1-4,190),(x1-4,h-82)],INK,2)
-    a.box((w*.43,198,w*.57,h-22),"#624B3E",INK,2.5,4)
-    a.ellipse((w*.535,h-115,w*.55,h-101),GOLD,INK,1)
-    # Sidewall/plinth and finite contact shading.
-    a.box((18,h-53,w-18,h-23),"#BA9A78",INK_LIGHT,1.5)
-    a.line([(27,h-62),(w-28,h-62)],"#D4B791",3)
-    if kind=="west_north":
-        # A small built-in herb rack anchors the tea district.
-        a.box((37,h-183,91,h-116),WOOD,INK,2)
-        for xx in (50,72):
-            a.ellipse((xx-11,h-196,xx+12,h-169),SAGE,INK_LIGHT,1)
-            a.line([(xx,h-182),(xx,h-142)],INK_LIGHT,1)
-    elif kind=="east_north":
-        for x in (39,w-54):
-            a.line([(x,183),(x,h-40)],"#9C8162",2)
-    elif kind=="tailor":
-        # Fabric bolts stand inside the doorway, tied to the shop.
-        for j,c in enumerate((SLATE,SAGE,TERRACOTTA)):
-            x=w*.44+j*13
-            a.line([(x,283),(x+3,h-88)],c,9)
-            a.line([(x-3,285),(x+1,h-88)],INK_LIGHT,1)
+    a.ellipse((9,h-23,w-7,h-5),rgb(DEEP,29),None)
+    a.poly([(8,78),(w-10,77),(w-11,h-25),(9,h-24)],wall,INK,2.5)
+    if roof_kind=="gable":
+        a.poly([(3,96),(w*.5,12),(w-3,96),(w-7,117),(8,116)],roof,INK,2.7)
+        for yy in (54,70,88):
+            span=(yy-10)/86*(w*.48-8)
+            a.line([(w*.5-span,yy),(w*.5+span,yy)],INK_LIGHT,1)
+    elif roof_kind=="shed":
+        a.poly([(3,79),(w-20,27),(w-4,97),(w-10,115),(8,112)],roof,INK,2.7)
+        for xx in range(24,w-12,27):
+            a.line([(xx,79-(xx-3)*.28),(xx+13,104-(xx-3)*.08)],INK_LIGHT,1)
     else:
-        a.box((w*.43,h-139,w*.57,h-104),"#C99262",INK,2)
-        for j in range(3):
-            a.ellipse((w*.455+j*13,h-133,w*.48+j*13,h-116),GOLD,INK_LIGHT,1)
+        a.poly([(3,99),(25,18),(w-30,20),(w-3,99),(w-9,118),(9,117)],roof,INK,2.7)
+        roof_tiles(a,19,43,w-19,96,INK_LIGHT,21)
+    a.poly([(10,110),(w-10,110),(w-13,135),(12,136)],awning,INK,2)
+    a.line([(18,125),(w-19,125)],"#E5BB8C",1)
+    # A glazed work window and a human/chick-sized door create a repeating
+    # narrow frontage. Each house gets its own roof, plinth and trade goods.
+    x0,x1=18,w-76
+    a.box((x0,151,x1,h-52),"#625B50",INK,2.3,2)
+    for yy in (187,227,267):
+        if yy<h-62: a.line([(x0+4,yy),(x1-4,yy)],"#C5A47B",2.8)
+    goods=(SAGE,TERRACOTTA,GOLD) if role in ("herb","grocer") else (SLATE,CREAM,TERRACOTTA)
+    for j,xx in enumerate((x0+19,(x0+x1)/2,x1-18)):
+        if role in ("cloth","ribbon"):
+            a.ellipse((xx-7,160,xx+7,176),goods[j],INK_LIGHT,1)
+            a.line([(xx-5,179),(xx+1,222)],goods[j],7)
+            a.poly([(xx-7,236),(xx+8,234),(xx+9,255),(xx-5,257)],goods[2-j],INK_LIGHT,1)
+        elif role in ("bun","grain","grocer"):
+            a.ellipse((xx-10,164,xx+10,178),GOLD,INK_LIGHT,1)
+            a.ellipse((xx-11,201,xx+10,219),goods[j],INK_LIGHT,1)
+            a.poly([(xx-10,238),(xx+10,238),(xx+8,257),(xx-8,257)],"#C29462",INK_LIGHT,1)
+        else:
+            jar(a,xx-9,158,18,21,goods[j])
+            jar(a,xx-8,199,17,19,goods[2-j])
+            a.ellipse((xx-9,242,xx+9,258),goods[j],INK_LIGHT,1)
+    a.line([(x0-3,145),(x0-3,h-47)],WOOD,3)
+    a.line([(x1+3,145),(x1+3,h-47)],WOOD,3)
+    dx0,dx1=w-64,w-17
+    a.box((dx0,211,dx1,h-26),"#655147",INK,2.3,3)
+    a.box((dx0+5,220,dx1-5,h-27),"#80624F",None)
+    a.ellipse((dx1-14,h-79,dx1-9,h-74),GOLD,INK_LIGHT,1)
+    a.box((14,h-34,w-14,h-22),"#BB9A76",INK_LIGHT,1.2)
+    # A short shelf at ground contact signals a working frontage, without
+    # baking independent target objects into the wall art.
+    a.line([(21,h-43),(x1,h-44)],"#D8B793",2)
+    if role=="herb":
+        for xx in (27,49):
+            a.ellipse((xx-8,h-73,xx+8,h-56),SAGE,INK_LIGHT,1)
+            a.line([(xx,h-60),(xx,h-42)],WOOD,1)
+    elif role=="ribbon":
+        for j,c in enumerate((TERRACOTTA,GOLD,SAGE)):
+            a.line([(dx0+6+j*10,153),(dx0+5+j*10,194)],c,4)
+    elif role=="bun":
+        a.ellipse((dx0+9,160,dx1-8,178),CREAM,INK_LIGHT,1)
+        for xx in (dx0+15,dx0+28): a.ellipse((xx-4,164,xx+4,170),GOLD,None)
+    elif role=="ceramic":
+        for xx,color in ((27,TERRACOTTA),(54,SAGE)):
+            jar(a,xx,h-66,20,29,color)
+    elif role=="paper":
+        for xx in (25,47,69):
+            a.poly([(xx,h-89),(xx+12,h-89),(xx+13,h-57),(xx,h-56)],CREAM,INK_LIGHT,1)
+            a.line([(xx+3,h-79),(xx+10,h-79)],INK_LIGHT,1)
+    elif role=="grocer":
+        a.poly([(18,h-76),(60,h-77),(55,h-39),(22,h-40)],WOOD,INK_LIGHT,1)
+        for xx,yy,c in ((27,h-68,GOLD),(41,h-69,TERRACOTTA),(53,h-66,SAGE)):
+            a.ellipse((xx-5,yy-5,xx+5,yy+5),c,None)
+    elif role=="grain":
+        for xx in (25,49):
+            a.poly([(xx-8,h-82),(xx+9,h-82),(xx+12,h-39),(xx-10,h-39)],GOLD,INK_LIGHT,1)
+            a.line([(xx-5,h-70),(xx+6,h-70)],"#C79A65",1)
+
+
+def storefront(a,kind):
+    # One former 400x560 monumental facade now contains two authored houses.
+    # Their common baseline keeps curb goods/targets on their old supports.
+    w,h=a.w,a.h
+    roles={
+        "west_north": (("herb","hip",CREAM,"#A87861",TERRACOTTA),
+                       ("ceramic","gable","#EADABC",SLATE,"#A27968")),
+        "east_north": (("paper","shed","#E4D7B8",SLATE,"#7C9696"),
+                       ("grocer","hip",CREAM,"#A87861",TERRACOTTA)),
+        "tailor": (("cloth","hip","#E7D2B3","#8A7263",SLATE),
+                   ("ribbon","gable",CREAM,"#AA7A61",TERRACOTTA)),
+        "food": (("bun","gable","#E5D8BC","#B77A5A",TERRACOTTA),
+                 ("grain","shed","#EAD9B9","#8D8770",SLATE)),
+    }[kind]
+    gap=8
+    unit_w=(w-24-gap)//2
+    unit_h=385 if kind in ("tailor","food") else 368
+    baseline=h-9
+    for i,(role,roof_kind,wall,roof,awning) in enumerate(roles):
+        sub=Art({"size":{"width":unit_w,"height":unit_h},"alpha":True})
+        narrow_shop(sub,role,roof_kind,wall,roof,awning)
+        x=8+i*(unit_w+gap)
+        y=baseline-unit_h-(4 if i else 0)
+        a.im.alpha_composite(sub.im,(x*S,y*S))
 
 
 def south_storefront(a, kind):
-    # The south bench occupies the northern 90 px of these blueprint slots.
-    # Keeping that strip transparent avoids the old greybox's bench-on-roof
-    # depth error and keeps the building footprint behind its curb goods.
-    top_clearance=90
-    sub=Art({"size":{"width":a.w,"height":a.h-top_clearance},"alpha":True})
-    storefront(sub,kind)
-    a.im.alpha_composite(sub.im,(0,top_clearance*S))
+    # Storefront already leaves a generous, transparent roof setback for the
+    # cross street bench and for independent depth-sorted curb merchandise.
+    storefront(a,kind)
 
 
 def south_post_house(a):
-    # A low civic workshop at the end of the tailor row. The parcel shelves
-    # and envelope crest tell its function without labels or collectible icons.
+    # A compact sorting room and narrow parcel porch, not one 400-wide hall.
     w,h=a.w,a.h
-    a.ellipse((24,h-32,w-22,h-7),rgb(DEEP,36),None)
-    a.poly([(15,85),(w-17,81),(w-20,h-28),(15,h-26)],"#E7D5B6",INK,3)
-    a.poly([(7,91),(34,17),(w-46,13),(w-8,89),(w-16,113),(14,116)],SLATE,INK,3)
-    a.poly([(40,24),(w-49,21),(w-65,83),(26,88)],"#8DA5A3",None)
-    roof_tiles(a,30,37,w-34,91,"#607A84",29)
-    a.poly([(17,104),(w-20,101),(w-23,126),(18,128)],"#8B7565",INK,2)
-    a.line([(25,111),(w-28,108)],"#D8C5A6",2)
-    # Two sorting windows, with parcels resting on their shelves.
-    for x0 in (36,w-151):
-        a.box((x0,152,x0+115,265),"#655B4D",INK,2.6,3)
-        a.line([(x0+7,200),(x0+108,198)],"#D1A97D",4)
-        a.line([(x0+8,244),(x0+106,243)],"#D1A97D",3)
-        for x,y,c in ((x0+20,169,GOLD),(x0+57,171,TERRACOTTA),(x0+87,166,SAGE),
-                      (x0+32,213,CREAM),(x0+73,216,GOLD)):
-            a.poly([(x,y),(x+20,y-2),(x+23,y+20),(x-2,y+20)],c,INK_LIGHT,1.1)
-            a.line([(x+10,y),(x+11,y+19)],"#C9A77E",1)
-        a.line([(x0+5,151),(x0+5,264)],WOOD,2)
-        a.line([(x0+109,151),(x0+109,264)],WOOD,2)
-    # Dark arched doorway and a stamped envelope crest over the lintel.
-    mid=w/2
-    a.box((mid-40,181,mid+40,h-31),"#665449",INK,2.6)
-    a.ellipse((mid-40,159,mid+40,209),"#665449",INK,2.6)
-    a.box((mid-27,183,mid+27,h-31),"#775E4A",None)
-    a.ellipse((mid+17,242,mid+23,248),GOLD,INK_LIGHT,1)
-    a.poly([(mid-21,131),(mid+22,131),(mid+22,153),(mid-21,153)],CREAM,INK,1.4)
-    a.line([(mid-20,134),(mid,145),(mid+21,134)],TERRACOTTA,1.6)
-    a.box((19,h-28,w-19,h-17),"#BA9A78",INK_LIGHT,1.3)
+    hall_right=w-106
+    a.ellipse((16,h-30,w-10,h-7),rgb(DEEP,31),None)
+    a.poly([(16,94),(hall_right-3,92),(hall_right-5,h-28),(17,h-25)],"#E7D5B6",INK,2.6)
+    a.poly([(7,101),(29,26),(hall_right-29,24),(hall_right+3,100),(hall_right-8,117),(15,118)],SLATE,INK,2.7)
+    a.poly([(30,32),(hall_right-31,30),(hall_right-44,93),(22,95)],"#8DA5A3",None)
+    roof_tiles(a,23,46,hall_right-20,93,"#607A84",25)
+    a.poly([(17,110),(hall_right-7,108),(hall_right-8,128),(18,130)],"#8B7565",INK,1.8)
+    # Parcel shelves fill one broad window; the door retains actor scale.
+    a.box((31,155,158,h-38),"#655B4D",INK,2.2,2)
+    for yy in (189,229,267):
+        a.line([(36,yy),(153,yy-1)],"#D1A97D",3)
+        for j,xx in enumerate((46,83,120)):
+            a.poly([(xx,yy-27),(xx+25,yy-28),(xx+26,yy-7),(xx-1,yy-7)],
+                   (GOLD,TERRACOTTA,SAGE)[j],INK_LIGHT,1)
+            a.line([(xx+11,yy-25),(xx+12,yy-8)],"#C9A77E",1)
+    a.box((193,203,266,h-30),"#665449",INK,2)
+    a.ellipse((193,174,266,231),"#665449",INK,2)
+    a.box((201,211,258,h-30),"#775E4A",None)
+    a.ellipse((247,246,252,251),GOLD,INK_LIGHT,1)
+    a.poly([(207,135),(254,135),(254,160),(207,160)],CREAM,INK_LIGHT,1)
+    a.line([(208,138),(230,151),(253,138)],TERRACOTTA,1.6)
+    a.box((17,h-29,hall_right-6,h-17),"#BA9A78",INK_LIGHT,1)
+    # Side porch is open and lower: parcel staging rather than a second hall.
+    x0=hall_right+2
+    a.poly([(x0+2,144),(w-18,145),(w-20,h-24),(x0+6,h-24)],"#DCCBAB",INK,1.8)
+    a.poly([(x0-8,150),(x0+12,117),(w-17,119),(w-8,151)],"#A57E69",INK,2)
+    a.line([(x0+10,148),(x0+10,h-25)],WOOD,4)
+    a.line([(w-21,148),(w-21,h-26)],WOOD,4)
+    for xx,yy,c in ((x0+18,191,GOLD),(x0+49,184,CREAM),(x0+24,229,SAGE)):
+        a.poly([(xx,yy),(xx+24,yy-1),(xx+25,yy+21),(xx-1,yy+22)],c,INK_LIGHT,1)
+    a.box((x0+8,h-31,w-17,h-21),"#B39576",INK_LIGHT,1)
 
 
 def south_grain_house(a):
-    # Different roof and opening rhythm from the post house, with the same
-    # near-parallel projection and warm 2D palette as the older shop row.
+    # Grain shop is a narrow gabled hall with an open sack-loading lean-to.
     w,h=a.w,a.h
-    a.ellipse((19,h-31,w-13,h-7),rgb(DEEP,36),None)
-    a.poly([(13,92),(w-13,91),(w-15,h-26),(14,h-27)],"#E6D7B9",INK,3)
-    a.poly([(3,103),(w*.5,12),(w-4,103),(w-14,122),(12,122)],"#A96F54",INK,3)
-    a.poly([(37,96),(w*.5,30),(w-38,97)],"#C48B69",INK_LIGHT,1.7)
-    for y in (62,85,105):
-        span=(y-12)/91*(w*.5-15)
-        a.line([(w*.5-span,y),(w*.5+span,y)],"#865C4A",1.5)
-    a.poly([(18,118),(w-18,118),(w-19,140),(20,140)],"#B67A5A",INK,2)
-    a.line([(30,127),(w-29,127)],"#E1B48E",1.7)
-    # A wide service arch and visible working interior.
-    a.box((w*.27,181,w*.73,h-29),"#675648",INK,2.5)
-    a.ellipse((w*.27,153,w*.73,215),"#675648",INK,2.5)
-    a.box((w*.31,200,w*.69,h-30),"#8F7155",None)
-    for x in (w*.35,w*.49,w*.61):
-        a.poly([(x-20,240),(x+18,239),(x+23,276),(x-22,277)],GOLD,INK_LIGHT,1.5)
-        a.line([(x-18,249),(x+18,249)],"#DBBF88",1.5)
-        a.line([(x-14,258),(x+15,258)],"#B8875B",1.5)
-    # Shallow wings carry baskets, leaving the arch recognisable at phone zoom.
-    for x in (45,w-88):
-        a.box((x,167,x+43,224),"#65594D",INK,2)
-        a.line([(x+4,189),(x+39,189)],"#C19E75",3)
-        jar(a,x+12,174,19,20,POT)
-        jar(a,x+15,196,18,19,CREAM)
-        a.poly([(x-3,249),(x+45,248),(x+40,279),(x+2,279)],"#B68C60",INK,1.6)
-        for yy in (256,266): a.line([(x+4,yy),(x+39,yy)],"#D0AF80",1)
-    a.box((17,h-29,w-17,h-18),"#B99A77",INK_LIGHT,1.3)
+    x0=105
+    a.ellipse((15,h-31,w-13,h-7),rgb(DEEP,31),None)
+    a.poly([(x0+4,99),(w-16,99),(w-18,h-25),(x0+6,h-25)],"#E6D7B9",INK,2.6)
+    mid=(x0+w-15)/2
+    a.poly([(x0-3,106),(mid,22),(w-9,105),(w-18,121),(x0+7,122)],"#A96F54",INK,2.7)
+    for yy in (62,84,104):
+        span=(yy-22)/83*((w-x0)*.48-7)
+        a.line([(mid-span,yy),(mid+span,yy)],"#865C4A",1.3)
+    a.poly([(x0+8,116),(w-18,115),(w-20,138),(x0+9,139)],"#B67A5A",INK,1.7)
+    # Wide service arch is local to this compact hall.
+    a.box((x0+56,184,w-70,h-28),"#675648",INK,2.3)
+    a.ellipse((x0+56,160,w-70,214),"#675648",INK,2.3)
+    a.box((x0+65,203,w-79,h-28),"#8F7155",None)
+    for xx in (x0+80,x0+125,x0+170):
+        a.poly([(xx-17,238),(xx+17,237),(xx+19,274),(xx-19,275)],GOLD,INK_LIGHT,1.2)
+        a.line([(xx-13,248),(xx+13,248)],"#DBBF88",1)
+    a.box((x0+19,166,x0+62,246),"#65594D",INK,1.8)
+    for yy in (189,224):
+        a.line([(x0+22,yy),(x0+59,yy)],"#C19E75",2)
+    jar(a,x0+31,170,19,21,POT)
+    jar(a,x0+30,201,20,20,CREAM)
+    a.box((x0+8,h-29,w-17,h-18),"#B99A77",INK_LIGHT,1)
+    # Lean-to for loading: much smaller roof and stacked working baskets.
+    a.poly([(13,145),(x0+8,145),(x0+5,h-25),(16,h-24)],"#E0CEAF",INK,1.8)
+    a.poly([(6,153),(30,112),(x0+17,122),(x0+11,156)],"#8D8770",INK,2)
+    a.line([(22,153),(22,h-24)],WOOD,4)
+    a.line([(x0+2,152),(x0+2,h-25)],WOOD,4)
+    for xx,yy in ((30,190),(59,187),(43,228)):
+        a.poly([(xx-10,yy),(xx+12,yy-2),(xx+16,yy+27),(xx-13,yy+29)],"#B68C60",INK_LIGHT,1.2)
+        a.line([(xx-6,yy+11),(xx+10,yy+10)],"#D6B98E",1)
+    a.box((17,h-31,x0+7,h-20),"#B99A77",INK_LIGHT,1)
 
 
 def east_pottery_annex(a):
@@ -408,9 +479,8 @@ def chestnut_cart(a):
     a.box((57,132,130,187),WOOD,INK,3)
     a.box((63,138,124,179),"#A56C4C",INK_LIGHT,1)
     a.ellipse((82,143,108,170),"#584A3C",INK,2)
-    a.ellipse((22,162,55,198),"#776B5C",INK,2)
-    a.ellipse((130,160,164,198),"#776B5C",INK,2)
-    for x in (39,147): a.ellipse((x-5,177,x+5,187),GOLD,INK,1)
+    # Wheels are drawn once in the near lip depth layer, not duplicated here.
+    a.line([(35,187),(149,187)],"#684E3F",2)
 
 
 def chestnut_front(a):
@@ -681,6 +751,32 @@ def street_water_station(a):
     a.poly([(71,121),(89,119),(92,126),(74,129)],GOLD,INK_LIGHT,1)
 
 
+def tea_delivery_nook(a):
+    # Tea crate, refill jars and a folded drying cloth have one clear purpose.
+    a.ellipse((7,78,99,94),rgb(DEEP,36),None)
+    a.poly([(9,39),(92,36),(91,79),(13,83)],WOOD,INK,2)
+    a.poly([(15,44),(87,42),(82,67),(17,70)],"#C6A078",INK_LIGHT,1)
+    for xx in (24,43,64):
+        jar(a,xx,24,18,25,[POT,CREAM,SAGE][(xx//20)%3])
+    a.line([(18,56),(85,54)],"#D5B28A",1.5)
+    a.line([(25,73),(25,81)],INK_LIGHT,1)
+    a.line([(74,70),(74,79)],INK_LIGHT,1)
+    a.poly([(49,10),(83,13),(87,31),(52,29)],CREAM,INK_LIGHT,1)
+    a.line([(53,17),(83,19)],"#D4BA98",1)
+
+
+def tailor_delivery_stool(a):
+    # A used cutting stool and two folded bolts at the tailor's threshold.
+    a.ellipse((5,67,87,84),rgb(DEEP,38),None)
+    a.line([(20,48),(17,77)],WOOD,5)
+    a.line([(75,47),(78,78)],WOOD,5)
+    a.poly([(11,44),(82,41),(79,56),(13,59)],"#B68C63",INK,2)
+    for i,(x,y,c) in enumerate(((17,29,SLATE),(29,20,SAGE),(43,12,TERRACOTTA))):
+        a.poly([(x,y),(x+44,y-1),(x+47,y+15),(x+2,y+17)],c,INK_LIGHT,1.2)
+        a.line([(x+5,y+6),(x+39,y+5)],"#E2CFAD",1)
+    a.line([(59,18),(64,47)],GOLD,2)
+
+
 def tea_whistle_foreground(a):
     # Canvas is centered exactly on the separate target node. This is the
     # visible near edge of a neighbouring cup, not another target-shaped prop.
@@ -743,6 +839,8 @@ DRAW = {
  "lc_south_post_house_back":south_post_house,
  "lc_south_grain_house_back":south_grain_house,
  "lc_east_pottery_annex_back":east_pottery_annex,
+ "lc_tea_delivery_nook":tea_delivery_nook,
+ "lc_tailor_delivery_stool":tailor_delivery_stool,
  "lc_tea_whistle_foreground":tea_whistle_foreground,
  "lc_tailor_thimble_foreground":tailor_thimble_foreground,
  "lc_banner_knot_foreground":banner_knot_foreground,

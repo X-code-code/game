@@ -1,0 +1,523 @@
+{
+  "batchId": "ai_image_v4",
+  "sourceType": "codex_builtin_image_gen",
+  "originalOutputsCopiedUnchanged": true,
+  "sources": [
+    {
+      "source": "art/production/ai_image_v4/sources/shop_red.png",
+      "prompt": "art/production/ai_image_v4/prompts/shop_red.md",
+      "sha256": "f89ff2696f491d2c7b95e12e6d7fb7de586f7b664e8fe4f049ad4aeff6a23c73",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-c653035c-c7a7-483c-9398-5fdc7ae5e650.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/shop_blue.png",
+      "prompt": "art/production/ai_image_v4/prompts/shop_blue.md",
+      "sha256": "35a823062951de4547e8a4ab071618f28e15ed3144a0f5a3cf28a454f5a7c0d5",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-3f30db92-ce45-487e-a692-64d15ed3384c.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/shop_tailor.png",
+      "prompt": "art/production/ai_image_v4/prompts/shop_tailor.md",
+      "sha256": "8de4e602524991206b14e57eb659da19041e627bb725cb1243dcfa89057bdf80",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8bef4cd-1892-4354-b619-5b04a47949ae.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/shop_bakery.png",
+      "prompt": "art/production/ai_image_v4/prompts/shop_bakery.md",
+      "sha256": "0134e8250e1f1b0114c1d03d71b4faf29c6a34995a44ab3fe651d6cbabef8569",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-a1d05006-a4aa-481a-a55c-27767215bef1.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/post_house.png",
+      "prompt": "art/production/ai_image_v4/prompts/post_house.md",
+      "sha256": "5cf456268c6720a9736fb4cf5e987caa95048521bfd6caea9ed6a6044a2c0094",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-0e0ceef6-1bcf-4eb5-afbe-06fce18bcddd.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/grain_house.png",
+      "prompt": "art/production/ai_image_v4/prompts/grain_house.md",
+      "sha256": "730a64a934db4180353d884d0def29a18cf211ac08b44183406779d2181c802b",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-d6c07e39-0caa-4747-9bb5-cd2f8ac68c40.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/pottery_annex.png",
+      "prompt": "art/production/ai_image_v4/prompts/pottery_annex.md",
+      "sha256": "dff6e92f2c88fac475b1d70f1670dba7f2e3762f0310fe1a79ea3abcbbe92181",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-4ee57708-b1bf-4109-b8a8-d995b541d75a.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/tea_stall.png",
+      "prompt": "art/production/ai_image_v4/prompts/tea_stall.md",
+      "sha256": "bd4461ff766b0fc221eb5cbc8a6231e67119db5c6b9811f6ed656da1be4fb8a9",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-9376ebcc-5d7a-4bda-b360-eac4e423de2a.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/herb_stand.png",
+      "prompt": "art/production/ai_image_v4/prompts/herb_stand.md",
+      "sha256": "2d1b946f209ec80a766e11d2df651aed1fe4060f30982720cbb293d7abe80a2f",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-eb0ae9a3-f453-480e-b4ae-f2e145c2593c.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/bun_cart.png",
+      "prompt": "art/production/ai_image_v4/prompts/bun_cart.md",
+      "sha256": "423c41b6ce0cf2149ec5331f07309aad695ccbc51207f2e65b55f44611862746",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-23c9f29e-afcb-4545-8d45-105638aa4ebd.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/chicken_mailman_sheet.png",
+      "prompt": "art/production/ai_image_v4/prompts/chicken_mailman_sheet.md",
+      "sha256": "45c49c2765002ea6294747738646686fa6fef4257e760e90184e51064e120a2b",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-b43d606a-27b2-45c4-ba4c-fcb58306cddd.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/chicken_tea_vendor_sheet.png",
+      "prompt": "art/production/ai_image_v4/prompts/chicken_tea_vendor_sheet.md",
+      "sha256": "befdbbabe4d5516b0114fd39b07384138f841e3fc6ca6956ec45f70ea045b8d6",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-1a3831e4-1ef4-4064-ac09-75e9e370f0f2.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/chicken_shopper_sheet.png",
+      "prompt": "art/production/ai_image_v4/prompts/chicken_shopper_sheet.md",
+      "sha256": "2291f6bf036281bcaa3611f7692f1a114f31ba7592d416b34fcc2990e9596a00",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-82b9af33-809b-4ee7-b604-65e0a7866518.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/chicken_watcher_sheet.png",
+      "prompt": "art/production/ai_image_v4/prompts/chicken_watcher_sheet.md",
+      "sha256": "c6978bd8e7e2454b0522e20fbdd3c41ee40cfe39a30d508e5089d2787088f50d",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-39f7e5c0-b375-44ad-85fa-b9198d608220.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/chicken_tea_regular_sheet.png",
+      "prompt": "art/production/ai_image_v4/prompts/chicken_tea_regular_sheet.md",
+      "sha256": "dc4ae64623ee4efd1cd7bce67570cb5b1a1eb0652195038ac0c02726399832c9",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-73b48704-d6dc-432f-8517-dfd482d9eb40.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/chicken_chestnut_seller_sheet.png",
+      "prompt": "art/production/ai_image_v4/prompts/chicken_chestnut_seller_sheet.md",
+      "sha256": "ab42e8b003c5bd6a469d6c40ef7ce4efb8959ef6bb457dbb562134481567fe8b",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-dc776d27-3023-4de7-9834-d7884e92d893.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/chicken_flower_buyer_sheet.png",
+      "prompt": "art/production/ai_image_v4/prompts/chicken_flower_buyer_sheet.md",
+      "sha256": "aac813af7d4ca6b1125a292aaccf6a8e983afcb664287a10a54a313d5634b40d",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-7a45d802-acce-41e1-9c48-051267c808f6.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/chicken_child_sheet.png",
+      "prompt": "art/production/ai_image_v4/prompts/chicken_child_sheet.md",
+      "sha256": "048da8e448f432be02c8019761e562382eebc0807c957faec8be4cc53c3ec90d",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-1ecd551a-3931-4638-ad8c-94c43c112bb9.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/town_ground.png",
+      "prompt": "art/production/ai_image_v4/prompts/town_ground.md",
+      "sha256": "b3d3050390fa34ee84ed674965f34f2c9d26f09a4ddc98161b9f5081f705cb34",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-b472d004-fa41-427d-884b-4b4c2a4af289.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/tea_patio.png",
+      "prompt": "art/production/ai_image_v4/prompts/tea_patio.md",
+      "sha256": "b9c35e9383996b8eea0d9b589d41adb657419f2fe0e2d93ba97b07ddbe2bf23f",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-481facf5-c9e0-44d8-85f2-3507b3b741f3.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/chestnut_cart.png",
+      "prompt": "art/production/ai_image_v4/prompts/chestnut_cart.md",
+      "sha256": "aff9c06c71e9c6e656de4b4d2fc84d156a9102d27ae7c3118a2f5932470e68af",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-7587ab09-a5a2-425f-983e-03d25023d74a.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/town_tree.png",
+      "prompt": "art/production/ai_image_v4/prompts/town_tree.md",
+      "sha256": "c8d2d283e08fde3346c314bfa35dfeca531e45ec2d4699407849098c0ec4fc42",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-dec2d6e6-b128-4178-a96d-9b6582271ae4.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/flower_pot.png",
+      "prompt": "art/production/ai_image_v4/prompts/flower_pot.md",
+      "sha256": "1f4444ef73aa7c87d9c8a48a5e3f5d9cdc9571500f942f00cdb14fa57f65c462",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-495e54cb-2c40-4c4f-92ee-d60ccf8946d9.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/town_bench.png",
+      "prompt": "art/production/ai_image_v4/prompts/town_bench.md",
+      "sha256": "38331ca5e1b2261c12b25b51767367dac3938957c697e7a39789272bc73ced14",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f714c894-c457-4124-80fe-eb54142f0283.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/flower_display.png",
+      "prompt": "art/production/ai_image_v4/prompts/flower_display.md",
+      "sha256": "9443aa2f38ccd1da157a5252da8d3fcb439927c358e62ccb723e51cb1f921a12",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-a404b74d-697c-4c8f-88d5-7bc683267bc2.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/sewing_goods.png",
+      "prompt": "art/production/ai_image_v4/prompts/sewing_goods.md",
+      "sha256": "4aed721d14ded5c4e6b5c7b171e9db0500b880bad80692b4f1ffde16dc379919",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-288ecb10-90ad-4d76-ad7d-811785e8f129.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/tailor_rack.png",
+      "prompt": "art/production/ai_image_v4/prompts/tailor_rack.md",
+      "sha256": "18fe97cde35bc2d458c1c6a4dfe87b82441e0bdfb5f16aca86bb830c81c68a0d",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-6b2182dc-8092-474b-8885-598e8cf6c027.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/wood_crates.png",
+      "prompt": "art/production/ai_image_v4/prompts/wood_crates.md",
+      "sha256": "bfb7498ada094b4261ea93bf1419999284b1361bb03b6e6621852c0e6eaa32ec",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-1990ba01-6244-49b7-a84c-720f4b869af5.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/pottery_display.png",
+      "prompt": "art/production/ai_image_v4/prompts/pottery_display.md",
+      "sha256": "031f4e2580d96c699936864c0303e0b92e203c42e48c571bf40039c27cb993bd",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-69de6beb-9b44-41f3-a3e1-bf8a4a193c5b.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/produce_display.png",
+      "prompt": "art/production/ai_image_v4/prompts/produce_display.md",
+      "sha256": "3882356662c08cde8c63ca930e2e0f9195cfedd3a2d5a0705188e61c9f781cd3",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-9e76e951-d848-4847-af8d-3951fb5f6890.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/town_signpost.png",
+      "prompt": "art/production/ai_image_v4/prompts/town_signpost.md",
+      "sha256": "57d81a3fcf13ef1ae6cfdcff6c9765e64b2146559725e2f826b9ba09c895401f",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-328a87ce-4a6d-4b21-8134-63d786067e46.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/lantern_post.png",
+      "prompt": "art/production/ai_image_v4/prompts/lantern_post.md",
+      "sha256": "3c66fd1b0d46c84ccfb86dbe465c4ac57e9b8082fe94fc978a7a5c14f81a8cba",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-20328b58-b299-4b01-9217-ed9baefc0fb7.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/street_banner.png",
+      "prompt": "art/production/ai_image_v4/prompts/street_banner.md",
+      "sha256": "a7f6bde7caabee00137c32fccfa38bf5649e57ed848a63849661d0ce65ddbc1a",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-d721ad60-1dcb-49b3-b938-3263baeb6d9e.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/street_pennants.png",
+      "prompt": "art/production/ai_image_v4/prompts/street_pennants.md",
+      "sha256": "361d416eec44a4d79345d11bc9ebc0a09be5b601954b18b8b386d51a3a212aab",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-565e9f95-07d3-42ef-a433-82995161e3b8.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/steam_fx.png",
+      "prompt": "art/production/ai_image_v4/prompts/steam_fx.md",
+      "sha256": "32e8782b6b812a83eae9ed09d637a35adcbdc283eec9476c4066aeed4bd246a8",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-d00f5d4f-19d7-40f3-820c-434402e3437f.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/town_handcart.png",
+      "prompt": "art/production/ai_image_v4/prompts/town_handcart.md",
+      "sha256": "13c92647be6dbf69bc77c64c2e3184e6a9dd1100619f98733c6180412d61ecc4",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-fd665e46-c1f0-4f48-90bf-3d2361eca1e8.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/water_station.png",
+      "prompt": "art/production/ai_image_v4/prompts/water_station.md",
+      "sha256": "806f8f9393672886a62b5ce8e5783f210fa0a525b60878a289723f8e93435433",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-1c0e5732-9654-4952-9ea5-98ad4c369e9d.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/event_cup.png",
+      "prompt": "art/production/ai_image_v4/prompts/event_cup.md",
+      "sha256": "f73cd09e3c755f3a8ec578dcf99a6e906884b75e69c7b10c9ac691837ff7ad1a",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-51fe8572-9b4f-4cec-a81a-72f5ecf52863.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_tea_clay_whistle.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_tea_clay_whistle.md",
+      "sha256": "378225a80766ab861157a219a5aa2fdf114a9ee76ab44adc088387817f1a4d0f",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-90282695-21b2-4513-9545-767fe5e289b9.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_tailor_thimble.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_tailor_thimble.md",
+      "sha256": "8eecec160e28801642606ad27e4713e4c5ffad4bdcf8127ba421d5b9f6b5068a",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-c9234ae6-3fab-480f-8544-1e565f062c38.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_banner_knot.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_banner_knot.md",
+      "sha256": "87c9f463c671b66175ea87baf72418b63af9150d248484f88558369eda22bf53",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-2419af6e-3ddb-493c-a2ff-94fa327f7e6a.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_chestnut_tongs.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_chestnut_tongs.md",
+      "sha256": "4ecd9efd43f0a3b1ca06e70503f4ac3d940c118b388d00e36d3bab620e52bf24",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-a94b8cfd-272d-46ec-bfc7-d59d610540c3.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_pocket_watch.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_pocket_watch.md",
+      "sha256": "6dfb2a54c156628a421b592e8c31a2c6185b56145f092c6edd94ec2c58d80438",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-1b652c61-bd6d-496b-97fc-4499c520737e.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_sewing_scissors.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_sewing_scissors.md",
+      "sha256": "4b9bcdfd8ae13687b5dba2135adeb3772efe5e77dd8aed684046e67afee05a07",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-3279186e-c73e-4932-acf0-1e9cccb222b9.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_blue_feather.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_blue_feather.md",
+      "sha256": "4ebb16691ba53afcbeafb6ec6603fe66e7c1177d7315ffcbb2f3a3074d0dd6d4",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-538e2be4-7d89-4009-9a38-674d13078034.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_sealed_letter.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_sealed_letter.md",
+      "sha256": "6c9d292a1914873cb263da4be1bacc98cbd5983d67e1a6616aa507ba09e17371",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-cf619cb2-61d3-472f-aacb-7f63e9d6ddb5.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_honey_dipper.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_honey_dipper.md",
+      "sha256": "14be78b85fa22ed025106dbe0a604dface46f6e467d424c768450fa0968da669",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-87ee84e6-e270-4e0c-98a0-fd2d396ff7a1.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_seed_packet.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_seed_packet.md",
+      "sha256": "0128993302aa1c92814d590b7631a980a07f77beea57899d7be8440338887e9c",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-a27726c7-c8c7-40d8-8b6b-5fc48b58ee43.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_orchard_apple.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_orchard_apple.md",
+      "sha256": "327a6fb5075f932ab8acca4a74982e9f6a7a0e2f632ec8ce9e5336b5453e48a9",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-5957eea0-b836-4156-9f9f-a974f316a50d.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_golden_bun.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_golden_bun.md",
+      "sha256": "2ea742e07ed539202989f4d9bd123244db759733f733b1bd3020817c5934632e",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-7d91abbf-c4df-4703-b885-f20837b73739.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/parcel_chest_states.png",
+      "prompt": "art/production/ai_image_v4/prompts/parcel_chest_states.md",
+      "sha256": "d70b6ee85594621c6c212b9594eaf37859f6915fdffd2c6b7ee6684ea9ba8002",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-c1cccfd3-b838-4161-8e86-51c3a16deac6.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/flower_leaves_states.png",
+      "prompt": "art/production/ai_image_v4/prompts/flower_leaves_states.md",
+      "sha256": "854060c4ab1cb73bff11bd20d34d4ea153e01cfc980f2463ebc0cde72049aa49",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-d8f2f60e-5bed-4d0f-9380-6fe0a002b5d6.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/bun_lid_states.png",
+      "prompt": "art/production/ai_image_v4/prompts/bun_lid_states.md",
+      "sha256": "25b852bbea70e9e259d55a91f7602297aa85aedf98a8913b79e3888c63c7eb59",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-204bad31-9324-4d7e-a12a-f792e7ac7ba6.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/ui_panel.png",
+      "prompt": "art/production/ai_image_v4/prompts/ui_panel.md",
+      "sha256": "c67338298a43de6cc45f0e2cef33f45ab88bd9cee22688323dec2aeb940bf067",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-557705e7-034e-4971-ab5e-1c55888521c6.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/ui_button.png",
+      "prompt": "art/production/ai_image_v4/prompts/ui_button.md",
+      "sha256": "071f3ab2661c50bdbf3458728bdd169ff42ff96384bf7c6bfd608f2cffd3c8e3",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-8e1eae48-886f-4d9f-8541-677c7105897d.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/ui_hint_ring.png",
+      "prompt": "art/production/ai_image_v4/prompts/ui_hint_ring.md",
+      "sha256": "eb1002413c5b3c20ff1171ef26c8dbcaa6946187a4f579317212f5090228f4bc",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-8581375b-8168-46fc-86f1-bf5fc5177f8d.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/garden_ground.png",
+      "prompt": "art/production/ai_image_v4/prompts/garden_ground.md",
+      "sha256": "a741fdd1f6baefd31bacb5a6d89dde792966e6a00dc1889823ca43b9f2fc296d",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-adf1c383-3b0d-45bf-af93-e9089e9d2a14.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/garden_greenhouse.png",
+      "prompt": "art/production/ai_image_v4/prompts/garden_greenhouse.md",
+      "sha256": "9e69fc7595fc059f16a313fb4fb40cdfe48d43c2ebf8811d5af7e4fe93c23773",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-b2c77a6c-e43a-4076-8d0f-9dd02c5190f9.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/garden_flower_shop.png",
+      "prompt": "art/production/ai_image_v4/prompts/garden_flower_shop.md",
+      "sha256": "d1513ecb1ab799285956157fc7f2d0299336ab87410c3d587de322684e4338b9",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-3bf3b5d5-ac25-432d-82c4-54084eed34ca.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_watering_can.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_watering_can.md",
+      "sha256": "4ffd32b2df379b28edda04d73082a001c0b4588e537e6a816d7896f32fb1357c",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-8132c443-fdd7-48da-b1a5-94a74c3a89d9.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_garden_gloves.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_garden_gloves.md",
+      "sha256": "4f7437b12308ca0b6a3e8587e620bb1eb42bf86061291c2849eeb485d5f4f7fa",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-6be8b965-af76-4e69-aaa6-b3d72449b681.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_garden_trowel.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_garden_trowel.md",
+      "sha256": "9b9aa02c366756f42c055ad6c8b609197c89959a5e745382026f45493d08f94e",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-a3462310-c8ad-4f07-bbb2-1d8bf97beb48.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_rose_bloom.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_rose_bloom.md",
+      "sha256": "f5cf1a2eeae1c877033df9a31470b5905cc2bde562f253038c10c42b8cc4643d",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-be73f0a8-0dc5-45b3-90af-2b7b63d65bc7.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_yellow_pear.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_yellow_pear.md",
+      "sha256": "71e6c3826d46d55c92d18ec4e8e80e55e515526b30b56b195e7be67b6014c700",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-3f826528-464d-4599-b67a-7ce68cd2bac4.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_honey_jar.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_honey_jar.md",
+      "sha256": "5d49b153d719b17bef8bf73f46e839aedd580f418844a3587dfa3990699b832e",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-a8ebc892-5bf1-417a-b394-3bbeab43c087.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_garden_key.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_garden_key.md",
+      "sha256": "06631b008a2a73e3396f204aab1da61f35fa2cd7e7068aa9b57667a7d8e2d520",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-a58d29f3-027b-4e4f-8eb9-de6ec37e7295.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_butterfly_badge.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_butterfly_badge.md",
+      "sha256": "b4fefdba94121d502714950bfaa115fc252e2ddc69e152d62bc92172995098f9",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-6e3b6ce0-ad22-43c8-b128-cf34c1da39a5.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_ribbon_spool.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_ribbon_spool.md",
+      "sha256": "89b9c5918809a3c901e803f2d83a417d01a8b132e9d8f31b4b0f0d92fce5c3bd",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-42378d30-b1d9-430e-bb65-c43241b93305.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_straw_hat.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_straw_hat.md",
+      "sha256": "d86819a4c5671d0437161b075cb40fb83e55018b38f5096963afc56e8325b7a0",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-22cf10ec-38db-4837-88e5-b4c83dbe12c8.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_acorn.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_acorn.md",
+      "sha256": "2b4e19880d27c058c517603f00e5ba071c11299f52d7748fce7b2b1f12636060",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-a32584f5-7881-4965-a5ec-e360530c3f0d.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_lavender_sachet.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_lavender_sachet.md",
+      "sha256": "a40a3d464635a942058a7914ce882e70af3aea7b7dec5b4c82a0924d2169808b",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-35936037-cc39-4841-bcdf-0f433e5dee6c.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/harbor_ground.png",
+      "prompt": "art/production/ai_image_v4/prompts/harbor_ground.md",
+      "sha256": "fcc52d67b69c03d1d4f7c1d80a6159baf71f88ce1899b993d8c540145581875f",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-456af760-5644-485b-8350-b5ab5ca45479.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/harbor_ferry_house.png",
+      "prompt": "art/production/ai_image_v4/prompts/harbor_ferry_house.md",
+      "sha256": "ede4e52e185df4202fa96b4efdff0f012d08016ca157e47e7172faad63db2c6b",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-bc58c150-e1c6-4398-a6bf-1adb9ca1bf0c.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/harbor_boathouse.png",
+      "prompt": "art/production/ai_image_v4/prompts/harbor_boathouse.md",
+      "sha256": "093b0f9b660883adbe26c03932beca077e26bee8672ec074248ddd668bc6c2e6",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-63c2cf4f-45f3-4f41-bf37-15364ad4b74a.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_seashell.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_seashell.md",
+      "sha256": "b6109ff178f5bff3117faff4e057b4c989e2d6176b2ebd0ade836aa29f71b7f1",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-79ff3169-3a3b-44cb-8c36-58244e51decd.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_compass.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_compass.md",
+      "sha256": "853a79df80dee149f76fcdbb46358b90c7a06dd27c6e92eaacffe8935129ad66",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-d607a4ce-494a-4c25-86ad-ac88a317638d.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_boat_rope.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_boat_rope.md",
+      "sha256": "29f9fd709e002c330645cec5c1bda0205c1fe9a1a10cc01666d960f5254a058d",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f1e4af0e-7958-4b61-8505-ab6166cbfc36.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_fishing_float.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_fishing_float.md",
+      "sha256": "16b4f29974273258e1b8fdbc560261c630a5375155c7ea4699d7ecf5eb6529cd",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-af456cee-e8da-424b-8571-fa68fc9cb111.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_blue_mug.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_blue_mug.md",
+      "sha256": "a31e0e9c167e0bf224e357d52653dab2c7c23e07e363aa2bfb0b0a43b1cef44a",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-49fb4a53-ccb5-45df-b45c-96157687041c.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_harbor_ticket.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_harbor_ticket.md",
+      "sha256": "28a0dfb0f98ef7321ebef60dff2e65ff5789840834967fbe538bf1c5c10537e9",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-7aaf1282-3e79-4f12-bfac-1bd2b47f375d.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_brass_bell.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_brass_bell.md",
+      "sha256": "a8641639bed3a3e9fb89581d5ac1720fc09256c876e421650cd837250b719c8f",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-9affbd31-c923-46b7-9240-c5bcf8c35f65.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_starfish.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_starfish.md",
+      "sha256": "fd6e55c132395dd9a18e831e7898712abe5cf3b1ac5da36948eaf8ab836e5625",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-9e04238b-e00d-46ce-b4f6-391ae0c297d8.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_lemon.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_lemon.md",
+      "sha256": "d606641edf2571ab7e51e0113041111fea2e0d64c089825a4143fb080f9c6e16",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-ebbbdaf8-8a05-4922-a585-63ba787ed75c.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_folded_map.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_folded_map.md",
+      "sha256": "ffd0fe250dce6b5aeac742b190cc79bda4a2131b4a8e5795293bf82a0677e252",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-fe3ae091-d67d-4731-b30d-041775be9464.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_fish_charm.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_fish_charm.md",
+      "sha256": "a1b5e091f1175122f7c79cb01aa0c99bcd3d9065f886e2a334b922457008050c",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-18937c73-1334-4c92-8c92-2d9a3e4ca14b.png"
+    },
+    {
+      "source": "art/production/ai_image_v4/sources/target_bottle_message.png",
+      "prompt": "art/production/ai_image_v4/prompts/target_bottle_message.md",
+      "sha256": "cdca6bb82a84203bd03176febdfc466b897056ed0e23eec666e6569b0887b351",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-84d61c0c-03f6-4114-96a1-eb5997c66535.png"
+    }
+  ]
+}

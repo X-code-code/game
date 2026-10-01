@@ -63,7 +63,7 @@ test('accepts a coherent catalog and city with all stage-7 entity and task types
     assert.equal(validateCityConfig(city, catalog, 'demo'), city);
 });
 
-test('all shipped city bundles validate and the trial links to the existing test journey', () => {
+test('the three active chapters validate; retired city fixtures remain valid as history', () => {
     const catalog = validateCityCatalog(JSON.parse(readFileSync(
         new URL('../assets/resources/configs/city_catalog.json', import.meta.url), 'utf8')));
     const configs = new Map();
@@ -71,7 +71,24 @@ test('all shipped city bundles validate and the trial links to the existing test
         const raw = JSON.parse(readFileSync(new URL(`../assets/bundles/${entry.bundleName}/city.json`, import.meta.url), 'utf8'));
         configs.set(entry.cityId, validateCityConfig(raw, catalog, entry.cityId));
     }
-    const trial = configs.get(catalog.initialCityId);
+    const mainline = configs.get(catalog.initialCityId);
+    assert.equal(mainline.cityId, 'living_city_street_block_01');
+    assert.ok(mainline.hiddenObjects.length > 4);
+    assert.ok(mainline.hiddenObjects.some(item => item.visibleCondition));
+    assert.equal(mainline.nextCityId, 'living_city_garden_market_02');
+    const garden = configs.get(mainline.nextCityId);
+    assert.equal(garden.nextCityId, 'living_city_harbor_walk_03');
+    assert.equal(configs.get(garden.nextCityId).nextCityId, null);
+    assert.equal(garden.tasks.length, 12);
+    assert.equal(configs.get(garden.nextCityId).tasks.length, 12);
+    assert.equal(catalog.cities.length, 3, 'Retired procedural cities must not be startup destinations');
+    const historicalCatalog = validateCityCatalog(JSON.parse(readFileSync(
+        new URL('../design/history/city_catalog_v3.json', import.meta.url), 'utf8')));
+    for (const entry of historicalCatalog.cities.filter(entry => !configs.has(entry.cityId))) {
+        const raw = JSON.parse(readFileSync(new URL(`../assets/bundles/${entry.bundleName}/city.json`, import.meta.url), 'utf8'));
+        configs.set(entry.cityId, validateCityConfig(raw, historicalCatalog, entry.cityId));
+    }
+    const trial = configs.get('winter_market_block_trial_001');
     assert.equal(trial.cityId, 'winter_market_block_trial_001');
     assert.equal(trial.tasks.length, 2);
     assert.equal(trial.mapSize.width, 1024);

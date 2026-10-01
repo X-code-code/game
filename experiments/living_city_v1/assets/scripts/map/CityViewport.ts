@@ -14,6 +14,7 @@ export class CityViewport {
     private viewportHeight: number;
     private fitScale: number;
     private state: ViewportState;
+    private bottomInset = 0;
 
     public constructor(
         mapWidth: number,
@@ -73,6 +74,13 @@ export class CityViewport {
         this.clampOffset();
     }
 
+    /** Permit the lower map edge to reach the top of a covering bottom tray. */
+    public setBottomInset(inset: number): void {
+        if (!Number.isFinite(inset) || inset < 0) return;
+        this.bottomInset = Math.min(inset, this.viewportHeight);
+        this.clampOffset();
+    }
+
     /** Center a live map point without changing zoom or exposing the map's outer edges. */
     public focusAt(mapX: number, mapY: number): void {
         if (!Number.isFinite(mapX) || !Number.isFinite(mapY)) return;
@@ -110,6 +118,8 @@ export class CityViewport {
         const horizontalTravel = Math.max(0, (this.mapWidth * this.state.scale - this.viewportWidth) / 2);
         const verticalTravel = Math.max(0, (this.mapHeight * this.state.scale - this.viewportHeight) / 2);
         this.state.x = horizontalTravel === 0 ? 0 : Math.min(horizontalTravel, Math.max(-horizontalTravel, this.state.x));
-        this.state.y = verticalTravel === 0 ? 0 : Math.min(verticalTravel, Math.max(-verticalTravel, this.state.y));
+        const bottomReserve = Math.min(this.bottomInset, this.viewportHeight);
+        this.state.y = verticalTravel === 0 && bottomReserve === 0 ? 0 :
+            Math.min(verticalTravel + bottomReserve, Math.max(-verticalTravel, this.state.y));
     }
 }

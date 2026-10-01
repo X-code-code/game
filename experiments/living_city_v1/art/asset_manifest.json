@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "styleId": "chicken_simple_2d_v1",
-  "styleStatus": "trial",
-  "selectedStyleReferenceId": null,
+  "styleId": "cozy_handdrawn_ai_v4",
+  "styleStatus": "generated_runtime_verified_visual_approval_pending",
+  "selectedStyleReferenceId": "bg_png_clean_cartoon_20260930",
   "assets": [
     {
       "id": "chicken_cast_style_guide_v1",
@@ -112,61 +112,283 @@
     {
       "id": "simple_city_scene_v1",
       "category": "layered_scene_batch",
-      "status": "trial_unapproved",
+      "status": "superseded",
       "sourceType": "codex_authored_2d_code",
-      "assetCount": 38,
+      "assetCount": 40,
       "idManifestPath": "art/production/simple_city_scene_v1/scene_manifest.json",
       "sourcePath": "art/production/simple_city_scene_v1/render_scene.py",
       "bundleFolder": "assets/bundles/city_living_city_street_block_01/simple2d_scene",
       "reviewPath": "art/production/simple_city_scene_v1/AUTHORING_AND_REVIEW.md",
-      "description": "38 aligned near-top-down street layers exported from editable drawing code, including two distinct southern houses, an east shop pottery annex, and four small target-foreground overlays. Mechanical, route, and target-alpha-overlap checks passed for 38 layers; all 38 loaded in the integrated Cocos Web Mobile browser check. Player visual approval is pending."
+      "description": "Historical trial source and checks retained. The current runtime bundle is replaced by refined_city_v2; this earlier batch report does not validate the current bundle.",
+      "supersededBy": "ai_image_v4",
+      "runtimeAsset": false
     },
     {
       "id": "simple_chicken_courier_v1",
       "category": "character_cel_batch",
-      "status": "trial_unapproved",
+      "status": "superseded",
       "sourceType": "codex_authored_2d_code",
       "assetCount": 29,
       "idManifestPath": "art/production/simple_chicken_v1/production_manifest.json",
       "sourcePath": "art/production/simple_chicken_v1/render_courier.py",
       "bundleFolder": "assets/bundles/city_living_city_street_block_01/cels/messenger_customer",
       "reviewPath": "art/production/simple_chicken_v1/REVIEW.md",
-      "description": "29 registered cels across directional walk, idle, turn and tea-handoff clips. Cocos 12-second capture visited all eight clips with aligned footpoint; player visual approval pending."
+      "description": "29 registered cels across directional walk, idle, turn and tea-handoff clips. Cocos 12-second capture visited all eight clips with aligned footpoint; player visual approval pending.",
+      "supersededBy": "ai_image_v4",
+      "runtimeAsset": false
     },
     {
       "id": "simple_hidden_objects_v1",
       "category": "hidden_object_batch",
-      "status": "trial_unapproved",
+      "status": "superseded",
       "sourceType": "codex_authored_2d_code",
       "assetCount": 4,
       "idManifestPath": "art/production/simple_hidden_objects_v1/export_record.json",
       "sourcePath": "art/production/simple_hidden_objects_v1/render_targets.py",
       "bundleFolder": "assets/bundles/city_living_city_street_block_01/targets",
       "reviewPath": "art/review/simple_hidden_objects_v1/REVIEW.md",
-      "description": "Four independent semantic search props with source code, exact alpha/size validation and 22-pixel contact review; Cocos click and near-miss checks passed, human hidden-object difficulty review pending."
+      "description": "Historical trial source and checks retained. The current runtime bundle is replaced by refined_city_v2; this earlier batch report does not validate the current bundle.",
+      "supersededBy": "ai_image_v4",
+      "runtimeAsset": false
     },
     {
       "id": "simple_ambient_cast_v1",
       "category": "code_drawn_character_batch",
-      "status": "trial_unapproved",
+      "status": "superseded",
       "sourceType": "codex_authored_2d_code",
       "assetCount": 7,
-      "assetIds": ["vendor", "ambient_shopper", "ambient_vendor", "ambient_watcher", "tea_regular", "flower_buyer", "lane_child"],
+      "assetIds": [
+        "vendor",
+        "ambient_shopper",
+        "ambient_vendor",
+        "ambient_watcher",
+        "tea_regular",
+        "flower_buyer",
+        "lane_child"
+      ],
       "sourcePath": "assets/scripts/character/AmbientChickenPainter.ts",
       "runtimePath": "assets/scripts/map/LivingCityGreybox.ts",
-      "reviewPath": "art/production/simple_ambient_cast_v1/RECORD.md",
-      "description": "Seven code-drawn residents with side, north/back, south/front poses and role-specific activity; compiled and visually checked in a 444x960 Cocos Web Mobile motion capture, player visual approval pending. No PNG source or exported sprite frames."
+      "reviewPath": "art/production/clean_cartoon_v3/AMBIENT_CAST.md",
+      "description": "Seven existing editable code-drawn residents now use the clean-cartoon common palette. Directional geometry, footpoints and activities are retained. Current browser validation passed; player approval and WeChat device testing pending.",
+      "styleRevision": "clean_cartoon_v3",
+      "runtimeAsset": false,
+      "supersededBy": "ai_image_v4"
     },
     {
       "id": "simple_ambient_fx_v1",
       "category": "code_drawn_environment_motion_batch",
-      "status": "trial_unapproved",
+      "status": "superseded",
       "sourceType": "codex_authored_2d_code",
       "assetCount": 3,
-      "assetIds": ["lc_tea_steam_motion", "lc_bun_steam_motion", "lc_water_ripple_motion"],
+      "assetIds": [
+        "lc_tea_steam_motion",
+        "lc_bun_steam_motion",
+        "lc_water_ripple_motion"
+      ],
       "sourcePath": "assets/scripts/map/LivingCityGreybox.ts",
       "reviewPath": "art/production/simple_ambient_fx_v1/RECORD.md",
-      "description": "Three code-drawn moving environmental accents at existing tea, bun, and water fixtures; compiled and checked in 444x960 Cocos frame capture, player visual approval pending. No PNG source or exported sprite frames."
+      "description": "Three code-drawn moving environmental accents at existing tea, bun, and water fixtures; compiled and checked in 444x960 Cocos frame capture, player visual approval pending. No PNG source or exported sprite frames.",
+      "runtimeAsset": false,
+      "supersededBy": "ai_image_v4"
+    },
+    {
+      "id": "lc_refined_street_direction_v2",
+      "category": "scene_concept_reference",
+      "status": "concept_reference_only",
+      "sourceType": "codex_builtin_image_gen",
+      "runtimeAsset": false,
+      "path": "art/production/refined_city_v2/lc_refined_street_direction_v2_source.png",
+      "size": "1086x1448",
+      "format": "PNG RGB",
+      "transparent": false,
+      "sha256": "7a2887f4f64d969e1e1c96d78813d50aee95b8badb1a5488d0f768d151b49f4f",
+      "promptPath": "art/production/refined_city_v2/PROMPT.md",
+      "generationRecordPath": "art/production/refined_city_v2/generation_record.json",
+      "reviewPath": "art/production/refined_city_v2/qa_report.json",
+      "description": "Built-in generated concept retained unchanged with exact prompt. Direction reference only; runtime layers are separately authored editable 2D drawings. Not player-approved."
+    },
+    {
+      "id": "refined_city_v2",
+      "category": "layered_scene_and_search_batch",
+      "status": "rejected",
+      "sourceType": "codex_authored_2d_code",
+      "assetCount": 62,
+      "counts": {
+        "sceneLayers": 44,
+        "hiddenObjects": 12,
+        "interactionStateImages": 6
+      },
+      "idManifestPath": "art/production/refined_city_v2/production_manifest.json",
+      "sourcePath": "art/production/refined_city_v2/render_refined.py",
+      "sourceDependencies": [
+        "art/production/simple_city_scene_v1/render_scene.py",
+        "art/production/simple_hidden_objects_v1/render_targets.py"
+      ],
+      "conceptReferenceId": "lc_refined_street_direction_v2",
+      "bundleFolder": "assets/bundles/city_living_city_street_block_01",
+      "reviewPath": "art/production/refined_city_v2/qa_report.json",
+      "runtimeReviewPath": "art/review/refined_city_v2/runtime_report.json",
+      "description": "Historical v2 trial and functional checks retained. Its art was rejected by the user; current runtime pixels belong to clean_cartoon_v3.",
+      "supersededBy": "ai_image_v4",
+      "rejectionReason": "User rejected the visual style as robotic/AI-looking and supplied bg-png screenshots as a new direction on 2026-09-30.",
+      "runtimeAsset": false
+    },
+    {
+      "id": "bg_png_clean_cartoon_20260930",
+      "category": "style_reference_set",
+      "status": "user_selected_direction",
+      "approvalScope": "broad_visual_direction_only",
+      "sourceType": "user_provided_local_screenshots",
+      "runtimeAsset": false,
+      "sourcePath": "C:/Users/24627/Desktop/bg-png",
+      "idManifestPath": "art/production/clean_cartoon_v3/reference_record.json",
+      "assets": [
+        {
+          "id": "bg_png_ref_1",
+          "path": "art/reference/bg_png_20260930/Snipaste_2026-09-30_23-16-05.png",
+          "size": [
+            1004,
+            1351
+          ],
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "status": "user_selected_direction",
+          "runtimeAsset": false
+        },
+        {
+          "id": "bg_png_ref_2",
+          "path": "art/reference/bg_png_20260930/Snipaste_2026-09-30_23-16-36.png",
+          "size": [
+            1011,
+            1352
+          ],
+          "sha256": "8e24bc26ea18bbb801f5b517e76de19b46469939d2478ffddcb90061afd9a637",
+          "status": "user_selected_direction",
+          "runtimeAsset": false
+        },
+        {
+          "id": "bg_png_ref_3",
+          "path": "art/reference/bg_png_20260930/Snipaste_2026-09-30_23-16-50.png",
+          "size": [
+            1007,
+            1337
+          ],
+          "sha256": "e59ea154d1e805d29b5162a1b2e4e2d5736c1d8749f547410bac11a171121539",
+          "status": "user_selected_direction",
+          "runtimeAsset": false
+        },
+        {
+          "id": "bg_png_ref_4",
+          "path": "art/reference/bg_png_20260930/Snipaste_2026-09-30_23-17-04.png",
+          "size": [
+            1015,
+            1353
+          ],
+          "sha256": "92a1366df87e5c994f02804168b753d8f7e88c95e5102123c98a3f5817c3f365",
+          "status": "user_selected_direction",
+          "runtimeAsset": false
+        }
+      ],
+      "reviewPath": "art/production/clean_cartoon_v3/REFERENCE_ANALYSIS.md",
+      "description": "Four actual user-supplied screenshots select clean outlines, flat colors and readable town prop clusters. They do not approve any runtime asset. No screenshot pixels are used in the game."
+    },
+    {
+      "id": "lc_clean_cartoon_direction_v3",
+      "category": "scene_concept_reference",
+      "status": "concept_reference_only",
+      "runtimeAsset": false,
+      "sourceType": "codex_builtin_image_gen",
+      "path": "art/production/clean_cartoon_v3/lc_clean_cartoon_direction_v3_source.png",
+      "size": "1081x1455",
+      "format": "PNG RGB",
+      "transparent": false,
+      "sha256": "96b94f32b7acd958f578b9d06f2eb07e246c61d29b0d8b64d8adae5c8b836dcb",
+      "promptPath": "art/production/clean_cartoon_v3/PROMPT.md",
+      "generationRecordPath": "art/production/clean_cartoon_v3/generation_record.json",
+      "description": "Generated direction study retained unchanged; separate authored sources produce runtime layers. Not player-approved."
+    },
+    {
+      "id": "clean_cartoon_v3",
+      "category": "layered_scene_search_and_cel_batch",
+      "status": "superseded",
+      "sourceType": "codex_authored_2d_code",
+      "assetCount": 91,
+      "counts": {
+        "sceneLayers": 44,
+        "hiddenObjects": 12,
+        "interactionStateImages": 6,
+        "courierCels": 29
+      },
+      "idManifestPath": "art/production/clean_cartoon_v3/production_manifest.json",
+      "sourcePath": "art/production/clean_cartoon_v3/render_clean.py",
+      "sourceDependencies": [
+        "art/production/simple_city_scene_v1/render_scene.py",
+        "art/production/simple_hidden_objects_v1/render_targets.py",
+        "art/production/refined_city_v2/render_refined.py",
+        "art/production/simple_chicken_v1/render_courier.py"
+      ],
+      "conceptReferenceId": "lc_clean_cartoon_direction_v3",
+      "styleReferenceId": "bg_png_clean_cartoon_20260930",
+      "bundleFolder": "assets/bundles/city_living_city_street_block_01",
+      "reviewPath": "art/production/clean_cartoon_v3/qa_report.json",
+      "runtimeReviewPath": "art/review/clean_cartoon_v3/runtime_report.json",
+      "description": "Clean flat cartoon revision after user rejected v2: gray paving/green courtyards, colorful compact storefronts, recessed windows and eaves, controlled plant silhouettes, unified prop and character palette. 91 exports mechanically checked; Web Mobile collection/reveal/restore and phone/max-zoom checks passed. Player visual approval and WeChat device testing pending. Historical production only; current runtime artwork is ai_image_v4.",
+      "runtimeAsset": false,
+      "supersededBy": "ai_image_v4"
+    },
+    {
+      "id": "ai_image_v4",
+      "category": "three_chapter_generated_png_batch",
+      "status": "runtime_verified_visual_unapproved",
+      "sourceType": "codex_builtin_image_gen",
+      "styleId": "cozy_handdrawn_ai_v4",
+      "styleReferenceId": "bg_png_clean_cartoon_20260930",
+      "sourcePath": "art/production/ai_image_v4/sources/",
+      "promptPath": "art/production/ai_image_v4/prompts/",
+      "generationRecordPath": "art/production/ai_image_v4/generation_record.json",
+      "idManifestPath": "art/production/ai_image_v4/production_manifest.json",
+      "finalFolder": "assets/generated/",
+      "assetCount": 558,
+      "counts": {
+        "generatedSources": 86,
+        "finalPngFiles": 274,
+        "sceneLayers": 95,
+        "hiddenObjects": 36,
+        "revealActions": 9,
+        "interactionStateImages": 18,
+        "residentDesigns": 8,
+        "uniqueNpcCels": 132,
+        "registeredNpcCels": 396
+      },
+      "chapters": [
+        {
+          "cityId": "living_city_street_block_01",
+          "sceneLayers": 44,
+          "targets": 12,
+          "reveals": 3,
+          "residents": 8,
+          "cels": 132
+        },
+        {
+          "cityId": "living_city_garden_market_02",
+          "sceneLayers": 26,
+          "targets": 12,
+          "reveals": 3,
+          "residents": 8,
+          "cels": 132
+        },
+        {
+          "cityId": "living_city_harbor_walk_03",
+          "sceneLayers": 25,
+          "targets": 12,
+          "reveals": 3,
+          "residents": 8,
+          "cels": 132
+        }
+      ],
+      "reviewPath": "art/review/ai_image_v4/asset_integrity_report.json",
+      "runtimeReviewPath": "art/review/ai_image_v4/three_chapters/runtime_report.json",
+      "description": "Built-in generated PNGs only, mechanically cropped/resized/registered, loaded by Cocos. Three chapters verified with actual pointer input, reloads and travel; player visual approval and WeChat device testing pending."
     }
-  ]
+  ],
+  "currentProductionId": "ai_image_v4"
 }

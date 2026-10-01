@@ -1,0 +1,12 @@
+{
+  "id": "lc_refined_street_direction_v2",
+  "actualSize": [
+    1086,
+    1448
+  ],
+  "mode": "RGB",
+  "sha256": "7a2887f4f64d969e1e1c96d78813d50aee95b8badb1a5488d0f768d151b49f4f",
+  "status": "concept_reference_only",
+  "runtimeAsset": false,
+  "promptPath": "art/production/refined_city_v2/PROMPT.md"
+}

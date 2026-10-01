@@ -1,0 +1,99 @@
+{
+  "batchId": "clean_cartoon_v3",
+  "assetsChecked": 91,
+  "sourceRuntimeMatches": true,
+  "dimensionsAlphaHashAndMeta": true,
+  "revealVisibility": [
+    {
+      "id": "sealed_letter",
+      "coveredAlphaFraction": {
+        "closed": 1,
+        "opened": 0.198
+      }
+    },
+    {
+      "id": "seed_packet",
+      "coveredAlphaFraction": {
+        "closed": 0.818,
+        "opened": 0.072
+      }
+    },
+    {
+      "id": "golden_bun",
+      "coveredAlphaFraction": {
+        "closed": 1,
+        "opened": 0.058
+      }
+    }
+  ],
+  "runtimeAcceptance": "passed_web_mobile",
+  "playerVisualApproval": "pending",
+  "wechatPhone": "not_run",
+  "runtimeEvidence": "art/review/clean_cartoon_v3/runtime_report.json",
+  "runtimeSummary": {
+    "sceneLayers": 44,
+    "npcs": 8,
+    "smallPhone": {
+      "width": 360,
+      "height": 780,
+      "visibleStickers": 12
+    },
+    "detailZoom": {
+      "zoom": 2.25,
+      "scaleRatio": 1.6071428571428572
+    },
+    "motion": {
+      "durationSeconds": 10,
+      "moved": [
+        "messenger_customer",
+        "crossing_shopper",
+        "tea_regular",
+        "flower_buyer",
+        "lane_child"
+      ]
+    },
+    "collected": 12,
+    "reveals": 3,
+    "restored": {
+      "collected": 12,
+      "opened": 3,
+      "noRepeatedFlights": true
+    },
+    "teaEventCompleted": true,
+    "prerequisiteHints": [
+      {
+        "id": "sealed_letter",
+        "resolved": "parcel_chest",
+        "expected": "parcel_chest"
+      },
+      {
+        "id": "seed_packet",
+        "resolved": "flower_leaves",
+        "expected": "flower_leaves"
+      },
+      {
+        "id": "golden_bun",
+        "resolved": "bun_lid",
+        "expected": "bun_lid"
+      }
+    ],
+    "runtimeErrors": 0,
+    "runtimeWarnings": 0,
+    "failedRequests": 0,
+    "finalLandingWait": true
+  },
+  "validatedFiles": [
+    {
+      "file": "assets/bundles/city_living_city_street_block_01/city.json",
+      "sha256": "461c296852b7c3af8b28fc84de209d2c32b5c0bdb99e085750ca228fd3f8af09"
+    },
+    {
+      "file": "build/web-mobile/assets/main/index.js",
+      "sha256": "b8e2a6196cc1159aefb7d519d32d7a72bb757cebc91136be5487b71abe2e9e86"
+    },
+    {
+      "file": "assets/scripts/character/AmbientChickenPainter.ts",
+      "sha256": "7bab1add197aeb59b504f75826cffe66a0704c763980bafaa0b2d3e4a64f9e1f"
+    }
+  ]
+}

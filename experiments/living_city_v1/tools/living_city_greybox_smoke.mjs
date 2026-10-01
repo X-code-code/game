@@ -74,10 +74,14 @@ try {
     };
     function send(method, params = {}) {
         const id = nextId++;
-        return Promise.race([
-            new Promise(resolve => { pending.set(id, resolve); socket.send(JSON.stringify({ id, method, params })); }),
-            wait(15000).then(() => { throw new Error(`CDP ${method} timed out`); }),
-        ]);
+        return new Promise((resolve, reject) => {
+            const timeout = setTimeout(() => {
+                pending.delete(id);
+                reject(new Error(`CDP ${method} timed out`));
+            }, 45000);
+            pending.set(id, reply => { clearTimeout(timeout); resolve(reply); });
+            socket.send(JSON.stringify({ id, method, params }));
+        });
     }
     async function evaluate(expression) {
         const reply = await send('Runtime.evaluate', { expression, returnByValue: true, awaitPromise: true });
@@ -98,6 +102,7 @@ try {
             const camera=canvas?.getChildByName('Camera')?.getComponent(cc.Camera);
             if (!city || !map || !box?.blueprint || !camera) return {ready:false,city:city?.content?.config?.cityId};
             const screen=node=>{const p=camera.worldToScreen(node.worldPosition);return {x:p.x,y:innerHeight-p.y};};
+            const artSize=node=>{const t=node?.getComponent('cc.UITransform');return t?{width:t.width,height:t.height}:null;};
             const search=(node,name)=>node.name===name?node:node.children.map(child=>search(child,name)).find(Boolean);
             const count=(node,predicate)=>Number(predicate(node))+node.children.reduce((total,child)=>total+count(child,predicate),0);
             const target=id=>{
@@ -109,8 +114,9 @@ try {
                 edgeWorld.x += hit?.radius * node.worldScale.x || 0;
                 const edge=camera.worldToScreen(edgeWorld);
                 return {id,x:node.position.x,y:node.position.y,screen:screen(node),
+                    artSize:artSize(node.getChildByName('PropArt')),
                     hitRadiusPx:Math.hypot(edge.x-center.x,edge.y-center.y),
-                    active:node.activeInHierarchy};
+                    active:node.activeInHierarchy,hasFoundBadge:!!node.getChildByName('FoundBadge')};
             };
             const speaker=box.npcs.find(n=>n.plan.id==='tea_vendor');
             const speakerWorld=speaker?.node.worldPosition.clone();
@@ -130,7 +136,17 @@ try {
                     messengerCels:!!box.npcs.find(n=>n.plan.id==='messenger_customer')?.cels?.isReady,
                     ground:!!box.artGroundLoaded,debugLabelVisible:!!box.debugLabel?.active},
                 stickers:[...city.view.stickerCards].map(([id,card])=>({id,
-                    screen:screen(card.node),hasImage:!!card.icon.spriteFrame,found:card.stamp.active})),
+                    screen:screen(card.node),artScreen:screen(card.icon.node),
+                    artSize:artSize(card.icon.node),
+                    hasImage:!!card.icon.spriteFrame,collected:card.collected,
+                    iconAlpha:card.icon.color.a,hasFoundStamp:!!card.node.getChildByName('FoundStamp')})),
+                flights:[...city.view.collectionFlights].map(([id,node])=>({id,
+                    name:node.name,screen:screen(node),active:node.activeInHierarchy})),
+                trayTitle:city.view.taskTitleLabel?.string,
+                trayVisible:!!city.view.taskPanel?.activeInHierarchy,
+                hintActive:!!city.view.hintManager?.active,
+                landingAnimations:city.view.collectionLandingAnimations,
+                completionOpen:!!manager.ui?.isOpen,
                 stickerClue:city.view.stickerClueLabel?.string,
                 npcClue:{active:!!box.clueBubble?.active,text:box.clueText?.string,
                     speakerScreen:speakerScreen?{x:speakerScreen.x,y:innerHeight-speakerScreen.y}:null},
@@ -142,19 +158,84 @@ try {
                 progress:city.view.progress};
         })()`);
     }
-    async function until(predicate, description, attempts = 150) {
+    async function until(predicate, description, attempts = 150, intervalMs = 100) {
         let current;
         for (let i = 0; i < attempts; i++) {
             current = await state();
             if (predicate(current)) return current;
-            await wait(100);
+            await wait(intervalMs);
         }
         throw new Error(`${description}: ${JSON.stringify({current, errors, warnings, failedRequests})}`);
     }
-    async function click(x, y) {
+    async function click(x, y, settleMs = 170) {
         await send('Input.dispatchMouseEvent', {type:'mousePressed',x,y,button:'left',clickCount:1});
         await send('Input.dispatchMouseEvent', {type:'mouseReleased',x,y,button:'left',clickCount:1});
-        await wait(170);
+        if (settleMs) await wait(settleMs);
+    }
+    async function installCollectionProbe(id, probeHints) {
+        await evaluate(`(() => {
+            const canvas=cc.director.getScene().getChildByName('Canvas');
+            const manager=canvas.getComponent('CityManager'), city=manager.current, view=city.view;
+            const camera=canvas.getChildByName('Camera').getComponent(cc.Camera);
+            const search=(node,name)=>node.name===name?node:node.children.map(child=>search(child,name)).find(Boolean);
+            const target=search(city.root.getChildByName('TestMap'),'${id}');
+            const card=view.stickerCards.get('${id}');
+            const screen=node=>{const p=camera.worldToScreen(node.worldPosition);return {x:p.x,y:innerHeight-p.y};};
+            const size=node=>{
+                const t=node.getComponent('cc.UITransform');
+                const center=camera.worldToScreen(t.convertToWorldSpaceAR(node.position.clone().set(0,0,0)));
+                const corner=camera.worldToScreen(t.convertToWorldSpaceAR(node.position.clone().set(t.width/2,t.height/2,0)));
+                return {width:Math.abs(corner.x-center.x)*2,height:Math.abs(corner.y-center.y)*2};
+            };
+            const read=()=>({slot:screen(card.icon.node),slotSize:size(card.icon.node),
+                collected:card.collected,iconAlpha:card.icon.color.a,trayTitle:view.taskTitleLabel.string,
+                trayVisible:view.taskPanel.activeInHierarchy,completionOpen:manager.ui.isOpen,
+                targetActive:target.activeInHierarchy,targetFoundBadge:!!target.getChildByName('FoundBadge'),
+                savedCompleted:manager.save?.getCityProgress(city.content.config.cityId)?.completedTaskIds?.length,
+                snapshotCompleted:view.getProgressSnapshot().completedTaskIds.length,
+                logicalCompleted:view.progress.requiredCompleted,landingAnimations:view.collectionLandingAnimations,
+                viewportWidth:innerWidth});
+            const readFlight=flight=>({...read(),name:flight.name,active:flight.activeInHierarchy,
+                flight:screen(flight),flightSize:size(flight)});
+            const source=screen(target.getChildByName('PropArt')??target);
+            window.__collectionProbe=new Promise((resolve,reject)=>{
+                const activeFrames=[],hintChecks=[];
+                let started=false,endpoint=null,frameCount=0,flightHintChecked=false,landingHintChecked=false;
+                const checkHint=phase=>{
+                    view.requestHint();
+                    hintChecks.push({phase,hintActive:!!view.hintManager.active,trayVisible:view.taskPanel.activeInHierarchy});
+                };
+                const sample=()=>{
+                    if (++frameCount>1800) {reject(new Error('Collection probe did not finish'));return;}
+                    const flight=view.collectionFlights.get('${id}');
+                    if (flight) {
+                        if (!started) {
+                            const originalDestroy=flight.destroy;
+                            // Capture the actual final position before normal
+                            // deferred destruction, even when no RAF samples
+                            // are rendered between a pause and tween completion.
+                            flight.destroy=function(...args) {
+                                endpoint=readFlight(this);
+                                return originalDestroy.apply(this,args);
+                            };
+                            started=true;
+                        }
+                        if (${probeHints} && !flightHintChecked) {checkHint('flight');flightHintChecked=true;}
+                        activeFrames.push(readFlight(flight));
+                    } else if (started) {
+                        if (${probeHints} && view.collectionLandingAnimations>0 && !landingHintChecked) {
+                            checkHint('landing');landingHintChecked=true;
+                        }
+                        if (view.collectionLandingAnimations===0) {
+                            resolve({id:'${id}',source,activeFrames,hintChecks,endpoint,final:read()});return;
+                        }
+                    }
+                    requestAnimationFrame(sample);
+                };
+                requestAnimationFrame(sample);
+            });
+            return true;
+        })()`);
     }
     await send('Runtime.enable');
     await send('Network.enable');
@@ -177,10 +258,24 @@ try {
             s.art?.messengerCels && s.art?.ground && !s.art?.debugLabelVisible,
         'Complete simplified 2D art did not activate');
     }
-    current = await until(s => s.stickers.length === 4 && s.stickers.every(sticker => sticker.hasImage),
-        'Four item stickers did not load');
+    current = await until(s => s.stickers.length === 4 && s.stickers.every(sticker => sticker.hasImage) &&
+        s.targets.every(target => target?.artSize?.width > 0 && target.artSize.height > 0),
+        'Four item stickers and scene item sprites did not load');
     assert.deepEqual(current.stickers.map(sticker => sticker.id),
         ['tea_clay_whistle','tailor_thimble','banner_knot','chestnut_tongs']);
+    assert.ok(current.stickers.every(sticker => !sticker.collected && sticker.iconAlpha < 255 &&
+        !sticker.hasFoundStamp), 'Unfound sticker slots should be pale and have no checkmark');
+    const stickerAspectChecks = current.stickers.map(sticker => {
+        const sceneArt = current.targets.find(target => target.id === sticker.id)?.artSize;
+        assert.ok(sceneArt?.width > 0 && sceneArt.height > 0 && sticker.artSize?.width > 0 &&
+            sticker.artSize.height > 0, `${sticker.id} is missing its scene or slot artwork dimensions`);
+        const sceneRatio = sceneArt.width / sceneArt.height;
+        const slotRatio = sticker.artSize.width / sticker.artSize.height;
+        assert.ok(Math.abs(sceneRatio-slotRatio) < .001,
+            `${sticker.id} is stretched in its sticker slot: ${JSON.stringify({sceneArt,slotArt:sticker.artSize})}`);
+        return {id:sticker.id,sceneRatio,slotRatio};
+    });
+    assert.deepEqual(current.flights, [], 'A collection flight started before any item was found');
     await evaluate(`(() => { cc.profiler?.hideStats?.(); return true; })()`);
     await wait(600);
     await screenshot('initial_444x960.png');
@@ -256,7 +351,11 @@ try {
         chestnut_tongs: {dx:55,dy:-24},
     };
     const nearMissChecks = [];
-    for (const id of ['tea_clay_whistle','tailor_thimble','banner_knot','chestnut_tongs']) {
+    const flightChecks = [];
+    let resizeLandingCheck = null;
+    const targetIds = ['tea_clay_whistle','tailor_thimble','banner_knot','chestnut_tongs'];
+    const distance = (a, b) => Math.hypot(a.x-b.x,a.y-b.y);
+    for (const id of targetIds) {
         await evaluate(`(() => {const c=cc.director.getScene().getChildByName('Canvas').getComponent('CityManager');
             const b=c.current.view.livingGreybox.blueprint.hiddenObjectSlots.find(x=>x.id==='${id}');
             c.current.view.controller.focusAt(b.at.x,b.at.y);return true;})()`);
@@ -278,25 +377,95 @@ try {
             `${id} neighbour tap completed a target`);
         nearMissChecks.push({id,dx:offset.dx,dy:offset.dy,
             hitRadiusPx:Math.round(target.hitRadiusPx*10)/10});
+        const stickerBefore = (await state()).stickers.find(sticker => sticker.id === id);
+        assert.ok(stickerBefore && !stickerBefore.collected,
+            `${id} sticker slot was already filled before the scene item was tapped`);
+        const progress = targetIds.indexOf(id)+1;
+        await installCollectionProbe(id,progress === 1);
+        await click(target.screen.x,target.screen.y,0);
+        if (progress === 2) {
+            await send('Emulation.setDeviceMetricsOverride',
+                {width:600,height:960,deviceScaleFactor:1,mobile:true});
+        }
+        await click(target.screen.x,target.screen.y,0);
+        const probe = await evaluate('window.__collectionProbe');
+        assert.ok(probe.activeFrames.length >= 2,
+            `${id} collection flight had too few active frames: ${probe.activeFrames.length}`);
+        const first = probe.activeFrames[0];
+        const middle = probe.activeFrames[Math.floor(probe.activeFrames.length/2)];
+        const span = distance(probe.source,first.slot);
+        assert.equal(first.name,`CollectionFly_${id}`,`${id} flight node has the wrong name`);
+        assert.ok(span > 80 && distance(first.flight,probe.source) < Math.max(12,span*.4),
+            `${id} flight did not depart near the scene item: ${JSON.stringify({first,source:probe.source,span})}`);
+        assert.ok(distance(middle.flight,first.flight) > 8,
+            `${id} collection flight did not move after launch`);
+        for (const sample of probe.activeFrames) {
+            assert.equal(sample.active,true,`${id} flight was inactive before landing`);
+            assert.equal(sample.targetActive,false,`${id} stayed visible in the scene after collection`);
+            assert.equal(sample.targetFoundBadge,false,`${id} still drew a scene checkmark`);
+            assert.equal(sample.logicalCompleted,progress,`${id} repeated click changed logical progress`);
+            assert.equal(sample.savedCompleted,progress,`${id} was not saved when collection began`);
+            assert.equal(sample.snapshotCompleted,progress,`${id} discovery snapshot was inconsistent`);
+            assert.equal(sample.collected,false,`${id} filled its sticker slot during flight`);
+            assert.equal(sample.trayVisible,true,`${id} collection destination was hidden during flight`);
+            assert.ok(sample.trayTitle.includes(`${progress-1} / 4`),
+                `${id} tray count advanced before landing: ${sample.trayTitle}`);
+            assert.equal(sample.completionOpen,false,
+                'Completion dialog covered an active collection flight');
+        }
+        if (progress === 1) {
+            assert.deepEqual(probe.hintChecks.map(check => check.phase),['flight','landing'],
+                'Hint guards were not exercised during both collection phases');
+            assert.ok(probe.hintChecks.every(check => !check.hintActive && check.trayVisible),
+                `Requesting a hint interrupted collection: ${JSON.stringify(probe.hintChecks)}`);
+        }
+        const endpoint = probe.endpoint;
+        assert.ok(endpoint,`${id} did not record the flight's actual destruction endpoint`);
+        const endpointTolerancePx = 2;
+        const endpointErrorPx = distance(endpoint.flight,endpoint.slot);
+        const sizeErrorPx = Math.max(Math.abs(endpoint.flightSize.width-endpoint.slotSize.width),
+            Math.abs(endpoint.flightSize.height-endpoint.slotSize.height));
+        assert.ok(endpointErrorPx < endpointTolerancePx,
+            `${id} flight missed its live slot: ${JSON.stringify({endpoint,endpointErrorPx})}`);
+        assert.ok(sizeErrorPx < endpointTolerancePx,
+            `${id} flight ended at the wrong artwork size: ${JSON.stringify({endpoint,sizeErrorPx})}`);
+        assert.equal(probe.final.collected,true,`${id} did not fill its sticker slot after landing`);
+        assert.equal(probe.final.iconAlpha,255,`${id} landed sticker is still pale`);
+        assert.equal(probe.final.targetActive,false,`${id} scene prop reappeared after landing`);
+        assert.equal(probe.final.logicalCompleted,progress,`${id} landing changed logical progress`);
+        assert.ok(probe.final.trayTitle.includes(`${progress} / 4`),
+            `${id} tray count did not advance after landing: ${probe.final.trayTitle}`);
+        if (progress === 2) {
+            assert.equal(endpoint.viewportWidth,600,'Collection did not land in the resized viewport');
+            resizeLandingCheck = {id,viewportWidth:endpoint.viewportWidth,endpointErrorPx,sizeErrorPx,endpointTolerancePx};
+            await send('Emulation.setDeviceMetricsOverride',
+                {width:444,height:960,deviceScaleFactor:1,mobile:true});
+            await wait(100);
+            const restored = await state();
+            assert.equal(restored.viewport.width,444,'Portrait width was not restored after resize');
+            assert.equal(restored.stickers.find(sticker => sticker.id === id)?.collected,true,
+                'The landed sticker disappeared after restoring portrait width');
+        }
+        flightChecks.push({id,activeFrames:probe.activeFrames.length,
+            startErrorPx:Math.round(distance(first.flight,probe.source)),
+            observedMovePx:Math.round(distance(middle.flight,first.flight)),
+            endpointErrorPx,sizeErrorPx,endpointTolerancePx,hintChecks:probe.hintChecks,landed:true});
         await click(target.screen.x,target.screen.y);
-        const afterHit = await state();
-        const progress = afterHit.progress.requiredCompleted;
-        assert.equal(progress, ['tea_clay_whistle','tailor_thimble','banner_knot','chestnut_tongs'].indexOf(id)+1,
-            `${id} click did not update progress`);
-        assert.equal(afterHit.memorySavedCompleted, progress,
-            `${id} was not saved after tap: ${JSON.stringify({
-                memory:afterHit.memorySavedCompleted,snapshot:afterHit.snapshotCompleted,warnings})}`);
-        assert.equal((await state()).stickers.find(sticker => sticker.id === id)?.found, true,
-            `${id} sticker did not receive its found stamp`);
-        await click(target.screen.x,target.screen.y);
-        assert.equal((await state()).progress.requiredCompleted, progress, `${id} counted twice`);
+        const repeated = await state();
+        assert.equal(repeated.progress.requiredCompleted,progress,`${id} counted twice after landing`);
+        assert.equal(repeated.flights.filter(flight => flight.id === id).length,0,
+            `${id} launched another flight after landing`);
     }
-    current = await state();
+    current = await until(s => s.completionOpen && s.stickers.every(sticker => sticker.collected),
+        'Completion dialog did not wait until all four stickers landed', 30, 50);
     assert.equal(current.progress.allRequiredComplete, true);
     assert.equal(current.savedCompleted, 4,
         `Completed stickers were not saved locally: ${JSON.stringify({
             saved:current.savedCompleted,memory:current.memorySavedCompleted,
             snapshot:current.snapshotCompleted})}`);
+    await screenshot('completed_collection_444x960.png');
+    await evaluate(`(() => {const canvas=cc.director.getScene().getChildByName('Canvas');
+        canvas.getComponent('CityManager').continueExploring();return true;})()`);
     const hintButton = await evaluate(`(() => {
         const canvas=cc.director.getScene().getChildByName('Canvas');
         const manager=canvas.getComponent('CityManager');
@@ -317,9 +486,11 @@ try {
     const completedRun = current;
     await send('Page.reload');
     current = await until(s => s.ready && s.progress.requiredCompleted === 4 &&
-        s.stickers.length === 4 && s.stickers.every(sticker => sticker.found) &&
+        s.stickers.length === 4 && s.stickers.every(sticker => sticker.collected &&
+            sticker.iconAlpha === 255 && !sticker.hasFoundStamp) && s.flights.length === 0 &&
+        s.targets.every(target => !target.active && !target.hasFoundBadge) &&
         s.art.sceneSlots === s.slotCount && s.art.messengerCels && s.art.ground,
-    'Saved progress and sticker stamps did not survive a reload');
+    'Saved progress and filled sticker slots did not survive a reload');
     await screenshot('restored_stickers_444x960.png');
     assert.deepEqual(warnings, [], 'Runtime warnings');
     assert.deepEqual(errors, [], 'Runtime errors');
@@ -329,9 +500,17 @@ try {
         art:current.art,
         completed:current.progress.requiredCompleted,savedCompleted:current.savedCompleted,
         stickers:current.stickers.length,errors:errors.length,warnings:warnings.length,
-        failedRequests:failedRequests.length,nearMissChecks,
+        failedRequests:failedRequests.length,nearMissChecks,flightChecks,stickerAspectChecks,resizeLandingCheck,
         screenshots:fs.readdirSync(out).filter(x=>x.endsWith('.png'))}));
 } finally {
+    // Close the browser normally so its GPU/rendering children exit as well.
+    // Killing only the Windows parent process can leave the test profile running.
+    try {
+        if (socket?.readyState === WebSocket.OPEN) {
+            socket.send(JSON.stringify({id:2147483647,method:'Browser.close'}));
+            await wait(300);
+        }
+    } catch {}
     socket?.close();
     edge.kill();
     server.close();

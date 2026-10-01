@@ -2,7 +2,10 @@
   "schemaVersion": 1,
   "cityId": "living_city_street_block_01",
   "cityName": "茶摊街区",
-  "background": "greybox_ground_from_blueprint",
+  "background": "simple2d_scene/lc_ground_paving",
+  "sceneBlueprint": "street_block_01",
+  "chapterIndex": 1,
+  "chapterCount": 3,
   "mapSize": {
     "width": 1536,
     "height": 2048
@@ -15,7 +18,7 @@
   "hiddenObjects": [
     {
       "id": "tea_clay_whistle",
-      "asset": "greybox_tea_clay_whistle",
+      "asset": "targets/tea_clay_whistle",
       "x": 0.27734375,
       "y": 0.69189453,
       "scale": 1,
@@ -27,13 +30,19 @@
       "depthY": 283,
       "tags": [
         "tea_clay_whistle",
-        "greybox_target"
+        "generated_target"
       ],
-      "targetable": true
+      "targetable": true,
+      "visualSize": {
+        "width": 30,
+        "height": 28
+      },
+      "displayName": "陶哨",
+      "clue": "茶摊的杯盏附近"
     },
     {
       "id": "tailor_thimble",
-      "asset": "greybox_tailor_thimble",
+      "asset": "targets/tailor_thimble",
       "x": 0.24283854,
       "y": 0.31445313,
       "scale": 1,
@@ -45,13 +54,19 @@
       "depthY": -456,
       "tags": [
         "tailor_thimble",
-        "greybox_target"
+        "generated_target"
       ],
-      "targetable": true
+      "targetable": true,
+      "visualSize": {
+        "width": 26,
+        "height": 27
+      },
+      "displayName": "顶针",
+      "clue": "裁缝铺的针线盘里"
     },
     {
       "id": "banner_knot",
-      "asset": "greybox_banner_knot",
+      "asset": "targets/banner_knot",
       "x": 0.52929688,
       "y": 0.80273438,
       "scale": 1,
@@ -63,14 +78,20 @@
       "depthY": 620,
       "tags": [
         "banner_knot",
-        "greybox_target"
+        "generated_target"
       ],
-      "targetable": true
+      "targetable": true,
+      "visualSize": {
+        "width": 27,
+        "height": 33
+      },
+      "displayName": "绳结",
+      "clue": "抬头看看街口的横幅"
     },
     {
       "id": "chestnut_tongs",
-      "asset": "greybox_chestnut_tongs",
-      "x": 0.77994792,
+      "asset": "targets/chestnut_tongs",
+      "x": 0.66471354,
       "y": 0.30126953,
       "scale": 1,
       "rotation": 0,
@@ -81,34 +102,341 @@
       "depthY": -407,
       "tags": [
         "chestnut_tongs",
-        "greybox_target"
+        "generated_target"
+      ],
+      "targetable": true,
+      "visualSize": {
+        "width": 36,
+        "height": 32
+      },
+      "displayName": "栗子夹",
+      "clue": "栗子车上的纸包旁"
+    },
+    {
+      "id": "pocket_watch",
+      "asset": "targets/pocket_watch",
+      "x": 0.23828125,
+      "y": 0.57470703,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 28
+      },
+      "depthY": 109,
+      "tags": [
+        "pocket_watch",
+        "generated_target"
+      ],
+      "targetable": true,
+      "visualSize": {
+        "width": 29,
+        "height": 34
+      },
+      "displayName": "怀表",
+      "clue": "茶桌上，有位茶客忘了时间"
+    },
+    {
+      "id": "sewing_scissors",
+      "asset": "targets/sewing_scissors",
+      "x": 0.17122396,
+      "y": 0.35058594,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 28
+      },
+      "depthY": -391,
+      "tags": [
+        "sewing_scissors",
+        "generated_target"
+      ],
+      "targetable": true,
+      "visualSize": {
+        "width": 37,
+        "height": 29
+      },
+      "displayName": "剪刀",
+      "clue": "裁缝的布料工作架上"
+    },
+    {
+      "id": "blue_feather",
+      "asset": "targets/blue_feather",
+      "x": 0.18880208,
+      "y": 0.4140625,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 28
+      },
+      "depthY": -236,
+      "tags": [
+        "blue_feather",
+        "generated_target"
+      ],
+      "targetable": true,
+      "visualSize": {
+        "width": 36,
+        "height": 22
+      },
+      "displayName": "蓝羽毛",
+      "clue": "长凳上有一片旅人的羽毛"
+    },
+    {
+      "id": "sealed_letter",
+      "asset": "targets/sealed_letter",
+      "x": 0.22005208,
+      "y": 0.09667969,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 28
+      },
+      "depthY": -826,
+      "tags": [
+        "sealed_letter",
+        "generated_target"
+      ],
+      "targetable": true,
+      "visualSize": {
+        "width": 36,
+        "height": 26
+      },
+      "displayName": "信封",
+      "clue": "南边邮舍的包裹箱，试着打开它",
+      "visibleCondition": {
+        "objectId": "parcel_chest",
+        "state": "opened"
+      }
+    },
+    {
+      "id": "honey_dipper",
+      "asset": "targets/honey_dipper",
+      "x": 0.27408854,
+      "y": 0.44140625,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 28
+      },
+      "depthY": -176,
+      "tags": [
+        "honey_dipper",
+        "generated_target"
+      ],
+      "targetable": true,
+      "visualSize": {
+        "width": 34,
+        "height": 28
+      },
+      "displayName": "蜜勺",
+      "clue": "茶摊补给角的蜂蜜罐旁"
+    },
+    {
+      "id": "seed_packet",
+      "asset": "targets/seed_packet",
+      "x": 0.28059896,
+      "y": 0.37402344,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 28
+      },
+      "depthY": -311,
+      "tags": [
+        "seed_packet",
+        "generated_target"
+      ],
+      "targetable": true,
+      "visualSize": {
+        "width": 30,
+        "height": 37
+      },
+      "displayName": "种子袋",
+      "clue": "花架的叶子后，拨开看看",
+      "visibleCondition": {
+        "objectId": "flower_leaves",
+        "state": "opened"
+      }
+    },
+    {
+      "id": "orchard_apple",
+      "asset": "targets/orchard_apple",
+      "x": 0.65625,
+      "y": 0.38769531,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 28
+      },
+      "depthY": -321,
+      "tags": [
+        "orchard_apple",
+        "generated_target"
+      ],
+      "targetable": true,
+      "visualSize": {
+        "width": 30,
+        "height": 31
+      },
+      "displayName": "红苹果",
+      "clue": "路边果蔬筐里的红果子"
+    },
+    {
+      "id": "golden_bun",
+      "asset": "targets/golden_bun",
+      "x": 0.51627604,
+      "y": 0.78369141,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "circle",
+        "radius": 28
+      },
+      "depthY": 581,
+      "tags": [
+        "golden_bun",
+        "generated_target"
+      ],
+      "targetable": true,
+      "visualSize": {
+        "width": 33,
+        "height": 28
+      },
+      "displayName": "小包子",
+      "clue": "热食车的蒸笼，掀开盖布",
+      "visibleCondition": {
+        "objectId": "bun_lid",
+        "state": "opened"
+      }
+    }
+  ],
+  "chickens": [],
+  "interactiveObjects": [
+    {
+      "id": "parcel_chest",
+      "asset": "interactions/parcel_chest_closed",
+      "openAsset": "interactions/parcel_chest_opened",
+      "x": 0.22005208,
+      "y": 0.09228516,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "rect",
+        "width": 100,
+        "height": 88
+      },
+      "visualSize": {
+        "width": 100,
+        "height": 88
+      },
+      "depthY": -886,
+      "label": "打开包裹箱",
+      "initialState": "closed",
+      "actions": [
+        {
+          "type": "setState",
+          "objectId": "parcel_chest",
+          "state": "opened"
+        }
+      ],
+      "tags": [
+        "reveal"
+      ],
+      "targetable": true
+    },
+    {
+      "id": "flower_leaves",
+      "asset": "interactions/flower_leaves_closed",
+      "openAsset": "interactions/flower_leaves_opened",
+      "x": 0.28059896,
+      "y": 0.37744141,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "rect",
+        "width": 76,
+        "height": 85
+      },
+      "visualSize": {
+        "width": 76,
+        "height": 85
+      },
+      "depthY": -311,
+      "label": "拨开花叶",
+      "initialState": "closed",
+      "actions": [
+        {
+          "type": "setState",
+          "objectId": "flower_leaves",
+          "state": "opened"
+        }
+      ],
+      "tags": [
+        "reveal"
+      ],
+      "targetable": true
+    },
+    {
+      "id": "bun_lid",
+      "asset": "interactions/bun_lid_closed",
+      "openAsset": "interactions/bun_lid_opened",
+      "x": 0.51627604,
+      "y": 0.78613281,
+      "scale": 1,
+      "rotation": 0,
+      "clickArea": {
+        "shape": "rect",
+        "width": 76,
+        "height": 62
+      },
+      "visualSize": {
+        "width": 76,
+        "height": 62
+      },
+      "depthY": 469,
+      "label": "掀开盖布",
+      "initialState": "closed",
+      "actions": [
+        {
+          "type": "setState",
+          "objectId": "bun_lid",
+          "state": "opened"
+        }
+      ],
+      "tags": [
+        "reveal"
       ],
       "targetable": true
     }
   ],
-  "chickens": [],
-  "interactiveObjects": [],
   "foregroundSprites": [],
   "tasks": [
     {
       "id": "find_tea_clay_whistle",
       "type": "hiddenObject",
       "targetId": "tea_clay_whistle",
-      "label": "找到茶摊陶哨",
+      "label": "找到陶哨",
       "required": true
     },
     {
       "id": "find_tailor_thimble",
       "type": "hiddenObject",
       "targetId": "tailor_thimble",
-      "label": "找到裁缝顶针",
+      "label": "找到顶针",
       "required": true
     },
     {
       "id": "find_banner_knot",
       "type": "hiddenObject",
       "targetId": "banner_knot",
-      "label": "找到横幅绳结",
+      "label": "找到绳结",
       "required": true
     },
     {
@@ -117,8 +445,64 @@
       "targetId": "chestnut_tongs",
       "label": "找到栗子夹",
       "required": true
+    },
+    {
+      "id": "find_pocket_watch",
+      "type": "hiddenObject",
+      "targetId": "pocket_watch",
+      "label": "找到怀表",
+      "required": true
+    },
+    {
+      "id": "find_sewing_scissors",
+      "type": "hiddenObject",
+      "targetId": "sewing_scissors",
+      "label": "找到剪刀",
+      "required": true
+    },
+    {
+      "id": "find_blue_feather",
+      "type": "hiddenObject",
+      "targetId": "blue_feather",
+      "label": "找到蓝羽毛",
+      "required": true
+    },
+    {
+      "id": "find_sealed_letter",
+      "type": "hiddenObject",
+      "targetId": "sealed_letter",
+      "label": "找到信封",
+      "required": true
+    },
+    {
+      "id": "find_honey_dipper",
+      "type": "hiddenObject",
+      "targetId": "honey_dipper",
+      "label": "找到蜜勺",
+      "required": true
+    },
+    {
+      "id": "find_seed_packet",
+      "type": "hiddenObject",
+      "targetId": "seed_packet",
+      "label": "找到种子袋",
+      "required": true
+    },
+    {
+      "id": "find_orchard_apple",
+      "type": "hiddenObject",
+      "targetId": "orchard_apple",
+      "label": "找到红苹果",
+      "required": true
+    },
+    {
+      "id": "find_golden_bun",
+      "type": "hiddenObject",
+      "targetId": "golden_bun",
+      "label": "找到小包子",
+      "required": true
     }
   ],
-  "nextCityId": null,
+  "nextCityId": "living_city_garden_market_02",
   "travelType": "other"
 }

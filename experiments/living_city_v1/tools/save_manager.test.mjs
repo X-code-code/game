@@ -13,6 +13,24 @@ function memoryStorage() {
     };
 }
 
+test('reveals persist without counting a discovery and preserve progress from the four-target version', () => {
+    const storage = memoryStorage();
+    const save = new SaveManager(storage, 'living_city_street_block_01', LIVING_CITY_SAVE_KEY);
+    save.recordCityProgress('living_city_street_block_01', {
+        completedTaskIds: ['find_tea_clay_whistle'], foundHiddenObjectIds: ['tea_clay_whistle'], discoveredChickenIds: [],
+    });
+    save.recordCityProgress('living_city_street_block_01', {
+        completedTaskIds: [], foundHiddenObjectIds: [], discoveredChickenIds: [],
+        interactiveStates: { parcel_chest: 'opened', flower_leaves: 'closed' },
+    });
+    const restored = new SaveManager(storage, 'living_city_street_block_01', LIVING_CITY_SAVE_KEY).getCityProgress('living_city_street_block_01');
+    assert.deepEqual(restored.completedTaskIds, ['find_tea_clay_whistle']);
+    assert.deepEqual(restored.foundHiddenObjectIds, ['tea_clay_whistle']);
+    assert.equal(restored.interactiveStates.parcel_chest, 'opened');
+    assert.equal(restored.interactiveStates.flower_leaves, 'closed');
+    assert.equal(save.recordCityProgress('living_city_street_block_01', restored), false);
+});
+
 test('progress, city travel, inventory and settings survive a fresh manager without duplicates', () => {
     const storage = memoryStorage();
     const first = new SaveManager(storage, 'city_demo');
