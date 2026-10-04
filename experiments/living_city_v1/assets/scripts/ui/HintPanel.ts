@@ -1,6 +1,7 @@
 import { AssetManager, Button, Color, Label, Sprite, Node, UITransform, Vec3 } from 'cc';
 import { generatedUi } from './GeneratedUi';
 import type { ActiveHint, HintResult } from '../hint/HintManager';
+import { HINT_READY_MESSAGE, requestedHintMessage } from './HintCopy';
 
 /** A free hint button and a map-local marker that follows the selected live target. */
 export class HintPanel {
@@ -11,9 +12,10 @@ export class HintPanel {
     private readonly button: Node;
     private readonly ring: Sprite;
     private lastRadius = 0;
-    private tracking = false;
     private expanded = false;
     private laidOut = false;
+    private feedbackSeconds = 0;
+    public get hasTransientFeedback(): boolean { return this.feedbackSeconds > 0; }
 
     public constructor(parent: Node, map: Node, onRequest: () => void,
         private readonly compact = false, private readonly streetCompact = false, bundle?: AssetManager.Bundle) {
@@ -35,7 +37,7 @@ export class HintPanel {
         this.message.horizontalAlign = Label.HorizontalAlign.CENTER;
         this.message.verticalAlign = Label.VerticalAlign.CENTER;
         this.message.overflow = Label.Overflow.SHRINK;
-        this.message.string = '需要线索时，点一下提示';
+        this.message.string = HINT_READY_MESSAGE;
         const button = new Node('RequestHint');
         this.button = button;
         this.root.addChild(button);
@@ -59,21 +61,22 @@ export class HintPanel {
     }
 
     public showResult(result: HintResult): void {
+        this.feedbackSeconds = result.status === 'shown' ? 0 : 2.4;
         this.update(result.status === 'shown' ? result.hint : null);
-        this.message.string = result.status === 'shown' ?
-            `${result.hint.kind === 'interactiveObject' ? '先看看圈出的机关' : '圈出的目标'}：${result.hint.label}` :
-            result.status === 'complete' ? '本城所有目标已找到' : '暂时没有可提示的目标';
+        this.message.string = requestedHintMessage(result);
     }
 
-    public update(hint: ActiveHint | null): void {
-        if (this.compact) this.layoutMode(!!hint);
+    public update(hint: ActiveHint | null, deltaSeconds = 0): void {
+        if (hint) this.feedbackSeconds = 0;
+        else if (Number.isFinite(deltaSeconds) && deltaSeconds > 0) {
+            this.feedbackSeconds = Math.max(0, this.feedbackSeconds - deltaSeconds);
+        }
+        if (this.compact) this.layoutMode(!!hint || this.hasTransientFeedback);
         this.marker.active = !!hint && this.root.activeInHierarchy;
         if (!hint) {
-            if (this.tracking) this.message.string = '需要线索时，点一下提示';
-            this.tracking = false;
+            if (!this.hasTransientFeedback) this.message.string = HINT_READY_MESSAGE;
             return;
         }
-        this.tracking = true;
         this.marker.setPosition(hint.position.x, hint.position.y, 0);
         const pulse = 1 + 0.07 * Math.sin((4 - hint.remaining) * 8);
         this.marker.setScale(pulse, pulse, 1);
@@ -119,6 +122,13 @@ export class HintPanel {
 
     public blocksInput(x: number, y: number): boolean {
         if (!this.root.activeInHierarchy) return false;
+        // Brief no-result feedback is a HUD caption. Only its real button owns
+        // pointer input; the caption does not cover targets or map gestures.
+        if (this.hasTransientFeedback) {
+            const t = this.button.getComponent(UITransform)!;
+            const p = t.convertToNodeSpaceAR(new Vec3(x, y, 0));
+            return Math.abs(p.x) <= t.width / 2 && Math.abs(p.y) <= t.height / 2;
+        }
         const t = this.root.getComponent(UITransform)!;
         const p = t.convertToNodeSpaceAR(new Vec3(x, y, 0));
         return Math.abs(p.x) <= t.width / 2 && Math.abs(p.y) <= t.height / 2;

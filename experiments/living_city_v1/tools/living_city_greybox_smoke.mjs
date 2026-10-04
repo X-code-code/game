@@ -481,7 +481,7 @@ try {
         const canvas=cc.director.getScene().getChildByName('Canvas');
         return canvas.getComponent('CityManager').current.view.hintPanel.message.string;
     })()`);
-    assert.equal(hintMessage, '本城所有目标已找到', 'Hint button did not react to click');
+    assert.equal(hintMessage, '小镇的这些小惊喜，都被你找到了。', 'Hint button did not react to click');
     assert.equal((await state()).progress.requiredCompleted, 4, 'Hint button changed task progress');
     const completedRun = current;
     await send('Page.reload');

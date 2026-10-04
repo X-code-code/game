@@ -29,6 +29,7 @@ class JsonAsset {}
 class Node {
     constructor(name) { this.name = name; this.isValid = true; this.children = []; }
     addChild(child) { this.children.push(child); }
+    setScale(x, y, z) { this.scale = { x, y, z }; }
     addComponent(Type) {
         const component = new Type();
         this[Type.name] = component;
@@ -88,11 +89,11 @@ function makePlayer(manifest, missingPath = null, wrongSizePath = null) {
             callback(assets.has(value) ? null : new Error('missing'), assets.get(value));
         },
     };
-    const actor = new Node('messenger_customer');
+    const actor = new Node(manifest?.actorId ?? 'messenger_customer');
     const graphic = new Graphics();
     const nameLabel = { active: true };
     const player = new CelAnimationPlayer(actor, graphic, nameLabel,
-        bundle, 'messenger_customer', folder, 120);
+        bundle, manifest?.actorId ?? 'messenger_customer', folder, 120);
     return { player, actor, graphic, nameLabel, requests, assets };
 }
 
@@ -165,4 +166,156 @@ for (const mutate of [
     assert.equal(visual.Sprite.spriteFrame, assets.get(`${folder}/receive_w_1/spriteFrame`));
 }
 
-console.log('Cel animation manifest, registration, duration and fallback: passed');
+function sideViewManifest() {
+    const data = validManifest();
+    return { ...data, schemaVersion: 2, clips: {
+        idle_w: [{ asset: 'idle_a', durationSeconds: 0.45 }, { asset: 'idle_b', durationSeconds: 0.45 }],
+        walk_nw: [{ asset: 'walk_a', durationSeconds: 0.14 }, { asset: 'walk_b', durationSeconds: 0.14 }],
+        receive_w: [{ asset: 'job_a', durationSeconds: 0.45 }, { asset: 'job_b', durationSeconds: 0.45 }],
+    } };
+}
+
+// A six-cel actor requests only its own PNGs and never claims unpainted directions.
+{
+    const { player, actor, assets, requests } = makePlayer(sideViewManifest());
+    assert.equal(player.isReady, true);
+    assert.equal(player.supportsClip('idle_w'), true);
+    assert.equal(player.supportsClip('walk_nw'), true);
+    assert.equal(player.supportsClip('receive_w'), true);
+    assert.equal(player.supportsClip('walk_n'), false);
+    assert.equal(player.supportsClip('walk_ne'), false);
+    assert.equal(requests.length, 7, 'one manifest and exactly six generated cels');
+    const sprite = actor.children[0].Sprite;
+    player.setState('walk_nw'); player.update(0.15);
+    assert.equal(sprite.spriteFrame, assets.get(`${folder}/walk_b/spriteFrame`));
+    player.setFacing(-1); assert.equal(actor.children[0].scale.x, -1);
+    player.setState('receive_w'); player.update(0.25); player.update(0.25);
+    assert.equal(sprite.spriteFrame, assets.get(`${folder}/job_b/spriteFrame`));
+    player.update(0.25); player.update(0.25);
+    assert.equal(sprite.spriteFrame, assets.get(`${folder}/job_b/spriteFrame`));
+    player.setState('walk_n');
+    assert.equal(sprite.spriteFrame, assets.get(`${folder}/idle_a/spriteFrame`), 'a missing view holds actual idle PNGs');
+    assert.equal(warnings.length, 0);
+}
+
+// Four-cel production can express one true idle, two steps and one true job pose.
+{
+    const manifest = sideViewManifest();
+    manifest.clips.idle_w = manifest.clips.idle_w.slice(0, 1);
+    manifest.clips.receive_w = manifest.clips.receive_w.slice(0, 1);
+    const { player, requests } = makePlayer(manifest);
+    assert.equal(player.isReady, true);
+    assert.equal(requests.length, 5);
+}
+
+for (const mutate of [
+    data => { delete data.clips.idle_w; },
+    data => { data.clips.walk_nw = data.clips.walk_nw.slice(0, 1); },
+    data => { data.clips.receive_w = []; },
+    data => { data.clips.water_plants = data.clips.receive_w; },
+    data => { data.schemaVersion = 3; },
+]) {
+    const manifest = sideViewManifest(); mutate(manifest);
+    const { player, requests } = makePlayer(manifest);
+    assert.equal(player.isReady, false);
+    assert.deepEqual(requests, [manifestPath]);
+}
+
+// A partial actor without a job pose never requests or substitutes ungenerated cels.
+{
+    const manifest = sideViewManifest(); delete manifest.clips.receive_w;
+    const { player, actor, assets } = makePlayer(manifest);
+    assert.equal(player.isReady, true);
+    assert.equal(player.supportsClip('receive_w'), false);
+    player.setState('receive_w');
+    assert.equal(actor.children[0].Sprite.spriteFrame, assets.get(`${folder}/idle_a/spriteFrame`));
+}
+
+// New job cels can repeat inside a resident's station; old event poses still hold once.
+{
+    const manifest = sideViewManifest(); manifest.loopingClips = ['idle_w', 'walk_nw', 'receive_w'];
+    const { player, actor, assets } = makePlayer(manifest);
+    player.setState('receive_w');
+    for (let index = 0; index < 4; index++) player.update(0.25);
+    assert.equal(actor.children[0].Sprite.spriteFrame, assets.get(`${folder}/job_a/spriteFrame`));
+    const legacy = validManifest(); legacy.loopingClips = ['receive_w'];
+    const old = makePlayer(legacy); old.player.setState('receive_w');
+    for (let index = 0; index < 4; index++) old.player.update(0.25);
+    assert.equal(old.actor.children[0].Sprite.spriteFrame, old.assets.get(`${folder}/receive_w_1/spriteFrame`));
+}
+
+for (const loopingClips of [['walk_n'], ['ungenerated_action'], 'receive_w']) {
+    const manifest = sideViewManifest(); manifest.loopingClips = loopingClips;
+    assert.equal(makePlayer(manifest).player.isReady, false);
+}
+
+// A stationary tea vendor needs only two resting and two generated offering cels.
+{
+    const manifest = sideViewManifest(); delete manifest.clips.walk_nw;
+    manifest.clips.receive_w.forEach(frame => { frame.durationSeconds = 0.2; });
+    manifest.loopingClips = ['idle_w'];
+    const { player, actor, assets, requests } = makePlayer(manifest);
+    assert.equal(player.isReady, true); assert.equal(requests.length, 5);
+    for (const clip of ['walk_n', 'walk_nw', 'walk_ne', 'turn_nw_w']) {
+        assert.equal(player.supportsClip(clip), false, 'a stationary actor does not claim unpainted walking views');
+    }
+    player.setState('receive_w'); player.update(0.21);
+    assert.equal(actor.children[0].Sprite.spriteFrame, assets.get(`${folder}/job_b/spriteFrame`),
+        'the second offering cel appears inside the 0.45-second exchange handoff');
+    player.update(0.25); player.update(0.25);
+    assert.equal(actor.children[0].Sprite.spriteFrame, assets.get(`${folder}/job_b/spriteFrame`),
+        'the free invitation holds its offered cup rather than looping the transfer');
+}
+
+// The returning tea regular owns separate generated front, back and side steps.
+{
+    const manifest = sideViewManifest();
+    manifest.clips.walk_n = [{ asset: 'north_a', durationSeconds: 0.14 },
+        { asset: 'north_b', durationSeconds: 0.14 }];
+    manifest.clips.walk_ne = [{ asset: 'south_a', durationSeconds: 0.14 },
+        { asset: 'south_b', durationSeconds: 0.14 }];
+    manifest.loopingClips = ['idle_w', 'walk_n', 'walk_nw', 'walk_ne'];
+    const { player, actor, assets, requests } = makePlayer(manifest);
+    assert.equal(player.isReady, true); assert.equal(requests.length, 11);
+    const sprite = actor.children[0].Sprite;
+    for (const [clip, first, second] of [['walk_n', 'north_a', 'north_b'],
+        ['walk_ne', 'south_a', 'south_b'], ['walk_nw', 'walk_a', 'walk_b']]) {
+        player.setState(clip);
+        assert.equal(sprite.spriteFrame, assets.get(`${folder}/${first}/spriteFrame`));
+        player.update(0.15);
+        assert.equal(sprite.spriteFrame, assets.get(`${folder}/${second}/spriteFrame`));
+        player.update(0.14);
+        assert.equal(sprite.spriteFrame, assets.get(`${folder}/${first}/spriteFrame`));
+    }
+    assert.equal(player.supportsClip('turn_w_ne'), false);
+    assert.equal(player.supportsClip('idle_ne'), false);
+    assert.equal(warnings.length, 0);
+}
+
+{
+    const build = id => {
+        const manifest = sideViewManifest();
+        manifest.actorId = id;
+        manifest.staggerIdlePhase = true;
+        manifest.clips.idle_w = [0,1,2,3].map(i=>({asset:`blink_${i}`,durationSeconds:.1}));
+        return makePlayer(manifest);
+    };
+    const a=build('lane_child'), b=build('tea_vendor');
+    assert.equal(a.player.isReady,true);assert.equal(b.player.isReady,true);
+    assert.notEqual(a.player.frameSeconds,b.player.frameSeconds);
+    const observed=new Set();
+    for(let i=0;i<12;i++){a.player.update(.05);observed.add(a.actor.children[0].Sprite.spriteFrame);}
+    assert.equal(observed.size,4,'Every genuine blink frame must play');
+    a.player.setState('receive_w');
+    assert.equal(a.player.frameIndex,0,'An idle offset must never skip the start of a job gesture');
+    assert.equal(a.player.frameSeconds,0);
+    const stoppedFrames = new Set();
+    for (let i = 0; i < 60; i++) {
+        a.player.setState('walk_nw'); a.player.update(.05);
+        a.player.setState('idle_w');
+        stoppedFrames.add(a.actor.children[0].Sprite.spriteFrame);
+        a.player.update(.03);
+    }
+    assert.equal(stoppedFrames.size,4,'Brief stops must not repeatedly restart the same idle pose');
+}
+console.log('Cel animation manifest, registration, duration, staggered idle and fallback: passed');

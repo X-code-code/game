@@ -3,12 +3,12 @@ import { AssetManager, Graphics, Node, Sprite, SpriteFrame, UITransform, warn } 
 type Size = { width: number; height: number };
 
 /**
- * Load one generated cutout. The canvas and node
- * have the same size and centre, so a transparent pixel never changes placement.
+ * Load one generated cutout. Texture density is independent of world size;
+ * a higher-resolution canvas retains the same normalized centre and placement.
  * Production scenes pass no drawing fallback; missing art stays empty.
  */
 export function loadSceneArtSlot(bundle: AssetManager.Bundle, slotId: string, node: Node,
-    fallback: Graphics | null, size: Size, onLoaded?: () => void): void {
+    fallback: Graphics | null, size: Size, onLoaded?: () => void, textureScale = 1): void {
     const path = `simple2d_scene/${slotId}/spriteFrame`;
     // A city can still run as a greybox when its production artwork is absent.
     if (!bundle.getInfoWithPath(path, SpriteFrame)) return;
@@ -19,8 +19,9 @@ export function loadSceneArtSlot(bundle: AssetManager.Bundle, slotId: string, no
             return;
         }
         const imageSize = frame.originalSize;
-        if (imageSize.width !== size.width || imageSize.height !== size.height) {
-            warn(`Scene art ${slotId} has ${imageSize.width}x${imageSize.height}; expected ${size.width}x${size.height}`);
+        if (!Number.isInteger(textureScale) || textureScale < 1 || textureScale > 4 ||
+            imageSize.width !== size.width * textureScale || imageSize.height !== size.height * textureScale) {
+            warn(`Scene art ${slotId} has ${imageSize.width}x${imageSize.height}; expected ${size.width * textureScale}x${size.height * textureScale}`);
             return;
         }
         const visual = new Node(`${slotId}_art`);

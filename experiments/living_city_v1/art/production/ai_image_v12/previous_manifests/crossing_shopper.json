@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 2,
+  "actorId": "crossing_shopper",
+  "canvasPx": {
+    "width": 384,
+    "height": 256
+  },
+  "footpointPx": {
+    "x": 192,
+    "y": 215
+  },
+  "paintedHeightPx": 186,
+  "clips": {
+    "idle_w": [
+      {
+        "asset": "chicken_crossing_shopper_v9_frame_01",
+        "durationSeconds": 0.45
+      },
+      {
+        "asset": "chicken_crossing_shopper_v9_frame_06",
+        "durationSeconds": 0.45
+      }
+    ],
+    "walk_nw": [
+      {
+        "asset": "chicken_crossing_shopper_v9_frame_02",
+        "durationSeconds": 0.14
+      },
+      {
+        "asset": "chicken_crossing_shopper_v9_frame_07",
+        "durationSeconds": 0.14
+      }
+    ],
+    "walk_n": [
+      {
+        "asset": "chicken_crossing_shopper_v9_frame_03",
+        "durationSeconds": 0.14
+      },
+      {
+        "asset": "chicken_crossing_shopper_v9_frame_08",
+        "durationSeconds": 0.14
+      }
+    ],
+    "walk_ne": [
+      {
+        "asset": "chicken_crossing_shopper_v9_frame_04",
+        "durationSeconds": 0.14
+      },
+      {
+        "asset": "chicken_crossing_shopper_v9_frame_09",
+        "durationSeconds": 0.14
+      }
+    ],
+    "receive_w": [
+      {
+        "asset": "chicken_crossing_shopper_v9_frame_05",
+        "durationSeconds": 0.4
+      },
+      {
+        "asset": "chicken_crossing_shopper_v9_frame_10",
+        "durationSeconds": 0.4
+      }
+    ]
+  },
+  "loopingClips": [
+    "idle_w",
+    "walk_nw",
+    "walk_n",
+    "walk_ne"
+  ],
+  "sourceBatch": "ai_image_v9",
+  "generatedSourceId": "chicken_crossing_shopper_sheet_walkfix_v9",
+  "registration": "common_whole_sheet_scale_fixed_footpoint",
+  "sourceCellGrid": {
+    "columns": 5,
+    "rows": 2,
+    "width": 1774,
+    "height": 887
+  }
+}

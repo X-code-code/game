@@ -268,6 +268,10 @@ export function validateCityConfig(raw: unknown, catalog: CityCatalog, expectedC
         interactiveIds.add(id);
         nonEmptyString(object.asset, context, `${path}.asset`);
         if (object.openAsset !== undefined) nonEmptyString(object.openAsset, context, `${path}.openAsset`);
+        if (object.openForegroundStart !== undefined) {
+            const start = finiteNumber(object.openForegroundStart, context, `${path}.openForegroundStart`);
+            if (start <= 0 || start >= 1 || !object.openAsset) invalid(context, `${path}.openForegroundStart`, 'expected openAsset and a fraction between 0 and 1');
+        }
         optionalVisualSize(object.visualSize, context, `${path}.visualSize`);
         if (object.depthY !== undefined && Math.abs(finiteNumber(object.depthY, context, `${path}.depthY`)) > mapHeight / 2) {
             invalid(context, `${path}.depthY`, 'outside map');

@@ -1,0 +1,71 @@
+{
+  "batchId": "ai_image_v13",
+  "newGenerationCalls": 0,
+  "sources": [],
+  "reusedSources": [
+    {
+      "source": "art/production/ai_image_v8/sources/courtyard_books_v8.png",
+      "sha256": "b88416a89d66e494bf765cb69b552d2db9325e5a70a11f5fc30bf1f9db5a5a6b",
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_books_v8.md"
+    },
+    {
+      "source": "art/production/ai_image_v8/sources/courtyard_flowers_v8.png",
+      "sha256": "4b1adce6d3ae648c741eb435f63b0ac869be6b263d66570473d82a45da74ba3b",
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_flowers_v8.md"
+    },
+    {
+      "source": "art/production/ai_image_v8/sources/courtyard_sweets_v8.png",
+      "sha256": "2988e036f2b7b3f0ad74c4485d54ffabc04fd67892eaba06e9ed4bbdbc2f337c",
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_sweets_v8.md"
+    },
+    {
+      "source": "art/production/ai_image_v8/sources/courtyard_noodles_v8.png",
+      "sha256": "d2953e795c4f46572cdf6a9206979e2677b2747de4d67522d97c6a64f8cc33fd",
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_noodles_v8.md"
+    },
+    {
+      "source": "art/production/ai_image_v8/sources/courtyard_sage_v8.png",
+      "sha256": "7af967536128ccad7119784ad786a8e76ce3c94f1a9855642f9f96dae904d680",
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_sage_v8.md"
+    },
+    {
+      "source": "art/production/ai_image_v8/sources/courtyard_rose_v8.png",
+      "sha256": "d108adb4e615cab2e1b28d31d19cba1e00c39651962582c66ded147be36b7eb6",
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_rose_v8.md"
+    }
+  ],
+  "visualApproval": "pending",
+  "runtimeVerification": {
+    "status": "web_mobile_verified",
+    "playerVisualApproval": "pending",
+    "wechatPhone": "not_run",
+    "sceneBlueprintSha256": "81efd7792ba7bb5b74e4ff294dfba157e7cdcb66665b543bcac83eda97671e10",
+    "reports": {
+      "runtime": {
+        "path": "art/review/ai_image_v13/chapter_1/runtime_report.json",
+        "sha256": "e2fe8919eb1f1939a7de6ad65feea6feef7a5bdc3af3f1761d5a5da4bcf00046"
+      },
+      "surfaces": {
+        "path": "art/review/ai_image_v13/details/surface_report.json",
+        "sha256": "5701cd29996cb4fbeacb11b4042710c8e78d71bea4f3ac9a2e9a7807246dc08f"
+      },
+      "placement": {
+        "path": "art/review/ai_image_v13/placement_review.json",
+        "sha256": "bfb6d5d9944a5d100c4c219323c6cbd47575473d71fb7378abc9d665590b06a9"
+      },
+      "integrity": {
+        "path": "art/review/ai_image_v13/asset_integrity_report.json",
+        "sha256": "2cd2e9959f1fb636505c738ac71b2638a9a5b476ef3d4f153f9c0f47f8adacdd"
+      },
+      "visual": {
+        "path": "art/review/ai_image_v13/visual_review.json",
+        "sha256": "aad5fbb78a268d1e1a72f9553a887e6c639107547d9d12986d5b562fef82759d"
+      }
+    },
+    "build": {
+      "path": "art/review/ai_image_v13/web_mobile_build.txt",
+      "sha256": "9500c30f3b4e3adfdb3a53b1b3ba0db8916882eed525cfeae11fc8452436ad23"
+    },
+    "unchangedChaptersBaseline": "art/review/ai_image_v12/three_chapters/runtime_report.json"
+  }
+}

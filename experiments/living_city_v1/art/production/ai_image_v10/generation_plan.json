@@ -1,0 +1,49 @@
+{
+  "batchId": "ai_image_v10",
+  "jobs": [
+    {
+      "id": "garden_glove_surface_v10",
+      "targetId": "garden_glove",
+      "support": "lc6_garden_workbench",
+      "stage": "target",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/simple2d_scene/lc6_garden_workbench.png"
+      ],
+      "prompt": "Generate a transparent PNG game prop for the SAME illustrated world as the reference furniture. Reference is the exact surface where it will be placed: carefully match its slightly elevated frontal parallel projection, warm muted colors and economical clean brown outline. Generate ONLY the following detached object, no furniture or other objects: ONE single sage green gardening glove lying FLAT on a horizontal tabletop, fingers pointing upper-right, palm down, clearly foreshortened in height by the tabletop perspective. Soft cream cuff, only two short seam lines, no floral badge, no stitching texture. Complete silhouette. It is a small ordinary scene object, never a UI icon, sticker badge or product advertisement. Thin even warm medium-brown contour, flat opaque color fills with just one restrained shadow plane, minimal interior detail. No white border, no halo, no glow, no gradient, no photorealism, no dramatic lighting, no ground patch or cast shadow. Full transparent alpha surrounding the silhouette and in holes. Center the complete object with 15 percent clear margins, use a wide horizontal canvas if subject is wide. The prop will be viewed at 28-34 world pixels, so use broad quiet readable shapes. Keep the actual supporting surface perspective rather than a front-on inventory drawing. Do not reproduce the reference furniture.",
+      "transparent": true
+    },
+    {
+      "id": "tiny_camera_surface_v10",
+      "targetId": "tiny_camera",
+      "support": "lc6_fountain_bench",
+      "stage": "target",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/simple2d_scene/lc6_fountain_bench.png"
+      ],
+      "prompt": "Generate a transparent PNG game prop for the SAME illustrated world as the reference furniture. Reference is the exact surface where it will be placed: carefully match its slightly elevated frontal parallel projection, warm muted colors and economical clean brown outline. Generate ONLY the following detached object, no furniture or other objects: ONE small matte dusty blue and cream camera resting upright on its flat base on a bench seat. Slightly elevated frontal view exposing a narrow top plane, tiny brown shutter button, simple dark blue lens, no glossy highlights, no strap, no lettering. Camera body wider than tall, restrained small lens. It is a small ordinary scene object, never a UI icon, sticker badge or product advertisement. Thin even warm medium-brown contour, flat opaque color fills with just one restrained shadow plane, minimal interior detail. No white border, no halo, no glow, no gradient, no photorealism, no dramatic lighting, no ground patch or cast shadow. Full transparent alpha surrounding the silhouette and in holes. Center the complete object with 15 percent clear margins, use a wide horizontal canvas if subject is wide. The prop will be viewed at 28-34 world pixels, so use broad quiet readable shapes. Keep the actual supporting surface perspective rather than a front-on inventory drawing. Do not reproduce the reference furniture.",
+      "transparent": true
+    },
+    {
+      "id": "pink_watering_can_surface_v10",
+      "targetId": "pink_watering_can",
+      "support": "lc6_central_water",
+      "stage": "target",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/simple2d_scene/lc6_central_water.png"
+      ],
+      "prompt": "Generate a transparent PNG game prop for the SAME illustrated world as the reference furniture. Reference is the exact surface where it will be placed: carefully match its slightly elevated frontal parallel projection, warm muted colors and economical clean brown outline. Generate ONLY the following detached object, no furniture or other objects: ONE small dusty coral watering can resting on a horizontal surface. Slightly elevated frontal view consistent with the pictured basin, visible narrow oval top opening, spout points left, handle right. Plain body, no flower emblem, no shiny streaks. Full base and spout complete. It is a small ordinary scene object, never a UI icon, sticker badge or product advertisement. Thin even warm medium-brown contour, flat opaque color fills with just one restrained shadow plane, minimal interior detail. No white border, no halo, no glow, no gradient, no photorealism, no dramatic lighting, no ground patch or cast shadow. Full transparent alpha surrounding the silhouette and in holes. Center the complete object with 15 percent clear margins, use a wide horizontal canvas if subject is wide. The prop will be viewed at 28-34 world pixels, so use broad quiet readable shapes. Keep the actual supporting surface perspective rather than a front-on inventory drawing. Do not reproduce the reference furniture.",
+      "transparent": true
+    },
+    {
+      "id": "wooden_bird_surface_v10",
+      "targetId": "wooden_bird",
+      "support": "lc6_central_crates",
+      "stage": "target",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/simple2d_scene/lc6_central_crates.png"
+      ],
+      "prompt": "Generate a transparent PNG game prop for the SAME illustrated world as the reference furniture. Reference is the exact surface where it will be placed: carefully match its slightly elevated frontal parallel projection, warm muted colors and economical clean brown outline. Generate ONLY the following detached object, no furniture or other objects: ONE small honey-ochre wooden bird toy resting on two small wooden wheels. Slightly elevated near-frontal SIDE view exposing a slim top plane, beak facing left. Simple matte flat wooden body, one wing line, no feather detail, no grain, one dot eye; complete wheels at a common contact line. It is a small ordinary scene object, never a UI icon, sticker badge or product advertisement. Thin even warm medium-brown contour, flat opaque color fills with just one restrained shadow plane, minimal interior detail. No white border, no halo, no glow, no gradient, no photorealism, no dramatic lighting, no ground patch or cast shadow. Full transparent alpha surrounding the silhouette and in holes. Center the complete object with 15 percent clear margins, use a wide horizontal canvas if subject is wide. The prop will be viewed at 28-34 world pixels, so use broad quiet readable shapes. Keep the actual supporting surface perspective rather than a front-on inventory drawing. Do not reproduce the reference furniture.",
+      "transparent": true
+    }
+  ]
+}

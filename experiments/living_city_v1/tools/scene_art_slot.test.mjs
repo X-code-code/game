@@ -25,7 +25,7 @@ vm.runInNewContext(output, { module, exports: module.exports,
     require: name => name === 'cc' ? cc : require(name) }, { filename: sourcePath });
 const { loadSceneArtSlot } = module.exports;
 
-function fixture(available, frame) {
+function fixture(available, frame, density = 1) {
     warnings.length = 0;
     const requests = [];
     const bundle = {
@@ -37,7 +37,7 @@ function fixture(available, frame) {
     node.children.push(label);
     const fallback = { enabled: true };
     let loaded = 0;
-    loadSceneArtSlot(bundle, node.name, node, fallback, { width: 56, height: 171 }, () => loaded++);
+    loadSceneArtSlot(bundle, node.name, node, fallback, { width: 56, height: 171 }, () => loaded++, density);
     return { node, label, fallback, loaded, requests };
 }
 
@@ -64,4 +64,17 @@ function fixture(available, frame) {
     assert.equal(result.node.children[0].Sprite.sizeMode, Sprite.SizeMode.CUSTOM);
     assert.equal(result.requests[0], 'simple2d_scene/lc_tea_counter_front/spriteFrame');
 }
-console.log('Scene art slot loading, registration and fallback: passed');
+{
+    const result = fixture(true, new SpriteFrame(168, 513), 3);
+    assert.equal(result.loaded, 1);
+    assert.equal(result.node.children[0].UITransform.width, 56);
+    assert.equal(result.node.children[0].UITransform.height, 171);
+    assert.equal(result.node.children[0].Sprite.spriteFrame.originalSize.width, 168);
+    assert.equal(warnings.length, 0);
+}
+for (const density of [0, 1.5, 5]) {
+    const result = fixture(true, new SpriteFrame(56 * density, 171 * density), density);
+    assert.equal(result.loaded, 0);
+    assert.equal(result.fallback.enabled, true);
+}
+console.log('Scene art slot loading, independent texture density, registration and fallback: passed');

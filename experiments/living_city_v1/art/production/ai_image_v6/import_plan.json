@@ -1,0 +1,901 @@
+{
+  "batchId": "ai_image_v6",
+  "sourceType": "codex_builtin_image_gen",
+  "styleId": "cozy_flat_town_v5",
+  "assets": [
+    {
+      "name": "reading_stall_content_v6",
+      "source": "book_stall_v6",
+      "prompt": "art/production/ai_image_v6/prompts/book_stall_v6.md",
+      "stage": "scene",
+      "width": 210,
+      "height": 210,
+      "align": "bottom",
+      "sceneSlotId": "lc6_reading_stall",
+      "runtime": "simple2d_scene/lc6_reading_stall.png",
+      "footpoint": {
+        "x": 105,
+        "y": 205
+      }
+    },
+    {
+      "name": "reading_tree_content_v6",
+      "source": "reuse_town_tree_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_town_tree_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/town_tree_v5.png",
+      "stage": "scene",
+      "width": 180,
+      "height": 240,
+      "align": "bottom",
+      "sceneSlotId": "lc6_reading_tree",
+      "runtime": "simple2d_scene/lc6_reading_tree.png",
+      "footpoint": {
+        "x": 90,
+        "y": 235
+      }
+    },
+    {
+      "name": "reading_bench_content_v6",
+      "source": "reuse_town_bench_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_town_bench_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/town_bench_v5.png",
+      "stage": "scene",
+      "width": 170,
+      "height": 90,
+      "align": "bottom",
+      "sceneSlotId": "lc6_reading_bench",
+      "runtime": "simple2d_scene/lc6_reading_bench.png",
+      "footpoint": {
+        "x": 85,
+        "y": 87
+      }
+    },
+    {
+      "name": "reading_table_content_v6",
+      "source": "reuse_tea_patio_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_tea_patio_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/tea_patio_v5.png",
+      "stage": "scene",
+      "width": 170,
+      "height": 130,
+      "align": "bottom",
+      "sceneSlotId": "lc6_reading_table",
+      "runtime": "simple2d_scene/lc6_reading_table.png",
+      "footpoint": {
+        "x": 85,
+        "y": 125
+      }
+    },
+    {
+      "name": "reading_flowers_content_v6",
+      "source": "reuse_flower_display_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_flower_display_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/flower_display_v5.png",
+      "stage": "scene",
+      "width": 150,
+      "height": 140,
+      "align": "bottom",
+      "sceneSlotId": "lc6_reading_flowers",
+      "runtime": "simple2d_scene/lc6_reading_flowers.png",
+      "footpoint": {
+        "x": 75,
+        "y": 135
+      }
+    },
+    {
+      "name": "reading_produce_content_v6",
+      "source": "reuse_produce_display_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_produce_display_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/produce_display_v5.png",
+      "stage": "scene",
+      "width": 140,
+      "height": 130,
+      "align": "bottom",
+      "sceneSlotId": "lc6_reading_produce",
+      "runtime": "simple2d_scene/lc6_reading_produce.png",
+      "footpoint": {
+        "x": 70,
+        "y": 125
+      }
+    },
+    {
+      "name": "garden_workbench_content_v6",
+      "source": "garden_workbench_v6",
+      "prompt": "art/production/ai_image_v6/prompts/garden_workbench_v6.md",
+      "stage": "scene",
+      "width": 220,
+      "height": 180,
+      "align": "bottom",
+      "sceneSlotId": "lc6_garden_workbench",
+      "runtime": "simple2d_scene/lc6_garden_workbench.png",
+      "footpoint": {
+        "x": 110,
+        "y": 175
+      }
+    },
+    {
+      "name": "garden_tree_content_v6",
+      "source": "reuse_town_tree_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_town_tree_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/town_tree_v5.png",
+      "stage": "scene",
+      "width": 180,
+      "height": 240,
+      "align": "bottom",
+      "sceneSlotId": "lc6_garden_tree",
+      "runtime": "simple2d_scene/lc6_garden_tree.png",
+      "footpoint": {
+        "x": 90,
+        "y": 235
+      }
+    },
+    {
+      "name": "garden_flowers_content_v6",
+      "source": "reuse_flower_display_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_flower_display_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/flower_display_v5.png",
+      "stage": "scene",
+      "width": 150,
+      "height": 140,
+      "align": "bottom",
+      "sceneSlotId": "lc6_garden_flowers",
+      "runtime": "simple2d_scene/lc6_garden_flowers.png",
+      "footpoint": {
+        "x": 75,
+        "y": 135
+      }
+    },
+    {
+      "name": "garden_crates_content_v6",
+      "source": "reuse_wood_crates_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_wood_crates_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/wood_crates_v5.png",
+      "stage": "scene",
+      "width": 120,
+      "height": 100,
+      "align": "bottom",
+      "sceneSlotId": "lc6_garden_crates",
+      "runtime": "simple2d_scene/lc6_garden_crates.png",
+      "footpoint": {
+        "x": 60,
+        "y": 95
+      }
+    },
+    {
+      "name": "garden_produce_content_v6",
+      "source": "reuse_produce_display_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_produce_display_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/produce_display_v5.png",
+      "stage": "scene",
+      "width": 140,
+      "height": 130,
+      "align": "bottom",
+      "sceneSlotId": "lc6_garden_produce",
+      "runtime": "simple2d_scene/lc6_garden_produce.png",
+      "footpoint": {
+        "x": 70,
+        "y": 125
+      }
+    },
+    {
+      "name": "garden_water_content_v6",
+      "source": "reuse_water_station_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_water_station_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/water_station_v5.png",
+      "stage": "scene",
+      "width": 110,
+      "height": 150,
+      "align": "bottom",
+      "sceneSlotId": "lc6_garden_water",
+      "runtime": "simple2d_scene/lc6_garden_water.png",
+      "footpoint": {
+        "x": 55,
+        "y": 145
+      }
+    },
+    {
+      "name": "central_produce_content_v6",
+      "source": "reuse_produce_display_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_produce_display_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/produce_display_v5.png",
+      "stage": "scene",
+      "width": 140,
+      "height": 130,
+      "align": "bottom",
+      "sceneSlotId": "lc6_central_produce",
+      "runtime": "simple2d_scene/lc6_central_produce.png",
+      "footpoint": {
+        "x": 70,
+        "y": 125
+      }
+    },
+    {
+      "name": "central_crates_content_v6",
+      "source": "reuse_wood_crates_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_wood_crates_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/wood_crates_v5.png",
+      "stage": "scene",
+      "width": 120,
+      "height": 100,
+      "align": "bottom",
+      "sceneSlotId": "lc6_central_crates",
+      "runtime": "simple2d_scene/lc6_central_crates.png",
+      "footpoint": {
+        "x": 60,
+        "y": 95
+      }
+    },
+    {
+      "name": "central_table_content_v6",
+      "source": "reuse_tea_patio_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_tea_patio_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/tea_patio_v5.png",
+      "stage": "scene",
+      "width": 170,
+      "height": 130,
+      "align": "bottom",
+      "sceneSlotId": "lc6_central_table",
+      "runtime": "simple2d_scene/lc6_central_table.png",
+      "footpoint": {
+        "x": 85,
+        "y": 125
+      }
+    },
+    {
+      "name": "central_water_content_v6",
+      "source": "reuse_water_station_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_water_station_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/water_station_v5.png",
+      "stage": "scene",
+      "width": 110,
+      "height": 150,
+      "align": "bottom",
+      "sceneSlotId": "lc6_central_water",
+      "runtime": "simple2d_scene/lc6_central_water.png",
+      "footpoint": {
+        "x": 55,
+        "y": 145
+      }
+    },
+    {
+      "name": "central_flowers_content_v6",
+      "source": "reuse_flower_display_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_flower_display_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/flower_display_v5.png",
+      "stage": "scene",
+      "width": 150,
+      "height": 140,
+      "align": "bottom",
+      "sceneSlotId": "lc6_central_flowers",
+      "runtime": "simple2d_scene/lc6_central_flowers.png",
+      "footpoint": {
+        "x": 75,
+        "y": 135
+      }
+    },
+    {
+      "name": "central_bench_content_v6",
+      "source": "reuse_town_bench_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_town_bench_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/town_bench_v5.png",
+      "stage": "scene",
+      "width": 170,
+      "height": 90,
+      "align": "bottom",
+      "sceneSlotId": "lc6_central_bench",
+      "runtime": "simple2d_scene/lc6_central_bench.png",
+      "footpoint": {
+        "x": 85,
+        "y": 87
+      }
+    },
+    {
+      "name": "mail_notice_content_v6",
+      "source": "mail_notice_v6",
+      "prompt": "art/production/ai_image_v6/prompts/mail_notice_v6.md",
+      "stage": "scene",
+      "width": 150,
+      "height": 190,
+      "align": "bottom",
+      "sceneSlotId": "lc6_mail_notice",
+      "runtime": "simple2d_scene/lc6_mail_notice.png",
+      "footpoint": {
+        "x": 75,
+        "y": 185
+      }
+    },
+    {
+      "name": "mail_tree_content_v6",
+      "source": "reuse_town_tree_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_town_tree_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/town_tree_v5.png",
+      "stage": "scene",
+      "width": 180,
+      "height": 240,
+      "align": "bottom",
+      "sceneSlotId": "lc6_mail_tree",
+      "runtime": "simple2d_scene/lc6_mail_tree.png",
+      "footpoint": {
+        "x": 90,
+        "y": 235
+      }
+    },
+    {
+      "name": "mail_bench_content_v6",
+      "source": "reuse_town_bench_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_town_bench_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/town_bench_v5.png",
+      "stage": "scene",
+      "width": 170,
+      "height": 90,
+      "align": "bottom",
+      "sceneSlotId": "lc6_mail_bench",
+      "runtime": "simple2d_scene/lc6_mail_bench.png",
+      "footpoint": {
+        "x": 85,
+        "y": 87
+      }
+    },
+    {
+      "name": "mail_flowers_content_v6",
+      "source": "reuse_flower_display_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_flower_display_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/flower_display_v5.png",
+      "stage": "scene",
+      "width": 150,
+      "height": 140,
+      "align": "bottom",
+      "sceneSlotId": "lc6_mail_flowers",
+      "runtime": "simple2d_scene/lc6_mail_flowers.png",
+      "footpoint": {
+        "x": 75,
+        "y": 135
+      }
+    },
+    {
+      "name": "mail_crates_content_v6",
+      "source": "reuse_wood_crates_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_wood_crates_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/wood_crates_v5.png",
+      "stage": "scene",
+      "width": 120,
+      "height": 100,
+      "align": "bottom",
+      "sceneSlotId": "lc6_mail_crates",
+      "runtime": "simple2d_scene/lc6_mail_crates.png",
+      "footpoint": {
+        "x": 60,
+        "y": 95
+      }
+    },
+    {
+      "name": "mail_table_content_v6",
+      "source": "reuse_tea_patio_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_tea_patio_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/tea_patio_v5.png",
+      "stage": "scene",
+      "width": 170,
+      "height": 130,
+      "align": "bottom",
+      "sceneSlotId": "lc6_mail_table",
+      "runtime": "simple2d_scene/lc6_mail_table.png",
+      "footpoint": {
+        "x": 85,
+        "y": 125
+      }
+    },
+    {
+      "name": "fountain_content_v6",
+      "source": "small_fountain_v6",
+      "prompt": "art/production/ai_image_v6/prompts/small_fountain_v6.md",
+      "stage": "scene",
+      "width": 190,
+      "height": 170,
+      "align": "bottom",
+      "sceneSlotId": "lc6_fountain",
+      "runtime": "simple2d_scene/lc6_fountain.png",
+      "footpoint": {
+        "x": 95,
+        "y": 165
+      }
+    },
+    {
+      "name": "fountain_bench_content_v6",
+      "source": "reuse_town_bench_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_town_bench_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/town_bench_v5.png",
+      "stage": "scene",
+      "width": 170,
+      "height": 90,
+      "align": "bottom",
+      "sceneSlotId": "lc6_fountain_bench",
+      "runtime": "simple2d_scene/lc6_fountain_bench.png",
+      "footpoint": {
+        "x": 85,
+        "y": 87
+      }
+    },
+    {
+      "name": "fountain_crates_content_v6",
+      "source": "reuse_wood_crates_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_wood_crates_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/wood_crates_v5.png",
+      "stage": "scene",
+      "width": 120,
+      "height": 100,
+      "align": "bottom",
+      "sceneSlotId": "lc6_fountain_crates",
+      "runtime": "simple2d_scene/lc6_fountain_crates.png",
+      "footpoint": {
+        "x": 60,
+        "y": 95
+      }
+    },
+    {
+      "name": "fountain_flowers_content_v6",
+      "source": "reuse_flower_display_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_flower_display_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/flower_display_v5.png",
+      "stage": "scene",
+      "width": 150,
+      "height": 140,
+      "align": "bottom",
+      "sceneSlotId": "lc6_fountain_flowers",
+      "runtime": "simple2d_scene/lc6_fountain_flowers.png",
+      "footpoint": {
+        "x": 75,
+        "y": 135
+      }
+    },
+    {
+      "name": "fountain_produce_content_v6",
+      "source": "reuse_produce_display_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_produce_display_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/produce_display_v5.png",
+      "stage": "scene",
+      "width": 140,
+      "height": 130,
+      "align": "bottom",
+      "sceneSlotId": "lc6_fountain_produce",
+      "runtime": "simple2d_scene/lc6_fountain_produce.png",
+      "footpoint": {
+        "x": 70,
+        "y": 125
+      }
+    },
+    {
+      "name": "fountain_table_content_v6",
+      "source": "reuse_tea_patio_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_tea_patio_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/tea_patio_v5.png",
+      "stage": "scene",
+      "width": 170,
+      "height": 130,
+      "align": "bottom",
+      "sceneSlotId": "lc6_fountain_table",
+      "runtime": "simple2d_scene/lc6_fountain_table.png",
+      "footpoint": {
+        "x": 85,
+        "y": 125
+      }
+    },
+    {
+      "name": "laundry_line_content_v6",
+      "source": "laundry_line_v6",
+      "prompt": "art/production/ai_image_v6/prompts/laundry_line_v6.md",
+      "stage": "scene",
+      "width": 240,
+      "height": 160,
+      "align": "bottom",
+      "sceneSlotId": "lc6_laundry_line",
+      "runtime": "simple2d_scene/lc6_laundry_line.png",
+      "footpoint": {
+        "x": 120,
+        "y": 155
+      }
+    },
+    {
+      "name": "picnic_blanket_content_v6",
+      "source": "picnic_blanket_empty_v6",
+      "prompt": "art/production/ai_image_v6/prompts/picnic_blanket_empty_v6.md",
+      "stage": "scene",
+      "width": 210,
+      "height": 130,
+      "align": "bottom",
+      "sceneSlotId": "lc6_picnic_blanket",
+      "runtime": "simple2d_scene/lc6_picnic_blanket.png",
+      "footpoint": {
+        "x": 105,
+        "y": 125
+      }
+    },
+    {
+      "name": "picnic_tree_content_v6",
+      "source": "reuse_town_tree_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_town_tree_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/town_tree_v5.png",
+      "stage": "scene",
+      "width": 180,
+      "height": 240,
+      "align": "bottom",
+      "sceneSlotId": "lc6_picnic_tree",
+      "runtime": "simple2d_scene/lc6_picnic_tree.png",
+      "footpoint": {
+        "x": 90,
+        "y": 235
+      }
+    },
+    {
+      "name": "picnic_produce_content_v6",
+      "source": "reuse_produce_display_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_produce_display_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/produce_display_v5.png",
+      "stage": "scene",
+      "width": 140,
+      "height": 130,
+      "align": "bottom",
+      "sceneSlotId": "lc6_picnic_produce",
+      "runtime": "simple2d_scene/lc6_picnic_produce.png",
+      "footpoint": {
+        "x": 70,
+        "y": 125
+      }
+    },
+    {
+      "name": "picnic_bench_content_v6",
+      "source": "reuse_town_bench_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_town_bench_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/town_bench_v5.png",
+      "stage": "scene",
+      "width": 170,
+      "height": 90,
+      "align": "bottom",
+      "sceneSlotId": "lc6_picnic_bench",
+      "runtime": "simple2d_scene/lc6_picnic_bench.png",
+      "footpoint": {
+        "x": 85,
+        "y": 87
+      }
+    },
+    {
+      "name": "picnic_flowers_content_v6",
+      "source": "reuse_flower_display_v5_v6",
+      "prompt": "art/production/ai_image_v6/prompts/reuse_flower_display_v5_v6.md",
+      "reusedSource": "art/production/ai_image_v5/sources/flower_display_v5.png",
+      "stage": "scene",
+      "width": 150,
+      "height": 140,
+      "align": "bottom",
+      "sceneSlotId": "lc6_picnic_flowers",
+      "runtime": "simple2d_scene/lc6_picnic_flowers.png",
+      "footpoint": {
+        "x": 75,
+        "y": 135
+      }
+    },
+    {
+      "name": "reading_glasses_target_v6",
+      "source": "reading_targets_sheet_v6",
+      "stage": "target",
+      "width": 256,
+      "height": 256,
+      "inset": 16,
+      "align": "center",
+      "runtime": "targets/reading_glasses.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "name": "bookmark_target_v6",
+      "source": "reading_targets_sheet_v6",
+      "stage": "target",
+      "width": 256,
+      "height": 256,
+      "inset": 16,
+      "align": "center",
+      "runtime": "targets/bookmark.png",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "name": "wooden_bird_target_v6",
+      "source": "reading_targets_sheet_v6",
+      "stage": "target",
+      "width": 256,
+      "height": 256,
+      "inset": 16,
+      "align": "center",
+      "runtime": "targets/wooden_bird.png",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "name": "garden_glove_target_v6",
+      "source": "reading_targets_sheet_v6",
+      "stage": "target",
+      "width": 256,
+      "height": 256,
+      "inset": 16,
+      "align": "center",
+      "runtime": "targets/garden_glove.png",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "name": "seedling_spade_target_v6",
+      "source": "garden_mail_targets_sheet_v6",
+      "stage": "target",
+      "width": 256,
+      "height": 256,
+      "inset": 16,
+      "align": "center",
+      "runtime": "targets/seedling_spade.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "name": "pink_watering_can_target_v6",
+      "source": "garden_mail_targets_sheet_v6",
+      "stage": "target",
+      "width": 256,
+      "height": 256,
+      "inset": 16,
+      "align": "center",
+      "runtime": "targets/pink_watering_can.png",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "name": "postcard_target_v6",
+      "source": "garden_mail_targets_sheet_v6",
+      "stage": "target",
+      "width": 256,
+      "height": 256,
+      "inset": 16,
+      "align": "center",
+      "runtime": "targets/postcard.png",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "name": "stamp_roll_target_v6",
+      "source": "garden_mail_targets_sheet_v6",
+      "stage": "target",
+      "width": 256,
+      "height": 256,
+      "inset": 16,
+      "align": "center",
+      "runtime": "targets/stamp_roll.png",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "name": "tiny_camera_target_v6",
+      "source": "picnic_targets_sheet_v6",
+      "stage": "target",
+      "width": 256,
+      "height": 256,
+      "inset": 16,
+      "align": "center",
+      "runtime": "targets/tiny_camera.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "name": "picnic_cookie_target_v6",
+      "source": "picnic_targets_sheet_v6",
+      "stage": "target",
+      "width": 256,
+      "height": 256,
+      "inset": 16,
+      "align": "center",
+      "runtime": "targets/picnic_cookie.png",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "name": "yarn_ball_target_v6",
+      "source": "picnic_targets_sheet_v6",
+      "stage": "target",
+      "width": 256,
+      "height": 256,
+      "inset": 16,
+      "align": "center",
+      "runtime": "targets/yarn_ball.png",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "name": "laundry_peg_target_v6",
+      "source": "picnic_targets_sheet_v6",
+      "stage": "target",
+      "width": 256,
+      "height": 256,
+      "inset": 16,
+      "align": "center",
+      "runtime": "targets/laundry_peg.png",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      }
+    },
+    {
+      "name": "book_satchel_closed_v6",
+      "source": "book_satchel_states_v6",
+      "stage": "interaction",
+      "width": 256,
+      "height": 256,
+      "inset": 14,
+      "align": "bottom",
+      "footpoint": {
+        "x": 128,
+        "y": 238
+      },
+      "figureHeight": 153,
+      "sharedStateScale": 0.3131868131868132,
+      "runtime": "interactions/book_satchel_closed.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 1024
+      }
+    },
+    {
+      "name": "book_satchel_opened_v6",
+      "source": "book_satchel_states_v6",
+      "stage": "interaction",
+      "width": 256,
+      "height": 256,
+      "inset": 14,
+      "align": "bottom",
+      "footpoint": {
+        "x": 128,
+        "y": 238
+      },
+      "figureHeight": 199,
+      "sharedStateScale": 0.3131868131868132,
+      "runtime": "interactions/book_satchel_opened.png",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 1024
+      }
+    },
+    {
+      "name": "garden_toolbox_closed_v6",
+      "source": "garden_toolbox_states_v6",
+      "stage": "interaction",
+      "width": 256,
+      "height": 256,
+      "inset": 14,
+      "align": "bottom",
+      "footpoint": {
+        "x": 128,
+        "y": 238
+      },
+      "figureHeight": 166,
+      "sharedStateScale": 0.3064295485636115,
+      "runtime": "interactions/garden_toolbox_closed.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 1024
+      }
+    },
+    {
+      "name": "garden_toolbox_opened_v6",
+      "source": "garden_toolbox_states_v6",
+      "stage": "interaction",
+      "width": 256,
+      "height": 256,
+      "inset": 14,
+      "align": "bottom",
+      "footpoint": {
+        "x": 128,
+        "y": 238
+      },
+      "figureHeight": 224,
+      "sharedStateScale": 0.3064295485636115,
+      "runtime": "interactions/garden_toolbox_opened.png",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 1024
+      }
+    },
+    {
+      "name": "picnic_basket_closed_v6",
+      "source": "picnic_basket_states_v6",
+      "stage": "interaction",
+      "width": 256,
+      "height": 256,
+      "inset": 14,
+      "align": "bottom",
+      "footpoint": {
+        "x": 128,
+        "y": 238
+      },
+      "figureHeight": 189,
+      "sharedStateScale": 0.31448275862068964,
+      "runtime": "interactions/picnic_basket_closed.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 1024
+      }
+    },
+    {
+      "name": "picnic_basket_opened_v6",
+      "source": "picnic_basket_states_v6",
+      "stage": "interaction",
+      "width": 256,
+      "height": 256,
+      "inset": 14,
+      "align": "bottom",
+      "footpoint": {
+        "x": 128,
+        "y": 238
+      },
+      "figureHeight": 211,
+      "sharedStateScale": 0.31448275862068964,
+      "runtime": "interactions/picnic_basket_opened.png",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 1024
+      }
+    }
+  ]
+}

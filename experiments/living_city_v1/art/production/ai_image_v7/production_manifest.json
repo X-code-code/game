@@ -1,0 +1,2308 @@
+{
+  "batchId": "ai_image_v7",
+  "sourceType": "codex_builtin_image_gen",
+  "styleId": "cozy_flat_town_v5",
+  "visualApproval": "pending",
+  "assets": [
+    {
+      "name": "shop_books_v7",
+      "source": "art/production/ai_image_v7/sources/shop_books_v7.png",
+      "stage": "scene",
+      "sceneSlotId": "lc7_book_shop_back",
+      "width": 320,
+      "height": 320,
+      "align": "bottom",
+      "footpoint": {
+        "x": 160,
+        "y": 315
+      },
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc7_book_shop_back.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/shop_books_v7.md",
+      "sourceSha256": "b718652320a252e6c1c114a9aa5e84f7fdfcee54e3b34e5dcc578e8af3fe42b9",
+      "sourceSize": {
+        "width": 1312,
+        "height": 1199
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/shop_books_v7.png",
+      "sha256": "683527337841860b4ce6221e6e15894dfc20b9c146f7d37bd2d9a53d2c514760",
+      "alphaBounds": {
+        "left": 4,
+        "top": 6,
+        "width": 312,
+        "height": 309,
+        "transparent": 29554,
+        "visible": 72846
+      },
+      "uuid": "21021e7c-19fa-4f25-8e79-f6dae40f9bc8",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "shop_flower_v7",
+      "source": "art/production/ai_image_v7/sources/shop_flower_v7.png",
+      "stage": "scene",
+      "sceneSlotId": "lc7_flower_shop_back",
+      "width": 320,
+      "height": 330,
+      "align": "bottom",
+      "footpoint": {
+        "x": 160,
+        "y": 325
+      },
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc7_flower_shop_back.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/shop_flower_v7.md",
+      "sourceSha256": "5973a4f6791a8d4c20f3882836b00159c0759e96479c35fd695fcf3e7680ebfa",
+      "sourceSize": {
+        "width": 1402,
+        "height": 1122
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/shop_flower_v7.png",
+      "sha256": "ba717422886d9cc5b12aa90fbec289580be9f1ba84da5cb060d710d83ce587b3",
+      "alphaBounds": {
+        "left": 4,
+        "top": 90,
+        "width": 312,
+        "height": 235,
+        "transparent": 49113,
+        "visible": 56487
+      },
+      "uuid": "64e27c72-3b87-43da-997e-12c63f9e29ba",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "shop_sweets_v7",
+      "source": "art/production/ai_image_v7/sources/shop_sweets_v7.png",
+      "stage": "scene",
+      "sceneSlotId": "lc7_sweet_shop_back",
+      "width": 320,
+      "height": 320,
+      "align": "bottom",
+      "footpoint": {
+        "x": 160,
+        "y": 315
+      },
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc7_sweet_shop_back.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/shop_sweets_v7.md",
+      "sourceSha256": "d235649b18ab6da1e331ca0f6b5c5818f839f3773929f18daee6ae41cb7dc547",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/shop_sweets_v7.png",
+      "sha256": "2b672f958bcff076822b31c3b85f2cf818268cca35fff68f369efb215ff8969a",
+      "alphaBounds": {
+        "left": 4,
+        "top": 87,
+        "width": 312,
+        "height": 228,
+        "transparent": 46318,
+        "visible": 56082
+      },
+      "uuid": "066db3ff-fe5b-4fd9-9522-ded5caa6b54a",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "shop_noodles_v7",
+      "source": "art/production/ai_image_v7/sources/shop_noodles_v7.png",
+      "stage": "scene",
+      "sceneSlotId": "lc7_noodle_shop_back",
+      "width": 320,
+      "height": 310,
+      "align": "bottom",
+      "footpoint": {
+        "x": 160,
+        "y": 305
+      },
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc7_noodle_shop_back.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/shop_noodles_v7.md",
+      "sourceSha256": "06901ed9327f4064473947ea0ed824dd43f565ee9c4a6b200c3f6738ba6a03f7",
+      "sourceSize": {
+        "width": 1332,
+        "height": 1181
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/shop_noodles_v7.png",
+      "sha256": "135dfaad63ccbb0b04016b09b045d76f3bd9f4e59067369332b78fd27fea1ca5",
+      "alphaBounds": {
+        "left": 4,
+        "top": 25,
+        "width": 312,
+        "height": 280,
+        "transparent": 30621,
+        "visible": 68579
+      },
+      "uuid": "80503bc1-2633-4ed6-bd32-1964c61896c7",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "house_sage_v7",
+      "source": "art/production/ai_image_v7/sources/house_sage_v7.png",
+      "stage": "scene",
+      "sceneSlotId": "lc7_sage_house_back",
+      "width": 320,
+      "height": 310,
+      "align": "bottom",
+      "footpoint": {
+        "x": 160,
+        "y": 305
+      },
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc7_sage_house_back.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/house_sage_v7.md",
+      "sourceSha256": "f48e8f27c51c4a5e883143c1637e124b38f4bb5f9edff7aee8c2b5736745e8cc",
+      "sourceSize": {
+        "width": 1402,
+        "height": 1122
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/house_sage_v7.png",
+      "sha256": "e160612edd6ceaa18cb242971b16d7bf6b12dcdc52880f1ac2c0eafbb2eeefca",
+      "alphaBounds": {
+        "left": 7,
+        "top": 4,
+        "width": 305,
+        "height": 301,
+        "transparent": 22134,
+        "visible": 77066
+      },
+      "uuid": "52345be1-3871-4015-934a-d851c1f73dd9",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "house_rose_v7",
+      "source": "art/production/ai_image_v7/sources/house_rose_v7.png",
+      "stage": "scene",
+      "sceneSlotId": "lc7_rose_house_back",
+      "width": 320,
+      "height": 300,
+      "align": "bottom",
+      "footpoint": {
+        "x": 160,
+        "y": 295
+      },
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc7_rose_house_back.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/house_rose_v7.md",
+      "sourceSha256": "706c75168284a09189b771fbfd7ec4136433a1e135a0136185219f4442c0777f",
+      "sourceSize": {
+        "width": 1374,
+        "height": 1145
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/house_rose_v7.png",
+      "sha256": "b974a81b6f55ce917d8df994f1cd81bb9d7c935a8b324ae2ff2af7a646071f47",
+      "alphaBounds": {
+        "left": 9,
+        "top": 4,
+        "width": 302,
+        "height": 291,
+        "transparent": 24171,
+        "visible": 71829
+      },
+      "uuid": "97cfe687-1e27-4df7-8515-6414380d8b08",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_flower_shopkeeper_v7_frame_01",
+      "source": "art/production/ai_image_v7/sources/chicken_flower_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "flower_shopkeeper",
+      "frameIndex": 1,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 182,
+      "sharedSheetScale": 0.4439140811455847,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/flower_shopkeeper/chicken_flower_shopkeeper_v7_frame_01.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_flower_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "f75f5822421cfe2e6a08eaa170054f71765f17927668ebdcd7caa313083a949e",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_flower_shopkeeper_v7_frame_01.png",
+      "sha256": "4d9334a1811a93f991ce311949b914df5d5382e91f07e30c4b864bd0b9d293f8",
+      "alphaBounds": {
+        "left": 117,
+        "top": 33,
+        "width": 139,
+        "height": 182,
+        "transparent": 79886,
+        "visible": 18418
+      },
+      "uuid": "4285053e-fb93-4585-955f-2938c1cde104",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_flower_shopkeeper_v7_frame_02",
+      "source": "art/production/ai_image_v7/sources/chicken_flower_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "flower_shopkeeper",
+      "frameIndex": 2,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.4439140811455847,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/flower_shopkeeper/chicken_flower_shopkeeper_v7_frame_02.png",
+      "crop": {
+        "left": 512,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_flower_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "f75f5822421cfe2e6a08eaa170054f71765f17927668ebdcd7caa313083a949e",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_flower_shopkeeper_v7_frame_02.png",
+      "sha256": "3d0d7823ca265805772fea09016f72dd41830933be73e72ad613291eedd3066c",
+      "alphaBounds": {
+        "left": 127,
+        "top": 31,
+        "width": 137,
+        "height": 184,
+        "transparent": 79733,
+        "visible": 18571
+      },
+      "uuid": "ee2d97e2-7503-4755-8dd7-cd7416443921",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_flower_shopkeeper_v7_frame_03",
+      "source": "art/production/ai_image_v7/sources/chicken_flower_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "flower_shopkeeper",
+      "frameIndex": 3,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4439140811455847,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/flower_shopkeeper/chicken_flower_shopkeeper_v7_frame_03.png",
+      "crop": {
+        "left": 1024,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_flower_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "f75f5822421cfe2e6a08eaa170054f71765f17927668ebdcd7caa313083a949e",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_flower_shopkeeper_v7_frame_03.png",
+      "sha256": "9c9545108334dc8ad64a5707449c4db60a119c8d68be13181a60cf0449af42b7",
+      "alphaBounds": {
+        "left": 117,
+        "top": 29,
+        "width": 158,
+        "height": 186,
+        "transparent": 79532,
+        "visible": 18772
+      },
+      "uuid": "ea019636-3b0d-4f5e-be86-391ffc360279",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_flower_shopkeeper_v7_frame_04",
+      "source": "art/production/ai_image_v7/sources/chicken_flower_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "flower_shopkeeper",
+      "frameIndex": 4,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.4439140811455847,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/flower_shopkeeper/chicken_flower_shopkeeper_v7_frame_04.png",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_flower_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "f75f5822421cfe2e6a08eaa170054f71765f17927668ebdcd7caa313083a949e",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_flower_shopkeeper_v7_frame_04.png",
+      "sha256": "056cba28f3b0901b29d603ad564e361cc7c5a6124537787302aa547bf1601610",
+      "alphaBounds": {
+        "left": 120,
+        "top": 31,
+        "width": 140,
+        "height": 184,
+        "transparent": 79470,
+        "visible": 18834
+      },
+      "uuid": "c43b4cbe-9d99-48b0-9316-1861e22215a2",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_flower_shopkeeper_v7_frame_05",
+      "source": "art/production/ai_image_v7/sources/chicken_flower_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "flower_shopkeeper",
+      "frameIndex": 5,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 183,
+      "sharedSheetScale": 0.4439140811455847,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/flower_shopkeeper/chicken_flower_shopkeeper_v7_frame_05.png",
+      "crop": {
+        "left": 512,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_flower_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "f75f5822421cfe2e6a08eaa170054f71765f17927668ebdcd7caa313083a949e",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_flower_shopkeeper_v7_frame_05.png",
+      "sha256": "a1f700722d89b2e73de31c3b43d7926ef92abf65e4a0995ed59d09d120ae7002",
+      "alphaBounds": {
+        "left": 89,
+        "top": 32,
+        "width": 139,
+        "height": 183,
+        "transparent": 80065,
+        "visible": 18239
+      },
+      "uuid": "7e250139-21a3-4a44-bbc7-0ca953b74112",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_flower_shopkeeper_v7_frame_06",
+      "source": "art/production/ai_image_v7/sources/chicken_flower_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "flower_shopkeeper",
+      "frameIndex": 6,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4439140811455847,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/flower_shopkeeper/chicken_flower_shopkeeper_v7_frame_06.png",
+      "crop": {
+        "left": 1024,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_flower_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "f75f5822421cfe2e6a08eaa170054f71765f17927668ebdcd7caa313083a949e",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_flower_shopkeeper_v7_frame_06.png",
+      "sha256": "13ce01b217e832388b58f79be333efdaf249b77f62e7116c907fb100a59a18b9",
+      "alphaBounds": {
+        "left": 118,
+        "top": 29,
+        "width": 158,
+        "height": 186,
+        "transparent": 79526,
+        "visible": 18778
+      },
+      "uuid": "d0df5d98-df09-40ce-9ba8-6f48cae865f6",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_book_shopkeeper_v7_frame_01",
+      "source": "art/production/ai_image_v7/sources/chicken_book_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "book_shopkeeper",
+      "frameIndex": 1,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.42857142857142855,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/book_shopkeeper/chicken_book_shopkeeper_v7_frame_01.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_book_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "cdc65724df7644f9e0088733c3d1c4f32550a2424e2bbf42ae6363f0ad5075ec",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_book_shopkeeper_v7_frame_01.png",
+      "sha256": "900cccc7214b023193cf433f9ccb054bf6ad4b95fcbdcf04b93bdcbe1b228aa7",
+      "alphaBounds": {
+        "left": 116,
+        "top": 29,
+        "width": 144,
+        "height": 186,
+        "transparent": 79108,
+        "visible": 19196
+      },
+      "uuid": "d0fcea77-2c38-4b40-99f8-5d52fd4171aa",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_book_shopkeeper_v7_frame_02",
+      "source": "art/production/ai_image_v7/sources/chicken_book_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "book_shopkeeper",
+      "frameIndex": 2,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.42857142857142855,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/book_shopkeeper/chicken_book_shopkeeper_v7_frame_02.png",
+      "crop": {
+        "left": 512,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_book_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "cdc65724df7644f9e0088733c3d1c4f32550a2424e2bbf42ae6363f0ad5075ec",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_book_shopkeeper_v7_frame_02.png",
+      "sha256": "f89ad6ca9c665984f2a006b43fc99d7f56275a441a367946df1c1d5c72da3bcc",
+      "alphaBounds": {
+        "left": 138,
+        "top": 30,
+        "width": 144,
+        "height": 185,
+        "transparent": 79119,
+        "visible": 19185
+      },
+      "uuid": "173ddb06-d8aa-423e-8e8c-4a329f7c76af",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_book_shopkeeper_v7_frame_03",
+      "source": "art/production/ai_image_v7/sources/chicken_book_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "book_shopkeeper",
+      "frameIndex": 3,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.42857142857142855,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/book_shopkeeper/chicken_book_shopkeeper_v7_frame_03.png",
+      "crop": {
+        "left": 1024,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_book_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "cdc65724df7644f9e0088733c3d1c4f32550a2424e2bbf42ae6363f0ad5075ec",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_book_shopkeeper_v7_frame_03.png",
+      "sha256": "7380f76cd3f85d7a2c62f9ba2541ab2481b29dab4e5f4d7f39d42533db3ac2b9",
+      "alphaBounds": {
+        "left": 115,
+        "top": 29,
+        "width": 161,
+        "height": 186,
+        "transparent": 78346,
+        "visible": 19958
+      },
+      "uuid": "f8a1cae8-de7c-474f-a6af-8e240daf8b87",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_book_shopkeeper_v7_frame_04",
+      "source": "art/production/ai_image_v7/sources/chicken_book_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "book_shopkeeper",
+      "frameIndex": 4,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.42857142857142855,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/book_shopkeeper/chicken_book_shopkeeper_v7_frame_04.png",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_book_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "cdc65724df7644f9e0088733c3d1c4f32550a2424e2bbf42ae6363f0ad5075ec",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_book_shopkeeper_v7_frame_04.png",
+      "sha256": "4bacaa934810fe81155a77a894c4ed8825fc57fd9c388ea7d347782d4a0950e0",
+      "alphaBounds": {
+        "left": 116,
+        "top": 30,
+        "width": 143,
+        "height": 185,
+        "transparent": 79298,
+        "visible": 19006
+      },
+      "uuid": "8b3c65c9-8a02-47d6-984e-8a66fa440d28",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_book_shopkeeper_v7_frame_05",
+      "source": "art/production/ai_image_v7/sources/chicken_book_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "book_shopkeeper",
+      "frameIndex": 5,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.42857142857142855,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/book_shopkeeper/chicken_book_shopkeeper_v7_frame_05.png",
+      "crop": {
+        "left": 512,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_book_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "cdc65724df7644f9e0088733c3d1c4f32550a2424e2bbf42ae6363f0ad5075ec",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_book_shopkeeper_v7_frame_05.png",
+      "sha256": "007cdef9dd180ffb936184475721c6adf11c6e86f0d88d7f9e89911a7c6a3323",
+      "alphaBounds": {
+        "left": 83,
+        "top": 31,
+        "width": 148,
+        "height": 184,
+        "transparent": 79473,
+        "visible": 18831
+      },
+      "uuid": "485dac68-710c-4ff3-a38d-ac1f95ca8b69",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_book_shopkeeper_v7_frame_06",
+      "source": "art/production/ai_image_v7/sources/chicken_book_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "book_shopkeeper",
+      "frameIndex": 6,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.42857142857142855,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/book_shopkeeper/chicken_book_shopkeeper_v7_frame_06.png",
+      "crop": {
+        "left": 1024,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_book_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "cdc65724df7644f9e0088733c3d1c4f32550a2424e2bbf42ae6363f0ad5075ec",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_book_shopkeeper_v7_frame_06.png",
+      "sha256": "c00d46f49f4e3baedf6541ac106126633f348dcce53ef816d0d982bbdd2a89b9",
+      "alphaBounds": {
+        "left": 116,
+        "top": 29,
+        "width": 162,
+        "height": 186,
+        "transparent": 78069,
+        "visible": 20235
+      },
+      "uuid": "e4762b99-c29a-4484-ad89-430f9bc9d0db",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_sweet_shopkeeper_v7_frame_01",
+      "source": "art/production/ai_image_v7/sources/chicken_sweet_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "sweet_shopkeeper",
+      "frameIndex": 1,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.41797752808988764,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/sweet_shopkeeper/chicken_sweet_shopkeeper_v7_frame_01.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_sweet_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "d23951f43085144fc2f50f7a9ad8a823d9aecfaec8eda196f095cd74822bfdce",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_sweet_shopkeeper_v7_frame_01.png",
+      "sha256": "91677bf4f9736b7298d79863ce37247134470140080fb005030c4b4d6f42b98a",
+      "alphaBounds": {
+        "left": 138,
+        "top": 29,
+        "width": 129,
+        "height": 186,
+        "transparent": 81712,
+        "visible": 16592
+      },
+      "uuid": "a61f00c7-c7be-4e05-b77b-bb7c8d512935",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_sweet_shopkeeper_v7_frame_02",
+      "source": "art/production/ai_image_v7/sources/chicken_sweet_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "sweet_shopkeeper",
+      "frameIndex": 2,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.41797752808988764,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/sweet_shopkeeper/chicken_sweet_shopkeeper_v7_frame_02.png",
+      "crop": {
+        "left": 512,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_sweet_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "d23951f43085144fc2f50f7a9ad8a823d9aecfaec8eda196f095cd74822bfdce",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_sweet_shopkeeper_v7_frame_02.png",
+      "sha256": "6c746875143dada72439cd09ab4a10ebe180654edeb559bc93c7c148b064de19",
+      "alphaBounds": {
+        "left": 144,
+        "top": 30,
+        "width": 128,
+        "height": 185,
+        "transparent": 81915,
+        "visible": 16389
+      },
+      "uuid": "c5547824-d346-432d-9198-2e796ab922ed",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_sweet_shopkeeper_v7_frame_03",
+      "source": "art/production/ai_image_v7/sources/chicken_sweet_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "sweet_shopkeeper",
+      "frameIndex": 3,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.41797752808988764,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/sweet_shopkeeper/chicken_sweet_shopkeeper_v7_frame_03.png",
+      "crop": {
+        "left": 1024,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_sweet_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "d23951f43085144fc2f50f7a9ad8a823d9aecfaec8eda196f095cd74822bfdce",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_sweet_shopkeeper_v7_frame_03.png",
+      "sha256": "2cf11a81d82dff0db039403ceb502a1da24d98d8556768d5c6740614d9a4614a",
+      "alphaBounds": {
+        "left": 144,
+        "top": 29,
+        "width": 148,
+        "height": 186,
+        "transparent": 80723,
+        "visible": 17581
+      },
+      "uuid": "a0a46b36-9b02-4abb-ba8d-33b47de1513f",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_sweet_shopkeeper_v7_frame_04",
+      "source": "art/production/ai_image_v7/sources/chicken_sweet_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "sweet_shopkeeper",
+      "frameIndex": 4,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.41797752808988764,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/sweet_shopkeeper/chicken_sweet_shopkeeper_v7_frame_04.png",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_sweet_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "d23951f43085144fc2f50f7a9ad8a823d9aecfaec8eda196f095cd74822bfdce",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_sweet_shopkeeper_v7_frame_04.png",
+      "sha256": "cb647f83334f344aa469ea246af5e045c65cd857f966eded57e8f6e411262b72",
+      "alphaBounds": {
+        "left": 132,
+        "top": 30,
+        "width": 129,
+        "height": 185,
+        "transparent": 81885,
+        "visible": 16419
+      },
+      "uuid": "e3ef00b5-fe1e-4f8f-b534-04708228e598",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_sweet_shopkeeper_v7_frame_05",
+      "source": "art/production/ai_image_v7/sources/chicken_sweet_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "sweet_shopkeeper",
+      "frameIndex": 5,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 183,
+      "sharedSheetScale": 0.41797752808988764,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/sweet_shopkeeper/chicken_sweet_shopkeeper_v7_frame_05.png",
+      "crop": {
+        "left": 512,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_sweet_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "d23951f43085144fc2f50f7a9ad8a823d9aecfaec8eda196f095cd74822bfdce",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_sweet_shopkeeper_v7_frame_05.png",
+      "sha256": "62d797f10f3bc859dd3bf6c02b17d414e3ba0587cea4d7254c8e638bc8e78fee",
+      "alphaBounds": {
+        "left": 101,
+        "top": 32,
+        "width": 127,
+        "height": 183,
+        "transparent": 82222,
+        "visible": 16082
+      },
+      "uuid": "60fe79e2-c116-45b1-8b6c-e9e32f6ad91e",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_sweet_shopkeeper_v7_frame_06",
+      "source": "art/production/ai_image_v7/sources/chicken_sweet_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "sweet_shopkeeper",
+      "frameIndex": 6,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.41797752808988764,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/sweet_shopkeeper/chicken_sweet_shopkeeper_v7_frame_06.png",
+      "crop": {
+        "left": 1024,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_sweet_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "d23951f43085144fc2f50f7a9ad8a823d9aecfaec8eda196f095cd74822bfdce",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_sweet_shopkeeper_v7_frame_06.png",
+      "sha256": "aabd5682a21c536141d4ed0edd2b9d9d4bfcf03681825739322c631853c71f86",
+      "alphaBounds": {
+        "left": 144,
+        "top": 29,
+        "width": 148,
+        "height": 186,
+        "transparent": 80864,
+        "visible": 17440
+      },
+      "uuid": "295e0721-c0d6-4a66-8ce6-c8326c318b47",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_noodle_shopkeeper_v7_frame_01",
+      "source": "art/production/ai_image_v7/sources/chicken_noodle_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "noodle_shopkeeper",
+      "frameIndex": 1,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 183,
+      "sharedSheetScale": 0.45036319612590797,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/noodle_shopkeeper/chicken_noodle_shopkeeper_v7_frame_01.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_noodle_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "85cd49803a1c94cec23f6202421a382089955049999317305a70256898ee8ee0",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_noodle_shopkeeper_v7_frame_01.png",
+      "sha256": "6e1076e06c6e530cf623406e14ab70d255a90bdd1d89293a226571ad961a64c5",
+      "alphaBounds": {
+        "left": 124,
+        "top": 32,
+        "width": 135,
+        "height": 183,
+        "transparent": 80329,
+        "visible": 17975
+      },
+      "uuid": "bee94262-5cb8-40d8-b6a3-9fb3d9d379e3",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_noodle_shopkeeper_v7_frame_02",
+      "source": "art/production/ai_image_v7/sources/chicken_noodle_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "noodle_shopkeeper",
+      "frameIndex": 2,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.45036319612590797,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/noodle_shopkeeper/chicken_noodle_shopkeeper_v7_frame_02.png",
+      "crop": {
+        "left": 512,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_noodle_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "85cd49803a1c94cec23f6202421a382089955049999317305a70256898ee8ee0",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_noodle_shopkeeper_v7_frame_02.png",
+      "sha256": "bcd9c2cb016d5be85af7a73a57b4924f2934dc9f0b22974c4398a59d3105fd30",
+      "alphaBounds": {
+        "left": 145,
+        "top": 30,
+        "width": 135,
+        "height": 185,
+        "transparent": 80026,
+        "visible": 18278
+      },
+      "uuid": "a6391637-b331-4b63-86fc-9b1522730d59",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_noodle_shopkeeper_v7_frame_03",
+      "source": "art/production/ai_image_v7/sources/chicken_noodle_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "noodle_shopkeeper",
+      "frameIndex": 3,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.45036319612590797,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/noodle_shopkeeper/chicken_noodle_shopkeeper_v7_frame_03.png",
+      "crop": {
+        "left": 1024,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_noodle_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "85cd49803a1c94cec23f6202421a382089955049999317305a70256898ee8ee0",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_noodle_shopkeeper_v7_frame_03.png",
+      "sha256": "45614c305f1e50b597904acca63b38698fbb7ef2a43b6f4a218b90adee60b7ea",
+      "alphaBounds": {
+        "left": 126,
+        "top": 29,
+        "width": 140,
+        "height": 186,
+        "transparent": 80068,
+        "visible": 18236
+      },
+      "uuid": "236c0df5-d25f-44ba-a61c-bd56142a5c09",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_noodle_shopkeeper_v7_frame_04",
+      "source": "art/production/ai_image_v7/sources/chicken_noodle_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "noodle_shopkeeper",
+      "frameIndex": 4,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.45036319612590797,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/noodle_shopkeeper/chicken_noodle_shopkeeper_v7_frame_04.png",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_noodle_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "85cd49803a1c94cec23f6202421a382089955049999317305a70256898ee8ee0",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_noodle_shopkeeper_v7_frame_04.png",
+      "sha256": "655da067078a515571d6c9ae04d8294cc5cde9d20b90c28d763765d5d53bdb06",
+      "alphaBounds": {
+        "left": 116,
+        "top": 31,
+        "width": 137,
+        "height": 184,
+        "transparent": 80080,
+        "visible": 18224
+      },
+      "uuid": "7455d4f9-d728-467c-8eb2-975797f7daf3",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_noodle_shopkeeper_v7_frame_05",
+      "source": "art/production/ai_image_v7/sources/chicken_noodle_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "noodle_shopkeeper",
+      "frameIndex": 5,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.45036319612590797,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/noodle_shopkeeper/chicken_noodle_shopkeeper_v7_frame_05.png",
+      "crop": {
+        "left": 512,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_noodle_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "85cd49803a1c94cec23f6202421a382089955049999317305a70256898ee8ee0",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_noodle_shopkeeper_v7_frame_05.png",
+      "sha256": "a09cb94f0d093e8cba089f8f7701c7e5046b4451d7e6dc1f04a7a68a0bd8f336",
+      "alphaBounds": {
+        "left": 99,
+        "top": 29,
+        "width": 135,
+        "height": 186,
+        "transparent": 80349,
+        "visible": 17955
+      },
+      "uuid": "e1861e13-4fe5-46ab-9174-52fffe18d4d6",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_noodle_shopkeeper_v7_frame_06",
+      "source": "art/production/ai_image_v7/sources/chicken_noodle_shopkeeper_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "noodle_shopkeeper",
+      "frameIndex": 6,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.45036319612590797,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/noodle_shopkeeper/chicken_noodle_shopkeeper_v7_frame_06.png",
+      "crop": {
+        "left": 1024,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_noodle_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "85cd49803a1c94cec23f6202421a382089955049999317305a70256898ee8ee0",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_noodle_shopkeeper_v7_frame_06.png",
+      "sha256": "c8a5daaee7e5037e7154d34d91e522a9aea96f28d98760f66598abfac3d09515",
+      "alphaBounds": {
+        "left": 127,
+        "top": 29,
+        "width": 141,
+        "height": 186,
+        "transparent": 79862,
+        "visible": 18442
+      },
+      "uuid": "faa9eaf5-c610-4ab8-900f-3de236afdfa6",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_garden_neighbor_v7_frame_01",
+      "source": "art/production/ai_image_v7/sources/chicken_garden_neighbor_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "garden_neighbor",
+      "frameIndex": 1,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.43457943925233644,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/garden_neighbor/chicken_garden_neighbor_v7_frame_01.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_garden_neighbor_sheet_walkfix_v7.md",
+      "sourceSha256": "bbee28e4a08bab79664afce8a901d440c88481b6a2199948d2418ef9afbc5dd5",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_garden_neighbor_v7_frame_01.png",
+      "sha256": "b7714579a794aa20ff844c94d946e70a254636f2c256cbc18ccdcc0954447d5a",
+      "alphaBounds": {
+        "left": 109,
+        "top": 31,
+        "width": 143,
+        "height": 184,
+        "transparent": 79588,
+        "visible": 18716
+      },
+      "uuid": "57d1da76-488e-46d6-82ae-b2b7de1f72f9",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_garden_neighbor_v7_frame_02",
+      "source": "art/production/ai_image_v7/sources/chicken_garden_neighbor_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "garden_neighbor",
+      "frameIndex": 2,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.43457943925233644,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/garden_neighbor/chicken_garden_neighbor_v7_frame_02.png",
+      "crop": {
+        "left": 512,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_garden_neighbor_sheet_walkfix_v7.md",
+      "sourceSha256": "bbee28e4a08bab79664afce8a901d440c88481b6a2199948d2418ef9afbc5dd5",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_garden_neighbor_v7_frame_02.png",
+      "sha256": "ee49fa1c2be398522c2d56c2b350c6af3e1dbb8d0135a38baac2677e32f1283b",
+      "alphaBounds": {
+        "left": 131,
+        "top": 31,
+        "width": 146,
+        "height": 184,
+        "transparent": 79514,
+        "visible": 18790
+      },
+      "uuid": "7453abff-7c7b-44a7-86ae-4ed805b3f9ce",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_garden_neighbor_v7_frame_03",
+      "source": "art/production/ai_image_v7/sources/chicken_garden_neighbor_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "garden_neighbor",
+      "frameIndex": 3,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.43457943925233644,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/garden_neighbor/chicken_garden_neighbor_v7_frame_03.png",
+      "crop": {
+        "left": 1024,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_garden_neighbor_sheet_walkfix_v7.md",
+      "sourceSha256": "bbee28e4a08bab79664afce8a901d440c88481b6a2199948d2418ef9afbc5dd5",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_garden_neighbor_v7_frame_03.png",
+      "sha256": "c3ba3a3d163f8dd51521fcea7135a3f5cd3b12145679feac859da074d0a541c7",
+      "alphaBounds": {
+        "left": 105,
+        "top": 30,
+        "width": 181,
+        "height": 185,
+        "transparent": 77433,
+        "visible": 20871
+      },
+      "uuid": "d49dde47-54c0-4434-9dfe-b9a36a9546ea",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_garden_neighbor_v7_frame_04",
+      "source": "art/production/ai_image_v7/sources/chicken_garden_neighbor_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "garden_neighbor",
+      "frameIndex": 4,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.43457943925233644,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/garden_neighbor/chicken_garden_neighbor_v7_frame_04.png",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_garden_neighbor_sheet_walkfix_v7.md",
+      "sourceSha256": "bbee28e4a08bab79664afce8a901d440c88481b6a2199948d2418ef9afbc5dd5",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_garden_neighbor_v7_frame_04.png",
+      "sha256": "113aafb8846d8ce534893168ad34ac26210f9582cb7c04347bf356bf2cb85455",
+      "alphaBounds": {
+        "left": 107,
+        "top": 29,
+        "width": 146,
+        "height": 186,
+        "transparent": 79314,
+        "visible": 18990
+      },
+      "uuid": "4228f2a9-53c6-4760-90e5-fa0b1b0a29d0",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_garden_neighbor_v7_frame_05",
+      "source": "art/production/ai_image_v7/sources/chicken_garden_neighbor_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "garden_neighbor",
+      "frameIndex": 5,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 183,
+      "sharedSheetScale": 0.43457943925233644,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/garden_neighbor/chicken_garden_neighbor_v7_frame_05.png",
+      "crop": {
+        "left": 512,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_garden_neighbor_sheet_walkfix_v7.md",
+      "sourceSha256": "bbee28e4a08bab79664afce8a901d440c88481b6a2199948d2418ef9afbc5dd5",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_garden_neighbor_v7_frame_05.png",
+      "sha256": "e8d1b29d53c5bd693e3979eb0ef7c4347d4f605d514d370d8b1415c39538ea73",
+      "alphaBounds": {
+        "left": 85,
+        "top": 32,
+        "width": 146,
+        "height": 183,
+        "transparent": 79817,
+        "visible": 18487
+      },
+      "uuid": "57d45af5-6bea-41d6-bc38-f4dd5a05bbd3",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_garden_neighbor_v7_frame_06",
+      "source": "art/production/ai_image_v7/sources/chicken_garden_neighbor_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "garden_neighbor",
+      "frameIndex": 6,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.43457943925233644,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/garden_neighbor/chicken_garden_neighbor_v7_frame_06.png",
+      "crop": {
+        "left": 1024,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_garden_neighbor_sheet_walkfix_v7.md",
+      "sourceSha256": "bbee28e4a08bab79664afce8a901d440c88481b6a2199948d2418ef9afbc5dd5",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_garden_neighbor_v7_frame_06.png",
+      "sha256": "01910715f3421c20b0c60f3f1008796e5277f67db0a4aec1663481d5af45f26b",
+      "alphaBounds": {
+        "left": 104,
+        "top": 31,
+        "width": 184,
+        "height": 184,
+        "transparent": 77480,
+        "visible": 20824
+      },
+      "uuid": "753f8368-dc80-437c-b47d-f7c1c5cd84c9",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_laundry_neighbor_v7_frame_01",
+      "source": "art/production/ai_image_v7/sources/chicken_laundry_neighbor_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "laundry_neighbor",
+      "frameIndex": 1,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.4376470588235294,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/laundry_neighbor/chicken_laundry_neighbor_v7_frame_01.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_laundry_neighbor_sheet_walkfix_v7.md",
+      "sourceSha256": "6631634fc48b688ff3624850e7013f520a296e841f79fab9bb55c161fb47945e",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_laundry_neighbor_v7_frame_01.png",
+      "sha256": "fee63fd1d7e370e1a25152d6c67bfce93aac636798a6645720dd52e7ef88cb39",
+      "alphaBounds": {
+        "left": 121,
+        "top": 30,
+        "width": 147,
+        "height": 185,
+        "transparent": 79219,
+        "visible": 19085
+      },
+      "uuid": "0f860170-d278-4981-a6f9-babd26ab85c4",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_laundry_neighbor_v7_frame_02",
+      "source": "art/production/ai_image_v7/sources/chicken_laundry_neighbor_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "laundry_neighbor",
+      "frameIndex": 2,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.4376470588235294,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/laundry_neighbor/chicken_laundry_neighbor_v7_frame_02.png",
+      "crop": {
+        "left": 512,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_laundry_neighbor_sheet_walkfix_v7.md",
+      "sourceSha256": "6631634fc48b688ff3624850e7013f520a296e841f79fab9bb55c161fb47945e",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_laundry_neighbor_v7_frame_02.png",
+      "sha256": "360a96b556f49d8941f510e421a717ed049d7da217c255d1e8c69b1ffa479244",
+      "alphaBounds": {
+        "left": 141,
+        "top": 30,
+        "width": 144,
+        "height": 185,
+        "transparent": 79287,
+        "visible": 19017
+      },
+      "uuid": "b2dc99ba-5241-432a-8199-e87fc7e92ca9",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_laundry_neighbor_v7_frame_03",
+      "source": "art/production/ai_image_v7/sources/chicken_laundry_neighbor_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "laundry_neighbor",
+      "frameIndex": 3,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4376470588235294,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/laundry_neighbor/chicken_laundry_neighbor_v7_frame_03.png",
+      "crop": {
+        "left": 1024,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_laundry_neighbor_sheet_walkfix_v7.md",
+      "sourceSha256": "6631634fc48b688ff3624850e7013f520a296e841f79fab9bb55c161fb47945e",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_laundry_neighbor_v7_frame_03.png",
+      "sha256": "d8a8fe83b1cd8d88410afa8ff4207df465fd8cce055656b3170469659c4282a4",
+      "alphaBounds": {
+        "left": 121,
+        "top": 29,
+        "width": 152,
+        "height": 186,
+        "transparent": 79196,
+        "visible": 19108
+      },
+      "uuid": "1674e0ff-ae3d-494d-903f-f2d2443dbafe",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_laundry_neighbor_v7_frame_04",
+      "source": "art/production/ai_image_v7/sources/chicken_laundry_neighbor_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "laundry_neighbor",
+      "frameIndex": 4,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4376470588235294,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/laundry_neighbor/chicken_laundry_neighbor_v7_frame_04.png",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_laundry_neighbor_sheet_walkfix_v7.md",
+      "sourceSha256": "6631634fc48b688ff3624850e7013f520a296e841f79fab9bb55c161fb47945e",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_laundry_neighbor_v7_frame_04.png",
+      "sha256": "c749d2a4cd110fe4f4464fc1316e4ef9878551f4484cdc3e779f3c4453f4a1bf",
+      "alphaBounds": {
+        "left": 123,
+        "top": 29,
+        "width": 146,
+        "height": 186,
+        "transparent": 78967,
+        "visible": 19337
+      },
+      "uuid": "dc73ba2d-b1ee-4e5a-a7ca-437aa07133a2",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_laundry_neighbor_v7_frame_05",
+      "source": "art/production/ai_image_v7/sources/chicken_laundry_neighbor_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "laundry_neighbor",
+      "frameIndex": 5,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.4376470588235294,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/laundry_neighbor/chicken_laundry_neighbor_v7_frame_05.png",
+      "crop": {
+        "left": 512,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_laundry_neighbor_sheet_walkfix_v7.md",
+      "sourceSha256": "6631634fc48b688ff3624850e7013f520a296e841f79fab9bb55c161fb47945e",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_laundry_neighbor_v7_frame_05.png",
+      "sha256": "c3c2f5fa1dde06c3fd9f522e1182647be7485404355926c7afa41787878144c4",
+      "alphaBounds": {
+        "left": 86,
+        "top": 31,
+        "width": 148,
+        "height": 184,
+        "transparent": 79464,
+        "visible": 18840
+      },
+      "uuid": "3ccb5a91-478c-4b30-99b2-f98f62cacb7c",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_laundry_neighbor_v7_frame_06",
+      "source": "art/production/ai_image_v7/sources/chicken_laundry_neighbor_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "laundry_neighbor",
+      "frameIndex": 6,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4376470588235294,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/laundry_neighbor/chicken_laundry_neighbor_v7_frame_06.png",
+      "crop": {
+        "left": 1024,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_laundry_neighbor_sheet_walkfix_v7.md",
+      "sourceSha256": "6631634fc48b688ff3624850e7013f520a296e841f79fab9bb55c161fb47945e",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_laundry_neighbor_v7_frame_06.png",
+      "sha256": "ae9ce6b9a5d6e8497bd1e580439925e7cecc826f2ba58afe65ce14e0ae5f5666",
+      "alphaBounds": {
+        "left": 120,
+        "top": 29,
+        "width": 163,
+        "height": 186,
+        "transparent": 78502,
+        "visible": 19802
+      },
+      "uuid": "eacfd7cd-b185-4b5a-a7b4-45f69ac90096",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_strolling_reader_v7_frame_01",
+      "source": "art/production/ai_image_v7/sources/chicken_strolling_reader_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "strolling_reader",
+      "frameIndex": 1,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.4744897959183674,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/strolling_reader/chicken_strolling_reader_v7_frame_01.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_strolling_reader_sheet_walkfix_v7.md",
+      "sourceSha256": "2dd23857879e2343225b8ebea87c8f5605f83c19e9fa6e972689953cc9e3fa8c",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_strolling_reader_v7_frame_01.png",
+      "sha256": "acedff75c15f175ff925bdd2fdadede81a892542e6128d83f7fd57d90e06e0b6",
+      "alphaBounds": {
+        "left": 117,
+        "top": 31,
+        "width": 141,
+        "height": 184,
+        "transparent": 79807,
+        "visible": 18497
+      },
+      "uuid": "bc2dcc2e-16b4-4e80-b602-1e6a1a3151f6",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_strolling_reader_v7_frame_02",
+      "source": "art/production/ai_image_v7/sources/chicken_strolling_reader_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "strolling_reader",
+      "frameIndex": 2,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4744897959183674,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/strolling_reader/chicken_strolling_reader_v7_frame_02.png",
+      "crop": {
+        "left": 512,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_strolling_reader_sheet_walkfix_v7.md",
+      "sourceSha256": "2dd23857879e2343225b8ebea87c8f5605f83c19e9fa6e972689953cc9e3fa8c",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_strolling_reader_v7_frame_02.png",
+      "sha256": "b78f68601a3f3a72291f03cf873fc3fcddf4af9c5254d16a30c60a598c75c449",
+      "alphaBounds": {
+        "left": 131,
+        "top": 29,
+        "width": 135,
+        "height": 186,
+        "transparent": 79826,
+        "visible": 18478
+      },
+      "uuid": "65d39a00-2fb4-437e-a2dd-df2ef10f0a93",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_strolling_reader_v7_frame_03",
+      "source": "art/production/ai_image_v7/sources/chicken_strolling_reader_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "strolling_reader",
+      "frameIndex": 3,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.4744897959183674,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/strolling_reader/chicken_strolling_reader_v7_frame_03.png",
+      "crop": {
+        "left": 1024,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_strolling_reader_sheet_walkfix_v7.md",
+      "sourceSha256": "2dd23857879e2343225b8ebea87c8f5605f83c19e9fa6e972689953cc9e3fa8c",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_strolling_reader_v7_frame_03.png",
+      "sha256": "4d656d760e42d7edf715a7607099d246d064fffbb2dc3e017d8b46ddd0641468",
+      "alphaBounds": {
+        "left": 120,
+        "top": 30,
+        "width": 148,
+        "height": 185,
+        "transparent": 79376,
+        "visible": 18928
+      },
+      "uuid": "90e25786-6972-4534-b593-da963fb9ed6c",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_strolling_reader_v7_frame_04",
+      "source": "art/production/ai_image_v7/sources/chicken_strolling_reader_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "strolling_reader",
+      "frameIndex": 4,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.4744897959183674,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/strolling_reader/chicken_strolling_reader_v7_frame_04.png",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_strolling_reader_sheet_walkfix_v7.md",
+      "sourceSha256": "2dd23857879e2343225b8ebea87c8f5605f83c19e9fa6e972689953cc9e3fa8c",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_strolling_reader_v7_frame_04.png",
+      "sha256": "9175801cc0480a9bb562462c3e31900888f4342c626a8906d565855ffc31efa0",
+      "alphaBounds": {
+        "left": 116,
+        "top": 31,
+        "width": 145,
+        "height": 184,
+        "transparent": 79187,
+        "visible": 19117
+      },
+      "uuid": "5ae68381-1c81-47de-8004-96450d02d16d",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_strolling_reader_v7_frame_05",
+      "source": "art/production/ai_image_v7/sources/chicken_strolling_reader_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "strolling_reader",
+      "frameIndex": 5,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.4744897959183674,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/strolling_reader/chicken_strolling_reader_v7_frame_05.png",
+      "crop": {
+        "left": 512,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_strolling_reader_sheet_walkfix_v7.md",
+      "sourceSha256": "2dd23857879e2343225b8ebea87c8f5605f83c19e9fa6e972689953cc9e3fa8c",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_strolling_reader_v7_frame_05.png",
+      "sha256": "ad1ba023cdf9c3b4c27fc2c39852b2362625ae4a16910f67bbc10d1821deaf92",
+      "alphaBounds": {
+        "left": 85,
+        "top": 30,
+        "width": 147,
+        "height": 185,
+        "transparent": 79464,
+        "visible": 18840
+      },
+      "uuid": "11e0425a-b3cb-4e91-9f27-7816b95cdacf",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_strolling_reader_v7_frame_06",
+      "source": "art/production/ai_image_v7/sources/chicken_strolling_reader_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "strolling_reader",
+      "frameIndex": 6,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.4744897959183674,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/strolling_reader/chicken_strolling_reader_v7_frame_06.png",
+      "crop": {
+        "left": 1024,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_strolling_reader_sheet_walkfix_v7.md",
+      "sourceSha256": "2dd23857879e2343225b8ebea87c8f5605f83c19e9fa6e972689953cc9e3fa8c",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_strolling_reader_v7_frame_06.png",
+      "sha256": "24d96ff4c0e1701beacf0bac44e88b7fbb3a8a2e1738322a56ebf81805b7ecf9",
+      "alphaBounds": {
+        "left": 120,
+        "top": 31,
+        "width": 158,
+        "height": 184,
+        "transparent": 78844,
+        "visible": 19460
+      },
+      "uuid": "47a59180-711b-402f-88e6-9b81661b79ef",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_visiting_child_v7_frame_01",
+      "source": "art/production/ai_image_v7/sources/chicken_visiting_child_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "visiting_child",
+      "frameIndex": 1,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 183,
+      "sharedSheetScale": 0.4449760765550239,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/visiting_child/chicken_visiting_child_v7_frame_01.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_visiting_child_sheet_walkfix_v7.md",
+      "sourceSha256": "aa2f52472b27571809fc3b46e466cb4bd76ca56db7b18aeac9e3933604ea0ea2",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_visiting_child_v7_frame_01.png",
+      "sha256": "c6c9cad88e5f3792cb7b765795fc8781a63b5b87a6c684bd73ec581870e8eb6d",
+      "alphaBounds": {
+        "left": 114,
+        "top": 32,
+        "width": 145,
+        "height": 183,
+        "transparent": 79819,
+        "visible": 18485
+      },
+      "uuid": "e04d5750-26c8-40de-bdba-1a061825541b",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_visiting_child_v7_frame_02",
+      "source": "art/production/ai_image_v7/sources/chicken_visiting_child_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "visiting_child",
+      "frameIndex": 2,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.4449760765550239,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/visiting_child/chicken_visiting_child_v7_frame_02.png",
+      "crop": {
+        "left": 512,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_visiting_child_sheet_walkfix_v7.md",
+      "sourceSha256": "aa2f52472b27571809fc3b46e466cb4bd76ca56db7b18aeac9e3933604ea0ea2",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_visiting_child_v7_frame_02.png",
+      "sha256": "dc48e99d9a1b9dc1040812ebc7a5c76854e695751f53f727e083fd2955bb6e17",
+      "alphaBounds": {
+        "left": 138,
+        "top": 30,
+        "width": 139,
+        "height": 185,
+        "transparent": 79726,
+        "visible": 18578
+      },
+      "uuid": "704dfcec-1b85-4695-870d-95ef137b7a3e",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_visiting_child_v7_frame_03",
+      "source": "art/production/ai_image_v7/sources/chicken_visiting_child_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "visiting_child",
+      "frameIndex": 3,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.4449760765550239,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/visiting_child/chicken_visiting_child_v7_frame_03.png",
+      "crop": {
+        "left": 1024,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_visiting_child_sheet_walkfix_v7.md",
+      "sourceSha256": "aa2f52472b27571809fc3b46e466cb4bd76ca56db7b18aeac9e3933604ea0ea2",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_visiting_child_v7_frame_03.png",
+      "sha256": "072fa65eba501d04a6da1f73888bb10591f663baa0e02033a6beef8a825774bb",
+      "alphaBounds": {
+        "left": 116,
+        "top": 31,
+        "width": 169,
+        "height": 184,
+        "transparent": 78627,
+        "visible": 19677
+      },
+      "uuid": "83a8d731-9b2d-46c7-b947-ca27627dcb07",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_visiting_child_v7_frame_04",
+      "source": "art/production/ai_image_v7/sources/chicken_visiting_child_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "visiting_child",
+      "frameIndex": 4,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 182,
+      "sharedSheetScale": 0.4449760765550239,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/visiting_child/chicken_visiting_child_v7_frame_04.png",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_visiting_child_sheet_walkfix_v7.md",
+      "sourceSha256": "aa2f52472b27571809fc3b46e466cb4bd76ca56db7b18aeac9e3933604ea0ea2",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_visiting_child_v7_frame_04.png",
+      "sha256": "2da19db793c735825d9c9e5d5747ecf32821828d6d6bba312db68bb36aee183e",
+      "alphaBounds": {
+        "left": 111,
+        "top": 33,
+        "width": 145,
+        "height": 182,
+        "transparent": 79742,
+        "visible": 18562
+      },
+      "uuid": "cd4e8515-f7d7-4528-b707-c803aed52165",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_visiting_child_v7_frame_05",
+      "source": "art/production/ai_image_v7/sources/chicken_visiting_child_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "visiting_child",
+      "frameIndex": 5,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 182,
+      "sharedSheetScale": 0.4449760765550239,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/visiting_child/chicken_visiting_child_v7_frame_05.png",
+      "crop": {
+        "left": 512,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_visiting_child_sheet_walkfix_v7.md",
+      "sourceSha256": "aa2f52472b27571809fc3b46e466cb4bd76ca56db7b18aeac9e3933604ea0ea2",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_visiting_child_v7_frame_05.png",
+      "sha256": "f2e6628a9020797deff5dccc0daa552368586c2d6bca55a3ace06c10854a267d",
+      "alphaBounds": {
+        "left": 87,
+        "top": 33,
+        "width": 146,
+        "height": 182,
+        "transparent": 79414,
+        "visible": 18890
+      },
+      "uuid": "8fcfefe6-6b20-45f3-b3e5-39b9c5dee89d",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_visiting_child_v7_frame_06",
+      "source": "art/production/ai_image_v7/sources/chicken_visiting_child_sheet_walkfix_v7.png",
+      "stage": "character",
+      "actor": "visiting_child",
+      "frameIndex": 6,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4449760765550239,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/visiting_child/chicken_visiting_child_v7_frame_06.png",
+      "crop": {
+        "left": 1024,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      },
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v7/prompts/chicken_visiting_child_sheet_walkfix_v7.md",
+      "sourceSha256": "aa2f52472b27571809fc3b46e466cb4bd76ca56db7b18aeac9e3933604ea0ea2",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_visiting_child_v7_frame_06.png",
+      "sha256": "46f37a3edb6f758647070725eefd0602167cd6539428d9f81129aad1322061c3",
+      "alphaBounds": {
+        "left": 111,
+        "top": 29,
+        "width": 171,
+        "height": 186,
+        "transparent": 78292,
+        "visible": 20012
+      },
+      "uuid": "78acab49-4124-4a4d-8816-40ae60d61610",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    }
+  ],
+  "runtimeVerification": {
+    "threeChapters": {
+      "path": "art/review/ai_image_v7/three_chapters/runtime_report.json",
+      "sha256": "46fc93e5661fbb5ce127b45f5b06894f92956eb83d396eb58245aa31bcaf0323"
+    },
+    "finalFirstChapter": {
+      "path": "art/review/ai_image_v7/chapter_1_followup/runtime_report.json",
+      "sha256": "160d2d4a207e61326e99b2e1bd12d41b7af17fdefef398e7fe17836ba7450dc9"
+    },
+    "sourceReview": {
+      "path": "art/review/ai_image_v7/source_review.json",
+      "sha256": "f7ed83a5f7f54de9c37782ff417a9b7067a69a257900102666bd4e08db65f3e6"
+    },
+    "placement": {
+      "path": "art/review/ai_image_v7/placement_review.json",
+      "sha256": "0153fa6f11550cf6202b05ed355a69a748819ac43d259ab0b10868acc314f3ac"
+    },
+    "assetIntegrity": {
+      "path": "art/review/ai_image_v7/asset_integrity_report.json",
+      "sha256": "9ec489a6a8dd2bca64369d9b25255aa2a79e944e7e9d54451672ec160e324738"
+    },
+    "status": "web_mobile_verified",
+    "playerVisualApproval": "pending",
+    "wechatPhone": "not_run"
+  },
+  "sceneBlueprintSha256": "1f0b8a388108c67e7893b4b00286b4a1ea01e8d5047fb88a6d007c602aa96c60"
+}

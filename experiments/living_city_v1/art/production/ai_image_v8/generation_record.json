@@ -1,0 +1,674 @@
+{
+  "batchId": "ai_image_v8",
+  "sourceType": "codex_builtin_image_gen",
+  "styleId": "cozy_flat_town_v5",
+  "visualApproval": "pending",
+  "sources": [
+    {
+      "id": "courtyard_books_v8",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-bf2def3b-9c53-4a2f-aed2-248b8a6a35c0.png",
+      "source": "art/production/ai_image_v8/sources/courtyard_books_v8.png",
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_books_v8.md",
+      "sourceSha256": "b88416a89d66e494bf765cb69b552d2db9325e5a70a11f5fc30bf1f9db5a5a6b",
+      "originalToolOutputSha256": "b88416a89d66e494bf765cb69b552d2db9325e5a70a11f5fc30bf1f9db5a5a6b",
+      "sourceSize": {
+        "width": 1619,
+        "height": 971
+      },
+      "alphaBounds": {
+        "left": 54,
+        "top": 43,
+        "width": 1515,
+        "height": 855,
+        "transparent": 711055,
+        "visible": 860994
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "0d2fdcd2091ec03d11dd9be72eb431fe7ee5a29caab0cb9a1349683c2d4bed80",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+          "retainedPath": "art/production/ai_image_v8/references/shop_tea_v5.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v8/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ]
+    },
+    {
+      "id": "chicken_tea_vendor_sheet_v8",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-9b20dc2f-efa2-4c7e-8706-7b7b3f177b40.png",
+      "source": "art/production/ai_image_v8/sources/chicken_tea_vendor_sheet_v8.png",
+      "prompt": "art/production/ai_image_v8/prompts/chicken_tea_vendor_sheet_v8.md",
+      "sourceSha256": "cc2021d514a32559c8f2af283c2539bc24a0849bd6f072a79846234f16fd53be",
+      "originalToolOutputSha256": "cc2021d514a32559c8f2af283c2539bc24a0849bd6f072a79846234f16fd53be",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 65,
+        "top": 36,
+        "width": 1381,
+        "height": 956,
+        "transparent": 1045072,
+        "visible": 527792
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "f644969550dca84207a297f39c50fb0101145ca6a33b28a62ba24f5fd096e216",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_noodle_shopkeeper_sheet_walkfix_v7.png",
+          "retainedPath": "art/production/ai_image_v8/references/chicken_noodle_shopkeeper_sheet_walkfix_v7.png",
+          "sha256": "85cd49803a1c94cec23f6202421a382089955049999317305a70256898ee8ee0",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+          "retainedPath": "art/production/ai_image_v8/references/shop_tea_v5.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c",
+          "visualApproval": "reference_only"
+        }
+      ]
+    },
+    {
+      "id": "chicken_tea_regular_sheet_v8",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-dacb0c03-635b-49ae-bc18-94baaa8f12b8.png",
+      "source": "art/production/ai_image_v8/sources/chicken_tea_regular_sheet_v8.png",
+      "prompt": "art/production/ai_image_v8/prompts/chicken_tea_regular_sheet_v8.md",
+      "sourceSha256": "7449ffd14c36ee84b58484d26718b13977f5b8538fa43e2c7e5f6992fa85321b",
+      "originalToolOutputSha256": "7449ffd14c36ee84b58484d26718b13977f5b8538fa43e2c7e5f6992fa85321b",
+      "sourceSize": {
+        "width": 1774,
+        "height": 887
+      },
+      "alphaBounds": {
+        "left": 39,
+        "top": 34,
+        "width": 1720,
+        "height": 819,
+        "transparent": 762815,
+        "visible": 810723
+      },
+      "status": "superseded_animation_candidate_unapproved",
+      "supersededBy": "chicken_tea_regular_sheet_walkfix_v8",
+      "promptSha256": "0878fc04e0725fcd28d7b16e65a59c5c78727c0b52871aaaa9de10991eba2c45",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_noodle_shopkeeper_sheet_walkfix_v7.png",
+          "retainedPath": "art/production/ai_image_v8/references/chicken_noodle_shopkeeper_sheet_walkfix_v7.png",
+          "sha256": "85cd49803a1c94cec23f6202421a382089955049999317305a70256898ee8ee0",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_regular/chicken_tea_regular_frame_01.png",
+          "retainedPath": "art/production/ai_image_v8/references/chicken_tea_regular_frame_01.png",
+          "sha256": "7c2922aa217a194d2a772620e4c7a6747c7112428c5a859864aadfdeb36d59d7",
+          "visualApproval": "reference_only"
+        }
+      ]
+    },
+    {
+      "id": "courtyard_flowers_v8",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-194f48db-fdef-4f06-808a-28c0ce671537.png",
+      "source": "art/production/ai_image_v8/sources/courtyard_flowers_v8.png",
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_flowers_v8.md",
+      "sourceSha256": "4b1adce6d3ae648c741eb435f63b0ac869be6b263d66570473d82a45da74ba3b",
+      "originalToolOutputSha256": "4b1adce6d3ae648c741eb435f63b0ac869be6b263d66570473d82a45da74ba3b",
+      "sourceSize": {
+        "width": 1947,
+        "height": 808
+      },
+      "alphaBounds": {
+        "left": 71,
+        "top": 35,
+        "width": 1796,
+        "height": 717,
+        "transparent": 714066,
+        "visible": 859110
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "785b5844140eb7d691030964978ec194394a2bfd1d25ec82465f1af88bf004fe",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+          "retainedPath": "art/production/ai_image_v8/references/shop_tea_v5.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v8/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ]
+    },
+    {
+      "id": "courtyard_tea_v8",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-29e9fff8-38b0-4c6e-afd1-8b1eb07dc403.png",
+      "source": "art/production/ai_image_v8/sources/courtyard_tea_v8.png",
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_tea_v8.md",
+      "sourceSha256": "edaaefe01a23cf620956af7891aae4f73ed11fe9854f9c672b1c1b982d6413d6",
+      "originalToolOutputSha256": "edaaefe01a23cf620956af7891aae4f73ed11fe9854f9c672b1c1b982d6413d6",
+      "sourceSize": {
+        "width": 1280,
+        "height": 1229
+      },
+      "alphaBounds": {
+        "left": 42,
+        "top": 54,
+        "width": 1208,
+        "height": 1046,
+        "transparent": 549601,
+        "visible": 1023519
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "1ef5403cd97f5a158101d3169283e0b3477ea5c7e6f8d1760bd959c4eee82d56",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+          "retainedPath": "art/production/ai_image_v8/references/shop_tea_v5.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v8/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ]
+    },
+    {
+      "id": "courtyard_sweets_v8",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-ee52b1c8-36e6-4e4c-aee2-62b251153569.png",
+      "source": "art/production/ai_image_v8/sources/courtyard_sweets_v8.png",
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_sweets_v8.md",
+      "sourceSha256": "2988e036f2b7b3f0ad74c4485d54ffabc04fd67892eaba06e9ed4bbdbc2f337c",
+      "originalToolOutputSha256": "2988e036f2b7b3f0ad74c4485d54ffabc04fd67892eaba06e9ed4bbdbc2f337c",
+      "sourceSize": {
+        "width": 1643,
+        "height": 957
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 4,
+        "width": 1611,
+        "height": 904,
+        "transparent": 640263,
+        "visible": 932088
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "219e6b74363bf084e23f659a0c4910966b1f02c2047d8afa6f93173bcb82bb8b",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+          "retainedPath": "art/production/ai_image_v8/references/shop_tea_v5.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v8/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ]
+    },
+    {
+      "id": "courtyard_noodles_v8",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-54e0a348-15ac-49a2-87f0-9b6cb2edaf66.png",
+      "source": "art/production/ai_image_v8/sources/courtyard_noodles_v8.png",
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_noodles_v8.md",
+      "sourceSha256": "d2953e795c4f46572cdf6a9206979e2677b2747de4d67522d97c6a64f8cc33fd",
+      "originalToolOutputSha256": "d2953e795c4f46572cdf6a9206979e2677b2747de4d67522d97c6a64f8cc33fd",
+      "sourceSize": {
+        "width": 1680,
+        "height": 936
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 13,
+        "width": 1630,
+        "height": 923,
+        "transparent": 729354,
+        "visible": 843126
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "2c5409505b214ecb71e876ea0cc7e8e58fbb91571abfdad3cbbaa788a37e5e83",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+          "retainedPath": "art/production/ai_image_v8/references/shop_tea_v5.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v8/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ]
+    },
+    {
+      "id": "courtyard_sage_v8",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-74d35bc6-fddb-44fa-bbd6-11929afed976.png",
+      "source": "art/production/ai_image_v8/sources/courtyard_sage_v8.png",
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_sage_v8.md",
+      "sourceSha256": "7af967536128ccad7119784ad786a8e76ce3c94f1a9855642f9f96dae904d680",
+      "originalToolOutputSha256": "7af967536128ccad7119784ad786a8e76ce3c94f1a9855642f9f96dae904d680",
+      "sourceSize": {
+        "width": 1944,
+        "height": 809
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 21,
+        "width": 1856,
+        "height": 632,
+        "transparent": 824298,
+        "visible": 748398
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "7ccfec44e939882c6d8d8de3b2843b16e8e1ac78ee723ecf8f12e109dd11d802",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+          "retainedPath": "art/production/ai_image_v8/references/shop_tea_v5.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v8/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ]
+    },
+    {
+      "id": "courtyard_rose_v8",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-0e9c9fa3-dcf7-40f8-9fa7-8a3d851dd8a7.png",
+      "source": "art/production/ai_image_v8/sources/courtyard_rose_v8.png",
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_rose_v8.md",
+      "sourceSha256": "d108adb4e615cab2e1b28d31d19cba1e00c39651962582c66ded147be36b7eb6",
+      "originalToolOutputSha256": "d108adb4e615cab2e1b28d31d19cba1e00c39651962582c66ded147be36b7eb6",
+      "sourceSize": {
+        "width": 1846,
+        "height": 852
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 71,
+        "width": 1764,
+        "height": 709,
+        "transparent": 595735,
+        "visible": 977057
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "7e738b75fc3120f66026e700badf7bfb3c7b624f68ff8326e28eeabfee415706",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+          "retainedPath": "art/production/ai_image_v8/references/shop_tea_v5.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v8/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ]
+    },
+    {
+      "id": "flower_border_v8",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-6e8a61b4-1f7f-48d8-bd5a-f0d5e39f203a.png",
+      "source": "art/production/ai_image_v8/sources/flower_border_v8.png",
+      "prompt": "art/production/ai_image_v8/prompts/flower_border_v8.md",
+      "sourceSha256": "1c8ea7bf54e4a5fca9480cce6e18dcf664c79e8ebf9e4641735b038f836143fc",
+      "originalToolOutputSha256": "1c8ea7bf54e4a5fca9480cce6e18dcf664c79e8ebf9e4641735b038f836143fc",
+      "sourceSize": {
+        "width": 1774,
+        "height": 887
+      },
+      "alphaBounds": {
+        "left": 23,
+        "top": 21,
+        "width": 1716,
+        "height": 866,
+        "transparent": 1154784,
+        "visible": 418754
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "9ce7f2b76b0ca4245554e5f63c5d59d65cf2122bf93d02ab2772c0fd3c486f37",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+          "retainedPath": "art/production/ai_image_v8/references/shop_tea_v5.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v8/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ]
+    },
+    {
+      "id": "shrub_clump_v8",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-bab979ba-123a-4603-a0dc-3bd6e4853b71.png",
+      "source": "art/production/ai_image_v8/sources/shrub_clump_v8.png",
+      "prompt": "art/production/ai_image_v8/prompts/shrub_clump_v8.md",
+      "sourceSha256": "29d9dc4b40c2c2a066cb2678a97ed1b63f5c92f47f80d5cf8b7383669d093c3c",
+      "originalToolOutputSha256": "29d9dc4b40c2c2a066cb2678a97ed1b63f5c92f47f80d5cf8b7383669d093c3c",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 65,
+        "top": 265,
+        "width": 1347,
+        "height": 717,
+        "transparent": 1236705,
+        "visible": 336159
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "038b4e05d24c71aea7ce9e96133acdb09fcfdf17ded598b33ff57451f6cb126d",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+          "retainedPath": "art/production/ai_image_v8/references/shop_tea_v5.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v8/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ]
+    },
+    {
+      "id": "low_garden_fence_v8",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-d022a805-dc1d-4a93-b006-a4083d238a89.png",
+      "source": "art/production/ai_image_v8/sources/low_garden_fence_v8.png",
+      "prompt": "art/production/ai_image_v8/prompts/low_garden_fence_v8.md",
+      "sourceSha256": "8d239d1ee6e72cda59a9631883e5191c8fd4ab310255a06d04359a54a213fed2",
+      "originalToolOutputSha256": "8d239d1ee6e72cda59a9631883e5191c8fd4ab310255a06d04359a54a213fed2",
+      "sourceSize": {
+        "width": 1983,
+        "height": 793
+      },
+      "alphaBounds": {
+        "left": 214,
+        "top": 65,
+        "width": 1697,
+        "height": 712,
+        "transparent": 999169,
+        "visible": 573350
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "015112715e92785145b8e837a3cf2bd71edf18ef5fb8bf3e2b7c05f8cf3ec20c",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+          "retainedPath": "art/production/ai_image_v8/references/shop_tea_v5.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v8/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ]
+    },
+    {
+      "id": "targets_tools_v8",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-3599dd3d-962c-48dd-b5f5-727038647b93.png",
+      "source": "art/production/ai_image_v8/sources/targets_tools_v8.png",
+      "prompt": "art/production/ai_image_v8/prompts/targets_tools_v8.md",
+      "sourceSha256": "4213ee795dafb7c23cf9c02c06d3236be25e0af76795be1bdc57f5be8b09e1fc",
+      "originalToolOutputSha256": "4213ee795dafb7c23cf9c02c06d3236be25e0af76795be1bdc57f5be8b09e1fc",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 17,
+        "width": 1484,
+        "height": 1007,
+        "transparent": 1139983,
+        "visible": 432881
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "689cd376d3433f8eac7e4fe32970fc895f5dc6d6c78b24051749766dd335c107",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+          "retainedPath": "art/production/ai_image_v8/references/shop_tea_v5.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v8/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ]
+    },
+    {
+      "id": "targets_keepsakes_v8",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-47273578-769c-4edf-aec6-e1a7cca9d304.png",
+      "source": "art/production/ai_image_v8/sources/targets_keepsakes_v8.png",
+      "prompt": "art/production/ai_image_v8/prompts/targets_keepsakes_v8.md",
+      "sourceSha256": "3f19700add3a77676e9e655d015a54d3540c3914a34ebb86f289cf48705bfc9b",
+      "originalToolOutputSha256": "3f19700add3a77676e9e655d015a54d3540c3914a34ebb86f289cf48705bfc9b",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 19,
+        "width": 1504,
+        "height": 1005,
+        "transparent": 1108756,
+        "visible": 464108
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "9845626cf3eed32e8e730964602b88fae03f2560794fedf5f4dae5e3668dbe32",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+          "retainedPath": "art/production/ai_image_v8/references/shop_tea_v5.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v8/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ]
+    },
+    {
+      "id": "targets_pantry_v8",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-3b7a75bc-9487-4f91-911d-a245f5b97d11.png",
+      "source": "art/production/ai_image_v8/sources/targets_pantry_v8.png",
+      "prompt": "art/production/ai_image_v8/prompts/targets_pantry_v8.md",
+      "sourceSha256": "89f71c45b1b949ffaee15de0ea86e45f23540b2b86d07219ef636bc48424e941",
+      "originalToolOutputSha256": "89f71c45b1b949ffaee15de0ea86e45f23540b2b86d07219ef636bc48424e941",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 0,
+        "width": 1488,
+        "height": 1000,
+        "transparent": 1093994,
+        "visible": 478870
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "5f7856db69294e92cb0a079519bab2d1a3112317e2aab9ad399afe93f8d0f0c8",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+          "retainedPath": "art/production/ai_image_v8/references/shop_tea_v5.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v8/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ]
+    },
+    {
+      "id": "chicken_tea_regular_sheet_walkfix_v8",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-438bc48b-141e-4e5c-86ab-ac282253cf0a.png",
+      "source": "art/production/ai_image_v8/sources/chicken_tea_regular_sheet_walkfix_v8.png",
+      "prompt": "art/production/ai_image_v8/prompts/chicken_tea_regular_sheet_walkfix_v8.md",
+      "sourceSha256": "29913756825d48e54bf303740dccd149af342f13aa52764005ecaf255cbcd56e",
+      "originalToolOutputSha256": "29913756825d48e54bf303740dccd149af342f13aa52764005ecaf255cbcd56e",
+      "sourceSize": {
+        "width": 1774,
+        "height": 887
+      },
+      "alphaBounds": {
+        "left": 40,
+        "top": 40,
+        "width": 1719,
+        "height": 815,
+        "transparent": 762326,
+        "visible": 811212
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "fd9cd4cf32171a9b2d7f2991c8e8e229f3f8eedc1a4d3093f416074b87cee838",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v8/sources/chicken_tea_regular_sheet_v8.png",
+          "retainedPath": "art/production/ai_image_v8/sources/chicken_tea_regular_sheet_v8.png",
+          "sha256": "7449ffd14c36ee84b58484d26718b13977f5b8538fa43e2c7e5f6992fa85321b",
+          "visualApproval": "reference_only"
+        }
+      ]
+    }
+  ],
+  "sceneBlueprintSha256": "10c91b3e5f4c8cda8ac30e006aff1d3a8105a72c0ec758781922c2b38cf5b997",
+  "contentSummary": {
+    "newSceneInstances": 14,
+    "newGrounds": 7,
+    "newLowScenerySources": 3,
+    "renewedTargets": 12,
+    "renewedActors": 2,
+    "newCels": 14,
+    "totalSceneSlots": 63,
+    "totalBuildings": 11,
+    "totalActors": 16,
+    "preservedTargets": 24,
+    "preservedReveals": 6
+  },
+  "runtimeVerification": {
+    "status": "web_mobile_verified",
+    "playerVisualApproval": "pending",
+    "wechatPhone": "not_run",
+    "threeChapters": {
+      "path": "art/review/ai_image_v8/three_chapters/runtime_report.json",
+      "sha256": "9041fde9654a47ffa2724b7a9ad47ac96e1481373d1c8a8ae37cfa6f83dd02fb"
+    },
+    "finalFirstChapter": {
+      "path": "art/review/ai_image_v8/three_chapters/runtime_report.json",
+      "sha256": "9041fde9654a47ffa2724b7a9ad47ac96e1481373d1c8a8ae37cfa6f83dd02fb"
+    },
+    "sourceReview": {
+      "path": "art/review/ai_image_v8/source_review.json",
+      "sha256": "985d1689c4c33e8992a591e8d2c13ee3852d6485aea03d269f92c8de93ad3e2a",
+      "status": "source_visual_review_recorded"
+    },
+    "placement": {
+      "path": "art/review/ai_image_v8/placement_review.json",
+      "sha256": "34dc1b3289887d40273499e8fdca5e79cf4b23247a23261094d9b266d54dedf2",
+      "status": "png_geometry_checks_passed"
+    },
+    "assetIntegrity": {
+      "path": "art/review/ai_image_v8/asset_integrity_report.json",
+      "sha256": "8d0a6c73e9db19ecba2006d19f093846f1d06d1442fefb403e404199fc270e80",
+      "status": "passed"
+    },
+    "dialogueFit": {
+      "status": "actual_bounds_checked",
+      "chapters": [
+        {
+          "cityId": "living_city_street_block_01",
+          "actualBoundsSamples": 8,
+          "viewportClipping": false,
+          "overlapsTargetTray": false,
+          "checkedViewports": [
+            {
+              "width": 444,
+              "height": 960
+            },
+            {
+              "width": 360,
+              "height": 780
+            }
+          ]
+        },
+        {
+          "cityId": "living_city_garden_market_02",
+          "actualBoundsSamples": 4,
+          "viewportClipping": false,
+          "overlapsTargetTray": false,
+          "checkedViewports": [
+            {
+              "width": 444,
+              "height": 960
+            },
+            {
+              "width": 360,
+              "height": 780
+            }
+          ]
+        },
+        {
+          "cityId": "living_city_harbor_walk_03",
+          "actualBoundsSamples": 4,
+          "viewportClipping": false,
+          "overlapsTargetTray": false,
+          "checkedViewports": [
+            {
+              "width": 444,
+              "height": 960
+            },
+            {
+              "width": 360,
+              "height": 780
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

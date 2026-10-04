@@ -1,0 +1,182 @@
+{
+  "batchId": "ai_image_v11",
+  "sourceType": "codex_builtin_image_gen",
+  "styleId": "cozy_flat_town_v5",
+  "assets": [
+    {
+      "name": "reading_glasses_refined_v11",
+      "source": "art/production/ai_image_v11/sources/reading_glasses_refined_v11.png",
+      "stage": "target",
+      "targetId": "reading_glasses",
+      "width": 256,
+      "height": 108,
+      "inset": 4,
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/reading_glasses.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v11/prompts/reading_glasses_refined_v11.md",
+      "sourceSha256": "c452139e6b9c8b2d61266bb150bf7643c9b888c8dbf3199e1551b067c0a46031",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/reading_glasses_refined_v11.png",
+      "sha256": "eb0d5682962bbf3f81f76ba4b20b4b86c40f986f74f1a23cdb76f19b4a96d4d6",
+      "alphaBounds": {
+        "left": 9,
+        "top": 4,
+        "width": 238,
+        "height": 100,
+        "transparent": 20028,
+        "visible": 7620
+      },
+      "uuid": "fbc9e7f4-0c1f-4984-b2da-59cd019faba3",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "postcard_refined_v11",
+      "source": "art/production/ai_image_v11/sources/postcard_refined_v11.png",
+      "stage": "target",
+      "targetId": "postcard",
+      "width": 256,
+      "height": 155,
+      "inset": 4,
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/postcard.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v11/prompts/postcard_refined_v11.md",
+      "sourceSha256": "c6f06323caa9c2386a95e6c0a475eec6a113832f4db7e27848c656d5f057938f",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/postcard_refined_v11.png",
+      "sha256": "0855888caff4e13f232b266948eecf925ecd95c01d7b41aec9e2fdbc1f8b7115",
+      "alphaBounds": {
+        "left": 7,
+        "top": 4,
+        "width": 242,
+        "height": 147,
+        "transparent": 4344,
+        "visible": 35336
+      },
+      "uuid": "c4d299aa-17f4-4057-999e-868bf93f1872",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "yarn_ball_refined_v11",
+      "source": "art/production/ai_image_v11/sources/yarn_ball_refined_v11.png",
+      "stage": "target",
+      "targetId": "yarn_ball",
+      "width": 256,
+      "height": 173,
+      "inset": 4,
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/yarn_ball.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v11/prompts/yarn_ball_refined_v11.md",
+      "sourceSha256": "4c4805a5da85888a89ff136c826a8a0dae6ff87e279346a2646392ecb44fcdfd",
+      "sourceSize": {
+        "width": 1374,
+        "height": 1145
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/yarn_ball_refined_v11.png",
+      "sha256": "9e1b1bf94d38708861273c498c99d237016c6c8bef57599d5e0c0ef7877d5c64",
+      "alphaBounds": {
+        "left": 6,
+        "top": 4,
+        "width": 244,
+        "height": 165,
+        "transparent": 19129,
+        "visible": 25159
+      },
+      "uuid": "33d58fef-fe46-4945-a447-29b7311a8fc7",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "laundry_peg_refined_v11",
+      "source": "art/production/ai_image_v11/sources/laundry_peg_refined_v11.png",
+      "stage": "target",
+      "targetId": "laundry_peg",
+      "width": 96,
+      "height": 256,
+      "inset": 4,
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/laundry_peg.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v11/prompts/laundry_peg_refined_v11.md",
+      "sourceSha256": "a220d50b371cfe36aea0ad5eab9c0a5c28e6bfbafc33ba562d376dacbf213c89",
+      "sourceSize": {
+        "width": 1024,
+        "height": 1536
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/laundry_peg_refined_v11.png",
+      "sha256": "58cc7c453ec1e094862dad4b5283e127e62b243f691b1e54c40da424b977d60c",
+      "alphaBounds": {
+        "left": 9,
+        "top": 4,
+        "width": 78,
+        "height": 248,
+        "transparent": 9440,
+        "visible": 15136
+      },
+      "uuid": "120d7f67-3455-44ed-9c13-ee91cde26a5b",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    }
+  ],
+  "runtimeVerification": {
+    "status": "web_mobile_verified",
+    "playerVisualApproval": "pending",
+    "wechatPhone": "not_run",
+    "sceneBlueprintSha256": "41858f867eec7eba0746498a5689684bd51e46d6b04a69f800a7821c3b1d0efb",
+    "reports": {
+      "runtime": {
+        "path": "art/review/ai_image_v12/three_chapters/runtime_report.json",
+        "sha256": "c0dada619d27447befe9ec8f96e739f5428ca8479ca4d9311736f8da208b349e"
+      },
+      "surfaces": {
+        "path": "art/review/ai_image_v12/after_surfaces/surface_report.json",
+        "sha256": "f0c7e97a4b3d67c12ae1c914a9482f0fe08db6569ec01783d6f3aff460b30d33"
+      },
+      "registration": {
+        "path": "art/review/ai_image_v12/registration_report.json",
+        "sha256": "53650c8093082d93bd91b22554388993950a4f5d1d70e8270e454d987a4f9fd3"
+      },
+      "integrity": {
+        "path": "art/review/ai_image_v12/asset_integrity_report.json",
+        "sha256": "a5650b478cf6152619c24d14855b0345dface9a2e79cc5770b9d31318464eca3"
+      },
+      "placement": {
+        "path": "art/review/ai_image_v11/placement_review.json",
+        "sha256": "2d9ec36525494291c7d5f2311c61c8c83f38bd27bceb866aba0ad9af23332807"
+      },
+      "visual": {
+        "path": "art/review/ai_image_v12/visual_review.json",
+        "sha256": "738ac7d331c2a2d3a0a28e247195a4ac0b438fb7752ba169a373f4cc53cfbcac"
+      }
+    },
+    "build": {
+      "path": "art/review/ai_image_v12/web_mobile_build.txt",
+      "sha256": "02a18332fa5b5c347aa5fcad78e47f87eec38e590338eebe218ac1fb1b30bc84"
+    },
+    "runtimeSources": [
+      {
+        "path": "assets/scripts/character/CelAnimationPlayer.ts",
+        "sha256": "98858c576cc704acb62a5cfe906d87170f01b3c2dba2c96996b7ff47a5bc4613"
+      },
+      {
+        "path": "assets/scripts/map/SceneArtSlot.ts",
+        "sha256": "4351e5be62f8f547990d5d7e0fd040880315094532099484401c685483911b8e"
+      },
+      {
+        "path": "assets/scripts/map/LivingCityGreybox.ts",
+        "sha256": "e52a3cf12546bae38aa0bcb3b2032ca189d9b7e26f8ea113fa290f3b4a1d44ee"
+      }
+    ]
+  },
+  "visualApproval": "pending"
+}

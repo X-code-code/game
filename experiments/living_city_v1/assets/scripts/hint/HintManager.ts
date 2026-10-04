@@ -7,6 +7,7 @@ export interface HintTarget {
     kind: 'hiddenObject' | 'chicken' | 'interactiveObject';
     tags: readonly string[];
     radius: number;
+    displayName?: string;
     prerequisiteId?: string;
     isAvailable(): boolean;
     /** Read the live position in map-local units, never the spawn position. */
@@ -17,6 +18,7 @@ export interface ActiveHint {
     label: string;
     targetId: string;
     kind: HintTarget['kind'];
+    targetLabel?: string;
     position: HintPosition;
     radius: number;
     remaining: number;
@@ -60,7 +62,8 @@ export class HintManager {
                 if (!position) continue;
                 this.target = target;
                 this.activeHint = { taskId: task.config.id, label: task.config.label, targetId: target.id,
-                    kind: target.kind, radius: target.radius, position, remaining: 4 };
+                    kind: target.kind, radius: target.radius, position, remaining: 4,
+                    ...(target.displayName ? { targetLabel: target.displayName } : {}) };
                 return { status: 'shown', hint: this.active! };
             }
         }

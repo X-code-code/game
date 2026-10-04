@@ -1,0 +1,42 @@
+{
+  "batchId": "ai_image_v11",
+  "scope": "refine_existing_targets_only",
+  "jobs": [
+    {
+      "id": "reading_glasses_refined_v11",
+      "targetId": "reading_glasses",
+      "support": "lc6_reading_stall",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/simple2d_scene/lc6_reading_stall.png"
+      ],
+      "prompt": "Create a single replacement collectible sprite for an existing cozy hand-drawn 2D town hidden-object game. The provided image is STYLE AND PLACEMENT-ANGLE reference only, not an edit target. Match its simple gently imperfect thin warm-brown outlines, restrained low-saturation colours and clean matte flat fills. One pair of reading glasses resting FLAT on an open book, viewed obliquely from above about 30 degrees, matching the tabletop angle in the reference. Show two flattened rounded oval lenses aligned mostly horizontally, small bridge, folded temple arms visible behind. Thin muted warm brown frame. Lens interiors TRANSPARENT, no blue fill or white reflections. No book itself. This must read as a small object lying on the table, not a frontal portrait of spectacles. Keep the silhouette clear at 25-35 game pixels. Whole single object centred with a modest transparent margin. Genuine transparent PNG background. No drop shadow, glow, sticker white border, extra object, UI icon plate, text, realistic lighting, 3D rendering or vignette. Preserve fine hand-drawn character, not polished vector clipart. Generate just this existing collectible, no new game content."
+    },
+    {
+      "id": "postcard_refined_v11",
+      "targetId": "postcard",
+      "support": "lc6_mail_notice",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/simple2d_scene/lc6_mail_notice.png"
+      ],
+      "prompt": "Create a single replacement collectible sprite for an existing cozy hand-drawn 2D town hidden-object game. The provided image is STYLE AND PLACEMENT-ANGLE reference only, not an edit target. Match its simple gently imperfect thin warm-brown outlines, restrained low-saturation colours and clean matte flat fills. One small rectangular landscape postcard viewed nearly straight on as a paper card pinned flat against the notice board in the reference, horizontal edges, no perspective tilt. Warm cream narrow margin enclosing a very simple muted blue roof cottage, sage hill and pale blue sky illustration, only 3 large colour shapes. No letters, stamp, postmark, flower, pin, or background board. Thin paper object, no extruded edge or shadow. Draw only the postcard. Keep the silhouette clear at 25-35 game pixels. Whole single object centred with a modest transparent margin. Genuine transparent PNG background. No drop shadow, glow, sticker white border, extra object, UI icon plate, text, realistic lighting, 3D rendering or vignette. Preserve fine hand-drawn character, not polished vector clipart. Generate just this existing collectible, no new game content."
+    },
+    {
+      "id": "yarn_ball_refined_v11",
+      "targetId": "yarn_ball",
+      "support": "lc6_fountain_crates",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/simple2d_scene/lc6_fountain_crates.png"
+      ],
+      "prompt": "Create a single replacement collectible sprite for an existing cozy hand-drawn 2D town hidden-object game. The provided image is STYLE AND PLACEMENT-ANGLE reference only, not an edit target. Match its simple gently imperfect thin warm-brown outlines, restrained low-saturation colours and clean matte flat fills. One small dusty muted rose yarn ball resting on a horizontal crate top, slight overhead view. A softly flattened base, a simple round silhouette and only five or six broad curved strand lines, thin warm brown outlines. A SHORT loose yarn end curves onto the same horizontal plane to its right. No heavy glossy highlights, no strand texture, no tiny crosshatching. Do not draw the crate. Keep the silhouette clear at 25-35 game pixels. Whole single object centred with a modest transparent margin. Genuine transparent PNG background. No drop shadow, glow, sticker white border, extra object, UI icon plate, text, realistic lighting, 3D rendering or vignette. Preserve fine hand-drawn character, not polished vector clipart. Generate just this existing collectible, no new game content."
+    },
+    {
+      "id": "laundry_peg_refined_v11",
+      "targetId": "laundry_peg",
+      "support": "lc6_laundry_line",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/simple2d_scene/lc6_laundry_line.png"
+      ],
+      "prompt": "Create a single replacement collectible sprite for an existing cozy hand-drawn 2D town hidden-object game. The provided image is STYLE AND PLACEMENT-ANGLE reference only, not an edit target. Match its simple gently imperfect thin warm-brown outlines, restrained low-saturation colours and clean matte flat fills. One slim wooden spring clothespin viewed nearly from the front, standing VERTICALLY with gripping jaws pointing DOWN, closed, as if clipped over fabric on the reference clothesline. Two narrow warm ochre wooden halves and one small muted grey spring. Thin warm brown outline, very minimal details, no white highlight stripes, no strong three dimensional side faces. Full object, approximately one unit wide and three units tall. Do not include rope or clothing. Keep the silhouette clear at 25-35 game pixels. Whole single object centred with a modest transparent margin. Genuine transparent PNG background. No drop shadow, glow, sticker white border, extra object, UI icon plate, text, realistic lighting, 3D rendering or vignette. Preserve fine hand-drawn character, not polished vector clipart. Generate just this existing collectible, no new game content."
+    }
+  ]
+}

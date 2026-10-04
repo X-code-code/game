@@ -1,0 +1,397 @@
+{
+  "schemaVersion": 1,
+  "batchId": "ai_image_v5",
+  "sourceType": "codex_builtin_image_gen",
+  "styleId": "cozy_flat_town_v5",
+  "blueprint": "design/street_block_01.json",
+  "visualApproval": "pending",
+  "assets": [
+    {
+      "name": "town_ground_wide_v5",
+      "source": "town_ground_wide_v5",
+      "prompt": "art/production/ai_image_v5/prompts/town_ground_wide_v5.md",
+      "stage": "scene",
+      "width": 2304,
+      "height": 2048,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_ground_paving.png",
+      "sceneSlotId": "lc5_ground_paving",
+      "sourceBatch": "ai_image_v5",
+      "transparent": false,
+      "keepFullCanvas": true
+    },
+    {
+      "name": "shop_tea_v5",
+      "source": "shop_tea_v5",
+      "prompt": "art/production/ai_image_v5/prompts/shop_tea_v5_edit.md",
+      "stage": "scene",
+      "width": 304,
+      "height": 336,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_west_storefront_back.png",
+      "sceneSlotId": "lc5_west_storefront_back",
+      "sourceBatch": "ai_image_v5"
+    },
+    {
+      "name": "shop_blue_v5",
+      "source": "shop_blue_v5",
+      "prompt": "art/production/ai_image_v5/prompts/shop_blue_v5.md",
+      "stage": "scene",
+      "width": 296,
+      "height": 344,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_east_storefront_back.png",
+      "sceneSlotId": "lc5_east_storefront_back",
+      "sourceBatch": "ai_image_v5"
+    },
+    {
+      "name": "shop_tailor_v5",
+      "source": "shop_tailor_v5",
+      "prompt": "art/production/ai_image_v5/prompts/shop_tailor_v5.md",
+      "stage": "scene",
+      "width": 288,
+      "height": 336,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_west_tailor_back.png",
+      "sceneSlotId": "lc5_west_tailor_back",
+      "sourceBatch": "ai_image_v5"
+    },
+    {
+      "name": "shop_bakery_v5",
+      "source": "shop_bakery_v5",
+      "prompt": "art/production/ai_image_v5/prompts/shop_bakery_v5.md",
+      "stage": "scene",
+      "width": 288,
+      "height": 336,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_east_food_shop_back.png",
+      "sceneSlotId": "lc5_east_food_shop_back",
+      "sourceBatch": "ai_image_v5"
+    },
+    {
+      "name": "tea_stall_v5",
+      "source": "tea_stall_v5",
+      "prompt": "art/production/ai_image_v5/prompts/tea_stall_v5.md",
+      "stage": "scene",
+      "width": 260,
+      "height": 230,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_tea_counter_back.png",
+      "sceneSlotId": "lc5_tea_counter_back",
+      "sourceBatch": "ai_image_v5",
+      "footpoint": {
+        "x": 130,
+        "y": 225
+      }
+    },
+    {
+      "name": "bun_cart_v5",
+      "source": "bun_cart_v5",
+      "prompt": "art/production/ai_image_v5/prompts/bun_cart_v5.md",
+      "stage": "scene",
+      "width": 170,
+      "height": 190,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_bun_cart_back.png",
+      "sceneSlotId": "lc5_bun_cart_back",
+      "sourceBatch": "ai_image_v5"
+    },
+    {
+      "name": "town_tree_v5",
+      "source": "town_tree_v5",
+      "prompt": "art/production/ai_image_v5/prompts/town_tree_v5.md",
+      "stage": "scene",
+      "width": 180,
+      "height": 240,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_tree_front.png",
+      "sceneSlotId": "lc5_tree_front",
+      "sourceBatch": "ai_image_v5",
+      "footpoint": {
+        "x": 90,
+        "y": 235
+      }
+    },
+    {
+      "name": "town_bench_v5",
+      "source": "town_bench_v5",
+      "prompt": "art/production/ai_image_v5/prompts/town_bench_v5.md",
+      "stage": "scene",
+      "width": 170,
+      "height": 90,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_bench_front.png",
+      "sceneSlotId": "lc5_bench_front",
+      "sourceBatch": "ai_image_v5",
+      "footpoint": {
+        "x": 85,
+        "y": 87
+      }
+    },
+    {
+      "name": "tea_patio_v5",
+      "source": "tea_patio_v5",
+      "prompt": "art/production/ai_image_v5/prompts/tea_patio_v5.md",
+      "stage": "scene",
+      "width": 170,
+      "height": 130,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_tea_patio_front.png",
+      "sceneSlotId": "lc5_tea_patio_front",
+      "sourceBatch": "ai_image_v5",
+      "footpoint": {
+        "x": 85,
+        "y": 125
+      }
+    },
+    {
+      "name": "flower_display_v5",
+      "source": "flower_display_v5",
+      "prompt": "art/production/ai_image_v5/prompts/flower_display_v5.md",
+      "stage": "scene",
+      "width": 150,
+      "height": 140,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_curb_flower_display.png",
+      "sceneSlotId": "lc5_curb_flower_display",
+      "sourceBatch": "ai_image_v5",
+      "footpoint": {
+        "x": 75,
+        "y": 135
+      }
+    },
+    {
+      "name": "produce_display_v5",
+      "source": "produce_display_v5",
+      "prompt": "art/production/ai_image_v5/prompts/produce_display_v5.md",
+      "stage": "scene",
+      "width": 140,
+      "height": 130,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_curb_produce_east.png",
+      "sceneSlotId": "lc5_curb_produce_east",
+      "sourceBatch": "ai_image_v5",
+      "footpoint": {
+        "x": 70,
+        "y": 125
+      }
+    },
+    {
+      "name": "wood_crates_v5",
+      "source": "wood_crates_v5",
+      "prompt": "art/production/ai_image_v5/prompts/wood_crates_v5.md",
+      "stage": "scene",
+      "width": 120,
+      "height": 100,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_crates_front.png",
+      "sceneSlotId": "lc5_crates_front",
+      "sourceBatch": "ai_image_v5",
+      "footpoint": {
+        "x": 60,
+        "y": 95
+      }
+    },
+    {
+      "name": "water_station_v5",
+      "source": "water_station_v5",
+      "prompt": "art/production/ai_image_v5/prompts/water_station_v5.md",
+      "stage": "scene",
+      "width": 110,
+      "height": 150,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_street_water_station.png",
+      "sceneSlotId": "lc5_street_water_station",
+      "sourceBatch": "ai_image_v5",
+      "footpoint": {
+        "x": 55,
+        "y": 145
+      }
+    },
+    {
+      "name": "legacy_sewing_goods_v5",
+      "source": "legacy_sewing_goods_v5",
+      "prompt": "art/production/ai_image_v5/prompts/legacy_sewing_goods_v5.md",
+      "stage": "scene",
+      "width": 110,
+      "height": 90,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_tailor_goods.png",
+      "sceneSlotId": "lc5_tailor_goods",
+      "sourceBatch": "ai_image_v4",
+      "reusedGeneratedSourceBatch": "ai_image_v4",
+      "reusedSource": "art/production/ai_image_v4/sources/sewing_goods.png",
+      "reusedPrompt": "art/production/ai_image_v4/prompts/sewing_goods.md",
+      "footpoint": {
+        "x": 55,
+        "y": 85
+      }
+    },
+    {
+      "name": "legacy_tailor_rack_v5",
+      "source": "legacy_tailor_rack_v5",
+      "prompt": "art/production/ai_image_v5/prompts/legacy_tailor_rack_v5.md",
+      "stage": "scene",
+      "width": 100,
+      "height": 130,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_tailor_work_rack.png",
+      "sceneSlotId": "lc5_tailor_work_rack",
+      "sourceBatch": "ai_image_v4",
+      "reusedGeneratedSourceBatch": "ai_image_v4",
+      "reusedSource": "art/production/ai_image_v4/sources/tailor_rack.png",
+      "reusedPrompt": "art/production/ai_image_v4/prompts/tailor_rack.md",
+      "footpoint": {
+        "x": 50,
+        "y": 125
+      }
+    },
+    {
+      "name": "legacy_post_house_v5",
+      "source": "legacy_post_house_v5",
+      "prompt": "art/production/ai_image_v5/prompts/legacy_post_house_v5.md",
+      "stage": "scene",
+      "width": 264,
+      "height": 160,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_south_post_house_back.png",
+      "sceneSlotId": "lc5_south_post_house_back",
+      "sourceBatch": "ai_image_v4",
+      "reusedGeneratedSourceBatch": "ai_image_v4",
+      "reusedSource": "art/production/ai_image_v4/sources/post_house.png",
+      "reusedPrompt": "art/production/ai_image_v4/prompts/post_house.md"
+    },
+    {
+      "name": "legacy_street_banner_v5",
+      "source": "legacy_street_banner_v5",
+      "prompt": "art/production/ai_image_v5/prompts/legacy_street_banner_v5.md",
+      "stage": "scene",
+      "width": 380,
+      "height": 60,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_street_banner_front.png",
+      "sceneSlotId": "lc5_street_banner_front",
+      "sourceBatch": "ai_image_v4",
+      "reusedGeneratedSourceBatch": "ai_image_v4",
+      "reusedSource": "art/production/ai_image_v4/sources/street_banner.png",
+      "reusedPrompt": "art/production/ai_image_v4/prompts/street_banner.md"
+    },
+    {
+      "name": "legacy_steam_fx_v5",
+      "source": "legacy_steam_fx_v5",
+      "prompt": "art/production/ai_image_v5/prompts/legacy_steam_fx_v5.md",
+      "stage": "scene",
+      "width": 42,
+      "height": 58,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_tea_steam_fx.png",
+      "sceneSlotId": "lc5_tea_steam_fx",
+      "sourceBatch": "ai_image_v4",
+      "reusedGeneratedSourceBatch": "ai_image_v4",
+      "reusedSource": "art/production/ai_image_v4/sources/steam_fx.png",
+      "reusedPrompt": "art/production/ai_image_v4/prompts/steam_fx.md"
+    },
+    {
+      "name": "town_tree_west_garden_v5",
+      "source": "town_tree_v5",
+      "prompt": "art/production/ai_image_v5/prompts/town_tree_v5.md",
+      "stage": "scene",
+      "width": 180,
+      "height": 240,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_west_garden_tree_front.png",
+      "sceneSlotId": "lc5_west_garden_tree_front",
+      "sourceBatch": "ai_image_v5",
+      "reusedSceneSource": "town_tree_v5",
+      "footpoint": {
+        "x": 90,
+        "y": 235
+      }
+    },
+    {
+      "name": "town_bench_west_garden_v5",
+      "source": "town_bench_v5",
+      "prompt": "art/production/ai_image_v5/prompts/town_bench_v5.md",
+      "stage": "scene",
+      "width": 170,
+      "height": 90,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_west_garden_bench_front.png",
+      "sceneSlotId": "lc5_west_garden_bench_front",
+      "sourceBatch": "ai_image_v5",
+      "reusedSceneSource": "town_bench_v5",
+      "footpoint": {
+        "x": 85,
+        "y": 87
+      }
+    },
+    {
+      "name": "flower_display_west_garden_v5",
+      "source": "flower_display_v5",
+      "prompt": "art/production/ai_image_v5/prompts/flower_display_v5.md",
+      "stage": "scene",
+      "width": 150,
+      "height": 140,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_west_garden_flowers_front.png",
+      "sceneSlotId": "lc5_west_garden_flowers_front",
+      "sourceBatch": "ai_image_v5",
+      "reusedSceneSource": "flower_display_v5",
+      "footpoint": {
+        "x": 75,
+        "y": 135
+      }
+    },
+    {
+      "name": "town_tree_east_courtyard_v5",
+      "source": "town_tree_v5",
+      "prompt": "art/production/ai_image_v5/prompts/town_tree_v5.md",
+      "stage": "scene",
+      "width": 180,
+      "height": 240,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_east_courtyard_tree_front.png",
+      "sceneSlotId": "lc5_east_courtyard_tree_front",
+      "sourceBatch": "ai_image_v5",
+      "reusedSceneSource": "town_tree_v5",
+      "footpoint": {
+        "x": 90,
+        "y": 235
+      }
+    },
+    {
+      "name": "tea_patio_east_courtyard_v5",
+      "source": "tea_patio_v5",
+      "prompt": "art/production/ai_image_v5/prompts/tea_patio_v5.md",
+      "stage": "scene",
+      "width": 170,
+      "height": 130,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_east_courtyard_patio_front.png",
+      "sceneSlotId": "lc5_east_courtyard_patio_front",
+      "sourceBatch": "ai_image_v5",
+      "reusedSceneSource": "tea_patio_v5",
+      "footpoint": {
+        "x": 85,
+        "y": 125
+      }
+    },
+    {
+      "name": "water_station_east_courtyard_v5",
+      "source": "water_station_v5",
+      "prompt": "art/production/ai_image_v5/prompts/water_station_v5.md",
+      "stage": "scene",
+      "width": 110,
+      "height": 150,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_east_courtyard_water_front.png",
+      "sceneSlotId": "lc5_east_courtyard_water_front",
+      "sourceBatch": "ai_image_v5",
+      "reusedSceneSource": "water_station_v5",
+      "footpoint": {
+        "x": 55,
+        "y": 145
+      }
+    }
+  ]
+}

@@ -1,0 +1,876 @@
+{
+  "batchId": "ai_image_v7",
+  "sourceType": "codex_builtin_image_gen",
+  "styleId": "cozy_flat_town_v5",
+  "visualApproval": "pending",
+  "sources": [
+    {
+      "id": "shop_flower_v7",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-3ed31d7f-fab6-4169-ba2b-6615a2f98fb7.png",
+      "source": "art/production/ai_image_v7/sources/shop_flower_v7.png",
+      "prompt": "art/production/ai_image_v7/prompts/shop_flower_v7.md",
+      "sourceSha256": "5973a4f6791a8d4c20f3882836b00159c0759e96479c35fd695fcf3e7680ebfa",
+      "originalToolOutputSha256": "5973a4f6791a8d4c20f3882836b00159c0759e96479c35fd695fcf3e7680ebfa",
+      "sourceSize": {
+        "width": 1402,
+        "height": 1122
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 60,
+        "width": 1400,
+        "height": 1062,
+        "transparent": 592778,
+        "visible": 980266
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "b4b7d21ee2319c41131160ec58c8e8378f08b7e6a872049accdcfa2de59b2cfe",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+          "retainedPath": "art/production/ai_image_v7/references/shop_tea_v5.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v7/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ],
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ]
+    },
+    {
+      "id": "shop_books_v7",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-71b6b5b8-9bff-459a-8258-79cd277b808c.png",
+      "source": "art/production/ai_image_v7/sources/shop_books_v7.png",
+      "prompt": "art/production/ai_image_v7/prompts/shop_books_v7.md",
+      "sourceSha256": "b718652320a252e6c1c114a9aa5e84f7fdfcee54e3b34e5dcc578e8af3fe42b9",
+      "originalToolOutputSha256": "b718652320a252e6c1c114a9aa5e84f7fdfcee54e3b34e5dcc578e8af3fe42b9",
+      "sourceSize": {
+        "width": 1312,
+        "height": 1199
+      },
+      "alphaBounds": {
+        "left": 145,
+        "top": 34,
+        "width": 1145,
+        "height": 1123,
+        "transparent": 659181,
+        "visible": 913907
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "650de91c029957ef2acc1753febef3fc087d4823277ba7188a47949881910529",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+          "retainedPath": "art/production/ai_image_v7/references/shop_tea_v5.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v7/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ],
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ]
+    },
+    {
+      "id": "shop_sweets_v7",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-0b2cd526-ee62-47e5-914c-30116cdddbf0.png",
+      "source": "art/production/ai_image_v7/sources/shop_sweets_v7.png",
+      "prompt": "art/production/ai_image_v7/prompts/shop_sweets_v7.md",
+      "sourceSha256": "d235649b18ab6da1e331ca0f6b5c5818f839f3773929f18daee6ae41cb7dc547",
+      "originalToolOutputSha256": "d235649b18ab6da1e331ca0f6b5c5818f839f3773929f18daee6ae41cb7dc547",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 14,
+        "width": 1506,
+        "height": 979,
+        "transparent": 549823,
+        "visible": 1023041
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "ee8e3b54a208febbcee05dea798f6799d225e847916da0be7c67fbfc4aee4502",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+          "retainedPath": "art/production/ai_image_v7/references/shop_tea_v5.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v7/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ],
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ]
+    },
+    {
+      "id": "shop_noodles_v7",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-d6ca5626-72df-46da-aa9e-71a468c30c78.png",
+      "source": "art/production/ai_image_v7/sources/shop_noodles_v7.png",
+      "prompt": "art/production/ai_image_v7/prompts/shop_noodles_v7.md",
+      "sourceSha256": "06901ed9327f4064473947ea0ed824dd43f565ee9c4a6b200c3f6738ba6a03f7",
+      "originalToolOutputSha256": "06901ed9327f4064473947ea0ed824dd43f565ee9c4a6b200c3f6738ba6a03f7",
+      "sourceSize": {
+        "width": 1332,
+        "height": 1181
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 19,
+        "width": 1298,
+        "height": 1130,
+        "transparent": 504506,
+        "visible": 1068586
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "fa0fd1c0f17a9e96cbbb7a3ca35337db279185567275a10c83eff4d0cb8715d5",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+          "retainedPath": "art/production/ai_image_v7/references/shop_tea_v5.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v7/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ],
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ]
+    },
+    {
+      "id": "house_sage_v7",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-585be848-bec8-4cfa-a0fb-fe88bcec3bd9.png",
+      "source": "art/production/ai_image_v7/sources/house_sage_v7.png",
+      "prompt": "art/production/ai_image_v7/prompts/house_sage_v7.md",
+      "sourceSha256": "f48e8f27c51c4a5e883143c1637e124b38f4bb5f9edff7aee8c2b5736745e8cc",
+      "originalToolOutputSha256": "f48e8f27c51c4a5e883143c1637e124b38f4bb5f9edff7aee8c2b5736745e8cc",
+      "sourceSize": {
+        "width": 1402,
+        "height": 1122
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 29,
+        "width": 1291,
+        "height": 1073,
+        "transparent": 602857,
+        "visible": 970187
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "0d61bf66ca79da254e6b81e33e25446d308ab81f3e0f1547050548bb3178189b",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+          "retainedPath": "art/production/ai_image_v7/references/shop_tea_v5.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v7/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ],
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ]
+    },
+    {
+      "id": "house_rose_v7",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-32b975ff-f9a0-4543-b35b-d8b797a2a904.png",
+      "source": "art/production/ai_image_v7/sources/house_rose_v7.png",
+      "prompt": "art/production/ai_image_v7/prompts/house_rose_v7.md",
+      "sourceSha256": "706c75168284a09189b771fbfd7ec4136433a1e135a0136185219f4442c0777f",
+      "originalToolOutputSha256": "706c75168284a09189b771fbfd7ec4136433a1e135a0136185219f4442c0777f",
+      "sourceSize": {
+        "width": 1374,
+        "height": 1145
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 32,
+        "width": 1259,
+        "height": 1071,
+        "transparent": 605864,
+        "visible": 967366
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "98bc7ac9911180219f69d8912ce2820cb089144d6496ff7d5be07d34325d56cf",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+          "retainedPath": "art/production/ai_image_v7/references/shop_tea_v5.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v7/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ],
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ]
+    },
+    {
+      "id": "chicken_flower_shopkeeper_sheet_v7",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-cd1a7c2c-aa18-4a62-abfd-13649e9e2474.png",
+      "source": "art/production/ai_image_v7/sources/chicken_flower_shopkeeper_sheet_v7.png",
+      "prompt": "art/production/ai_image_v7/prompts/chicken_flower_shopkeeper_sheet_v7.md",
+      "sourceSha256": "eed02d8a3fc42bb049fc6fdd01e4efdf6ec2e8e21a9b9b57ffaeeb5136104b89",
+      "originalToolOutputSha256": "eed02d8a3fc42bb049fc6fdd01e4efdf6ec2e8e21a9b9b57ffaeeb5136104b89",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 4,
+        "width": 1516,
+        "height": 984,
+        "transparent": 981597,
+        "visible": 591267
+      },
+      "status": "superseded_animation_candidate_unapproved",
+      "promptSha256": "c6e4e1f4b75f23fc0fbfe3ab84a466f18fa53559addd1c167d951318e8e4f4c5",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+          "retainedPath": "art/production/ai_image_v7/references/chicken_tea_vendor_frame_13.png",
+          "sha256": "d639c4f3cdc31a732c77f1fae983de3f55fc30de0db7f15567b824fc30ffc6f5",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v7/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ],
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "supersededBy": "chicken_flower_shopkeeper_sheet_walkfix_v7"
+    },
+    {
+      "id": "chicken_book_shopkeeper_sheet_v7",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-617dffd4-bb46-4e48-bee7-da8303713692.png",
+      "source": "art/production/ai_image_v7/sources/chicken_book_shopkeeper_sheet_v7.png",
+      "prompt": "art/production/ai_image_v7/prompts/chicken_book_shopkeeper_sheet_v7.md",
+      "sourceSha256": "2bd7781d3f24e1edabbebe02dae56ec45654df13bb553eaca201b794789bc718",
+      "originalToolOutputSha256": "2bd7781d3f24e1edabbebe02dae56ec45654df13bb553eaca201b794789bc718",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 2,
+        "width": 1520,
+        "height": 992,
+        "transparent": 929894,
+        "visible": 642970
+      },
+      "status": "superseded_animation_candidate_unapproved",
+      "promptSha256": "5bfb03df4a1fad53e476ea8b1f16ccca5841b183d3967abb1cea04a6c680533e",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+          "retainedPath": "art/production/ai_image_v7/references/chicken_tea_vendor_frame_13.png",
+          "sha256": "d639c4f3cdc31a732c77f1fae983de3f55fc30de0db7f15567b824fc30ffc6f5",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v7/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ],
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "supersededBy": "chicken_book_shopkeeper_sheet_walkfix_v7"
+    },
+    {
+      "id": "chicken_sweet_shopkeeper_sheet_v7",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-5c5b7bc1-b59e-4421-a56c-ab9da6dac6ec.png",
+      "source": "art/production/ai_image_v7/sources/chicken_sweet_shopkeeper_sheet_v7.png",
+      "prompt": "art/production/ai_image_v7/prompts/chicken_sweet_shopkeeper_sheet_v7.md",
+      "sourceSha256": "565ee7dbec756b3630aa57f851da4cbba4d434978a9b86b4d39393851e58bc61",
+      "originalToolOutputSha256": "565ee7dbec756b3630aa57f851da4cbba4d434978a9b86b4d39393851e58bc61",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 14,
+        "width": 1518,
+        "height": 988,
+        "transparent": 988982,
+        "visible": 583882
+      },
+      "status": "superseded_animation_candidate_unapproved",
+      "promptSha256": "ecf7a4d78890d31c7b5966d1a42f84894556ee973de5f52d6f1e32a053aaad53",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+          "retainedPath": "art/production/ai_image_v7/references/chicken_tea_vendor_frame_13.png",
+          "sha256": "d639c4f3cdc31a732c77f1fae983de3f55fc30de0db7f15567b824fc30ffc6f5",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v7/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ],
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "supersededBy": "chicken_sweet_shopkeeper_sheet_walkfix_v7"
+    },
+    {
+      "id": "chicken_noodle_shopkeeper_sheet_v7",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-1c22ce51-d0f3-4896-8bfe-4c7b43e8acac.png",
+      "source": "art/production/ai_image_v7/sources/chicken_noodle_shopkeeper_sheet_v7.png",
+      "prompt": "art/production/ai_image_v7/prompts/chicken_noodle_shopkeeper_sheet_v7.md",
+      "sourceSha256": "442073601c4c87873766a2f07030fe02c82cbdb20f9ab6ce71280ac5745f57e4",
+      "originalToolOutputSha256": "442073601c4c87873766a2f07030fe02c82cbdb20f9ab6ce71280ac5745f57e4",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 31,
+        "top": 19,
+        "width": 1491,
+        "height": 1005,
+        "transparent": 1019040,
+        "visible": 553824
+      },
+      "status": "superseded_animation_candidate_unapproved",
+      "promptSha256": "8a5b46d7207567c114a5005500ad8ce4da781e4c5d4eb4b3646dfca28a9a27c5",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+          "retainedPath": "art/production/ai_image_v7/references/chicken_tea_vendor_frame_13.png",
+          "sha256": "d639c4f3cdc31a732c77f1fae983de3f55fc30de0db7f15567b824fc30ffc6f5",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v7/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ],
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "supersededBy": "chicken_noodle_shopkeeper_sheet_walkfix_v7"
+    },
+    {
+      "id": "chicken_garden_neighbor_sheet_v7",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-d6bf3b22-6442-4235-97fa-58bbd8c64a18.png",
+      "source": "art/production/ai_image_v7/sources/chicken_garden_neighbor_sheet_v7.png",
+      "prompt": "art/production/ai_image_v7/prompts/chicken_garden_neighbor_sheet_v7.md",
+      "sourceSha256": "df7570f0cbf6f30dc58d9167a9b09151ac88ed6e2aa9f796e1b5a78b6731b96a",
+      "originalToolOutputSha256": "df7570f0cbf6f30dc58d9167a9b09151ac88ed6e2aa9f796e1b5a78b6731b96a",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 9,
+        "width": 1526,
+        "height": 1015,
+        "transparent": 942078,
+        "visible": 630786
+      },
+      "status": "superseded_animation_candidate_unapproved",
+      "promptSha256": "55e33a302dc343157867c62fd6db6d859666813930cd8c5f1bf7baf3b6b29261",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+          "retainedPath": "art/production/ai_image_v7/references/chicken_tea_vendor_frame_13.png",
+          "sha256": "d639c4f3cdc31a732c77f1fae983de3f55fc30de0db7f15567b824fc30ffc6f5",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v7/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ],
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "supersededBy": "chicken_garden_neighbor_sheet_walkfix_v7"
+    },
+    {
+      "id": "chicken_laundry_neighbor_sheet_v7",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-dafe2464-7517-40ff-a9b6-99f668883227.png",
+      "source": "art/production/ai_image_v7/sources/chicken_laundry_neighbor_sheet_v7.png",
+      "prompt": "art/production/ai_image_v7/prompts/chicken_laundry_neighbor_sheet_v7.md",
+      "sourceSha256": "234bbded11f922f9a33221234954532c979a6a4896fb6894c0f26a40938a5016",
+      "originalToolOutputSha256": "234bbded11f922f9a33221234954532c979a6a4896fb6894c0f26a40938a5016",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 31,
+        "width": 1518,
+        "height": 939,
+        "transparent": 960356,
+        "visible": 612508
+      },
+      "status": "superseded_animation_candidate_unapproved",
+      "promptSha256": "37a86986818148c1bef5584bc0460e32824b4c33236266c669811c31b8fd5381",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+          "retainedPath": "art/production/ai_image_v7/references/chicken_tea_vendor_frame_13.png",
+          "sha256": "d639c4f3cdc31a732c77f1fae983de3f55fc30de0db7f15567b824fc30ffc6f5",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v7/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ],
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "supersededBy": "chicken_laundry_neighbor_sheet_walkfix_v7"
+    },
+    {
+      "id": "chicken_strolling_reader_sheet_v7",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-28975e4f-30f7-4cec-b5cc-02577966fea3.png",
+      "source": "art/production/ai_image_v7/sources/chicken_strolling_reader_sheet_v7.png",
+      "prompt": "art/production/ai_image_v7/prompts/chicken_strolling_reader_sheet_v7.md",
+      "sourceSha256": "05ff269cef4c9b071312af69708352b433e3fe3933ce7f75b87fc84a521f03a2",
+      "originalToolOutputSha256": "05ff269cef4c9b071312af69708352b433e3fe3933ce7f75b87fc84a521f03a2",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 9,
+        "width": 1522,
+        "height": 1015,
+        "transparent": 1047322,
+        "visible": 525542
+      },
+      "status": "superseded_animation_candidate_unapproved",
+      "promptSha256": "ba5735f487fa84de434c6ec5012cb3d03c81aa8b2a380d17df24b2579f2cd08b",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+          "retainedPath": "art/production/ai_image_v7/references/chicken_tea_vendor_frame_13.png",
+          "sha256": "d639c4f3cdc31a732c77f1fae983de3f55fc30de0db7f15567b824fc30ffc6f5",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v7/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ],
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "supersededBy": "chicken_strolling_reader_sheet_walkfix_v7"
+    },
+    {
+      "id": "chicken_visiting_child_sheet_v7",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-cabab459-86d3-4e58-aaee-6c37ec59de30.png",
+      "source": "art/production/ai_image_v7/sources/chicken_visiting_child_sheet_v7.png",
+      "prompt": "art/production/ai_image_v7/prompts/chicken_visiting_child_sheet_v7.md",
+      "sourceSha256": "fb24be148128fff3bc65ac56788dbbbbfb76486a7f72b5353cf0c455de4bdad6",
+      "originalToolOutputSha256": "fb24be148128fff3bc65ac56788dbbbbfb76486a7f72b5353cf0c455de4bdad6",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 13,
+        "width": 1520,
+        "height": 985,
+        "transparent": 1037731,
+        "visible": 535133
+      },
+      "status": "superseded_animation_candidate_unapproved",
+      "promptSha256": "675d311df66f71407ae21f9b15f201701e2bf8d654005f6421e9c2c35310f267",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+          "retainedPath": "art/production/ai_image_v7/references/chicken_tea_vendor_frame_13.png",
+          "sha256": "d639c4f3cdc31a732c77f1fae983de3f55fc30de0db7f15567b824fc30ffc6f5",
+          "visualApproval": "reference_only"
+        },
+        {
+          "actualInputPath": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "retainedPath": "art/production/ai_image_v7/references/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0",
+          "visualApproval": "reference_only"
+        }
+      ],
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "supersededBy": "chicken_visiting_child_sheet_walkfix_v7"
+    },
+    {
+      "id": "chicken_flower_shopkeeper_sheet_walkfix_v7",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-372fbcd7-6f16-460e-807a-635369739244.png",
+      "source": "art/production/ai_image_v7/sources/chicken_flower_shopkeeper_sheet_walkfix_v7.png",
+      "prompt": "art/production/ai_image_v7/prompts/chicken_flower_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "f75f5822421cfe2e6a08eaa170054f71765f17927668ebdcd7caa313083a949e",
+      "originalToolOutputSha256": "f75f5822421cfe2e6a08eaa170054f71765f17927668ebdcd7caa313083a949e",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 65,
+        "top": 31,
+        "width": 1433,
+        "height": 959,
+        "transparent": 985438,
+        "visible": 587426
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "a5c0a856e962747f27a185d873f75b67b2045bf2efd2c9aa52944c3b54a81063",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_flower_shopkeeper_sheet_v7.png",
+          "retainedPath": "art/production/ai_image_v7/sources/chicken_flower_shopkeeper_sheet_v7.png",
+          "sha256": "eed02d8a3fc42bb049fc6fdd01e4efdf6ec2e8e21a9b9b57ffaeeb5136104b89",
+          "visualApproval": "reference_only"
+        }
+      ],
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_flower_shopkeeper_sheet_v7.png"
+      ]
+    },
+    {
+      "id": "chicken_book_shopkeeper_sheet_walkfix_v7",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-e5a1dac3-7161-40eb-98ab-c563df7bf56a.png",
+      "source": "art/production/ai_image_v7/sources/chicken_book_shopkeeper_sheet_walkfix_v7.png",
+      "prompt": "art/production/ai_image_v7/prompts/chicken_book_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "cdc65724df7644f9e0088733c3d1c4f32550a2424e2bbf42ae6363f0ad5075ec",
+      "originalToolOutputSha256": "cdc65724df7644f9e0088733c3d1c4f32550a2424e2bbf42ae6363f0ad5075ec",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 17,
+        "width": 1518,
+        "height": 973,
+        "transparent": 911853,
+        "visible": 661011
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "a5c0a856e962747f27a185d873f75b67b2045bf2efd2c9aa52944c3b54a81063",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_book_shopkeeper_sheet_v7.png",
+          "retainedPath": "art/production/ai_image_v7/sources/chicken_book_shopkeeper_sheet_v7.png",
+          "sha256": "2bd7781d3f24e1edabbebe02dae56ec45654df13bb553eaca201b794789bc718",
+          "visualApproval": "reference_only"
+        }
+      ],
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_book_shopkeeper_sheet_v7.png"
+      ]
+    },
+    {
+      "id": "chicken_sweet_shopkeeper_sheet_walkfix_v7",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-1900e7b0-5544-436f-827b-b2c1643709d7.png",
+      "source": "art/production/ai_image_v7/sources/chicken_sweet_shopkeeper_sheet_walkfix_v7.png",
+      "prompt": "art/production/ai_image_v7/prompts/chicken_sweet_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "d23951f43085144fc2f50f7a9ad8a823d9aecfaec8eda196f095cd74822bfdce",
+      "originalToolOutputSha256": "d23951f43085144fc2f50f7a9ad8a823d9aecfaec8eda196f095cd74822bfdce",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 25,
+        "top": 3,
+        "width": 1493,
+        "height": 999,
+        "transparent": 962502,
+        "visible": 610362
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "a5c0a856e962747f27a185d873f75b67b2045bf2efd2c9aa52944c3b54a81063",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_sweet_shopkeeper_sheet_v7.png",
+          "retainedPath": "art/production/ai_image_v7/sources/chicken_sweet_shopkeeper_sheet_v7.png",
+          "sha256": "565ee7dbec756b3630aa57f851da4cbba4d434978a9b86b4d39393851e58bc61",
+          "visualApproval": "reference_only"
+        }
+      ],
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_sweet_shopkeeper_sheet_v7.png"
+      ]
+    },
+    {
+      "id": "chicken_noodle_shopkeeper_sheet_walkfix_v7",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-2be81242-b742-4b1e-99ff-9e8b1451a76b.png",
+      "source": "art/production/ai_image_v7/sources/chicken_noodle_shopkeeper_sheet_walkfix_v7.png",
+      "prompt": "art/production/ai_image_v7/prompts/chicken_noodle_shopkeeper_sheet_walkfix_v7.md",
+      "sourceSha256": "85cd49803a1c94cec23f6202421a382089955049999317305a70256898ee8ee0",
+      "originalToolOutputSha256": "85cd49803a1c94cec23f6202421a382089955049999317305a70256898ee8ee0",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 65,
+        "top": 31,
+        "width": 1453,
+        "height": 957,
+        "transparent": 1010503,
+        "visible": 562361
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "a5c0a856e962747f27a185d873f75b67b2045bf2efd2c9aa52944c3b54a81063",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_noodle_shopkeeper_sheet_v7.png",
+          "retainedPath": "art/production/ai_image_v7/sources/chicken_noodle_shopkeeper_sheet_v7.png",
+          "sha256": "442073601c4c87873766a2f07030fe02c82cbdb20f9ab6ce71280ac5745f57e4",
+          "visualApproval": "reference_only"
+        }
+      ],
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_noodle_shopkeeper_sheet_v7.png"
+      ]
+    },
+    {
+      "id": "chicken_garden_neighbor_sheet_walkfix_v7",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-fde4fe24-a24a-417f-a4e7-b662713fcc6e.png",
+      "source": "art/production/ai_image_v7/sources/chicken_garden_neighbor_sheet_walkfix_v7.png",
+      "prompt": "art/production/ai_image_v7/prompts/chicken_garden_neighbor_sheet_walkfix_v7.md",
+      "sourceSha256": "bbee28e4a08bab79664afce8a901d440c88481b6a2199948d2418ef9afbc5dd5",
+      "originalToolOutputSha256": "bbee28e4a08bab79664afce8a901d440c88481b6a2199948d2418ef9afbc5dd5",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 21,
+        "width": 1516,
+        "height": 956,
+        "transparent": 931334,
+        "visible": 641530
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "51211317d000e6b782290806833b085d4c13de93260780b03f8464dab200c870",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_garden_neighbor_sheet_v7.png",
+          "retainedPath": "art/production/ai_image_v7/sources/chicken_garden_neighbor_sheet_v7.png",
+          "sha256": "df7570f0cbf6f30dc58d9167a9b09151ac88ed6e2aa9f796e1b5a78b6731b96a",
+          "visualApproval": "reference_only"
+        }
+      ],
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_garden_neighbor_sheet_v7.png"
+      ]
+    },
+    {
+      "id": "chicken_laundry_neighbor_sheet_walkfix_v7",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-95785cf2-4848-4b08-bff4-72f07b37a31c.png",
+      "source": "art/production/ai_image_v7/sources/chicken_laundry_neighbor_sheet_walkfix_v7.png",
+      "prompt": "art/production/ai_image_v7/prompts/chicken_laundry_neighbor_sheet_walkfix_v7.md",
+      "sourceSha256": "6631634fc48b688ff3624850e7013f520a296e841f79fab9bb55c161fb47945e",
+      "originalToolOutputSha256": "6631634fc48b688ff3624850e7013f520a296e841f79fab9bb55c161fb47945e",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 25,
+        "top": 21,
+        "width": 1493,
+        "height": 979,
+        "transparent": 941877,
+        "visible": 630987
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "a5c0a856e962747f27a185d873f75b67b2045bf2efd2c9aa52944c3b54a81063",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_laundry_neighbor_sheet_v7.png",
+          "retainedPath": "art/production/ai_image_v7/sources/chicken_laundry_neighbor_sheet_v7.png",
+          "sha256": "234bbded11f922f9a33221234954532c979a6a4896fb6894c0f26a40938a5016",
+          "visualApproval": "reference_only"
+        }
+      ],
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_laundry_neighbor_sheet_v7.png"
+      ]
+    },
+    {
+      "id": "chicken_strolling_reader_sheet_walkfix_v7",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-ef7b74b5-1971-49eb-9c3c-56a81074fb19.png",
+      "source": "art/production/ai_image_v7/sources/chicken_strolling_reader_sheet_walkfix_v7.png",
+      "prompt": "art/production/ai_image_v7/prompts/chicken_strolling_reader_sheet_walkfix_v7.md",
+      "sourceSha256": "2dd23857879e2343225b8ebea87c8f5605f83c19e9fa6e972689953cc9e3fa8c",
+      "originalToolOutputSha256": "2dd23857879e2343225b8ebea87c8f5605f83c19e9fa6e972689953cc9e3fa8c",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 35,
+        "top": 17,
+        "width": 1487,
+        "height": 981,
+        "transparent": 1042872,
+        "visible": 529992
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "a5c0a856e962747f27a185d873f75b67b2045bf2efd2c9aa52944c3b54a81063",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_strolling_reader_sheet_v7.png",
+          "retainedPath": "art/production/ai_image_v7/sources/chicken_strolling_reader_sheet_v7.png",
+          "sha256": "05ff269cef4c9b071312af69708352b433e3fe3933ce7f75b87fc84a521f03a2",
+          "visualApproval": "reference_only"
+        }
+      ],
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_strolling_reader_sheet_v7.png"
+      ]
+    },
+    {
+      "id": "chicken_visiting_child_sheet_walkfix_v7",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-47576a35-605a-4747-9ec3-6b85a336fb5c.png",
+      "source": "art/production/ai_image_v7/sources/chicken_visiting_child_sheet_walkfix_v7.png",
+      "prompt": "art/production/ai_image_v7/prompts/chicken_visiting_child_sheet_walkfix_v7.md",
+      "sourceSha256": "aa2f52472b27571809fc3b46e466cb4bd76ca56db7b18aeac9e3933604ea0ea2",
+      "originalToolOutputSha256": "aa2f52472b27571809fc3b46e466cb4bd76ca56db7b18aeac9e3933604ea0ea2",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 39,
+        "top": 31,
+        "width": 1471,
+        "height": 973,
+        "transparent": 971259,
+        "visible": 601605
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "promptSha256": "a5c0a856e962747f27a185d873f75b67b2045bf2efd2c9aa52944c3b54a81063",
+      "references": [
+        {
+          "actualInputPath": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_visiting_child_sheet_v7.png",
+          "retainedPath": "art/production/ai_image_v7/sources/chicken_visiting_child_sheet_v7.png",
+          "sha256": "fb24be148128fff3bc65ac56788dbbbbfb76486a7f72b5353cf0c455de4bdad6",
+          "visualApproval": "reference_only"
+        }
+      ],
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_visiting_child_sheet_v7.png"
+      ]
+    }
+  ],
+  "sceneBlueprintSha256": "1f0b8a388108c67e7893b4b00286b4a1ea01e8d5047fb88a6d007c602aa96c60",
+  "contentSummary": {
+    "newBuildings": 6,
+    "newActors": 8,
+    "newCels": 48,
+    "totalSceneSlots": 49,
+    "totalBuildings": 11,
+    "totalActors": 16,
+    "preservedTargets": 24,
+    "preservedReveals": 6
+  },
+  "runtimeVerification": {
+    "threeChapters": {
+      "path": "art/review/ai_image_v7/three_chapters/runtime_report.json",
+      "sha256": "46fc93e5661fbb5ce127b45f5b06894f92956eb83d396eb58245aa31bcaf0323"
+    },
+    "finalFirstChapter": {
+      "path": "art/review/ai_image_v7/chapter_1_followup/runtime_report.json",
+      "sha256": "160d2d4a207e61326e99b2e1bd12d41b7af17fdefef398e7fe17836ba7450dc9"
+    },
+    "sourceReview": {
+      "path": "art/review/ai_image_v7/source_review.json",
+      "sha256": "f7ed83a5f7f54de9c37782ff417a9b7067a69a257900102666bd4e08db65f3e6"
+    },
+    "placement": {
+      "path": "art/review/ai_image_v7/placement_review.json",
+      "sha256": "0153fa6f11550cf6202b05ed355a69a748819ac43d259ab0b10868acc314f3ac"
+    },
+    "assetIntegrity": {
+      "path": "art/review/ai_image_v7/asset_integrity_report.json",
+      "sha256": "9ec489a6a8dd2bca64369d9b25255aa2a79e944e7e9d54451672ec160e324738"
+    },
+    "status": "web_mobile_verified",
+    "playerVisualApproval": "pending",
+    "wechatPhone": "not_run"
+  }
+}

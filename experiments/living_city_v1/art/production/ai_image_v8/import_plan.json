@@ -1,0 +1,701 @@
+{
+  "batchId": "ai_image_v8",
+  "sourceType": "codex_builtin_image_gen",
+  "styleId": "cozy_flat_town_v5",
+  "assets": [
+    {
+      "name": "books_courtyard_ground_v8",
+      "source": "courtyard_books_v8",
+      "stage": "scene",
+      "sceneSlotId": "lc8_books_courtyard_ground",
+      "width": 550,
+      "height": 330,
+      "align": "center",
+      "resizeFit": "fill",
+      "registration": "flat_ground_alpha_bbox_resampled_to_authored_footprint_no_repainting",
+      "runtime": "simple2d_scene/lc8_books_courtyard_ground.png"
+    },
+    {
+      "name": "flowers_courtyard_ground_v8",
+      "source": "courtyard_flowers_v8",
+      "stage": "scene",
+      "sceneSlotId": "lc8_flowers_courtyard_ground",
+      "width": 530,
+      "height": 220,
+      "align": "center",
+      "resizeFit": "fill",
+      "registration": "flat_ground_alpha_bbox_resampled_to_authored_footprint_no_repainting",
+      "runtime": "simple2d_scene/lc8_flowers_courtyard_ground.png"
+    },
+    {
+      "name": "tea_courtyard_ground_v8",
+      "source": "courtyard_tea_v8",
+      "stage": "scene",
+      "sceneSlotId": "lc8_tea_courtyard_ground",
+      "width": 480,
+      "height": 460,
+      "align": "center",
+      "resizeFit": "fill",
+      "registration": "flat_ground_alpha_bbox_resampled_to_authored_footprint_no_repainting",
+      "runtime": "simple2d_scene/lc8_tea_courtyard_ground.png"
+    },
+    {
+      "name": "sweets_courtyard_ground_v8",
+      "source": "courtyard_sweets_v8",
+      "stage": "scene",
+      "sceneSlotId": "lc8_sweets_courtyard_ground",
+      "width": 480,
+      "height": 280,
+      "align": "center",
+      "resizeFit": "fill",
+      "registration": "flat_ground_alpha_bbox_resampled_to_authored_footprint_no_repainting",
+      "runtime": "simple2d_scene/lc8_sweets_courtyard_ground.png"
+    },
+    {
+      "name": "noodles_courtyard_ground_v8",
+      "source": "courtyard_noodles_v8",
+      "stage": "scene",
+      "sceneSlotId": "lc8_noodles_courtyard_ground",
+      "width": 520,
+      "height": 290,
+      "align": "center",
+      "resizeFit": "fill",
+      "registration": "flat_ground_alpha_bbox_resampled_to_authored_footprint_no_repainting",
+      "runtime": "simple2d_scene/lc8_noodles_courtyard_ground.png"
+    },
+    {
+      "name": "sage_courtyard_ground_v8",
+      "source": "courtyard_sage_v8",
+      "stage": "scene",
+      "sceneSlotId": "lc8_sage_courtyard_ground",
+      "width": 530,
+      "height": 220,
+      "align": "center",
+      "resizeFit": "fill",
+      "registration": "flat_ground_alpha_bbox_resampled_to_authored_footprint_no_repainting",
+      "runtime": "simple2d_scene/lc8_sage_courtyard_ground.png"
+    },
+    {
+      "name": "rose_courtyard_ground_v8",
+      "source": "courtyard_rose_v8",
+      "stage": "scene",
+      "sceneSlotId": "lc8_rose_courtyard_ground",
+      "width": 520,
+      "height": 240,
+      "align": "center",
+      "resizeFit": "fill",
+      "registration": "flat_ground_alpha_bbox_resampled_to_authored_footprint_no_repainting",
+      "runtime": "simple2d_scene/lc8_rose_courtyard_ground.png"
+    },
+    {
+      "name": "books_flower_border_v8",
+      "source": "flower_border_v8",
+      "stage": "scene",
+      "sceneSlotId": "lc8_books_flower_border",
+      "width": 180,
+      "height": 90,
+      "align": "bottom",
+      "footpoint": {
+        "x": 90,
+        "y": 85
+      },
+      "runtime": "simple2d_scene/lc8_books_flower_border.png"
+    },
+    {
+      "name": "flowers_flower_border_v8",
+      "source": "flower_border_v8",
+      "stage": "scene",
+      "sceneSlotId": "lc8_flowers_flower_border",
+      "width": 190,
+      "height": 90,
+      "align": "bottom",
+      "footpoint": {
+        "x": 95,
+        "y": 85
+      },
+      "runtime": "simple2d_scene/lc8_flowers_flower_border.png"
+    },
+    {
+      "name": "inner_lane_flower_border_v8",
+      "source": "flower_border_v8",
+      "stage": "scene",
+      "sceneSlotId": "lc8_inner_lane_flower_border",
+      "width": 180,
+      "height": 90,
+      "align": "bottom",
+      "footpoint": {
+        "x": 90,
+        "y": 85
+      },
+      "runtime": "simple2d_scene/lc8_inner_lane_flower_border.png"
+    },
+    {
+      "name": "tea_shrub_v8",
+      "source": "shrub_clump_v8",
+      "stage": "scene",
+      "sceneSlotId": "lc8_tea_shrub",
+      "width": 140,
+      "height": 100,
+      "align": "bottom",
+      "footpoint": {
+        "x": 70,
+        "y": 95
+      },
+      "runtime": "simple2d_scene/lc8_tea_shrub.png"
+    },
+    {
+      "name": "sweets_shrub_v8",
+      "source": "shrub_clump_v8",
+      "stage": "scene",
+      "sceneSlotId": "lc8_sweets_shrub",
+      "width": 140,
+      "height": 100,
+      "align": "bottom",
+      "footpoint": {
+        "x": 70,
+        "y": 95
+      },
+      "runtime": "simple2d_scene/lc8_sweets_shrub.png"
+    },
+    {
+      "name": "sage_fence_v8",
+      "source": "low_garden_fence_v8",
+      "stage": "scene",
+      "sceneSlotId": "lc8_sage_fence",
+      "width": 210,
+      "height": 90,
+      "align": "bottom",
+      "footpoint": {
+        "x": 105,
+        "y": 85
+      },
+      "runtime": "simple2d_scene/lc8_sage_fence.png"
+    },
+    {
+      "name": "rose_fence_v8",
+      "source": "low_garden_fence_v8",
+      "stage": "scene",
+      "sceneSlotId": "lc8_rose_fence",
+      "width": 190,
+      "height": 90,
+      "align": "bottom",
+      "footpoint": {
+        "x": 95,
+        "y": 85
+      },
+      "runtime": "simple2d_scene/lc8_rose_fence.png"
+    },
+    {
+      "name": "target_tea_clay_whistle_v8",
+      "source": "targets_tools_v8",
+      "stage": "target",
+      "targetId": "tea_clay_whistle",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      },
+      "width": 256,
+      "height": 242,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "targets/tea_clay_whistle.png"
+    },
+    {
+      "name": "target_tailor_thimble_v8",
+      "source": "targets_tools_v8",
+      "stage": "target",
+      "targetId": "tailor_thimble",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      },
+      "width": 249,
+      "height": 256,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "targets/tailor_thimble.png"
+    },
+    {
+      "name": "target_banner_knot_v8",
+      "source": "targets_tools_v8",
+      "stage": "target",
+      "targetId": "banner_knot",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      },
+      "width": 209,
+      "height": 256,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "targets/banner_knot.png"
+    },
+    {
+      "name": "target_chestnut_tongs_v8",
+      "source": "targets_tools_v8",
+      "stage": "target",
+      "targetId": "chestnut_tongs",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      },
+      "width": 256,
+      "height": 228,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "targets/chestnut_tongs.png"
+    },
+    {
+      "name": "target_pocket_watch_v8",
+      "source": "targets_keepsakes_v8",
+      "stage": "target",
+      "targetId": "pocket_watch",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 580
+      },
+      "width": 219,
+      "height": 256,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "targets/pocket_watch.png"
+    },
+    {
+      "name": "target_sewing_scissors_v8",
+      "source": "targets_keepsakes_v8",
+      "stage": "target",
+      "targetId": "sewing_scissors",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 580
+      },
+      "width": 256,
+      "height": 199,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "targets/sewing_scissors.png"
+    },
+    {
+      "name": "target_blue_feather_v8",
+      "source": "targets_keepsakes_v8",
+      "stage": "target",
+      "targetId": "blue_feather",
+      "crop": {
+        "left": 0,
+        "top": 580,
+        "width": 768,
+        "height": 444
+      },
+      "width": 256,
+      "height": 156,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "targets/blue_feather.png"
+    },
+    {
+      "name": "target_sealed_letter_v8",
+      "source": "targets_keepsakes_v8",
+      "stage": "target",
+      "targetId": "sealed_letter",
+      "crop": {
+        "left": 768,
+        "top": 580,
+        "width": 768,
+        "height": 444
+      },
+      "width": 256,
+      "height": 185,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "targets/sealed_letter.png"
+    },
+    {
+      "name": "target_honey_dipper_v8",
+      "source": "targets_pantry_v8",
+      "stage": "target",
+      "targetId": "honey_dipper",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      },
+      "width": 256,
+      "height": 213,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "targets/honey_dipper.png"
+    },
+    {
+      "name": "target_seed_packet_v8",
+      "source": "targets_pantry_v8",
+      "stage": "target",
+      "targetId": "seed_packet",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      },
+      "width": 209,
+      "height": 256,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "targets/seed_packet.png"
+    },
+    {
+      "name": "target_orchard_apple_v8",
+      "source": "targets_pantry_v8",
+      "stage": "target",
+      "targetId": "orchard_apple",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      },
+      "width": 249,
+      "height": 256,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "targets/orchard_apple.png"
+    },
+    {
+      "name": "target_golden_bun_v8",
+      "source": "targets_pantry_v8",
+      "stage": "target",
+      "targetId": "golden_bun",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      },
+      "width": 256,
+      "height": 220,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "targets/golden_bun.png"
+    },
+    {
+      "name": "chicken_tea_vendor_v8_frame_01",
+      "source": "chicken_tea_vendor_sheet_v8",
+      "stage": "character",
+      "actor": "tea_vendor",
+      "frameIndex": 1,
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.403470715835141,
+      "runtime": "cels/tea_vendor/chicken_tea_vendor_v8_frame_01.png"
+    },
+    {
+      "name": "chicken_tea_vendor_v8_frame_02",
+      "source": "chicken_tea_vendor_sheet_v8",
+      "stage": "character",
+      "actor": "tea_vendor",
+      "frameIndex": 2,
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.403470715835141,
+      "runtime": "cels/tea_vendor/chicken_tea_vendor_v8_frame_02.png"
+    },
+    {
+      "name": "chicken_tea_vendor_v8_frame_03",
+      "source": "chicken_tea_vendor_sheet_v8",
+      "stage": "character",
+      "actor": "tea_vendor",
+      "frameIndex": 3,
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.403470715835141,
+      "runtime": "cels/tea_vendor/chicken_tea_vendor_v8_frame_03.png"
+    },
+    {
+      "name": "chicken_tea_vendor_v8_frame_04",
+      "source": "chicken_tea_vendor_sheet_v8",
+      "stage": "character",
+      "actor": "tea_vendor",
+      "frameIndex": 4,
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.403470715835141,
+      "runtime": "cels/tea_vendor/chicken_tea_vendor_v8_frame_04.png"
+    },
+    {
+      "name": "chicken_tea_regular_v8_frame_01",
+      "source": "chicken_tea_regular_sheet_walkfix_v8",
+      "stage": "character",
+      "actor": "tea_regular",
+      "frameIndex": 1,
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 355,
+        "height": 444
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4793814432989691,
+      "runtime": "cels/tea_regular/chicken_tea_regular_v8_frame_01.png"
+    },
+    {
+      "name": "chicken_tea_regular_v8_frame_02",
+      "source": "chicken_tea_regular_sheet_walkfix_v8",
+      "stage": "character",
+      "actor": "tea_regular",
+      "frameIndex": 2,
+      "crop": {
+        "left": 355,
+        "top": 0,
+        "width": 355,
+        "height": 444
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4793814432989691,
+      "runtime": "cels/tea_regular/chicken_tea_regular_v8_frame_02.png"
+    },
+    {
+      "name": "chicken_tea_regular_v8_frame_03",
+      "source": "chicken_tea_regular_sheet_walkfix_v8",
+      "stage": "character",
+      "actor": "tea_regular",
+      "frameIndex": 3,
+      "crop": {
+        "left": 710,
+        "top": 0,
+        "width": 354,
+        "height": 444
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4793814432989691,
+      "runtime": "cels/tea_regular/chicken_tea_regular_v8_frame_03.png"
+    },
+    {
+      "name": "chicken_tea_regular_v8_frame_04",
+      "source": "chicken_tea_regular_sheet_walkfix_v8",
+      "stage": "character",
+      "actor": "tea_regular",
+      "frameIndex": 4,
+      "crop": {
+        "left": 1064,
+        "top": 0,
+        "width": 355,
+        "height": 444
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4793814432989691,
+      "runtime": "cels/tea_regular/chicken_tea_regular_v8_frame_04.png"
+    },
+    {
+      "name": "chicken_tea_regular_v8_frame_05",
+      "source": "chicken_tea_regular_sheet_walkfix_v8",
+      "stage": "character",
+      "actor": "tea_regular",
+      "frameIndex": 5,
+      "crop": {
+        "left": 1419,
+        "top": 0,
+        "width": 355,
+        "height": 444
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4793814432989691,
+      "runtime": "cels/tea_regular/chicken_tea_regular_v8_frame_05.png"
+    },
+    {
+      "name": "chicken_tea_regular_v8_frame_06",
+      "source": "chicken_tea_regular_sheet_walkfix_v8",
+      "stage": "character",
+      "actor": "tea_regular",
+      "frameIndex": 6,
+      "crop": {
+        "left": 0,
+        "top": 444,
+        "width": 355,
+        "height": 443
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4793814432989691,
+      "runtime": "cels/tea_regular/chicken_tea_regular_v8_frame_06.png"
+    },
+    {
+      "name": "chicken_tea_regular_v8_frame_07",
+      "source": "chicken_tea_regular_sheet_walkfix_v8",
+      "stage": "character",
+      "actor": "tea_regular",
+      "frameIndex": 7,
+      "crop": {
+        "left": 355,
+        "top": 444,
+        "width": 355,
+        "height": 443
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.4793814432989691,
+      "runtime": "cels/tea_regular/chicken_tea_regular_v8_frame_07.png"
+    },
+    {
+      "name": "chicken_tea_regular_v8_frame_08",
+      "source": "chicken_tea_regular_sheet_walkfix_v8",
+      "stage": "character",
+      "actor": "tea_regular",
+      "frameIndex": 8,
+      "crop": {
+        "left": 710,
+        "top": 444,
+        "width": 354,
+        "height": 443
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.4793814432989691,
+      "runtime": "cels/tea_regular/chicken_tea_regular_v8_frame_08.png"
+    },
+    {
+      "name": "chicken_tea_regular_v8_frame_09",
+      "source": "chicken_tea_regular_sheet_walkfix_v8",
+      "stage": "character",
+      "actor": "tea_regular",
+      "frameIndex": 9,
+      "crop": {
+        "left": 1064,
+        "top": 444,
+        "width": 355,
+        "height": 443
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4793814432989691,
+      "runtime": "cels/tea_regular/chicken_tea_regular_v8_frame_09.png"
+    },
+    {
+      "name": "chicken_tea_regular_v8_frame_10",
+      "source": "chicken_tea_regular_sheet_walkfix_v8",
+      "stage": "character",
+      "actor": "tea_regular",
+      "frameIndex": 10,
+      "crop": {
+        "left": 1419,
+        "top": 444,
+        "width": 355,
+        "height": 443
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4793814432989691,
+      "runtime": "cels/tea_regular/chicken_tea_regular_v8_frame_10.png"
+    }
+  ]
+}

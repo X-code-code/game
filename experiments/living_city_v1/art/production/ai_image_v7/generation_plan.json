@@ -1,0 +1,242 @@
+{
+  "batchId": "ai_image_v7",
+  "styleId": "cozy_flat_town_v5",
+  "jobs": [
+    {
+      "id": "shop_flower_v7",
+      "stage": "scene",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "transparent": true,
+      "prompt": "Original cozy 2D hand-drawn cartoon mobile-game asset. Match the supplied references in warm brown clean fine outlines and simple pastel shapes. Soft sage, cream, dusty blue, muted coral, peach, lavender; almost flat matte color, just one restrained shadow tone. Frontal elevation with slight top-down roof visibility, parallel perspective. No photorealism, 3D, grain, textured wood, airbrush, glow, gradient halo, cast shadow, checkerboard, words, lettering, watermark or scenery. True transparent PNG alpha outside the complete object. Comfortable clear margin, nothing clipped.\n\nONE complete freestanding neighborhood flower shop, a low cream cottage with a broad sage glazed greenhouse roof, large clean blue-glass shop windows, a wide central open doorway, three colorful simple flower pots on a low attached display ledge, a round hanging flower pictogram. Unique greenhouse silhouette. No striped awning, no vines covering the building, no people, no trees. Full facade and all feet/base visible.\nOne isolated complete building PNG, no extra props detached from facade, no character baked in. This is a game facade used around 320 world units wide; make roof, door and shop function clear at phone size."
+    },
+    {
+      "id": "shop_books_v7",
+      "stage": "scene",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "transparent": true,
+      "prompt": "Original cozy 2D hand-drawn cartoon mobile-game asset. Match the supplied references in warm brown clean fine outlines and simple pastel shapes. Soft sage, cream, dusty blue, muted coral, peach, lavender; almost flat matte color, just one restrained shadow tone. Frontal elevation with slight top-down roof visibility, parallel perspective. No photorealism, 3D, grain, textured wood, airbrush, glow, gradient halo, cast shadow, checkerboard, words, lettering, watermark or scenery. True transparent PNG alpha outside the complete object. Comfortable clear margin, nothing clipped.\n\nONE complete freestanding little bookshop, a dusty-blue painted narrow two-storey cottage, asymmetric cream gable roof and one round attic window, broad lower book-display window with colorful large readable book spines, a short wooden front step and doorway on the right, hanging open-book pictogram. Quiet distinctive tall silhouette. No striped awning, no flower garlands, no people or trees. Full facade and all feet/base visible.\nOne isolated complete building PNG, no extra props detached from facade, no character baked in. This is a game facade used around 320 world units wide; make roof, door and shop function clear at phone size."
+    },
+    {
+      "id": "shop_sweets_v7",
+      "stage": "scene",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "transparent": true,
+      "prompt": "Original cozy 2D hand-drawn cartoon mobile-game asset. Match the supplied references in warm brown clean fine outlines and simple pastel shapes. Soft sage, cream, dusty blue, muted coral, peach, lavender; almost flat matte color, just one restrained shadow tone. Frontal elevation with slight top-down roof visibility, parallel perspective. No photorealism, 3D, grain, textured wood, airbrush, glow, gradient halo, cast shadow, checkerboard, words, lettering, watermark or scenery. True transparent PNG alpha outside the complete object. Comfortable clear margin, nothing clipped.\n\nONE complete freestanding small sweet shop, wide low peach-and-cream facade, scalloped coral curved roof with a tiny cream chimney, rounded candy-display bay window, serving hatch with a few large pastel jars, pale-blue entrance door and round candy pictogram. Friendly low rounded silhouette. No vines, no people or trees. Full facade and all feet/base visible.\nOne isolated complete building PNG, no extra props detached from facade, no character baked in. This is a game facade used around 320 world units wide; make roof, door and shop function clear at phone size."
+    },
+    {
+      "id": "shop_noodles_v7",
+      "stage": "scene",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "transparent": true,
+      "prompt": "Original cozy 2D hand-drawn cartoon mobile-game asset. Match the supplied references in warm brown clean fine outlines and simple pastel shapes. Soft sage, cream, dusty blue, muted coral, peach, lavender; almost flat matte color, just one restrained shadow tone. Frontal elevation with slight top-down roof visibility, parallel perspective. No photorealism, 3D, grain, textured wood, airbrush, glow, gradient halo, cast shadow, checkerboard, words, lettering, watermark or scenery. True transparent PNG alpha outside the complete object. Comfortable clear margin, nothing clipped.\n\nONE complete freestanding small neighborhood noodle house, sage-and-dusty-blue painted wood facade, broad shallow muted-terracotta tiled roof, open counter window with two simple cream bowls and a pot visible, narrow coral doorway curtain with NO writing, hanging bowl-and-chopsticks pictogram, short front step. Distinct broad roof silhouette. No flowers, no people or trees. Full facade and all feet/base visible.\nOne isolated complete building PNG, no extra props detached from facade, no character baked in. This is a game facade used around 320 world units wide; make roof, door and shop function clear at phone size."
+    },
+    {
+      "id": "house_sage_v7",
+      "stage": "scene",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "transparent": true,
+      "prompt": "Original cozy 2D hand-drawn cartoon mobile-game asset. Match the supplied references in warm brown clean fine outlines and simple pastel shapes. Soft sage, cream, dusty blue, muted coral, peach, lavender; almost flat matte color, just one restrained shadow tone. Frontal elevation with slight top-down roof visibility, parallel perspective. No photorealism, 3D, grain, textured wood, airbrush, glow, gradient halo, cast shadow, checkerboard, words, lettering, watermark or scenery. True transparent PNG alpha outside the complete object. Comfortable clear margin, nothing clipped.\n\nONE complete freestanding cozy residential cottage, pale-sage plaster walls, cream gable roof with coral chimney, a short open porch, wooden sage front door, two round-edged windows with dusty-blue curtains, exactly one small empty wooden shoe bench beside the door. Simple lived-in home silhouette. No shop signs, awning, vines, people, trees or ground. Full facade and all feet/base visible.\nOne isolated complete building PNG, no extra props detached from facade, no character baked in. This is a game facade used around 320 world units wide; make roof, door and shop function clear at phone size."
+    },
+    {
+      "id": "house_rose_v7",
+      "stage": "scene",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "transparent": true,
+      "prompt": "Original cozy 2D hand-drawn cartoon mobile-game asset. Match the supplied references in warm brown clean fine outlines and simple pastel shapes. Soft sage, cream, dusty blue, muted coral, peach, lavender; almost flat matte color, just one restrained shadow tone. Frontal elevation with slight top-down roof visibility, parallel perspective. No photorealism, 3D, grain, textured wood, airbrush, glow, gradient halo, cast shadow, checkerboard, words, lettering, watermark or scenery. True transparent PNG alpha outside the complete object. Comfortable clear margin, nothing clipped.\n\nONE complete freestanding cozy residential cottage, muted rose-and-cream two-storey walls, dusty-lavender rounded roof, small upstairs wooden balcony with an empty railing, cream front door and two rounded windows, exactly one small terracotta plant pot. Distinct compact home silhouette. No shop signs, striped awning, vines, people, trees or ground. Full facade and all feet/base visible.\nOne isolated complete building PNG, no extra props detached from facade, no character baked in. This is a game facade used around 320 world units wide; make roof, door and shop function clear at phone size."
+    },
+    {
+      "id": "chicken_flower_shopkeeper_sheet_v7",
+      "actor": "flower_shopkeeper",
+      "stage": "characters",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "transparent": true,
+      "prompt": "Original cozy 2D hand-drawn cartoon mobile-game asset. Match the supplied references in warm brown clean fine outlines and simple pastel shapes. Soft sage, cream, dusty blue, muted coral, peach, lavender; almost flat matte color, just one restrained shadow tone. Frontal elevation with slight top-down roof visibility, parallel perspective. No photorealism, 3D, grain, textured wood, airbrush, glow, gradient halo, cast shadow, checkerboard, words, lettering, watermark or scenery. True transparent PNG alpha outside the complete object. Comfortable clear margin, nothing clipped.\n\nCHARACTER SPRITE SHEET, 1536x1024, exactly 3 columns x 2 rows, six equal square cells. Same ORIGINAL cream chicken with sage apron and tiny coral flower hairpin in every cell. Match reference 1's cream egg-shaped chicken head/body, red comb, tiny orange beak, rosy cheeks, short complete orange feet and soft feather wings; simplify into clean consistent cartoon shapes. Same design, clothing, height, body proportions, scale and feet baseline in all six cells. Face gently toward the right in a 3/4 side view. Each figure fully inside its own 512x512 cell with at least 70px blank margin. No grid, separators, labels, background, shadows or scenery.\nLEFT COLUMN: top idle pose 1 with both feet down, bottom idle pose 2 with a tiny natural wing/breathing change. CENTER COLUMN: top walking step 1 with left foot forward, bottom walking step 2 with right foot forward, real alternating feet, walking toward the right. RIGHT COLUMN: two consecutive frames where this character holds a small bouquet close to its beak and gently smells the flowers; bouquet stays visible in both frames. Include only the explicitly held job props. Maintain the same head and body geometry; do not replace wings with human hands. Complete sprite frames, nothing crosses a cell boundary. Transparent empty space around every figure. These frames will be mechanically cropped and registered to a common canvas/footpoint."
+    },
+    {
+      "id": "chicken_book_shopkeeper_sheet_v7",
+      "actor": "book_shopkeeper",
+      "stage": "characters",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "transparent": true,
+      "prompt": "Original cozy 2D hand-drawn cartoon mobile-game asset. Match the supplied references in warm brown clean fine outlines and simple pastel shapes. Soft sage, cream, dusty blue, muted coral, peach, lavender; almost flat matte color, just one restrained shadow tone. Frontal elevation with slight top-down roof visibility, parallel perspective. No photorealism, 3D, grain, textured wood, airbrush, glow, gradient halo, cast shadow, checkerboard, words, lettering, watermark or scenery. True transparent PNG alpha outside the complete object. Comfortable clear margin, nothing clipped.\n\nCHARACTER SPRITE SHEET, 1536x1024, exactly 3 columns x 2 rows, six equal square cells. Same ORIGINAL cream chicken with dusty-blue waistcoat and round brown reading glasses in every cell. Match reference 1's cream egg-shaped chicken head/body, red comb, tiny orange beak, rosy cheeks, short complete orange feet and soft feather wings; simplify into clean consistent cartoon shapes. Same design, clothing, height, body proportions, scale and feet baseline in all six cells. Face gently toward the right in a 3/4 side view. Each figure fully inside its own 512x512 cell with at least 70px blank margin. No grid, separators, labels, background, shadows or scenery.\nLEFT COLUMN: top idle pose 1 with both feet down, bottom idle pose 2 with a tiny natural wing/breathing change. CENTER COLUMN: top walking step 1 with left foot forward, bottom walking step 2 with right foot forward, real alternating feet, walking toward the right. RIGHT COLUMN: two consecutive frames where this character holds an open cream book with both wings and turns one page between the two frames. Include only the explicitly held job props. Maintain the same head and body geometry; do not replace wings with human hands. Complete sprite frames, nothing crosses a cell boundary. Transparent empty space around every figure. These frames will be mechanically cropped and registered to a common canvas/footpoint."
+    },
+    {
+      "id": "chicken_sweet_shopkeeper_sheet_v7",
+      "actor": "sweet_shopkeeper",
+      "stage": "characters",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "transparent": true,
+      "prompt": "Original cozy 2D hand-drawn cartoon mobile-game asset. Match the supplied references in warm brown clean fine outlines and simple pastel shapes. Soft sage, cream, dusty blue, muted coral, peach, lavender; almost flat matte color, just one restrained shadow tone. Frontal elevation with slight top-down roof visibility, parallel perspective. No photorealism, 3D, grain, textured wood, airbrush, glow, gradient halo, cast shadow, checkerboard, words, lettering, watermark or scenery. True transparent PNG alpha outside the complete object. Comfortable clear margin, nothing clipped.\n\nCHARACTER SPRITE SHEET, 1536x1024, exactly 3 columns x 2 rows, six equal square cells. Same ORIGINAL cream chicken with muted-coral apron and small cream baker hat in every cell. Match reference 1's cream egg-shaped chicken head/body, red comb, tiny orange beak, rosy cheeks, short complete orange feet and soft feather wings; simplify into clean consistent cartoon shapes. Same design, clothing, height, body proportions, scale and feet baseline in all six cells. Face gently toward the right in a 3/4 side view. Each figure fully inside its own 512x512 cell with at least 70px blank margin. No grid, separators, labels, background, shadows or scenery.\nLEFT COLUMN: top idle pose 1 with both feet down, bottom idle pose 2 with a tiny natural wing/breathing change. CENTER COLUMN: top walking step 1 with left foot forward, bottom walking step 2 with right foot forward, real alternating feet, walking toward the right. RIGHT COLUMN: two consecutive frames where this character holds and presents one large pastel wrapped candy, changing its wing angle slightly. Include only the explicitly held job props. Maintain the same head and body geometry; do not replace wings with human hands. Complete sprite frames, nothing crosses a cell boundary. Transparent empty space around every figure. These frames will be mechanically cropped and registered to a common canvas/footpoint."
+    },
+    {
+      "id": "chicken_noodle_shopkeeper_sheet_v7",
+      "actor": "noodle_shopkeeper",
+      "stage": "characters",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "transparent": true,
+      "prompt": "Original cozy 2D hand-drawn cartoon mobile-game asset. Match the supplied references in warm brown clean fine outlines and simple pastel shapes. Soft sage, cream, dusty blue, muted coral, peach, lavender; almost flat matte color, just one restrained shadow tone. Frontal elevation with slight top-down roof visibility, parallel perspective. No photorealism, 3D, grain, textured wood, airbrush, glow, gradient halo, cast shadow, checkerboard, words, lettering, watermark or scenery. True transparent PNG alpha outside the complete object. Comfortable clear margin, nothing clipped.\n\nCHARACTER SPRITE SHEET, 1536x1024, exactly 3 columns x 2 rows, six equal square cells. Same ORIGINAL cream chicken with pale-blue apron and short sage headscarf in every cell. Match reference 1's cream egg-shaped chicken head/body, red comb, tiny orange beak, rosy cheeks, short complete orange feet and soft feather wings; simplify into clean consistent cartoon shapes. Same design, clothing, height, body proportions, scale and feet baseline in all six cells. Face gently toward the right in a 3/4 side view. Each figure fully inside its own 512x512 cell with at least 70px blank margin. No grid, separators, labels, background, shadows or scenery.\nLEFT COLUMN: top idle pose 1 with both feet down, bottom idle pose 2 with a tiny natural wing/breathing change. CENTER COLUMN: top walking step 1 with left foot forward, bottom walking step 2 with right foot forward, real alternating feet, walking toward the right. RIGHT COLUMN: two consecutive frames where this character holds a small cream noodle bowl and stirs it with visible chopsticks, keeping bowl and chopsticks in both frames. Include only the explicitly held job props. Maintain the same head and body geometry; do not replace wings with human hands. Complete sprite frames, nothing crosses a cell boundary. Transparent empty space around every figure. These frames will be mechanically cropped and registered to a common canvas/footpoint."
+    },
+    {
+      "id": "chicken_garden_neighbor_sheet_v7",
+      "actor": "garden_neighbor",
+      "stage": "characters",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "transparent": true,
+      "prompt": "Original cozy 2D hand-drawn cartoon mobile-game asset. Match the supplied references in warm brown clean fine outlines and simple pastel shapes. Soft sage, cream, dusty blue, muted coral, peach, lavender; almost flat matte color, just one restrained shadow tone. Frontal elevation with slight top-down roof visibility, parallel perspective. No photorealism, 3D, grain, textured wood, airbrush, glow, gradient halo, cast shadow, checkerboard, words, lettering, watermark or scenery. True transparent PNG alpha outside the complete object. Comfortable clear margin, nothing clipped.\n\nCHARACTER SPRITE SHEET, 1536x1024, exactly 3 columns x 2 rows, six equal square cells. Same ORIGINAL cream chicken with sage overalls and a broad straw garden hat in every cell. Match reference 1's cream egg-shaped chicken head/body, red comb, tiny orange beak, rosy cheeks, short complete orange feet and soft feather wings; simplify into clean consistent cartoon shapes. Same design, clothing, height, body proportions, scale and feet baseline in all six cells. Face gently toward the right in a 3/4 side view. Each figure fully inside its own 512x512 cell with at least 70px blank margin. No grid, separators, labels, background, shadows or scenery.\nLEFT COLUMN: top idle pose 1 with both feet down, bottom idle pose 2 with a tiny natural wing/breathing change. CENTER COLUMN: top walking step 1 with left foot forward, bottom walking step 2 with right foot forward, real alternating feet, walking toward the right. RIGHT COLUMN: two consecutive frames where this character holds a tiny flower pot in one wing and tips a small pastel watering can with the other wing; a short visible water stream in second frame. Include only the explicitly held job props. Maintain the same head and body geometry; do not replace wings with human hands. Complete sprite frames, nothing crosses a cell boundary. Transparent empty space around every figure. These frames will be mechanically cropped and registered to a common canvas/footpoint."
+    },
+    {
+      "id": "chicken_laundry_neighbor_sheet_v7",
+      "actor": "laundry_neighbor",
+      "stage": "characters",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "transparent": true,
+      "prompt": "Original cozy 2D hand-drawn cartoon mobile-game asset. Match the supplied references in warm brown clean fine outlines and simple pastel shapes. Soft sage, cream, dusty blue, muted coral, peach, lavender; almost flat matte color, just one restrained shadow tone. Frontal elevation with slight top-down roof visibility, parallel perspective. No photorealism, 3D, grain, textured wood, airbrush, glow, gradient halo, cast shadow, checkerboard, words, lettering, watermark or scenery. True transparent PNG alpha outside the complete object. Comfortable clear margin, nothing clipped.\n\nCHARACTER SPRITE SHEET, 1536x1024, exactly 3 columns x 2 rows, six equal square cells. Same ORIGINAL cream chicken with dusty-lavender dress and small coral headscarf in every cell. Match reference 1's cream egg-shaped chicken head/body, red comb, tiny orange beak, rosy cheeks, short complete orange feet and soft feather wings; simplify into clean consistent cartoon shapes. Same design, clothing, height, body proportions, scale and feet baseline in all six cells. Face gently toward the right in a 3/4 side view. Each figure fully inside its own 512x512 cell with at least 70px blank margin. No grid, separators, labels, background, shadows or scenery.\nLEFT COLUMN: top idle pose 1 with both feet down, bottom idle pose 2 with a tiny natural wing/breathing change. CENTER COLUMN: top walking step 1 with left foot forward, bottom walking step 2 with right foot forward, real alternating feet, walking toward the right. RIGHT COLUMN: two consecutive frames where this character lifts and straightens one small blue cloth garment between its two wings; cloth visible in both frames. Include only the explicitly held job props. Maintain the same head and body geometry; do not replace wings with human hands. Complete sprite frames, nothing crosses a cell boundary. Transparent empty space around every figure. These frames will be mechanically cropped and registered to a common canvas/footpoint."
+    },
+    {
+      "id": "chicken_strolling_reader_sheet_v7",
+      "actor": "strolling_reader",
+      "stage": "characters",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "transparent": true,
+      "prompt": "Original cozy 2D hand-drawn cartoon mobile-game asset. Match the supplied references in warm brown clean fine outlines and simple pastel shapes. Soft sage, cream, dusty blue, muted coral, peach, lavender; almost flat matte color, just one restrained shadow tone. Frontal elevation with slight top-down roof visibility, parallel perspective. No photorealism, 3D, grain, textured wood, airbrush, glow, gradient halo, cast shadow, checkerboard, words, lettering, watermark or scenery. True transparent PNG alpha outside the complete object. Comfortable clear margin, nothing clipped.\n\nCHARACTER SPRITE SHEET, 1536x1024, exactly 3 columns x 2 rows, six equal square cells. Same ORIGINAL cream chicken with a little sage cap and dusty-blue satchel in every cell. Match reference 1's cream egg-shaped chicken head/body, red comb, tiny orange beak, rosy cheeks, short complete orange feet and soft feather wings; simplify into clean consistent cartoon shapes. Same design, clothing, height, body proportions, scale and feet baseline in all six cells. Face gently toward the right in a 3/4 side view. Each figure fully inside its own 512x512 cell with at least 70px blank margin. No grid, separators, labels, background, shadows or scenery.\nLEFT COLUMN: top idle pose 1 with both feet down, bottom idle pose 2 with a tiny natural wing/breathing change. CENTER COLUMN: top walking step 1 with left foot forward, bottom walking step 2 with right foot forward, real alternating feet, walking toward the right. RIGHT COLUMN: two consecutive frames where this character holds an open small coral book, reads and changes the page angle slightly. Include only the explicitly held job props. Maintain the same head and body geometry; do not replace wings with human hands. Complete sprite frames, nothing crosses a cell boundary. Transparent empty space around every figure. These frames will be mechanically cropped and registered to a common canvas/footpoint."
+    },
+    {
+      "id": "chicken_visiting_child_sheet_v7",
+      "actor": "visiting_child",
+      "stage": "characters",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_frame_13.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "transparent": true,
+      "prompt": "Original cozy 2D hand-drawn cartoon mobile-game asset. Match the supplied references in warm brown clean fine outlines and simple pastel shapes. Soft sage, cream, dusty blue, muted coral, peach, lavender; almost flat matte color, just one restrained shadow tone. Frontal elevation with slight top-down roof visibility, parallel perspective. No photorealism, 3D, grain, textured wood, airbrush, glow, gradient halo, cast shadow, checkerboard, words, lettering, watermark or scenery. True transparent PNG alpha outside the complete object. Comfortable clear margin, nothing clipped.\n\nCHARACTER SPRITE SHEET, 1536x1024, exactly 3 columns x 2 rows, six equal square cells. Same ORIGINAL smaller young cream chicken with coral-striped shirt and tiny pale-blue cap in every cell. Match reference 1's cream egg-shaped chicken head/body, red comb, tiny orange beak, rosy cheeks, short complete orange feet and soft feather wings; simplify into clean consistent cartoon shapes. Same design, clothing, height, body proportions, scale and feet baseline in all six cells. Face gently toward the right in a 3/4 side view. Each figure fully inside its own 512x512 cell with at least 70px blank margin. No grid, separators, labels, background, shadows or scenery.\nLEFT COLUMN: top idle pose 1 with both feet down, bottom idle pose 2 with a tiny natural wing/breathing change. CENTER COLUMN: top walking step 1 with left foot forward, bottom walking step 2 with right foot forward, real alternating feet, walking toward the right. RIGHT COLUMN: two consecutive frames where this character waves one wing in a friendly greeting; distinct lowered and raised wing poses. Include only the explicitly held job props. Maintain the same head and body geometry; do not replace wings with human hands. Complete sprite frames, nothing crosses a cell boundary. Transparent empty space around every figure. These frames will be mechanically cropped and registered to a common canvas/footpoint."
+    },
+    {
+      "id": "chicken_flower_shopkeeper_sheet_walkfix_v7",
+      "actor": "flower_shopkeeper",
+      "stage": "character",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_flower_shopkeeper_sheet_v7.png"
+      ],
+      "transparent": true,
+      "supersedes": "chicken_flower_shopkeeper_sheet_v7",
+      "prompt": "Edit this exact transparent 3 columns by 2 rows chicken animation atlas. Keep the 1536 by 1024 canvas, true alpha background, six separate full figures centered inside their original 512 by 512 cells, same cute hand-drawn cream chicken identity, clothing, colors, thin outlines, size, face and anchor. This is a precise animation repair, not a redesign. Preserve the top-left, bottom-left and top-middle figures as drawn. In the bottom-middle cell ONLY change the two orange legs and small wing swing to the opposite walking step: the screen-LEFT foot is now lifted and stretched diagonally forward to screen LEFT; the screen-RIGHT foot is flat and supporting the body directly underneath on the right. The top-middle walking figure already lifts its screen-right foot; the bottom-middle must clearly lift its screen-left foot instead, producing two visibly alternating steps. Do not flip or mirror the head, clothes, bag, hat, body or whole character. No extra feet, no ghost outlines, no duplicated identical walking pose. Keep character foot baseline, body scale and grid positions stable, fully inside each cell. Preserve both right-column occupational action figures exactly, including their held object and expression. Output the complete repaired atlas PNG, with a fully transparent background, no glow, no backdrop, no captions, no grid lines."
+    },
+    {
+      "id": "chicken_book_shopkeeper_sheet_walkfix_v7",
+      "actor": "book_shopkeeper",
+      "stage": "character",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_book_shopkeeper_sheet_v7.png"
+      ],
+      "transparent": true,
+      "supersedes": "chicken_book_shopkeeper_sheet_v7",
+      "prompt": "Edit this exact transparent 3 columns by 2 rows chicken animation atlas. Keep the 1536 by 1024 canvas, true alpha background, six separate full figures centered inside their original 512 by 512 cells, same cute hand-drawn cream chicken identity, clothing, colors, thin outlines, size, face and anchor. This is a precise animation repair, not a redesign. Preserve the top-left, bottom-left and top-middle figures as drawn. In the bottom-middle cell ONLY change the two orange legs and small wing swing to the opposite walking step: the screen-LEFT foot is now lifted and stretched diagonally forward to screen LEFT; the screen-RIGHT foot is flat and supporting the body directly underneath on the right. The top-middle walking figure already lifts its screen-right foot; the bottom-middle must clearly lift its screen-left foot instead, producing two visibly alternating steps. Do not flip or mirror the head, clothes, bag, hat, body or whole character. No extra feet, no ghost outlines, no duplicated identical walking pose. Keep character foot baseline, body scale and grid positions stable, fully inside each cell. Preserve both right-column occupational action figures exactly, including their held object and expression. Output the complete repaired atlas PNG, with a fully transparent background, no glow, no backdrop, no captions, no grid lines."
+    },
+    {
+      "id": "chicken_sweet_shopkeeper_sheet_walkfix_v7",
+      "actor": "sweet_shopkeeper",
+      "stage": "character",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_sweet_shopkeeper_sheet_v7.png"
+      ],
+      "transparent": true,
+      "supersedes": "chicken_sweet_shopkeeper_sheet_v7",
+      "prompt": "Edit this exact transparent 3 columns by 2 rows chicken animation atlas. Keep the 1536 by 1024 canvas, true alpha background, six separate full figures centered inside their original 512 by 512 cells, same cute hand-drawn cream chicken identity, clothing, colors, thin outlines, size, face and anchor. This is a precise animation repair, not a redesign. Preserve the top-left, bottom-left and top-middle figures as drawn. In the bottom-middle cell ONLY change the two orange legs and small wing swing to the opposite walking step: the screen-LEFT foot is now lifted and stretched diagonally forward to screen LEFT; the screen-RIGHT foot is flat and supporting the body directly underneath on the right. The top-middle walking figure already lifts its screen-right foot; the bottom-middle must clearly lift its screen-left foot instead, producing two visibly alternating steps. Do not flip or mirror the head, clothes, bag, hat, body or whole character. No extra feet, no ghost outlines, no duplicated identical walking pose. Keep character foot baseline, body scale and grid positions stable, fully inside each cell. Preserve both right-column occupational action figures exactly, including their held object and expression. Output the complete repaired atlas PNG, with a fully transparent background, no glow, no backdrop, no captions, no grid lines."
+    },
+    {
+      "id": "chicken_noodle_shopkeeper_sheet_walkfix_v7",
+      "actor": "noodle_shopkeeper",
+      "stage": "character",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_noodle_shopkeeper_sheet_v7.png"
+      ],
+      "transparent": true,
+      "supersedes": "chicken_noodle_shopkeeper_sheet_v7",
+      "prompt": "Edit this exact transparent 3 columns by 2 rows chicken animation atlas. Keep the 1536 by 1024 canvas, true alpha background, six separate full figures centered inside their original 512 by 512 cells, same cute hand-drawn cream chicken identity, clothing, colors, thin outlines, size, face and anchor. This is a precise animation repair, not a redesign. Preserve the top-left, bottom-left and top-middle figures as drawn. In the bottom-middle cell ONLY change the two orange legs and small wing swing to the opposite walking step: the screen-LEFT foot is now lifted and stretched diagonally forward to screen LEFT; the screen-RIGHT foot is flat and supporting the body directly underneath on the right. The top-middle walking figure already lifts its screen-right foot; the bottom-middle must clearly lift its screen-left foot instead, producing two visibly alternating steps. Do not flip or mirror the head, clothes, bag, hat, body or whole character. No extra feet, no ghost outlines, no duplicated identical walking pose. Keep character foot baseline, body scale and grid positions stable, fully inside each cell. Preserve both right-column occupational action figures exactly, including their held object and expression. Output the complete repaired atlas PNG, with a fully transparent background, no glow, no backdrop, no captions, no grid lines."
+    },
+    {
+      "id": "chicken_garden_neighbor_sheet_walkfix_v7",
+      "actor": "garden_neighbor",
+      "stage": "character",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_garden_neighbor_sheet_v7.png"
+      ],
+      "transparent": true,
+      "supersedes": "chicken_garden_neighbor_sheet_v7",
+      "prompt": "Edit this exact transparent 3 columns by 2 rows chicken animation atlas. Keep the 1536 by 1024 canvas, true alpha background, six separate full figures centered inside their original 512 by 512 cells, same cute hand-drawn cream chicken identity, clothing, colors, thin outlines, size, face and anchor. This is a precise animation repair, not a redesign. Preserve the top-left, bottom-left and top-middle figures as drawn. In the bottom-middle cell ONLY change the two orange legs and small wing swing to the opposite walking step: the screen-LEFT foot is now lifted and stretched diagonally forward to screen LEFT; the screen-RIGHT foot is flat and supporting the body directly underneath on the right. The top-middle walking figure already lifts its screen-right foot; the bottom-middle must clearly lift its screen-left foot instead, producing two visibly alternating steps. Do not flip or mirror the head, clothes, bag, hat, body or whole character. No extra feet, no ghost outlines, no duplicated identical walking pose. Keep character foot baseline, body scale and grid positions stable, fully inside each cell. Also repair BOTH right-column gardening poses. The gardener holds a small flower pot centered in front of its belly, and its blue watering can is above and slightly to the screen right of that pot, spout pointing diagonally left DOWN into the pot soil. Top-right pose: can held ready, tiny trickle into soil. Bottom-right pose: can visibly tilted and a short clear water stream falls from the spout into the flower pot soil. No water outside the pot and no stream off the canvas. Preserve straw hat and sage apron. Output the complete repaired atlas PNG, with a fully transparent background, no glow, no backdrop, no captions, no grid lines."
+    },
+    {
+      "id": "chicken_laundry_neighbor_sheet_walkfix_v7",
+      "actor": "laundry_neighbor",
+      "stage": "character",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_laundry_neighbor_sheet_v7.png"
+      ],
+      "transparent": true,
+      "supersedes": "chicken_laundry_neighbor_sheet_v7",
+      "prompt": "Edit this exact transparent 3 columns by 2 rows chicken animation atlas. Keep the 1536 by 1024 canvas, true alpha background, six separate full figures centered inside their original 512 by 512 cells, same cute hand-drawn cream chicken identity, clothing, colors, thin outlines, size, face and anchor. This is a precise animation repair, not a redesign. Preserve the top-left, bottom-left and top-middle figures as drawn. In the bottom-middle cell ONLY change the two orange legs and small wing swing to the opposite walking step: the screen-LEFT foot is now lifted and stretched diagonally forward to screen LEFT; the screen-RIGHT foot is flat and supporting the body directly underneath on the right. The top-middle walking figure already lifts its screen-right foot; the bottom-middle must clearly lift its screen-left foot instead, producing two visibly alternating steps. Do not flip or mirror the head, clothes, bag, hat, body or whole character. No extra feet, no ghost outlines, no duplicated identical walking pose. Keep character foot baseline, body scale and grid positions stable, fully inside each cell. Preserve both right-column occupational action figures exactly, including their held object and expression. Output the complete repaired atlas PNG, with a fully transparent background, no glow, no backdrop, no captions, no grid lines."
+    },
+    {
+      "id": "chicken_strolling_reader_sheet_walkfix_v7",
+      "actor": "strolling_reader",
+      "stage": "character",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_strolling_reader_sheet_v7.png"
+      ],
+      "transparent": true,
+      "supersedes": "chicken_strolling_reader_sheet_v7",
+      "prompt": "Edit this exact transparent 3 columns by 2 rows chicken animation atlas. Keep the 1536 by 1024 canvas, true alpha background, six separate full figures centered inside their original 512 by 512 cells, same cute hand-drawn cream chicken identity, clothing, colors, thin outlines, size, face and anchor. This is a precise animation repair, not a redesign. Preserve the top-left, bottom-left and top-middle figures as drawn. In the bottom-middle cell ONLY change the two orange legs and small wing swing to the opposite walking step: the screen-LEFT foot is now lifted and stretched diagonally forward to screen LEFT; the screen-RIGHT foot is flat and supporting the body directly underneath on the right. The top-middle walking figure already lifts its screen-right foot; the bottom-middle must clearly lift its screen-left foot instead, producing two visibly alternating steps. Do not flip or mirror the head, clothes, bag, hat, body or whole character. No extra feet, no ghost outlines, no duplicated identical walking pose. Keep character foot baseline, body scale and grid positions stable, fully inside each cell. Preserve both right-column occupational action figures exactly, including their held object and expression. Output the complete repaired atlas PNG, with a fully transparent background, no glow, no backdrop, no captions, no grid lines."
+    },
+    {
+      "id": "chicken_visiting_child_sheet_walkfix_v7",
+      "actor": "visiting_child",
+      "stage": "character",
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v7/sources/chicken_visiting_child_sheet_v7.png"
+      ],
+      "transparent": true,
+      "supersedes": "chicken_visiting_child_sheet_v7",
+      "prompt": "Edit this exact transparent 3 columns by 2 rows chicken animation atlas. Keep the 1536 by 1024 canvas, true alpha background, six separate full figures centered inside their original 512 by 512 cells, same cute hand-drawn cream chicken identity, clothing, colors, thin outlines, size, face and anchor. This is a precise animation repair, not a redesign. Preserve the top-left, bottom-left and top-middle figures as drawn. In the bottom-middle cell ONLY change the two orange legs and small wing swing to the opposite walking step: the screen-LEFT foot is now lifted and stretched diagonally forward to screen LEFT; the screen-RIGHT foot is flat and supporting the body directly underneath on the right. The top-middle walking figure already lifts its screen-right foot; the bottom-middle must clearly lift its screen-left foot instead, producing two visibly alternating steps. Do not flip or mirror the head, clothes, bag, hat, body or whole character. No extra feet, no ghost outlines, no duplicated identical walking pose. Keep character foot baseline, body scale and grid positions stable, fully inside each cell. Preserve both right-column occupational action figures exactly, including their held object and expression. Output the complete repaired atlas PNG, with a fully transparent background, no glow, no backdrop, no captions, no grid lines."
+    }
+  ]
+}

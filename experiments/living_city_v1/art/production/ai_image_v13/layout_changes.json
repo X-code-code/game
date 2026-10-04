@@ -1,0 +1,349 @@
+{
+  "scope": "existing_assets_only",
+  "baselineSha256": "41858f867eec7eba0746498a5689684bd51e46d6b04a69f800a7821c3b1d0efb",
+  "sceneBlueprintSha256": "81efd7792ba7bb5b74e4ff294dfba157e7cdcb66665b543bcac83eda97671e10",
+  "translated": [
+    {
+      "id": "lc7_book_shop_back",
+      "before": {
+        "x": -820,
+        "y": 760
+      },
+      "after": {
+        "x": -775,
+        "y": 760
+      },
+      "delta": {
+        "x": 45,
+        "y": 0
+      },
+      "attachments": []
+    },
+    {
+      "id": "lc9_craft_table",
+      "before": {
+        "x": -825,
+        "y": -325
+      },
+      "after": {
+        "x": -850,
+        "y": -250
+      },
+      "delta": {
+        "x": -25,
+        "y": 75
+      },
+      "attachments": [
+        "thread_spool",
+        "brass_key",
+        "trinket_box",
+        "craft_table_pause"
+      ]
+    },
+    {
+      "id": "lc5_east_courtyard_tree_front",
+      "before": {
+        "x": 850,
+        "y": -100
+      },
+      "after": {
+        "x": 1045,
+        "y": 150
+      },
+      "delta": {
+        "x": 195,
+        "y": 250
+      },
+      "attachments": []
+    },
+    {
+      "id": "lc5_east_courtyard_patio_front",
+      "before": {
+        "x": 700,
+        "y": -240
+      },
+      "after": {
+        "x": 660,
+        "y": -200
+      },
+      "delta": {
+        "x": -40,
+        "y": 40
+      },
+      "attachments": [
+        "honey_dipper"
+      ]
+    },
+    {
+      "id": "lc6_fountain_crates",
+      "before": {
+        "x": 575,
+        "y": -130
+      },
+      "after": {
+        "x": 530,
+        "y": -115
+      },
+      "delta": {
+        "x": -45,
+        "y": 15
+      },
+      "attachments": [
+        "yarn_ball"
+      ]
+    },
+    {
+      "id": "lc8_flowers_flower_border",
+      "before": {
+        "x": -985,
+        "y": -175
+      },
+      "after": {
+        "x": -990,
+        "y": -225
+      },
+      "delta": {
+        "x": -5,
+        "y": -50
+      },
+      "attachments": []
+    },
+    {
+      "id": "lc8_inner_lane_flower_border",
+      "before": {
+        "x": -630,
+        "y": -280
+      },
+      "after": {
+        "x": -640,
+        "y": -350
+      },
+      "delta": {
+        "x": -10,
+        "y": -70
+      },
+      "attachments": []
+    },
+    {
+      "id": "lc8_sweets_shrub",
+      "before": {
+        "x": 565,
+        "y": 490
+      },
+      "after": {
+        "x": 590,
+        "y": 650
+      },
+      "delta": {
+        "x": 25,
+        "y": 160
+      },
+      "attachments": []
+    },
+    {
+      "id": "lc8_tea_shrub",
+      "before": {
+        "x": -575,
+        "y": 120
+      },
+      "after": {
+        "x": -550,
+        "y": 175
+      },
+      "delta": {
+        "x": 25,
+        "y": 55
+      },
+      "attachments": []
+    },
+    {
+      "id": "lc6_mail_flowers",
+      "before": {
+        "x": 1030,
+        "y": 300
+      },
+      "after": {
+        "x": 1030,
+        "y": 330
+      },
+      "delta": {
+        "x": 0,
+        "y": 30
+      },
+      "attachments": []
+    }
+  ],
+  "groundChanges": [
+    {
+      "id": "lc8_books_courtyard_ground",
+      "before": {
+        "center": {
+          "x": -805,
+          "y": 445
+        },
+        "size": {
+          "width": 550,
+          "height": 330
+        }
+      },
+      "after": {
+        "center": {
+          "x": -790,
+          "y": 430
+        },
+        "size": {
+          "width": 550,
+          "height": 360
+        }
+      },
+      "nativeAlphaSize": {
+        "width": 1508,
+        "height": 646
+      },
+      "nativePixelsPerWorldUnit": 1.7944444444444445
+    },
+    {
+      "id": "lc8_flowers_courtyard_ground",
+      "before": {
+        "center": {
+          "x": -825,
+          "y": -30
+        },
+        "size": {
+          "width": 530,
+          "height": 220
+        }
+      },
+      "after": {
+        "center": {
+          "x": -815,
+          "y": -65
+        },
+        "size": {
+          "width": 550,
+          "height": 300
+        }
+      },
+      "nativeAlphaSize": {
+        "width": 1759,
+        "height": 551
+      },
+      "nativePixelsPerWorldUnit": 1.8366666666666667
+    },
+    {
+      "id": "lc8_sweets_courtyard_ground",
+      "before": {
+        "center": {
+          "x": 850,
+          "y": 465
+        },
+        "size": {
+          "width": 480,
+          "height": 280
+        }
+      },
+      "after": {
+        "center": {
+          "x": 815,
+          "y": 440
+        },
+        "size": {
+          "width": 550,
+          "height": 340
+        }
+      },
+      "nativeAlphaSize": {
+        "width": 1504,
+        "height": 668
+      },
+      "nativePixelsPerWorldUnit": 1.964705882352941
+    },
+    {
+      "id": "lc8_noodles_courtyard_ground",
+      "before": {
+        "center": {
+          "x": 830,
+          "y": 0
+        },
+        "size": {
+          "width": 520,
+          "height": 290
+        }
+      },
+      "after": {
+        "center": {
+          "x": 770,
+          "y": -60
+        },
+        "size": {
+          "width": 640,
+          "height": 420
+        }
+      },
+      "nativeAlphaSize": {
+        "width": 1564,
+        "height": 595
+      },
+      "nativePixelsPerWorldUnit": 1.4166666666666667
+    },
+    {
+      "id": "lc8_sage_courtyard_ground",
+      "before": {
+        "center": {
+          "x": -815,
+          "y": -850
+        },
+        "size": {
+          "width": 530,
+          "height": 220
+        }
+      },
+      "after": {
+        "center": {
+          "x": -690,
+          "y": -802
+        },
+        "size": {
+          "width": 800,
+          "height": 320
+        }
+      },
+      "nativeAlphaSize": {
+        "width": 1704,
+        "height": 481
+      },
+      "nativePixelsPerWorldUnit": 1.503125
+    },
+    {
+      "id": "lc8_rose_courtyard_ground",
+      "before": {
+        "center": {
+          "x": 830,
+          "y": -805
+        },
+        "size": {
+          "width": 520,
+          "height": 240
+        }
+      },
+      "after": {
+        "center": {
+          "x": 730,
+          "y": -800
+        },
+        "size": {
+          "width": 720,
+          "height": 320
+        }
+      },
+      "nativeAlphaSize": {
+        "width": 1672,
+        "height": 657
+      },
+      "nativePixelsPerWorldUnit": 2.053125
+    }
+  ],
+  "additionalTargets": 0,
+  "additionalResidents": 0,
+  "additionalSceneSlots": 0
+}

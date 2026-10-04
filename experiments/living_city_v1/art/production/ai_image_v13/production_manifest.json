@@ -1,0 +1,295 @@
+{
+  "batchId": "ai_image_v13",
+  "sourceType": "codex_builtin_image_gen",
+  "styleId": "cozy_flat_town_v5",
+  "newGenerationCalls": 0,
+  "note": "Existing v8 generated ground originals mechanically re-exported for existing scene placements. No new artwork generated.",
+  "assets": [
+    {
+      "name": "lc8_books_courtyard_ground_staged_v13",
+      "stage": "scene_hd",
+      "sceneSlotId": "lc8_books_courtyard_ground",
+      "sourcePath": "art/production/ai_image_v8/sources/courtyard_books_v8.png",
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_books_v8.md",
+      "source": "art/production/ai_image_v8/sources/courtyard_books_v8.png",
+      "width": 1100,
+      "height": 720,
+      "resizeFit": "fill",
+      "align": "center",
+      "inset": 8,
+      "alphaFloor": 32,
+      "textureScale": 2,
+      "worldSize": {
+        "width": 550,
+        "height": 360
+      },
+      "reusedSourceBatch": "ai_image_v8",
+      "reexportedFrom": "assets/generated/lc8_books_courtyard_ground_hd_v12.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc8_books_courtyard_ground.png",
+      "registration": "existing_flat_ground_resampled_to_authored_footprint_no_drawing",
+      "sourceSha256": "b88416a89d66e494bf765cb69b552d2db9325e5a70a11f5fc30bf1f9db5a5a6b",
+      "sourceSize": {
+        "width": 1619,
+        "height": 971
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/lc8_books_courtyard_ground_staged_v13.png",
+      "sha256": "00226555f63e4a0b289206b380c5c10b3878ddb24bc33c20715ce3dfed23ac20",
+      "alphaBounds": {
+        "left": 8,
+        "top": 8,
+        "width": 1084,
+        "height": 704,
+        "transparent": 124053,
+        "visible": 667947
+      },
+      "uuid": "f87cd345-f3e9-4fb0-a1c6-2ecb7d3afa58",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "lc8_flowers_courtyard_ground_staged_v13",
+      "stage": "scene_hd",
+      "sceneSlotId": "lc8_flowers_courtyard_ground",
+      "sourcePath": "art/production/ai_image_v8/sources/courtyard_flowers_v8.png",
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_flowers_v8.md",
+      "source": "art/production/ai_image_v8/sources/courtyard_flowers_v8.png",
+      "width": 1100,
+      "height": 600,
+      "resizeFit": "fill",
+      "align": "center",
+      "inset": 8,
+      "alphaFloor": 32,
+      "textureScale": 2,
+      "worldSize": {
+        "width": 550,
+        "height": 300
+      },
+      "reusedSourceBatch": "ai_image_v8",
+      "reexportedFrom": "assets/generated/lc8_flowers_courtyard_ground_hd_v12.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc8_flowers_courtyard_ground.png",
+      "registration": "existing_flat_ground_resampled_to_authored_footprint_no_drawing",
+      "sourceSha256": "4b1adce6d3ae648c741eb435f63b0ac869be6b263d66570473d82a45da74ba3b",
+      "sourceSize": {
+        "width": 1947,
+        "height": 808
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/lc8_flowers_courtyard_ground_staged_v13.png",
+      "sha256": "7bfa500a1cbcd1d15cb608513afefa1a939b109badfeee4be5b5b1d7f8ee67c9",
+      "alphaBounds": {
+        "left": 8,
+        "top": 8,
+        "width": 1084,
+        "height": 584,
+        "transparent": 105013,
+        "visible": 554987
+      },
+      "uuid": "db7f7c7b-7810-46aa-88d5-6f3dd0bd8960",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "lc8_sweets_courtyard_ground_staged_v13",
+      "stage": "scene_hd",
+      "sceneSlotId": "lc8_sweets_courtyard_ground",
+      "sourcePath": "art/production/ai_image_v8/sources/courtyard_sweets_v8.png",
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_sweets_v8.md",
+      "source": "art/production/ai_image_v8/sources/courtyard_sweets_v8.png",
+      "width": 1100,
+      "height": 680,
+      "resizeFit": "fill",
+      "align": "center",
+      "inset": 8,
+      "alphaFloor": 32,
+      "textureScale": 2,
+      "worldSize": {
+        "width": 550,
+        "height": 340
+      },
+      "reusedSourceBatch": "ai_image_v8",
+      "reexportedFrom": "assets/generated/lc8_sweets_courtyard_ground_hd_v12.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc8_sweets_courtyard_ground.png",
+      "registration": "existing_flat_ground_resampled_to_authored_footprint_no_drawing",
+      "sourceSha256": "2988e036f2b7b3f0ad74c4485d54ffabc04fd67892eaba06e9ed4bbdbc2f337c",
+      "sourceSize": {
+        "width": 1643,
+        "height": 957
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/lc8_sweets_courtyard_ground_staged_v13.png",
+      "sha256": "0184351d55b34dab3e2d3a75b698c843c1d653ccc84f595622d5defc2aeef74a",
+      "alphaBounds": {
+        "left": 8,
+        "top": 8,
+        "width": 1084,
+        "height": 664,
+        "transparent": 88338,
+        "visible": 659662
+      },
+      "uuid": "1e413587-a1b7-414e-b3ac-329440581808",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "lc8_noodles_courtyard_ground_staged_v13",
+      "stage": "scene_hd",
+      "sceneSlotId": "lc8_noodles_courtyard_ground",
+      "sourcePath": "art/production/ai_image_v8/sources/courtyard_noodles_v8.png",
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_noodles_v8.md",
+      "source": "art/production/ai_image_v8/sources/courtyard_noodles_v8.png",
+      "width": 1280,
+      "height": 840,
+      "resizeFit": "fill",
+      "align": "center",
+      "inset": 8,
+      "alphaFloor": 32,
+      "textureScale": 2,
+      "worldSize": {
+        "width": 640,
+        "height": 420
+      },
+      "reusedSourceBatch": "ai_image_v8",
+      "reexportedFrom": "assets/generated/lc8_noodles_courtyard_ground_hd_v12.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc8_noodles_courtyard_ground.png",
+      "registration": "existing_flat_ground_resampled_to_authored_footprint_no_drawing",
+      "sourceSha256": "d2953e795c4f46572cdf6a9206979e2677b2747de4d67522d97c6a64f8cc33fd",
+      "sourceSize": {
+        "width": 1680,
+        "height": 936
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/lc8_noodles_courtyard_ground_staged_v13.png",
+      "sha256": "3e122e1761131683d3414cb87fab95c3f9f29bf11b05c8fcbb2971658098f156",
+      "alphaBounds": {
+        "left": 8,
+        "top": 8,
+        "width": 1264,
+        "height": 824,
+        "transparent": 143440,
+        "visible": 931760
+      },
+      "uuid": "290dbf3b-87e3-4e4b-a459-cedec14fc6df",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "lc8_sage_courtyard_ground_staged_v13",
+      "stage": "scene_hd",
+      "sceneSlotId": "lc8_sage_courtyard_ground",
+      "sourcePath": "art/production/ai_image_v8/sources/courtyard_sage_v8.png",
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_sage_v8.md",
+      "source": "art/production/ai_image_v8/sources/courtyard_sage_v8.png",
+      "width": 1600,
+      "height": 640,
+      "resizeFit": "fill",
+      "align": "center",
+      "inset": 8,
+      "alphaFloor": 32,
+      "textureScale": 2,
+      "worldSize": {
+        "width": 800,
+        "height": 320
+      },
+      "reusedSourceBatch": "ai_image_v8",
+      "reexportedFrom": "assets/generated/lc8_sage_courtyard_ground_hd_v12.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc8_sage_courtyard_ground.png",
+      "registration": "existing_flat_ground_resampled_to_authored_footprint_no_drawing",
+      "sourceSha256": "7af967536128ccad7119784ad786a8e76ce3c94f1a9855642f9f96dae904d680",
+      "sourceSize": {
+        "width": 1944,
+        "height": 809
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/lc8_sage_courtyard_ground_staged_v13.png",
+      "sha256": "e66b447f7dc26daa3e205abeb67d20de1cb87a29921840e7ea5e03df6a296e25",
+      "alphaBounds": {
+        "left": 8,
+        "top": 8,
+        "width": 1584,
+        "height": 624,
+        "transparent": 130973,
+        "visible": 893027
+      },
+      "uuid": "9f6c1f13-4a19-43c9-bb5b-ad141c517477",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "lc8_rose_courtyard_ground_staged_v13",
+      "stage": "scene_hd",
+      "sceneSlotId": "lc8_rose_courtyard_ground",
+      "sourcePath": "art/production/ai_image_v8/sources/courtyard_rose_v8.png",
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_rose_v8.md",
+      "source": "art/production/ai_image_v8/sources/courtyard_rose_v8.png",
+      "width": 1440,
+      "height": 640,
+      "resizeFit": "fill",
+      "align": "center",
+      "inset": 8,
+      "alphaFloor": 32,
+      "textureScale": 2,
+      "worldSize": {
+        "width": 720,
+        "height": 320
+      },
+      "reusedSourceBatch": "ai_image_v8",
+      "reexportedFrom": "assets/generated/lc8_rose_courtyard_ground_hd_v12.png",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc8_rose_courtyard_ground.png",
+      "registration": "existing_flat_ground_resampled_to_authored_footprint_no_drawing",
+      "sourceSha256": "d108adb4e615cab2e1b28d31d19cba1e00c39651962582c66ded147be36b7eb6",
+      "sourceSize": {
+        "width": 1846,
+        "height": 852
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/lc8_rose_courtyard_ground_staged_v13.png",
+      "sha256": "7781b96a39001b171d950f35aec6b94adc5a47cf332d2431d5ca73eb578ddc73",
+      "alphaBounds": {
+        "left": 8,
+        "top": 8,
+        "width": 1424,
+        "height": 624,
+        "transparent": 137996,
+        "visible": 783604
+      },
+      "uuid": "3c35e40b-9330-4f5a-84c2-6526169dae47",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    }
+  ],
+  "runtimeVerification": {
+    "status": "web_mobile_verified",
+    "playerVisualApproval": "pending",
+    "wechatPhone": "not_run",
+    "sceneBlueprintSha256": "81efd7792ba7bb5b74e4ff294dfba157e7cdcb66665b543bcac83eda97671e10",
+    "reports": {
+      "runtime": {
+        "path": "art/review/ai_image_v13/chapter_1/runtime_report.json",
+        "sha256": "e2fe8919eb1f1939a7de6ad65feea6feef7a5bdc3af3f1761d5a5da4bcf00046"
+      },
+      "surfaces": {
+        "path": "art/review/ai_image_v13/details/surface_report.json",
+        "sha256": "5701cd29996cb4fbeacb11b4042710c8e78d71bea4f3ac9a2e9a7807246dc08f"
+      },
+      "placement": {
+        "path": "art/review/ai_image_v13/placement_review.json",
+        "sha256": "bfb6d5d9944a5d100c4c219323c6cbd47575473d71fb7378abc9d665590b06a9"
+      },
+      "integrity": {
+        "path": "art/review/ai_image_v13/asset_integrity_report.json",
+        "sha256": "2cd2e9959f1fb636505c738ac71b2638a9a5b476ef3d4f153f9c0f47f8adacdd"
+      },
+      "visual": {
+        "path": "art/review/ai_image_v13/visual_review.json",
+        "sha256": "aad5fbb78a268d1e1a72f9553a887e6c639107547d9d12986d5b562fef82759d"
+      }
+    },
+    "build": {
+      "path": "art/review/ai_image_v13/web_mobile_build.txt",
+      "sha256": "9500c30f3b4e3adfdb3a53b1b3ba0db8916882eed525cfeae11fc8452436ad23"
+    },
+    "unchangedChaptersBaseline": "art/review/ai_image_v12/three_chapters/runtime_report.json"
+  },
+  "visualApproval": "pending"
+}

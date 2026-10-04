@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "actorId": "lantern_watcher",
   "canvasPx": {
     "width": 384,
@@ -11,109 +11,66 @@
   },
   "paintedHeightPx": 186,
   "clips": {
-    "walk_n": [
-      {
-        "asset": "chicken_watcher_frame_05",
-        "durationSeconds": 0.12
-      },
-      {
-        "asset": "chicken_watcher_frame_06",
-        "durationSeconds": 0.12
-      },
-      {
-        "asset": "chicken_watcher_frame_07",
-        "durationSeconds": 0.12
-      },
-      {
-        "asset": "chicken_watcher_frame_08",
-        "durationSeconds": 0.12
-      }
-    ],
-    "walk_nw": [
-      {
-        "asset": "chicken_watcher_frame_01",
-        "durationSeconds": 0.12
-      },
-      {
-        "asset": "chicken_watcher_frame_02",
-        "durationSeconds": 0.12
-      },
-      {
-        "asset": "chicken_watcher_frame_03",
-        "durationSeconds": 0.12
-      },
-      {
-        "asset": "chicken_watcher_frame_04",
-        "durationSeconds": 0.12
-      }
-    ],
-    "walk_ne": [
-      {
-        "asset": "chicken_watcher_frame_09",
-        "durationSeconds": 0.12
-      },
-      {
-        "asset": "chicken_watcher_frame_10",
-        "durationSeconds": 0.12
-      },
-      {
-        "asset": "chicken_watcher_frame_11",
-        "durationSeconds": 0.12
-      },
-      {
-        "asset": "chicken_watcher_frame_12",
-        "durationSeconds": 0.12
-      }
-    ],
     "idle_w": [
       {
-        "asset": "chicken_watcher_frame_13",
-        "durationSeconds": 0.4
+        "asset": "chicken_lantern_watcher_v12_frame_01",
+        "durationSeconds": 1.4
       },
       {
-        "asset": "chicken_watcher_frame_14",
-        "durationSeconds": 0.4
+        "asset": "chicken_lantern_watcher_v12_frame_02",
+        "durationSeconds": 0.07
+      },
+      {
+        "asset": "chicken_lantern_watcher_v12_frame_03",
+        "durationSeconds": 0.1
+      },
+      {
+        "asset": "chicken_lantern_watcher_v12_frame_02",
+        "durationSeconds": 0.07
+      },
+      {
+        "asset": "chicken_lantern_watcher_v12_frame_01",
+        "durationSeconds": 0.65
+      },
+      {
+        "asset": "chicken_lantern_watcher_v12_frame_04",
+        "durationSeconds": 0.35
+      },
+      {
+        "asset": "chicken_lantern_watcher_v12_frame_01",
+        "durationSeconds": 0.35
       }
     ],
     "receive_w": [
       {
-        "asset": "chicken_watcher_frame_15",
-        "durationSeconds": 0.45
+        "asset": "chicken_lantern_watcher_v12_frame_05",
+        "durationSeconds": 0.18
       },
       {
-        "asset": "chicken_watcher_frame_16",
-        "durationSeconds": 0.45
-      }
-    ],
-    "turn_nw_w": [
-      {
-        "asset": "chicken_watcher_frame_01",
-        "durationSeconds": 0.15
+        "asset": "chicken_lantern_watcher_v12_frame_06",
+        "durationSeconds": 0.18
       },
       {
-        "asset": "chicken_watcher_frame_13",
-        "durationSeconds": 0.15
-      }
-    ],
-    "turn_w_ne": [
-      {
-        "asset": "chicken_watcher_frame_13",
-        "durationSeconds": 0.15
+        "asset": "chicken_lantern_watcher_v12_frame_07",
+        "durationSeconds": 0.18
       },
       {
-        "asset": "chicken_watcher_frame_01",
-        "durationSeconds": 0.15
-      }
-    ],
-    "idle_ne": [
-      {
-        "asset": "chicken_watcher_frame_13",
-        "durationSeconds": 0.4
-      },
-      {
-        "asset": "chicken_watcher_frame_14",
-        "durationSeconds": 0.4
+        "asset": "chicken_lantern_watcher_v12_frame_08",
+        "durationSeconds": 0.18
       }
     ]
+  },
+  "loopingClips": [
+    "idle_w"
+  ],
+  "staggerIdlePhase": true,
+  "sourceBatch": "ai_image_v12",
+  "generatedSourceId": "chicken_lantern_watcher_motion_v12",
+  "registration": "common_whole_sheet_scale_fixed_footpoint",
+  "sourceCellGrid": {
+    "columns": 4,
+    "rows": 2,
+    "width": 1774,
+    "height": 887
   }
 }

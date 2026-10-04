@@ -1,0 +1,14 @@
+{
+  "id": "chicken_book_shopkeeper_motion_glassesfix_v12",
+  "actor": "book_shopkeeper",
+  "stage": "character",
+  "columns": 4,
+  "rows": 3,
+  "moving": true,
+  "vertical": false,
+  "references": [
+    "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-8a07e6f9-60ad-4e07-8326-974b3f524114.png"
+  ],
+  "prompt": "Edit this exact 4-column, 3-row transparent sprite sheet. Preserve every character pose, grid cell, body size, placement, costume, palette and transparent background. Correct ONLY the missing round spectacles on the book shopkeeper in ROW 1 COLUMN 3 (closed-eye smiling idle) and ROW 3 COLUMN 4 (closed-eye smiling reading). Both poses MUST wear the same thin dark-brown circular eyeglass frames as all the other ten poses; the eyelids must remain closed behind the transparent lenses. Do not remove eyeglasses during a blink. Do not change anything else; retain all 12 complete characters and empty transparent gutters.",
+  "supersedes": "chicken_book_shopkeeper_motion_v12"
+}

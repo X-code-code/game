@@ -9,7 +9,7 @@ const require = createRequire(import.meta.url);
 const sharp = require(process.env.COCOS_SHARP_PATH ??
     'C:/Users/24627/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');
 const root = path.resolve('.');
-const production = 'art/production/ai_image_v4';
+const production = process.env.LIVING_CITY_ART_PRODUCTION ?? 'art/production/ai_image_v4';
 const bundle = 'assets/bundles/city_living_city_street_block_01';
 const read = file => JSON.parse(fs.readFileSync(file, 'utf8'));
 const write = (file, data) => {
@@ -60,7 +60,7 @@ async function imageMeta(file, name, border=0) {
     return {width:w,height:h,alphaBounds:b,uuid};
 }
 export async function importEntry(entry) {
-    const source=`${production}/sources/${entry.source??entry.name}.png`;
+    const source=entry.sourcePath??`${production}/sources/${entry.source??entry.name}.png`;
     assert.ok(fs.existsSync(source),`Missing generated source ${source}`);
     const meta=await sharp(source).metadata();
     assert.ok(meta.hasAlpha || entry.transparent===false,`${source}: generator did not output alpha`);
@@ -84,7 +84,7 @@ export async function importEntry(entry) {
         const availableHeight=Math.min(target.height-inset*2,entry.maxVisualHeight??Infinity,
             entry.footpoint ? entry.footpoint.y-inset : Infinity);
         const crop=await (entry.figureHeight ? figure.resize({height:entry.figureHeight,kernel:'lanczos3'})
-            : figure.resize(target.width-inset*2,Math.floor(availableHeight),{fit:'inside',kernel:'lanczos3'})).png().toBuffer();
+            : figure.resize(target.width-inset*2,Math.floor(availableHeight),{fit:entry.resizeFit??'inside',kernel:'lanczos3'})).png().toBuffer();
         const size=await sharp(crop).metadata();
         let left=Math.floor((target.width-size.width)/2);
         if(entry.footpoint && entry.figureHeight) {
@@ -109,7 +109,7 @@ export async function importEntry(entry) {
     fs.mkdirSync(path.dirname(runtime),{recursive:true});fs.writeFileSync(runtime,processed);
     const imported=await imageMeta(runtime,path.basename(runtime,'.png'),entry.nineSliceBorder??0);
     await imageMeta(output,path.basename(output,'.png'),entry.nineSliceBorder??0);
-    const prompt=`${production}/prompts/${entry.source??entry.name}.md`;
+    const prompt=entry.prompt??`${production}/prompts/${entry.source??entry.name}.md`;
     assert.ok(fs.existsSync(prompt),`Missing real prompt ${prompt}`);
     return {...entry,alphaFloor,source,prompt,sourceSha256:hash(source),sourceSize:{width:meta.width,height:meta.height},
         sourceHasAlpha:meta.hasAlpha,output,runtime,sha256:hash(output),...imported,
@@ -118,7 +118,7 @@ export async function importEntry(entry) {
 if(process.argv[1] && path.resolve(process.argv[1])===path.resolve(import.meta.filename)) {
     const plan=read(`${production}/import_plan.json`);
     const existing=fs.existsSync(`${production}/production_manifest.json`)?read(`${production}/production_manifest.json`):
-        {batchId:'ai_image_v4',sourceType:'codex_builtin_image_gen',styleId:'cozy_handdrawn_ai_v4',assets:[]};
+        {batchId:plan.batchId??path.basename(production),sourceType:'codex_builtin_image_gen',styleId:plan.styleId??'cozy_handdrawn_ai_v4',assets:[]};
     for(const entry of plan.assets) {
         if(process.argv[2] && entry.stage!==process.argv[2])continue;
         const result=await importEntry(entry);

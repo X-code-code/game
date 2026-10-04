@@ -1,0 +1,134 @@
+{
+  "ver": "1.0.27",
+  "importer": "image",
+  "imported": true,
+  "uuid": "760a0ad2-4e06-428a-bf3d-39945e9b9476",
+  "files": [
+    ".json",
+    ".png"
+  ],
+  "subMetas": {
+    "6c48a": {
+      "ver": "1.0.22",
+      "importer": "texture",
+      "imported": true,
+      "uuid": "760a0ad2-4e06-428a-bf3d-39945e9b9476@6c48a",
+      "displayName": "tea_shrub_v8",
+      "id": "6c48a",
+      "name": "texture",
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "wrapModeS": "clamp-to-edge",
+        "wrapModeT": "clamp-to-edge",
+        "minfilter": "linear",
+        "magfilter": "linear",
+        "mipfilter": "none",
+        "anisotropy": 0,
+        "imageUuidOrDatabaseUri": "760a0ad2-4e06-428a-bf3d-39945e9b9476",
+        "isUuid": true,
+        "visible": false
+      }
+    },
+    "f9941": {
+      "ver": "1.0.12",
+      "importer": "sprite-frame",
+      "imported": true,
+      "uuid": "760a0ad2-4e06-428a-bf3d-39945e9b9476@f9941",
+      "displayName": "tea_shrub_v8",
+      "id": "f9941",
+      "name": "spriteFrame",
+      "files": [
+        ".json"
+      ],
+      "subMetas": {},
+      "userData": {
+        "trimType": "custom",
+        "trimThreshold": 1,
+        "rotated": false,
+        "offsetX": 0,
+        "offsetY": 0,
+        "trimX": 0,
+        "trimY": 0,
+        "width": 140,
+        "height": 100,
+        "rawWidth": 140,
+        "rawHeight": 100,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
+        "packable": true,
+        "pixelsToUnit": 100,
+        "pivotX": 0.5,
+        "pivotY": 0.5,
+        "meshType": 0,
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "760a0ad2-4e06-428a-bf3d-39945e9b9476@6c48a",
+        "atlasUuid": "",
+        "vertices": {
+          "rawPosition": [
+            -70,
+            -50,
+            0,
+            70,
+            -50,
+            0,
+            -70,
+            50,
+            0,
+            70,
+            50,
+            0
+          ],
+          "uv": [
+            0,
+            100,
+            140,
+            100,
+            0,
+            0,
+            140,
+            0
+          ],
+          "nuv": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          "minPos": [
+            -70,
+            -50,
+            0
+          ],
+          "maxPos": [
+            70,
+            50,
+            0
+          ],
+          "indexes": [
+            0,
+            1,
+            2,
+            2,
+            1,
+            3
+          ]
+        }
+      }
+    }
+  },
+  "userData": {
+    "type": "sprite-frame",
+    "fixAlphaTransparencyArtifacts": false,
+    "hasAlpha": true,
+    "redirect": "760a0ad2-4e06-428a-bf3d-39945e9b9476@6c48a"
+  }
+}

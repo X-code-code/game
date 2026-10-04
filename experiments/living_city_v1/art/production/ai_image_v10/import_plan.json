@@ -1,0 +1,47 @@
+{
+  "batchId": "ai_image_v10",
+  "sourceType": "codex_builtin_image_gen",
+  "styleId": "cozy_flat_town_v5",
+  "assets": [
+    {
+      "name": "garden_glove_surface_v10",
+      "source": "garden_glove_surface_v10",
+      "stage": "target",
+      "targetId": "garden_glove",
+      "width": 256,
+      "height": 157,
+      "inset": 4,
+      "runtime": "targets/garden_glove.png"
+    },
+    {
+      "name": "tiny_camera_surface_v10",
+      "source": "tiny_camera_surface_v10",
+      "stage": "target",
+      "targetId": "tiny_camera",
+      "width": 256,
+      "height": 156,
+      "inset": 4,
+      "runtime": "targets/tiny_camera.png"
+    },
+    {
+      "name": "pink_watering_can_surface_v10",
+      "source": "pink_watering_can_surface_v10",
+      "stage": "target",
+      "targetId": "pink_watering_can",
+      "width": 256,
+      "height": 137,
+      "inset": 4,
+      "runtime": "targets/pink_watering_can.png"
+    },
+    {
+      "name": "wooden_bird_surface_v10",
+      "source": "wooden_bird_surface_v10",
+      "stage": "target",
+      "targetId": "wooden_bird",
+      "width": 256,
+      "height": 181,
+      "inset": 4,
+      "runtime": "targets/wooden_bird.png"
+    }
+  ]
+}

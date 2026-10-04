@@ -30,6 +30,7 @@ export class TargetInput {
         private readonly targets: readonly TapTarget[],
         private readonly onTargetClicked: (hit: TargetClicked) => void,
         private readonly isBlocked?: (uiX: number, uiY: number) => boolean,
+        private readonly onMissedTap?: (uiX: number, uiY: number) => void,
     ) {
         input.on(Input.EventType.TOUCH_START, this.onTouchStart, this);
         input.on(Input.EventType.TOUCH_MOVE, this.onTouchMove, this);
@@ -38,6 +39,7 @@ export class TargetInput {
         input.on(Input.EventType.MOUSE_DOWN, this.onMouseDown, this);
         input.on(Input.EventType.MOUSE_MOVE, this.onMouseMove, this);
         input.on(Input.EventType.MOUSE_UP, this.onMouseUp, this);
+        input.on(Input.EventType.MOUSE_WHEEL, this.onMouseWheel, this);
     }
 
     public dispose(): void {
@@ -48,6 +50,7 @@ export class TargetInput {
         input.off(Input.EventType.MOUSE_DOWN, this.onMouseDown, this);
         input.off(Input.EventType.MOUSE_MOVE, this.onMouseMove, this);
         input.off(Input.EventType.MOUSE_UP, this.onMouseUp, this);
+        input.off(Input.EventType.MOUSE_WHEEL, this.onMouseWheel, this);
         this.cancelGestures();
     }
 
@@ -61,7 +64,7 @@ export class TargetInput {
         const id = event.getID();
         if (id === null) return;
         const point = event.getUILocation();
-        this.touches.set(id, { x: point.x, y: point.y, eligible: this.touches.size === 0,
+        this.touches.set(id, { x: point.x, y: point.y, eligible: this.touches.size === 0 && !this.isBlocked?.(point.x, point.y),
             target: this.targetAt(point.x, point.y) });
         if (this.touches.size > 1) {
             this.touches.forEach(press => { press.eligible = false; });
@@ -97,7 +100,7 @@ export class TargetInput {
     private onMouseDown(event: EventMouse): void {
         if (event.getButton() !== EventMouse.BUTTON_LEFT || this.touches.size > 0) return;
         const point = event.getUILocation();
-        this.mousePress = { x: point.x, y: point.y, eligible: true,
+        this.mousePress = { x: point.x, y: point.y, eligible: !this.isBlocked?.(point.x, point.y),
             target: this.targetAt(point.x, point.y) };
     }
 
@@ -111,6 +114,12 @@ export class TargetInput {
         if (!press || event.getButton() !== EventMouse.BUTTON_LEFT || this.touches.size > 0) return;
         const point = event.getUILocation();
         if (this.checkMovement(press, point)) this.activateAt(press, point.x, point.y);
+    }
+
+    private onMouseWheel(): void {
+        // A wheel zoom can leave the pointer stationary, but it is never a tap.
+        if (this.mousePress) this.mousePress.eligible = false;
+        this.touches.forEach(press => { press.eligible = false; });
     }
 
     private checkMovement(press: Press, point: { x: number; y: number }): boolean {
@@ -128,8 +137,14 @@ export class TargetInput {
     }
 
     private activateAt(press: Press, uiX: number, uiY: number): void {
+        if (this.isBlocked?.(uiX, uiY)) return;
         const target = press.target;
-        if (!target || this.targetAt(uiX, uiY) !== target) return;
+        const releasedTarget = this.targetAt(uiX, uiY);
+        if (!target) {
+            if (!releasedTarget) this.onMissedTap?.(uiX, uiY);
+            return;
+        }
+        if (releasedTarget !== target) return;
         const hit = target.activate(uiX, uiY);
         if (hit) this.onTargetClicked(hit);
     }

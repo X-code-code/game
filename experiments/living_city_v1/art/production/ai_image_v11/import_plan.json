@@ -1,0 +1,47 @@
+{
+  "batchId": "ai_image_v11",
+  "sourceType": "codex_builtin_image_gen",
+  "styleId": "cozy_flat_town_v5",
+  "assets": [
+    {
+      "name": "reading_glasses_refined_v11",
+      "source": "reading_glasses_refined_v11",
+      "stage": "target",
+      "targetId": "reading_glasses",
+      "width": 256,
+      "height": 108,
+      "inset": 4,
+      "runtime": "targets/reading_glasses.png"
+    },
+    {
+      "name": "postcard_refined_v11",
+      "source": "postcard_refined_v11",
+      "stage": "target",
+      "targetId": "postcard",
+      "width": 256,
+      "height": 155,
+      "inset": 4,
+      "runtime": "targets/postcard.png"
+    },
+    {
+      "name": "yarn_ball_refined_v11",
+      "source": "yarn_ball_refined_v11",
+      "stage": "target",
+      "targetId": "yarn_ball",
+      "width": 256,
+      "height": 173,
+      "inset": 4,
+      "runtime": "targets/yarn_ball.png"
+    },
+    {
+      "name": "laundry_peg_refined_v11",
+      "source": "laundry_peg_refined_v11",
+      "stage": "target",
+      "targetId": "laundry_peg",
+      "width": 96,
+      "height": 256,
+      "inset": 4,
+      "runtime": "targets/laundry_peg.png"
+    }
+  ]
+}

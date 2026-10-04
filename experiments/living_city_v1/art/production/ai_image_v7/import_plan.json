@@ -1,0 +1,1147 @@
+{
+  "batchId": "ai_image_v7",
+  "sourceType": "codex_builtin_image_gen",
+  "styleId": "cozy_flat_town_v5",
+  "assets": [
+    {
+      "name": "shop_books_v7",
+      "source": "shop_books_v7",
+      "stage": "scene",
+      "sceneSlotId": "lc7_book_shop_back",
+      "width": 320,
+      "height": 320,
+      "align": "bottom",
+      "footpoint": {
+        "x": 160,
+        "y": 315
+      },
+      "runtime": "simple2d_scene/lc7_book_shop_back.png"
+    },
+    {
+      "name": "shop_flower_v7",
+      "source": "shop_flower_v7",
+      "stage": "scene",
+      "sceneSlotId": "lc7_flower_shop_back",
+      "width": 320,
+      "height": 330,
+      "align": "bottom",
+      "footpoint": {
+        "x": 160,
+        "y": 325
+      },
+      "runtime": "simple2d_scene/lc7_flower_shop_back.png"
+    },
+    {
+      "name": "shop_sweets_v7",
+      "source": "shop_sweets_v7",
+      "stage": "scene",
+      "sceneSlotId": "lc7_sweet_shop_back",
+      "width": 320,
+      "height": 320,
+      "align": "bottom",
+      "footpoint": {
+        "x": 160,
+        "y": 315
+      },
+      "runtime": "simple2d_scene/lc7_sweet_shop_back.png"
+    },
+    {
+      "name": "shop_noodles_v7",
+      "source": "shop_noodles_v7",
+      "stage": "scene",
+      "sceneSlotId": "lc7_noodle_shop_back",
+      "width": 320,
+      "height": 310,
+      "align": "bottom",
+      "footpoint": {
+        "x": 160,
+        "y": 305
+      },
+      "runtime": "simple2d_scene/lc7_noodle_shop_back.png"
+    },
+    {
+      "name": "house_sage_v7",
+      "source": "house_sage_v7",
+      "stage": "scene",
+      "sceneSlotId": "lc7_sage_house_back",
+      "width": 320,
+      "height": 310,
+      "align": "bottom",
+      "footpoint": {
+        "x": 160,
+        "y": 305
+      },
+      "runtime": "simple2d_scene/lc7_sage_house_back.png"
+    },
+    {
+      "name": "house_rose_v7",
+      "source": "house_rose_v7",
+      "stage": "scene",
+      "sceneSlotId": "lc7_rose_house_back",
+      "width": 320,
+      "height": 300,
+      "align": "bottom",
+      "footpoint": {
+        "x": 160,
+        "y": 295
+      },
+      "runtime": "simple2d_scene/lc7_rose_house_back.png"
+    },
+    {
+      "name": "chicken_flower_shopkeeper_v7_frame_01",
+      "source": "chicken_flower_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "flower_shopkeeper",
+      "frameIndex": 1,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 182,
+      "sharedSheetScale": 0.4439140811455847,
+      "runtime": "cels/flower_shopkeeper/chicken_flower_shopkeeper_v7_frame_01.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_flower_shopkeeper_v7_frame_02",
+      "source": "chicken_flower_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "flower_shopkeeper",
+      "frameIndex": 2,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.4439140811455847,
+      "runtime": "cels/flower_shopkeeper/chicken_flower_shopkeeper_v7_frame_02.png",
+      "crop": {
+        "left": 512,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_flower_shopkeeper_v7_frame_03",
+      "source": "chicken_flower_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "flower_shopkeeper",
+      "frameIndex": 3,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4439140811455847,
+      "runtime": "cels/flower_shopkeeper/chicken_flower_shopkeeper_v7_frame_03.png",
+      "crop": {
+        "left": 1024,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_flower_shopkeeper_v7_frame_04",
+      "source": "chicken_flower_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "flower_shopkeeper",
+      "frameIndex": 4,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.4439140811455847,
+      "runtime": "cels/flower_shopkeeper/chicken_flower_shopkeeper_v7_frame_04.png",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_flower_shopkeeper_v7_frame_05",
+      "source": "chicken_flower_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "flower_shopkeeper",
+      "frameIndex": 5,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 183,
+      "sharedSheetScale": 0.4439140811455847,
+      "runtime": "cels/flower_shopkeeper/chicken_flower_shopkeeper_v7_frame_05.png",
+      "crop": {
+        "left": 512,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_flower_shopkeeper_v7_frame_06",
+      "source": "chicken_flower_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "flower_shopkeeper",
+      "frameIndex": 6,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4439140811455847,
+      "runtime": "cels/flower_shopkeeper/chicken_flower_shopkeeper_v7_frame_06.png",
+      "crop": {
+        "left": 1024,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_book_shopkeeper_v7_frame_01",
+      "source": "chicken_book_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "book_shopkeeper",
+      "frameIndex": 1,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.42857142857142855,
+      "runtime": "cels/book_shopkeeper/chicken_book_shopkeeper_v7_frame_01.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_book_shopkeeper_v7_frame_02",
+      "source": "chicken_book_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "book_shopkeeper",
+      "frameIndex": 2,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.42857142857142855,
+      "runtime": "cels/book_shopkeeper/chicken_book_shopkeeper_v7_frame_02.png",
+      "crop": {
+        "left": 512,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_book_shopkeeper_v7_frame_03",
+      "source": "chicken_book_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "book_shopkeeper",
+      "frameIndex": 3,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.42857142857142855,
+      "runtime": "cels/book_shopkeeper/chicken_book_shopkeeper_v7_frame_03.png",
+      "crop": {
+        "left": 1024,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_book_shopkeeper_v7_frame_04",
+      "source": "chicken_book_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "book_shopkeeper",
+      "frameIndex": 4,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.42857142857142855,
+      "runtime": "cels/book_shopkeeper/chicken_book_shopkeeper_v7_frame_04.png",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_book_shopkeeper_v7_frame_05",
+      "source": "chicken_book_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "book_shopkeeper",
+      "frameIndex": 5,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.42857142857142855,
+      "runtime": "cels/book_shopkeeper/chicken_book_shopkeeper_v7_frame_05.png",
+      "crop": {
+        "left": 512,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_book_shopkeeper_v7_frame_06",
+      "source": "chicken_book_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "book_shopkeeper",
+      "frameIndex": 6,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.42857142857142855,
+      "runtime": "cels/book_shopkeeper/chicken_book_shopkeeper_v7_frame_06.png",
+      "crop": {
+        "left": 1024,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_sweet_shopkeeper_v7_frame_01",
+      "source": "chicken_sweet_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "sweet_shopkeeper",
+      "frameIndex": 1,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.41797752808988764,
+      "runtime": "cels/sweet_shopkeeper/chicken_sweet_shopkeeper_v7_frame_01.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_sweet_shopkeeper_v7_frame_02",
+      "source": "chicken_sweet_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "sweet_shopkeeper",
+      "frameIndex": 2,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.41797752808988764,
+      "runtime": "cels/sweet_shopkeeper/chicken_sweet_shopkeeper_v7_frame_02.png",
+      "crop": {
+        "left": 512,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_sweet_shopkeeper_v7_frame_03",
+      "source": "chicken_sweet_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "sweet_shopkeeper",
+      "frameIndex": 3,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.41797752808988764,
+      "runtime": "cels/sweet_shopkeeper/chicken_sweet_shopkeeper_v7_frame_03.png",
+      "crop": {
+        "left": 1024,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_sweet_shopkeeper_v7_frame_04",
+      "source": "chicken_sweet_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "sweet_shopkeeper",
+      "frameIndex": 4,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.41797752808988764,
+      "runtime": "cels/sweet_shopkeeper/chicken_sweet_shopkeeper_v7_frame_04.png",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_sweet_shopkeeper_v7_frame_05",
+      "source": "chicken_sweet_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "sweet_shopkeeper",
+      "frameIndex": 5,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 183,
+      "sharedSheetScale": 0.41797752808988764,
+      "runtime": "cels/sweet_shopkeeper/chicken_sweet_shopkeeper_v7_frame_05.png",
+      "crop": {
+        "left": 512,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_sweet_shopkeeper_v7_frame_06",
+      "source": "chicken_sweet_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "sweet_shopkeeper",
+      "frameIndex": 6,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.41797752808988764,
+      "runtime": "cels/sweet_shopkeeper/chicken_sweet_shopkeeper_v7_frame_06.png",
+      "crop": {
+        "left": 1024,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_noodle_shopkeeper_v7_frame_01",
+      "source": "chicken_noodle_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "noodle_shopkeeper",
+      "frameIndex": 1,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 183,
+      "sharedSheetScale": 0.45036319612590797,
+      "runtime": "cels/noodle_shopkeeper/chicken_noodle_shopkeeper_v7_frame_01.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_noodle_shopkeeper_v7_frame_02",
+      "source": "chicken_noodle_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "noodle_shopkeeper",
+      "frameIndex": 2,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.45036319612590797,
+      "runtime": "cels/noodle_shopkeeper/chicken_noodle_shopkeeper_v7_frame_02.png",
+      "crop": {
+        "left": 512,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_noodle_shopkeeper_v7_frame_03",
+      "source": "chicken_noodle_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "noodle_shopkeeper",
+      "frameIndex": 3,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.45036319612590797,
+      "runtime": "cels/noodle_shopkeeper/chicken_noodle_shopkeeper_v7_frame_03.png",
+      "crop": {
+        "left": 1024,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_noodle_shopkeeper_v7_frame_04",
+      "source": "chicken_noodle_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "noodle_shopkeeper",
+      "frameIndex": 4,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.45036319612590797,
+      "runtime": "cels/noodle_shopkeeper/chicken_noodle_shopkeeper_v7_frame_04.png",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_noodle_shopkeeper_v7_frame_05",
+      "source": "chicken_noodle_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "noodle_shopkeeper",
+      "frameIndex": 5,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.45036319612590797,
+      "runtime": "cels/noodle_shopkeeper/chicken_noodle_shopkeeper_v7_frame_05.png",
+      "crop": {
+        "left": 512,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_noodle_shopkeeper_v7_frame_06",
+      "source": "chicken_noodle_shopkeeper_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "noodle_shopkeeper",
+      "frameIndex": 6,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.45036319612590797,
+      "runtime": "cels/noodle_shopkeeper/chicken_noodle_shopkeeper_v7_frame_06.png",
+      "crop": {
+        "left": 1024,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_garden_neighbor_v7_frame_01",
+      "source": "chicken_garden_neighbor_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "garden_neighbor",
+      "frameIndex": 1,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.43457943925233644,
+      "runtime": "cels/garden_neighbor/chicken_garden_neighbor_v7_frame_01.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_garden_neighbor_v7_frame_02",
+      "source": "chicken_garden_neighbor_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "garden_neighbor",
+      "frameIndex": 2,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.43457943925233644,
+      "runtime": "cels/garden_neighbor/chicken_garden_neighbor_v7_frame_02.png",
+      "crop": {
+        "left": 512,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_garden_neighbor_v7_frame_03",
+      "source": "chicken_garden_neighbor_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "garden_neighbor",
+      "frameIndex": 3,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.43457943925233644,
+      "runtime": "cels/garden_neighbor/chicken_garden_neighbor_v7_frame_03.png",
+      "crop": {
+        "left": 1024,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_garden_neighbor_v7_frame_04",
+      "source": "chicken_garden_neighbor_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "garden_neighbor",
+      "frameIndex": 4,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.43457943925233644,
+      "runtime": "cels/garden_neighbor/chicken_garden_neighbor_v7_frame_04.png",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_garden_neighbor_v7_frame_05",
+      "source": "chicken_garden_neighbor_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "garden_neighbor",
+      "frameIndex": 5,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 183,
+      "sharedSheetScale": 0.43457943925233644,
+      "runtime": "cels/garden_neighbor/chicken_garden_neighbor_v7_frame_05.png",
+      "crop": {
+        "left": 512,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_garden_neighbor_v7_frame_06",
+      "source": "chicken_garden_neighbor_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "garden_neighbor",
+      "frameIndex": 6,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.43457943925233644,
+      "runtime": "cels/garden_neighbor/chicken_garden_neighbor_v7_frame_06.png",
+      "crop": {
+        "left": 1024,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_laundry_neighbor_v7_frame_01",
+      "source": "chicken_laundry_neighbor_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "laundry_neighbor",
+      "frameIndex": 1,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.4376470588235294,
+      "runtime": "cels/laundry_neighbor/chicken_laundry_neighbor_v7_frame_01.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_laundry_neighbor_v7_frame_02",
+      "source": "chicken_laundry_neighbor_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "laundry_neighbor",
+      "frameIndex": 2,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.4376470588235294,
+      "runtime": "cels/laundry_neighbor/chicken_laundry_neighbor_v7_frame_02.png",
+      "crop": {
+        "left": 512,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_laundry_neighbor_v7_frame_03",
+      "source": "chicken_laundry_neighbor_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "laundry_neighbor",
+      "frameIndex": 3,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4376470588235294,
+      "runtime": "cels/laundry_neighbor/chicken_laundry_neighbor_v7_frame_03.png",
+      "crop": {
+        "left": 1024,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_laundry_neighbor_v7_frame_04",
+      "source": "chicken_laundry_neighbor_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "laundry_neighbor",
+      "frameIndex": 4,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4376470588235294,
+      "runtime": "cels/laundry_neighbor/chicken_laundry_neighbor_v7_frame_04.png",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_laundry_neighbor_v7_frame_05",
+      "source": "chicken_laundry_neighbor_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "laundry_neighbor",
+      "frameIndex": 5,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.4376470588235294,
+      "runtime": "cels/laundry_neighbor/chicken_laundry_neighbor_v7_frame_05.png",
+      "crop": {
+        "left": 512,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_laundry_neighbor_v7_frame_06",
+      "source": "chicken_laundry_neighbor_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "laundry_neighbor",
+      "frameIndex": 6,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4376470588235294,
+      "runtime": "cels/laundry_neighbor/chicken_laundry_neighbor_v7_frame_06.png",
+      "crop": {
+        "left": 1024,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_strolling_reader_v7_frame_01",
+      "source": "chicken_strolling_reader_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "strolling_reader",
+      "frameIndex": 1,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.4744897959183674,
+      "runtime": "cels/strolling_reader/chicken_strolling_reader_v7_frame_01.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_strolling_reader_v7_frame_02",
+      "source": "chicken_strolling_reader_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "strolling_reader",
+      "frameIndex": 2,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4744897959183674,
+      "runtime": "cels/strolling_reader/chicken_strolling_reader_v7_frame_02.png",
+      "crop": {
+        "left": 512,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_strolling_reader_v7_frame_03",
+      "source": "chicken_strolling_reader_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "strolling_reader",
+      "frameIndex": 3,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.4744897959183674,
+      "runtime": "cels/strolling_reader/chicken_strolling_reader_v7_frame_03.png",
+      "crop": {
+        "left": 1024,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_strolling_reader_v7_frame_04",
+      "source": "chicken_strolling_reader_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "strolling_reader",
+      "frameIndex": 4,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.4744897959183674,
+      "runtime": "cels/strolling_reader/chicken_strolling_reader_v7_frame_04.png",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_strolling_reader_v7_frame_05",
+      "source": "chicken_strolling_reader_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "strolling_reader",
+      "frameIndex": 5,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.4744897959183674,
+      "runtime": "cels/strolling_reader/chicken_strolling_reader_v7_frame_05.png",
+      "crop": {
+        "left": 512,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_strolling_reader_v7_frame_06",
+      "source": "chicken_strolling_reader_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "strolling_reader",
+      "frameIndex": 6,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.4744897959183674,
+      "runtime": "cels/strolling_reader/chicken_strolling_reader_v7_frame_06.png",
+      "crop": {
+        "left": 1024,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_visiting_child_v7_frame_01",
+      "source": "chicken_visiting_child_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "visiting_child",
+      "frameIndex": 1,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 183,
+      "sharedSheetScale": 0.4449760765550239,
+      "runtime": "cels/visiting_child/chicken_visiting_child_v7_frame_01.png",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_visiting_child_v7_frame_02",
+      "source": "chicken_visiting_child_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "visiting_child",
+      "frameIndex": 2,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.4449760765550239,
+      "runtime": "cels/visiting_child/chicken_visiting_child_v7_frame_02.png",
+      "crop": {
+        "left": 512,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_visiting_child_v7_frame_03",
+      "source": "chicken_visiting_child_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "visiting_child",
+      "frameIndex": 3,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.4449760765550239,
+      "runtime": "cels/visiting_child/chicken_visiting_child_v7_frame_03.png",
+      "crop": {
+        "left": 1024,
+        "top": 0,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_visiting_child_v7_frame_04",
+      "source": "chicken_visiting_child_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "visiting_child",
+      "frameIndex": 4,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 182,
+      "sharedSheetScale": 0.4449760765550239,
+      "runtime": "cels/visiting_child/chicken_visiting_child_v7_frame_04.png",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_visiting_child_v7_frame_05",
+      "source": "chicken_visiting_child_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "visiting_child",
+      "frameIndex": 5,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 182,
+      "sharedSheetScale": 0.4449760765550239,
+      "runtime": "cels/visiting_child/chicken_visiting_child_v7_frame_05.png",
+      "crop": {
+        "left": 512,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    },
+    {
+      "name": "chicken_visiting_child_v7_frame_06",
+      "source": "chicken_visiting_child_sheet_walkfix_v7",
+      "stage": "character",
+      "actor": "visiting_child",
+      "frameIndex": 6,
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4449760765550239,
+      "runtime": "cels/visiting_child/chicken_visiting_child_v7_frame_06.png",
+      "crop": {
+        "left": 1024,
+        "top": 512,
+        "width": 512,
+        "height": 512
+      }
+    }
+  ]
+}

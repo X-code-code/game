@@ -1,4 +1,5 @@
 import type { LocalStorageAdapter } from '../platform/LocalStorageAdapter';
+import type { CityConfig } from '../config/CityTypes';
 
 export const SAVE_VERSION = 1 as const;
 export const DEFAULT_SAVE_KEY = 'chicken_city_exploration_save';
@@ -11,10 +12,13 @@ export interface CityProgressSnapshot {
     foundHiddenObjectIds: string[];
     discoveredChickenIds: string[];
     interactiveStates?: Record<string, string>;
+    /** Optional facility discoveries and resident requests; separate from required tasks. */
+    sceneDiscoveryIds?: string[];
 }
 
 export interface CitySaveState extends CityProgressSnapshot {
     interactiveStates: Record<string, string>;
+    sceneDiscoveryIds: string[];
 }
 
 export interface SaveSettings {
@@ -63,6 +67,7 @@ function emptyCity(): CitySaveState {
     return {
         completedTaskIds: [], foundHiddenObjectIds: [], discoveredChickenIds: [],
         interactiveStates: stringRecord(),
+        sceneDiscoveryIds: [],
     };
 }
 
@@ -83,6 +88,7 @@ function cloneCity(city: CitySaveState): CitySaveState {
         completedTaskIds: [...city.completedTaskIds],
         foundHiddenObjectIds: [...city.foundHiddenObjectIds],
         discoveredChickenIds: [...city.discoveredChickenIds], interactiveStates,
+        sceneDiscoveryIds: [...city.sceneDiscoveryIds],
     };
 }
 
@@ -108,7 +114,8 @@ function idArray(value: unknown): value is string[] {
 function decodeCity(value: unknown): CitySaveState | null {
     if (!object(value) || !idArray(value.completedTaskIds)
         || !idArray(value.foundHiddenObjectIds) || !idArray(value.discoveredChickenIds)
-        || !object(value.interactiveStates)) return null;
+        || !object(value.interactiveStates)
+        || (value.sceneDiscoveryIds !== undefined && !idArray(value.sceneDiscoveryIds))) return null;
     const interactiveStates = stringRecord();
     for (const id of Object.keys(value.interactiveStates)) {
         const state = value.interactiveStates[id];
@@ -119,6 +126,7 @@ function decodeCity(value: unknown): CitySaveState | null {
         completedTaskIds: uniqueIds(value.completedTaskIds),
         foundHiddenObjectIds: uniqueIds(value.foundHiddenObjectIds),
         discoveredChickenIds: uniqueIds(value.discoveredChickenIds), interactiveStates,
+        sceneDiscoveryIds: uniqueIds((value.sceneDiscoveryIds as string[] | undefined) ?? []),
     };
 }
 
@@ -198,10 +206,33 @@ export class SaveManager {
             city.completedTaskIds = uniqueIds([...city.completedTaskIds, ...progress.completedTaskIds]);
             city.foundHiddenObjectIds = uniqueIds([...city.foundHiddenObjectIds, ...progress.foundHiddenObjectIds]);
             city.discoveredChickenIds = uniqueIds([...city.discoveredChickenIds, ...progress.discoveredChickenIds]);
+            city.sceneDiscoveryIds = uniqueIds([...city.sceneDiscoveryIds, ...(progress.sceneDiscoveryIds ?? [])]);
             for (const id of Object.keys(progress.interactiveStates ?? {})) {
                 const state = progress.interactiveStates![id];
                 if (validId(id) && typeof state === 'string') city.interactiveStates[id] = state;
             }
+        });
+    }
+
+    /** Recompute cached tasks after a city gains goals, preserving actual discoveries and unlocks. */
+    public reconcileCityProgress(config: Pick<CityConfig, 'cityId' | 'tasks' | 'hiddenObjects' | 'chickens'>): boolean {
+        this.requireId(config.cityId);
+        return this.commit(data => {
+            const city = data.cities[config.cityId];
+            const found = new Set(city?.foundHiddenObjectIds ?? []);
+            const seen = new Set(city?.discoveredChickenIds ?? []);
+            const completedTaskIds = config.tasks.filter(task => {
+                if (task.type === 'hiddenObject') return found.has(task.targetId) &&
+                    config.hiddenObjects.some(object => object.id === task.targetId && object.targetable);
+                if (task.type === 'chickenId') return seen.has(task.targetId) &&
+                    config.chickens.some(chicken => chicken.id === task.targetId && chicken.targetable);
+                return config.chickens.some(chicken => seen.has(chicken.id) && chicken.targetable &&
+                    chicken.tags.indexOf(task.targetTag) >= 0);
+            }).map(task => task.id);
+            if (city) city.completedTaskIds = completedTaskIds;
+            const complete = config.tasks.filter(task => task.required)
+                .every(task => completedTaskIds.indexOf(task.id) >= 0);
+            if (!complete) data.completedCityIds = data.completedCityIds.filter(id => id !== config.cityId);
         });
     }
 

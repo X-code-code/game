@@ -1,0 +1,694 @@
+{
+  "batchId": "ai_image_v5",
+  "sourceType": "codex_builtin_image_gen",
+  "styleId": "cozy_flat_town_v5",
+  "visualApproval": "pending",
+  "sources": [
+    {
+      "id": "shop_tea_v5",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+      "source": "art/production/ai_image_v5/sources/shop_tea_v5.png",
+      "prompt": "art/production/ai_image_v5/prompts/shop_tea_v5_edit.md",
+      "sourceSha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c",
+      "originalToolOutputSha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 274,
+        "top": 5,
+        "width": 1168,
+        "height": 997,
+        "transparent": 731550,
+        "visible": 841314
+      },
+      "status": "runtime_used_visual_unapproved",
+      "referencedImagePaths": [
+        "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-c3bd76ac-da4d-42d0-acdf-ca73136a077a.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "referenceSha256": [
+        {
+          "path": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-c3bd76ac-da4d-42d0-acdf-ca73136a077a.png",
+          "sha256": "f1e8967d1435b52155b6d133b97b76d3916402d8b7ca1953e7e35748191013d8"
+        },
+        {
+          "path": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0"
+        }
+      ],
+      "referenceEvidence": "Actual image_gen parameters recovered from this task tool-call log; no inferred reference assets."
+    },
+    {
+      "id": "shop_tea_candidate_01",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-c3bd76ac-da4d-42d0-acdf-ca73136a077a.png",
+      "source": "art/production/ai_image_v5/sources/shop_tea_candidate_01.png",
+      "prompt": "art/production/ai_image_v5/prompts/shop_tea_candidate_01.md",
+      "sourceSha256": "f1e8967d1435b52155b6d133b97b76d3916402d8b7ca1953e7e35748191013d8",
+      "originalToolOutputSha256": "f1e8967d1435b52155b6d133b97b76d3916402d8b7ca1953e7e35748191013d8",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 69,
+        "top": 44,
+        "width": 1317,
+        "height": 980,
+        "transparent": 849301,
+        "visible": 723563
+      },
+      "status": "superseded_candidate",
+      "referencedImagePaths": [
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "referenceSha256": [
+        {
+          "path": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0"
+        }
+      ],
+      "referenceEvidence": "Actual image_gen parameters recovered from this task tool-call log; no inferred reference assets.",
+      "supersededBy": "shop_tea_v5"
+    },
+    {
+      "id": "shop_blue_v5",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-496e5844-10fd-4f92-8fbc-bc3610fc63d5.png",
+      "source": "art/production/ai_image_v5/sources/shop_blue_v5.png",
+      "prompt": "art/production/ai_image_v5/prompts/shop_blue_v5.md",
+      "sourceSha256": "acecab6169e0122a90a20288fd868a15975f01916403c27a617b732a1e4980f5",
+      "originalToolOutputSha256": "acecab6169e0122a90a20288fd868a15975f01916403c27a617b732a1e4980f5",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 113,
+        "top": 30,
+        "width": 1335,
+        "height": 968,
+        "transparent": 753575,
+        "visible": 819289
+      },
+      "status": "runtime_used_visual_unapproved",
+      "referencedImagePaths": [
+        "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "referenceSha256": [
+        {
+          "path": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c"
+        },
+        {
+          "path": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0"
+        }
+      ],
+      "referenceEvidence": "Actual image_gen parameters recovered from this task tool-call log; no inferred reference assets."
+    },
+    {
+      "id": "shop_tailor_v5",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-aa95ca93-667d-452d-bd0f-fac71154b8a8.png",
+      "source": "art/production/ai_image_v5/sources/shop_tailor_v5.png",
+      "prompt": "art/production/ai_image_v5/prompts/shop_tailor_v5.md",
+      "sourceSha256": "9a6c8eefa170d144abfebcb701fc2bd9e4531833bed95920db894decce2e1ccb",
+      "originalToolOutputSha256": "9a6c8eefa170d144abfebcb701fc2bd9e4531833bed95920db894decce2e1ccb",
+      "sourceSize": {
+        "width": 1305,
+        "height": 1205
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 29,
+        "width": 1288,
+        "height": 1142,
+        "transparent": 538493,
+        "visible": 1034032
+      },
+      "status": "runtime_used_visual_unapproved",
+      "referencedImagePaths": [
+        "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "referenceSha256": [
+        {
+          "path": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c"
+        },
+        {
+          "path": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0"
+        }
+      ],
+      "referenceEvidence": "Actual image_gen parameters recovered from this task tool-call log; no inferred reference assets."
+    },
+    {
+      "id": "shop_bakery_v5",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-5f2bcd19-5e22-497f-80c2-48c3cf3e58a4.png",
+      "source": "art/production/ai_image_v5/sources/shop_bakery_v5.png",
+      "prompt": "art/production/ai_image_v5/prompts/shop_bakery_v5.md",
+      "sourceSha256": "af3bfb2e62f9b25d0c40809b0a12f5dfb6e34201db0a60d51077592feb023db1",
+      "originalToolOutputSha256": "af3bfb2e62f9b25d0c40809b0a12f5dfb6e34201db0a60d51077592feb023db1",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 175,
+        "top": 11,
+        "width": 1213,
+        "height": 995,
+        "transparent": 728631,
+        "visible": 844233
+      },
+      "status": "runtime_used_visual_unapproved",
+      "referencedImagePaths": [
+        "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "referenceSha256": [
+        {
+          "path": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c"
+        },
+        {
+          "path": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0"
+        }
+      ],
+      "referenceEvidence": "Actual image_gen parameters recovered from this task tool-call log; no inferred reference assets."
+    },
+    {
+      "id": "tea_stall_v5",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-37d2ccce-8f33-4c62-a653-8fa2fcdf3b96.png",
+      "source": "art/production/ai_image_v5/sources/tea_stall_v5.png",
+      "prompt": "art/production/ai_image_v5/prompts/tea_stall_v5.md",
+      "sourceSha256": "1af75c9e5f051d43ac8e71210a42ebfc11ec8f51e0f2c98d769310213035504d",
+      "originalToolOutputSha256": "1af75c9e5f051d43ac8e71210a42ebfc11ec8f51e0f2c98d769310213035504d",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 65,
+        "top": 68,
+        "width": 1453,
+        "height": 924,
+        "transparent": 965692,
+        "visible": 607172
+      },
+      "status": "runtime_used_visual_unapproved",
+      "referencedImagePaths": [
+        "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "referenceSha256": [
+        {
+          "path": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c"
+        },
+        {
+          "path": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0"
+        }
+      ],
+      "referenceEvidence": "Actual image_gen parameters recovered from this task tool-call log; no inferred reference assets."
+    },
+    {
+      "id": "bun_cart_v5",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-25815eb4-87f7-4736-8134-6ec261befdd6.png",
+      "source": "art/production/ai_image_v5/sources/bun_cart_v5.png",
+      "prompt": "art/production/ai_image_v5/prompts/bun_cart_v5.md",
+      "sourceSha256": "93286dd39701039bee0827b3ada8b242889664e188bd802e09f594b9942a8d78",
+      "originalToolOutputSha256": "93286dd39701039bee0827b3ada8b242889664e188bd802e09f594b9942a8d78",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 49,
+        "top": 21,
+        "width": 1451,
+        "height": 981,
+        "transparent": 882653,
+        "visible": 690211
+      },
+      "status": "runtime_used_visual_unapproved",
+      "referencedImagePaths": [
+        "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "referenceSha256": [
+        {
+          "path": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c"
+        },
+        {
+          "path": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0"
+        }
+      ],
+      "referenceEvidence": "Actual image_gen parameters recovered from this task tool-call log; no inferred reference assets."
+    },
+    {
+      "id": "town_tree_v5",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-fe4e7181-2cd8-486b-bf60-774036985417.png",
+      "source": "art/production/ai_image_v5/sources/town_tree_v5.png",
+      "prompt": "art/production/ai_image_v5/prompts/town_tree_v5.md",
+      "sourceSha256": "a81314066513650f63e9ba5196f2de644d3bcf72c95c08c79a9c08e7241301fc",
+      "originalToolOutputSha256": "a81314066513650f63e9ba5196f2de644d3bcf72c95c08c79a9c08e7241301fc",
+      "sourceSize": {
+        "width": 1312,
+        "height": 1199
+      },
+      "alphaBounds": {
+        "left": 105,
+        "top": 80,
+        "width": 1145,
+        "height": 1077,
+        "transparent": 1095503,
+        "visible": 477585
+      },
+      "status": "runtime_used_visual_unapproved",
+      "referencedImagePaths": [
+        "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "referenceSha256": [
+        {
+          "path": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c"
+        },
+        {
+          "path": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0"
+        }
+      ],
+      "referenceEvidence": "Actual image_gen parameters recovered from this task tool-call log; no inferred reference assets."
+    },
+    {
+      "id": "town_bench_v5",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-29d40dae-677c-4d07-87ab-c8465c1b1736.png",
+      "source": "art/production/ai_image_v5/sources/town_bench_v5.png",
+      "prompt": "art/production/ai_image_v5/prompts/town_bench_v5.md",
+      "sourceSha256": "40811f0925dc1915112c292dbacb1ca5f8f1c4484422cff71a930689d62cac75",
+      "originalToolOutputSha256": "40811f0925dc1915112c292dbacb1ca5f8f1c4484422cff71a930689d62cac75",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 49,
+        "top": 21,
+        "width": 1475,
+        "height": 967,
+        "transparent": 937969,
+        "visible": 634895
+      },
+      "status": "runtime_used_visual_unapproved",
+      "referencedImagePaths": [
+        "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "referenceSha256": [
+        {
+          "path": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c"
+        },
+        {
+          "path": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0"
+        }
+      ],
+      "referenceEvidence": "Actual image_gen parameters recovered from this task tool-call log; no inferred reference assets."
+    },
+    {
+      "id": "tea_patio_v5",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-b350fd53-c217-4dc7-9c48-d07399181ef1.png",
+      "source": "art/production/ai_image_v5/sources/tea_patio_v5.png",
+      "prompt": "art/production/ai_image_v5/prompts/tea_patio_v5.md",
+      "sourceSha256": "1de29592374740fcff7c8979acc50c7dc119affb6df708bac073d3b0c4fa277f",
+      "originalToolOutputSha256": "1de29592374740fcff7c8979acc50c7dc119affb6df708bac073d3b0c4fa277f",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 39,
+        "top": 9,
+        "width": 1475,
+        "height": 973,
+        "transparent": 1129312,
+        "visible": 443552
+      },
+      "status": "runtime_used_visual_unapproved",
+      "referencedImagePaths": [
+        "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "referenceSha256": [
+        {
+          "path": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c"
+        },
+        {
+          "path": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0"
+        }
+      ],
+      "referenceEvidence": "Actual image_gen parameters recovered from this task tool-call log; no inferred reference assets."
+    },
+    {
+      "id": "flower_display_v5",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-038319f4-1c8b-41c0-bc69-2729bf4a903f.png",
+      "source": "art/production/ai_image_v5/sources/flower_display_v5.png",
+      "prompt": "art/production/ai_image_v5/prompts/flower_display_v5.md",
+      "sourceSha256": "3c76ebd6a9206fcb813ba7f65003fcb874ed76e850a32c49ae6fe892e476aaf8",
+      "originalToolOutputSha256": "3c76ebd6a9206fcb813ba7f65003fcb874ed76e850a32c49ae6fe892e476aaf8",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 65,
+        "top": 107,
+        "width": 1243,
+        "height": 917,
+        "transparent": 1005034,
+        "visible": 567830
+      },
+      "status": "runtime_used_visual_unapproved",
+      "referencedImagePaths": [
+        "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "referenceSha256": [
+        {
+          "path": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c"
+        },
+        {
+          "path": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0"
+        }
+      ],
+      "referenceEvidence": "Actual image_gen parameters recovered from this task tool-call log; no inferred reference assets."
+    },
+    {
+      "id": "produce_display_v5",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-904ef85c-4410-4efb-8e54-fcbe1bd4d66b.png",
+      "source": "art/production/ai_image_v5/sources/produce_display_v5.png",
+      "prompt": "art/production/ai_image_v5/prompts/produce_display_v5.md",
+      "sourceSha256": "8ff233f2daed7b03a2d42e528d2f313d84bd8677c0e5ba6e0012b7791f9ce0a6",
+      "originalToolOutputSha256": "8ff233f2daed7b03a2d42e528d2f313d84bd8677c0e5ba6e0012b7791f9ce0a6",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 9,
+        "width": 1518,
+        "height": 976,
+        "transparent": 934119,
+        "visible": 638745
+      },
+      "status": "runtime_used_visual_unapproved",
+      "referencedImagePaths": [
+        "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "referenceSha256": [
+        {
+          "path": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c"
+        },
+        {
+          "path": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0"
+        }
+      ],
+      "referenceEvidence": "Actual image_gen parameters recovered from this task tool-call log; no inferred reference assets."
+    },
+    {
+      "id": "wood_crates_v5",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-fbe6e418-b3fc-4163-9f84-746200233c07.png",
+      "source": "art/production/ai_image_v5/sources/wood_crates_v5.png",
+      "prompt": "art/production/ai_image_v5/prompts/wood_crates_v5.md",
+      "sourceSha256": "d2af69e7af833fed6038d282a2e843fa81b9c846573dfed4be13d8029a24e4b0",
+      "originalToolOutputSha256": "d2af69e7af833fed6038d282a2e843fa81b9c846573dfed4be13d8029a24e4b0",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 46,
+        "width": 1506,
+        "height": 938,
+        "transparent": 719274,
+        "visible": 853590
+      },
+      "status": "runtime_used_visual_unapproved",
+      "referencedImagePaths": [
+        "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "referenceSha256": [
+        {
+          "path": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c"
+        },
+        {
+          "path": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0"
+        }
+      ],
+      "referenceEvidence": "Actual image_gen parameters recovered from this task tool-call log; no inferred reference assets."
+    },
+    {
+      "id": "water_station_v5",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-c31d3f68-774b-4ae2-98cf-f5f0e8d7d36f.png",
+      "source": "art/production/ai_image_v5/sources/water_station_v5.png",
+      "prompt": "art/production/ai_image_v5/prompts/water_station_v5.md",
+      "sourceSha256": "b4cbd3a466cfb61a17dfc7bcb0e28a508f216bd19986f201737371370a381148",
+      "originalToolOutputSha256": "b4cbd3a466cfb61a17dfc7bcb0e28a508f216bd19986f201737371370a381148",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 65,
+        "top": 40,
+        "width": 1371,
+        "height": 960,
+        "transparent": 1104440,
+        "visible": 468424
+      },
+      "status": "runtime_used_visual_unapproved",
+      "referencedImagePaths": [
+        "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "referenceSha256": [
+        {
+          "path": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-f8d05c78-a942-47a1-a421-a6d945c04033.png",
+          "sha256": "d7de0c260054c5bbe9826b38d2a95401c9c5258701e376d757099ceca5278f0c"
+        },
+        {
+          "path": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0"
+        }
+      ],
+      "referenceEvidence": "Actual image_gen parameters recovered from this task tool-call log; no inferred reference assets."
+    },
+    {
+      "id": "town_ground_v5",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-88793c66-25f4-478c-88ab-b254e8779bad.png",
+      "source": "art/production/ai_image_v5/sources/town_ground_v5.png",
+      "prompt": "art/production/ai_image_v5/prompts/town_ground_v5.md",
+      "sourceSha256": "b0e2de767f77adeaceac3dee6badc597ab7499273435ae3330efe86128a18ada",
+      "originalToolOutputSha256": "b0e2de767f77adeaceac3dee6badc597ab7499273435ae3330efe86128a18ada",
+      "sourceSize": {
+        "width": 1086,
+        "height": 1448
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 0,
+        "width": 1086,
+        "height": 1448,
+        "transparent": 0,
+        "visible": 1572528
+      },
+      "status": "superseded_after_width_expansion",
+      "referencedImagePaths": [
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "referenceSha256": [
+        {
+          "path": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0"
+        }
+      ],
+      "referenceEvidence": "Actual image_gen parameters recovered from this task tool-call log; no inferred reference assets.",
+      "supersededBy": "town_ground_wide_v5"
+    },
+    {
+      "id": "legacy_sewing_goods_v5",
+      "source": "art/production/ai_image_v5/sources/legacy_sewing_goods_v5.png",
+      "prompt": "art/production/ai_image_v5/prompts/legacy_sewing_goods_v5.md",
+      "sourceType": "codex_builtin_image_gen",
+      "sourceSha256": "4aed721d14ded5c4e6b5c7b171e9db0500b880bad80692b4f1ffde16dc379919",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-288ecb10-90ad-4d76-ad7d-811785e8f129.png",
+      "originalToolOutputSha256": "4aed721d14ded5c4e6b5c7b171e9db0500b880bad80692b4f1ffde16dc379919",
+      "sourceSize": {
+        "width": 1254,
+        "height": 1254
+      },
+      "reusedGeneratedSourceBatch": "ai_image_v4",
+      "reusedSource": "art/production/ai_image_v4/sources/sewing_goods.png",
+      "reusedPrompt": "art/production/ai_image_v4/prompts/sewing_goods.md",
+      "sourceGenerationRecordPath": "art/production/ai_image_v4/generation_record.json",
+      "method": "unchanged_copy_of_existing_builtin_image_gen_source_no_new_generation_call",
+      "status": "reused_source_unapproved"
+    },
+    {
+      "id": "legacy_tailor_rack_v5",
+      "source": "art/production/ai_image_v5/sources/legacy_tailor_rack_v5.png",
+      "prompt": "art/production/ai_image_v5/prompts/legacy_tailor_rack_v5.md",
+      "sourceType": "codex_builtin_image_gen",
+      "sourceSha256": "18fe97cde35bc2d458c1c6a4dfe87b82441e0bdfb5f16aca86bb830c81c68a0d",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-6b2182dc-8092-474b-8885-598e8cf6c027.png",
+      "originalToolOutputSha256": "18fe97cde35bc2d458c1c6a4dfe87b82441e0bdfb5f16aca86bb830c81c68a0d",
+      "sourceSize": {
+        "width": 1254,
+        "height": 1254
+      },
+      "reusedGeneratedSourceBatch": "ai_image_v4",
+      "reusedSource": "art/production/ai_image_v4/sources/tailor_rack.png",
+      "reusedPrompt": "art/production/ai_image_v4/prompts/tailor_rack.md",
+      "sourceGenerationRecordPath": "art/production/ai_image_v4/generation_record.json",
+      "method": "unchanged_copy_of_existing_builtin_image_gen_source_no_new_generation_call",
+      "status": "reused_source_unapproved"
+    },
+    {
+      "id": "legacy_post_house_v5",
+      "source": "art/production/ai_image_v5/sources/legacy_post_house_v5.png",
+      "prompt": "art/production/ai_image_v5/prompts/legacy_post_house_v5.md",
+      "sourceType": "codex_builtin_image_gen",
+      "sourceSha256": "5cf456268c6720a9736fb4cf5e987caa95048521bfd6caea9ed6a6044a2c0094",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-0e0ceef6-1bcf-4eb5-afbe-06fce18bcddd.png",
+      "originalToolOutputSha256": "5cf456268c6720a9736fb4cf5e987caa95048521bfd6caea9ed6a6044a2c0094",
+      "sourceSize": {
+        "width": 1484,
+        "height": 1060
+      },
+      "reusedGeneratedSourceBatch": "ai_image_v4",
+      "reusedSource": "art/production/ai_image_v4/sources/post_house.png",
+      "reusedPrompt": "art/production/ai_image_v4/prompts/post_house.md",
+      "sourceGenerationRecordPath": "art/production/ai_image_v4/generation_record.json",
+      "method": "unchanged_copy_of_existing_builtin_image_gen_source_no_new_generation_call",
+      "status": "reused_source_unapproved"
+    },
+    {
+      "id": "legacy_street_banner_v5",
+      "source": "art/production/ai_image_v5/sources/legacy_street_banner_v5.png",
+      "prompt": "art/production/ai_image_v5/prompts/legacy_street_banner_v5.md",
+      "sourceType": "codex_builtin_image_gen",
+      "sourceSha256": "a7f6bde7caabee00137c32fccfa38bf5649e57ed848a63849661d0ce65ddbc1a",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-d721ad60-1dcb-49b3-b938-3263baeb6d9e.png",
+      "originalToolOutputSha256": "a7f6bde7caabee00137c32fccfa38bf5649e57ed848a63849661d0ce65ddbc1a",
+      "sourceSize": {
+        "width": 2172,
+        "height": 724
+      },
+      "reusedGeneratedSourceBatch": "ai_image_v4",
+      "reusedSource": "art/production/ai_image_v4/sources/street_banner.png",
+      "reusedPrompt": "art/production/ai_image_v4/prompts/street_banner.md",
+      "sourceGenerationRecordPath": "art/production/ai_image_v4/generation_record.json",
+      "method": "unchanged_copy_of_existing_builtin_image_gen_source_no_new_generation_call",
+      "status": "reused_source_unapproved"
+    },
+    {
+      "id": "legacy_steam_fx_v5",
+      "source": "art/production/ai_image_v5/sources/legacy_steam_fx_v5.png",
+      "prompt": "art/production/ai_image_v5/prompts/legacy_steam_fx_v5.md",
+      "sourceType": "codex_builtin_image_gen",
+      "sourceSha256": "32e8782b6b812a83eae9ed09d637a35adcbdc283eec9476c4066aeed4bd246a8",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-d00f5d4f-19d7-40f3-820c-434402e3437f.png",
+      "originalToolOutputSha256": "32e8782b6b812a83eae9ed09d637a35adcbdc283eec9476c4066aeed4bd246a8",
+      "sourceSize": {
+        "width": 1145,
+        "height": 1374
+      },
+      "reusedGeneratedSourceBatch": "ai_image_v4",
+      "reusedSource": "art/production/ai_image_v4/sources/steam_fx.png",
+      "reusedPrompt": "art/production/ai_image_v4/prompts/steam_fx.md",
+      "sourceGenerationRecordPath": "art/production/ai_image_v4/generation_record.json",
+      "method": "unchanged_copy_of_existing_builtin_image_gen_source_no_new_generation_call",
+      "status": "reused_source_unapproved"
+    },
+    {
+      "id": "town_ground_wide_v5",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-aa857191-3f95-490c-ab4b-0748f0be4409.png",
+      "source": "art/production/ai_image_v5/sources/town_ground_wide_v5.png",
+      "prompt": "art/production/ai_image_v5/prompts/town_ground_wide_v5.md",
+      "sourceSha256": "45d4940ab9e41dc9c710759a2f79ef3f481288dda11e49f090643bb8dde75ac0",
+      "originalToolOutputSha256": "45d4940ab9e41dc9c710759a2f79ef3f481288dda11e49f090643bb8dde75ac0",
+      "sourceSize": {
+        "width": 1330,
+        "height": 1182
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 0,
+        "width": 1330,
+        "height": 1182,
+        "transparent": 0,
+        "visible": 1572060
+      },
+      "status": "runtime_used_visual_unapproved",
+      "referencedImagePaths": [
+        "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/town_ground_v5.png",
+        "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png"
+      ],
+      "referenceSha256": [
+        {
+          "path": "E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/town_ground_v5.png",
+          "sha256": "b0e2de767f77adeaceac3dee6badc597ab7499273435ae3330efe86128a18ada"
+        },
+        {
+          "path": "C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png",
+          "sha256": "dfa7d06961372e4fda3870247832b12cb897c59dc90b3200dafe10e2d8aac5b0"
+        }
+      ],
+      "referenceEvidence": "Actual image_gen parameters recovered from this task tool-call log; no inferred reference assets."
+    }
+  ],
+  "sceneExportPlan": {
+    "blueprint": "design/street_block_01.json",
+    "blueprintSha256": "2ebcc165257ce2ceda5f2eb35ccf453cd5427dafd335a8b3fc680eb045ef2c8b",
+    "importPlanPath": "art/production/ai_image_v5/import_plan.json",
+    "newGeneratedSceneSources": 14,
+    "unchangedHistoricalGeneratedSources": 5,
+    "repeatedNewSourceExports": 6,
+    "finalScenePngsPlanned": 25,
+    "sharedCharacterTargetUiBatch": "ai_image_v4"
+  },
+  "runtimeVerification": {
+    "threeChapterBaseline": {
+      "path": "art/review/ai_image_v5/three_chapters/runtime_report.json",
+      "sha256": "ac20fe146af32cf6c3299108132f32a5800b15c9c1cf84e3efcd393f6f7fe3bb"
+    },
+    "finalFirstChapter": {
+      "path": "art/review/ai_image_v5/chapter_1_vendor_adjustment/runtime_report.json",
+      "sha256": "f91cdc29a2a387a58bb5b9ef60fbd7a791267284d0cb009f6294734864bdeede"
+    },
+    "status": "web_mobile_verified",
+    "playerVisualApproval": "pending",
+    "wechatPhone": "not_run"
+  }
+}

@@ -1,0 +1,1624 @@
+{
+  "batchId": "ai_image_v8",
+  "sourceType": "codex_builtin_image_gen",
+  "styleId": "cozy_flat_town_v5",
+  "assets": [
+    {
+      "name": "books_courtyard_ground_v8",
+      "source": "art/production/ai_image_v8/sources/courtyard_books_v8.png",
+      "stage": "scene",
+      "sceneSlotId": "lc8_books_courtyard_ground",
+      "width": 550,
+      "height": 330,
+      "align": "center",
+      "resizeFit": "fill",
+      "registration": "flat_ground_alpha_bbox_resampled_to_authored_footprint_no_repainting",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc8_books_courtyard_ground.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_books_v8.md",
+      "sourceSha256": "b88416a89d66e494bf765cb69b552d2db9325e5a70a11f5fc30bf1f9db5a5a6b",
+      "sourceSize": {
+        "width": 1619,
+        "height": 971
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/books_courtyard_ground_v8.png",
+      "sha256": "54835f16b0b1f2a676ec08b314a5f2783c037036a0483ba4cfdbe2c79a5841d4",
+      "alphaBounds": {
+        "left": 4,
+        "top": 4,
+        "width": 542,
+        "height": 322,
+        "transparent": 28575,
+        "visible": 152925
+      },
+      "uuid": "f87cd345-f3e9-4fb0-a1c6-2ecb7d3afa58",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "flowers_courtyard_ground_v8",
+      "source": "art/production/ai_image_v8/sources/courtyard_flowers_v8.png",
+      "stage": "scene",
+      "sceneSlotId": "lc8_flowers_courtyard_ground",
+      "width": 530,
+      "height": 220,
+      "align": "center",
+      "resizeFit": "fill",
+      "registration": "flat_ground_alpha_bbox_resampled_to_authored_footprint_no_repainting",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc8_flowers_courtyard_ground.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_flowers_v8.md",
+      "sourceSha256": "4b1adce6d3ae648c741eb435f63b0ac869be6b263d66570473d82a45da74ba3b",
+      "sourceSize": {
+        "width": 1947,
+        "height": 808
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/flowers_courtyard_ground_v8.png",
+      "sha256": "04fde965149050f1022e11ecd00c5fcac7ba8d2711b0acd515f9b23a5b9f8679",
+      "alphaBounds": {
+        "left": 4,
+        "top": 4,
+        "width": 522,
+        "height": 212,
+        "transparent": 19377,
+        "visible": 97223
+      },
+      "uuid": "db7f7c7b-7810-46aa-88d5-6f3dd0bd8960",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "tea_courtyard_ground_v8",
+      "source": "art/production/ai_image_v8/sources/courtyard_tea_v8.png",
+      "stage": "scene",
+      "sceneSlotId": "lc8_tea_courtyard_ground",
+      "width": 480,
+      "height": 460,
+      "align": "center",
+      "resizeFit": "fill",
+      "registration": "flat_ground_alpha_bbox_resampled_to_authored_footprint_no_repainting",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc8_tea_courtyard_ground.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_tea_v8.md",
+      "sourceSha256": "edaaefe01a23cf620956af7891aae4f73ed11fe9854f9c672b1c1b982d6413d6",
+      "sourceSize": {
+        "width": 1280,
+        "height": 1229
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/tea_courtyard_ground_v8.png",
+      "sha256": "a823af26d42fdc718a33b2b09db6332451e2d780f71a0a2931cd861c53eee4ce",
+      "alphaBounds": {
+        "left": 4,
+        "top": 4,
+        "width": 472,
+        "height": 452,
+        "transparent": 27312,
+        "visible": 193488
+      },
+      "uuid": "da11f787-0f2c-4553-8251-5f953bd7de51",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "sweets_courtyard_ground_v8",
+      "source": "art/production/ai_image_v8/sources/courtyard_sweets_v8.png",
+      "stage": "scene",
+      "sceneSlotId": "lc8_sweets_courtyard_ground",
+      "width": 480,
+      "height": 280,
+      "align": "center",
+      "resizeFit": "fill",
+      "registration": "flat_ground_alpha_bbox_resampled_to_authored_footprint_no_repainting",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc8_sweets_courtyard_ground.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_sweets_v8.md",
+      "sourceSha256": "2988e036f2b7b3f0ad74c4485d54ffabc04fd67892eaba06e9ed4bbdbc2f337c",
+      "sourceSize": {
+        "width": 1643,
+        "height": 957
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/sweets_courtyard_ground_v8.png",
+      "sha256": "fe4f0c0299d0231d01234c10fd04056cde693e588daffd6b59ade35903bac72b",
+      "alphaBounds": {
+        "left": 4,
+        "top": 4,
+        "width": 472,
+        "height": 272,
+        "transparent": 16411,
+        "visible": 117989
+      },
+      "uuid": "1e413587-a1b7-414e-b3ac-329440581808",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "noodles_courtyard_ground_v8",
+      "source": "art/production/ai_image_v8/sources/courtyard_noodles_v8.png",
+      "stage": "scene",
+      "sceneSlotId": "lc8_noodles_courtyard_ground",
+      "width": 520,
+      "height": 290,
+      "align": "center",
+      "resizeFit": "fill",
+      "registration": "flat_ground_alpha_bbox_resampled_to_authored_footprint_no_repainting",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc8_noodles_courtyard_ground.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_noodles_v8.md",
+      "sourceSha256": "d2953e795c4f46572cdf6a9206979e2677b2747de4d67522d97c6a64f8cc33fd",
+      "sourceSize": {
+        "width": 1680,
+        "height": 936
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/noodles_courtyard_ground_v8.png",
+      "sha256": "80a3478efed31b146915aeda241a41b5a2012c7ee2686fc243095d6d2dfc7d47",
+      "alphaBounds": {
+        "left": 4,
+        "top": 4,
+        "width": 512,
+        "height": 282,
+        "transparent": 21419,
+        "visible": 129381
+      },
+      "uuid": "290dbf3b-87e3-4e4b-a459-cedec14fc6df",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "sage_courtyard_ground_v8",
+      "source": "art/production/ai_image_v8/sources/courtyard_sage_v8.png",
+      "stage": "scene",
+      "sceneSlotId": "lc8_sage_courtyard_ground",
+      "width": 530,
+      "height": 220,
+      "align": "center",
+      "resizeFit": "fill",
+      "registration": "flat_ground_alpha_bbox_resampled_to_authored_footprint_no_repainting",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc8_sage_courtyard_ground.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_sage_v8.md",
+      "sourceSha256": "7af967536128ccad7119784ad786a8e76ce3c94f1a9855642f9f96dae904d680",
+      "sourceSize": {
+        "width": 1944,
+        "height": 809
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/sage_courtyard_ground_v8.png",
+      "sha256": "9ecac6d06ebc7d070934e6f2b00cf64183002c0bea6158b4f72c91c72328a13e",
+      "alphaBounds": {
+        "left": 4,
+        "top": 4,
+        "width": 522,
+        "height": 212,
+        "transparent": 16378,
+        "visible": 100222
+      },
+      "uuid": "9f6c1f13-4a19-43c9-bb5b-ad141c517477",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "rose_courtyard_ground_v8",
+      "source": "art/production/ai_image_v8/sources/courtyard_rose_v8.png",
+      "stage": "scene",
+      "sceneSlotId": "lc8_rose_courtyard_ground",
+      "width": 520,
+      "height": 240,
+      "align": "center",
+      "resizeFit": "fill",
+      "registration": "flat_ground_alpha_bbox_resampled_to_authored_footprint_no_repainting",
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc8_rose_courtyard_ground.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/courtyard_rose_v8.md",
+      "sourceSha256": "d108adb4e615cab2e1b28d31d19cba1e00c39651962582c66ded147be36b7eb6",
+      "sourceSize": {
+        "width": 1846,
+        "height": 852
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/rose_courtyard_ground_v8.png",
+      "sha256": "47fa9588c6c7608bd5353914c93b7a0310a8acfdd727f811867b8ffb2abacf2a",
+      "alphaBounds": {
+        "left": 4,
+        "top": 4,
+        "width": 512,
+        "height": 232,
+        "transparent": 19743,
+        "visible": 105057
+      },
+      "uuid": "3c35e40b-9330-4f5a-84c2-6526169dae47",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "books_flower_border_v8",
+      "source": "art/production/ai_image_v8/sources/flower_border_v8.png",
+      "stage": "scene",
+      "sceneSlotId": "lc8_books_flower_border",
+      "width": 180,
+      "height": 90,
+      "align": "bottom",
+      "footpoint": {
+        "x": 90,
+        "y": 85
+      },
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc8_books_flower_border.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/flower_border_v8.md",
+      "sourceSha256": "1c8ea7bf54e4a5fca9480cce6e18dcf664c79e8ebf9e4641735b038f836143fc",
+      "sourceSize": {
+        "width": 1774,
+        "height": 887
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/books_flower_border_v8.png",
+      "sha256": "10351393eb232b86d105f3009dafce357833513ea904bc0df42d9b0d7d3390b3",
+      "alphaBounds": {
+        "left": 4,
+        "top": 35,
+        "width": 172,
+        "height": 50,
+        "transparent": 10423,
+        "visible": 5777
+      },
+      "uuid": "031e258f-2aeb-4c99-8b88-1d645f05faa1",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "flowers_flower_border_v8",
+      "source": "art/production/ai_image_v8/sources/flower_border_v8.png",
+      "stage": "scene",
+      "sceneSlotId": "lc8_flowers_flower_border",
+      "width": 190,
+      "height": 90,
+      "align": "bottom",
+      "footpoint": {
+        "x": 95,
+        "y": 85
+      },
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc8_flowers_flower_border.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/flower_border_v8.md",
+      "sourceSha256": "1c8ea7bf54e4a5fca9480cce6e18dcf664c79e8ebf9e4641735b038f836143fc",
+      "sourceSize": {
+        "width": 1774,
+        "height": 887
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/flowers_flower_border_v8.png",
+      "sha256": "c07073ec7b0af4974ac3b5f89b154493615d25ee4832d7416b25c64d1b687e51",
+      "alphaBounds": {
+        "left": 4,
+        "top": 32,
+        "width": 182,
+        "height": 53,
+        "transparent": 10638,
+        "visible": 6462
+      },
+      "uuid": "3ccad120-722a-42a0-af4d-15a41d416864",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "inner_lane_flower_border_v8",
+      "source": "art/production/ai_image_v8/sources/flower_border_v8.png",
+      "stage": "scene",
+      "sceneSlotId": "lc8_inner_lane_flower_border",
+      "width": 180,
+      "height": 90,
+      "align": "bottom",
+      "footpoint": {
+        "x": 90,
+        "y": 85
+      },
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc8_inner_lane_flower_border.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/flower_border_v8.md",
+      "sourceSha256": "1c8ea7bf54e4a5fca9480cce6e18dcf664c79e8ebf9e4641735b038f836143fc",
+      "sourceSize": {
+        "width": 1774,
+        "height": 887
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/inner_lane_flower_border_v8.png",
+      "sha256": "10351393eb232b86d105f3009dafce357833513ea904bc0df42d9b0d7d3390b3",
+      "alphaBounds": {
+        "left": 4,
+        "top": 35,
+        "width": 172,
+        "height": 50,
+        "transparent": 10423,
+        "visible": 5777
+      },
+      "uuid": "94132385-42ce-4c0c-b9a5-d58f36cf1bc6",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "tea_shrub_v8",
+      "source": "art/production/ai_image_v8/sources/shrub_clump_v8.png",
+      "stage": "scene",
+      "sceneSlotId": "lc8_tea_shrub",
+      "width": 140,
+      "height": 100,
+      "align": "bottom",
+      "footpoint": {
+        "x": 70,
+        "y": 95
+      },
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc8_tea_shrub.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/shrub_clump_v8.md",
+      "sourceSha256": "29d9dc4b40c2c2a066cb2678a97ed1b63f5c92f47f80d5cf8b7383669d093c3c",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/tea_shrub_v8.png",
+      "sha256": "471dec7a4cbbd841f3b48757cd88b723fedc4b37ba0c936ee0f2620ac57be2fa",
+      "alphaBounds": {
+        "left": 4,
+        "top": 36,
+        "width": 132,
+        "height": 59,
+        "transparent": 9074,
+        "visible": 4926
+      },
+      "uuid": "f341fdeb-d1f6-4cb7-8d73-7272deebebff",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "sweets_shrub_v8",
+      "source": "art/production/ai_image_v8/sources/shrub_clump_v8.png",
+      "stage": "scene",
+      "sceneSlotId": "lc8_sweets_shrub",
+      "width": 140,
+      "height": 100,
+      "align": "bottom",
+      "footpoint": {
+        "x": 70,
+        "y": 95
+      },
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc8_sweets_shrub.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/shrub_clump_v8.md",
+      "sourceSha256": "29d9dc4b40c2c2a066cb2678a97ed1b63f5c92f47f80d5cf8b7383669d093c3c",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/sweets_shrub_v8.png",
+      "sha256": "471dec7a4cbbd841f3b48757cd88b723fedc4b37ba0c936ee0f2620ac57be2fa",
+      "alphaBounds": {
+        "left": 4,
+        "top": 36,
+        "width": 132,
+        "height": 59,
+        "transparent": 9074,
+        "visible": 4926
+      },
+      "uuid": "2e569ac2-f8a0-4656-be38-5917d5f09385",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "sage_fence_v8",
+      "source": "art/production/ai_image_v8/sources/low_garden_fence_v8.png",
+      "stage": "scene",
+      "sceneSlotId": "lc8_sage_fence",
+      "width": 210,
+      "height": 90,
+      "align": "bottom",
+      "footpoint": {
+        "x": 105,
+        "y": 85
+      },
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc8_sage_fence.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/low_garden_fence_v8.md",
+      "sourceSha256": "8d239d1ee6e72cda59a9631883e5191c8fd4ab310255a06d04359a54a213fed2",
+      "sourceSize": {
+        "width": 1983,
+        "height": 793
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/sage_fence_v8.png",
+      "sha256": "e187b39bf3d1a10a7d78970ebc6cb4755a9f77645f56fc07b40a382115229a14",
+      "alphaBounds": {
+        "left": 4,
+        "top": 27,
+        "width": 202,
+        "height": 58,
+        "transparent": 9149,
+        "visible": 9751
+      },
+      "uuid": "74201be0-c2b8-4d5e-b0e5-4c201c3d741b",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "rose_fence_v8",
+      "source": "art/production/ai_image_v8/sources/low_garden_fence_v8.png",
+      "stage": "scene",
+      "sceneSlotId": "lc8_rose_fence",
+      "width": 190,
+      "height": 90,
+      "align": "bottom",
+      "footpoint": {
+        "x": 95,
+        "y": 85
+      },
+      "runtime": "assets/bundles/city_living_city_street_block_01/simple2d_scene/lc8_rose_fence.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/low_garden_fence_v8.md",
+      "sourceSha256": "8d239d1ee6e72cda59a9631883e5191c8fd4ab310255a06d04359a54a213fed2",
+      "sourceSize": {
+        "width": 1983,
+        "height": 793
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/rose_fence_v8.png",
+      "sha256": "ba39b5c61c7c55b503de59795468cbecd8d64777c0cc9b7adfb4e39f5aa7520a",
+      "alphaBounds": {
+        "left": 4,
+        "top": 32,
+        "width": 182,
+        "height": 53,
+        "transparent": 9080,
+        "visible": 8020
+      },
+      "uuid": "c619ed6e-a0dc-41d5-bfb2-481e6ce2669b",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "target_tea_clay_whistle_v8",
+      "source": "art/production/ai_image_v8/sources/targets_tools_v8.png",
+      "stage": "target",
+      "targetId": "tea_clay_whistle",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      },
+      "width": 256,
+      "height": 242,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/tea_clay_whistle.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/targets_tools_v8.md",
+      "sourceSha256": "4213ee795dafb7c23cf9c02c06d3236be25e0af76795be1bdc57f5be8b09e1fc",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/target_tea_clay_whistle_v8.png",
+      "sha256": "4e6d79c6c3d0baa1efd3679695c6049cd46d3f4669e23fcae3eda815587d1ca1",
+      "alphaBounds": {
+        "left": 12,
+        "top": 42,
+        "width": 232,
+        "height": 158,
+        "transparent": 38948,
+        "visible": 23004
+      },
+      "uuid": "7c2d4bfc-94cd-451a-83c7-2ff942020c84",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "target_tailor_thimble_v8",
+      "source": "art/production/ai_image_v8/sources/targets_tools_v8.png",
+      "stage": "target",
+      "targetId": "tailor_thimble",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      },
+      "width": 249,
+      "height": 256,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/tailor_thimble.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/targets_tools_v8.md",
+      "sourceSha256": "4213ee795dafb7c23cf9c02c06d3236be25e0af76795be1bdc57f5be8b09e1fc",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/target_tailor_thimble_v8.png",
+      "sha256": "67edc34f8f270ca07797e646c1cf184e9dafda9fd0dd53b182f8cc970bd44461",
+      "alphaBounds": {
+        "left": 21,
+        "top": 12,
+        "width": 207,
+        "height": 232,
+        "transparent": 25833,
+        "visible": 37911
+      },
+      "uuid": "05f28faa-594b-4a5d-97f6-2576d97cac0e",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "target_banner_knot_v8",
+      "source": "art/production/ai_image_v8/sources/targets_tools_v8.png",
+      "stage": "target",
+      "targetId": "banner_knot",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      },
+      "width": 209,
+      "height": 256,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/banner_knot.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/targets_tools_v8.md",
+      "sourceSha256": "4213ee795dafb7c23cf9c02c06d3236be25e0af76795be1bdc57f5be8b09e1fc",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/target_banner_knot_v8.png",
+      "sha256": "f43cb7482d148ee012a895dad69ff983232f9e5ccace8fb14de2931ff2ff434a",
+      "alphaBounds": {
+        "left": 12,
+        "top": 61,
+        "width": 185,
+        "height": 133,
+        "transparent": 36881,
+        "visible": 16623
+      },
+      "uuid": "7de144a0-a0e1-4d82-a9ec-092a5b8d05c4",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "target_chestnut_tongs_v8",
+      "source": "art/production/ai_image_v8/sources/targets_tools_v8.png",
+      "stage": "target",
+      "targetId": "chestnut_tongs",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      },
+      "width": 256,
+      "height": 228,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/chestnut_tongs.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/targets_tools_v8.md",
+      "sourceSha256": "4213ee795dafb7c23cf9c02c06d3236be25e0af76795be1bdc57f5be8b09e1fc",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/target_chestnut_tongs_v8.png",
+      "sha256": "22d837dfc35409ab4024efc26d094489f2144d41ab0b15cbcef1606303ff5a49",
+      "alphaBounds": {
+        "left": 12,
+        "top": 12,
+        "width": 232,
+        "height": 203,
+        "transparent": 39793,
+        "visible": 18575
+      },
+      "uuid": "f876543c-6c88-407c-8a86-480c7749974b",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "target_pocket_watch_v8",
+      "source": "art/production/ai_image_v8/sources/targets_keepsakes_v8.png",
+      "stage": "target",
+      "targetId": "pocket_watch",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 580
+      },
+      "width": 219,
+      "height": 256,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/pocket_watch.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/targets_keepsakes_v8.md",
+      "sourceSha256": "3f19700add3a77676e9e655d015a54d3540c3914a34ebb86f289cf48705bfc9b",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/target_pocket_watch_v8.png",
+      "sha256": "555dca8001dcd849f3e51fe3894bc0611db947f4e9328b7ab183735efe260672",
+      "alphaBounds": {
+        "left": 18,
+        "top": 12,
+        "width": 182,
+        "height": 232,
+        "transparent": 27002,
+        "visible": 29062
+      },
+      "uuid": "12714120-18eb-4846-b659-0c9513a7cf2f",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "target_sewing_scissors_v8",
+      "source": "art/production/ai_image_v8/sources/targets_keepsakes_v8.png",
+      "stage": "target",
+      "targetId": "sewing_scissors",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 580
+      },
+      "width": 256,
+      "height": 199,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/sewing_scissors.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/targets_keepsakes_v8.md",
+      "sourceSha256": "3f19700add3a77676e9e655d015a54d3540c3914a34ebb86f289cf48705bfc9b",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/target_sewing_scissors_v8.png",
+      "sha256": "b41c4fe11e45c527ca976f4ac98de57c23aa3ec4f355bb159b37f8e82d572542",
+      "alphaBounds": {
+        "left": 12,
+        "top": 14,
+        "width": 232,
+        "height": 171,
+        "transparent": 29943,
+        "visible": 21001
+      },
+      "uuid": "4828ad71-86bf-42ad-9527-6ad62ab713d6",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "target_blue_feather_v8",
+      "source": "art/production/ai_image_v8/sources/targets_keepsakes_v8.png",
+      "stage": "target",
+      "targetId": "blue_feather",
+      "crop": {
+        "left": 0,
+        "top": 580,
+        "width": 768,
+        "height": 444
+      },
+      "width": 256,
+      "height": 156,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/blue_feather.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/targets_keepsakes_v8.md",
+      "sourceSha256": "3f19700add3a77676e9e655d015a54d3540c3914a34ebb86f289cf48705bfc9b",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/target_blue_feather_v8.png",
+      "sha256": "ba44a54e531669de78ef5dec6b01fd988aa2012c5d4976ec86ffe41671f1bf60",
+      "alphaBounds": {
+        "left": 12,
+        "top": 27,
+        "width": 232,
+        "height": 101,
+        "transparent": 24802,
+        "visible": 15134
+      },
+      "uuid": "885cded6-647f-4222-8f03-9d23fa479a83",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "target_sealed_letter_v8",
+      "source": "art/production/ai_image_v8/sources/targets_keepsakes_v8.png",
+      "stage": "target",
+      "targetId": "sealed_letter",
+      "crop": {
+        "left": 768,
+        "top": 580,
+        "width": 768,
+        "height": 444
+      },
+      "width": 256,
+      "height": 185,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/sealed_letter.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/targets_keepsakes_v8.md",
+      "sourceSha256": "3f19700add3a77676e9e655d015a54d3540c3914a34ebb86f289cf48705bfc9b",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/target_sealed_letter_v8.png",
+      "sha256": "136c86b33660af3b2cd283b3fae1fb99a7cdf57a2b7b58d0602c85af8f21ef3a",
+      "alphaBounds": {
+        "left": 12,
+        "top": 21,
+        "width": 232,
+        "height": 143,
+        "transparent": 14466,
+        "visible": 32894
+      },
+      "uuid": "f2dd3876-511b-4198-8c6a-2dfe802c3725",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "target_honey_dipper_v8",
+      "source": "art/production/ai_image_v8/sources/targets_pantry_v8.png",
+      "stage": "target",
+      "targetId": "honey_dipper",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      },
+      "width": 256,
+      "height": 213,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/honey_dipper.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/targets_pantry_v8.md",
+      "sourceSha256": "89f71c45b1b949ffaee15de0ea86e45f23540b2b86d07219ef636bc48424e941",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/target_honey_dipper_v8.png",
+      "sha256": "4e36f952001f1971c600283137010b7fc3cb50625732cf0713f281a0d07c578f",
+      "alphaBounds": {
+        "left": 12,
+        "top": 63,
+        "width": 232,
+        "height": 87,
+        "transparent": 43246,
+        "visible": 11282
+      },
+      "uuid": "2999b035-f5fe-4d82-aee5-c2a5fde0f3ed",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "target_seed_packet_v8",
+      "source": "art/production/ai_image_v8/sources/targets_pantry_v8.png",
+      "stage": "target",
+      "targetId": "seed_packet",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      },
+      "width": 209,
+      "height": 256,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/seed_packet.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/targets_pantry_v8.md",
+      "sourceSha256": "89f71c45b1b949ffaee15de0ea86e45f23540b2b86d07219ef636bc48424e941",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/target_seed_packet_v8.png",
+      "sha256": "1fa867be8df88294fdc663bc9d3b2949bc501a28e2666e2bceda205ebc862172",
+      "alphaBounds": {
+        "left": 12,
+        "top": 28,
+        "width": 185,
+        "height": 200,
+        "transparent": 20670,
+        "visible": 32834
+      },
+      "uuid": "a92ecbab-5a86-46af-babe-8c8ef72d3444",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "target_orchard_apple_v8",
+      "source": "art/production/ai_image_v8/sources/targets_pantry_v8.png",
+      "stage": "target",
+      "targetId": "orchard_apple",
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      },
+      "width": 249,
+      "height": 256,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/orchard_apple.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/targets_pantry_v8.md",
+      "sourceSha256": "89f71c45b1b949ffaee15de0ea86e45f23540b2b86d07219ef636bc48424e941",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/target_orchard_apple_v8.png",
+      "sha256": "a6afb26750b680384f1d1eac402c5c700fbb669e59432fc297a7c10e04c1b1da",
+      "alphaBounds": {
+        "left": 12,
+        "top": 21,
+        "width": 225,
+        "height": 213,
+        "transparent": 29818,
+        "visible": 33926
+      },
+      "uuid": "dfef9408-95c0-4d36-9216-826208c9eb78",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "target_golden_bun_v8",
+      "source": "art/production/ai_image_v8/sources/targets_pantry_v8.png",
+      "stage": "target",
+      "targetId": "golden_bun",
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      },
+      "width": 256,
+      "height": 220,
+      "inset": 12,
+      "registration": "transparent_canvas_matches_existing_world_visual_ratio_no_object_distortion",
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/golden_bun.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/targets_pantry_v8.md",
+      "sourceSha256": "89f71c45b1b949ffaee15de0ea86e45f23540b2b86d07219ef636bc48424e941",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/target_golden_bun_v8.png",
+      "sha256": "bbf980dd7b53c1e1e972d08bc8c333f2d812a6f93a21421e9b92150c17b51f73",
+      "alphaBounds": {
+        "left": 12,
+        "top": 13,
+        "width": 232,
+        "height": 194,
+        "transparent": 21464,
+        "visible": 34856
+      },
+      "uuid": "43a9e228-c63a-4a26-87d6-f72ee287ec62",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_tea_vendor_v8_frame_01",
+      "source": "art/production/ai_image_v8/sources/chicken_tea_vendor_sheet_v8.png",
+      "stage": "character",
+      "actor": "tea_vendor",
+      "frameIndex": 1,
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.403470715835141,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_v8_frame_01.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/chicken_tea_vendor_sheet_v8.md",
+      "sourceSha256": "cc2021d514a32559c8f2af283c2539bc24a0849bd6f072a79846234f16fd53be",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_tea_vendor_v8_frame_01.png",
+      "sha256": "7b3240c5a11f73db5ac5ccbdb0c88423938b2fff13cc995e546d759726490bb1",
+      "alphaBounds": {
+        "left": 115,
+        "top": 31,
+        "width": 149,
+        "height": 184,
+        "transparent": 78410,
+        "visible": 19894
+      },
+      "uuid": "67af4ec8-a332-483b-966e-a56e93fcddc0",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_tea_vendor_v8_frame_02",
+      "source": "art/production/ai_image_v8/sources/chicken_tea_vendor_sheet_v8.png",
+      "stage": "character",
+      "actor": "tea_vendor",
+      "frameIndex": 2,
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 512
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.403470715835141,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_v8_frame_02.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/chicken_tea_vendor_sheet_v8.md",
+      "sourceSha256": "cc2021d514a32559c8f2af283c2539bc24a0849bd6f072a79846234f16fd53be",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_tea_vendor_v8_frame_02.png",
+      "sha256": "e4ca34b0c6a47fb8eec7d65f7fb7809bff43ad04ff14ceb3c1f2aca73e9db597",
+      "alphaBounds": {
+        "left": 115,
+        "top": 31,
+        "width": 179,
+        "height": 184,
+        "transparent": 77226,
+        "visible": 21078
+      },
+      "uuid": "f615c2a9-cb56-4cf0-9c24-76d946fd6d46",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_tea_vendor_v8_frame_03",
+      "source": "art/production/ai_image_v8/sources/chicken_tea_vendor_sheet_v8.png",
+      "stage": "character",
+      "actor": "tea_vendor",
+      "frameIndex": 3,
+      "crop": {
+        "left": 0,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.403470715835141,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_v8_frame_03.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/chicken_tea_vendor_sheet_v8.md",
+      "sourceSha256": "cc2021d514a32559c8f2af283c2539bc24a0849bd6f072a79846234f16fd53be",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_tea_vendor_v8_frame_03.png",
+      "sha256": "117b8a0316355489af49a65e3c6f91317119f9fffaef381d0771f77d07d00e56",
+      "alphaBounds": {
+        "left": 112,
+        "top": 29,
+        "width": 148,
+        "height": 186,
+        "transparent": 78217,
+        "visible": 20087
+      },
+      "uuid": "20fe67f7-31cc-4f22-8e82-13fd8501f434",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_tea_vendor_v8_frame_04",
+      "source": "art/production/ai_image_v8/sources/chicken_tea_vendor_sheet_v8.png",
+      "stage": "character",
+      "actor": "tea_vendor",
+      "frameIndex": 4,
+      "crop": {
+        "left": 768,
+        "top": 512,
+        "width": 768,
+        "height": 512
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.403470715835141,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_v8_frame_04.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/chicken_tea_vendor_sheet_v8.md",
+      "sourceSha256": "cc2021d514a32559c8f2af283c2539bc24a0849bd6f072a79846234f16fd53be",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_tea_vendor_v8_frame_04.png",
+      "sha256": "ecdc856e805466227e72b267fb8dd990c25a78b753d9696124b9cb4c77662fc6",
+      "alphaBounds": {
+        "left": 114,
+        "top": 29,
+        "width": 200,
+        "height": 186,
+        "transparent": 75989,
+        "visible": 22315
+      },
+      "uuid": "dd8fb990-f808-44fb-9743-3ccaa61e7d56",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_tea_regular_v8_frame_01",
+      "source": "art/production/ai_image_v8/sources/chicken_tea_regular_sheet_walkfix_v8.png",
+      "stage": "character",
+      "actor": "tea_regular",
+      "frameIndex": 1,
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 355,
+        "height": 444
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4793814432989691,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/tea_regular/chicken_tea_regular_v8_frame_01.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/chicken_tea_regular_sheet_walkfix_v8.md",
+      "sourceSha256": "29913756825d48e54bf303740dccd149af342f13aa52764005ecaf255cbcd56e",
+      "sourceSize": {
+        "width": 1774,
+        "height": 887
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_tea_regular_v8_frame_01.png",
+      "sha256": "627ecf51a9d43301fead5e30c2ee0353193685d2054714e97f5524f13f7a3e37",
+      "alphaBounds": {
+        "left": 116,
+        "top": 29,
+        "width": 135,
+        "height": 186,
+        "transparent": 79427,
+        "visible": 18877
+      },
+      "uuid": "f270ff6e-dadf-4cc7-8dea-57103fea7921",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_tea_regular_v8_frame_02",
+      "source": "art/production/ai_image_v8/sources/chicken_tea_regular_sheet_walkfix_v8.png",
+      "stage": "character",
+      "actor": "tea_regular",
+      "frameIndex": 2,
+      "crop": {
+        "left": 355,
+        "top": 0,
+        "width": 355,
+        "height": 444
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4793814432989691,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/tea_regular/chicken_tea_regular_v8_frame_02.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/chicken_tea_regular_sheet_walkfix_v8.md",
+      "sourceSha256": "29913756825d48e54bf303740dccd149af342f13aa52764005ecaf255cbcd56e",
+      "sourceSize": {
+        "width": 1774,
+        "height": 887
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_tea_regular_v8_frame_02.png",
+      "sha256": "e931463f67c98ae8bacfda1196c44990b8b9ff2ba622a5aa1e76ce8e68666c38",
+      "alphaBounds": {
+        "left": 150,
+        "top": 29,
+        "width": 131,
+        "height": 186,
+        "transparent": 80363,
+        "visible": 17941
+      },
+      "uuid": "61a81f48-aa98-4975-9d30-793a4f9eb556",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_tea_regular_v8_frame_03",
+      "source": "art/production/ai_image_v8/sources/chicken_tea_regular_sheet_walkfix_v8.png",
+      "stage": "character",
+      "actor": "tea_regular",
+      "frameIndex": 3,
+      "crop": {
+        "left": 710,
+        "top": 0,
+        "width": 354,
+        "height": 444
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4793814432989691,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/tea_regular/chicken_tea_regular_v8_frame_03.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/chicken_tea_regular_sheet_walkfix_v8.md",
+      "sourceSha256": "29913756825d48e54bf303740dccd149af342f13aa52764005ecaf255cbcd56e",
+      "sourceSize": {
+        "width": 1774,
+        "height": 887
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_tea_regular_v8_frame_03.png",
+      "sha256": "bfbdd046a7f8e8cc2cce37ce5babed3071e3a53fb058bf10929052f41b480373",
+      "alphaBounds": {
+        "left": 105,
+        "top": 29,
+        "width": 131,
+        "height": 186,
+        "transparent": 81031,
+        "visible": 17273
+      },
+      "uuid": "8f74a5fb-c4be-4082-a18f-cf7df4997e00",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_tea_regular_v8_frame_04",
+      "source": "art/production/ai_image_v8/sources/chicken_tea_regular_sheet_walkfix_v8.png",
+      "stage": "character",
+      "actor": "tea_regular",
+      "frameIndex": 4,
+      "crop": {
+        "left": 1064,
+        "top": 0,
+        "width": 355,
+        "height": 444
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4793814432989691,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/tea_regular/chicken_tea_regular_v8_frame_04.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/chicken_tea_regular_sheet_walkfix_v8.md",
+      "sourceSha256": "29913756825d48e54bf303740dccd149af342f13aa52764005ecaf255cbcd56e",
+      "sourceSize": {
+        "width": 1774,
+        "height": 887
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_tea_regular_v8_frame_04.png",
+      "sha256": "253f3640c3c8e1bde54e72f81eacbe4d50ad239bf31821b5d6ddd27e1a664f8a",
+      "alphaBounds": {
+        "left": 119,
+        "top": 29,
+        "width": 130,
+        "height": 186,
+        "transparent": 80593,
+        "visible": 17711
+      },
+      "uuid": "6d3f44f2-84f9-45d2-a048-8c1c643b0b78",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_tea_regular_v8_frame_05",
+      "source": "art/production/ai_image_v8/sources/chicken_tea_regular_sheet_walkfix_v8.png",
+      "stage": "character",
+      "actor": "tea_regular",
+      "frameIndex": 5,
+      "crop": {
+        "left": 1419,
+        "top": 0,
+        "width": 355,
+        "height": 444
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4793814432989691,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/tea_regular/chicken_tea_regular_v8_frame_05.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/chicken_tea_regular_sheet_walkfix_v8.md",
+      "sourceSha256": "29913756825d48e54bf303740dccd149af342f13aa52764005ecaf255cbcd56e",
+      "sourceSize": {
+        "width": 1774,
+        "height": 887
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_tea_regular_v8_frame_05.png",
+      "sha256": "b441677e21764de17d4f275bb0f7660fca55398cbbfc534198a23cf53035ae82",
+      "alphaBounds": {
+        "left": 121,
+        "top": 29,
+        "width": 138,
+        "height": 186,
+        "transparent": 79736,
+        "visible": 18568
+      },
+      "uuid": "7a21c0fd-cb60-40c4-9526-c792cb79ddf8",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_tea_regular_v8_frame_06",
+      "source": "art/production/ai_image_v8/sources/chicken_tea_regular_sheet_walkfix_v8.png",
+      "stage": "character",
+      "actor": "tea_regular",
+      "frameIndex": 6,
+      "crop": {
+        "left": 0,
+        "top": 444,
+        "width": 355,
+        "height": 443
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4793814432989691,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/tea_regular/chicken_tea_regular_v8_frame_06.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/chicken_tea_regular_sheet_walkfix_v8.md",
+      "sourceSha256": "29913756825d48e54bf303740dccd149af342f13aa52764005ecaf255cbcd56e",
+      "sourceSize": {
+        "width": 1774,
+        "height": 887
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_tea_regular_v8_frame_06.png",
+      "sha256": "658cc04ca15f1d47ff5903a2f831cb017ab050113e253ec95d43b5f760617903",
+      "alphaBounds": {
+        "left": 116,
+        "top": 29,
+        "width": 138,
+        "height": 186,
+        "transparent": 79475,
+        "visible": 18829
+      },
+      "uuid": "efe7a572-9730-431c-acc5-7fd3d1759061",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_tea_regular_v8_frame_07",
+      "source": "art/production/ai_image_v8/sources/chicken_tea_regular_sheet_walkfix_v8.png",
+      "stage": "character",
+      "actor": "tea_regular",
+      "frameIndex": 7,
+      "crop": {
+        "left": 355,
+        "top": 444,
+        "width": 355,
+        "height": 443
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.4793814432989691,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/tea_regular/chicken_tea_regular_v8_frame_07.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/chicken_tea_regular_sheet_walkfix_v8.md",
+      "sourceSha256": "29913756825d48e54bf303740dccd149af342f13aa52764005ecaf255cbcd56e",
+      "sourceSize": {
+        "width": 1774,
+        "height": 887
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_tea_regular_v8_frame_07.png",
+      "sha256": "45685c780ac4bb9f3c611452d267011cb0fe5879772d8196b5c5662664ec19a6",
+      "alphaBounds": {
+        "left": 91,
+        "top": 31,
+        "width": 132,
+        "height": 184,
+        "transparent": 80261,
+        "visible": 18043
+      },
+      "uuid": "9950db34-e0b1-43ce-8afe-397c7effa17f",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_tea_regular_v8_frame_08",
+      "source": "art/production/ai_image_v8/sources/chicken_tea_regular_sheet_walkfix_v8.png",
+      "stage": "character",
+      "actor": "tea_regular",
+      "frameIndex": 8,
+      "crop": {
+        "left": 710,
+        "top": 444,
+        "width": 354,
+        "height": 443
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.4793814432989691,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/tea_regular/chicken_tea_regular_v8_frame_08.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/chicken_tea_regular_sheet_walkfix_v8.md",
+      "sourceSha256": "29913756825d48e54bf303740dccd149af342f13aa52764005ecaf255cbcd56e",
+      "sourceSize": {
+        "width": 1774,
+        "height": 887
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_tea_regular_v8_frame_08.png",
+      "sha256": "5b3dbd9b6dc0e8524794191b522aa7b9d13be9634e87c49637338bab43b5bffb",
+      "alphaBounds": {
+        "left": 145,
+        "top": 30,
+        "width": 132,
+        "height": 185,
+        "transparent": 80957,
+        "visible": 17347
+      },
+      "uuid": "2432bd20-6c2f-4391-868b-eb0ef76a2f7c",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_tea_regular_v8_frame_09",
+      "source": "art/production/ai_image_v8/sources/chicken_tea_regular_sheet_walkfix_v8.png",
+      "stage": "character",
+      "actor": "tea_regular",
+      "frameIndex": 9,
+      "crop": {
+        "left": 1064,
+        "top": 444,
+        "width": 355,
+        "height": 443
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4793814432989691,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/tea_regular/chicken_tea_regular_v8_frame_09.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/chicken_tea_regular_sheet_walkfix_v8.md",
+      "sourceSha256": "29913756825d48e54bf303740dccd149af342f13aa52764005ecaf255cbcd56e",
+      "sourceSize": {
+        "width": 1774,
+        "height": 887
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_tea_regular_v8_frame_09.png",
+      "sha256": "2f6ef4ecf82a25fa463815cf633727fd33ee0d3dd0aa604ae4402405a4cdaf75",
+      "alphaBounds": {
+        "left": 146,
+        "top": 29,
+        "width": 132,
+        "height": 186,
+        "transparent": 80578,
+        "visible": 17726
+      },
+      "uuid": "3cf7bc3e-397e-4b71-a0ee-bc060784da69",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "chicken_tea_regular_v8_frame_10",
+      "source": "art/production/ai_image_v8/sources/chicken_tea_regular_sheet_walkfix_v8.png",
+      "stage": "character",
+      "actor": "tea_regular",
+      "frameIndex": 10,
+      "crop": {
+        "left": 1419,
+        "top": 444,
+        "width": 355,
+        "height": 443
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.4793814432989691,
+      "runtime": "assets/bundles/city_living_city_street_block_01/cels/tea_regular/chicken_tea_regular_v8_frame_10.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v8/prompts/chicken_tea_regular_sheet_walkfix_v8.md",
+      "sourceSha256": "29913756825d48e54bf303740dccd149af342f13aa52764005ecaf255cbcd56e",
+      "sourceSize": {
+        "width": 1774,
+        "height": 887
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/chicken_tea_regular_v8_frame_10.png",
+      "sha256": "b8842286478725b2d8b9f66e6987857d951dceecb13a859ef147a24279851349",
+      "alphaBounds": {
+        "left": 116,
+        "top": 29,
+        "width": 144,
+        "height": 186,
+        "transparent": 79584,
+        "visible": 18720
+      },
+      "uuid": "fc79de16-c0f3-45fd-818c-386e8e714daf",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    }
+  ],
+  "runtimeVerification": {
+    "status": "web_mobile_verified",
+    "playerVisualApproval": "pending",
+    "wechatPhone": "not_run",
+    "threeChapters": {
+      "path": "art/review/ai_image_v8/three_chapters/runtime_report.json",
+      "sha256": "9041fde9654a47ffa2724b7a9ad47ac96e1481373d1c8a8ae37cfa6f83dd02fb"
+    },
+    "finalFirstChapter": {
+      "path": "art/review/ai_image_v8/three_chapters/runtime_report.json",
+      "sha256": "9041fde9654a47ffa2724b7a9ad47ac96e1481373d1c8a8ae37cfa6f83dd02fb"
+    },
+    "sourceReview": {
+      "path": "art/review/ai_image_v8/source_review.json",
+      "sha256": "985d1689c4c33e8992a591e8d2c13ee3852d6485aea03d269f92c8de93ad3e2a",
+      "status": "source_visual_review_recorded"
+    },
+    "placement": {
+      "path": "art/review/ai_image_v8/placement_review.json",
+      "sha256": "34dc1b3289887d40273499e8fdca5e79cf4b23247a23261094d9b266d54dedf2",
+      "status": "png_geometry_checks_passed"
+    },
+    "assetIntegrity": {
+      "path": "art/review/ai_image_v8/asset_integrity_report.json",
+      "sha256": "8d0a6c73e9db19ecba2006d19f093846f1d06d1442fefb403e404199fc270e80",
+      "status": "passed"
+    },
+    "dialogueFit": {
+      "status": "actual_bounds_checked",
+      "chapters": [
+        {
+          "cityId": "living_city_street_block_01",
+          "actualBoundsSamples": 8,
+          "viewportClipping": false,
+          "overlapsTargetTray": false,
+          "checkedViewports": [
+            {
+              "width": 444,
+              "height": 960
+            },
+            {
+              "width": 360,
+              "height": 780
+            }
+          ]
+        },
+        {
+          "cityId": "living_city_garden_market_02",
+          "actualBoundsSamples": 4,
+          "viewportClipping": false,
+          "overlapsTargetTray": false,
+          "checkedViewports": [
+            {
+              "width": 444,
+              "height": 960
+            },
+            {
+              "width": 360,
+              "height": 780
+            }
+          ]
+        },
+        {
+          "cityId": "living_city_harbor_walk_03",
+          "actualBoundsSamples": 4,
+          "viewportClipping": false,
+          "overlapsTargetTray": false,
+          "checkedViewports": [
+            {
+              "width": 444,
+              "height": 960
+            },
+            {
+              "width": 360,
+              "height": 780
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "visualApproval": "pending",
+  "sceneBlueprintSha256": "10c91b3e5f4c8cda8ac30e006aff1d3a8105a72c0ec758781922c2b38cf5b997"
+}

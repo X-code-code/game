@@ -72,6 +72,15 @@ test('a hidden target can resolve to its registered interactive prerequisite wit
     registry.register(hidden);assert.throws(()=>registry.register(hidden),/Duplicate hint target/);
 });
 
+test('an explicit prerequisite hint carries its configured physical object name to the UI',()=>{
+    const hidden={...entity('seeds'),prerequisiteId:'leaves',isAvailable:()=>false};
+    const {hints}=setup([task('seeds')],[hidden,{...entity('leaves','interactiveObject'),displayName:'花叶'}]);
+    const result=hints.requestHint();
+    assert.equal(result.hint.kind,'interactiveObject');
+    assert.equal(result.hint.targetLabel,'花叶');
+    assert.equal(result.hint.label,'找到seeds');
+});
+
 test('rewarded hints are optional, reject duplicate requests, and reselect after reward completion',async()=>{
     assert.equal((await setup([],[]).hints.requestRewardedHint()).status,'unsupported');
     let resolve;

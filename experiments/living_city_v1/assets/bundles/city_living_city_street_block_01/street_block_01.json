@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "living_city_street_block_01",
-  "status": "refined_2d_playable_candidate",
+  "status": "v9_runtime_candidate",
   "coordinateSystem": {
     "origin": "map_center",
     "xPositive": "right",
@@ -12,7 +12,7 @@
     "note": "All coordinates below are world units, not the normalized 0..1 entity coordinates in CityConfig v1. A renderer must convert explicitly."
   },
   "map": {
-    "width": 1536,
+    "width": 2304,
     "height": 2048,
     "safeOuterMargin": 60
   },
@@ -23,19 +23,19 @@
     },
     "fitMode": "cover",
     "minZoom": 1,
-    "initialZoom": 1.4,
+    "initialZoom": 1.22,
     "maxZoom": 2.25,
     "initialFocus": {
-      "x": -230,
-      "y": 20
+      "x": -560,
+      "y": 280
     },
     "detailPreviewFocus": {
-      "x": -295,
-      "y": 350
+      "x": -790,
+      "y": 450
     },
     "hudBottomReserveScreenPx": 156,
-    "normalActorWorldHeight": 120,
-    "normalTargetWorldWidth": 28
+    "normalActorWorldHeight": 86,
+    "normalTargetWorldWidth": 36
   },
   "renderLayers": [
     {
@@ -76,644 +76,1207 @@
   ],
   "artSlots": [
     {
-      "id": "lc_ground_paving",
+      "id": "lc5_ground_paving",
       "layer": "ground",
       "center": {
         "x": 0,
         "y": 0
       },
       "size": {
-        "width": 1536,
+        "width": 2304,
         "height": 2048
       },
       "alpha": false,
-      "purpose": "Continuous ground and shopfront paving; 416-unit north-south traffic lane and 190-unit cross lane sit inside walkable sidewalks. No baked characters, stalls or trees."
+      "purpose": "Generated flat olive-green ground with a narrow bending central path and connected outer garden/courtyard walks around x -760/+760; no baked buildings, actors or furniture. Map widened by 384 units on each side."
     },
     {
-      "id": "lc_west_storefront_back",
-      "layer": "building_back",
+      "id": "lc8_books_courtyard_ground",
+      "layer": "ground",
       "center": {
-        "x": -558,
-        "y": 678
+        "x": -790,
+        "y": 430
       },
       "size": {
-        "width": 420,
-        "height": 520
+        "width": 550,
+        "height": 360
       },
       "alpha": true,
-      "purpose": "Northwest shop roof and facade; leaves the tea service spur clear."
+      "generatedSourceId": "courtyard_books_v8",
+      "generatedSourceBatch": "ai_image_v8",
+      "lifeGroupId": "west_reading_garden",
+      "purpose": "Warm gray small-stone reading apron joining the bookshop door, book stall and reader space. Independent built-in generated transparent flat ground PNG; no baked buildings, furniture, residents, targets or collision.",
+      "placementReview": "Authored placement only; generated source, final PNG Alpha, and runtime visual review pending.",
+      "textureScale": 2
     },
     {
-      "id": "lc_east_storefront_back",
-      "layer": "building_back",
+      "id": "lc8_flowers_courtyard_ground",
+      "layer": "ground",
       "center": {
-        "x": 565,
-        "y": 650
+        "x": -815,
+        "y": -65
       },
       "size": {
-        "width": 406,
-        "height": 560
-      },
-      "alpha": true,
-      "purpose": "Northeast shop roof and facade, connected visually to cross lane."
-    },
-    {
-      "id": "lc_west_tailor_back",
-      "layer": "building_back",
-      "center": {
-        "x": -556,
-        "y": -420
-      },
-      "size": {
-        "width": 424,
-        "height": 580
-      },
-      "alpha": true,
-      "purpose": "Southwest tailor shop; upper shelves behind the street details."
-    },
-    {
-      "id": "lc_east_food_shop_back",
-      "layer": "building_back",
-      "center": {
-        "x": 566,
-        "y": -415
-      },
-      "size": {
-        "width": 404,
-        "height": 580
-      },
-      "alpha": true,
-      "purpose": "Southeast food shop, distinct from the chestnut cart."
-    },
-    {
-      "id": "lc_tea_stall_back",
-      "layer": "street_back",
-      "center": {
-        "x": -430,
-        "y": 432
-      },
-      "size": {
-        "width": 265,
+        "width": 550,
         "height": 300
       },
       "alpha": true,
-      "purpose": "Tea stall rear shelves and kettle behind vendor."
+      "generatedSourceId": "courtyard_flowers_v8",
+      "generatedSourceBatch": "ai_image_v8",
+      "lifeGroupId": "west_reading_garden",
+      "purpose": "Soft terracotta brick working apron joining the flower shop door and independent flower shelf. Independent built-in generated transparent flat ground PNG; no baked buildings, furniture, residents, targets or collision.",
+      "placementReview": "Authored placement only; generated source, final PNG Alpha, and runtime visual review pending.",
+      "textureScale": 2
     },
     {
-      "id": "lc_tea_counter_front",
-      "layer": "depth",
+      "id": "lc8_tea_courtyard_ground",
+      "layer": "ground",
       "center": {
-        "x": -348,
-        "y": 419
+        "x": -310,
+        "y": 260
       },
       "size": {
-        "width": 56,
-        "height": 171
+        "width": 480,
+        "height": 460
       },
       "alpha": true,
-      "footY": 284,
-      "purpose": "Narrow counter front; hides vendor lower body without covering customer foot."
+      "generatedSourceId": "courtyard_tea_v8",
+      "generatedSourceBatch": "ai_image_v8",
+      "lifeGroupId": "central_tea_food",
+      "purpose": "Cream irregular-stone tea courtyard joining the original tea facade, tea counter and sitting table. Independent built-in generated transparent flat ground PNG; no baked buildings, furniture, residents, targets or collision.",
+      "placementReview": "Authored placement only; generated source, final PNG Alpha, and runtime visual review pending.",
+      "textureScale": 2
     },
     {
-      "id": "lc_tea_patio_front",
-      "layer": "depth",
+      "id": "lc8_sweets_courtyard_ground",
+      "layer": "ground",
       "center": {
-        "x": -425,
-        "y": 163
+        "x": 815,
+        "y": 440
       },
       "size": {
-        "width": 160,
-        "height": 136
+        "width": 550,
+        "height": 340
       },
       "alpha": true,
-      "footY": 110,
-      "purpose": "A low tea table, two stools and used ceramics on the stall's west patio; outside cross-lane and customer spur."
+      "generatedSourceId": "courtyard_sweets_v8",
+      "generatedSourceBatch": "ai_image_v8",
+      "lifeGroupId": "northeast_mail_corner",
+      "purpose": "Pale sandstone shop apron joining the sweets doorway and independent notice/mail stand. Independent built-in generated transparent flat ground PNG; no baked buildings, furniture, residents, targets or collision.",
+      "placementReview": "Authored placement only; generated source, final PNG Alpha, and runtime visual review pending.",
+      "textureScale": 2
     },
     {
-      "id": "lc_tea_awning_front",
-      "layer": "overhead",
+      "id": "lc8_noodles_courtyard_ground",
+      "layer": "ground",
       "center": {
-        "x": -430,
-        "y": 540
+        "x": 770,
+        "y": -60
       },
       "size": {
-        "width": 280,
+        "width": 640,
+        "height": 420
+      },
+      "alpha": true,
+      "generatedSourceId": "courtyard_noodles_v8",
+      "generatedSourceBatch": "ai_image_v8",
+      "lifeGroupId": "east_fountain_rest",
+      "purpose": "Cool gray-blue old-stone forecourt joining the noodle shop, fountain and rest bench. Independent built-in generated transparent flat ground PNG; no baked buildings, furniture, residents, targets or collision.",
+      "placementReview": "Authored placement only; generated source, final PNG Alpha, and runtime visual review pending.",
+      "textureScale": 2
+    },
+    {
+      "id": "lc8_sage_courtyard_ground",
+      "layer": "ground",
+      "center": {
+        "x": -690,
+        "y": -802
+      },
+      "size": {
+        "width": 800,
+        "height": 320
+      },
+      "alpha": true,
+      "generatedSourceId": "courtyard_sage_v8",
+      "generatedSourceBatch": "ai_image_v8",
+      "lifeGroupId": "west_gardening_corner",
+      "purpose": "Earth-colored gravel apron with a few coplanar stepping stones under the gardener and independent workbench. Independent built-in generated transparent flat ground PNG; no baked buildings, furniture, residents, targets or collision.",
+      "placementReview": "Authored placement only; generated source, final PNG Alpha, and runtime visual review pending.",
+      "textureScale": 2
+    },
+    {
+      "id": "lc8_rose_courtyard_ground",
+      "layer": "ground",
+      "center": {
+        "x": 730,
+        "y": -800
+      },
+      "size": {
+        "width": 720,
+        "height": 320
+      },
+      "alpha": true,
+      "generatedSourceId": "courtyard_rose_v8",
+      "generatedSourceBatch": "ai_image_v8",
+      "lifeGroupId": "southeast_picnic_yard",
+      "purpose": "Warm pale terracotta courtyard joining the rose house, independent laundry line and picnic blanket. Independent built-in generated transparent flat ground PNG; no baked buildings, furniture, residents, targets or collision.",
+      "placementReview": "Authored placement only; generated source, final PNG Alpha, and runtime visual review pending.",
+      "textureScale": 2
+    },
+    {
+      "id": "lc5_west_storefront_back",
+      "layer": "building_back",
+      "center": {
+        "x": -385,
+        "y": 648
+      },
+      "size": {
+        "width": 304,
+        "height": 336
+      },
+      "alpha": true,
+      "purpose": "Tea district shop facade near the path, with its doorway above the tea work area. Facade reduced to 80 percent while preserving its original bottom ground line.",
+      "lifeGroupId": "central_tea_food",
+      "textureScale": 3
+    },
+    {
+      "id": "lc5_east_storefront_back",
+      "layer": "building_back",
+      "center": {
+        "x": 345,
+        "y": 607
+      },
+      "size": {
+        "width": 296,
+        "height": 344
+      },
+      "alpha": true,
+      "purpose": "East shop frontage anchors the food cart district; similar perspective and line weight to the west shop. Facade reduced to 80 percent while preserving its original bottom ground line.",
+      "lifeGroupId": "central_tea_food",
+      "textureScale": 3
+    },
+    {
+      "id": "lc5_west_tailor_back",
+      "layer": "building_back",
+      "center": {
+        "x": -380,
+        "y": -492
+      },
+      "size": {
+        "width": 288,
+        "height": 336
+      },
+      "alpha": true,
+      "purpose": "Southwest tailor frontage, its independent sewing surfaces below the doorway. Facade reduced to 80 percent while preserving its original bottom ground line.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc5_east_food_shop_back",
+      "layer": "building_back",
+      "center": {
+        "x": 345,
+        "y": -582
+      },
+      "size": {
+        "width": 288,
+        "height": 336
+      },
+      "alpha": true,
+      "purpose": "Southern bakery frontage along the lower bend, separate from the food cart. Facade reduced to 80 percent while preserving its original bottom ground line.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc5_tea_counter_back",
+      "layer": "depth",
+      "center": {
+        "x": -300,
+        "y": 370
+      },
+      "size": {
+        "width": 260,
+        "height": 230
+      },
+      "alpha": true,
+      "footY": 260,
+      "purpose": "Complete generated tea kiosk/counter with a transparent work opening; vendor feet (-305,310), guest feet (-205,310), and tea prop (-253,345). No duplicated canopy or tiny counter fragment. Whole kiosk depth-sorts at footY260 so its opaque counter hides vendor feet; verify guest clearance beside the right post in the game.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc5_bun_cart_back",
+      "layer": "street_back",
+      "center": {
+        "x": 200,
+        "y": 260
+      },
+      "size": {
+        "width": 170,
+        "height": 190
+      },
+      "alpha": true,
+      "footY": 170,
+      "purpose": "Complete generated food cart; independent tongs and a reveal bun are on separated parts of its work surface.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc5_tree_front",
+      "layer": "depth",
+      "center": {
+        "x": -420,
+        "y": 200
+      },
+      "size": {
+        "width": 180,
+        "height": 240
+      },
+      "alpha": true,
+      "footY": 85,
+      "purpose": "West tea-garden shade tree; trunk stays outside the short access path.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc5_bench_front",
+      "layer": "depth",
+      "center": {
+        "x": -550,
+        "y": -175
+      },
+      "size": {
+        "width": 170,
+        "height": 90
+      },
+      "alpha": true,
+      "footY": -217,
+      "purpose": "Low rest bench near tea table and tree, with room in front for people.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc5_tea_patio_front",
+      "layer": "depth",
+      "center": {
+        "x": -255,
+        "y": 100
+      },
+      "size": {
+        "width": 170,
+        "height": 130
+      },
+      "alpha": true,
+      "footY": 40,
+      "purpose": "Small tea table and stools in the rest pocket; watch and honey dipper remain on its generated tabletop.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc5_curb_flower_display",
+      "layer": "depth",
+      "center": {
+        "x": -260,
+        "y": -270
+      },
+      "size": {
+        "width": 150,
+        "height": 140
+      },
+      "alpha": true,
+      "footY": -335,
+      "purpose": "Flower stall beside the short western branch; independent leaf reveal exposes a seed packet.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc5_curb_produce_east",
+      "layer": "depth",
+      "center": {
+        "x": 265,
+        "y": -100
+      },
+      "size": {
+        "width": 140,
+        "height": 130
+      },
+      "alpha": true,
+      "footY": -160,
+      "purpose": "Produce baskets along the eastern food pocket, outside the shopper route.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc5_crates_front",
+      "layer": "depth",
+      "center": {
+        "x": -235,
+        "y": -855
+      },
+      "size": {
+        "width": 120,
         "height": 100
       },
       "alpha": true,
-      "purpose": "Separate overhead valance. Do not paint over the customer's face or the service pad."
+      "footY": -900,
+      "purpose": "Parcel crates by the south post office; the preserved parcel reveal and letter use this support.",
+      "textureScale": 3
     },
     {
-      "id": "lc_chestnut_cart_back",
-      "layer": "street_back",
-      "center": {
-        "x": 270,
-        "y": -430
-      },
-      "size": {
-        "width": 185,
-        "height": 205
-      },
-      "alpha": true,
-      "purpose": "Street-edge chestnut cart body and tray, on the apron between the narrower traffic lane and southeast shop. The seller stands on the open lane beside it."
-    },
-    {
-      "id": "lc_chestnut_cart_front",
+      "id": "lc5_street_water_station",
       "layer": "depth",
       "center": {
-        "x": 270,
-        "y": -482
-      },
-      "size": {
-        "width": 185,
-        "height": 110
-      },
-      "alpha": true,
-      "footY": -510,
-      "purpose": "Near lip and visible near-side wheels; no duplicate wheels on the cart back layer."
-    },
-    {
-      "id": "lc_tree_front",
-      "layer": "depth",
-      "center": {
-        "x": -608,
-        "y": 193
-      },
-      "size": {
-        "width": 205,
-        "height": 290
-      },
-      "alpha": true,
-      "footY": 110,
-      "purpose": "Tree trunk and separated branches at west crossing; root stays out of the public lane."
-    },
-    {
-      "id": "lc_planter_front",
-      "layer": "depth",
-      "center": {
-        "x": 184,
-        "y": -74
-      },
-      "size": {
-        "width": 105,
-        "height": 115
-      },
-      "alpha": true,
-      "footY": -142,
-      "purpose": "Small street-edge planter, limited collision footprint."
-    },
-    {
-      "id": "lc_bench_front",
-      "layer": "depth",
-      "center": {
-        "x": -478,
-        "y": -188
-      },
-      "size": {
-        "width": 190,
-        "height": 95
-      },
-      "alpha": true,
-      "footY": -235,
-      "purpose": "Bench outside the cross-lane walking polygon."
-    },
-    {
-      "id": "lc_curb_flower_display",
-      "layer": "depth",
-      "center": {
-        "x": -340,
-        "y": -265
-      },
-      "size": {
-        "width": 128,
-        "height": 132
-      },
-      "alpha": true,
-      "footY": -310,
-      "purpose": "Grouped cut flowers, leaf pots and a low crate on the west curb, outside the main walking lane."
-    },
-    {
-      "id": "lc_tailor_goods",
-      "layer": "depth",
-      "center": {
-        "x": -413,
-        "y": -401
-      },
-      "size": {
-        "width": 145,
-        "height": 125
-      },
-      "alpha": true,
-      "footY": -455,
-      "purpose": "Fabric, buttons and sewing tray; supports thimble search target."
-    },
-    {
-      "id": "lc_tailor_work_rack",
-      "layer": "depth",
-      "center": {
-        "x": -510,
-        "y": -335
+        "x": 130,
+        "y": -330
       },
       "size": {
         "width": 110,
         "height": 150
       },
       "alpha": true,
-      "footY": -390,
-      "purpose": "Tailor work rack with folded bolts, swatches and an open work basket, west of existing crates."
+      "footY": -400,
+      "purpose": "Small public drinking point beside the lower path bend, rather than centered in the walking route.",
+      "textureScale": 3
     },
     {
-      "id": "lc_crates_front",
+      "id": "lc5_tailor_goods",
       "layer": "depth",
       "center": {
-        "x": -430,
-        "y": -343
+        "x": -270,
+        "y": -665
       },
       "size": {
-        "width": 105,
-        "height": 96
+        "width": 110,
+        "height": 90
       },
       "alpha": true,
-      "footY": -385,
-      "purpose": "Small stack next to tailor wall, off the messenger route."
+      "footY": -705,
+      "purpose": "Historical generated sewing tray retained temporarily as the thimble support; replace in the later secondary asset pass.",
+      "reusedGeneratedSourceBatch": "ai_image_v4",
+      "generatedSourceBatch": "ai_image_v9",
+      "generatedSourceId": "tailor_goods_v9",
+      "placementReview": "Authored candidate; generated alpha placement and runtime visual verification pending.",
+      "textureScale": 3
     },
     {
-      "id": "lc_shop_goods_east",
+      "id": "lc5_tailor_work_rack",
       "layer": "depth",
       "center": {
-        "x": 550,
-        "y": 248
+        "x": -395,
+        "y": -660
       },
       "size": {
-        "width": 165,
-        "height": 150
-      },
-      "alpha": true,
-      "footY": 180,
-      "purpose": "East shop goods for scale and search density."
-    },
-    {
-      "id": "lc_curb_pottery_west",
-      "layer": "depth",
-      "center": {
-        "x": -226,
-        "y": -270
-      },
-      "size": {
-        "width": 90,
-        "height": 110
-      },
-      "alpha": true,
-      "footY": -315,
-      "purpose": "Small grouped pots at the west curb, outside the courier path."
-    },
-    {
-      "id": "lc_curb_produce_east",
-      "layer": "depth",
-      "center": {
-        "x": 231,
-        "y": -260
-      },
-      "size": {
-        "width": 112,
+        "width": 100,
         "height": 130
       },
       "alpha": true,
-      "footY": -320,
-      "purpose": "Produce baskets along the east curb, outside the shopper path."
+      "footY": -720,
+      "purpose": "Historical generated fabric rack retained temporarily as the scissors support; outside public feet routes.",
+      "reusedGeneratedSourceBatch": "ai_image_v4",
+      "generatedSourceBatch": "ai_image_v9",
+      "generatedSourceId": "tailor_rack_v9",
+      "placementReview": "Authored candidate; generated alpha placement and runtime visual verification pending.",
+      "textureScale": 3
     },
     {
-      "id": "lc_wayfinding_sign",
-      "layer": "depth",
+      "id": "lc5_south_post_house_back",
+      "layer": "building_back",
       "center": {
-        "x": -238,
-        "y": 84
+        "x": -385,
+        "y": -940
       },
       "size": {
-        "width": 78,
-        "height": 145
+        "width": 264,
+        "height": 160
       },
       "alpha": true,
-      "footY": -10,
-      "purpose": "Narrow post at the cross street edge; no text is needed in greybox."
+      "purpose": "Historical generated post-office facade retained temporarily in the southern destination area. Facade reduced to 80 percent while preserving its original bottom ground line.",
+      "reusedGeneratedSourceBatch": "ai_image_v4",
+      "generatedSourceBatch": "ai_image_v9",
+      "generatedSourceId": "post_kiosk_v9",
+      "placementReview": "Authored candidate; generated alpha placement and runtime visual verification pending.",
+      "textureScale": 3
     },
     {
-      "id": "lc_lantern_post_front",
-      "layer": "depth",
-      "center": {
-        "x": 356,
-        "y": 531
-      },
-      "size": {
-        "width": 105,
-        "height": 265
-      },
-      "alpha": true,
-      "footY": 410,
-      "purpose": "Independent post/lantern with stable ground contact."
-    },
-    {
-      "id": "lc_street_banner_front",
+      "id": "lc5_street_banner_front",
       "layer": "overhead",
       "center": {
-        "x": -35,
-        "y": 620
-      },
-      "size": {
-        "width": 500,
-        "height": 80
-      },
-      "alpha": true,
-      "purpose": "Narrow hanging banner over the lane; support for one hidden knot."
-    },
-    {
-      "id": "lc_crossing_pennants",
-      "layer": "overhead",
-      "center": {
-        "x": 0,
-        "y": -215
-      },
-      "size": {
-        "width": 455,
-        "height": 55
-      },
-      "alpha": true,
-      "purpose": "Overhead string of separate pennants; small sway can be authored later."
-    },
-    {
-      "id": "lc_tea_steam_fx",
-      "layer": "effects",
-      "center": {
-        "x": -393,
-        "y": 475
-      },
-      "size": {
-        "width": 65,
-        "height": 95
-      },
-      "alpha": true,
-      "purpose": "Small loop from kettle spout; effect anchor is fixed to stall."
-    },
-    {
-      "id": "lc_north_herb_stand",
-      "layer": "building_back",
-      "center": {
-        "x": -296,
-        "y": 646
-      },
-      "size": {
-        "width": 145,
-        "height": 190
-      },
-      "alpha": true,
-      "purpose": "Herb grower's narrow work stand joins the northwest shop to the tea district; small pots, drying leaves and a basket, with its feet clear of the courier exit route."
-    },
-    {
-      "id": "lc_east_bun_cart_back",
-      "layer": "street_back",
-      "center": {
-        "x": 25,
-        "y": 570
-      },
-      "size": {
-        "width": 150,
-        "height": 195
-      },
-      "alpha": true,
-      "purpose": "A warm food pushcart partly facing the main street: canopy, steamer, stacked bowls and kettle behind pedestrians, without a task-like marker."
-    },
-    {
-      "id": "lc_east_bun_cart_front",
-      "layer": "depth",
-      "center": {
-        "x": 25,
-        "y": 504
-      },
-      "size": {
-        "width": 150,
-        "height": 70
-      },
-      "alpha": true,
-      "footY": 470,
-      "purpose": "Low apron, wheel and counter lip of the bun cart; a separate occluder below the cart work surface."
-    },
-    {
-      "id": "lc_west_market_handcart",
-      "layer": "depth",
-      "center": {
-        "x": -468,
-        "y": -40
-      },
-      "size": {
-        "width": 155,
-        "height": 110
-      },
-      "alpha": true,
-      "footY": -86,
-      "purpose": "Used market handcart in the west cross lane, carrying tied produce sacks and an empty crate between the tea patio and the bench."
-    },
-    {
-      "id": "lc_street_water_station",
-      "layer": "depth",
-      "center": {
-        "x": 5,
-        "y": -245
-      },
-      "size": {
-        "width": 105,
-        "height": 165
-      },
-      "alpha": true,
-      "footY": -314,
-      "purpose": "Public chicken drinking point: low glazed basin, feed scoop, folded cloth and slim timber stand, beside rather than on NPC routes."
-    },
-    {
-      "id": "lc_south_post_house_back",
-      "layer": "building_back",
-      "center": {
-        "x": -560,
-        "y": -863
-      },
-      "size": {
-        "width": 416,
-        "height": 320
-      },
-      "alpha": true,
-      "purpose": "Southern west post house joins the tailor row: blue slate hip roof, parcel sorting window and arched door, with no sign text or object-like target."
-    },
-    {
-      "id": "lc_south_grain_house_back",
-      "layer": "building_back",
-      "center": {
-        "x": 566,
-        "y": -863
-      },
-      "size": {
-        "width": 404,
-        "height": 320
-      },
-      "alpha": true,
-      "purpose": "Southern east grain house joins the food shop row: warm tile roof, broad service arch and grain baskets, leaving the main street open."
-    },
-    {
-      "id": "lc_east_pottery_annex_back",
-      "layer": "building_back",
-      "center": {
-        "x": 556,
-        "y": 297
-      },
-      "size": {
-        "width": 200,
-        "height": 210
-      },
-      "alpha": true,
-      "purpose": "A small roofed pottery annex attached below the northeast shop; the existing pot display remains its independent front depth layer."
-    },
-    {
-      "id": "lc_tea_delivery_nook",
-      "layer": "depth",
-      "center": {
-        "x": -347,
-        "y": -132
-      },
-      "size": {
-        "width": 105,
-        "height": 98
-      },
-      "alpha": true,
-      "footY": -175,
-      "purpose": "Tea stall's refill baskets and used-cup crate form a small working nook at the west street corner, outside the tea regular's loop and the public cross-lane."
-    },
-    {
-      "id": "lc_tailor_delivery_stool",
-      "layer": "depth",
-      "center": {
-        "x": -265,
-        "y": -535
-      },
-      "size": {
-        "width": 92,
-        "height": 88
-      },
-      "alpha": true,
-      "footY": -578,
-      "purpose": "A low tailor's delivery stool carries folded fabric and a tied bundle by the shop threshold; no task-like loose objects."
-    },
-    {
-      "id": "lc_tea_whistle_foreground",
-      "layer": "target_foreground",
-      "targetId": "tea_clay_whistle",
-      "center": {
-        "x": -342,
-        "y": 393
-      },
-      "size": {
-        "width": 48,
-        "height": 42
-      },
-      "alpha": true,
-      "purpose": "Thin tea-cup rim and saucer edge over the clay whistle's lower contour, with most of the item still visible and hit testing independent."
-    },
-    {
-      "id": "lc_tailor_thimble_foreground",
-      "layer": "target_foreground",
-      "targetId": "tailor_thimble",
-      "center": {
-        "x": -395,
-        "y": -380
-      },
-      "size": {
-        "width": 44,
-        "height": 40
-      },
-      "alpha": true,
-      "purpose": "Short sewing-tray lip and nearby thread edge crossing only the thimble's base."
-    },
-    {
-      "id": "lc_banner_knot_foreground",
-      "layer": "target_foreground",
-      "targetId": "banner_knot",
-      "center": {
-        "x": 45,
-        "y": 620
-      },
-      "size": {
-        "width": 48,
-        "height": 48
-      },
-      "alpha": true,
-      "purpose": "A narrow banner fold overlapping one low knot tail but leaving knot loops and center clear."
-    },
-    {
-      "id": "lc_chestnut_tongs_foreground",
-      "layer": "target_foreground",
-      "targetId": "chestnut_tongs",
-      "center": {
-        "x": 253,
-        "y": -407
-      },
-      "size": {
-        "width": 56,
-        "height": 50
-      },
-      "alpha": true,
-      "purpose": "Folded packet edge and one chestnut partly over the tongs' lower handle, without hiding their prongs."
-    },
-    {
-      "id": "lc_tea_flower_vine",
-      "layer": "street_back",
-      "center": {
-        "x": -543,
-        "y": 425
-      },
-      "size": {
-        "width": 94,
-        "height": 230
-      },
-      "alpha": true,
-      "purpose": "Climbing tea-stall vine with cream blossoms, independent editable layer."
-    },
-    {
-      "id": "lc_tailor_flower_vine",
-      "layer": "street_back",
-      "center": {
-        "x": -600,
-        "y": -365
-      },
-      "size": {
-        "width": 92,
-        "height": 265
-      },
-      "alpha": true,
-      "purpose": "Tailor doorway ivy and small terracotta flowering pots."
-    },
-    {
-      "id": "lc_east_flower_vine",
-      "layer": "street_back",
-      "center": {
-        "x": 688,
+        "x": -30,
         "y": 560
       },
       "size": {
-        "width": 98,
+        "width": 380,
+        "height": 60
+      },
+      "alpha": true,
+      "purpose": "Short overhead banner at the northern bend; retained generated image supports the original knot target.",
+      "reusedGeneratedSourceBatch": "ai_image_v4",
+      "textureScale": 3
+    },
+    {
+      "id": "lc5_tea_steam_fx",
+      "layer": "effects",
+      "center": {
+        "x": -330,
+        "y": 405
+      },
+      "size": {
+        "width": 42,
+        "height": 58
+      },
+      "alpha": true,
+      "purpose": "Small independent generated steam anchored to the tea kettle; restrained scale and opacity.",
+      "reusedGeneratedSourceBatch": "ai_image_v4",
+      "textureScale": 3
+    },
+    {
+      "id": "lc5_west_garden_tree_front",
+      "layer": "depth",
+      "center": {
+        "x": -1060,
+        "y": 160
+      },
+      "size": {
+        "width": 180,
+        "height": 240
+      },
+      "alpha": true,
+      "footY": 45,
+      "instanceOfSlotId": "lc5_tree_front",
+      "reusedGeneratedSourceBatch": "ai_image_v5",
+      "purpose": "Shade tree along the outer west garden walk.",
+      "lifeGroupId": "west_reading_garden",
+      "textureScale": 3
+    },
+    {
+      "id": "lc5_west_garden_bench_front",
+      "layer": "depth",
+      "center": {
+        "x": -655,
+        "y": 430
+      },
+      "size": {
+        "width": 170,
+        "height": 90
+      },
+      "alpha": true,
+      "footY": 388,
+      "instanceOfSlotId": "lc5_bench_front",
+      "reusedGeneratedSourceBatch": "ai_image_v5",
+      "purpose": "West rest bench supports the preserved blue feather on its generated seat.",
+      "lifeGroupId": "west_reading_garden",
+      "textureScale": 3
+    },
+    {
+      "id": "lc5_west_garden_flowers_front",
+      "layer": "depth",
+      "center": {
+        "x": -850,
+        "y": 20
+      },
+      "size": {
+        "width": 150,
+        "height": 140
+      },
+      "alpha": true,
+      "footY": -45,
+      "instanceOfSlotId": "lc5_curb_flower_display",
+      "reusedGeneratedSourceBatch": "ai_image_v5",
+      "purpose": "West flower shelf supports the preserved ribbon knot tied to a flower pot.",
+      "lifeGroupId": "west_reading_garden",
+      "textureScale": 3
+    },
+    {
+      "id": "lc5_east_courtyard_tree_front",
+      "layer": "depth",
+      "center": {
+        "x": 1045,
+        "y": 150
+      },
+      "size": {
+        "width": 180,
+        "height": 240
+      },
+      "alpha": true,
+      "footY": 35,
+      "instanceOfSlotId": "lc5_tree_front",
+      "reusedGeneratedSourceBatch": "ai_image_v5",
+      "purpose": "Shade tree at the east courtyard edge.",
+      "lifeGroupId": "east_fountain_rest",
+      "textureScale": 3
+    },
+    {
+      "id": "lc5_east_courtyard_patio_front",
+      "layer": "depth",
+      "center": {
+        "x": 660,
+        "y": -200
+      },
+      "size": {
+        "width": 170,
+        "height": 130
+      },
+      "alpha": true,
+      "footY": -260,
+      "instanceOfSlotId": "lc5_tea_patio_front",
+      "reusedGeneratedSourceBatch": "ai_image_v5",
+      "purpose": "East courtyard tea table supports the preserved honey dipper.",
+      "lifeGroupId": "east_fountain_rest",
+      "textureScale": 3
+    },
+    {
+      "id": "lc5_east_courtyard_water_front",
+      "layer": "depth",
+      "center": {
+        "x": 1050,
+        "y": -210
+      },
+      "size": {
+        "width": 110,
+        "height": 150
+      },
+      "alpha": true,
+      "footY": -280,
+      "instanceOfSlotId": "lc5_street_water_station",
+      "reusedGeneratedSourceBatch": "ai_image_v5",
+      "purpose": "East courtyard drinking basin outside the resident walking line.",
+      "lifeGroupId": "east_fountain_rest",
+      "textureScale": 3
+    },
+    {
+      "id": "lc6_reading_stall",
+      "layer": "depth",
+      "center": {
+        "x": -830,
+        "y": 505
+      },
+      "size": {
+        "width": 210,
+        "height": 210
+      },
+      "alpha": true,
+      "footY": 405,
+      "lifeGroupId": "west_reading_garden",
+      "generatedSourceId": "book_stall_v6",
+      "generatedSourceBatch": "ai_image_v6",
+      "purpose": "New built-in generated furniture for the district life group; surface positions require actual imported PNG review.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc6_reading_tree",
+      "layer": "depth",
+      "center": {
+        "x": -1020,
+        "y": 695
+      },
+      "size": {
+        "width": 180,
+        "height": 240
+      },
+      "alpha": true,
+      "footY": 580,
+      "lifeGroupId": "west_reading_garden",
+      "instanceOfSlotId": "lc5_tree_front",
+      "reusedGeneratedSourceBatch": "ai_image_v5",
+      "purpose": "Mechanical placement instance of an existing built-in generated v5 PNG; not a newly generated original.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc6_garden_workbench",
+      "layer": "depth",
+      "center": {
+        "x": -995,
+        "y": -850
+      },
+      "size": {
+        "width": 220,
+        "height": 180
+      },
+      "alpha": true,
+      "footY": -935,
+      "lifeGroupId": "west_gardening_corner",
+      "generatedSourceId": "garden_workbench_v6",
+      "generatedSourceBatch": "ai_image_v6",
+      "purpose": "New built-in generated furniture for the district life group; surface positions require actual imported PNG review.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc6_garden_tree",
+      "layer": "depth",
+      "center": {
+        "x": -1040,
+        "y": -430
+      },
+      "size": {
+        "width": 180,
+        "height": 240
+      },
+      "alpha": true,
+      "footY": -545,
+      "lifeGroupId": "west_gardening_corner",
+      "instanceOfSlotId": "lc5_tree_front",
+      "reusedGeneratedSourceBatch": "ai_image_v5",
+      "purpose": "Mechanical placement instance of an existing built-in generated v5 PNG; not a newly generated original.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc6_garden_flowers",
+      "layer": "depth",
+      "center": {
+        "x": -760,
+        "y": -905
+      },
+      "size": {
+        "width": 150,
+        "height": 140
+      },
+      "alpha": true,
+      "footY": -970,
+      "lifeGroupId": "west_gardening_corner",
+      "instanceOfSlotId": "lc5_curb_flower_display",
+      "reusedGeneratedSourceBatch": "ai_image_v5",
+      "purpose": "Mechanical placement instance of an existing built-in generated v5 PNG; not a newly generated original.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc6_central_crates",
+      "layer": "depth",
+      "center": {
+        "x": 175,
+        "y": 855
+      },
+      "size": {
+        "width": 120,
+        "height": 100
+      },
+      "alpha": true,
+      "footY": 810,
+      "lifeGroupId": "central_tea_food",
+      "instanceOfSlotId": "lc5_crates_front",
+      "reusedGeneratedSourceBatch": "ai_image_v5",
+      "purpose": "Mechanical placement instance of an existing built-in generated v5 PNG; not a newly generated original.",
+      "placementReview": "Repositioned along the north roadside after full-screen Web Mobile review to fill the initial-view gap; original generated pixels and registration unchanged.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc6_central_table",
+      "layer": "depth",
+      "center": {
+        "x": 270,
+        "y": 55
+      },
+      "size": {
+        "width": 170,
+        "height": 130
+      },
+      "alpha": true,
+      "footY": -5,
+      "lifeGroupId": "central_tea_food",
+      "instanceOfSlotId": "lc5_tea_patio_front",
+      "reusedGeneratedSourceBatch": "ai_image_v5",
+      "purpose": "Mechanical placement instance of an existing built-in generated v5 PNG; not a newly generated original.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc6_central_water",
+      "layer": "depth",
+      "center": {
+        "x": -115,
+        "y": -165
+      },
+      "size": {
+        "width": 110,
+        "height": 150
+      },
+      "alpha": true,
+      "footY": -235,
+      "lifeGroupId": "central_tea_food",
+      "instanceOfSlotId": "lc5_street_water_station",
+      "reusedGeneratedSourceBatch": "ai_image_v5",
+      "purpose": "Mechanical placement instance of an existing built-in generated v5 PNG; not a newly generated original.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc6_mail_notice",
+      "layer": "depth",
+      "center": {
+        "x": 1020,
+        "y": 500
+      },
+      "size": {
+        "width": 150,
+        "height": 190
+      },
+      "alpha": true,
+      "footY": 410,
+      "lifeGroupId": "northeast_mail_corner",
+      "generatedSourceId": "mail_notice_v6",
+      "generatedSourceBatch": "ai_image_v6",
+      "purpose": "New built-in generated furniture for the district life group; surface positions require actual imported PNG review.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc6_mail_tree",
+      "layer": "depth",
+      "center": {
+        "x": 1040,
+        "y": 790
+      },
+      "size": {
+        "width": 180,
+        "height": 240
+      },
+      "alpha": true,
+      "footY": 675,
+      "lifeGroupId": "northeast_mail_corner",
+      "instanceOfSlotId": "lc5_tree_front",
+      "reusedGeneratedSourceBatch": "ai_image_v5",
+      "purpose": "Mechanical placement instance of an existing built-in generated v5 PNG; not a newly generated original.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc6_mail_flowers",
+      "layer": "depth",
+      "center": {
+        "x": 1030,
+        "y": 330
+      },
+      "size": {
+        "width": 150,
+        "height": 140
+      },
+      "alpha": true,
+      "footY": 265,
+      "lifeGroupId": "northeast_mail_corner",
+      "instanceOfSlotId": "lc5_curb_flower_display",
+      "reusedGeneratedSourceBatch": "ai_image_v5",
+      "purpose": "Mechanical placement instance of an existing built-in generated v5 PNG; not a newly generated original.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc6_fountain",
+      "layer": "depth",
+      "center": {
+        "x": 650,
+        "y": 35
+      },
+      "size": {
+        "width": 190,
+        "height": 170
+      },
+      "alpha": true,
+      "footY": -45,
+      "lifeGroupId": "east_fountain_rest",
+      "generatedSourceId": "small_fountain_v6",
+      "generatedSourceBatch": "ai_image_v6",
+      "purpose": "New built-in generated furniture for the district life group; surface positions require actual imported PNG review.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc6_fountain_bench",
+      "layer": "depth",
+      "center": {
+        "x": 960,
+        "y": -15
+      },
+      "size": {
+        "width": 170,
+        "height": 90
+      },
+      "alpha": true,
+      "footY": -57,
+      "lifeGroupId": "east_fountain_rest",
+      "instanceOfSlotId": "lc5_bench_front",
+      "reusedGeneratedSourceBatch": "ai_image_v5",
+      "purpose": "Mechanical placement instance of an existing built-in generated v5 PNG; not a newly generated original.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc6_fountain_crates",
+      "layer": "depth",
+      "center": {
+        "x": 530,
+        "y": -115
+      },
+      "size": {
+        "width": 120,
+        "height": 100
+      },
+      "alpha": true,
+      "footY": -160,
+      "lifeGroupId": "east_fountain_rest",
+      "instanceOfSlotId": "lc5_crates_front",
+      "reusedGeneratedSourceBatch": "ai_image_v5",
+      "purpose": "Mechanical placement instance of an existing built-in generated v5 PNG; not a newly generated original.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc6_laundry_line",
+      "layer": "depth",
+      "center": {
+        "x": 705,
+        "y": -830
+      },
+      "size": {
+        "width": 240,
+        "height": 160
+      },
+      "alpha": true,
+      "footY": -905,
+      "lifeGroupId": "southeast_picnic_yard",
+      "generatedSourceId": "laundry_line_v6",
+      "generatedSourceBatch": "ai_image_v6",
+      "purpose": "New built-in generated furniture for the district life group; surface positions require actual imported PNG review.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc6_picnic_blanket",
+      "layer": "depth",
+      "center": {
+        "x": 970,
+        "y": -850
+      },
+      "size": {
+        "width": 210,
+        "height": 130
+      },
+      "alpha": true,
+      "footY": -910,
+      "lifeGroupId": "southeast_picnic_yard",
+      "generatedSourceId": "picnic_blanket_empty_v6",
+      "generatedSourceBatch": "ai_image_v6",
+      "purpose": "New built-in generated furniture for the district life group; surface positions require actual imported PNG review.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc6_picnic_tree",
+      "layer": "depth",
+      "center": {
+        "x": 1015,
+        "y": -665
+      },
+      "size": {
+        "width": 180,
+        "height": 240
+      },
+      "alpha": true,
+      "footY": -780,
+      "lifeGroupId": "southeast_picnic_yard",
+      "instanceOfSlotId": "lc5_tree_front",
+      "reusedGeneratedSourceBatch": "ai_image_v5",
+      "purpose": "Mechanical placement instance of an existing built-in generated v5 PNG; not a newly generated original.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc6_picnic_bench",
+      "layer": "depth",
+      "center": {
+        "x": 680,
+        "y": -965
+      },
+      "size": {
+        "width": 170,
+        "height": 90
+      },
+      "alpha": true,
+      "footY": -1007,
+      "lifeGroupId": "southeast_picnic_yard",
+      "instanceOfSlotId": "lc5_bench_front",
+      "reusedGeneratedSourceBatch": "ai_image_v5",
+      "purpose": "Mechanical placement instance of an existing built-in generated v5 PNG; not a newly generated original.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc7_book_shop_back",
+      "layer": "building_back",
+      "center": {
+        "x": -775,
+        "y": 760
+      },
+      "size": {
+        "width": 320,
+        "height": 320
+      },
+      "alpha": true,
+      "footY": 605,
+      "generatedSourceId": "shop_books_v7",
+      "lifeGroupId": "west_reading_garden",
+      "purpose": "Independent v7 generated full facade. Occupied facade is kept out of resident routes; front-door activity uses its own generated resident.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc7_flower_shop_back",
+      "layer": "building_back",
+      "center": {
+        "x": -825,
+        "y": 235
+      },
+      "size": {
+        "width": 320,
+        "height": 330
+      },
+      "alpha": true,
+      "footY": 75,
+      "generatedSourceId": "shop_flower_v7",
+      "lifeGroupId": "west_reading_garden",
+      "purpose": "Independent v7 generated full facade. Occupied facade is kept out of resident routes; front-door activity uses its own generated resident.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc7_sweet_shop_back",
+      "layer": "building_back",
+      "center": {
+        "x": 825,
+        "y": 755
+      },
+      "size": {
+        "width": 320,
+        "height": 320
+      },
+      "alpha": true,
+      "footY": 600,
+      "generatedSourceId": "shop_sweets_v7",
+      "lifeGroupId": "northeast_mail_corner",
+      "purpose": "Independent v7 generated full facade. Occupied facade is kept out of resident routes; front-door activity uses its own generated resident.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc7_noodle_shop_back",
+      "layer": "building_back",
+      "center": {
+        "x": 805,
+        "y": 290
+      },
+      "size": {
+        "width": 320,
+        "height": 310
+      },
+      "alpha": true,
+      "footY": 140,
+      "generatedSourceId": "shop_noodles_v7",
+      "lifeGroupId": "east_fountain_rest",
+      "purpose": "Independent v7 generated full facade. Occupied facade is kept out of resident routes; front-door activity uses its own generated resident.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc7_sage_house_back",
+      "layer": "building_back",
+      "center": {
+        "x": -825,
+        "y": -595
+      },
+      "size": {
+        "width": 320,
+        "height": 310
+      },
+      "alpha": true,
+      "footY": -745,
+      "generatedSourceId": "house_sage_v7",
+      "lifeGroupId": "west_gardening_corner",
+      "purpose": "Independent v7 generated full facade. Occupied facade is kept out of resident routes; front-door activity uses its own generated resident.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc7_rose_house_back",
+      "layer": "building_back",
+      "center": {
+        "x": 815,
+        "y": -545
+      },
+      "size": {
+        "width": 320,
         "height": 300
       },
       "alpha": true,
-      "purpose": "Pottery shop timber-side climbing leaves with warm blossoms."
+      "footY": -690,
+      "generatedSourceId": "house_rose_v7",
+      "lifeGroupId": "southeast_picnic_yard",
+      "purpose": "Independent v7 generated full facade. Occupied facade is kept out of resident routes; front-door activity uses its own generated resident.",
+      "textureScale": 3
     },
     {
-      "id": "lc_post_flower_vine",
-      "layer": "street_back",
+      "id": "lc8_books_flower_border",
+      "layer": "depth",
       "center": {
-        "x": -650,
-        "y": -810
+        "x": -1000,
+        "y": 360
       },
       "size": {
-        "width": 94,
-        "height": 245
+        "width": 180,
+        "height": 90
       },
+      "footY": 320,
       "alpha": true,
-      "purpose": "Post-house doorway plants and soft flower clusters."
+      "generatedSourceId": "flower_border_v8",
+      "generatedSourceBatch": "ai_image_v8",
+      "sourcePlacementIndex": 0,
+      "lifeGroupId": "west_reading_garden",
+      "purpose": "A low flowering edge at the outer bookshop apron, away from the bookkeeper and reader routes. A mechanically scaled instance of its named generated PNG; no new code-drawn pixels.",
+      "collisionReview": "Deferred until final PNG Alpha review; no new blocking footprint is authored yet.",
+      "placementReview": "Authored placement only; generated source, final PNG Alpha, and runtime visual review pending.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc8_flowers_flower_border",
+      "layer": "depth",
+      "center": {
+        "x": -990,
+        "y": -225
+      },
+      "size": {
+        "width": 190,
+        "height": 90
+      },
+      "footY": -265,
+      "alpha": true,
+      "generatedSourceId": "flower_border_v8",
+      "generatedSourceBatch": "ai_image_v8",
+      "sourcePlacementIndex": 1,
+      "lifeGroupId": "west_reading_garden",
+      "purpose": "A low flower patch beneath the flower forecourt edge, leaving the flower buyer route open. A mechanically scaled instance of its named generated PNG; no new code-drawn pixels.",
+      "collisionReview": "Deferred until final PNG Alpha review; no new blocking footprint is authored yet.",
+      "placementReview": "Authored placement only; generated source, final PNG Alpha, and runtime visual review pending.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc8_inner_lane_flower_border",
+      "layer": "depth",
+      "center": {
+        "x": -640,
+        "y": -350
+      },
+      "size": {
+        "width": 180,
+        "height": 90
+      },
+      "footY": -390,
+      "alpha": true,
+      "generatedSourceId": "flower_border_v8",
+      "generatedSourceBatch": "ai_image_v8",
+      "sourcePlacementIndex": 2,
+      "lifeGroupId": "central_tea_food",
+      "purpose": "Small flowering edge between the west rest lane and southern shop frontage. A mechanically scaled instance of its named generated PNG; no new code-drawn pixels.",
+      "collisionReview": "Deferred until final PNG Alpha review; no new blocking footprint is authored yet.",
+      "placementReview": "Authored placement only; generated source, final PNG Alpha, and runtime visual review pending.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc8_tea_shrub",
+      "layer": "depth",
+      "center": {
+        "x": -550,
+        "y": 175
+      },
+      "size": {
+        "width": 140,
+        "height": 100
+      },
+      "footY": 130,
+      "alpha": true,
+      "generatedSourceId": "shrub_clump_v8",
+      "generatedSourceBatch": "ai_image_v8",
+      "sourcePlacementIndex": 3,
+      "lifeGroupId": "central_tea_food",
+      "purpose": "Low shrub corner outside the tea tree and every resident travel line. A mechanically scaled instance of its named generated PNG; no new code-drawn pixels.",
+      "collisionReview": "Deferred until final PNG Alpha review; no new blocking footprint is authored yet.",
+      "placementReview": "Authored placement only; generated source, final PNG Alpha, and runtime visual review pending.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc8_sweets_shrub",
+      "layer": "depth",
+      "center": {
+        "x": 590,
+        "y": 650
+      },
+      "size": {
+        "width": 140,
+        "height": 100
+      },
+      "footY": 605,
+      "alpha": true,
+      "generatedSourceId": "shrub_clump_v8",
+      "generatedSourceBatch": "ai_image_v8",
+      "sourcePlacementIndex": 4,
+      "lifeGroupId": "northeast_mail_corner",
+      "purpose": "Low shrub corner between the existing east facade and the sweets forecourt. A mechanically scaled instance of its named generated PNG; no new code-drawn pixels.",
+      "collisionReview": "Deferred until final PNG Alpha review; no new blocking footprint is authored yet.",
+      "placementReview": "Authored placement only; generated source, final PNG Alpha, and runtime visual review pending.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc8_sage_fence",
+      "layer": "depth",
+      "center": {
+        "x": -585,
+        "y": -625
+      },
+      "size": {
+        "width": 210,
+        "height": 90
+      },
+      "footY": -665,
+      "alpha": true,
+      "generatedSourceId": "low_garden_fence_v8",
+      "generatedSourceBatch": "ai_image_v8",
+      "sourcePlacementIndex": 5,
+      "lifeGroupId": "west_gardening_corner",
+      "purpose": "Short low fence marks the inner corner of the sage garden without closing its entry or gardener route. A mechanically scaled instance of its named generated PNG; no new code-drawn pixels.",
+      "collisionReview": "Deferred until final PNG Alpha review; no new blocking footprint is authored yet.",
+      "placementReview": "Authored placement only; generated source, final PNG Alpha, and runtime visual review pending.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc8_rose_fence",
+      "layer": "depth",
+      "center": {
+        "x": 570,
+        "y": -720
+      },
+      "size": {
+        "width": 190,
+        "height": 90
+      },
+      "footY": -760,
+      "alpha": true,
+      "generatedSourceId": "low_garden_fence_v8",
+      "generatedSourceBatch": "ai_image_v8",
+      "sourcePlacementIndex": 6,
+      "lifeGroupId": "southeast_picnic_yard",
+      "purpose": "Short low fence marks the rose yard edge without blocking the laundry resident or public route. A mechanically scaled instance of its named generated PNG; no new code-drawn pixels.",
+      "collisionReview": "Deferred until final PNG Alpha review; no new blocking footprint is authored yet.",
+      "placementReview": "Authored placement only; generated source, final PNG Alpha, and runtime visual review pending.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc9_refreshment_cart",
+      "layer": "depth",
+      "center": {
+        "x": 565,
+        "y": -445
+      },
+      "size": {
+        "width": 210,
+        "height": 160
+      },
+      "footY": -520,
+      "lifeGroupId": "east_fountain_rest",
+      "generatedSourceId": "refreshment_cart_v9",
+      "alpha": true,
+      "generatedSourceBatch": "ai_image_v9",
+      "purpose": "A useful neighborhood work surface with separate findable PNG objects.",
+      "placementReview": "Authored candidate; generated alpha placement and runtime visual verification pending.",
+      "textureScale": 3
+    },
+    {
+      "id": "lc9_craft_table",
+      "layer": "depth",
+      "center": {
+        "x": -850,
+        "y": -250
+      },
+      "size": {
+        "width": 220,
+        "height": 160
+      },
+      "footY": -325,
+      "lifeGroupId": "west_gardening_corner",
+      "generatedSourceId": "craft_table_v9",
+      "alpha": true,
+      "generatedSourceBatch": "ai_image_v9",
+      "purpose": "A useful neighborhood work surface with separate findable PNG objects.",
+      "placementReview": "Authored candidate; generated alpha placement and runtime visual verification pending.",
+      "textureScale": 3
     }
   ],
   "walkableRegions": [
@@ -722,42 +1285,52 @@
       "access": "public",
       "polygon": [
         [
-          -260,
+          10,
+          -960
+        ],
+        [
+          190,
+          -960
+        ],
+        [
+          180,
           -900
         ],
         [
-          250,
+          65,
+          -450
+        ],
+        [
+          170,
+          0
+        ],
+        [
+          60,
+          450
+        ],
+        [
+          160,
+          900
+        ],
+        [
+          -20,
+          900
+        ],
+        [
+          -120,
+          450
+        ],
+        [
+          -10,
+          0
+        ],
+        [
+          -115,
+          -450
+        ],
+        [
+          0,
           -900
-        ],
-        [
-          250,
-          900
-        ],
-        [
-          -260,
-          900
-        ]
-      ]
-    },
-    {
-      "id": "cross_lane",
-      "access": "public",
-      "polygon": [
-        [
-          -700,
-          -125
-        ],
-        [
-          700,
-          -125
-        ],
-        [
-          700,
-          120
-        ],
-        [
-          -700,
-          120
         ]
       ]
     },
@@ -766,42 +1339,130 @@
       "access": "public",
       "polygon": [
         [
-          -325,
-          220
+          -225,
+          0
         ],
         [
-          -175,
-          220
+          20,
+          0
         ],
         [
-          -175,
-          470
+          20,
+          365
         ],
         [
-          -325,
-          470
+          -225,
+          365
         ]
       ]
     },
     {
-      "id": "east_market_plaza",
+      "id": "west_rest_pocket",
       "access": "public",
       "polygon": [
         [
-          230,
-          -650
+          -455,
+          -190
         ],
         [
-          650,
-          -650
+          75,
+          -190
         ],
         [
-          650,
-          -230
+          75,
+          150
         ],
         [
-          230,
-          -230
+          -455,
+          150
+        ]
+      ]
+    },
+    {
+      "id": "west_flower_spur",
+      "access": "public",
+      "polygon": [
+        [
+          -230,
+          -405
+        ],
+        [
+          70,
+          -405
+        ],
+        [
+          70,
+          -160
+        ],
+        [
+          -230,
+          -160
+        ]
+      ]
+    },
+    {
+      "id": "east_food_pocket",
+      "access": "public",
+      "polygon": [
+        [
+          40,
+          -190
+        ],
+        [
+          345,
+          -190
+        ],
+        [
+          345,
+          330
+        ],
+        [
+          40,
+          330
+        ]
+      ]
+    },
+    {
+      "id": "south_tailor_spur",
+      "access": "public",
+      "polygon": [
+        [
+          -200,
+          -780
+        ],
+        [
+          35,
+          -780
+        ],
+        [
+          35,
+          -580
+        ],
+        [
+          -200,
+          -580
+        ]
+      ]
+    },
+    {
+      "id": "post_customer_spur",
+      "access": "public",
+      "polygon": [
+        [
+          -155,
+          -960
+        ],
+        [
+          180,
+          -960
+        ],
+        [
+          180,
+          -740
+        ],
+        [
+          -155,
+          -740
         ]
       ]
     },
@@ -810,20 +1471,373 @@
       "access": "vendor_only",
       "polygon": [
         [
-          -480,
-          270
+          -350,
+          266
         ],
         [
-          -365,
-          270
+          -270,
+          266
         ],
         [
-          -365,
-          460
+          -270,
+          325
         ],
         [
-          -480,
-          460
+          -350,
+          325
+        ]
+      ]
+    },
+    {
+      "id": "west_garden_branch",
+      "access": "public",
+      "polygon": [
+        [
+          -915,
+          -70
+        ],
+        [
+          75,
+          -70
+        ],
+        [
+          75,
+          20
+        ],
+        [
+          -915,
+          20
+        ]
+      ]
+    },
+    {
+      "id": "west_outer_walk",
+      "access": "public",
+      "polygon": [
+        [
+          -915,
+          -650
+        ],
+        [
+          -680,
+          -650
+        ],
+        [
+          -680,
+          900
+        ],
+        [
+          -915,
+          900
+        ]
+      ]
+    },
+    {
+      "id": "east_courtyard_branch",
+      "access": "public",
+      "polygon": [
+        [
+          40,
+          -35
+        ],
+        [
+          935,
+          -35
+        ],
+        [
+          935,
+          60
+        ],
+        [
+          40,
+          60
+        ]
+      ]
+    },
+    {
+      "id": "east_outer_walk",
+      "access": "public",
+      "polygon": [
+        [
+          680,
+          -780
+        ],
+        [
+          935,
+          -780
+        ],
+        [
+          935,
+          720
+        ],
+        [
+          680,
+          720
+        ]
+      ]
+    },
+    {
+      "id": "northeast_mail_pocket",
+      "access": "public",
+      "polygon": [
+        [
+          540,
+          350
+        ],
+        [
+          1080,
+          350
+        ],
+        [
+          1080,
+          865
+        ],
+        [
+          540,
+          865
+        ]
+      ]
+    },
+    {
+      "id": "east_fountain_pocket",
+      "access": "public",
+      "polygon": [
+        [
+          500,
+          -340
+        ],
+        [
+          1095,
+          -340
+        ],
+        [
+          1095,
+          350
+        ],
+        [
+          500,
+          350
+        ]
+      ]
+    },
+    {
+      "id": "southeast_picnic_pocket",
+      "access": "public",
+      "polygon": [
+        [
+          500,
+          -985
+        ],
+        [
+          1120,
+          -985
+        ],
+        [
+          1120,
+          -520
+        ],
+        [
+          500,
+          -520
+        ]
+      ]
+    },
+    {
+      "id": "west_reading_pocket",
+      "access": "public",
+      "polygon": [
+        [
+          -1105,
+          315
+        ],
+        [
+          -530,
+          315
+        ],
+        [
+          -530,
+          915
+        ],
+        [
+          -1105,
+          915
+        ]
+      ]
+    },
+    {
+      "id": "west_gardening_pocket",
+      "access": "public",
+      "polygon": [
+        [
+          -1120,
+          -985
+        ],
+        [
+          -540,
+          -985
+        ],
+        [
+          -540,
+          -125
+        ],
+        [
+          -1120,
+          -125
+        ]
+      ]
+    },
+    {
+      "id": "east_tea_table_approach",
+      "access": "public",
+      "polygon": [
+        [
+          315,
+          -35
+        ],
+        [
+          510,
+          -35
+        ],
+        [
+          510,
+          115
+        ],
+        [
+          315,
+          115
+        ]
+      ],
+      "purpose": "Walk around the new tea table without crossing its physical footprint."
+    },
+    {
+      "id": "west_bookshop_front",
+      "access": "public",
+      "polygon": [
+        [
+          -1045,
+          355
+        ],
+        [
+          -545,
+          355
+        ],
+        [
+          -545,
+          595
+        ],
+        [
+          -1045,
+          595
+        ]
+      ]
+    },
+    {
+      "id": "west_flower_shopfront",
+      "access": "public",
+      "polygon": [
+        [
+          -1045,
+          -145
+        ],
+        [
+          -545,
+          -145
+        ],
+        [
+          -545,
+          65
+        ],
+        [
+          -1045,
+          65
+        ]
+      ]
+    },
+    {
+      "id": "west_inner_shop_lane",
+      "access": "public",
+      "polygon": [
+        [
+          -680,
+          -165
+        ],
+        [
+          -440,
+          -165
+        ],
+        [
+          -440,
+          580
+        ],
+        [
+          -680,
+          580
+        ]
+      ]
+    },
+    {
+      "id": "east_residential_lane",
+      "access": "public",
+      "polygon": [
+        [
+          1035,
+          -975
+        ],
+        [
+          1120,
+          -975
+        ],
+        [
+          1120,
+          600
+        ],
+        [
+          1035,
+          600
+        ]
+      ]
+    },
+    {
+      "id": "east_residential_exit",
+      "access": "public",
+      "polygon": [
+        [
+          760,
+          -395
+        ],
+        [
+          1120,
+          -395
+        ],
+        [
+          1120,
+          -220
+        ],
+        [
+          760,
+          -220
+        ]
+      ]
+    },
+    {
+      "id": "east_fountain_front_bypass",
+      "access": "public",
+      "polygon": [
+        [
+          315,
+          -105
+        ],
+        [
+          790,
+          -105
+        ],
+        [
+          790,
+          -40
+        ],
+        [
+          315,
+          -40
         ]
       ]
     }
@@ -831,973 +1845,1930 @@
   "physicalFootprints": [
     {
       "id": "tea_counter_block",
-      "artSlotId": "lc_tea_counter_front",
+      "artSlotId": "lc5_tea_counter_back",
       "polygon": [
         [
-          -363,
-          285
+          -345,
+          255
         ],
         [
-          -333,
-          285
+          -235,
+          255
         ],
         [
-          -333,
-          425
+          -235,
+          265
         ],
         [
-          -363,
-          425
+          -345,
+          265
         ]
       ]
     },
     {
-      "id": "chestnut_cart_block",
-      "artSlotId": "lc_chestnut_cart_back",
+      "id": "bun_cart_block",
+      "artSlotId": "lc5_bun_cart_back",
       "polygon": [
         [
-          213,
-          -510
+          150,
+          170
         ],
         [
-          328,
-          -510
+          250,
+          170
         ],
         [
-          328,
-          -367
+          250,
+          225
         ],
         [
-          213,
-          -367
+          150,
+          225
         ]
       ]
     },
     {
       "id": "tree_trunk_block",
-      "artSlotId": "lc_tree_front",
+      "artSlotId": "lc5_tree_front",
       "polygon": [
         [
-          -620,
-          110
+          -433,
+          85
         ],
         [
-          -590,
-          110
+          -407,
+          85
         ],
         [
-          -590,
-          160
+          -407,
+          120
         ],
         [
-          -620,
-          160
-        ]
-      ]
-    },
-    {
-      "id": "planter_block",
-      "artSlotId": "lc_planter_front",
-      "polygon": [
-        [
-          160,
-          -142
-        ],
-        [
-          207,
-          -142
-        ],
-        [
-          207,
-          -86
-        ],
-        [
-          160,
-          -86
+          -433,
+          120
         ]
       ]
     },
     {
       "id": "bench_block",
-      "artSlotId": "lc_bench_front",
+      "artSlotId": "lc5_bench_front",
       "polygon": [
         [
-          -560,
-          -235
+          -620,
+          -217
         ],
         [
-          -395,
-          -235
+          -480,
+          -217
         ],
         [
-          -395,
-          -170
+          -480,
+          -177
         ],
         [
-          -560,
-          -170
+          -620,
+          -177
         ]
       ]
     },
     {
       "id": "tea_patio_block",
-      "artSlotId": "lc_tea_patio_front",
+      "artSlotId": "lc5_tea_patio_front",
       "polygon": [
         [
-          -485,
-          110
+          -320,
+          40
         ],
         [
-          -365,
-          110
+          -200,
+          40
         ],
         [
-          -365,
-          208
+          -200,
+          84
         ],
         [
-          -485,
-          208
+          -320,
+          84
         ]
       ]
     },
     {
       "id": "curb_flower_block",
-      "artSlotId": "lc_curb_flower_display",
+      "artSlotId": "lc5_curb_flower_display",
       "polygon": [
         [
-          -380,
-          -310
+          -310,
+          -335
         ],
         [
-          -298,
-          -310
+          -215,
+          -335
         ],
         [
-          -298,
-          -220
+          -215,
+          -255
         ],
         [
-          -380,
-          -220
-        ]
-      ]
-    },
-    {
-      "id": "tailor_work_rack_block",
-      "artSlotId": "lc_tailor_work_rack",
-      "polygon": [
-        [
-          -555,
-          -390
-        ],
-        [
-          -480,
-          -390
-        ],
-        [
-          -480,
-          -285
-        ],
-        [
-          -555,
-          -285
-        ]
-      ]
-    },
-    {
-      "id": "tailor_crates_block",
-      "artSlotId": "lc_crates_front",
-      "polygon": [
-        [
-          -470,
-          -385
-        ],
-        [
-          -385,
-          -385
-        ],
-        [
-          -385,
-          -305
-        ],
-        [
-          -470,
-          -305
-        ]
-      ]
-    },
-    {
-      "id": "curb_pottery_block",
-      "artSlotId": "lc_curb_pottery_west",
-      "polygon": [
-        [
-          -251,
-          -315
-        ],
-        [
-          -211,
-          -315
-        ],
-        [
-          -211,
-          -275
-        ],
-        [
-          -251,
-          -275
+          -310,
+          -255
         ]
       ]
     },
     {
       "id": "curb_produce_block",
-      "artSlotId": "lc_curb_produce_east",
+      "artSlotId": "lc5_curb_produce_east",
       "polygon": [
         [
-          215,
-          -320
+          235,
+          -160
         ],
         [
-          270,
-          -320
+          300,
+          -160
         ],
         [
-          270,
-          -275
+          300,
+          -105
         ],
         [
-          215,
-          -275
-        ]
-      ]
-    },
-    {
-      "id": "wayfinding_sign_block",
-      "artSlotId": "lc_wayfinding_sign",
-      "polygon": [
-        [
-          -255,
-          -10
-        ],
-        [
-          -225,
-          -10
-        ],
-        [
-          -225,
-          30
-        ],
-        [
-          -255,
-          30
-        ]
-      ]
-    },
-    {
-      "id": "lantern_post_block",
-      "artSlotId": "lc_lantern_post_front",
-      "polygon": [
-        [
-          335,
-          410
-        ],
-        [
-          365,
-          410
-        ],
-        [
-          365,
-          460
-        ],
-        [
-          335,
-          460
-        ]
-      ]
-    },
-    {
-      "id": "north_herb_stand_block",
-      "artSlotId": "lc_north_herb_stand",
-      "polygon": [
-        [
-          -335,
-          550
-        ],
-        [
-          -248,
-          550
-        ],
-        [
-          -248,
-          605
-        ],
-        [
-          -335,
-          605
-        ]
-      ]
-    },
-    {
-      "id": "east_bun_cart_block",
-      "artSlotId": "lc_east_bun_cart_back",
-      "polygon": [
-        [
-          10,
-          475
-        ],
-        [
-          65,
-          475
-        ],
-        [
-          65,
-          520
-        ],
-        [
-          10,
-          520
-        ]
-      ]
-    },
-    {
-      "id": "west_market_handcart_block",
-      "artSlotId": "lc_west_market_handcart",
-      "polygon": [
-        [
-          -527,
-          -80
-        ],
-        [
-          -410,
-          -80
-        ],
-        [
-          -410,
-          -22
-        ],
-        [
-          -527,
-          -22
+          235,
+          -105
         ]
       ]
     },
     {
       "id": "street_water_station_block",
-      "artSlotId": "lc_street_water_station",
+      "artSlotId": "lc5_street_water_station",
       "polygon": [
         [
-          -30,
-          -315
+          93,
+          -400
         ],
         [
-          42,
-          -315
+          165,
+          -400
         ],
         [
-          42,
-          -265
+          165,
+          -350
         ],
         [
-          -30,
-          -265
+          93,
+          -350
         ]
       ]
     },
     {
-      "id": "south_post_house_block",
-      "artSlotId": "lc_south_post_house_back",
+      "id": "tailor_goods_block",
+      "artSlotId": "lc5_tailor_goods",
       "polygon": [
         [
-          -750,
-          -1008
+          -315,
+          -705
         ],
         [
-          -370,
-          -1008
+          -225,
+          -705
         ],
         [
-          -370,
-          -747
-        ],
-        [
-          -750,
-          -747
-        ]
-      ]
-    },
-    {
-      "id": "south_grain_house_block",
-      "artSlotId": "lc_south_grain_house_back",
-      "polygon": [
-        [
-          380,
-          -1008
-        ],
-        [
-          748,
-          -1008
-        ],
-        [
-          748,
-          -747
-        ],
-        [
-          380,
-          -747
-        ]
-      ]
-    },
-    {
-      "id": "east_pottery_annex_block",
-      "artSlotId": "lc_east_pottery_annex_back",
-      "polygon": [
-        [
-          490,
-          207
-        ],
-        [
-          640,
-          207
-        ],
-        [
-          640,
-          304
-        ],
-        [
-          490,
-          304
-        ]
-      ]
-    },
-    {
-      "id": "tea_delivery_nook_block",
-      "artSlotId": "lc_tea_delivery_nook",
-      "polygon": [
-        [
-          -380,
-          -175
+          -225,
+          -655
         ],
         [
           -315,
-          -175
-        ],
-        [
-          -315,
-          -129
-        ],
-        [
-          -380,
-          -129
+          -655
         ]
       ]
     },
     {
-      "id": "tailor_delivery_stool_block",
-      "artSlotId": "lc_tailor_delivery_stool",
+      "id": "tailor_work_rack_block",
+      "artSlotId": "lc5_tailor_work_rack",
       "polygon": [
         [
-          -300,
-          -578
+          -435,
+          -720
         ],
         [
-          -230,
-          -578
+          -355,
+          -720
         ],
         [
-          -230,
-          -515
+          -355,
+          -625
         ],
         [
-          -300,
-          -515
+          -435,
+          -625
         ]
       ]
+    },
+    {
+      "id": "post_parcel_block",
+      "artSlotId": "lc5_crates_front",
+      "polygon": [
+        [
+          -285,
+          -900
+        ],
+        [
+          -185,
+          -900
+        ],
+        [
+          -185,
+          -840
+        ],
+        [
+          -285,
+          -840
+        ]
+      ]
+    },
+    {
+      "id": "west_tree_trunk_block",
+      "artSlotId": "lc5_west_garden_tree_front",
+      "polygon": [
+        [
+          -1073,
+          45
+        ],
+        [
+          -1047,
+          45
+        ],
+        [
+          -1047,
+          80
+        ],
+        [
+          -1073,
+          80
+        ]
+      ]
+    },
+    {
+      "id": "west_bench_block",
+      "artSlotId": "lc5_west_garden_bench_front",
+      "polygon": [
+        [
+          -725,
+          388
+        ],
+        [
+          -585,
+          388
+        ],
+        [
+          -585,
+          428
+        ],
+        [
+          -725,
+          428
+        ]
+      ]
+    },
+    {
+      "id": "west_flower_block",
+      "artSlotId": "lc5_west_garden_flowers_front",
+      "polygon": [
+        [
+          -900,
+          -45
+        ],
+        [
+          -805,
+          -45
+        ],
+        [
+          -805,
+          35
+        ],
+        [
+          -900,
+          35
+        ]
+      ]
+    },
+    {
+      "id": "east_tree_trunk_block",
+      "artSlotId": "lc5_east_courtyard_tree_front",
+      "polygon": [
+        [
+          1032,
+          35
+        ],
+        [
+          1058,
+          35
+        ],
+        [
+          1058,
+          70
+        ],
+        [
+          1032,
+          70
+        ]
+      ]
+    },
+    {
+      "id": "east_patio_block",
+      "artSlotId": "lc5_east_courtyard_patio_front",
+      "polygon": [
+        [
+          595,
+          -260
+        ],
+        [
+          715,
+          -260
+        ],
+        [
+          715,
+          -216
+        ],
+        [
+          595,
+          -216
+        ]
+      ]
+    },
+    {
+      "id": "east_water_block",
+      "artSlotId": "lc5_east_courtyard_water_front",
+      "polygon": [
+        [
+          1013,
+          -280
+        ],
+        [
+          1085,
+          -280
+        ],
+        [
+          1085,
+          -230
+        ],
+        [
+          1013,
+          -230
+        ]
+      ]
+    },
+    {
+      "id": "lc6_reading_tree_footprint",
+      "artSlotId": "lc6_reading_tree",
+      "polygon": [
+        [
+          -1033,
+          580
+        ],
+        [
+          -1007,
+          580
+        ],
+        [
+          -1007,
+          615
+        ],
+        [
+          -1033,
+          615
+        ]
+      ]
+    },
+    {
+      "id": "lc6_garden_tree_footprint",
+      "artSlotId": "lc6_garden_tree",
+      "polygon": [
+        [
+          -1053,
+          -545
+        ],
+        [
+          -1027,
+          -545
+        ],
+        [
+          -1027,
+          -510
+        ],
+        [
+          -1053,
+          -510
+        ]
+      ]
+    },
+    {
+      "id": "lc6_garden_flowers_footprint",
+      "artSlotId": "lc6_garden_flowers",
+      "polygon": [
+        [
+          -810,
+          -970
+        ],
+        [
+          -715,
+          -970
+        ],
+        [
+          -715,
+          -890
+        ],
+        [
+          -810,
+          -890
+        ]
+      ]
+    },
+    {
+      "id": "lc6_central_crates_footprint",
+      "artSlotId": "lc6_central_crates",
+      "polygon": [
+        [
+          125,
+          810
+        ],
+        [
+          225,
+          810
+        ],
+        [
+          225,
+          870
+        ],
+        [
+          125,
+          870
+        ]
+      ],
+      "placementReview": "Historical v6 footprint synchronized with the retained crate center (175,855) and ground contact footY810; target and PNG placement unchanged."
+    },
+    {
+      "id": "lc6_central_table_footprint",
+      "artSlotId": "lc6_central_table",
+      "polygon": [
+        [
+          205,
+          -5
+        ],
+        [
+          325,
+          -5
+        ],
+        [
+          325,
+          39
+        ],
+        [
+          205,
+          39
+        ]
+      ]
+    },
+    {
+      "id": "lc6_central_water_footprint",
+      "artSlotId": "lc6_central_water",
+      "polygon": [
+        [
+          -152,
+          -235
+        ],
+        [
+          -80,
+          -235
+        ],
+        [
+          -80,
+          -185
+        ],
+        [
+          -152,
+          -185
+        ]
+      ]
+    },
+    {
+      "id": "lc6_mail_tree_footprint",
+      "artSlotId": "lc6_mail_tree",
+      "polygon": [
+        [
+          1027,
+          675
+        ],
+        [
+          1053,
+          675
+        ],
+        [
+          1053,
+          710
+        ],
+        [
+          1027,
+          710
+        ]
+      ]
+    },
+    {
+      "id": "lc6_mail_flowers_footprint",
+      "artSlotId": "lc6_mail_flowers",
+      "polygon": [
+        [
+          980,
+          265
+        ],
+        [
+          1075,
+          265
+        ],
+        [
+          1075,
+          345
+        ],
+        [
+          980,
+          345
+        ]
+      ]
+    },
+    {
+      "id": "lc6_fountain_bench_footprint",
+      "artSlotId": "lc6_fountain_bench",
+      "polygon": [
+        [
+          890,
+          -57
+        ],
+        [
+          1030,
+          -57
+        ],
+        [
+          1030,
+          -17
+        ],
+        [
+          890,
+          -17
+        ]
+      ]
+    },
+    {
+      "id": "lc6_fountain_crates_footprint",
+      "artSlotId": "lc6_fountain_crates",
+      "polygon": [
+        [
+          480,
+          -160
+        ],
+        [
+          580,
+          -160
+        ],
+        [
+          580,
+          -100
+        ],
+        [
+          480,
+          -100
+        ]
+      ]
+    },
+    {
+      "id": "lc6_picnic_tree_footprint",
+      "artSlotId": "lc6_picnic_tree",
+      "polygon": [
+        [
+          1002,
+          -780
+        ],
+        [
+          1028,
+          -780
+        ],
+        [
+          1028,
+          -745
+        ],
+        [
+          1002,
+          -745
+        ]
+      ]
+    },
+    {
+      "id": "lc6_picnic_bench_footprint",
+      "artSlotId": "lc6_picnic_bench",
+      "polygon": [
+        [
+          610,
+          -1007
+        ],
+        [
+          750,
+          -1007
+        ],
+        [
+          750,
+          -967
+        ],
+        [
+          610,
+          -967
+        ]
+      ]
+    },
+    {
+      "id": "lc6_reading_stall_footprint",
+      "artSlotId": "lc6_reading_stall",
+      "polygon": [
+        [
+          -912,
+          405
+        ],
+        [
+          -748,
+          405
+        ],
+        [
+          -748,
+          445
+        ],
+        [
+          -912,
+          445
+        ]
+      ]
+    },
+    {
+      "id": "lc6_garden_workbench_footprint",
+      "artSlotId": "lc6_garden_workbench",
+      "polygon": [
+        [
+          -1078,
+          -935
+        ],
+        [
+          -912,
+          -935
+        ],
+        [
+          -912,
+          -895
+        ],
+        [
+          -1078,
+          -895
+        ]
+      ]
+    },
+    {
+      "id": "lc6_mail_notice_footprint",
+      "artSlotId": "lc6_mail_notice",
+      "polygon": [
+        [
+          970,
+          410
+        ],
+        [
+          1070,
+          410
+        ],
+        [
+          1070,
+          450
+        ],
+        [
+          970,
+          450
+        ]
+      ]
+    },
+    {
+      "id": "lc6_fountain_footprint",
+      "artSlotId": "lc6_fountain",
+      "polygon": [
+        [
+          580,
+          -45
+        ],
+        [
+          720,
+          -45
+        ],
+        [
+          720,
+          -5
+        ],
+        [
+          580,
+          -5
+        ]
+      ]
+    },
+    {
+      "id": "lc6_laundry_line_footprint",
+      "artSlotId": "lc6_laundry_line",
+      "polygon": [
+        [
+          600,
+          -905
+        ],
+        [
+          810,
+          -905
+        ],
+        [
+          810,
+          -865
+        ],
+        [
+          600,
+          -865
+        ]
+      ]
+    },
+    {
+      "id": "lc6_picnic_blanket_footprint",
+      "artSlotId": "lc6_picnic_blanket",
+      "polygon": [
+        [
+          885,
+          -910
+        ],
+        [
+          1055,
+          -910
+        ],
+        [
+          1055,
+          -855
+        ],
+        [
+          885,
+          -855
+        ]
+      ]
+    },
+    {
+      "id": "lc7_book_shop_back_occupied_facade",
+      "artSlotId": "lc7_book_shop_back",
+      "polygon": [
+        [
+          -935,
+          600
+        ],
+        [
+          -615,
+          600
+        ],
+        [
+          -615,
+          920
+        ],
+        [
+          -935,
+          920
+        ]
+      ],
+      "purpose": "Prevent feet travelling across visible facade; public walking space passes in front or to its side."
+    },
+    {
+      "id": "lc7_flower_shop_back_occupied_facade",
+      "artSlotId": "lc7_flower_shop_back",
+      "polygon": [
+        [
+          -985,
+          70
+        ],
+        [
+          -665,
+          70
+        ],
+        [
+          -665,
+          400
+        ],
+        [
+          -985,
+          400
+        ]
+      ],
+      "purpose": "Prevent feet travelling across visible facade; public walking space passes in front or to its side."
+    },
+    {
+      "id": "lc7_sweet_shop_back_occupied_facade",
+      "artSlotId": "lc7_sweet_shop_back",
+      "polygon": [
+        [
+          665,
+          595
+        ],
+        [
+          985,
+          595
+        ],
+        [
+          985,
+          915
+        ],
+        [
+          665,
+          915
+        ]
+      ],
+      "purpose": "Prevent feet travelling across visible facade; public walking space passes in front or to its side."
+    },
+    {
+      "id": "lc7_noodle_shop_back_occupied_facade",
+      "artSlotId": "lc7_noodle_shop_back",
+      "polygon": [
+        [
+          645,
+          135
+        ],
+        [
+          965,
+          135
+        ],
+        [
+          965,
+          445
+        ],
+        [
+          645,
+          445
+        ]
+      ],
+      "purpose": "Prevent feet travelling across visible facade; public walking space passes in front or to its side."
+    },
+    {
+      "id": "lc7_sage_house_back_occupied_facade",
+      "artSlotId": "lc7_sage_house_back",
+      "polygon": [
+        [
+          -985,
+          -750
+        ],
+        [
+          -665,
+          -750
+        ],
+        [
+          -665,
+          -440
+        ],
+        [
+          -985,
+          -440
+        ]
+      ],
+      "purpose": "Prevent feet travelling across visible facade; public walking space passes in front or to its side."
+    },
+    {
+      "id": "lc7_rose_house_back_occupied_facade",
+      "artSlotId": "lc7_rose_house_back",
+      "polygon": [
+        [
+          655,
+          -695
+        ],
+        [
+          975,
+          -695
+        ],
+        [
+          975,
+          -395
+        ],
+        [
+          655,
+          -395
+        ]
+      ],
+      "purpose": "Prevent feet travelling across visible facade; public walking space passes in front or to its side."
+    },
+    {
+      "id": "lc9_craft_table_occupied_base",
+      "artSlotId": "lc9_craft_table",
+      "polygon": [
+        [
+          -942.4,
+          -325
+        ],
+        [
+          -757.6,
+          -325
+        ],
+        [
+          -757.6,
+          -280
+        ],
+        [
+          -942.4,
+          -280
+        ]
+      ],
+      "purpose": "Keep resident feet outside the generated fixture base."
+    },
+    {
+      "id": "lc9_refreshment_cart_occupied_base",
+      "artSlotId": "lc9_refreshment_cart",
+      "polygon": [
+        [
+          476.8,
+          -520
+        ],
+        [
+          653.2,
+          -520
+        ],
+        [
+          653.2,
+          -475
+        ],
+        [
+          476.8,
+          -475
+        ]
+      ],
+      "purpose": "Keep resident feet outside the generated fixture base."
     }
   ],
   "standingSpots": [
     {
       "id": "tea_vendor_foot",
       "at": {
-        "x": -410,
-        "y": 350
+        "x": -305,
+        "y": 298
       },
       "access": "vendor_only",
       "facing": "right",
-      "clearRadius": 18
+      "clearRadius": 13
     },
     {
       "id": "tea_customer_foot",
       "at": {
-        "x": -285,
-        "y": 350
+        "x": -205,
+        "y": 290
       },
       "access": "public",
       "facing": "left",
-      "clearRadius": 18
+      "clearRadius": 13
     },
     {
       "id": "tea_cup_handoff",
       "at": {
-        "x": -340,
-        "y": 382
+        "x": -253,
+        "y": 342
       },
       "access": "counter_surface",
       "facing": "front",
       "clearRadius": 0
     },
     {
+      "id": "tea_regular_table_foot",
+      "at": {
+        "x": -170,
+        "y": 25
+      },
+      "access": "public",
+      "facing": "left",
+      "clearRadius": 13
+    },
+    {
       "id": "chestnut_seller_foot",
       "at": {
-        "x": 150,
-        "y": -430
+        "x": 110,
+        "y": 210
       },
       "access": "public",
       "facing": "right",
-      "clearRadius": 18
+      "clearRadius": 13
     },
     {
       "id": "lantern_watcher_foot",
       "at": {
-        "x": 20,
-        "y": 410
+        "x": -90,
+        "y": 440
       },
       "access": "public",
       "facing": "right",
-      "clearRadius": 18
+      "clearRadius": 12
+    },
+    {
+      "id": "flower_shopkeeper_door_foot",
+      "at": {
+        "x": -745,
+        "y": -5
+      },
+      "access": "public",
+      "facing": "right",
+      "clearRadius": 13
+    },
+    {
+      "id": "book_shopkeeper_door_foot",
+      "at": {
+        "x": -710,
+        "y": 535
+      },
+      "access": "public",
+      "facing": "right",
+      "clearRadius": 13
+    },
+    {
+      "id": "sweet_shopkeeper_door_foot",
+      "at": {
+        "x": 730,
+        "y": 545
+      },
+      "access": "public",
+      "facing": "right",
+      "clearRadius": 13
+    },
+    {
+      "id": "noodle_shopkeeper_door_foot",
+      "at": {
+        "x": 780,
+        "y": 95
+      },
+      "access": "public",
+      "facing": "right",
+      "clearRadius": 13
+    },
+    {
+      "id": "garden_neighbor_door_foot",
+      "at": {
+        "x": -820,
+        "y": -795
+      },
+      "access": "public",
+      "facing": "right",
+      "clearRadius": 13
+    },
+    {
+      "id": "laundry_neighbor_door_foot",
+      "at": {
+        "x": 720,
+        "y": -745
+      },
+      "access": "public",
+      "facing": "right",
+      "clearRadius": 13
+    },
+    {
+      "id": "strolling_reader_door_foot",
+      "at": {
+        "x": -640,
+        "y": 350
+      },
+      "access": "public",
+      "facing": "right",
+      "clearRadius": 13
+    },
+    {
+      "id": "visiting_child_door_foot",
+      "at": {
+        "x": -570,
+        "y": -95
+      },
+      "access": "public",
+      "facing": "right",
+      "clearRadius": 11
     }
   ],
   "npcPlans": [
     {
       "id": "messenger_customer",
-      "role": "tea_customer",
-      "actorHeight": 120,
-      "footRadius": 18,
+      "role": "mailman",
+      "actorHeight": 88,
+      "footRadius": 13,
       "route": [
         {
-          "x": -100,
-          "y": -300
+          "x": -5,
+          "y": -290
         },
         {
-          "x": -130,
-          "y": -150
+          "x": 25,
+          "y": -100
         },
         {
-          "x": -130,
-          "y": 80
+          "x": 80,
+          "y": 100
         },
         {
-          "x": -210,
-          "y": 210
+          "x": -10,
+          "y": 420
         },
         {
-          "x": -285,
-          "y": 350
+          "x": 45,
+          "y": 650
         },
         {
-          "x": -220,
-          "y": 500
-        },
-        {
-          "x": -145,
-          "y": 700
+          "x": 70,
+          "y": 875
         }
       ],
-      "speedWorldUnitsPerSecond": 125,
-      "onWaypoint": {
-        "4": "tea_exchange"
-      },
-      "loop": false
+      "speedWorldUnitsPerSecond": 90,
+      "loop": false,
+      "routeMode": "forward",
+      "generatedSourceBatch": "ai_image_v12",
+      "generatedSourceId": "chicken_messenger_customer_motion_v12",
+      "idleActions": [
+        "inspect_letter",
+        "short_pause"
+      ]
     },
     {
       "id": "tea_vendor",
       "role": "vendor",
-      "actorHeight": 120,
-      "footRadius": 18,
+      "actorHeight": 86,
+      "footRadius": 13,
       "route": [
         {
-          "x": -410,
-          "y": 350
+          "x": -305,
+          "y": 298
         }
       ],
       "idleActions": [
         "look_at_passersby",
-        "arrange_cups"
+        "short_pause"
       ],
-      "eventAction": "tea_exchange"
+      "loop": false,
+      "generatedSourceBatch": "ai_image_v12",
+      "generatedSourceId": "chicken_tea_vendor_motion_v12"
     },
     {
       "id": "crossing_shopper",
       "role": "ambient_shopper",
-      "actorHeight": 118,
-      "footRadius": 18,
+      "actorHeight": 86,
+      "footRadius": 13,
       "route": [
         {
-          "x": 90,
-          "y": -175
+          "x": 1080,
+          "y": -790
         },
         {
-          "x": 105,
-          "y": 65
+          "x": 1080,
+          "y": -370
         },
         {
-          "x": 125,
-          "y": 235
+          "x": 780,
+          "y": -255
         },
         {
-          "x": 105,
-          "y": 65
+          "x": 760,
+          "y": -170
         },
         {
-          "x": 90,
-          "y": -175
+          "x": 760,
+          "y": 20
         },
         {
-          "x": 110,
-          "y": -320
+          "x": 770,
+          "y": -75
         },
         {
-          "x": 78,
-          "y": -540
+          "x": 460,
+          "y": -75
         },
         {
-          "x": 110,
-          "y": -320
+          "x": 140,
+          "y": -75
+        },
+        {
+          "x": 100,
+          "y": 15
+        },
+        {
+          "x": 40,
+          "y": -150
+        },
+        {
+          "x": -15,
+          "y": -430
+        },
+        {
+          "x": 10,
+          "y": -560
         }
       ],
-      "speedWorldUnitsPerSecond": 62,
+      "speedWorldUnitsPerSecond": 54,
       "pauseSecondsAtWaypoints": {
-        "2": 2.5,
-        "6": 1.3
+        "0": 3,
+        "4": 2,
+        "11": 2
       },
-      "loop": true
+      "loop": true,
+      "routeMode": "ping_pong",
+      "idleActions": [
+        "look_in_basket",
+        "watch_market"
+      ],
+      "generatedSourceBatch": "ai_image_v12",
+      "generatedSourceId": "chicken_crossing_shopper_motion_v12"
     },
     {
       "id": "chestnut_seller",
       "role": "ambient_vendor",
-      "actorHeight": 122,
-      "footRadius": 18,
+      "actorHeight": 90,
+      "footRadius": 13,
       "route": [
         {
-          "x": 150,
-          "y": -430
+          "x": 110,
+          "y": 210
         }
       ],
       "idleActions": [
         "tend_cart",
         "short_pause"
-      ]
+      ],
+      "loop": false,
+      "generatedSourceBatch": "ai_image_v12",
+      "generatedSourceId": "chicken_chestnut_seller_motion_v12"
     },
     {
       "id": "lantern_watcher",
       "role": "ambient_watcher",
-      "actorHeight": 105,
-      "footRadius": 18,
+      "actorHeight": 80,
+      "footRadius": 12,
       "route": [
         {
-          "x": 20,
-          "y": 410
+          "x": -90,
+          "y": 440
         }
       ],
       "idleActions": [
-        "look_up_at_banner",
         "wave_at_passersby",
         "short_pause"
-      ]
+      ],
+      "loop": false,
+      "generatedSourceBatch": "ai_image_v12",
+      "generatedSourceId": "chicken_lantern_watcher_motion_v12"
     },
     {
       "id": "tea_regular",
       "role": "tea_regular",
-      "actorHeight": 112,
-      "footRadius": 18,
+      "actorHeight": 84,
+      "footRadius": 13,
       "route": [
         {
-          "x": -345,
-          "y": -55
+          "x": -170,
+          "y": 25
         },
         {
-          "x": -345,
-          "y": 75
+          "x": -170,
+          "y": 170
         },
         {
-          "x": -290,
-          "y": 75
-        },
-        {
-          "x": -290,
-          "y": -55
+          "x": -205,
+          "y": 290
         }
       ],
-      "speedWorldUnitsPerSecond": 52,
+      "speedWorldUnitsPerSecond": 62,
       "pauseSecondsAtWaypoints": {
-        "1": 1.2,
-        "3": 1
+        "0": 4,
+        "2": 5
       },
       "loop": true,
       "idleActions": [
         "sip_tea",
         "watch_market"
-      ]
+      ],
+      "routeMode": "ping_pong",
+      "generatedSourceBatch": "ai_image_v12",
+      "generatedSourceId": "chicken_tea_regular_motion_v12"
     },
     {
       "id": "flower_buyer",
       "role": "flower_buyer",
-      "actorHeight": 114,
-      "footRadius": 18,
+      "actorHeight": 84,
+      "footRadius": 13,
       "route": [
         {
-          "x": -180,
-          "y": -500
+          "x": -745,
+          "y": -120
+        },
+        {
+          "x": -640,
+          "y": -120
+        },
+        {
+          "x": -640,
+          "y": -25
+        },
+        {
+          "x": -190,
+          "y": -25
         },
         {
           "x": -170,
-          "y": -300
+          "y": -120
         },
         {
-          "x": -180,
-          "y": -100
-        },
-        {
-          "x": -160,
-          "y": 75
-        },
-        {
-          "x": -180,
-          "y": -100
-        },
-        {
-          "x": -170,
-          "y": -300
+          "x": -185,
+          "y": -240
         }
       ],
-      "speedWorldUnitsPerSecond": 63,
+      "speedWorldUnitsPerSecond": 50,
       "pauseSecondsAtWaypoints": {
-        "1": 1,
-        "3": 1.6
+        "0": 4,
+        "2": 1.2,
+        "5": 3
       },
       "loop": true,
       "idleActions": [
-        "adjust_basket",
-        "look_at_flowers"
-      ]
+        "look_at_flowers",
+        "short_pause"
+      ],
+      "routeMode": "ping_pong",
+      "generatedSourceBatch": "ai_image_v12",
+      "generatedSourceId": "chicken_flower_buyer_motion_layoutfix_v12"
     },
     {
       "id": "lane_child",
       "role": "lane_child",
-      "actorHeight": 103,
-      "footRadius": 16,
+      "actorHeight": 78,
+      "footRadius": 11,
       "route": [
         {
-          "x": -30,
+          "x": -25,
           "y": 520
         },
         {
-          "x": -40,
-          "y": 350
+          "x": -20,
+          "y": 420
         },
         {
-          "x": 40,
-          "y": 250
+          "x": 15,
+          "y": 330
         },
         {
-          "x": 0,
-          "y": 100
+          "x": 70,
+          "y": 170
         },
         {
-          "x": -40,
-          "y": 350
+          "x": 95,
+          "y": 55
         }
       ],
-      "speedWorldUnitsPerSecond": 84,
+      "speedWorldUnitsPerSecond": 64,
       "pauseSecondsAtWaypoints": {
-        "2": 0.5,
-        "3": 0.7
+        "0": 2,
+        "4": 2
       },
       "loop": true,
       "idleActions": [
-        "skip",
-        "look_up"
-      ]
+        "look_up",
+        "short_pause"
+      ],
+      "routeMode": "ping_pong",
+      "generatedSourceBatch": "ai_image_v12",
+      "generatedSourceId": "chicken_lane_child_motion_v12"
+    },
+    {
+      "id": "flower_shopkeeper",
+      "role": "florist",
+      "actorHeight": 88,
+      "footRadius": 13,
+      "route": [
+        {
+          "x": -745,
+          "y": -5
+        },
+        {
+          "x": -675,
+          "y": -5
+        }
+      ],
+      "speedWorldUnitsPerSecond": 30,
+      "initialPauseSeconds": 2.4,
+      "pauseSecondsAtWaypoints": {
+        "0": 3.4,
+        "1": 4
+      },
+      "loop": true,
+      "routeMode": "ping_pong",
+      "idleActions": [
+        "smell_flower",
+        "short_pause"
+      ],
+      "homeArtSlotId": "lc7_flower_shop_back",
+      "generatedSourceId": "chicken_flower_shopkeeper_motion_v12",
+      "supportedTravelView": "side_only",
+      "generatedSourceBatch": "ai_image_v12"
+    },
+    {
+      "id": "book_shopkeeper",
+      "role": "bookseller",
+      "actorHeight": 90,
+      "footRadius": 13,
+      "route": [
+        {
+          "x": -710,
+          "y": 535
+        },
+        {
+          "x": -610,
+          "y": 535
+        }
+      ],
+      "speedWorldUnitsPerSecond": 32,
+      "initialPauseSeconds": 3.6,
+      "pauseSecondsAtWaypoints": {
+        "0": 4,
+        "1": 5
+      },
+      "loop": true,
+      "routeMode": "ping_pong",
+      "idleActions": [
+        "read_book",
+        "short_pause"
+      ],
+      "homeArtSlotId": "lc7_book_shop_back",
+      "generatedSourceId": "chicken_book_shopkeeper_motion_glassesfix_v12",
+      "supportedTravelView": "side_only",
+      "generatedSourceBatch": "ai_image_v12"
+    },
+    {
+      "id": "sweet_shopkeeper",
+      "role": "confectioner",
+      "actorHeight": 88,
+      "footRadius": 13,
+      "route": [
+        {
+          "x": 730,
+          "y": 545
+        },
+        {
+          "x": 840,
+          "y": 545
+        }
+      ],
+      "speedWorldUnitsPerSecond": 34,
+      "initialPauseSeconds": 4.2,
+      "pauseSecondsAtWaypoints": {
+        "0": 3.6,
+        "1": 4.2
+      },
+      "loop": true,
+      "routeMode": "ping_pong",
+      "idleActions": [
+        "offer_sweet",
+        "short_pause"
+      ],
+      "homeArtSlotId": "lc7_sweet_shop_back",
+      "generatedSourceId": "chicken_sweet_shopkeeper_motion_v12",
+      "supportedTravelView": "side_only",
+      "generatedSourceBatch": "ai_image_v12"
+    },
+    {
+      "id": "noodle_shopkeeper",
+      "role": "noodle_cook",
+      "actorHeight": 90,
+      "footRadius": 13,
+      "route": [
+        {
+          "x": 780,
+          "y": 95
+        },
+        {
+          "x": 900,
+          "y": 95
+        }
+      ],
+      "speedWorldUnitsPerSecond": 32,
+      "initialPauseSeconds": 2.8,
+      "pauseSecondsAtWaypoints": {
+        "0": 4.6,
+        "1": 4.6
+      },
+      "loop": true,
+      "routeMode": "ping_pong",
+      "idleActions": [
+        "stir_bowl",
+        "short_pause"
+      ],
+      "homeArtSlotId": "lc7_noodle_shop_back",
+      "generatedSourceId": "chicken_noodle_shopkeeper_motion_v12",
+      "supportedTravelView": "side_only",
+      "generatedSourceBatch": "ai_image_v12"
+    },
+    {
+      "id": "garden_neighbor",
+      "role": "gardener",
+      "actorHeight": 86,
+      "footRadius": 13,
+      "route": [
+        {
+          "x": -820,
+          "y": -795
+        },
+        {
+          "x": -675,
+          "y": -795
+        }
+      ],
+      "speedWorldUnitsPerSecond": 26,
+      "initialPauseSeconds": 3,
+      "pauseSecondsAtWaypoints": {
+        "0": 4,
+        "1": 3.5
+      },
+      "loop": true,
+      "routeMode": "ping_pong",
+      "idleActions": [
+        "water_flower",
+        "short_pause"
+      ],
+      "homeArtSlotId": "lc7_sage_house_back",
+      "generatedSourceId": "chicken_garden_neighbor_motion_v12",
+      "supportedTravelView": "side_only",
+      "generatedSourceBatch": "ai_image_v12"
+    },
+    {
+      "id": "laundry_neighbor",
+      "role": "laundry_neighbor",
+      "actorHeight": 86,
+      "footRadius": 13,
+      "route": [
+        {
+          "x": 720,
+          "y": -745
+        },
+        {
+          "x": 840,
+          "y": -745
+        }
+      ],
+      "speedWorldUnitsPerSecond": 28,
+      "initialPauseSeconds": 3.4,
+      "pauseSecondsAtWaypoints": {
+        "0": 3.5,
+        "1": 5
+      },
+      "loop": true,
+      "routeMode": "ping_pong",
+      "idleActions": [
+        "hang_cloth",
+        "short_pause"
+      ],
+      "homeArtSlotId": "lc7_rose_house_back",
+      "generatedSourceId": "chicken_laundry_neighbor_motion_v12",
+      "supportedTravelView": "side_only",
+      "generatedSourceBatch": "ai_image_v12"
+    },
+    {
+      "id": "strolling_reader",
+      "role": "reader",
+      "actorHeight": 85,
+      "footRadius": 13,
+      "route": [
+        {
+          "x": -640,
+          "y": 350
+        },
+        {
+          "x": -530,
+          "y": 350
+        }
+      ],
+      "speedWorldUnitsPerSecond": 36,
+      "initialPauseSeconds": 1.8,
+      "pauseSecondsAtWaypoints": {
+        "0": 3,
+        "1": 3.5
+      },
+      "loop": true,
+      "routeMode": "ping_pong",
+      "idleActions": [
+        "read_book",
+        "short_pause"
+      ],
+      "homeArtSlotId": "lc7_book_shop_back",
+      "generatedSourceId": "chicken_strolling_reader_motion_v12",
+      "supportedTravelView": "side_only",
+      "generatedSourceBatch": "ai_image_v12"
+    },
+    {
+      "id": "visiting_child",
+      "role": "playful_child",
+      "actorHeight": 78,
+      "footRadius": 11,
+      "route": [
+        {
+          "x": -570,
+          "y": -95
+        },
+        {
+          "x": -465,
+          "y": -95
+        }
+      ],
+      "speedWorldUnitsPerSecond": 46,
+      "initialPauseSeconds": 1.2,
+      "pauseSecondsAtWaypoints": {
+        "0": 2,
+        "1": 2.4
+      },
+      "loop": true,
+      "routeMode": "ping_pong",
+      "idleActions": [
+        "wave",
+        "short_pause"
+      ],
+      "homeArtSlotId": "lc7_flower_shop_back",
+      "generatedSourceId": "chicken_visiting_child_motion_v12",
+      "supportedTravelView": "side_only",
+      "generatedSourceBatch": "ai_image_v12"
     }
   ],
   "sceneEvents": [
     {
       "id": "tea_exchange",
       "trigger": {
-        "npcId": "messenger_customer",
-        "waypointIndex": 4,
+        "npcId": "tea_regular",
+        "waypointIndex": 2,
+        "direction": "forward",
         "distanceTolerance": 8
       },
       "participants": [
-        "messenger_customer",
+        "tea_regular",
         "tea_vendor"
       ],
-      "beats": [
+      "repeat": true,
+      "cooldownSeconds": 12,
+      "resumeRouteAfterSeconds": 2.5,
+      "actorBeats": [
         {
+          "npcId": "tea_regular",
+          "clip": "idle_w",
+          "atSeconds": 0,
+          "durationSeconds": 0.8,
+          "facing": 1
+        },
+        {
+          "npcId": "tea_regular",
+          "clip": "receive_w",
+          "atSeconds": 0.8,
+          "durationSeconds": 1.7,
+          "facing": 1
+        },
+        {
+          "npcId": "tea_vendor",
+          "clip": "idle_w",
           "atSeconds": 0,
           "durationSeconds": 0.35,
-          "action": "stop_and_face_counter"
+          "facing": 1
         },
         {
+          "npcId": "tea_vendor",
+          "clip": "receive_w",
           "atSeconds": 0.35,
           "durationSeconds": 0.45,
-          "action": "vendor_reaches_for_cup"
+          "facing": 1
         },
         {
+          "npcId": "tea_vendor",
+          "clip": "idle_w",
           "atSeconds": 0.8,
-          "durationSeconds": 0.55,
-          "action": "cup_handoff_at_tea_cup_handoff"
-        },
-        {
-          "atSeconds": 1.35,
-          "durationSeconds": 0.55,
-          "action": "customer_accepts_and_turns"
+          "durationSeconds": 1.7,
+          "facing": 1
         }
       ],
-      "resumeRouteAfterSeconds": 1.9
+      "prop": {
+        "asset": "event_cup",
+        "at": {
+          "x": -253,
+          "y": 342
+        },
+        "size": {
+          "width": 19,
+          "height": 19
+        },
+        "visibleFromSeconds": 0,
+        "visibleUntilSeconds": 0.35
+      }
+    },
+    {
+      "id": "tea_invitation",
+      "trigger": {
+        "npcId": "tea_vendor",
+        "waypointIndex": 0
+      },
+      "tapTriggerNpcId": "tea_vendor",
+      "participants": [
+        "tea_vendor"
+      ],
+      "repeat": true,
+      "cooldownSeconds": 8,
+      "resumeRouteAfterSeconds": 1.5,
+      "discoveryId": "tea_break",
+      "actorBeats": [
+        {
+          "npcId": "tea_vendor",
+          "clip": "receive_w",
+          "atSeconds": 0,
+          "durationSeconds": 1.5,
+          "facing": 1
+        }
+      ]
+    },
+    {
+      "id": "flower_scent",
+      "trigger": {
+        "npcId": "flower_buyer",
+        "waypointIndex": 0
+      },
+      "tapTriggerNpcId": "flower_buyer",
+      "participants": [
+        "flower_buyer"
+      ],
+      "repeat": true,
+      "cooldownSeconds": 8,
+      "resumeRouteAfterSeconds": 1.6,
+      "discoveryId": "flower_scent",
+      "actorBeats": [
+        {
+          "npcId": "flower_buyer",
+          "clip": "receive_w",
+          "atSeconds": 0,
+          "durationSeconds": 1.6,
+          "facing": 1
+        }
+      ]
+    },
+    {
+      "id": "child_wave",
+      "trigger": {
+        "npcId": "lane_child",
+        "waypointIndex": 0
+      },
+      "tapTriggerNpcId": "lane_child",
+      "participants": [
+        "lane_child"
+      ],
+      "repeat": true,
+      "cooldownSeconds": 8,
+      "resumeRouteAfterSeconds": 1.6,
+      "discoveryId": "child_wave",
+      "actorBeats": [
+        {
+          "npcId": "lane_child",
+          "clip": "receive_w",
+          "atSeconds": 0,
+          "durationSeconds": 1.6,
+          "facing": 1
+        }
+      ]
     }
   ],
   "hiddenObjectSlots": [
     {
       "id": "tea_clay_whistle",
-      "supportArtSlotId": "lc_tea_counter_front",
+      "supportArtSlotId": "lc5_tea_counter_back",
       "at": {
-        "x": -342,
-        "y": 393
-      },
-      "visualWorldSize": {
-        "width": 30,
-        "height": 28
-      },
-      "clickRadiusWorld": 26,
-      "semanticContext": "among cups on tea counter, partially sheltered by upper shelf",
-      "occlusionTargetFraction": 0.2,
-      "canBeSeenAtInitialZoom": true,
-      "label": "陶哨",
-      "clue": "茶摊的杯盏附近"
-    },
-    {
-      "id": "tailor_thimble",
-      "supportArtSlotId": "lc_tailor_goods",
-      "at": {
-        "x": -395,
-        "y": -380
+        "x": -240,
+        "y": 325
       },
       "visualWorldSize": {
         "width": 26,
-        "height": 27
+        "height": 24.555555555555554
       },
-      "clickRadiusWorld": 26,
-      "semanticContext": "in a sewing tray among matching buttons and thread",
-      "occlusionTargetFraction": 0.15,
+      "clickRadiusWorld": 32,
+      "semanticContext": "茶摊柜台的花器旁，茶香里藏着个小陶物件。",
+      "occlusionTargetFraction": 0,
       "canBeSeenAtInitialZoom": true,
+      "label": "陶哨",
+      "clue": "茶摊柜台的花器旁，茶香里藏着个小陶物件。"
+    },
+    {
+      "id": "tailor_thimble",
+      "supportArtSlotId": "lc5_tailor_goods",
+      "at": {
+        "x": -260,
+        "y": -672
+      },
+      "visualWorldSize": {
+        "width": 22,
+        "height": 22.61111111111111
+      },
+      "clickRadiusWorld": 32,
+      "semanticContext": "裁缝铺门口叠好的布料旁，落着一只小顶针。",
+      "occlusionTargetFraction": 0,
+      "canBeSeenAtInitialZoom": false,
       "label": "顶针",
-      "clue": "裁缝铺的针线盘里"
+      "clue": "裁缝铺门口叠好的布料旁，落着一只小顶针。"
     },
     {
       "id": "banner_knot",
-      "supportArtSlotId": "lc_street_banner_front",
+      "supportArtSlotId": "lc5_west_garden_flowers_front",
       "at": {
-        "x": 45,
-        "y": 620
-      },
-      "visualWorldSize": {
-        "width": 27,
-        "height": 33
-      },
-      "clickRadiusWorld": 28,
-      "semanticContext": "one tied fabric knot in the hanging banner fringe",
-      "occlusionTargetFraction": 0.2,
-      "canBeSeenAtInitialZoom": true,
-      "label": "绳结",
-      "clue": "抬头看看街口的横幅"
-    },
-    {
-      "id": "chestnut_tongs",
-      "supportArtSlotId": "lc_chestnut_cart_back",
-      "at": {
-        "x": 253,
-        "y": -407
+        "x": -820,
+        "y": 40
       },
       "visualWorldSize": {
         "width": 36,
-        "height": 32
+        "height": 44
       },
-      "clickRadiusWorld": 30,
-      "semanticContext": "on the relocated street-edge cart tray among packets, reachable after panning east",
-      "occlusionTargetFraction": 0.15,
+      "clickRadiusWorld": 32,
+      "semanticContext": "花店门前花架的盆沿上，打着一个小小的结。",
+      "occlusionTargetFraction": 0,
+      "canBeSeenAtInitialZoom": true,
+      "label": "蝴蝶结",
+      "clue": "花店门前花架的盆沿上，打着一个小小的结。"
+    },
+    {
+      "id": "chestnut_tongs",
+      "supportArtSlotId": "lc5_bun_cart_back",
+      "at": {
+        "x": 235,
+        "y": 222
+      },
+      "visualWorldSize": {
+        "width": 30,
+        "height": 26.666666666666664
+      },
+      "clickRadiusWorld": 32,
+      "semanticContext": "热食车的纸包旁，夹栗子的工具歇在台面上。",
+      "occlusionTargetFraction": 0,
       "canBeSeenAtInitialZoom": false,
       "label": "栗子夹",
-      "clue": "栗子车上的纸包旁"
+      "clue": "热食车的纸包旁，夹栗子的工具歇在台面上。"
     },
     {
       "id": "pocket_watch",
       "label": "怀表",
-      "clue": "茶桌上，有位茶客忘了时间",
-      "supportArtSlotId": "lc_tea_patio_front",
+      "clue": "树荫茶桌上，有人喝着茶忘了时间。",
+      "supportArtSlotId": "lc5_tea_patio_front",
       "at": {
-        "x": -402,
-        "y": 153
+        "x": -215,
+        "y": 80
       },
       "visualWorldSize": {
-        "width": 29,
-        "height": 34
+        "width": 25,
+        "height": 29.166666666666668
       },
-      "clickRadiusWorld": 28,
-      "semanticContext": "茶桌上，有位茶客忘了时间",
+      "clickRadiusWorld": 32,
+      "semanticContext": "树荫茶桌上，有人喝着茶忘了时间。",
       "occlusionTargetFraction": 0,
       "canBeSeenAtInitialZoom": false
     },
     {
       "id": "sewing_scissors",
       "label": "剪刀",
-      "clue": "裁缝的布料工作架上",
-      "supportArtSlotId": "lc_tailor_work_rack",
+      "clue": "裁缝工作架的布料旁，剪刀还没收起来。",
+      "supportArtSlotId": "lc5_tailor_work_rack",
       "at": {
-        "x": -505,
-        "y": -306
+        "x": -385,
+        "y": -695
       },
       "visualWorldSize": {
-        "width": 37,
-        "height": 29
+        "width": 30,
+        "height": 23.333333333333332
       },
-      "clickRadiusWorld": 28,
-      "semanticContext": "裁缝的布料工作架上",
+      "clickRadiusWorld": 32,
+      "semanticContext": "裁缝工作架的布料旁，剪刀还没收起来。",
       "occlusionTargetFraction": 0,
       "canBeSeenAtInitialZoom": false
     },
     {
       "id": "blue_feather",
       "label": "蓝羽毛",
-      "clue": "长凳上有一片旅人的羽毛",
-      "supportArtSlotId": "lc_bench_front",
+      "clue": "书店门前长椅的坐面上，蓝色的小羽毛刚落下来。",
+      "supportArtSlotId": "lc5_west_garden_bench_front",
       "at": {
-        "x": -478,
-        "y": -176
+        "x": -650,
+        "y": 427
       },
       "visualWorldSize": {
-        "width": 36,
-        "height": 22
+        "width": 30,
+        "height": 18.333333333333336
       },
-      "clickRadiusWorld": 28,
-      "semanticContext": "长凳上有一片旅人的羽毛",
+      "clickRadiusWorld": 32,
+      "semanticContext": "书店门前长椅的坐面上，蓝色的小羽毛刚落下来。",
       "occlusionTargetFraction": 0,
-      "canBeSeenAtInitialZoom": false
+      "canBeSeenAtInitialZoom": true
     },
     {
       "id": "sealed_letter",
       "label": "信封",
-      "clue": "南边邮舍的包裹箱，试着打开它",
-      "supportArtSlotId": "lc_south_post_house_back",
+      "clue": "邮舍旁的包裹箱里，轻轻掀开就能看见。",
+      "supportArtSlotId": "lc5_crates_front",
       "at": {
-        "x": -430,
-        "y": -826
+        "x": -235,
+        "y": -864
       },
       "visualWorldSize": {
-        "width": 36,
-        "height": 26
+        "width": 28,
+        "height": 20.22222222222222
       },
-      "clickRadiusWorld": 28,
-      "semanticContext": "南边邮舍的包裹箱，试着打开它",
+      "clickRadiusWorld": 32,
+      "semanticContext": "邮舍旁的包裹箱里，轻轻掀开就能看见。",
       "occlusionTargetFraction": 0,
       "canBeSeenAtInitialZoom": false,
       "visibleCondition": {
@@ -1808,36 +3779,36 @@
     {
       "id": "honey_dipper",
       "label": "蜜勺",
-      "clue": "茶摊补给角的蜂蜜罐旁",
-      "supportArtSlotId": "lc_tea_delivery_nook",
+      "clue": "小庭院的茶桌上，给茶添甜的小勺还躺着。",
+      "supportArtSlotId": "lc5_east_courtyard_patio_front",
       "at": {
-        "x": -347,
-        "y": -120
+        "x": 630,
+        "y": -220
       },
       "visualWorldSize": {
-        "width": 34,
-        "height": 28
+        "width": 28,
+        "height": 23.333333333333336
       },
-      "clickRadiusWorld": 28,
-      "semanticContext": "茶摊补给角的蜂蜜罐旁",
+      "clickRadiusWorld": 32,
+      "semanticContext": "小庭院的茶桌上，给茶添甜的小勺还躺着。",
       "occlusionTargetFraction": 0,
       "canBeSeenAtInitialZoom": false
     },
     {
       "id": "seed_packet",
       "label": "种子袋",
-      "clue": "花架的叶子后，拨开看看",
-      "supportArtSlotId": "lc_curb_flower_display",
+      "clue": "街口花摊的叶子后，拨开叶片看看。",
+      "supportArtSlotId": "lc5_curb_flower_display",
       "at": {
-        "x": -337,
-        "y": -258
+        "x": -230,
+        "y": -250
       },
       "visualWorldSize": {
-        "width": 30,
-        "height": 37
+        "width": 28,
+        "height": 34.22222222222223
       },
-      "clickRadiusWorld": 28,
-      "semanticContext": "花架的叶子后，拨开看看",
+      "clickRadiusWorld": 32,
+      "semanticContext": "街口花摊的叶子后，拨开叶片看看。",
       "occlusionTargetFraction": 0,
       "canBeSeenAtInitialZoom": false,
       "visibleCondition": {
@@ -1848,105 +3819,1094 @@
     {
       "id": "orchard_apple",
       "label": "红苹果",
-      "clue": "路边果蔬筐里的红果子",
-      "supportArtSlotId": "lc_curb_produce_east",
+      "clue": "街边果蔬篮里，红彤彤的果子等人带回家。",
+      "supportArtSlotId": "lc5_curb_produce_east",
       "at": {
-        "x": 240,
-        "y": -230
+        "x": 230,
+        "y": -103
       },
       "visualWorldSize": {
-        "width": 30,
-        "height": 31
+        "width": 28,
+        "height": 28.777777777777775
       },
-      "clickRadiusWorld": 28,
-      "semanticContext": "路边果蔬筐里的红果子",
+      "clickRadiusWorld": 32,
+      "semanticContext": "街边果蔬篮里，红彤彤的果子等人带回家。",
       "occlusionTargetFraction": 0,
       "canBeSeenAtInitialZoom": false
     },
     {
       "id": "golden_bun",
       "label": "小包子",
-      "clue": "热食车的蒸笼，掀开盖布",
-      "supportArtSlotId": "lc_east_bun_cart_back",
+      "clue": "热食车的蒸笼盖布下，掀开便闻见香气。",
+      "supportArtSlotId": "lc5_bun_cart_back",
       "at": {
-        "x": 25,
-        "y": 581
+        "x": 170,
+        "y": 227
       },
       "visualWorldSize": {
-        "width": 33,
-        "height": 28
+        "width": 30,
+        "height": 25.833333333333336
       },
-      "clickRadiusWorld": 28,
-      "semanticContext": "热食车的蒸笼，掀开盖布",
+      "clickRadiusWorld": 32,
+      "semanticContext": "热食车的蒸笼盖布下，掀开便闻见香气。",
       "occlusionTargetFraction": 0,
       "canBeSeenAtInitialZoom": false,
       "visibleCondition": {
         "objectId": "bun_lid",
         "state": "opened"
       }
+    },
+    {
+      "id": "reading_glasses",
+      "label": "阅读眼镜",
+      "supportArtSlotId": "lc6_reading_stall",
+      "at": {
+        "x": -830,
+        "y": 485
+      },
+      "visualWorldSize": {
+        "width": 32,
+        "height": 13.5
+      },
+      "clickRadiusWorld": 34,
+      "semanticContext": "书店旁的读书摊上，眼镜歇在摊开的书页间。",
+      "clue": "书店旁的读书摊上，眼镜歇在摊开的书页间。",
+      "occlusionTargetFraction": 0,
+      "canBeSeenAtInitialZoom": true,
+      "lifeGroupId": "west_reading_garden",
+      "placementReview": "v11 refinement: source pixels and final in-game placement reviewed separately.",
+      "generatedSourceBatch": "ai_image_v11",
+      "generatedSourceId": "reading_glasses_refined_v11",
+      "surfaceContact": {
+        "x": -830,
+        "y": 485
+      },
+      "surfacePlacement": "flat_object_center_on_surface"
+    },
+    {
+      "id": "bookmark",
+      "label": "小书签",
+      "supportArtSlotId": "lc6_reading_stall",
+      "at": {
+        "x": -873,
+        "y": 510
+      },
+      "visualWorldSize": {
+        "width": 23,
+        "height": 28.411764705882355
+      },
+      "clickRadiusWorld": 34,
+      "semanticContext": "读书摊的小书包里，打开书包找找。",
+      "clue": "读书摊的小书包里，打开书包找找。",
+      "occlusionTargetFraction": 0,
+      "canBeSeenAtInitialZoom": false,
+      "lifeGroupId": "west_reading_garden",
+      "visibleCondition": {
+        "objectId": "book_satchel",
+        "state": "opened"
+      },
+      "placementReview": "Actual imported PNG inspected: visible furniture surface or opened-state cavity; shared-state footpoint y=238 preserved."
+    },
+    {
+      "id": "garden_glove",
+      "label": "园艺手套",
+      "supportArtSlotId": "lc6_garden_workbench",
+      "at": {
+        "x": -1037,
+        "y": -831
+      },
+      "visualWorldSize": {
+        "width": 34,
+        "height": 20.8515625
+      },
+      "clickRadiusWorld": 34,
+      "semanticContext": "园艺小屋门前的工作台上，花盆旁留着一只手套。",
+      "clue": "园艺小屋门前的工作台上，花盆旁留着一只手套。",
+      "occlusionTargetFraction": 0,
+      "canBeSeenAtInitialZoom": false,
+      "lifeGroupId": "west_gardening_corner",
+      "placementReview": "Actual generated alpha and contact point; pending built screenshot verification.",
+      "generatedSourceBatch": "ai_image_v10",
+      "generatedSourceId": "garden_glove_surface_v10",
+      "surfaceContact": {
+        "x": -1037,
+        "y": -831
+      },
+      "surfacePlacement": "flat_object_center_on_table"
+    },
+    {
+      "id": "seedling_spade",
+      "label": "育苗小铲",
+      "supportArtSlotId": "lc6_garden_workbench",
+      "at": {
+        "x": -925,
+        "y": -811
+      },
+      "visualWorldSize": {
+        "width": 27,
+        "height": 30
+      },
+      "clickRadiusWorld": 34,
+      "semanticContext": "园艺台的工具箱里，打开后看看靠边的小铲。",
+      "clue": "园艺台的工具箱里，打开后看看靠边的小铲。",
+      "occlusionTargetFraction": 0,
+      "canBeSeenAtInitialZoom": false,
+      "lifeGroupId": "west_gardening_corner",
+      "visibleCondition": {
+        "objectId": "garden_toolbox",
+        "state": "opened"
+      },
+      "placementReview": "Actual imported PNG inspected: visible furniture surface or opened-state cavity; shared-state footpoint y=238 preserved."
+    },
+    {
+      "id": "wooden_bird",
+      "label": "木头小鸟",
+      "supportArtSlotId": "lc6_central_crates",
+      "at": {
+        "x": 147,
+        "y": 848.13671875
+      },
+      "visualWorldSize": {
+        "width": 30,
+        "height": 21.2109375
+      },
+      "clickRadiusWorld": 34,
+      "semanticContext": "北边路旁的小木箱上，一只木头小鸟停在那里。",
+      "clue": "北边路旁的小木箱上，一只木头小鸟停在那里。",
+      "occlusionTargetFraction": 0,
+      "canBeSeenAtInitialZoom": false,
+      "lifeGroupId": "central_tea_food",
+      "placementReview": "Actual generated alpha and contact point; pending built screenshot verification.",
+      "generatedSourceBatch": "ai_image_v10",
+      "generatedSourceId": "wooden_bird_surface_v10",
+      "surfaceContact": {
+        "x": 147,
+        "y": 838
+      },
+      "surfacePlacement": "visible_bottom_on_authored_surface"
+    },
+    {
+      "id": "pink_watering_can",
+      "label": "粉色浇水壶",
+      "supportArtSlotId": "lc6_central_water",
+      "at": {
+        "x": -114,
+        "y": -211.43359375
+      },
+      "visualWorldSize": {
+        "width": 34,
+        "height": 18.1953125
+      },
+      "clickRadiusWorld": 34,
+      "semanticContext": "茶摊旁的洗手台下层，放着一只小水壶。",
+      "clue": "茶摊旁的洗手台下层，放着一只小水壶。",
+      "occlusionTargetFraction": 0,
+      "canBeSeenAtInitialZoom": false,
+      "lifeGroupId": "central_tea_food",
+      "placementReview": "Actual generated alpha and contact point; pending built screenshot verification.",
+      "generatedSourceBatch": "ai_image_v10",
+      "generatedSourceId": "pink_watering_can_surface_v10",
+      "surfaceContact": {
+        "x": -114,
+        "y": -220
+      },
+      "surfacePlacement": "visible_bottom_on_authored_surface"
+    },
+    {
+      "id": "postcard",
+      "label": "风景明信片",
+      "supportArtSlotId": "lc6_mail_notice",
+      "at": {
+        "x": 1038,
+        "y": 492
+      },
+      "visualWorldSize": {
+        "width": 27,
+        "height": 16.34765625
+      },
+      "clickRadiusWorld": 34,
+      "semanticContext": "糖果店旁的公告板下方，贴着一张蓝屋顶的小镇明信片。",
+      "clue": "糖果店旁的公告板下方，贴着一张蓝屋顶的小镇明信片。",
+      "occlusionTargetFraction": 0,
+      "canBeSeenAtInitialZoom": false,
+      "lifeGroupId": "northeast_mail_corner",
+      "placementReview": "v11 refinement: source pixels and final in-game placement reviewed separately.",
+      "generatedSourceBatch": "ai_image_v11",
+      "generatedSourceId": "postcard_refined_v11",
+      "surfaceContact": {
+        "x": 1038,
+        "y": 492
+      },
+      "surfacePlacement": "flat_object_center_on_surface"
+    },
+    {
+      "id": "stamp_roll",
+      "label": "邮票卷",
+      "supportArtSlotId": "lc6_mail_notice",
+      "at": {
+        "x": 1050,
+        "y": 438
+      },
+      "visualWorldSize": {
+        "width": 34,
+        "height": 32
+      },
+      "clickRadiusWorld": 34,
+      "semanticContext": "公告架下的寄信小木盒上，一卷小邮票等着贴上信封。",
+      "clue": "公告架下的寄信小木盒上，一卷小邮票等着贴上信封。",
+      "occlusionTargetFraction": 0,
+      "canBeSeenAtInitialZoom": false,
+      "lifeGroupId": "northeast_mail_corner",
+      "placementReview": "Actual imported PNG inspected: visible furniture surface or opened-state cavity; shared-state footpoint y=238 preserved."
+    },
+    {
+      "id": "tiny_camera",
+      "label": "小相机",
+      "supportArtSlotId": "lc6_fountain_bench",
+      "at": {
+        "x": 945,
+        "y": -18.75
+      },
+      "visualWorldSize": {
+        "width": 32,
+        "height": 19.5
+      },
+      "clickRadiusWorld": 34,
+      "semanticContext": "面馆前的长椅上，拍完风景的小相机歇了一会儿。",
+      "clue": "面馆前的长椅上，拍完风景的小相机歇了一会儿。",
+      "occlusionTargetFraction": 0,
+      "canBeSeenAtInitialZoom": false,
+      "lifeGroupId": "east_fountain_rest",
+      "placementReview": "Actual generated alpha and contact point; pending built screenshot verification.",
+      "generatedSourceBatch": "ai_image_v10",
+      "generatedSourceId": "tiny_camera_surface_v10",
+      "surfaceContact": {
+        "x": 945,
+        "y": -28
+      },
+      "surfacePlacement": "visible_bottom_on_authored_surface"
+    },
+    {
+      "id": "yarn_ball",
+      "label": "毛线球",
+      "supportArtSlotId": "lc6_fountain_crates",
+      "at": {
+        "x": 504,
+        "y": -118.298828125
+      },
+      "visualWorldSize": {
+        "width": 27,
+        "height": 18.24609375
+      },
+      "clickRadiusWorld": 34,
+      "semanticContext": "喷泉旁前侧的小木箱上，毛线球留着一截短线头。",
+      "clue": "喷泉旁前侧的小木箱上，毛线球留着一截短线头。",
+      "occlusionTargetFraction": 0,
+      "canBeSeenAtInitialZoom": false,
+      "lifeGroupId": "east_fountain_rest",
+      "placementReview": "v11 refinement: source pixels and final in-game placement reviewed separately.",
+      "generatedSourceBatch": "ai_image_v11",
+      "generatedSourceId": "yarn_ball_refined_v11",
+      "surfaceContact": {
+        "x": 504,
+        "y": -127
+      },
+      "surfacePlacement": "visible_bottom_on_authored_surface"
+    },
+    {
+      "id": "picnic_cookie",
+      "label": "野餐曲奇",
+      "supportArtSlotId": "lc6_picnic_blanket",
+      "at": {
+        "x": 939,
+        "y": -820
+      },
+      "visualWorldSize": {
+        "width": 26,
+        "height": 24.470588235294116
+      },
+      "clickRadiusWorld": 34,
+      "semanticContext": "玫瑰小屋的野餐毯上，打开篮盖看看今天的小点心。",
+      "clue": "玫瑰小屋的野餐毯上，打开篮盖看看今天的小点心。",
+      "occlusionTargetFraction": 0,
+      "canBeSeenAtInitialZoom": false,
+      "lifeGroupId": "southeast_picnic_yard",
+      "visibleCondition": {
+        "objectId": "picnic_basket",
+        "state": "opened"
+      },
+      "placementReview": "Actual imported PNG inspected: visible furniture surface or opened-state cavity; shared-state footpoint y=238 preserved."
+    },
+    {
+      "id": "laundry_peg",
+      "label": "木衣夹",
+      "supportArtSlotId": "lc6_laundry_line",
+      "at": {
+        "x": 735,
+        "y": -799.6666666666666
+      },
+      "visualWorldSize": {
+        "width": 8,
+        "height": 21.333333333333332
+      },
+      "clickRadiusWorld": 34,
+      "semanticContext": "玫瑰小屋的晾衣绳上，小木夹正夹着衣物的边角。",
+      "clue": "玫瑰小屋的晾衣绳上，小木夹正夹着衣物的边角。",
+      "occlusionTargetFraction": 0,
+      "canBeSeenAtInitialZoom": false,
+      "lifeGroupId": "southeast_picnic_yard",
+      "placementReview": "v11 refinement: source pixels and final in-game placement reviewed separately.",
+      "generatedSourceBatch": "ai_image_v11",
+      "generatedSourceId": "laundry_peg_refined_v11",
+      "surfaceContact": {
+        "x": 735,
+        "y": -810
+      },
+      "surfacePlacement": "visible_bottom_on_authored_surface"
+    },
+    {
+      "id": "fountain_pen",
+      "label": "钢笔",
+      "supportArtSlotId": "lc6_reading_stall",
+      "at": {
+        "x": -788,
+        "y": 484
+      },
+      "visualWorldSize": {
+        "width": 30,
+        "height": 19.5
+      },
+      "clickRadiusWorld": 32,
+      "semanticContext": "书摊上翻开的书旁，压着一支蓝色钢笔。",
+      "clue": "书摊上翻开的书旁，压着一支蓝色钢笔。",
+      "lifeGroupId": "west_reading_garden",
+      "occlusionTargetFraction": 0,
+      "canBeSeenAtInitialZoom": false,
+      "generatedSourceBatch": "ai_image_v9",
+      "placementReview": "Authored candidate; generated alpha placement and runtime visual verification pending."
+    },
+    {
+      "id": "paper_boat",
+      "label": "纸船",
+      "supportArtSlotId": "lc6_fountain",
+      "at": {
+        "x": 650,
+        "y": 5
+      },
+      "visualWorldSize": {
+        "width": 30,
+        "height": 22.5
+      },
+      "clickRadiusWorld": 32,
+      "semanticContext": "喷泉下层的水边，停着一只折好的小纸船。",
+      "clue": "喷泉下层的水边，停着一只折好的小纸船。",
+      "lifeGroupId": "east_fountain_rest",
+      "occlusionTargetFraction": 0,
+      "canBeSeenAtInitialZoom": false,
+      "generatedSourceBatch": "ai_image_v9",
+      "placementReview": "Authored candidate; generated alpha placement and runtime visual verification pending."
+    },
+    {
+      "id": "knit_hat",
+      "label": "绒线帽",
+      "supportArtSlotId": "lc5_bench_front",
+      "at": {
+        "x": -550,
+        "y": -167
+      },
+      "visualWorldSize": {
+        "width": 30,
+        "height": 28.421052631578945
+      },
+      "clickRadiusWorld": 32,
+      "semanticContext": "花店下方的长椅上，留下了一顶浅紫色绒线帽。",
+      "clue": "花店下方的长椅上，留下了一顶浅紫色绒线帽。",
+      "lifeGroupId": "west_reading_garden",
+      "occlusionTargetFraction": 0,
+      "canBeSeenAtInitialZoom": false,
+      "generatedSourceBatch": "ai_image_v9",
+      "placementReview": "Authored candidate; generated alpha placement and runtime visual verification pending."
+    },
+    {
+      "id": "enamel_mug",
+      "label": "搪瓷杯",
+      "supportArtSlotId": "lc6_picnic_blanket",
+      "at": {
+        "x": 909,
+        "y": -888
+      },
+      "visualWorldSize": {
+        "width": 25,
+        "height": 25
+      },
+      "clickRadiusWorld": 32,
+      "semanticContext": "玫瑰小屋前的野餐垫边，放着一只绿色搪瓷杯。",
+      "clue": "玫瑰小屋前的野餐垫边，放着一只绿色搪瓷杯。",
+      "lifeGroupId": "southeast_picnic_yard",
+      "occlusionTargetFraction": 0,
+      "canBeSeenAtInitialZoom": false,
+      "generatedSourceBatch": "ai_image_v9",
+      "placementReview": "Authored candidate; generated alpha placement and runtime visual verification pending."
+    },
+    {
+      "id": "thread_spool",
+      "label": "线轴",
+      "supportArtSlotId": "lc9_craft_table",
+      "at": {
+        "x": -905,
+        "y": -228
+      },
+      "visualWorldSize": {
+        "width": 27,
+        "height": 28.58823529411765
+      },
+      "clickRadiusWorld": 32,
+      "semanticContext": "花店南边的小桌上，蓝线还没收好。",
+      "clue": "花店南边的小桌上，蓝线还没收好。",
+      "lifeGroupId": "west_gardening_corner",
+      "occlusionTargetFraction": 0,
+      "canBeSeenAtInitialZoom": false,
+      "generatedSourceBatch": "ai_image_v9",
+      "placementReview": "Authored candidate; generated alpha placement and runtime visual verification pending."
+    },
+    {
+      "id": "brass_key",
+      "label": "小铜钥匙",
+      "supportArtSlotId": "lc9_craft_table",
+      "at": {
+        "x": -805,
+        "y": -213
+      },
+      "visualWorldSize": {
+        "width": 28,
+        "height": 18.2
+      },
+      "clickRadiusWorld": 32,
+      "semanticContext": "花店南边的手作台上，看看蓝色收纳盒。",
+      "clue": "花店南边的手作台上，看看蓝色收纳盒。",
+      "lifeGroupId": "west_gardening_corner",
+      "occlusionTargetFraction": 0,
+      "canBeSeenAtInitialZoom": false,
+      "generatedSourceBatch": "ai_image_v9",
+      "placementReview": "Authored candidate; generated alpha placement and runtime visual verification pending.",
+      "visibleCondition": {
+        "objectId": "trinket_box",
+        "state": "opened"
+      }
+    },
+    {
+      "id": "lemonade_bottle",
+      "label": "柠檬汽水",
+      "supportArtSlotId": "lc9_refreshment_cart",
+      "at": {
+        "x": 520,
+        "y": -431
+      },
+      "visualWorldSize": {
+        "width": 26,
+        "height": 38.13333333333333
+      },
+      "clickRadiusWorld": 32,
+      "semanticContext": "东侧住宅上方的小茶点车上，有瓶还没开封的柠檬汽水。",
+      "clue": "东侧住宅上方的小茶点车上，有瓶还没开封的柠檬汽水。",
+      "lifeGroupId": "east_fountain_rest",
+      "occlusionTargetFraction": 0,
+      "canBeSeenAtInitialZoom": false,
+      "generatedSourceBatch": "ai_image_v9",
+      "placementReview": "Authored candidate; generated alpha placement and runtime visual verification pending."
+    },
+    {
+      "id": "lemon_candy",
+      "label": "柠檬糖",
+      "supportArtSlotId": "lc9_refreshment_cart",
+      "at": {
+        "x": 605,
+        "y": -422
+      },
+      "visualWorldSize": {
+        "width": 28,
+        "height": 18.900000000000002
+      },
+      "clickRadiusWorld": 32,
+      "semanticContext": "小茶点车上的圆铁盒里，留着一颗柠檬糖。",
+      "clue": "小茶点车上的圆铁盒里，留着一颗柠檬糖。",
+      "lifeGroupId": "east_fountain_rest",
+      "occlusionTargetFraction": 0,
+      "canBeSeenAtInitialZoom": false,
+      "generatedSourceBatch": "ai_image_v9",
+      "placementReview": "Authored candidate; generated alpha placement and runtime visual verification pending.",
+      "visibleCondition": {
+        "objectId": "biscuit_tin",
+        "state": "opened"
+      }
     }
   ],
   "reviewGates": {
     "atNormalZoom": [
-      "Vendor and approaching customer appear in the initial portrait view.",
-      "At least three distinct activities are visible without a tap.",
-      "The customer approach and service pad contain no prop footprint."
+      "Smaller shops, tea kiosk and food/rest pockets share the initial portrait view.",
+      "At least four direct target silhouettes are recognizable above the HUD.",
+      "West garden and east courtyard can be reached by dragging without exposing outer map edges."
     ],
     "atDetailZoom": [
-      "Tea handoff is legible at a 444x960 viewport.",
-      "Whistle stays recognizable and tappable among counter goods.",
-      "Feet remain at world anchor during head and wing motion."
+      "Each target rests on its named generated support, not an obsolete foreground fragment.",
+      "Tea vendor and customer face across a reachable work surface.",
+      "Generated feet stay registered during motion.",
+      "All twelve targets are placed on actual opaque generated support pixels; opened reveal targets render above their state cutouts."
     ],
     "tenSecondNoInput": [
-      "Messenger reaches the counter, pauses for a real handoff, then leaves.",
-      "Shopper follows a separate route with pauses.",
-      "No character slides through counter, cart, planter, or tree trunk."
+      "Tea regular reaches the kiosk and starts the repeatable tea event.",
+      "Postal chicken keeps a single northward trip; other paths traverse adjacent authored waypoints.",
+      "Residents do not cross counter, furniture, cart, or water-point footprints."
     ],
-    "status": "12 targets and 3 reveals; authored refinement pending runtime and player review."
+    "status": "V9 authored candidate, 65 scene slots, 11 buildings, 16 residents, 32 targets, 8 reveals. Actual PNG placement and runtime verification pending."
   },
   "interactiveSlots": [
     {
       "id": "parcel_chest",
-      "label": "打开包裹箱",
-      "supportArtSlotId": "lc_south_post_house_back",
+      "label": "包裹箱",
+      "supportArtSlotId": "lc5_crates_front",
       "at": {
-        "x": -430,
-        "y": -835
+        "x": -235,
+        "y": -862
       },
       "visualWorldSize": {
-        "width": 100,
-        "height": 88
+        "width": 82,
+        "height": 78
       },
-      "depthY": -886
+      "depthY": -900.5,
+      "openForegroundStart": 0.57421875
     },
     {
       "id": "flower_leaves",
-      "label": "拨开花叶",
-      "supportArtSlotId": "lc_curb_flower_display",
+      "label": "花叶",
+      "supportArtSlotId": "lc5_curb_flower_display",
       "at": {
-        "x": -337,
-        "y": -251
+        "x": -230,
+        "y": -252
       },
       "visualWorldSize": {
         "width": 76,
         "height": 85
       },
-      "depthY": -311
+      "depthY": -335.5
     },
     {
       "id": "bun_lid",
-      "label": "掀开盖布",
-      "supportArtSlotId": "lc_east_bun_cart_back",
+      "label": "蒸笼盖布",
+      "supportArtSlotId": "lc5_bun_cart_back",
       "at": {
-        "x": 25,
-        "y": 586
+        "x": 170,
+        "y": 230
       },
       "visualWorldSize": {
-        "width": 76,
-        "height": 62
+        "width": 70,
+        "height": 54
       },
-      "depthY": 469
+      "depthY": 169.5
+    },
+    {
+      "id": "book_satchel",
+      "label": "读书包",
+      "supportArtSlotId": "lc6_reading_stall",
+      "at": {
+        "x": -873,
+        "y": 515
+      },
+      "visualWorldSize": {
+        "width": 74,
+        "height": 76
+      },
+      "depthY": 404.5,
+      "openForegroundStart": 0.6328125
+    },
+    {
+      "id": "garden_toolbox",
+      "label": "园艺工具箱",
+      "supportArtSlotId": "lc6_garden_workbench",
+      "at": {
+        "x": -925,
+        "y": -806
+      },
+      "visualWorldSize": {
+        "width": 86,
+        "height": 74
+      },
+      "depthY": -935.5,
+      "openForegroundStart": 0.68359375
+    },
+    {
+      "id": "picnic_basket",
+      "label": "野餐篮",
+      "supportArtSlotId": "lc6_picnic_blanket",
+      "at": {
+        "x": 954,
+        "y": -823
+      },
+      "visualWorldSize": {
+        "width": 88,
+        "height": 72
+      },
+      "depthY": -910.5,
+      "openForegroundStart": 0.5859375
+    },
+    {
+      "id": "biscuit_tin",
+      "label": "点心铁盒",
+      "supportArtSlotId": "lc9_refreshment_cart",
+      "at": {
+        "x": 605,
+        "y": -411
+      },
+      "visualWorldSize": {
+        "width": 80,
+        "height": 80
+      },
+      "depthY": -520.5,
+      "generatedSourceBatch": "ai_image_v9",
+      "openForegroundStart": 0.69140625
+    },
+    {
+      "id": "trinket_box",
+      "label": "蓝色收纳盒",
+      "supportArtSlotId": "lc9_craft_table",
+      "at": {
+        "x": -805,
+        "y": -202
+      },
+      "visualWorldSize": {
+        "width": 82,
+        "height": 82
+      },
+      "depthY": -325.5,
+      "generatedSourceBatch": "ai_image_v9",
+      "openForegroundStart": 0.68359375
     }
   ],
-  "nextCityId": "living_city_garden_market_02"
+  "nextCityId": "living_city_garden_market_02",
+  "layoutVersion": "street_polish_v9",
+  "npcClues": {
+    "tea_vendor": [
+      "刚泡好的，\n尝一口？",
+      "不急，茶还热着。\n慢慢逛吧。"
+    ],
+    "tea_regular": [
+      "喝完这杯我就走。\n嗯，再坐一会儿。",
+      "这张椅子刚好有树荫，\n我一坐就不想起了。"
+    ],
+    "messenger_customer": [
+      "总有些问候，\n要走很远的路。",
+      "今天的信装得满满的，\n都是让人高兴的消息。"
+    ],
+    "crossing_shopper": [
+      "只是出来逛逛，\n篮子却又装满了。",
+      "我得慢点走，\n别把新买的点心压坏了。"
+    ],
+    "chestnut_seller": [
+      "刚出炉的栗子最香，\n小心烫着翅膀。",
+      "一锅还没卖完，\n街坊就惦记着下一锅了。"
+    ],
+    "lantern_watcher": [
+      "傍晚灯一亮，\n我总舍不得回家。",
+      "街坊都说我爱闲逛。\n这条街怎么逛也不腻。"
+    ],
+    "flower_buyer": [
+      "你闻闻，\n像不像刚下过雨？",
+      "这束想放在窗边，\n早上起来就能看见。"
+    ],
+    "lane_child": [
+      "嘿，你也在散步呀！",
+      "我刚走到街角，\n又想回来看看。"
+    ],
+    "flower_shopkeeper": [
+      "今天的花开得真好，\n我有点舍不得卖。",
+      "街坊每次来买花，\n都要顺便聊上好一会儿。"
+    ],
+    "book_shopkeeper": [
+      "这本书我读了好多次，\n每次都舍不得合上。",
+      "你慢慢翻，\n我还要再整理一会儿书架。"
+    ],
+    "sweet_shopkeeper": [
+      "今天的糖有点像云朵，\n你喜欢什么味道？",
+      "小朋友们来过一趟，\n我又得补满一罐糖了。"
+    ],
+    "noodle_shopkeeper": [
+      "汤还在咕嘟咕嘟，\n香气已经跑到街上了。",
+      "今天的汤熬得久，\n先别急着喝，烫着呢。"
+    ],
+    "garden_neighbor": [
+      "小芽今天又长高了，\n我每天都要来看几遍。",
+      "这盆花是邻居送的，\n我可得好好养着。"
+    ],
+    "laundry_neighbor": [
+      "好不容易放晴了，\n趁现在把衣裳晾出来。",
+      "这风真好，\n衣裳一会儿就能干了。"
+    ],
+    "strolling_reader": [
+      "我把这本看完就回家。\n嗯……再看一页。",
+      "刚读到好玩的地方，\n让我笑了一路。"
+    ],
+    "visiting_child": [
+      "这条街真长呀！\n我想把每家店都逛一遍。",
+      "这里的人都认得彼此，\n下次我还想来。"
+    ]
+  },
+  "lifeGroups": [
+    {
+      "id": "west_reading_garden",
+      "name": "西北读书花园",
+      "at": {
+        "x": -785,
+        "y": 420
+      },
+      "bounds": {
+        "left": -1150,
+        "bottom": -125,
+        "right": -500,
+        "top": 935
+      },
+      "artSlotIds": [
+        "lc6_reading_stall",
+        "lc6_reading_tree",
+        "lc7_book_shop_back",
+        "lc7_flower_shop_back",
+        "lc5_west_garden_bench_front",
+        "lc5_west_garden_flowers_front",
+        "lc5_west_garden_tree_front",
+        "lc8_books_courtyard_ground",
+        "lc8_flowers_courtyard_ground",
+        "lc8_books_flower_border",
+        "lc8_flowers_flower_border"
+      ],
+      "targetIds": [
+        "reading_glasses",
+        "bookmark"
+      ],
+      "purpose": "Book browsing, a seat, tea and fruit under trees.",
+      "residentIds": [
+        "flower_shopkeeper",
+        "book_shopkeeper",
+        "strolling_reader",
+        "visiting_child"
+      ]
+    },
+    {
+      "id": "west_gardening_corner",
+      "name": "西南园艺角",
+      "at": {
+        "x": -850,
+        "y": -725
+      },
+      "bounds": {
+        "left": -1140,
+        "bottom": -1005,
+        "right": -540,
+        "top": -280
+      },
+      "artSlotIds": [
+        "lc6_garden_workbench",
+        "lc6_garden_tree",
+        "lc6_garden_flowers",
+        "lc7_sage_house_back",
+        "lc8_sage_courtyard_ground",
+        "lc8_sage_fence",
+        "lc9_craft_table"
+      ],
+      "targetIds": [
+        "garden_glove",
+        "seedling_spade"
+      ],
+      "purpose": "Potting work, seed tools, flowers, water and supplies.",
+      "residentIds": [
+        "garden_neighbor"
+      ]
+    },
+    {
+      "id": "central_tea_food",
+      "name": "中央茶食街",
+      "at": {
+        "x": -20,
+        "y": 190
+      },
+      "bounds": {
+        "left": -620,
+        "bottom": -490,
+        "right": 510,
+        "top": 990
+      },
+      "artSlotIds": [
+        "lc6_central_crates",
+        "lc6_central_table",
+        "lc6_central_water",
+        "lc5_west_storefront_back",
+        "lc5_east_storefront_back",
+        "lc8_tea_courtyard_ground",
+        "lc8_inner_lane_flower_border",
+        "lc8_tea_shrub"
+      ],
+      "targetIds": [
+        "wooden_bird",
+        "pink_watering_can"
+      ],
+      "purpose": "Tea exchange, snack cart, refill and street-edge goods.",
+      "residentIds": [
+        "tea_vendor",
+        "tea_regular",
+        "chestnut_seller",
+        "lantern_watcher",
+        "lane_child"
+      ]
+    },
+    {
+      "id": "northeast_mail_corner",
+      "name": "东北公告邮箱角",
+      "at": {
+        "x": 845,
+        "y": 610
+      },
+      "bounds": {
+        "left": 560,
+        "bottom": 225,
+        "right": 1130,
+        "top": 945
+      },
+      "artSlotIds": [
+        "lc6_mail_notice",
+        "lc6_mail_tree",
+        "lc6_mail_flowers",
+        "lc7_sweet_shop_back",
+        "lc8_sweets_courtyard_ground",
+        "lc8_sweets_shrub"
+      ],
+      "targetIds": [
+        "postcard",
+        "stamp_roll"
+      ],
+      "purpose": "Notices, postcard delivery, parcel sorting and a waiting seat.",
+      "residentIds": [
+        "sweet_shopkeeper"
+      ]
+    },
+    {
+      "id": "east_fountain_rest",
+      "name": "东中喷泉休憩",
+      "at": {
+        "x": 830,
+        "y": 65
+      },
+      "bounds": {
+        "left": 475,
+        "bottom": -440,
+        "right": 1130,
+        "top": 455
+      },
+      "artSlotIds": [
+        "lc6_fountain",
+        "lc6_fountain_bench",
+        "lc6_fountain_crates",
+        "lc7_noodle_shop_back",
+        "lc5_east_courtyard_tree_front",
+        "lc5_east_courtyard_patio_front",
+        "lc5_east_courtyard_water_front",
+        "lc8_noodles_courtyard_ground",
+        "lc9_refreshment_cart"
+      ],
+      "targetIds": [
+        "tiny_camera",
+        "yarn_ball"
+      ],
+      "purpose": "Fountain, shaded seats, refreshment and visitors.",
+      "residentIds": [
+        "noodle_shopkeeper"
+      ]
+    },
+    {
+      "id": "southeast_picnic_yard",
+      "name": "东南晾衣野餐院",
+      "at": {
+        "x": 840,
+        "y": -760
+      },
+      "bounds": {
+        "left": 550,
+        "bottom": -1015,
+        "right": 1130,
+        "top": -380
+      },
+      "artSlotIds": [
+        "lc6_laundry_line",
+        "lc6_picnic_blanket",
+        "lc6_picnic_tree",
+        "lc6_picnic_bench",
+        "lc7_rose_house_back",
+        "lc8_rose_courtyard_ground",
+        "lc8_rose_fence"
+      ],
+      "targetIds": [
+        "picnic_cookie",
+        "laundry_peg"
+      ],
+      "purpose": "Laundry, picnic food, a basket and a garden bench.",
+      "residentIds": [
+        "laundry_neighbor"
+      ]
+    }
+  ],
+  "sceneDiscoveries": [
+    {
+      "id": "reading_corner",
+      "supportArtSlotId": "lc6_reading_stall",
+      "at": {
+        "x": -830,
+        "y": 549
+      },
+      "clickRadiusWorld": 40,
+      "message": "书页被风翻过一页，茶还是暖的。"
+    },
+    {
+      "id": "garden_work_corner",
+      "supportArtSlotId": "lc6_garden_workbench",
+      "at": {
+        "x": -995,
+        "y": -805
+      },
+      "clickRadiusWorld": 40,
+      "message": "泥土松松的，小芽今天又长高了一点。"
+    },
+    {
+      "id": "fountain_rest_stop",
+      "supportArtSlotId": "lc6_fountain",
+      "at": {
+        "x": 590,
+        "y": 35
+      },
+      "clickRadiusWorld": 42,
+      "message": "水声落在石边，坐一会儿也很好。"
+    },
+    {
+      "id": "snack_cart_pause",
+      "supportArtSlotId": "lc9_refreshment_cart",
+      "at": {
+        "x": 565,
+        "y": -495
+      },
+      "clickRadiusWorld": 30,
+      "message": "街坊留了些茶点，\n路过就歇歇脚吧。"
+    },
+    {
+      "id": "craft_table_pause",
+      "supportArtSlotId": "lc9_craft_table",
+      "at": {
+        "x": -850,
+        "y": -292
+      },
+      "clickRadiusWorld": 30,
+      "message": "布料刚裁了一半，\n主人一会儿就回来。"
+    }
+  ],
+  "residentRequests": [
+    {
+      "id": "postcard_delivery",
+      "npcId": "messenger_customer",
+      "requiredTargetId": "postcard",
+      "waitingMessage": "我有张寄给老朋友的明信片，\n好像落在街上了。",
+      "completionMessage": "是这张！谢谢你。\n老朋友一定会喜欢这里。"
+    }
+  ],
+  "contentPlan": {
+    "productionId": "ai_image_v6",
+    "generatedFurnitureSources": 6,
+    "reusedV5Placements": 30,
+    "newTargetIds": [
+      "reading_glasses",
+      "bookmark",
+      "garden_glove",
+      "seedling_spade",
+      "wooden_bird",
+      "pink_watering_can",
+      "postcard",
+      "stamp_roll",
+      "tiny_camera",
+      "yarn_ball",
+      "picnic_cookie",
+      "laundry_peg"
+    ],
+    "newRevealIds": [
+      "book_satchel",
+      "garden_toolbox",
+      "picnic_basket"
+    ],
+    "note": "Six unique v7 facades and eight independent v7 residents replace repeated-furniture density. Existing targets, reveal IDs and tea event stay stable. Text is handed to life_events after layout freeze.",
+    "supportSurfaceReview": "Actual imported PNGs inspected; three independent reveal bases use shared pixel footpoint y=238; runtime screenshots pending.",
+    "initialViewRevision": "North roadside produce and parcel crates repositioned after complete 48-object/12-reveal runtime baseline, final first-chapter follow-up required.",
+    "currentProductionId": "ai_image_v9",
+    "newFacadeSourceIds": [
+      "shop_books_v7",
+      "shop_flower_v7",
+      "shop_sweets_v7",
+      "shop_noodles_v7",
+      "house_sage_v7",
+      "house_rose_v7"
+    ],
+    "newResidentIds": [
+      "flower_shopkeeper",
+      "book_shopkeeper",
+      "sweet_shopkeeper",
+      "noodle_shopkeeper",
+      "garden_neighbor",
+      "laundry_neighbor",
+      "strolling_reader",
+      "visiting_child"
+    ],
+    "retiredDuplicatePlacementIds": [
+      "lc6_reading_bench",
+      "lc6_reading_table",
+      "lc6_reading_flowers",
+      "lc6_reading_produce",
+      "lc6_garden_crates",
+      "lc6_garden_produce",
+      "lc6_garden_water",
+      "lc6_central_produce",
+      "lc6_central_flowers",
+      "lc6_central_bench",
+      "lc6_mail_bench",
+      "lc6_mail_crates",
+      "lc6_mail_table",
+      "lc6_fountain_flowers",
+      "lc6_fountain_produce",
+      "lc6_fountain_table",
+      "lc6_picnic_produce",
+      "lc6_picnic_flowers"
+    ],
+    "scenePlacementCount": 65,
+    "buildingCount": 11,
+    "residentCount": 16,
+    "newCourtyardSourceIds": [
+      "courtyard_books_v8",
+      "courtyard_flowers_v8",
+      "courtyard_tea_v8",
+      "courtyard_sweets_v8",
+      "courtyard_noodles_v8",
+      "courtyard_sage_v8",
+      "courtyard_rose_v8"
+    ],
+    "lowLandscapeSourceIds": [
+      "flower_border_v8",
+      "shrub_clump_v8",
+      "low_garden_fence_v8"
+    ],
+    "courtyardPlacementCount": 7,
+    "lowLandscapePlacementCount": 7,
+    "courtyardReview": "Authored placement only; generated source, final PNG Alpha, and runtime visual review pending.",
+    "targetCount": 32,
+    "revealCount": 8,
+    "renewedOriginalResidents": [
+      "messenger_customer",
+      "crossing_shopper",
+      "chestnut_seller",
+      "lantern_watcher",
+      "flower_buyer",
+      "lane_child"
+    ]
+  },
+  "stagingRevision": "existing_neighborhood_v13"
 }

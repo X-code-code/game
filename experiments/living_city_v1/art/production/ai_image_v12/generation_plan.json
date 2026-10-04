@@ -1,0 +1,258 @@
+{
+  "batchId": "ai_image_v12",
+  "scope": "existing_scene_resolution_and_existing_resident_motion_only",
+  "jobs": [
+    {
+      "id": "chicken_messenger_customer_motion_v12",
+      "actor": "messenger_customer",
+      "stage": "character",
+      "columns": 4,
+      "rows": 5,
+      "moving": true,
+      "vertical": true,
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/messenger_customer/chicken_messenger_customer_v9_frame_01.png",
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/messenger_customer/chicken_messenger_customer_v9_frame_05.png"
+      ],
+      "prompt": "Generate a production animation sprite sheet for this ONE EXISTING chicken resident. Reference 1 is the exact character identity, outfit, body proportion and hand-drawn style to preserve. Reference 2 is the exact existing job gesture and prop to animate; keep its identity. No new character or game content. Cozy 2D cartoon, cream feathers, same cap/scarf/clothing/props as references, soft low saturation colours, clean fine warm-brown outlines and restrained flat shading. No glossy lighting, extra clothing or realistic feathers.\nExactly FOUR columns and 5 rows, 20 complete full-body frames, evenly spaced cells. EVERY cell is the SAME character at the SAME scale, feet near an identical baseline inside each cell. Give each cell 15% transparent margin on all sides and generous fully empty gutters. Full head, wings, props, and both feet must remain inside each cell.\nROW 1: four genuine expressive idle poses: 1 relaxed open eyes and small smile; 2 eyes half closed starting a blink; 3 fully closed eyelids and gentle happy cheeks; 4 open eyes looking slightly up with a curious head tilt and friendly beak smile. Both feet on the same baseline.\nROW 2: FOUR ordered RIGHT-facing SIDE-VIEW WALK phases: 1 left foot forward contacting ground and right foot behind; 2 body passes over left planted foot, right foot bending and swinging through; 3 right foot forward contacting ground and left foot behind; 4 body passes over right planted foot, left foot bending and swinging through. Four different leg silhouettes, both legs anatomically clear, slight head/body bob, never merely four duplicates.\nROW 3: FOUR NORTH walking phases, true BACK VIEW, back of head/clothes/tail, NO visible eyes or beak. Left contact, right foot passing, right contact, left foot passing.\nROW 4: FOUR SOUTH walking phases, true FRONT VIEW, both eyes visible. Left contact, right foot passing, right contact, left foot passing.\nROW 5: FOUR stages of the SAME job/gesture shown in reference 2: preparation, movement halfway, full gesture with an engaged happy expression, relaxed finish. Keep exactly the same prop and role. Do not invent a new activity or object.\nOnly character animation frames, genuine transparent alpha background. No grid lines, labels, text, ground, shadow, glow or border. Preserve small recognizable expressions at mobile scale. Wings remain feather wings, never human fingers. Clear intermediate poses, not two repeated drawings. Sprite sheet will be mechanically cropped and uniformly registered without repainting."
+    },
+    {
+      "id": "chicken_tea_vendor_motion_v12",
+      "actor": "tea_vendor",
+      "stage": "character",
+      "columns": 4,
+      "rows": 2,
+      "moving": false,
+      "vertical": false,
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_v8_frame_01.png",
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_vendor/chicken_tea_vendor_v8_frame_02.png"
+      ],
+      "prompt": "Generate a production animation sprite sheet for this ONE EXISTING chicken resident. Reference 1 is the exact character identity, outfit, body proportion and hand-drawn style to preserve. Reference 2 is the exact existing job gesture and prop to animate; keep its identity. No new character or game content. Cozy 2D cartoon, cream feathers, same cap/scarf/clothing/props as references, soft low saturation colours, clean fine warm-brown outlines and restrained flat shading. No glossy lighting, extra clothing or realistic feathers.\nExactly FOUR columns and 2 rows, 8 complete full-body frames, evenly spaced cells. EVERY cell is the SAME character at the SAME scale, feet near an identical baseline inside each cell. Give each cell 15% transparent margin on all sides and generous fully empty gutters. Full head, wings, props, and both feet must remain inside each cell.\nROW 1: four genuine expressive idle poses: 1 relaxed open eyes and small smile; 2 eyes half closed starting a blink; 3 fully closed eyelids and gentle happy cheeks; 4 open eyes looking slightly up with a curious head tilt and friendly beak smile. Both feet on the same baseline.\nROW 2: FOUR stages of the SAME job/gesture shown in reference 2: preparation, movement halfway, full gesture with an engaged happy expression, relaxed finish. Keep exactly the same prop and role. Do not invent a new activity or object.\nOnly character animation frames, genuine transparent alpha background. No grid lines, labels, text, ground, shadow, glow or border. Preserve small recognizable expressions at mobile scale. Wings remain feather wings, never human fingers. Clear intermediate poses, not two repeated drawings. Sprite sheet will be mechanically cropped and uniformly registered without repainting."
+    },
+    {
+      "id": "chicken_crossing_shopper_motion_v12",
+      "actor": "crossing_shopper",
+      "stage": "character",
+      "columns": 4,
+      "rows": 5,
+      "moving": true,
+      "vertical": true,
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/crossing_shopper/chicken_crossing_shopper_v9_frame_01.png",
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/crossing_shopper/chicken_crossing_shopper_v9_frame_05.png"
+      ],
+      "prompt": "Generate a production animation sprite sheet for this ONE EXISTING chicken resident. Reference 1 is the exact character identity, outfit, body proportion and hand-drawn style to preserve. Reference 2 is the exact existing job gesture and prop to animate; keep its identity. No new character or game content. Cozy 2D cartoon, cream feathers, same cap/scarf/clothing/props as references, soft low saturation colours, clean fine warm-brown outlines and restrained flat shading. No glossy lighting, extra clothing or realistic feathers.\nExactly FOUR columns and 5 rows, 20 complete full-body frames, evenly spaced cells. EVERY cell is the SAME character at the SAME scale, feet near an identical baseline inside each cell. Give each cell 15% transparent margin on all sides and generous fully empty gutters. Full head, wings, props, and both feet must remain inside each cell.\nROW 1: four genuine expressive idle poses: 1 relaxed open eyes and small smile; 2 eyes half closed starting a blink; 3 fully closed eyelids and gentle happy cheeks; 4 open eyes looking slightly up with a curious head tilt and friendly beak smile. Both feet on the same baseline.\nROW 2: FOUR ordered RIGHT-facing SIDE-VIEW WALK phases: 1 left foot forward contacting ground and right foot behind; 2 body passes over left planted foot, right foot bending and swinging through; 3 right foot forward contacting ground and left foot behind; 4 body passes over right planted foot, left foot bending and swinging through. Four different leg silhouettes, both legs anatomically clear, slight head/body bob, never merely four duplicates.\nROW 3: FOUR NORTH walking phases, true BACK VIEW, back of head/clothes/tail, NO visible eyes or beak. Left contact, right foot passing, right contact, left foot passing.\nROW 4: FOUR SOUTH walking phases, true FRONT VIEW, both eyes visible. Left contact, right foot passing, right contact, left foot passing.\nROW 5: FOUR stages of the SAME job/gesture shown in reference 2: preparation, movement halfway, full gesture with an engaged happy expression, relaxed finish. Keep exactly the same prop and role. Do not invent a new activity or object.\nOnly character animation frames, genuine transparent alpha background. No grid lines, labels, text, ground, shadow, glow or border. Preserve small recognizable expressions at mobile scale. Wings remain feather wings, never human fingers. Clear intermediate poses, not two repeated drawings. Sprite sheet will be mechanically cropped and uniformly registered without repainting."
+    },
+    {
+      "id": "chicken_chestnut_seller_motion_v12",
+      "actor": "chestnut_seller",
+      "stage": "character",
+      "columns": 4,
+      "rows": 2,
+      "moving": false,
+      "vertical": false,
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/chestnut_seller/chicken_chestnut_seller_v9_frame_01.png",
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/chestnut_seller/chicken_chestnut_seller_v9_frame_02.png"
+      ],
+      "prompt": "Generate a production animation sprite sheet for this ONE EXISTING chicken resident. Reference 1 is the exact character identity, outfit, body proportion and hand-drawn style to preserve. Reference 2 is the exact existing job gesture and prop to animate; keep its identity. No new character or game content. Cozy 2D cartoon, cream feathers, same cap/scarf/clothing/props as references, soft low saturation colours, clean fine warm-brown outlines and restrained flat shading. No glossy lighting, extra clothing or realistic feathers.\nExactly FOUR columns and 2 rows, 8 complete full-body frames, evenly spaced cells. EVERY cell is the SAME character at the SAME scale, feet near an identical baseline inside each cell. Give each cell 15% transparent margin on all sides and generous fully empty gutters. Full head, wings, props, and both feet must remain inside each cell.\nROW 1: four genuine expressive idle poses: 1 relaxed open eyes and small smile; 2 eyes half closed starting a blink; 3 fully closed eyelids and gentle happy cheeks; 4 open eyes looking slightly up with a curious head tilt and friendly beak smile. Both feet on the same baseline.\nROW 2: FOUR stages of the SAME job/gesture shown in reference 2: preparation, movement halfway, full gesture with an engaged happy expression, relaxed finish. Keep exactly the same prop and role. Do not invent a new activity or object.\nOnly character animation frames, genuine transparent alpha background. No grid lines, labels, text, ground, shadow, glow or border. Preserve small recognizable expressions at mobile scale. Wings remain feather wings, never human fingers. Clear intermediate poses, not two repeated drawings. Sprite sheet will be mechanically cropped and uniformly registered without repainting."
+    },
+    {
+      "id": "chicken_lantern_watcher_motion_v12",
+      "actor": "lantern_watcher",
+      "stage": "character",
+      "columns": 4,
+      "rows": 2,
+      "moving": false,
+      "vertical": false,
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/lantern_watcher/chicken_lantern_watcher_v9_frame_01.png",
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/lantern_watcher/chicken_lantern_watcher_v9_frame_02.png"
+      ],
+      "prompt": "Generate a production animation sprite sheet for this ONE EXISTING chicken resident. Reference 1 is the exact character identity, outfit, body proportion and hand-drawn style to preserve. Reference 2 is the exact existing job gesture and prop to animate; keep its identity. No new character or game content. Cozy 2D cartoon, cream feathers, same cap/scarf/clothing/props as references, soft low saturation colours, clean fine warm-brown outlines and restrained flat shading. No glossy lighting, extra clothing or realistic feathers.\nExactly FOUR columns and 2 rows, 8 complete full-body frames, evenly spaced cells. EVERY cell is the SAME character at the SAME scale, feet near an identical baseline inside each cell. Give each cell 15% transparent margin on all sides and generous fully empty gutters. Full head, wings, props, and both feet must remain inside each cell.\nROW 1: four genuine expressive idle poses: 1 relaxed open eyes and small smile; 2 eyes half closed starting a blink; 3 fully closed eyelids and gentle happy cheeks; 4 open eyes looking slightly up with a curious head tilt and friendly beak smile. Both feet on the same baseline.\nROW 2: FOUR stages of the SAME job/gesture shown in reference 2: preparation, movement halfway, full gesture with an engaged happy expression, relaxed finish. Keep exactly the same prop and role. Do not invent a new activity or object.\nOnly character animation frames, genuine transparent alpha background. No grid lines, labels, text, ground, shadow, glow or border. Preserve small recognizable expressions at mobile scale. Wings remain feather wings, never human fingers. Clear intermediate poses, not two repeated drawings. Sprite sheet will be mechanically cropped and uniformly registered without repainting."
+    },
+    {
+      "id": "chicken_tea_regular_motion_v12",
+      "actor": "tea_regular",
+      "stage": "character",
+      "columns": 4,
+      "rows": 5,
+      "moving": true,
+      "vertical": true,
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_regular/chicken_tea_regular_v8_frame_01.png",
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/tea_regular/chicken_tea_regular_v8_frame_05.png"
+      ],
+      "prompt": "Generate a production animation sprite sheet for this ONE EXISTING chicken resident. Reference 1 is the exact character identity, outfit, body proportion and hand-drawn style to preserve. Reference 2 is the exact existing job gesture and prop to animate; keep its identity. No new character or game content. Cozy 2D cartoon, cream feathers, same cap/scarf/clothing/props as references, soft low saturation colours, clean fine warm-brown outlines and restrained flat shading. No glossy lighting, extra clothing or realistic feathers.\nExactly FOUR columns and 5 rows, 20 complete full-body frames, evenly spaced cells. EVERY cell is the SAME character at the SAME scale, feet near an identical baseline inside each cell. Give each cell 15% transparent margin on all sides and generous fully empty gutters. Full head, wings, props, and both feet must remain inside each cell.\nROW 1: four genuine expressive idle poses: 1 relaxed open eyes and small smile; 2 eyes half closed starting a blink; 3 fully closed eyelids and gentle happy cheeks; 4 open eyes looking slightly up with a curious head tilt and friendly beak smile. Both feet on the same baseline.\nROW 2: FOUR ordered RIGHT-facing SIDE-VIEW WALK phases: 1 left foot forward contacting ground and right foot behind; 2 body passes over left planted foot, right foot bending and swinging through; 3 right foot forward contacting ground and left foot behind; 4 body passes over right planted foot, left foot bending and swinging through. Four different leg silhouettes, both legs anatomically clear, slight head/body bob, never merely four duplicates.\nROW 3: FOUR NORTH walking phases, true BACK VIEW, back of head/clothes/tail, NO visible eyes or beak. Left contact, right foot passing, right contact, left foot passing.\nROW 4: FOUR SOUTH walking phases, true FRONT VIEW, both eyes visible. Left contact, right foot passing, right contact, left foot passing.\nROW 5: FOUR stages of the SAME job/gesture shown in reference 2: preparation, movement halfway, full gesture with an engaged happy expression, relaxed finish. Keep exactly the same prop and role. Do not invent a new activity or object.\nOnly character animation frames, genuine transparent alpha background. No grid lines, labels, text, ground, shadow, glow or border. Preserve small recognizable expressions at mobile scale. Wings remain feather wings, never human fingers. Clear intermediate poses, not two repeated drawings. Sprite sheet will be mechanically cropped and uniformly registered without repainting."
+    },
+    {
+      "id": "chicken_flower_buyer_motion_v12",
+      "actor": "flower_buyer",
+      "stage": "character",
+      "columns": 4,
+      "rows": 5,
+      "moving": true,
+      "vertical": true,
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/flower_buyer/chicken_flower_buyer_v9_frame_01.png",
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/flower_buyer/chicken_flower_buyer_v9_frame_05.png"
+      ],
+      "prompt": "Generate a production animation sprite sheet for this ONE EXISTING chicken resident. Reference 1 is the exact character identity, outfit, body proportion and hand-drawn style to preserve. Reference 2 is the exact existing job gesture and prop to animate; keep its identity. No new character or game content. Cozy 2D cartoon, cream feathers, same cap/scarf/clothing/props as references, soft low saturation colours, clean fine warm-brown outlines and restrained flat shading. No glossy lighting, extra clothing or realistic feathers.\nExactly FOUR columns and 5 rows, 20 complete full-body frames, evenly spaced cells. EVERY cell is the SAME character at the SAME scale, feet near an identical baseline inside each cell. Give each cell 15% transparent margin on all sides and generous fully empty gutters. Full head, wings, props, and both feet must remain inside each cell.\nROW 1: four genuine expressive idle poses: 1 relaxed open eyes and small smile; 2 eyes half closed starting a blink; 3 fully closed eyelids and gentle happy cheeks; 4 open eyes looking slightly up with a curious head tilt and friendly beak smile. Both feet on the same baseline.\nROW 2: FOUR ordered RIGHT-facing SIDE-VIEW WALK phases: 1 left foot forward contacting ground and right foot behind; 2 body passes over left planted foot, right foot bending and swinging through; 3 right foot forward contacting ground and left foot behind; 4 body passes over right planted foot, left foot bending and swinging through. Four different leg silhouettes, both legs anatomically clear, slight head/body bob, never merely four duplicates.\nROW 3: FOUR NORTH walking phases, true BACK VIEW, back of head/clothes/tail, NO visible eyes or beak. Left contact, right foot passing, right contact, left foot passing.\nROW 4: FOUR SOUTH walking phases, true FRONT VIEW, both eyes visible. Left contact, right foot passing, right contact, left foot passing.\nROW 5: FOUR stages of the SAME job/gesture shown in reference 2: preparation, movement halfway, full gesture with an engaged happy expression, relaxed finish. Keep exactly the same prop and role. Do not invent a new activity or object.\nOnly character animation frames, genuine transparent alpha background. No grid lines, labels, text, ground, shadow, glow or border. Preserve small recognizable expressions at mobile scale. Wings remain feather wings, never human fingers. Clear intermediate poses, not two repeated drawings. Sprite sheet will be mechanically cropped and uniformly registered without repainting."
+    },
+    {
+      "id": "chicken_lane_child_motion_v12",
+      "actor": "lane_child",
+      "stage": "character",
+      "columns": 4,
+      "rows": 5,
+      "moving": true,
+      "vertical": true,
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/lane_child/chicken_lane_child_v9_frame_01.png",
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/lane_child/chicken_lane_child_v9_frame_05.png"
+      ],
+      "prompt": "Generate a production animation sprite sheet for this ONE EXISTING chicken resident. Reference 1 is the exact character identity, outfit, body proportion and hand-drawn style to preserve. Reference 2 is the exact existing job gesture and prop to animate; keep its identity. No new character or game content. Cozy 2D cartoon, cream feathers, same cap/scarf/clothing/props as references, soft low saturation colours, clean fine warm-brown outlines and restrained flat shading. No glossy lighting, extra clothing or realistic feathers.\nExactly FOUR columns and 5 rows, 20 complete full-body frames, evenly spaced cells. EVERY cell is the SAME character at the SAME scale, feet near an identical baseline inside each cell. Give each cell 15% transparent margin on all sides and generous fully empty gutters. Full head, wings, props, and both feet must remain inside each cell.\nROW 1: four genuine expressive idle poses: 1 relaxed open eyes and small smile; 2 eyes half closed starting a blink; 3 fully closed eyelids and gentle happy cheeks; 4 open eyes looking slightly up with a curious head tilt and friendly beak smile. Both feet on the same baseline.\nROW 2: FOUR ordered RIGHT-facing SIDE-VIEW WALK phases: 1 left foot forward contacting ground and right foot behind; 2 body passes over left planted foot, right foot bending and swinging through; 3 right foot forward contacting ground and left foot behind; 4 body passes over right planted foot, left foot bending and swinging through. Four different leg silhouettes, both legs anatomically clear, slight head/body bob, never merely four duplicates.\nROW 3: FOUR NORTH walking phases, true BACK VIEW, back of head/clothes/tail, NO visible eyes or beak. Left contact, right foot passing, right contact, left foot passing.\nROW 4: FOUR SOUTH walking phases, true FRONT VIEW, both eyes visible. Left contact, right foot passing, right contact, left foot passing.\nROW 5: FOUR stages of the SAME job/gesture shown in reference 2: preparation, movement halfway, full gesture with an engaged happy expression, relaxed finish. Keep exactly the same prop and role. Do not invent a new activity or object.\nOnly character animation frames, genuine transparent alpha background. No grid lines, labels, text, ground, shadow, glow or border. Preserve small recognizable expressions at mobile scale. Wings remain feather wings, never human fingers. Clear intermediate poses, not two repeated drawings. Sprite sheet will be mechanically cropped and uniformly registered without repainting."
+    },
+    {
+      "id": "chicken_flower_shopkeeper_motion_v12",
+      "actor": "flower_shopkeeper",
+      "stage": "character",
+      "columns": 4,
+      "rows": 3,
+      "moving": true,
+      "vertical": false,
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/flower_shopkeeper/chicken_flower_shopkeeper_v7_frame_01.png",
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/flower_shopkeeper/chicken_flower_shopkeeper_v7_frame_03.png"
+      ],
+      "prompt": "Generate a production animation sprite sheet for this ONE EXISTING chicken resident. Reference 1 is the exact character identity, outfit, body proportion and hand-drawn style to preserve. Reference 2 is the exact existing job gesture and prop to animate; keep its identity. No new character or game content. Cozy 2D cartoon, cream feathers, same cap/scarf/clothing/props as references, soft low saturation colours, clean fine warm-brown outlines and restrained flat shading. No glossy lighting, extra clothing or realistic feathers.\nExactly FOUR columns and 3 rows, 12 complete full-body frames, evenly spaced cells. EVERY cell is the SAME character at the SAME scale, feet near an identical baseline inside each cell. Give each cell 15% transparent margin on all sides and generous fully empty gutters. Full head, wings, props, and both feet must remain inside each cell.\nROW 1: four genuine expressive idle poses: 1 relaxed open eyes and small smile; 2 eyes half closed starting a blink; 3 fully closed eyelids and gentle happy cheeks; 4 open eyes looking slightly up with a curious head tilt and friendly beak smile. Both feet on the same baseline.\nROW 2: FOUR ordered RIGHT-facing SIDE-VIEW WALK phases: 1 left foot forward contacting ground and right foot behind; 2 body passes over left planted foot, right foot bending and swinging through; 3 right foot forward contacting ground and left foot behind; 4 body passes over right planted foot, left foot bending and swinging through. Four different leg silhouettes, both legs anatomically clear, slight head/body bob, never merely four duplicates.\nROW 3: FOUR stages of the SAME job/gesture shown in reference 2: preparation, movement halfway, full gesture with an engaged happy expression, relaxed finish. Keep exactly the same prop and role. Do not invent a new activity or object.\nOnly character animation frames, genuine transparent alpha background. No grid lines, labels, text, ground, shadow, glow or border. Preserve small recognizable expressions at mobile scale. Wings remain feather wings, never human fingers. Clear intermediate poses, not two repeated drawings. Sprite sheet will be mechanically cropped and uniformly registered without repainting."
+    },
+    {
+      "id": "chicken_book_shopkeeper_motion_v12",
+      "actor": "book_shopkeeper",
+      "stage": "character",
+      "columns": 4,
+      "rows": 3,
+      "moving": true,
+      "vertical": false,
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/book_shopkeeper/chicken_book_shopkeeper_v7_frame_01.png",
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/book_shopkeeper/chicken_book_shopkeeper_v7_frame_03.png"
+      ],
+      "prompt": "Generate a production animation sprite sheet for this ONE EXISTING chicken resident. Reference 1 is the exact character identity, outfit, body proportion and hand-drawn style to preserve. Reference 2 is the exact existing job gesture and prop to animate; keep its identity. No new character or game content. Cozy 2D cartoon, cream feathers, same cap/scarf/clothing/props as references, soft low saturation colours, clean fine warm-brown outlines and restrained flat shading. No glossy lighting, extra clothing or realistic feathers.\nExactly FOUR columns and 3 rows, 12 complete full-body frames, evenly spaced cells. EVERY cell is the SAME character at the SAME scale, feet near an identical baseline inside each cell. Give each cell 15% transparent margin on all sides and generous fully empty gutters. Full head, wings, props, and both feet must remain inside each cell.\nROW 1: four genuine expressive idle poses: 1 relaxed open eyes and small smile; 2 eyes half closed starting a blink; 3 fully closed eyelids and gentle happy cheeks; 4 open eyes looking slightly up with a curious head tilt and friendly beak smile. Both feet on the same baseline.\nROW 2: FOUR ordered RIGHT-facing SIDE-VIEW WALK phases: 1 left foot forward contacting ground and right foot behind; 2 body passes over left planted foot, right foot bending and swinging through; 3 right foot forward contacting ground and left foot behind; 4 body passes over right planted foot, left foot bending and swinging through. Four different leg silhouettes, both legs anatomically clear, slight head/body bob, never merely four duplicates.\nROW 3: FOUR stages of the SAME job/gesture shown in reference 2: preparation, movement halfway, full gesture with an engaged happy expression, relaxed finish. Keep exactly the same prop and role. Do not invent a new activity or object.\nOnly character animation frames, genuine transparent alpha background. No grid lines, labels, text, ground, shadow, glow or border. Preserve small recognizable expressions at mobile scale. Wings remain feather wings, never human fingers. Clear intermediate poses, not two repeated drawings. Sprite sheet will be mechanically cropped and uniformly registered without repainting."
+    },
+    {
+      "id": "chicken_sweet_shopkeeper_motion_v12",
+      "actor": "sweet_shopkeeper",
+      "stage": "character",
+      "columns": 4,
+      "rows": 3,
+      "moving": true,
+      "vertical": false,
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/sweet_shopkeeper/chicken_sweet_shopkeeper_v7_frame_01.png",
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/sweet_shopkeeper/chicken_sweet_shopkeeper_v7_frame_03.png"
+      ],
+      "prompt": "Generate a production animation sprite sheet for this ONE EXISTING chicken resident. Reference 1 is the exact character identity, outfit, body proportion and hand-drawn style to preserve. Reference 2 is the exact existing job gesture and prop to animate; keep its identity. No new character or game content. Cozy 2D cartoon, cream feathers, same cap/scarf/clothing/props as references, soft low saturation colours, clean fine warm-brown outlines and restrained flat shading. No glossy lighting, extra clothing or realistic feathers.\nExactly FOUR columns and 3 rows, 12 complete full-body frames, evenly spaced cells. EVERY cell is the SAME character at the SAME scale, feet near an identical baseline inside each cell. Give each cell 15% transparent margin on all sides and generous fully empty gutters. Full head, wings, props, and both feet must remain inside each cell.\nROW 1: four genuine expressive idle poses: 1 relaxed open eyes and small smile; 2 eyes half closed starting a blink; 3 fully closed eyelids and gentle happy cheeks; 4 open eyes looking slightly up with a curious head tilt and friendly beak smile. Both feet on the same baseline.\nROW 2: FOUR ordered RIGHT-facing SIDE-VIEW WALK phases: 1 left foot forward contacting ground and right foot behind; 2 body passes over left planted foot, right foot bending and swinging through; 3 right foot forward contacting ground and left foot behind; 4 body passes over right planted foot, left foot bending and swinging through. Four different leg silhouettes, both legs anatomically clear, slight head/body bob, never merely four duplicates.\nROW 3: FOUR stages of the SAME job/gesture shown in reference 2: preparation, movement halfway, full gesture with an engaged happy expression, relaxed finish. Keep exactly the same prop and role. Do not invent a new activity or object.\nOnly character animation frames, genuine transparent alpha background. No grid lines, labels, text, ground, shadow, glow or border. Preserve small recognizable expressions at mobile scale. Wings remain feather wings, never human fingers. Clear intermediate poses, not two repeated drawings. Sprite sheet will be mechanically cropped and uniformly registered without repainting."
+    },
+    {
+      "id": "chicken_noodle_shopkeeper_motion_v12",
+      "actor": "noodle_shopkeeper",
+      "stage": "character",
+      "columns": 4,
+      "rows": 3,
+      "moving": true,
+      "vertical": false,
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/noodle_shopkeeper/chicken_noodle_shopkeeper_v7_frame_01.png",
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/noodle_shopkeeper/chicken_noodle_shopkeeper_v7_frame_03.png"
+      ],
+      "prompt": "Generate a production animation sprite sheet for this ONE EXISTING chicken resident. Reference 1 is the exact character identity, outfit, body proportion and hand-drawn style to preserve. Reference 2 is the exact existing job gesture and prop to animate; keep its identity. No new character or game content. Cozy 2D cartoon, cream feathers, same cap/scarf/clothing/props as references, soft low saturation colours, clean fine warm-brown outlines and restrained flat shading. No glossy lighting, extra clothing or realistic feathers.\nExactly FOUR columns and 3 rows, 12 complete full-body frames, evenly spaced cells. EVERY cell is the SAME character at the SAME scale, feet near an identical baseline inside each cell. Give each cell 15% transparent margin on all sides and generous fully empty gutters. Full head, wings, props, and both feet must remain inside each cell.\nROW 1: four genuine expressive idle poses: 1 relaxed open eyes and small smile; 2 eyes half closed starting a blink; 3 fully closed eyelids and gentle happy cheeks; 4 open eyes looking slightly up with a curious head tilt and friendly beak smile. Both feet on the same baseline.\nROW 2: FOUR ordered RIGHT-facing SIDE-VIEW WALK phases: 1 left foot forward contacting ground and right foot behind; 2 body passes over left planted foot, right foot bending and swinging through; 3 right foot forward contacting ground and left foot behind; 4 body passes over right planted foot, left foot bending and swinging through. Four different leg silhouettes, both legs anatomically clear, slight head/body bob, never merely four duplicates.\nROW 3: FOUR stages of the SAME job/gesture shown in reference 2: preparation, movement halfway, full gesture with an engaged happy expression, relaxed finish. Keep exactly the same prop and role. Do not invent a new activity or object.\nOnly character animation frames, genuine transparent alpha background. No grid lines, labels, text, ground, shadow, glow or border. Preserve small recognizable expressions at mobile scale. Wings remain feather wings, never human fingers. Clear intermediate poses, not two repeated drawings. Sprite sheet will be mechanically cropped and uniformly registered without repainting."
+    },
+    {
+      "id": "chicken_garden_neighbor_motion_v12",
+      "actor": "garden_neighbor",
+      "stage": "character",
+      "columns": 4,
+      "rows": 3,
+      "moving": true,
+      "vertical": false,
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/garden_neighbor/chicken_garden_neighbor_v7_frame_01.png",
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/garden_neighbor/chicken_garden_neighbor_v7_frame_03.png"
+      ],
+      "prompt": "Generate a production animation sprite sheet for this ONE EXISTING chicken resident. Reference 1 is the exact character identity, outfit, body proportion and hand-drawn style to preserve. Reference 2 is the exact existing job gesture and prop to animate; keep its identity. No new character or game content. Cozy 2D cartoon, cream feathers, same cap/scarf/clothing/props as references, soft low saturation colours, clean fine warm-brown outlines and restrained flat shading. No glossy lighting, extra clothing or realistic feathers.\nExactly FOUR columns and 3 rows, 12 complete full-body frames, evenly spaced cells. EVERY cell is the SAME character at the SAME scale, feet near an identical baseline inside each cell. Give each cell 15% transparent margin on all sides and generous fully empty gutters. Full head, wings, props, and both feet must remain inside each cell.\nROW 1: four genuine expressive idle poses: 1 relaxed open eyes and small smile; 2 eyes half closed starting a blink; 3 fully closed eyelids and gentle happy cheeks; 4 open eyes looking slightly up with a curious head tilt and friendly beak smile. Both feet on the same baseline.\nROW 2: FOUR ordered RIGHT-facing SIDE-VIEW WALK phases: 1 left foot forward contacting ground and right foot behind; 2 body passes over left planted foot, right foot bending and swinging through; 3 right foot forward contacting ground and left foot behind; 4 body passes over right planted foot, left foot bending and swinging through. Four different leg silhouettes, both legs anatomically clear, slight head/body bob, never merely four duplicates.\nROW 3: FOUR stages of the SAME job/gesture shown in reference 2: preparation, movement halfway, full gesture with an engaged happy expression, relaxed finish. Keep exactly the same prop and role. Do not invent a new activity or object.\nOnly character animation frames, genuine transparent alpha background. No grid lines, labels, text, ground, shadow, glow or border. Preserve small recognizable expressions at mobile scale. Wings remain feather wings, never human fingers. Clear intermediate poses, not two repeated drawings. Sprite sheet will be mechanically cropped and uniformly registered without repainting."
+    },
+    {
+      "id": "chicken_laundry_neighbor_motion_v12",
+      "actor": "laundry_neighbor",
+      "stage": "character",
+      "columns": 4,
+      "rows": 3,
+      "moving": true,
+      "vertical": false,
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/laundry_neighbor/chicken_laundry_neighbor_v7_frame_01.png",
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/laundry_neighbor/chicken_laundry_neighbor_v7_frame_03.png"
+      ],
+      "prompt": "Generate a production animation sprite sheet for this ONE EXISTING chicken resident. Reference 1 is the exact character identity, outfit, body proportion and hand-drawn style to preserve. Reference 2 is the exact existing job gesture and prop to animate; keep its identity. No new character or game content. Cozy 2D cartoon, cream feathers, same cap/scarf/clothing/props as references, soft low saturation colours, clean fine warm-brown outlines and restrained flat shading. No glossy lighting, extra clothing or realistic feathers.\nExactly FOUR columns and 3 rows, 12 complete full-body frames, evenly spaced cells. EVERY cell is the SAME character at the SAME scale, feet near an identical baseline inside each cell. Give each cell 15% transparent margin on all sides and generous fully empty gutters. Full head, wings, props, and both feet must remain inside each cell.\nROW 1: four genuine expressive idle poses: 1 relaxed open eyes and small smile; 2 eyes half closed starting a blink; 3 fully closed eyelids and gentle happy cheeks; 4 open eyes looking slightly up with a curious head tilt and friendly beak smile. Both feet on the same baseline.\nROW 2: FOUR ordered RIGHT-facing SIDE-VIEW WALK phases: 1 left foot forward contacting ground and right foot behind; 2 body passes over left planted foot, right foot bending and swinging through; 3 right foot forward contacting ground and left foot behind; 4 body passes over right planted foot, left foot bending and swinging through. Four different leg silhouettes, both legs anatomically clear, slight head/body bob, never merely four duplicates.\nROW 3: FOUR stages of the SAME job/gesture shown in reference 2: preparation, movement halfway, full gesture with an engaged happy expression, relaxed finish. Keep exactly the same prop and role. Do not invent a new activity or object.\nOnly character animation frames, genuine transparent alpha background. No grid lines, labels, text, ground, shadow, glow or border. Preserve small recognizable expressions at mobile scale. Wings remain feather wings, never human fingers. Clear intermediate poses, not two repeated drawings. Sprite sheet will be mechanically cropped and uniformly registered without repainting."
+    },
+    {
+      "id": "chicken_strolling_reader_motion_v12",
+      "actor": "strolling_reader",
+      "stage": "character",
+      "columns": 4,
+      "rows": 3,
+      "moving": true,
+      "vertical": false,
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/strolling_reader/chicken_strolling_reader_v7_frame_01.png",
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/strolling_reader/chicken_strolling_reader_v7_frame_03.png"
+      ],
+      "prompt": "Generate a production animation sprite sheet for this ONE EXISTING chicken resident. Reference 1 is the exact character identity, outfit, body proportion and hand-drawn style to preserve. Reference 2 is the exact existing job gesture and prop to animate; keep its identity. No new character or game content. Cozy 2D cartoon, cream feathers, same cap/scarf/clothing/props as references, soft low saturation colours, clean fine warm-brown outlines and restrained flat shading. No glossy lighting, extra clothing or realistic feathers.\nExactly FOUR columns and 3 rows, 12 complete full-body frames, evenly spaced cells. EVERY cell is the SAME character at the SAME scale, feet near an identical baseline inside each cell. Give each cell 15% transparent margin on all sides and generous fully empty gutters. Full head, wings, props, and both feet must remain inside each cell.\nROW 1: four genuine expressive idle poses: 1 relaxed open eyes and small smile; 2 eyes half closed starting a blink; 3 fully closed eyelids and gentle happy cheeks; 4 open eyes looking slightly up with a curious head tilt and friendly beak smile. Both feet on the same baseline.\nROW 2: FOUR ordered RIGHT-facing SIDE-VIEW WALK phases: 1 left foot forward contacting ground and right foot behind; 2 body passes over left planted foot, right foot bending and swinging through; 3 right foot forward contacting ground and left foot behind; 4 body passes over right planted foot, left foot bending and swinging through. Four different leg silhouettes, both legs anatomically clear, slight head/body bob, never merely four duplicates.\nROW 3: FOUR stages of the SAME job/gesture shown in reference 2: preparation, movement halfway, full gesture with an engaged happy expression, relaxed finish. Keep exactly the same prop and role. Do not invent a new activity or object.\nOnly character animation frames, genuine transparent alpha background. No grid lines, labels, text, ground, shadow, glow or border. Preserve small recognizable expressions at mobile scale. Wings remain feather wings, never human fingers. Clear intermediate poses, not two repeated drawings. Sprite sheet will be mechanically cropped and uniformly registered without repainting."
+    },
+    {
+      "id": "chicken_visiting_child_motion_v12",
+      "actor": "visiting_child",
+      "stage": "character",
+      "columns": 4,
+      "rows": 3,
+      "moving": true,
+      "vertical": false,
+      "references": [
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/visiting_child/chicken_visiting_child_v7_frame_01.png",
+        "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/cels/visiting_child/chicken_visiting_child_v7_frame_03.png"
+      ],
+      "prompt": "Generate a production animation sprite sheet for this ONE EXISTING chicken resident. Reference 1 is the exact character identity, outfit, body proportion and hand-drawn style to preserve. Reference 2 is the exact existing job gesture and prop to animate; keep its identity. No new character or game content. Cozy 2D cartoon, cream feathers, same cap/scarf/clothing/props as references, soft low saturation colours, clean fine warm-brown outlines and restrained flat shading. No glossy lighting, extra clothing or realistic feathers.\nExactly FOUR columns and 3 rows, 12 complete full-body frames, evenly spaced cells. EVERY cell is the SAME character at the SAME scale, feet near an identical baseline inside each cell. Give each cell 15% transparent margin on all sides and generous fully empty gutters. Full head, wings, props, and both feet must remain inside each cell.\nROW 1: four genuine expressive idle poses: 1 relaxed open eyes and small smile; 2 eyes half closed starting a blink; 3 fully closed eyelids and gentle happy cheeks; 4 open eyes looking slightly up with a curious head tilt and friendly beak smile. Both feet on the same baseline.\nROW 2: FOUR ordered RIGHT-facing SIDE-VIEW WALK phases: 1 left foot forward contacting ground and right foot behind; 2 body passes over left planted foot, right foot bending and swinging through; 3 right foot forward contacting ground and left foot behind; 4 body passes over right planted foot, left foot bending and swinging through. Four different leg silhouettes, both legs anatomically clear, slight head/body bob, never merely four duplicates.\nROW 3: FOUR stages of the SAME job/gesture shown in reference 2: preparation, movement halfway, full gesture with an engaged happy expression, relaxed finish. Keep exactly the same prop and role. Do not invent a new activity or object.\nOnly character animation frames, genuine transparent alpha background. No grid lines, labels, text, ground, shadow, glow or border. Preserve small recognizable expressions at mobile scale. Wings remain feather wings, never human fingers. Clear intermediate poses, not two repeated drawings. Sprite sheet will be mechanically cropped and uniformly registered without repainting."
+    },
+    {
+      "id": "chicken_book_shopkeeper_motion_glassesfix_v12",
+      "actor": "book_shopkeeper",
+      "stage": "character",
+      "columns": 4,
+      "rows": 3,
+      "moving": true,
+      "vertical": false,
+      "references": [
+        "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-8a07e6f9-60ad-4e07-8326-974b3f524114.png"
+      ],
+      "prompt": "Edit this exact 4-column, 3-row transparent sprite sheet. Preserve every character pose, grid cell, body size, placement, costume, palette and transparent background. Correct ONLY the missing round spectacles on the book shopkeeper in ROW 1 COLUMN 3 (closed-eye smiling idle) and ROW 3 COLUMN 4 (closed-eye smiling reading). Both poses MUST wear the same thin dark-brown circular eyeglass frames as all the other ten poses; the eyelids must remain closed behind the transparent lenses. Do not remove eyeglasses during a blink. Do not change anything else; retain all 12 complete characters and empty transparent gutters.",
+      "supersedes": "chicken_book_shopkeeper_motion_v12"
+    },
+    {
+      "id": "chicken_flower_buyer_motion_layoutfix_v12",
+      "actor": "flower_buyer",
+      "stage": "character",
+      "columns": 4,
+      "rows": 5,
+      "moving": true,
+      "vertical": true,
+      "references": [
+        "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-d904f32a-526d-40b8-88c7-0a95886063f4.png"
+      ],
+      "prompt": "Edit and re-layout this exact existing chicken animation sprite sheet into a PORTRAIT 1024x1536 transparent canvas, FOUR columns by FIVE rows, exactly 20 cells in the SAME row order. The source has feet clipped at its bottom edge. Restore COMPLETE feet for every character, preserving the same cream chicken, sage floral headscarf, coral floral apron, flower basket, same pose directions and actions. Use a UNIFORM smaller character scale in all 20 cells, each figure occupies at most 65% of the cell height. Leave generous empty transparent horizontal and vertical gutters, at least 25 pixels away from each boundary, including BOTTOM outside margin. NO character or prop may touch any cell edge. Preserve row1 four facial expressions; row2 four right-facing side walking phases with left and right feet alternating; row3 true back-view walking; row4 front-view walking; row5 smelling flowers with eyes changing from open to happily closed. Thin brown hand-drawn outlines, matte muted colours, true transparent PNG, no glow, ground, labels or grid. This is the same resident's animation repair, not a new character.",
+      "supersedes": "chicken_flower_buyer_motion_v12"
+    }
+  ]
+}

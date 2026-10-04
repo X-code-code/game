@@ -1,0 +1,35 @@
+// Save exact prompts for built-in generation; this tool never creates pixels.
+import fs from 'node:fs';
+const base='art/production/ai_image_v6';
+const references=[
+ 'E:/workspace/chriken/experiments/living_city_v1/art/production/ai_image_v5/sources/shop_tea_v5.png',
+ 'C:/Users/24627/Desktop/bg-png/Snipaste_2026-09-30_23-16-05.png',
+];
+const style='Create ORIGINAL game art matching the supplied town asset drawing language, using the second image only as general style reference. Cute cozy casual mobile game, clean thin warm-brown hand-drawn outlines, simple large matte color shapes, pale sage, cream, dusty blue, muted coral and soft rose. Gentle slightly irregular drawing, almost flat colors, one restrained shadow tone at most. Frontal view with a little top-down visibility, parallel perspective, clear complete silhouettes. Absolutely no photorealism, 3D render, grain, wood grain, airbrushed glow, noisy watercolor, blurry shadows, text, characters or UI. Real transparent PNG alpha everywhere outside each object, no fake checkerboard, white background, ground patch or cast shadow. Preserve comfortable clear space around every subject.';
+const props=[
+ ['book_stall_v6','ONE freestanding outdoor neighborhood book stall: a low pale-blue wood bookshelf and broad upper work counter, one short cream-sage canopy, six large pastel books clearly showing spines, one open reading book on the counter, a small book pictogram sign. Entire stall, transparent serving/work opening, no wall, no person. Clear upper counter able to support separate game targets. Compact charming readable shapes, not a building.'],
+ ['garden_workbench_v6','ONE garden workbench: mint painted wooden table with clear work surface, two terracotta seedling pots on one end, a small seed tray, two garden tools hung under the tabletop, cream potting sack below. All tools and pots broad simple shapes. Complete table and feet, tabletop visibly angled slightly down, no gardener, no surrounding plants or landscape.'],
+ ['mail_notice_v6','ONE cohesive neighborhood mailbox and noticeboard corner: dusty-red small mailbox on a short cream post beside a small sage wood noticeboard, exactly three cream envelopes pinned on the board and a tiny bird pictogram at the top. No writing or letters, no base lawn, no person. Whole freestanding pair with a short low shelf under the board for separate game targets.'],
+ ['small_fountain_v6','ONE small friendly neighborhood fountain: low broad pale-blue round basin with a cream center pedestal and a modest tiny water arch, three large clear water curves only, gentle soft blue pool area. Simple flat 2D hand drawing, visible basin lip able to hold a small separate object, whole feet/base visible. No ornate realistic sculpture, no glitter, no particles, no garden background.'],
+ ['laundry_line_v6','ONE short freestanding laundry line between two simple mint wooden posts: a cream towel with muted coral stripe, one pale-blue shirt and one rose cloth, four large wooden pegs, a small cream wicker laundry basket at one post. All clothes clean large silhouettes, no writing, no landscape, no person. Whole pair of posts and basket, no huge ropes extending off canvas.'],
+ ['picnic_blanket_v6','ONE cohesive picnic setup: low cream-and-dusty-rose check picnic blanket viewed slightly overhead, one closed wicker picnic basket at rear left, two simple pastel cushions and two cream plates at the front. Clear uncluttered blanket surface for separate targets. Entire blanket and basket, no trees, grass, people, shadow or scenery.'],
+];
+const targetGroups=[
+ ['reading_targets_sheet_v6', ['a pair of dark dusty-blue round reading glasses with clear round lenses','a muted-coral bookmark with one pale-blue tassel','a small pale-yellow carved wooden bird toy with short orange beak','one sage-green gardening glove with simple five-finger silhouette']],
+ ['garden_mail_targets_sheet_v6',['a short mint-handled seedling hand spade with broad cream metal blade','one small pink watering can with short clear spout','a cream postcard with a small coral flower pictogram, no writing','a small pale-blue roll of postage stamps, no writing']],
+ ['picnic_targets_sheet_v6',['a tiny dusty-blue vintage camera with one large round cream lens','one golden flower-shaped picnic cookie with a small coral jam center','one rose yarn ball with a short loose tail','one large cream wooden laundry peg with a dark spring']],
+];
+const states=[
+ ['book_satchel_states_v6','a small dusty-blue canvas book satchel with cream strap', 'the flap fully opened upward and a large empty dark-blue interior opening, no book or collectible inside'],
+ ['garden_toolbox_states_v6','a small cream-and-mint garden toolbox with simple metal latch', 'the lid fully raised and a clear empty shadowed inner tray, no tools or collectible inside'],
+ ['picnic_basket_states_v6','a small cream wicker picnic basket with one curved handle and muted-coral cloth edge', 'the lid swung fully open and a clear empty interior, no food or collectible inside'],
+];
+const jobs=props.map(([id,description])=>({id,prompt:`${style}\n\nSUBJECT: ${description}\nGenerate one standalone complete transparent cutout, centered, no cropped parts.`,references,transparent:true}));
+for(const [id,objects] of targetGroups)jobs.push({id,references,transparent:true,
+ prompt:`${style}\n\nA TRANSPARENT OBJECT SPRITE SHEET. Exactly four independently isolated objects in a clean two-column, two-row grid on a 1536x1024 transparent canvas. Each cell is 768x512. Do not draw grid borders or labels. Keep each object completely inside its own cell, centered, similar clear visual size, minimum 90 pixels empty margin from cell edges. No overlaps, no connecting elements. Top-left: ${objects[0]}. Top-right: ${objects[1]}. Bottom-left: ${objects[2]}. Bottom-right: ${objects[3]}. All four are separate complete single objects and use the same clean thin-line drawing style. These will be mechanically cropped into independent transparent 256x256 game items. No furniture or backdrop.`});
+for(const [id,object,opened] of states)jobs.push({id,references,transparent:true,
+ prompt:`${style}\n\nA TWO-FRAME TRANSPARENT INTERACTION SPRITE SHEET on a 1536x1024 canvas, two equal columns, each 768x1024. Left frame: ${object}, completely CLOSED. Right frame: exactly the SAME object, same scale, colors, facing and bottom contact point, but ${opened}. Both objects stand individually with equal blank margins and exactly matching base height. No dividing line, labels or added props. The right open interior is empty because the game loads its collectible as a separate PNG. Do not bake any collectible inside. Both complete objects fully inside their cells.`});
+fs.mkdirSync(`${base}/prompts`,{recursive:true});
+for(const job of jobs)fs.writeFileSync(`${base}/prompts/${job.id}.md`,job.prompt+'\n');
+fs.writeFileSync(`${base}/generation_plan.json`,JSON.stringify({batchId:'ai_image_v6',styleId:'cozy_flat_town_v5',jobs},null,2)+'\n');
+console.log(JSON.stringify(jobs));

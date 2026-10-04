@@ -1,0 +1,1341 @@
+{
+  "batchId": "ai_image_v9",
+  "sourceType": "codex_builtin_image_gen",
+  "styleId": "cozy_flat_town_v5",
+  "assets": [
+    {
+      "name": "tailor_goods_v9",
+      "source": "tailor_goods_v9",
+      "stage": "scene",
+      "sceneSlotId": "lc5_tailor_goods",
+      "width": 110,
+      "height": 90,
+      "align": "bottom",
+      "footpoint": {
+        "x": 55,
+        "y": 85
+      },
+      "runtime": "simple2d_scene/lc5_tailor_goods.png"
+    },
+    {
+      "name": "tailor_rack_v9",
+      "source": "tailor_rack_v9",
+      "stage": "scene",
+      "sceneSlotId": "lc5_tailor_work_rack",
+      "width": 100,
+      "height": 130,
+      "align": "bottom",
+      "footpoint": {
+        "x": 50,
+        "y": 125
+      },
+      "runtime": "simple2d_scene/lc5_tailor_work_rack.png"
+    },
+    {
+      "name": "post_kiosk_v9",
+      "source": "post_kiosk_v9",
+      "stage": "scene",
+      "sceneSlotId": "lc5_south_post_house_back",
+      "width": 264,
+      "height": 160,
+      "align": "bottom",
+      "runtime": "simple2d_scene/lc5_south_post_house_back.png"
+    },
+    {
+      "name": "refreshment_cart_v9",
+      "source": "refreshment_cart_v9",
+      "stage": "scene",
+      "sceneSlotId": "lc9_refreshment_cart",
+      "width": 210,
+      "height": 160,
+      "align": "bottom",
+      "footpoint": {
+        "x": 105,
+        "y": 155
+      },
+      "runtime": "simple2d_scene/lc9_refreshment_cart.png"
+    },
+    {
+      "name": "craft_table_v9",
+      "source": "craft_table_v9",
+      "stage": "scene",
+      "sceneSlotId": "lc9_craft_table",
+      "width": 220,
+      "height": 160,
+      "align": "bottom",
+      "footpoint": {
+        "x": 110,
+        "y": 155
+      },
+      "runtime": "simple2d_scene/lc9_craft_table.png"
+    },
+    {
+      "name": "target_fountain_pen_v9",
+      "source": "everyday_targets_v9",
+      "stage": "target",
+      "targetId": "fountain_pen",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 450
+      },
+      "width": 256,
+      "height": 166,
+      "inset": 12,
+      "runtime": "targets/fountain_pen.png"
+    },
+    {
+      "name": "target_paper_boat_v9",
+      "source": "everyday_targets_v9",
+      "stage": "target",
+      "targetId": "paper_boat",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 450
+      },
+      "width": 256,
+      "height": 192,
+      "inset": 12,
+      "runtime": "targets/paper_boat.png"
+    },
+    {
+      "name": "target_knit_hat_v9",
+      "source": "everyday_targets_v9",
+      "stage": "target",
+      "targetId": "knit_hat",
+      "crop": {
+        "left": 0,
+        "top": 450,
+        "width": 768,
+        "height": 574
+      },
+      "width": 256,
+      "height": 243,
+      "inset": 12,
+      "runtime": "targets/knit_hat.png"
+    },
+    {
+      "name": "target_enamel_mug_v9",
+      "source": "everyday_targets_v9",
+      "stage": "target",
+      "targetId": "enamel_mug",
+      "crop": {
+        "left": 768,
+        "top": 450,
+        "width": 768,
+        "height": 574
+      },
+      "width": 256,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/enamel_mug.png"
+    },
+    {
+      "name": "target_thread_spool_v9",
+      "source": "craft_snack_targets_v9",
+      "stage": "target",
+      "targetId": "thread_spool",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 768,
+        "height": 490
+      },
+      "width": 242,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/thread_spool.png"
+    },
+    {
+      "name": "target_brass_key_v9",
+      "source": "craft_snack_targets_v9",
+      "stage": "target",
+      "targetId": "brass_key",
+      "crop": {
+        "left": 768,
+        "top": 0,
+        "width": 768,
+        "height": 490
+      },
+      "width": 256,
+      "height": 166,
+      "inset": 12,
+      "runtime": "targets/brass_key.png"
+    },
+    {
+      "name": "target_lemonade_bottle_v9",
+      "source": "craft_snack_targets_v9",
+      "stage": "target",
+      "targetId": "lemonade_bottle",
+      "crop": {
+        "left": 0,
+        "top": 490,
+        "width": 768,
+        "height": 534
+      },
+      "width": 175,
+      "height": 256,
+      "inset": 12,
+      "runtime": "targets/lemonade_bottle.png"
+    },
+    {
+      "name": "target_lemon_candy_v9",
+      "source": "craft_snack_targets_v9",
+      "stage": "target",
+      "targetId": "lemon_candy",
+      "crop": {
+        "left": 768,
+        "top": 490,
+        "width": 768,
+        "height": 534
+      },
+      "width": 256,
+      "height": 173,
+      "inset": 12,
+      "runtime": "targets/lemon_candy.png"
+    },
+    {
+      "name": "biscuit_tin_closed_v9",
+      "source": "biscuit_tin_states_v9",
+      "stage": "interaction",
+      "interactionId": "biscuit_tin",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 887,
+        "height": 887
+      },
+      "width": 256,
+      "height": 256,
+      "footpoint": {
+        "x": 128,
+        "y": 238
+      },
+      "figureHeight": 116,
+      "sharedStateScale": 0.29931972789115646,
+      "runtime": "interactions/biscuit_tin_closed.png"
+    },
+    {
+      "name": "biscuit_tin_opened_v9",
+      "source": "biscuit_tin_states_v9",
+      "stage": "interaction",
+      "interactionId": "biscuit_tin",
+      "crop": {
+        "left": 887,
+        "top": 0,
+        "width": 887,
+        "height": 887
+      },
+      "width": 256,
+      "height": 256,
+      "footpoint": {
+        "x": 128,
+        "y": 238
+      },
+      "figureHeight": 220,
+      "sharedStateScale": 0.29931972789115646,
+      "runtime": "interactions/biscuit_tin_opened.png"
+    },
+    {
+      "name": "trinket_box_closed_v9",
+      "source": "trinket_box_states_v9",
+      "stage": "interaction",
+      "interactionId": "trinket_box",
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 887,
+        "height": 887
+      },
+      "width": 256,
+      "height": 256,
+      "footpoint": {
+        "x": 128,
+        "y": 238
+      },
+      "figureHeight": 133,
+      "sharedStateScale": 0.2838709677419355,
+      "runtime": "interactions/trinket_box_closed.png"
+    },
+    {
+      "name": "trinket_box_opened_v9",
+      "source": "trinket_box_states_v9",
+      "stage": "interaction",
+      "interactionId": "trinket_box",
+      "crop": {
+        "left": 887,
+        "top": 0,
+        "width": 887,
+        "height": 887
+      },
+      "width": 256,
+      "height": 256,
+      "footpoint": {
+        "x": 128,
+        "y": 238
+      },
+      "figureHeight": 216,
+      "sharedStateScale": 0.2838709677419355,
+      "runtime": "interactions/trinket_box_opened.png"
+    },
+    {
+      "name": "chicken_lane_child_v9_frame_01",
+      "source": "chicken_lane_child_sheet_v9",
+      "stage": "character",
+      "actor": "lane_child",
+      "frameIndex": 1,
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 377,
+        "height": 458
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 182,
+      "sharedSheetScale": 0.5422740524781341,
+      "runtime": "cels/lane_child/chicken_lane_child_v9_frame_01.png"
+    },
+    {
+      "name": "chicken_lane_child_v9_frame_02",
+      "source": "chicken_lane_child_sheet_v9",
+      "stage": "character",
+      "actor": "lane_child",
+      "frameIndex": 2,
+      "crop": {
+        "left": 377,
+        "top": 0,
+        "width": 350,
+        "height": 458
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 183,
+      "sharedSheetScale": 0.5422740524781341,
+      "runtime": "cels/lane_child/chicken_lane_child_v9_frame_02.png"
+    },
+    {
+      "name": "chicken_lane_child_v9_frame_03",
+      "source": "chicken_lane_child_sheet_v9",
+      "stage": "character",
+      "actor": "lane_child",
+      "frameIndex": 3,
+      "crop": {
+        "left": 727,
+        "top": 0,
+        "width": 326,
+        "height": 458
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.5422740524781341,
+      "runtime": "cels/lane_child/chicken_lane_child_v9_frame_03.png"
+    },
+    {
+      "name": "chicken_lane_child_v9_frame_04",
+      "source": "chicken_lane_child_sheet_v9",
+      "stage": "character",
+      "actor": "lane_child",
+      "frameIndex": 4,
+      "crop": {
+        "left": 1053,
+        "top": 0,
+        "width": 350,
+        "height": 458
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.5422740524781341,
+      "runtime": "cels/lane_child/chicken_lane_child_v9_frame_04.png"
+    },
+    {
+      "name": "chicken_lane_child_v9_frame_05",
+      "source": "chicken_lane_child_sheet_v9",
+      "stage": "character",
+      "actor": "lane_child",
+      "frameIndex": 5,
+      "crop": {
+        "left": 1403,
+        "top": 0,
+        "width": 371,
+        "height": 458
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.5422740524781341,
+      "runtime": "cels/lane_child/chicken_lane_child_v9_frame_05.png"
+    },
+    {
+      "name": "chicken_lane_child_v9_frame_06",
+      "source": "chicken_lane_child_sheet_v9",
+      "stage": "character",
+      "actor": "lane_child",
+      "frameIndex": 6,
+      "crop": {
+        "left": 0,
+        "top": 458,
+        "width": 377,
+        "height": 429
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 183,
+      "sharedSheetScale": 0.5422740524781341,
+      "runtime": "cels/lane_child/chicken_lane_child_v9_frame_06.png"
+    },
+    {
+      "name": "chicken_lane_child_v9_frame_07",
+      "source": "chicken_lane_child_sheet_v9",
+      "stage": "character",
+      "actor": "lane_child",
+      "frameIndex": 7,
+      "crop": {
+        "left": 377,
+        "top": 458,
+        "width": 350,
+        "height": 429
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 182,
+      "sharedSheetScale": 0.5422740524781341,
+      "runtime": "cels/lane_child/chicken_lane_child_v9_frame_07.png"
+    },
+    {
+      "name": "chicken_lane_child_v9_frame_08",
+      "source": "chicken_lane_child_sheet_v9",
+      "stage": "character",
+      "actor": "lane_child",
+      "frameIndex": 8,
+      "crop": {
+        "left": 727,
+        "top": 458,
+        "width": 326,
+        "height": 429
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.5422740524781341,
+      "runtime": "cels/lane_child/chicken_lane_child_v9_frame_08.png"
+    },
+    {
+      "name": "chicken_lane_child_v9_frame_09",
+      "source": "chicken_lane_child_sheet_v9",
+      "stage": "character",
+      "actor": "lane_child",
+      "frameIndex": 9,
+      "crop": {
+        "left": 1053,
+        "top": 458,
+        "width": 350,
+        "height": 429
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 183,
+      "sharedSheetScale": 0.5422740524781341,
+      "runtime": "cels/lane_child/chicken_lane_child_v9_frame_09.png"
+    },
+    {
+      "name": "chicken_lane_child_v9_frame_10",
+      "source": "chicken_lane_child_sheet_v9",
+      "stage": "character",
+      "actor": "lane_child",
+      "frameIndex": 10,
+      "crop": {
+        "left": 1403,
+        "top": 458,
+        "width": 371,
+        "height": 429
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 179,
+      "sharedSheetScale": 0.5422740524781341,
+      "runtime": "cels/lane_child/chicken_lane_child_v9_frame_10.png"
+    },
+    {
+      "name": "chicken_chestnut_seller_v9_frame_01",
+      "source": "chicken_chestnut_seller_sheet_v9",
+      "stage": "character",
+      "actor": "chestnut_seller",
+      "frameIndex": 1,
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 781,
+        "height": 506
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 183,
+      "sharedSheetScale": 0.41797752808988764,
+      "runtime": "cels/chestnut_seller/chicken_chestnut_seller_v9_frame_01.png"
+    },
+    {
+      "name": "chicken_chestnut_seller_v9_frame_02",
+      "source": "chicken_chestnut_seller_sheet_v9",
+      "stage": "character",
+      "actor": "chestnut_seller",
+      "frameIndex": 2,
+      "crop": {
+        "left": 781,
+        "top": 0,
+        "width": 755,
+        "height": 506
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.41797752808988764,
+      "runtime": "cels/chestnut_seller/chicken_chestnut_seller_v9_frame_02.png"
+    },
+    {
+      "name": "chicken_chestnut_seller_v9_frame_03",
+      "source": "chicken_chestnut_seller_sheet_v9",
+      "stage": "character",
+      "actor": "chestnut_seller",
+      "frameIndex": 3,
+      "crop": {
+        "left": 0,
+        "top": 506,
+        "width": 781,
+        "height": 518
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.41797752808988764,
+      "runtime": "cels/chestnut_seller/chicken_chestnut_seller_v9_frame_03.png"
+    },
+    {
+      "name": "chicken_chestnut_seller_v9_frame_04",
+      "source": "chicken_chestnut_seller_sheet_v9",
+      "stage": "character",
+      "actor": "chestnut_seller",
+      "frameIndex": 4,
+      "crop": {
+        "left": 781,
+        "top": 506,
+        "width": 755,
+        "height": 518
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.41797752808988764,
+      "runtime": "cels/chestnut_seller/chicken_chestnut_seller_v9_frame_04.png"
+    },
+    {
+      "name": "chicken_lantern_watcher_v9_frame_01",
+      "source": "chicken_lantern_watcher_sheet_v9",
+      "stage": "character",
+      "actor": "lantern_watcher",
+      "frameIndex": 1,
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 786,
+        "height": 516
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.40522875816993464,
+      "runtime": "cels/lantern_watcher/chicken_lantern_watcher_v9_frame_01.png"
+    },
+    {
+      "name": "chicken_lantern_watcher_v9_frame_02",
+      "source": "chicken_lantern_watcher_sheet_v9",
+      "stage": "character",
+      "actor": "lantern_watcher",
+      "frameIndex": 2,
+      "crop": {
+        "left": 786,
+        "top": 0,
+        "width": 750,
+        "height": 516
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.40522875816993464,
+      "runtime": "cels/lantern_watcher/chicken_lantern_watcher_v9_frame_02.png"
+    },
+    {
+      "name": "chicken_lantern_watcher_v9_frame_03",
+      "source": "chicken_lantern_watcher_sheet_v9",
+      "stage": "character",
+      "actor": "lantern_watcher",
+      "frameIndex": 3,
+      "crop": {
+        "left": 0,
+        "top": 516,
+        "width": 786,
+        "height": 508
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.40522875816993464,
+      "runtime": "cels/lantern_watcher/chicken_lantern_watcher_v9_frame_03.png"
+    },
+    {
+      "name": "chicken_lantern_watcher_v9_frame_04",
+      "source": "chicken_lantern_watcher_sheet_v9",
+      "stage": "character",
+      "actor": "lantern_watcher",
+      "frameIndex": 4,
+      "crop": {
+        "left": 786,
+        "top": 516,
+        "width": 750,
+        "height": 508
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.40522875816993464,
+      "runtime": "cels/lantern_watcher/chicken_lantern_watcher_v9_frame_04.png"
+    },
+    {
+      "name": "chicken_messenger_customer_v9_frame_01",
+      "source": "chicken_messenger_customer_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "messenger_customer",
+      "frameIndex": 1,
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 379,
+        "height": 452
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.47692307692307695,
+      "runtime": "cels/messenger_customer/chicken_messenger_customer_v9_frame_01.png"
+    },
+    {
+      "name": "chicken_messenger_customer_v9_frame_02",
+      "source": "chicken_messenger_customer_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "messenger_customer",
+      "frameIndex": 2,
+      "crop": {
+        "left": 379,
+        "top": 0,
+        "width": 362,
+        "height": 452
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.47692307692307695,
+      "runtime": "cels/messenger_customer/chicken_messenger_customer_v9_frame_02.png"
+    },
+    {
+      "name": "chicken_messenger_customer_v9_frame_03",
+      "source": "chicken_messenger_customer_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "messenger_customer",
+      "frameIndex": 3,
+      "crop": {
+        "left": 741,
+        "top": 0,
+        "width": 339,
+        "height": 452
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.47692307692307695,
+      "runtime": "cels/messenger_customer/chicken_messenger_customer_v9_frame_03.png"
+    },
+    {
+      "name": "chicken_messenger_customer_v9_frame_04",
+      "source": "chicken_messenger_customer_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "messenger_customer",
+      "frameIndex": 4,
+      "crop": {
+        "left": 1080,
+        "top": 0,
+        "width": 343,
+        "height": 452
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.47692307692307695,
+      "runtime": "cels/messenger_customer/chicken_messenger_customer_v9_frame_04.png"
+    },
+    {
+      "name": "chicken_messenger_customer_v9_frame_05",
+      "source": "chicken_messenger_customer_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "messenger_customer",
+      "frameIndex": 5,
+      "crop": {
+        "left": 1423,
+        "top": 0,
+        "width": 351,
+        "height": 452
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.47692307692307695,
+      "runtime": "cels/messenger_customer/chicken_messenger_customer_v9_frame_05.png"
+    },
+    {
+      "name": "chicken_messenger_customer_v9_frame_06",
+      "source": "chicken_messenger_customer_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "messenger_customer",
+      "frameIndex": 6,
+      "crop": {
+        "left": 0,
+        "top": 452,
+        "width": 379,
+        "height": 435
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.47692307692307695,
+      "runtime": "cels/messenger_customer/chicken_messenger_customer_v9_frame_06.png"
+    },
+    {
+      "name": "chicken_messenger_customer_v9_frame_07",
+      "source": "chicken_messenger_customer_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "messenger_customer",
+      "frameIndex": 7,
+      "crop": {
+        "left": 379,
+        "top": 452,
+        "width": 362,
+        "height": 435
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.47692307692307695,
+      "runtime": "cels/messenger_customer/chicken_messenger_customer_v9_frame_07.png"
+    },
+    {
+      "name": "chicken_messenger_customer_v9_frame_08",
+      "source": "chicken_messenger_customer_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "messenger_customer",
+      "frameIndex": 8,
+      "crop": {
+        "left": 741,
+        "top": 452,
+        "width": 339,
+        "height": 435
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 183,
+      "sharedSheetScale": 0.47692307692307695,
+      "runtime": "cels/messenger_customer/chicken_messenger_customer_v9_frame_08.png"
+    },
+    {
+      "name": "chicken_messenger_customer_v9_frame_09",
+      "source": "chicken_messenger_customer_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "messenger_customer",
+      "frameIndex": 9,
+      "crop": {
+        "left": 1080,
+        "top": 452,
+        "width": 343,
+        "height": 435
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.47692307692307695,
+      "runtime": "cels/messenger_customer/chicken_messenger_customer_v9_frame_09.png"
+    },
+    {
+      "name": "chicken_messenger_customer_v9_frame_10",
+      "source": "chicken_messenger_customer_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "messenger_customer",
+      "frameIndex": 10,
+      "crop": {
+        "left": 1423,
+        "top": 452,
+        "width": 351,
+        "height": 435
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.47692307692307695,
+      "runtime": "cels/messenger_customer/chicken_messenger_customer_v9_frame_10.png"
+    },
+    {
+      "name": "chicken_crossing_shopper_v9_frame_01",
+      "source": "chicken_crossing_shopper_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "crossing_shopper",
+      "frameIndex": 1,
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 371,
+        "height": 459
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 182,
+      "sharedSheetScale": 0.5152354570637119,
+      "runtime": "cels/crossing_shopper/chicken_crossing_shopper_v9_frame_01.png"
+    },
+    {
+      "name": "chicken_crossing_shopper_v9_frame_02",
+      "source": "chicken_crossing_shopper_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "crossing_shopper",
+      "frameIndex": 2,
+      "crop": {
+        "left": 371,
+        "top": 0,
+        "width": 352,
+        "height": 459
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.5152354570637119,
+      "runtime": "cels/crossing_shopper/chicken_crossing_shopper_v9_frame_02.png"
+    },
+    {
+      "name": "chicken_crossing_shopper_v9_frame_03",
+      "source": "chicken_crossing_shopper_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "crossing_shopper",
+      "frameIndex": 3,
+      "crop": {
+        "left": 723,
+        "top": 0,
+        "width": 352,
+        "height": 459
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 182,
+      "sharedSheetScale": 0.5152354570637119,
+      "runtime": "cels/crossing_shopper/chicken_crossing_shopper_v9_frame_03.png"
+    },
+    {
+      "name": "chicken_crossing_shopper_v9_frame_04",
+      "source": "chicken_crossing_shopper_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "crossing_shopper",
+      "frameIndex": 4,
+      "crop": {
+        "left": 1075,
+        "top": 0,
+        "width": 346,
+        "height": 459
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.5152354570637119,
+      "runtime": "cels/crossing_shopper/chicken_crossing_shopper_v9_frame_04.png"
+    },
+    {
+      "name": "chicken_crossing_shopper_v9_frame_05",
+      "source": "chicken_crossing_shopper_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "crossing_shopper",
+      "frameIndex": 5,
+      "crop": {
+        "left": 1421,
+        "top": 0,
+        "width": 353,
+        "height": 459
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 180,
+      "sharedSheetScale": 0.5152354570637119,
+      "runtime": "cels/crossing_shopper/chicken_crossing_shopper_v9_frame_05.png"
+    },
+    {
+      "name": "chicken_crossing_shopper_v9_frame_06",
+      "source": "chicken_crossing_shopper_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "crossing_shopper",
+      "frameIndex": 6,
+      "crop": {
+        "left": 0,
+        "top": 459,
+        "width": 371,
+        "height": 428
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 183,
+      "sharedSheetScale": 0.5152354570637119,
+      "runtime": "cels/crossing_shopper/chicken_crossing_shopper_v9_frame_06.png"
+    },
+    {
+      "name": "chicken_crossing_shopper_v9_frame_07",
+      "source": "chicken_crossing_shopper_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "crossing_shopper",
+      "frameIndex": 7,
+      "crop": {
+        "left": 371,
+        "top": 459,
+        "width": 352,
+        "height": 428
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.5152354570637119,
+      "runtime": "cels/crossing_shopper/chicken_crossing_shopper_v9_frame_07.png"
+    },
+    {
+      "name": "chicken_crossing_shopper_v9_frame_08",
+      "source": "chicken_crossing_shopper_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "crossing_shopper",
+      "frameIndex": 8,
+      "crop": {
+        "left": 723,
+        "top": 459,
+        "width": 352,
+        "height": 428
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 182,
+      "sharedSheetScale": 0.5152354570637119,
+      "runtime": "cels/crossing_shopper/chicken_crossing_shopper_v9_frame_08.png"
+    },
+    {
+      "name": "chicken_crossing_shopper_v9_frame_09",
+      "source": "chicken_crossing_shopper_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "crossing_shopper",
+      "frameIndex": 9,
+      "crop": {
+        "left": 1075,
+        "top": 459,
+        "width": 346,
+        "height": 428
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.5152354570637119,
+      "runtime": "cels/crossing_shopper/chicken_crossing_shopper_v9_frame_09.png"
+    },
+    {
+      "name": "chicken_crossing_shopper_v9_frame_10",
+      "source": "chicken_crossing_shopper_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "crossing_shopper",
+      "frameIndex": 10,
+      "crop": {
+        "left": 1421,
+        "top": 459,
+        "width": 353,
+        "height": 428
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 181,
+      "sharedSheetScale": 0.5152354570637119,
+      "runtime": "cels/crossing_shopper/chicken_crossing_shopper_v9_frame_10.png"
+    },
+    {
+      "name": "chicken_flower_buyer_v9_frame_01",
+      "source": "chicken_flower_buyer_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "flower_buyer",
+      "frameIndex": 1,
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 364,
+        "height": 475
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.510989010989011,
+      "runtime": "cels/flower_buyer/chicken_flower_buyer_v9_frame_01.png"
+    },
+    {
+      "name": "chicken_flower_buyer_v9_frame_02",
+      "source": "chicken_flower_buyer_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "flower_buyer",
+      "frameIndex": 2,
+      "crop": {
+        "left": 364,
+        "top": 0,
+        "width": 354,
+        "height": 475
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 184,
+      "sharedSheetScale": 0.510989010989011,
+      "runtime": "cels/flower_buyer/chicken_flower_buyer_v9_frame_02.png"
+    },
+    {
+      "name": "chicken_flower_buyer_v9_frame_03",
+      "source": "chicken_flower_buyer_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "flower_buyer",
+      "frameIndex": 3,
+      "crop": {
+        "left": 718,
+        "top": 0,
+        "width": 341,
+        "height": 475
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 182,
+      "sharedSheetScale": 0.510989010989011,
+      "runtime": "cels/flower_buyer/chicken_flower_buyer_v9_frame_03.png"
+    },
+    {
+      "name": "chicken_flower_buyer_v9_frame_04",
+      "source": "chicken_flower_buyer_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "flower_buyer",
+      "frameIndex": 4,
+      "crop": {
+        "left": 1059,
+        "top": 0,
+        "width": 350,
+        "height": 475
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.510989010989011,
+      "runtime": "cels/flower_buyer/chicken_flower_buyer_v9_frame_04.png"
+    },
+    {
+      "name": "chicken_flower_buyer_v9_frame_05",
+      "source": "chicken_flower_buyer_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "flower_buyer",
+      "frameIndex": 5,
+      "crop": {
+        "left": 1409,
+        "top": 0,
+        "width": 365,
+        "height": 475
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 185,
+      "sharedSheetScale": 0.510989010989011,
+      "runtime": "cels/flower_buyer/chicken_flower_buyer_v9_frame_05.png"
+    },
+    {
+      "name": "chicken_flower_buyer_v9_frame_06",
+      "source": "chicken_flower_buyer_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "flower_buyer",
+      "frameIndex": 6,
+      "crop": {
+        "left": 0,
+        "top": 475,
+        "width": 364,
+        "height": 412
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.510989010989011,
+      "runtime": "cels/flower_buyer/chicken_flower_buyer_v9_frame_06.png"
+    },
+    {
+      "name": "chicken_flower_buyer_v9_frame_07",
+      "source": "chicken_flower_buyer_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "flower_buyer",
+      "frameIndex": 7,
+      "crop": {
+        "left": 364,
+        "top": 475,
+        "width": 354,
+        "height": 412
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 183,
+      "sharedSheetScale": 0.510989010989011,
+      "runtime": "cels/flower_buyer/chicken_flower_buyer_v9_frame_07.png"
+    },
+    {
+      "name": "chicken_flower_buyer_v9_frame_08",
+      "source": "chicken_flower_buyer_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "flower_buyer",
+      "frameIndex": 8,
+      "crop": {
+        "left": 718,
+        "top": 475,
+        "width": 341,
+        "height": 412
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 181,
+      "sharedSheetScale": 0.510989010989011,
+      "runtime": "cels/flower_buyer/chicken_flower_buyer_v9_frame_08.png"
+    },
+    {
+      "name": "chicken_flower_buyer_v9_frame_09",
+      "source": "chicken_flower_buyer_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "flower_buyer",
+      "frameIndex": 9,
+      "crop": {
+        "left": 1059,
+        "top": 475,
+        "width": 350,
+        "height": 412
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.510989010989011,
+      "runtime": "cels/flower_buyer/chicken_flower_buyer_v9_frame_09.png"
+    },
+    {
+      "name": "chicken_flower_buyer_v9_frame_10",
+      "source": "chicken_flower_buyer_sheet_walkfix_v9",
+      "stage": "character",
+      "actor": "flower_buyer",
+      "frameIndex": 10,
+      "crop": {
+        "left": 1409,
+        "top": 475,
+        "width": 365,
+        "height": 412
+      },
+      "width": 384,
+      "height": 256,
+      "footpoint": {
+        "x": 192,
+        "y": 215
+      },
+      "figureHeight": 186,
+      "sharedSheetScale": 0.510989010989011,
+      "runtime": "cels/flower_buyer/chicken_flower_buyer_v9_frame_10.png"
+    }
+  ]
+}

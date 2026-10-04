@@ -139,6 +139,8 @@ export interface InteractiveObjectConfig {
     clickArea: ClickArea;
     initialState: string;
     openAsset?: AssetId;
+    /** Row fraction of the generated open PNG reused above its contents. */
+    openForegroundStart?: number;
     visualSize?: Size;
     depthY?: number;
     label?: string;

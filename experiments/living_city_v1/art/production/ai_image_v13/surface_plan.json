@@ -1,0 +1,16 @@
+{
+  "jobs": [
+    {
+      "targetId": "reading_glasses"
+    },
+    {
+      "targetId": "honey_dipper"
+    },
+    {
+      "targetId": "yarn_ball"
+    },
+    {
+      "targetId": "thread_spool"
+    }
+  ]
+}

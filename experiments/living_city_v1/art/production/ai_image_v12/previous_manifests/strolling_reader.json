@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 2,
+  "actorId": "strolling_reader",
+  "canvasPx": {
+    "width": 384,
+    "height": 256
+  },
+  "footpointPx": {
+    "x": 192,
+    "y": 215
+  },
+  "paintedHeightPx": 186,
+  "clips": {
+    "idle_w": [
+      {
+        "asset": "chicken_strolling_reader_v7_frame_01",
+        "durationSeconds": 0.45
+      },
+      {
+        "asset": "chicken_strolling_reader_v7_frame_04",
+        "durationSeconds": 0.45
+      }
+    ],
+    "walk_nw": [
+      {
+        "asset": "chicken_strolling_reader_v7_frame_02",
+        "durationSeconds": 0.14
+      },
+      {
+        "asset": "chicken_strolling_reader_v7_frame_05",
+        "durationSeconds": 0.14
+      }
+    ],
+    "receive_w": [
+      {
+        "asset": "chicken_strolling_reader_v7_frame_03",
+        "durationSeconds": 0.45
+      },
+      {
+        "asset": "chicken_strolling_reader_v7_frame_06",
+        "durationSeconds": 0.45
+      }
+    ]
+  },
+  "loopingClips": [
+    "idle_w",
+    "walk_nw",
+    "receive_w"
+  ],
+  "sourceBatch": "ai_image_v7",
+  "generatedSourceId": "chicken_strolling_reader_sheet_walkfix_v7",
+  "registration": "common_whole_sheet_scale_fixed_footpoint"
+}

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 2,
+  "actorId": "flower_shopkeeper",
+  "canvasPx": {
+    "width": 384,
+    "height": 256
+  },
+  "footpointPx": {
+    "x": 192,
+    "y": 215
+  },
+  "paintedHeightPx": 186,
+  "clips": {
+    "idle_w": [
+      {
+        "asset": "chicken_flower_shopkeeper_v12_frame_01",
+        "durationSeconds": 1.4
+      },
+      {
+        "asset": "chicken_flower_shopkeeper_v12_frame_02",
+        "durationSeconds": 0.07
+      },
+      {
+        "asset": "chicken_flower_shopkeeper_v12_frame_03",
+        "durationSeconds": 0.1
+      },
+      {
+        "asset": "chicken_flower_shopkeeper_v12_frame_02",
+        "durationSeconds": 0.07
+      },
+      {
+        "asset": "chicken_flower_shopkeeper_v12_frame_01",
+        "durationSeconds": 0.65
+      },
+      {
+        "asset": "chicken_flower_shopkeeper_v12_frame_04",
+        "durationSeconds": 0.35
+      },
+      {
+        "asset": "chicken_flower_shopkeeper_v12_frame_01",
+        "durationSeconds": 0.35
+      }
+    ],
+    "walk_nw": [
+      {
+        "asset": "chicken_flower_shopkeeper_v12_frame_05",
+        "durationSeconds": 0.1
+      },
+      {
+        "asset": "chicken_flower_shopkeeper_v12_frame_06",
+        "durationSeconds": 0.1
+      },
+      {
+        "asset": "chicken_flower_shopkeeper_v12_frame_07",
+        "durationSeconds": 0.1
+      },
+      {
+        "asset": "chicken_flower_shopkeeper_v12_frame_08",
+        "durationSeconds": 0.1
+      }
+    ],
+    "receive_w": [
+      {
+        "asset": "chicken_flower_shopkeeper_v12_frame_09",
+        "durationSeconds": 0.18
+      },
+      {
+        "asset": "chicken_flower_shopkeeper_v12_frame_10",
+        "durationSeconds": 0.18
+      },
+      {
+        "asset": "chicken_flower_shopkeeper_v12_frame_11",
+        "durationSeconds": 0.18
+      },
+      {
+        "asset": "chicken_flower_shopkeeper_v12_frame_12",
+        "durationSeconds": 0.18
+      }
+    ]
+  },
+  "loopingClips": [
+    "idle_w",
+    "walk_nw"
+  ],
+  "staggerIdlePhase": true,
+  "sourceBatch": "ai_image_v12",
+  "generatedSourceId": "chicken_flower_shopkeeper_motion_v12",
+  "registration": "common_whole_sheet_scale_fixed_footpoint",
+  "sourceCellGrid": {
+    "columns": 4,
+    "rows": 3,
+    "width": 1536,
+    "height": 1024
+  }
+}

@@ -97,6 +97,7 @@ export class CityManager extends Component {
         const view = root.addComponent(MapBrowserDemo);
         const instance = { content, root, view };
         try {
+            this.persist(() => this.save?.reconcileCityProgress(content.config));
             view.mount(content.config, content.bundle, () => {
                 if (this.current !== instance) return;
                 this.recordProgress(instance);

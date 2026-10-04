@@ -1,0 +1,170 @@
+{
+  "batchId": "ai_image_v11",
+  "sourceType": "codex_builtin_image_gen",
+  "styleId": "cozy_flat_town_v5",
+  "visualApproval": "pending",
+  "sources": [
+    {
+      "id": "reading_glasses_refined_v11",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-c023252a-7af6-4fb8-827a-873b273b6f9f.png",
+      "source": "art/production/ai_image_v11/sources/reading_glasses_refined_v11.png",
+      "prompt": "art/production/ai_image_v11/prompts/reading_glasses_refined_v11.md",
+      "sourceSha256": "c452139e6b9c8b2d61266bb150bf7643c9b888c8dbf3199e1551b067c0a46031",
+      "originalToolOutputSha256": "c452139e6b9c8b2d61266bb150bf7643c9b888c8dbf3199e1551b067c0a46031",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 65,
+        "top": 21,
+        "width": 1313,
+        "height": 947,
+        "transparent": 1462501,
+        "visible": 110363
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "references": [
+        {
+          "original": "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/simple2d_scene/lc6_reading_stall.png",
+          "path": "art/production/ai_image_v11/references/lc6_reading_stall_1.png",
+          "sha256": "85eb688f01a156b80aebd81a6aebc3b21da4f1e7bc6f513683eef06dcfec304c"
+        }
+      ]
+    },
+    {
+      "id": "postcard_refined_v11",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-bed0efd9-aae8-442e-8d99-1426721eccf4.png",
+      "source": "art/production/ai_image_v11/sources/postcard_refined_v11.png",
+      "prompt": "art/production/ai_image_v11/prompts/postcard_refined_v11.md",
+      "sourceSha256": "c6f06323caa9c2386a95e6c0a475eec6a113832f4db7e27848c656d5f057938f",
+      "originalToolOutputSha256": "c6f06323caa9c2386a95e6c0a475eec6a113832f4db7e27848c656d5f057938f",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 0,
+        "top": 21,
+        "width": 1121,
+        "height": 803,
+        "transparent": 1274121,
+        "visible": 298743
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "references": [
+        {
+          "original": "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/simple2d_scene/lc6_mail_notice.png",
+          "path": "art/production/ai_image_v11/references/lc6_mail_notice_1.png",
+          "sha256": "5e7d99c5d65397b3f8cf383f330253ae84ff806713302168fce919651af6384f"
+        }
+      ]
+    },
+    {
+      "id": "yarn_ball_refined_v11",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-eed2332f-6b18-4218-a6f9-5966a014139c.png",
+      "source": "art/production/ai_image_v11/sources/yarn_ball_refined_v11.png",
+      "prompt": "art/production/ai_image_v11/prompts/yarn_ball_refined_v11.md",
+      "sourceSha256": "4c4805a5da85888a89ff136c826a8a0dae6ff87e279346a2646392ecb44fcdfd",
+      "originalToolOutputSha256": "4c4805a5da85888a89ff136c826a8a0dae6ff87e279346a2646392ecb44fcdfd",
+      "sourceSize": {
+        "width": 1374,
+        "height": 1145
+      },
+      "alphaBounds": {
+        "left": 82,
+        "top": 21,
+        "width": 938,
+        "height": 1068,
+        "transparent": 1445306,
+        "visible": 127924
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "references": [
+        {
+          "original": "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/simple2d_scene/lc6_fountain_crates.png",
+          "path": "art/production/ai_image_v11/references/lc6_fountain_crates_1.png",
+          "sha256": "771303934c16245ad004ffaaabe979ae4a485cfeb82c21078f7cc15c6872e815"
+        }
+      ]
+    },
+    {
+      "id": "laundry_peg_refined_v11",
+      "originalToolOutput": "C:/Users/24627/.codex/generated_images/01a0f278-da26-76f2-b70d-771ad374e8c6/exec-95421fbe-31c9-4925-9166-357dfcddddc3.png",
+      "source": "art/production/ai_image_v11/sources/laundry_peg_refined_v11.png",
+      "prompt": "art/production/ai_image_v11/prompts/laundry_peg_refined_v11.md",
+      "sourceSha256": "a220d50b371cfe36aea0ad5eab9c0a5c28e6bfbafc33ba562d376dacbf213c89",
+      "originalToolOutputSha256": "a220d50b371cfe36aea0ad5eab9c0a5c28e6bfbafc33ba562d376dacbf213c89",
+      "sourceSize": {
+        "width": 1024,
+        "height": 1536
+      },
+      "alphaBounds": {
+        "left": 65,
+        "top": 37,
+        "width": 803,
+        "height": 1427,
+        "transparent": 1441300,
+        "visible": 131564
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "references": [
+        {
+          "original": "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/simple2d_scene/lc6_laundry_line.png",
+          "path": "art/production/ai_image_v11/references/lc6_laundry_line_1.png",
+          "sha256": "e8646c0161a987dea526cfb5b65edd45ce45abbab352e5b158578e3614429f91"
+        }
+      ]
+    }
+  ],
+  "runtimeVerification": {
+    "status": "web_mobile_verified",
+    "playerVisualApproval": "pending",
+    "wechatPhone": "not_run",
+    "sceneBlueprintSha256": "41858f867eec7eba0746498a5689684bd51e46d6b04a69f800a7821c3b1d0efb",
+    "reports": {
+      "runtime": {
+        "path": "art/review/ai_image_v12/three_chapters/runtime_report.json",
+        "sha256": "c0dada619d27447befe9ec8f96e739f5428ca8479ca4d9311736f8da208b349e"
+      },
+      "surfaces": {
+        "path": "art/review/ai_image_v12/after_surfaces/surface_report.json",
+        "sha256": "f0c7e97a4b3d67c12ae1c914a9482f0fe08db6569ec01783d6f3aff460b30d33"
+      },
+      "registration": {
+        "path": "art/review/ai_image_v12/registration_report.json",
+        "sha256": "53650c8093082d93bd91b22554388993950a4f5d1d70e8270e454d987a4f9fd3"
+      },
+      "integrity": {
+        "path": "art/review/ai_image_v12/asset_integrity_report.json",
+        "sha256": "a5650b478cf6152619c24d14855b0345dface9a2e79cc5770b9d31318464eca3"
+      },
+      "placement": {
+        "path": "art/review/ai_image_v11/placement_review.json",
+        "sha256": "2d9ec36525494291c7d5f2311c61c8c83f38bd27bceb866aba0ad9af23332807"
+      },
+      "visual": {
+        "path": "art/review/ai_image_v12/visual_review.json",
+        "sha256": "738ac7d331c2a2d3a0a28e247195a4ac0b438fb7752ba169a373f4cc53cfbcac"
+      }
+    },
+    "build": {
+      "path": "art/review/ai_image_v12/web_mobile_build.txt",
+      "sha256": "02a18332fa5b5c347aa5fcad78e47f87eec38e590338eebe218ac1fb1b30bc84"
+    },
+    "runtimeSources": [
+      {
+        "path": "assets/scripts/character/CelAnimationPlayer.ts",
+        "sha256": "98858c576cc704acb62a5cfe906d87170f01b3c2dba2c96996b7ff47a5bc4613"
+      },
+      {
+        "path": "assets/scripts/map/SceneArtSlot.ts",
+        "sha256": "4351e5be62f8f547990d5d7e0fd040880315094532099484401c685483911b8e"
+      },
+      {
+        "path": "assets/scripts/map/LivingCityGreybox.ts",
+        "sha256": "e52a3cf12546bae38aa0bcb3b2032ca189d9b7e26f8ea113fa290f3b4a1d44ee"
+      }
+    ]
+  }
+}

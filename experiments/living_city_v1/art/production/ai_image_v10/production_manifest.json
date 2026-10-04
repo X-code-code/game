@@ -1,0 +1,160 @@
+{
+  "batchId": "ai_image_v10",
+  "sourceType": "codex_builtin_image_gen",
+  "styleId": "cozy_flat_town_v5",
+  "assets": [
+    {
+      "name": "garden_glove_surface_v10",
+      "source": "art/production/ai_image_v10/sources/garden_glove_surface_v10.png",
+      "stage": "target",
+      "targetId": "garden_glove",
+      "width": 256,
+      "height": 157,
+      "inset": 4,
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/garden_glove.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v10/prompts/garden_glove_surface_v10.md",
+      "sourceSha256": "883c713cfad9ac048a7e030a8b89ad3e010e491190ef4fa7bb93421878bac756",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/garden_glove_surface_v10.png",
+      "sha256": "818439599ffddf0f0a3f87ecf1115c5c6fad76067771b76fc8b88f1ee66added",
+      "alphaBounds": {
+        "left": 6,
+        "top": 4,
+        "width": 243,
+        "height": 149,
+        "transparent": 18302,
+        "visible": 21890
+      },
+      "uuid": "d72cc77c-791f-4fbf-95ca-8e6c377df231",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "tiny_camera_surface_v10",
+      "source": "art/production/ai_image_v10/sources/tiny_camera_surface_v10.png",
+      "stage": "target",
+      "targetId": "tiny_camera",
+      "width": 256,
+      "height": 156,
+      "inset": 4,
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/tiny_camera.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v10/prompts/tiny_camera_surface_v10.md",
+      "sourceSha256": "0c30ac89e5e4533ac7eafccf359b364810e51d08d922a53033a3ef4ec6b00c48",
+      "sourceSize": {
+        "width": 1774,
+        "height": 887
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/tiny_camera_surface_v10.png",
+      "sha256": "c10c2d8974f9a76cc9b686c038a78409ffae383171dd514b69bb55d89bfa6864",
+      "alphaBounds": {
+        "left": 6,
+        "top": 4,
+        "width": 243,
+        "height": 148,
+        "transparent": 7524,
+        "visible": 32412
+      },
+      "uuid": "6e19a6cf-c3de-4001-b907-ad722866edd3",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "pink_watering_can_surface_v10",
+      "source": "art/production/ai_image_v10/sources/pink_watering_can_surface_v10.png",
+      "stage": "target",
+      "targetId": "pink_watering_can",
+      "width": 256,
+      "height": 137,
+      "inset": 4,
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/pink_watering_can.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v10/prompts/pink_watering_can_surface_v10.md",
+      "sourceSha256": "e5268a74d93e0cf793c948e7eeab0d57a9b7472db80fb9822428def93cc1d99e",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/pink_watering_can_surface_v10.png",
+      "sha256": "7d86cf173100cea6a71e0fc72a7274ac901fcba55fecc9e973a7583c087b1afe",
+      "alphaBounds": {
+        "left": 7,
+        "top": 4,
+        "width": 241,
+        "height": 129,
+        "transparent": 15943,
+        "visible": 19129
+      },
+      "uuid": "060d5b41-93de-4e62-8901-410407827ab2",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    },
+    {
+      "name": "wooden_bird_surface_v10",
+      "source": "art/production/ai_image_v10/sources/wooden_bird_surface_v10.png",
+      "stage": "target",
+      "targetId": "wooden_bird",
+      "width": 256,
+      "height": 181,
+      "inset": 4,
+      "runtime": "assets/bundles/city_living_city_street_block_01/targets/wooden_bird.png",
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v10/prompts/wooden_bird_surface_v10.md",
+      "sourceSha256": "990cddb5c888e69396b1ca66684e2cb4e54a356a62814a8a2f6a0e7e301655e5",
+      "sourceSize": {
+        "width": 1619,
+        "height": 971
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/wooden_bird_surface_v10.png",
+      "sha256": "09f4d812527efc3565f53752ef5f748c9be2abcc873a69de00a5ab43847e317a",
+      "alphaBounds": {
+        "left": 5,
+        "top": 4,
+        "width": 245,
+        "height": 173,
+        "transparent": 21653,
+        "visible": 24683
+      },
+      "uuid": "d212c207-73a1-47b4-891a-505a990ab928",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_verified_visual_unapproved"
+    }
+  ],
+  "runtimeVerification": {
+    "status": "web_mobile_verified",
+    "playerVisualApproval": "pending",
+    "wechatPhone": "not_run",
+    "sceneBlueprintSha256": "73e796a94db339cfbf54d5d6323ab961931a6f6302d64baa6e20fce507f28e53",
+    "reports": {
+      "surfaces": {
+        "path": "art/review/ai_image_v10/after_surfaces/surface_report.json",
+        "sha256": "697e1db207e868139b925f9628a0aa9cbbe39607d7c000c634998e95c00beaaf"
+      },
+      "chapter": {
+        "path": "art/review/ai_image_v10/chapter_1_followup/runtime_report.json",
+        "sha256": "33333bff31452e85d404cd8fa68bc861c5fae8e442bc2238f068f3d8f5586d29"
+      },
+      "placement": {
+        "path": "art/review/ai_image_v10/placement_review.json",
+        "sha256": "b376ac0576fe64dab7bfb027fe79ba3d4c36a532e2ad4449ec19ff99fdddce3c"
+      },
+      "integrity": {
+        "path": "art/review/ai_image_v10/asset_integrity_report.json",
+        "sha256": "894980492e162ecd7d8d08cb94359e2415c6012d35ce00335f08a99852280082"
+      },
+      "visual": {
+        "path": "art/review/ai_image_v10/visual_review.json",
+        "sha256": "8598bb0f001e67be50200e049b12e7d4b5b2a9e23f74cf0c942b019c541d9dc2"
+      }
+    }
+  },
+  "visualApproval": "pending"
+}

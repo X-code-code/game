@@ -1,0 +1,148 @@
+{
+  "batchId": "ai_image_v10",
+  "sourceType": "codex_builtin_image_gen",
+  "styleId": "cozy_flat_town_v5",
+  "visualApproval": "pending",
+  "sources": [
+    {
+      "id": "garden_glove_surface_v10",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-9dd03baa-d9d5-4cfd-9c7b-5a778141319c.png",
+      "source": "art/production/ai_image_v10/sources/garden_glove_surface_v10.png",
+      "prompt": "art/production/ai_image_v10/prompts/garden_glove_surface_v10.md",
+      "sourceSha256": "883c713cfad9ac048a7e030a8b89ad3e010e491190ef4fa7bb93421878bac756",
+      "originalToolOutputSha256": "883c713cfad9ac048a7e030a8b89ad3e010e491190ef4fa7bb93421878bac756",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 65,
+        "top": 167,
+        "width": 1299,
+        "height": 769,
+        "transparent": 1265133,
+        "visible": 307731
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "references": [
+        {
+          "original": "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/simple2d_scene/lc6_garden_workbench.png",
+          "path": "art/production/ai_image_v10/references/lc6_garden_workbench_1.png",
+          "sha256": "21531d4e209b708cf748313ce8603add89bc7e6c23cf35bde73e15a127becc2c"
+        }
+      ]
+    },
+    {
+      "id": "tiny_camera_surface_v10",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-b2dbc757-9bda-425d-9551-d88dcd4f95b8.png",
+      "source": "art/production/ai_image_v10/sources/tiny_camera_surface_v10.png",
+      "prompt": "art/production/ai_image_v10/prompts/tiny_camera_surface_v10.md",
+      "sourceSha256": "0c30ac89e5e4533ac7eafccf359b364810e51d08d922a53033a3ef4ec6b00c48",
+      "originalToolOutputSha256": "0c30ac89e5e4533ac7eafccf359b364810e51d08d922a53033a3ef4ec6b00c48",
+      "sourceSize": {
+        "width": 1774,
+        "height": 887
+      },
+      "alphaBounds": {
+        "left": 507,
+        "top": 158,
+        "width": 866,
+        "height": 729,
+        "transparent": 1261238,
+        "visible": 312300
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "references": [
+        {
+          "original": "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/simple2d_scene/lc6_fountain_bench.png",
+          "path": "art/production/ai_image_v10/references/lc6_fountain_bench_1.png",
+          "sha256": "e2e0a044b05cf5fef1aebf4cfada947d17a5c353ec18ea512ac4b072c8bef094"
+        }
+      ]
+    },
+    {
+      "id": "pink_watering_can_surface_v10",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-623b9321-8008-408c-95e4-af5808b9a8df.png",
+      "source": "art/production/ai_image_v10/sources/pink_watering_can_surface_v10.png",
+      "prompt": "art/production/ai_image_v10/prompts/pink_watering_can_surface_v10.md",
+      "sourceSha256": "e5268a74d93e0cf793c948e7eeab0d57a9b7472db80fb9822428def93cc1d99e",
+      "originalToolOutputSha256": "e5268a74d93e0cf793c948e7eeab0d57a9b7472db80fb9822428def93cc1d99e",
+      "sourceSize": {
+        "width": 1536,
+        "height": 1024
+      },
+      "alphaBounds": {
+        "left": 105,
+        "top": 36,
+        "width": 1297,
+        "height": 910,
+        "transparent": 1212902,
+        "visible": 359962
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "references": [
+        {
+          "original": "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/simple2d_scene/lc6_central_water.png",
+          "path": "art/production/ai_image_v10/references/lc6_central_water_1.png",
+          "sha256": "75cd52484fa6b37f8b9c50a74590ac2e4ae6695ea8a594db1ff5d331e2ba02d3"
+        }
+      ]
+    },
+    {
+      "id": "wooden_bird_surface_v10",
+      "originalToolOutput": "C:\\Users\\24627\\.codex\\generated_images\\01a0f278-da26-76f2-b70d-771ad374e8c6\\exec-8835876f-9a3f-42e9-9926-420bb276c65a.png",
+      "source": "art/production/ai_image_v10/sources/wooden_bird_surface_v10.png",
+      "prompt": "art/production/ai_image_v10/prompts/wooden_bird_surface_v10.md",
+      "sourceSha256": "990cddb5c888e69396b1ca66684e2cb4e54a356a62814a8a2f6a0e7e301655e5",
+      "originalToolOutputSha256": "990cddb5c888e69396b1ca66684e2cb4e54a356a62814a8a2f6a0e7e301655e5",
+      "sourceSize": {
+        "width": 1619,
+        "height": 971
+      },
+      "alphaBounds": {
+        "left": 403,
+        "top": 199,
+        "width": 813,
+        "height": 705,
+        "transparent": 1301016,
+        "visible": 271033
+      },
+      "status": "used_runtime_verified_visual_unapproved",
+      "references": [
+        {
+          "original": "E:/workspace/chriken/experiments/living_city_v1/assets/bundles/city_living_city_street_block_01/simple2d_scene/lc6_central_crates.png",
+          "path": "art/production/ai_image_v10/references/lc6_central_crates_1.png",
+          "sha256": "771303934c16245ad004ffaaabe979ae4a485cfeb82c21078f7cc15c6872e815"
+        }
+      ]
+    }
+  ],
+  "runtimeVerification": {
+    "status": "web_mobile_verified",
+    "playerVisualApproval": "pending",
+    "wechatPhone": "not_run",
+    "sceneBlueprintSha256": "73e796a94db339cfbf54d5d6323ab961931a6f6302d64baa6e20fce507f28e53",
+    "reports": {
+      "surfaces": {
+        "path": "art/review/ai_image_v10/after_surfaces/surface_report.json",
+        "sha256": "697e1db207e868139b925f9628a0aa9cbbe39607d7c000c634998e95c00beaaf"
+      },
+      "chapter": {
+        "path": "art/review/ai_image_v10/chapter_1_followup/runtime_report.json",
+        "sha256": "33333bff31452e85d404cd8fa68bc861c5fae8e442bc2238f068f3d8f5586d29"
+      },
+      "placement": {
+        "path": "art/review/ai_image_v10/placement_review.json",
+        "sha256": "b376ac0576fe64dab7bfb027fe79ba3d4c36a532e2ad4449ec19ff99fdddce3c"
+      },
+      "integrity": {
+        "path": "art/review/ai_image_v10/asset_integrity_report.json",
+        "sha256": "894980492e162ecd7d8d08cb94359e2415c6012d35ce00335f08a99852280082"
+      },
+      "visual": {
+        "path": "art/review/ai_image_v10/visual_review.json",
+        "sha256": "8598bb0f001e67be50200e049b12e7d4b5b2a9e23f74cf0c942b019c541d9dc2"
+      }
+    }
+  }
+}
