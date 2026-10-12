@@ -8,6 +8,7 @@
   "userData": {
     "isBundle": true,
     "bundleName": "city_living_city_garden_market_02",
-    "priority": 7
+    "priority": 7,
+    "bundleConfigID": "wechat_city_remote"
   }
 }
