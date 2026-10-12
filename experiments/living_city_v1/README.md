@@ -19,3 +19,5 @@
 最终 PNG 位于 `assets/generated/`，城市 Bundle 内是相同字节的运行副本；原始生图、真实提示词和逐 ID 处理记录在 `art/production/ai_image_v*/`，实际批次见 `art/asset_manifest.json`。历史代码绘制文件保留，不参与当前三关显示。清理测试缓存和排除历史打包资源不删除生成源图、提示词或资源 UUID。
 
 当前规范见 [SIMPLE_2D_STYLE.md](docs/SIMPLE_2D_STYLE.md) 和 [AI_ART_PIPELINE.md](docs/AI_ART_PIPELINE.md)，最新手账内容与证据见 [迭代 20](docs/LIVING_CITY_ITERATION_20.md)。较早迭代记录保留历史状态。
+
+2026-10-12 的基础试玩调整见 [范围说明](docs/BASIC_PLAYABLE_SCOPE_2026-10-12.md) 和 [迭代 21](docs/LIVING_CITY_ITERATION_21.md)：首次进入提供简短操作说明和现有首件物品的观察位置，免费提示为“帮我找”，已完成城市刷新后可直接继续逛街。暂停追加角色和扩展系统，现有三城的目标、居民及存档保留。微信包已更新，自动微信验收继续停止，由用户试玩。
