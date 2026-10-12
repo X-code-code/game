@@ -87,7 +87,7 @@ const { MapBrowserDemo } = loadSource('assets/scripts/map/MapBrowserDemo.ts', {
     '../interaction/SceneInteraction': { SceneInteraction },
 });
 const pairs = [['bookmark', 'book_satchel'], ['seedling_spade', 'garden_toolbox'], ['picnic_cookie', 'picnic_basket']];
-function fixture(snapshot, blocked = () => false) {
+function fixture(snapshot, blocked = () => false, suppliedConfig = null) {
     const view = new MapBrowserDemo(), entities = [];
     view.node = new Node('CityRoot'); view.node.addComponent(UITransform).setContentSize(1080, 2335);
     const hiddenObjects = Array.from({ length: 24 }, (_, i) => ({ id: `item_${i}`, targetable: true,
@@ -95,7 +95,7 @@ function fixture(snapshot, blocked = () => false) {
     pairs.forEach(([id, reveal], index) => Object.assign(hiddenObjects[21 + index], {
         id, visibleCondition: { objectId: reveal, state: 'opened' },
     }));
-    const config = { cityId: 'living_city_street_block_01', sceneBlueprint: 'street_block_01',
+    const config = suppliedConfig ?? { cityId: 'living_city_street_block_01', sceneBlueprint: 'street_block_01',
         mapSize: { width: 2304, height: 2048 }, view: { minZoom: 0.5, maxZoom: 1.4 },
         hiddenObjects, chickens: [],
         tasks: hiddenObjects.map(object => ({ id: `find_${object.id}`, type: 'hiddenObject',
@@ -120,6 +120,27 @@ function fixture(snapshot, blocked = () => false) {
 const eventAt = (x, y = 0, id = 1) => ({ simulate: false, getID: () => id,
     getButton: () => 0, getUILocation: () => ({ x, y }) });
 const tap = (view, x) => { view.targetInput.onMouseDown(eventAt(x)); view.targetInput.onMouseUp(eventAt(x)); };
+
+test('current twelve-target chapter restores full and partial old32 saves without counting retired objects', () => {
+    const config=JSON.parse(fs.readFileSync('assets/bundles/city_living_city_street_block_01/city.json'));
+    const previous=JSON.parse(fs.readFileSync('art/production/target_reduction_v16/baseline_blueprint_v15.json'));
+    const oldIds=previous.hiddenObjectSlots.map(t=>t.id),kept=config.hiddenObjects.map(t=>t.id);
+    const retired=oldIds.filter(id=>!kept.includes(id));
+    assert.equal(kept.length,12);assert.equal(retired.length,20);
+    for(const found of [oldIds,[...kept.slice(0,3),...retired]]){
+        const state={completedTaskIds:oldIds.map(id=>`find_${id}`),foundHiddenObjectIds:found,
+            discoveredChickenIds:[],interactiveStates:Object.fromEntries(previous.interactiveSlots.map(i=>[i.id,'opened'])),sceneDiscoveryIds:['postcard_delivery']};
+        const mounted=fixture(state,()=>false,config),expected=found.filter(id=>kept.includes(id)).length;
+        assert.equal(mounted.view.progress.requiredTotal,12);
+        assert.equal(mounted.view.progress.requiredCompleted,expected);
+        assert.equal(mounted.view.progress.allRequiredComplete,expected===12);
+        const saved=JSON.parse(JSON.stringify(mounted.view.getProgressSnapshot()));
+        assert.equal(saved.foundHiddenObjectIds.length,expected);
+        assert.equal(Object.keys(saved.interactiveStates).length,4);
+        assert.deepEqual(saved.sceneDiscoveryIds,['postcard_delivery']);
+        assert.equal(fixture(saved,()=>false,config).view.progress.requiredCompleted,expected);
+    }
+});
 
 test('mounted 24-target city restores old12 from found objects and ignores stale cached task completions', () => {
     const oldIds = Array.from({ length: 12 }, (_, i) => `item_${i}`);

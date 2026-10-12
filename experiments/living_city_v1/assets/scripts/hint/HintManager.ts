@@ -50,12 +50,15 @@ export class HintManager {
         return this.activeHint ? { ...this.activeHint, position: { ...this.activeHint.position } } : null;
     }
 
-    public requestHint(): HintResult {
+    public requestHint(preferredTargetId?: string | null): HintResult {
         this.clear();
         if (this.disposed) return { status: 'disposed' };
         const tasks = this.readTasks().filter(task => !task.completed);
         if (!tasks.length) return { status: 'complete' };
         const ordered = [...tasks.filter(task => task.config.required), ...tasks.filter(task => !task.config.required)];
+        const preferred = ordered.findIndex(task => task.config.type === 'hiddenObject' &&
+            task.config.targetId === preferredTargetId);
+        if (preferred > 0) ordered.unshift(...ordered.splice(preferred, 1));
         for (const task of ordered) {
             for (const target of this.resolveTargets(task.config)) {
                 const position = this.positionOf(target);

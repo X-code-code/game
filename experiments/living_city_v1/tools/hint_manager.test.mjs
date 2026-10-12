@@ -22,6 +22,19 @@ test('prioritizes unfinished required tasks and never discovers or completes a t
     assert.equal(hints.requestHint().hint.targetId,'optional');
 });
 
+test('a selected sticker takes priority, including its unopened prerequisite; stale selections fall back',()=>{
+    let revealed=false;
+    const {manager,hints}=setup([task('first'),task('selected')],[entity('first'),
+        {...entity('selected'),prerequisiteId:'drawer',isAvailable:()=>revealed},entity('drawer','interactiveObject')]);
+    assert.equal(hints.requestHint('selected').hint.targetId,'drawer');
+    assert.equal(manager.getProgress().requiredCompleted,0);
+    revealed=true;
+    assert.equal(hints.requestHint('selected').hint.targetId,'selected');
+    manager.handleTargetClicked({type:'hiddenObject',id:'selected',tags:[]});
+    assert.equal(hints.requestHint('selected').hint.targetId,'first');
+    assert.equal(hints.requestHint('deleted').hint.targetId,'first');
+});
+
 test('matches entity types and tags, skipping hidden or unavailable targets',()=>{
     const unavailable={...entity('hidden','chicken',['walking']),isAvailable:()=>false};
     const {hints}=setup([{id:'walk',type:'chickenTag',targetTag:'walking',label:'走路的小鸡',required:true}],

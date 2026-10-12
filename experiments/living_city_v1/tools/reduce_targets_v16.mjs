@@ -1,0 +1,22 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+const base='art/production/target_reduction_v16',file='design/street_block_01.json';
+fs.mkdirSync(base,{recursive:true});
+const baseline=`${base}/baseline_blueprint_v15.json`;
+if(!fs.existsSync(baseline))fs.copyFileSync(file,baseline);
+const hash=f=>createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+const b=JSON.parse(fs.readFileSync(baseline)),current=JSON.parse(fs.readFileSync(file));
+assert.ok(hash(file)===hash(baseline)||current.targetRevision==='relaxed_twelve_v16','Unrelated blueprint edits');
+const ids=['reading_glasses','seed_packet','pocket_watch','golden_bun','postcard','paper_boat',
+ 'tiny_camera','sewing_scissors','sealed_letter','garden_glove','picnic_cookie','enamel_mug'];
+const retained=new Set(ids),removed=b.hiddenObjectSlots.filter(t=>!retained.has(t.id));
+b.hiddenObjectSlots=ids.map(id=>{const t=b.hiddenObjectSlots.find(t=>t.id===id);assert.ok(t,id);return t;});
+const revealIds=new Set(b.hiddenObjectSlots.map(t=>t.visibleCondition?.objectId).filter(Boolean));
+const retiredInteractions=b.interactiveSlots.filter(t=>!revealIds.has(t.id));
+b.interactiveSlots=b.interactiveSlots.filter(t=>revealIds.has(t.id));
+for(const g of b.lifeGroups)g.targetIds=g.targetIds.filter(id=>retained.has(id));
+b.targetRevision='relaxed_twelve_v16';
+fs.writeFileSync(file,JSON.stringify(b,null,2)+'\n');
+fs.writeFileSync(`${base}/change_record.json`,JSON.stringify({date:'2026-10-05',authorization:'User accepted reducing the first chapter to twelve targets.',retainedTargetIds:ids,removedTargetIds:removed.map(t=>t.id),retainedInteractionIds:[...revealIds],retiredInteractionIds:retiredInteractions.map(t=>t.id),baselineSha256:hash(baseline),sceneBlueprintSha256:hash(file),assetFilesDeleted:0,newArt:0,scenePlacementsChanged:0,visualApproval:'pending'},null,2)+'\n');
+console.log(JSON.stringify({targets:b.hiddenObjectSlots.length,reveals:b.interactiveSlots.length,removed:removed.length}));

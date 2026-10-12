@@ -1,0 +1,408 @@
+{
+  "scope": "existing placements only",
+  "newContent": 0,
+  "newGenerationCalls": 0,
+  "pixelFilesChanged": 0,
+  "baselineSha256": "81efd7792ba7bb5b74e4ff294dfba157e7cdcb66665b543bcac83eda97671e10",
+  "sceneBlueprintSha256": "420b67ea04508cb9f412e63da0b2eb66bd0815735a6800d30593b608cf956773",
+  "moves": [
+    {
+      "id": "lc5_street_water_station",
+      "before": {
+        "id": "lc5_street_water_station",
+        "layer": "depth",
+        "center": {
+          "x": 130,
+          "y": -330
+        },
+        "size": {
+          "width": 110,
+          "height": 150
+        },
+        "alpha": true,
+        "footY": -400,
+        "purpose": "Small public drinking point beside the lower path bend, rather than centered in the walking route.",
+        "textureScale": 3
+      },
+      "after": {
+        "id": "lc5_street_water_station",
+        "layer": "depth",
+        "center": {
+          "x": -610,
+          "y": 145
+        },
+        "size": {
+          "width": 110,
+          "height": 150
+        },
+        "alpha": true,
+        "footY": 75,
+        "purpose": "Small public drinking point beside the lower path bend, rather than centered in the walking route.",
+        "textureScale": 3
+      },
+      "delta": {
+        "x": -740,
+        "y": 475
+      },
+      "reason": "Put the roadside washstand beside the flower shop, clear of its entrance and the crossing.",
+      "attachments": []
+    },
+    {
+      "id": "lc6_central_water",
+      "before": {
+        "id": "lc6_central_water",
+        "layer": "depth",
+        "center": {
+          "x": -115,
+          "y": -165
+        },
+        "size": {
+          "width": 110,
+          "height": 150
+        },
+        "alpha": true,
+        "footY": -235,
+        "lifeGroupId": "central_tea_food",
+        "instanceOfSlotId": "lc5_street_water_station",
+        "reusedGeneratedSourceBatch": "ai_image_v5",
+        "purpose": "Mechanical placement instance of an existing built-in generated v5 PNG; not a newly generated original.",
+        "textureScale": 3
+      },
+      "after": {
+        "id": "lc6_central_water",
+        "layer": "depth",
+        "center": {
+          "x": -565,
+          "y": -820
+        },
+        "size": {
+          "width": 110,
+          "height": 150
+        },
+        "alpha": true,
+        "footY": -890,
+        "lifeGroupId": "central_tea_food",
+        "instanceOfSlotId": "lc5_street_water_station",
+        "reusedGeneratedSourceBatch": "ai_image_v5",
+        "purpose": "Mechanical placement instance of an existing built-in generated v5 PNG; not a newly generated original.",
+        "textureScale": 3
+      },
+      "delta": {
+        "x": -450,
+        "y": -655
+      },
+      "reason": "Put the second washstand inside the gardening courtyard, away from the crossing.",
+      "attachments": [
+        {
+          "kind": "hiddenObjectSlots",
+          "id": "pink_watering_can"
+        }
+      ]
+    },
+    {
+      "id": "lc5_east_storefront_back",
+      "before": {
+        "id": "lc5_east_storefront_back",
+        "layer": "building_back",
+        "center": {
+          "x": 345,
+          "y": 607
+        },
+        "size": {
+          "width": 296,
+          "height": 344
+        },
+        "alpha": true,
+        "purpose": "East shop frontage anchors the food cart district; similar perspective and line weight to the west shop. Facade reduced to 80 percent while preserving its original bottom ground line.",
+        "lifeGroupId": "central_tea_food",
+        "textureScale": 3
+      },
+      "after": {
+        "id": "lc5_east_storefront_back",
+        "layer": "building_back",
+        "center": {
+          "x": 535,
+          "y": 745
+        },
+        "size": {
+          "width": 296,
+          "height": 344
+        },
+        "alpha": true,
+        "purpose": "East shop frontage anchors the food cart district; similar perspective and line weight to the west shop. Facade reduced to 80 percent while preserving its original bottom ground line.",
+        "lifeGroupId": "central_tea_food",
+        "textureScale": 3
+      },
+      "delta": {
+        "x": 190,
+        "y": 138
+      },
+      "reason": "Align the blue shop entrance with the existing sweets courtyard instead of leaving the facade isolated on grass.",
+      "attachments": []
+    },
+    {
+      "id": "lc6_central_table",
+      "before": {
+        "id": "lc6_central_table",
+        "layer": "depth",
+        "center": {
+          "x": 270,
+          "y": 55
+        },
+        "size": {
+          "width": 170,
+          "height": 130
+        },
+        "alpha": true,
+        "footY": -5,
+        "lifeGroupId": "central_tea_food",
+        "instanceOfSlotId": "lc5_tea_patio_front",
+        "reusedGeneratedSourceBatch": "ai_image_v5",
+        "purpose": "Mechanical placement instance of an existing built-in generated v5 PNG; not a newly generated original.",
+        "textureScale": 3
+      },
+      "after": {
+        "id": "lc6_central_table",
+        "layer": "depth",
+        "center": {
+          "x": 700,
+          "y": 540
+        },
+        "size": {
+          "width": 170,
+          "height": 130
+        },
+        "alpha": true,
+        "footY": 480,
+        "lifeGroupId": "central_tea_food",
+        "instanceOfSlotId": "lc5_tea_patio_front",
+        "reusedGeneratedSourceBatch": "ai_image_v5",
+        "purpose": "Mechanical placement instance of an existing built-in generated v5 PNG; not a newly generated original.",
+        "textureScale": 3
+      },
+      "delta": {
+        "x": 430,
+        "y": 485
+      },
+      "reason": "Group the loose cafe table on the shared paved frontage beside the blue shop, leaving the door and courtyard entry clear.",
+      "attachments": []
+    },
+    {
+      "id": "lc8_sweets_shrub",
+      "before": {
+        "id": "lc8_sweets_shrub",
+        "layer": "depth",
+        "center": {
+          "x": 590,
+          "y": 650
+        },
+        "size": {
+          "width": 140,
+          "height": 100
+        },
+        "footY": 605,
+        "alpha": true,
+        "generatedSourceId": "shrub_clump_v8",
+        "generatedSourceBatch": "ai_image_v8",
+        "sourcePlacementIndex": 4,
+        "lifeGroupId": "northeast_mail_corner",
+        "purpose": "Low shrub corner between the existing east facade and the sweets forecourt. A mechanically scaled instance of its named generated PNG; no new code-drawn pixels.",
+        "collisionReview": "Deferred until final PNG Alpha review; no new blocking footprint is authored yet.",
+        "placementReview": "Authored placement only; generated source, final PNG Alpha, and runtime visual review pending.",
+        "textureScale": 3
+      },
+      "after": {
+        "id": "lc8_sweets_shrub",
+        "layer": "depth",
+        "center": {
+          "x": 590,
+          "y": 325
+        },
+        "size": {
+          "width": 140,
+          "height": 100
+        },
+        "footY": 280,
+        "alpha": true,
+        "generatedSourceId": "shrub_clump_v8",
+        "generatedSourceBatch": "ai_image_v8",
+        "sourcePlacementIndex": 4,
+        "lifeGroupId": "northeast_mail_corner",
+        "purpose": "Low shrub corner between the existing east facade and the sweets forecourt. A mechanically scaled instance of its named generated PNG; no new code-drawn pixels.",
+        "collisionReview": "Deferred until final PNG Alpha review; no new blocking footprint is authored yet.",
+        "placementReview": "Authored placement only; generated source, final PNG Alpha, and runtime visual review pending.",
+        "textureScale": 3
+      },
+      "delta": {
+        "x": 0,
+        "y": -325
+      },
+      "reason": "Move the shrub out of the relocated blue shop entrance and to the courtyard edge.",
+      "attachments": []
+    },
+    {
+      "id": "lc5_curb_produce_east",
+      "before": {
+        "id": "lc5_curb_produce_east",
+        "layer": "depth",
+        "center": {
+          "x": 265,
+          "y": -100
+        },
+        "size": {
+          "width": 140,
+          "height": 130
+        },
+        "alpha": true,
+        "footY": -160,
+        "purpose": "Produce baskets along the eastern food pocket, outside the shopper route.",
+        "textureScale": 3
+      },
+      "after": {
+        "id": "lc5_curb_produce_east",
+        "layer": "depth",
+        "center": {
+          "x": 505,
+          "y": -795
+        },
+        "size": {
+          "width": 140,
+          "height": 130
+        },
+        "alpha": true,
+        "footY": -855,
+        "purpose": "Produce baskets along the eastern food pocket, outside the shopper route.",
+        "textureScale": 3
+      },
+      "delta": {
+        "x": 240,
+        "y": -695
+      },
+      "reason": "Move the fruit stand beside the bakery frontage while leaving its doorway clear.",
+      "attachments": [
+        {
+          "kind": "hiddenObjectSlots",
+          "id": "orchard_apple"
+        }
+      ]
+    },
+    {
+      "id": "lc5_curb_flower_display",
+      "before": {
+        "id": "lc5_curb_flower_display",
+        "layer": "depth",
+        "center": {
+          "x": -260,
+          "y": -270
+        },
+        "size": {
+          "width": 150,
+          "height": 140
+        },
+        "alpha": true,
+        "footY": -335,
+        "purpose": "Flower stall beside the short western branch; independent leaf reveal exposes a seed packet.",
+        "textureScale": 3
+      },
+      "after": {
+        "id": "lc5_curb_flower_display",
+        "layer": "depth",
+        "center": {
+          "x": -1015,
+          "y": -90
+        },
+        "size": {
+          "width": 150,
+          "height": 140
+        },
+        "alpha": true,
+        "footY": -155,
+        "purpose": "Flower stall beside the short western branch; independent leaf reveal exposes a seed packet.",
+        "textureScale": 3
+      },
+      "delta": {
+        "x": -755,
+        "y": 180
+      },
+      "reason": "Group the seed display with the existing flower courtyard.",
+      "attachments": [
+        {
+          "kind": "hiddenObjectSlots",
+          "id": "seed_packet"
+        },
+        {
+          "kind": "interactiveSlots",
+          "id": "flower_leaves"
+        }
+      ]
+    },
+    {
+      "id": "lc5_street_banner_front",
+      "before": {
+        "id": "lc5_street_banner_front",
+        "layer": "overhead",
+        "center": {
+          "x": -30,
+          "y": 560
+        },
+        "size": {
+          "width": 380,
+          "height": 60
+        },
+        "alpha": true,
+        "purpose": "Short overhead banner at the northern bend; retained generated image supports the original knot target.",
+        "reusedGeneratedSourceBatch": "ai_image_v4",
+        "textureScale": 3
+      },
+      "after": {
+        "id": "lc5_street_banner_front",
+        "layer": "overhead",
+        "center": {
+          "x": -400,
+          "y": 620
+        },
+        "size": {
+          "width": 285,
+          "height": 45
+        },
+        "alpha": true,
+        "purpose": "Short overhead banner at the northern bend; retained generated image supports the original knot target.",
+        "reusedGeneratedSourceBatch": "ai_image_v4",
+        "textureScale": 4
+      },
+      "delta": {
+        "x": -370,
+        "y": 60
+      },
+      "reason": "Hang the existing garland from the tea shop awning instead of unsupported across the street.",
+      "attachments": []
+    }
+  ],
+  "clues": {
+    "seed_packet": "花店庭院西侧的花架上，拨开叶片看看。",
+    "orchard_apple": "面包店右侧的果蔬篮里，红彤彤的果子等人带回家。",
+    "pink_watering_can": "园艺小屋右边的洗手台下层，放着一只小水壶。"
+  },
+  "playerVisualApproval": "pending",
+  "runtimeVerification": {
+    "status": "web_mobile_verified",
+    "playerVisualApproval": "pending",
+    "wechatPhone": "not_run",
+    "sceneBlueprintSha256": "420b67ea04508cb9f412e63da0b2eb66bd0815735a6800d30593b608cf956773",
+    "reports": {
+      "chapter_1/runtime_report.json": {
+        "path": "art/review/ai_image_v15/chapter_1/runtime_report.json",
+        "sha256": "1cb4e0e803db8d580623a356591ca67dab9662f87d4786125822320ceee8e6d5"
+      },
+      "placement_review.json": {
+        "path": "art/review/ai_image_v15/placement_review.json",
+        "sha256": "d683b929e86e153d7d22a7796931eaef226fe659f63b9fe12ed710e893f1c16c"
+      },
+      "after_final/staging_report.json": {
+        "path": "art/review/ai_image_v15/after_final/staging_report.json",
+        "sha256": "6be0aa1e79461ab976f938b19b57d5d56c30e2fc6ece3dd002a63accb28485e2"
+      }
+    },
+    "unchangedChaptersBaseline": "art/review/ai_image_v14/three_chapters_retry/runtime_report.json"
+  }
+}

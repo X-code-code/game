@@ -2033,7 +2033,9 @@
       "generationRecordPath": "art/production/ai_image_v6/generation_record.json",
       "idManifestPath": "art/production/ai_image_v6/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v6/chapter_1_followup/runtime_report.json",
-      "description": "First-chapter content PNG; generated source retained, mechanically exported and Web Mobile verified. Player visual approval pending."
+      "description": "First-chapter content PNG; generated source retained, mechanically exported and Web Mobile verified. Player visual approval pending.",
+      "activeInFirstChapter": false,
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "wooden_bird_target_v6",
@@ -2058,7 +2060,8 @@
       "runtimeReviewPath": "art/review/ai_image_v6/chapter_1_followup/runtime_report.json",
       "description": "First-chapter content PNG; generated source retained, mechanically exported and Web Mobile verified. Player visual approval pending.",
       "activeInFirstChapter": false,
-      "supersededFirstChapterRuntimeByBatch": "ai_image_v10"
+      "supersededFirstChapterRuntimeByBatch": "ai_image_v10",
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "garden_glove_target_v6",
@@ -2106,7 +2109,9 @@
       "generationRecordPath": "art/production/ai_image_v6/generation_record.json",
       "idManifestPath": "art/production/ai_image_v6/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v6/chapter_1_followup/runtime_report.json",
-      "description": "First-chapter content PNG; generated source retained, mechanically exported and Web Mobile verified. Player visual approval pending."
+      "description": "First-chapter content PNG; generated source retained, mechanically exported and Web Mobile verified. Player visual approval pending.",
+      "activeInFirstChapter": false,
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "pink_watering_can_target_v6",
@@ -2131,7 +2136,8 @@
       "runtimeReviewPath": "art/review/ai_image_v6/chapter_1_followup/runtime_report.json",
       "description": "First-chapter content PNG; generated source retained, mechanically exported and Web Mobile verified. Player visual approval pending.",
       "activeInFirstChapter": false,
-      "supersededFirstChapterRuntimeByBatch": "ai_image_v10"
+      "supersededFirstChapterRuntimeByBatch": "ai_image_v10",
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "postcard_target_v6",
@@ -2179,7 +2185,9 @@
       "generationRecordPath": "art/production/ai_image_v6/generation_record.json",
       "idManifestPath": "art/production/ai_image_v6/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v6/chapter_1_followup/runtime_report.json",
-      "description": "First-chapter content PNG; generated source retained, mechanically exported and Web Mobile verified. Player visual approval pending."
+      "description": "First-chapter content PNG; generated source retained, mechanically exported and Web Mobile verified. Player visual approval pending.",
+      "activeInFirstChapter": false,
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "tiny_camera_target_v6",
@@ -2252,7 +2260,8 @@
       "runtimeReviewPath": "art/review/ai_image_v6/chapter_1_followup/runtime_report.json",
       "description": "First-chapter content PNG; generated source retained, mechanically exported and Web Mobile verified. Player visual approval pending.",
       "activeInFirstChapter": false,
-      "supersededFirstChapterRuntimeByBatch": "ai_image_v11"
+      "supersededFirstChapterRuntimeByBatch": "ai_image_v11",
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "laundry_peg_target_v6",
@@ -2277,7 +2286,8 @@
       "runtimeReviewPath": "art/review/ai_image_v6/chapter_1_followup/runtime_report.json",
       "description": "First-chapter content PNG; generated source retained, mechanically exported and Web Mobile verified. Player visual approval pending.",
       "activeInFirstChapter": false,
-      "supersededFirstChapterRuntimeByBatch": "ai_image_v11"
+      "supersededFirstChapterRuntimeByBatch": "ai_image_v11",
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "book_satchel_closed_v6",
@@ -2300,7 +2310,9 @@
       "generationRecordPath": "art/production/ai_image_v6/generation_record.json",
       "idManifestPath": "art/production/ai_image_v6/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v6/chapter_1_followup/runtime_report.json",
-      "description": "First-chapter content PNG; generated source retained, mechanically exported and Web Mobile verified. Player visual approval pending."
+      "description": "First-chapter content PNG; generated source retained, mechanically exported and Web Mobile verified. Player visual approval pending.",
+      "activeInFirstChapter": false,
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "book_satchel_opened_v6",
@@ -2323,7 +2335,9 @@
       "generationRecordPath": "art/production/ai_image_v6/generation_record.json",
       "idManifestPath": "art/production/ai_image_v6/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v6/chapter_1_followup/runtime_report.json",
-      "description": "First-chapter content PNG; generated source retained, mechanically exported and Web Mobile verified. Player visual approval pending."
+      "description": "First-chapter content PNG; generated source retained, mechanically exported and Web Mobile verified. Player visual approval pending.",
+      "activeInFirstChapter": false,
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "garden_toolbox_closed_v6",
@@ -2346,7 +2360,9 @@
       "generationRecordPath": "art/production/ai_image_v6/generation_record.json",
       "idManifestPath": "art/production/ai_image_v6/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v6/chapter_1_followup/runtime_report.json",
-      "description": "First-chapter content PNG; generated source retained, mechanically exported and Web Mobile verified. Player visual approval pending."
+      "description": "First-chapter content PNG; generated source retained, mechanically exported and Web Mobile verified. Player visual approval pending.",
+      "activeInFirstChapter": false,
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "garden_toolbox_opened_v6",
@@ -2369,7 +2385,9 @@
       "generationRecordPath": "art/production/ai_image_v6/generation_record.json",
       "idManifestPath": "art/production/ai_image_v6/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v6/chapter_1_followup/runtime_report.json",
-      "description": "First-chapter content PNG; generated source retained, mechanically exported and Web Mobile verified. Player visual approval pending."
+      "description": "First-chapter content PNG; generated source retained, mechanically exported and Web Mobile verified. Player visual approval pending.",
+      "activeInFirstChapter": false,
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "picnic_basket_closed_v6",
@@ -4601,7 +4619,8 @@
       "idManifestPath": "art/production/ai_image_v8/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v8/three_chapters/runtime_report.json",
       "description": "Generated courtyard/detail PNG, mechanically registered and Web Mobile verified; player visual approval pending.",
-      "activeInFirstChapter": true
+      "activeInFirstChapter": false,
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "target_tailor_thimble_v8",
@@ -4626,7 +4645,8 @@
       "idManifestPath": "art/production/ai_image_v8/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v8/three_chapters/runtime_report.json",
       "description": "Generated courtyard/detail PNG, mechanically registered and Web Mobile verified; player visual approval pending.",
-      "activeInFirstChapter": true
+      "activeInFirstChapter": false,
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "target_banner_knot_v8",
@@ -4651,7 +4671,8 @@
       "idManifestPath": "art/production/ai_image_v8/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v8/three_chapters/runtime_report.json",
       "description": "Generated courtyard/detail PNG, mechanically registered and Web Mobile verified; player visual approval pending.",
-      "activeInFirstChapter": true
+      "activeInFirstChapter": false,
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "target_chestnut_tongs_v8",
@@ -4676,7 +4697,8 @@
       "idManifestPath": "art/production/ai_image_v8/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v8/three_chapters/runtime_report.json",
       "description": "Generated courtyard/detail PNG, mechanically registered and Web Mobile verified; player visual approval pending.",
-      "activeInFirstChapter": true
+      "activeInFirstChapter": false,
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "target_pocket_watch_v8",
@@ -4751,7 +4773,8 @@
       "idManifestPath": "art/production/ai_image_v8/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v8/three_chapters/runtime_report.json",
       "description": "Generated courtyard/detail PNG, mechanically registered and Web Mobile verified; player visual approval pending.",
-      "activeInFirstChapter": true
+      "activeInFirstChapter": false,
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "target_sealed_letter_v8",
@@ -4801,7 +4824,8 @@
       "idManifestPath": "art/production/ai_image_v8/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v8/three_chapters/runtime_report.json",
       "description": "Generated courtyard/detail PNG, mechanically registered and Web Mobile verified; player visual approval pending.",
-      "activeInFirstChapter": true
+      "activeInFirstChapter": false,
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "target_seed_packet_v8",
@@ -4851,7 +4875,8 @@
       "idManifestPath": "art/production/ai_image_v8/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v8/three_chapters/runtime_report.json",
       "description": "Generated courtyard/detail PNG, mechanically registered and Web Mobile verified; player visual approval pending.",
-      "activeInFirstChapter": true
+      "activeInFirstChapter": false,
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "target_golden_bun_v8",
@@ -5584,7 +5609,7 @@
       "format": "PNG",
       "size": "256x166",
       "transparent": true,
-      "activeInFirstChapter": true,
+      "activeInFirstChapter": false,
       "sourcePath": "art/production/ai_image_v9/sources/everyday_targets_v9.png",
       "promptPath": "art/production/ai_image_v9/prompts/everyday_targets_v9.md",
       "sourceSha256": "d03ae974562dc11531936569105b81576efe30647d758abd975337ef8019dd0c",
@@ -5593,7 +5618,8 @@
       "generationRecordPath": "art/production/ai_image_v9/generation_record.json",
       "idManifestPath": "art/production/ai_image_v9/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v9/before_pen_surface/runtime_report.json",
-      "supersededFirstChapterRuntimeByBatch": "ai_image_v9"
+      "supersededFirstChapterRuntimeByBatch": "ai_image_v9",
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "target_paper_boat_v9",
@@ -5632,7 +5658,7 @@
       "format": "PNG",
       "size": "256x243",
       "transparent": true,
-      "activeInFirstChapter": true,
+      "activeInFirstChapter": false,
       "sourcePath": "art/production/ai_image_v9/sources/everyday_targets_v9.png",
       "promptPath": "art/production/ai_image_v9/prompts/everyday_targets_v9.md",
       "sourceSha256": "d03ae974562dc11531936569105b81576efe30647d758abd975337ef8019dd0c",
@@ -5641,7 +5667,8 @@
       "generationRecordPath": "art/production/ai_image_v9/generation_record.json",
       "idManifestPath": "art/production/ai_image_v9/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v9/before_pen_surface/runtime_report.json",
-      "supersededFirstChapterRuntimeByBatch": "ai_image_v9"
+      "supersededFirstChapterRuntimeByBatch": "ai_image_v9",
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "target_enamel_mug_v9",
@@ -5680,7 +5707,7 @@
       "format": "PNG",
       "size": "242x256",
       "transparent": true,
-      "activeInFirstChapter": true,
+      "activeInFirstChapter": false,
       "sourcePath": "art/production/ai_image_v9/sources/craft_snack_targets_v9.png",
       "promptPath": "art/production/ai_image_v9/prompts/craft_snack_targets_v9.md",
       "sourceSha256": "2d04e1ecb1599a7396632f89768b9df928fd07f7b2537f5d91ab22272573b8d4",
@@ -5689,7 +5716,8 @@
       "generationRecordPath": "art/production/ai_image_v9/generation_record.json",
       "idManifestPath": "art/production/ai_image_v9/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v9/before_pen_surface/runtime_report.json",
-      "supersededFirstChapterRuntimeByBatch": "ai_image_v9"
+      "supersededFirstChapterRuntimeByBatch": "ai_image_v9",
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "target_brass_key_v9",
@@ -5704,7 +5732,7 @@
       "format": "PNG",
       "size": "256x166",
       "transparent": true,
-      "activeInFirstChapter": true,
+      "activeInFirstChapter": false,
       "sourcePath": "art/production/ai_image_v9/sources/craft_snack_targets_v9.png",
       "promptPath": "art/production/ai_image_v9/prompts/craft_snack_targets_v9.md",
       "sourceSha256": "2d04e1ecb1599a7396632f89768b9df928fd07f7b2537f5d91ab22272573b8d4",
@@ -5713,7 +5741,8 @@
       "generationRecordPath": "art/production/ai_image_v9/generation_record.json",
       "idManifestPath": "art/production/ai_image_v9/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v9/before_pen_surface/runtime_report.json",
-      "supersededFirstChapterRuntimeByBatch": "ai_image_v9"
+      "supersededFirstChapterRuntimeByBatch": "ai_image_v9",
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "target_lemonade_bottle_v9",
@@ -5728,7 +5757,7 @@
       "format": "PNG",
       "size": "175x256",
       "transparent": true,
-      "activeInFirstChapter": true,
+      "activeInFirstChapter": false,
       "sourcePath": "art/production/ai_image_v9/sources/craft_snack_targets_v9.png",
       "promptPath": "art/production/ai_image_v9/prompts/craft_snack_targets_v9.md",
       "sourceSha256": "2d04e1ecb1599a7396632f89768b9df928fd07f7b2537f5d91ab22272573b8d4",
@@ -5737,7 +5766,8 @@
       "generationRecordPath": "art/production/ai_image_v9/generation_record.json",
       "idManifestPath": "art/production/ai_image_v9/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v9/before_pen_surface/runtime_report.json",
-      "supersededFirstChapterRuntimeByBatch": "ai_image_v9"
+      "supersededFirstChapterRuntimeByBatch": "ai_image_v9",
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "target_lemon_candy_v9",
@@ -5752,7 +5782,7 @@
       "format": "PNG",
       "size": "256x173",
       "transparent": true,
-      "activeInFirstChapter": true,
+      "activeInFirstChapter": false,
       "sourcePath": "art/production/ai_image_v9/sources/craft_snack_targets_v9.png",
       "promptPath": "art/production/ai_image_v9/prompts/craft_snack_targets_v9.md",
       "sourceSha256": "2d04e1ecb1599a7396632f89768b9df928fd07f7b2537f5d91ab22272573b8d4",
@@ -5761,7 +5791,8 @@
       "generationRecordPath": "art/production/ai_image_v9/generation_record.json",
       "idManifestPath": "art/production/ai_image_v9/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v9/before_pen_surface/runtime_report.json",
-      "supersededFirstChapterRuntimeByBatch": "ai_image_v9"
+      "supersededFirstChapterRuntimeByBatch": "ai_image_v9",
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "biscuit_tin_closed_v9",
@@ -5776,7 +5807,7 @@
       "format": "PNG",
       "size": "256x256",
       "transparent": true,
-      "activeInFirstChapter": true,
+      "activeInFirstChapter": false,
       "sourcePath": "art/production/ai_image_v9/sources/biscuit_tin_states_v9.png",
       "promptPath": "art/production/ai_image_v9/prompts/biscuit_tin_states_v9.md",
       "sourceSha256": "198157b6c6aa855efa1553b28b3a4330f890d9b244641b5c397b81f7c6c0ab3c",
@@ -5784,7 +5815,8 @@
       "generationRecordPath": "art/production/ai_image_v9/generation_record.json",
       "idManifestPath": "art/production/ai_image_v9/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v9/before_pen_surface/runtime_report.json",
-      "supersededFirstChapterRuntimeByBatch": "ai_image_v9"
+      "supersededFirstChapterRuntimeByBatch": "ai_image_v9",
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "biscuit_tin_opened_v9",
@@ -5799,7 +5831,7 @@
       "format": "PNG",
       "size": "256x256",
       "transparent": true,
-      "activeInFirstChapter": true,
+      "activeInFirstChapter": false,
       "sourcePath": "art/production/ai_image_v9/sources/biscuit_tin_states_v9.png",
       "promptPath": "art/production/ai_image_v9/prompts/biscuit_tin_states_v9.md",
       "sourceSha256": "198157b6c6aa855efa1553b28b3a4330f890d9b244641b5c397b81f7c6c0ab3c",
@@ -5807,7 +5839,8 @@
       "generationRecordPath": "art/production/ai_image_v9/generation_record.json",
       "idManifestPath": "art/production/ai_image_v9/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v9/before_pen_surface/runtime_report.json",
-      "supersededFirstChapterRuntimeByBatch": "ai_image_v9"
+      "supersededFirstChapterRuntimeByBatch": "ai_image_v9",
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "trinket_box_closed_v9",
@@ -5822,7 +5855,7 @@
       "format": "PNG",
       "size": "256x256",
       "transparent": true,
-      "activeInFirstChapter": true,
+      "activeInFirstChapter": false,
       "sourcePath": "art/production/ai_image_v9/sources/trinket_box_states_v9.png",
       "promptPath": "art/production/ai_image_v9/prompts/trinket_box_states_v9.md",
       "sourceSha256": "617fb7989d4137df391b1d2ca8b69c5766a254664ab74f52f2b0890d1744fbc2",
@@ -5830,7 +5863,8 @@
       "generationRecordPath": "art/production/ai_image_v9/generation_record.json",
       "idManifestPath": "art/production/ai_image_v9/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v9/before_pen_surface/runtime_report.json",
-      "supersededFirstChapterRuntimeByBatch": "ai_image_v9"
+      "supersededFirstChapterRuntimeByBatch": "ai_image_v9",
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "trinket_box_opened_v9",
@@ -5845,7 +5879,7 @@
       "format": "PNG",
       "size": "256x256",
       "transparent": true,
-      "activeInFirstChapter": true,
+      "activeInFirstChapter": false,
       "sourcePath": "art/production/ai_image_v9/sources/trinket_box_states_v9.png",
       "promptPath": "art/production/ai_image_v9/prompts/trinket_box_states_v9.md",
       "sourceSha256": "617fb7989d4137df391b1d2ca8b69c5766a254664ab74f52f2b0890d1744fbc2",
@@ -5853,7 +5887,8 @@
       "generationRecordPath": "art/production/ai_image_v9/generation_record.json",
       "idManifestPath": "art/production/ai_image_v9/production_manifest.json",
       "runtimeReviewPath": "art/review/ai_image_v9/before_pen_surface/runtime_report.json",
-      "supersededFirstChapterRuntimeByBatch": "ai_image_v9"
+      "supersededFirstChapterRuntimeByBatch": "ai_image_v9",
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "chicken_lane_child_v9_frame_01",
@@ -7464,7 +7499,7 @@
       "format": "PNG",
       "size": "256x137",
       "transparent": true,
-      "activeInFirstChapter": true,
+      "activeInFirstChapter": false,
       "sourcePath": "art/production/ai_image_v10/sources/pink_watering_can_surface_v10.png",
       "promptPath": "art/production/ai_image_v10/prompts/pink_watering_can_surface_v10.md",
       "sourceSha256": "e5268a74d93e0cf793c948e7eeab0d57a9b7472db80fb9822428def93cc1d99e",
@@ -7498,7 +7533,8 @@
             "sha256": "8598bb0f001e67be50200e049b12e7d4b5b2a9e23f74cf0c942b019c541d9dc2"
           }
         }
-      }
+      },
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "wooden_bird_surface_v10",
@@ -7514,7 +7550,7 @@
       "format": "PNG",
       "size": "256x181",
       "transparent": true,
-      "activeInFirstChapter": true,
+      "activeInFirstChapter": false,
       "sourcePath": "art/production/ai_image_v10/sources/wooden_bird_surface_v10.png",
       "promptPath": "art/production/ai_image_v10/prompts/wooden_bird_surface_v10.md",
       "sourceSha256": "990cddb5c888e69396b1ca66684e2cb4e54a356a62814a8a2f6a0e7e301655e5",
@@ -7548,7 +7584,8 @@
             "sha256": "8598bb0f001e67be50200e049b12e7d4b5b2a9e23f74cf0c942b019c541d9dc2"
           }
         }
-      }
+      },
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "ai_image_v10",
@@ -7748,7 +7785,7 @@
       "format": "PNG",
       "size": "256x173",
       "transparent": true,
-      "activeInFirstChapter": true,
+      "activeInFirstChapter": false,
       "sourcePath": "art/production/ai_image_v11/sources/yarn_ball_refined_v11.png",
       "promptPath": "art/production/ai_image_v11/prompts/yarn_ball_refined_v11.md",
       "sourceSha256": "4c4805a5da85888a89ff136c826a8a0dae6ff87e279346a2646392ecb44fcdfd",
@@ -7805,7 +7842,8 @@
             "sha256": "e52a3cf12546bae38aa0bcb3b2032ca189d9b7e26f8ea113fa290f3b4a1d44ee"
           }
         ]
-      }
+      },
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "laundry_peg_refined_v11",
@@ -7820,7 +7858,7 @@
       "format": "PNG",
       "size": "96x256",
       "transparent": true,
-      "activeInFirstChapter": true,
+      "activeInFirstChapter": false,
       "sourcePath": "art/production/ai_image_v11/sources/laundry_peg_refined_v11.png",
       "promptPath": "art/production/ai_image_v11/prompts/laundry_peg_refined_v11.md",
       "sourceSha256": "a220d50b371cfe36aea0ad5eab9c0a5c28e6bfbafc33ba562d376dacbf213c89",
@@ -7877,7 +7915,8 @@
             "sha256": "e52a3cf12546bae38aa0bcb3b2032ca189d9b7e26f8ea113fa290f3b4a1d44ee"
           }
         ]
-      }
+      },
+      "retiredFromFirstChapterByRevision": "target_reduction_v16"
     },
     {
       "id": "ai_image_v11",
@@ -30773,9 +30812,280 @@
         },
         "unchangedChaptersBaseline": "art/review/ai_image_v12/three_chapters/runtime_report.json"
       }
+    },
+    {
+      "id": "scene_staging_v15",
+      "category": "existing_scene_layout_revision",
+      "sourceType": "existing_generated_png_placement",
+      "newGenerationCalls": 0,
+      "newContent": 0,
+      "pixelFilesChanged": 0,
+      "status": "runtime_verified_visual_unapproved",
+      "layoutChangesPath": "art/production/scene_staging_v15/layout_changes.json",
+      "runtimeVerification": {
+        "status": "web_mobile_verified",
+        "playerVisualApproval": "pending",
+        "wechatPhone": "not_run",
+        "sceneBlueprintSha256": "420b67ea04508cb9f412e63da0b2eb66bd0815735a6800d30593b608cf956773",
+        "reports": {
+          "chapter_1/runtime_report.json": {
+            "path": "art/review/ai_image_v15/chapter_1/runtime_report.json",
+            "sha256": "1cb4e0e803db8d580623a356591ca67dab9662f87d4786125822320ceee8e6d5"
+          },
+          "placement_review.json": {
+            "path": "art/review/ai_image_v15/placement_review.json",
+            "sha256": "d683b929e86e153d7d22a7796931eaef226fe659f63b9fe12ed710e893f1c16c"
+          },
+          "after_final/staging_report.json": {
+            "path": "art/review/ai_image_v15/after_final/staging_report.json",
+            "sha256": "6be0aa1e79461ab976f938b19b57d5d56c30e2fc6ece3dd002a63accb28485e2"
+          }
+        },
+        "unchangedChaptersBaseline": "art/review/ai_image_v14/three_chapters_retry/runtime_report.json"
+      }
+    },
+    {
+      "id": "target_reduction_v16",
+      "category": "existing_target_selection_revision",
+      "sourceType": "configuration_only",
+      "targets": 12,
+      "reveals": 4,
+      "retiredTargets": 20,
+      "retiredReveals": 4,
+      "newGenerationCalls": 0,
+      "changeRecordPath": "art/production/target_reduction_v16/change_record.json",
+      "runtimeVerification": {
+        "status": "web_mobile_verified",
+        "playerApproval": "pending",
+        "wechatPhone": "not_run",
+        "report": "art/review/ai_image_v16/three_chapters/runtime_report.json",
+        "sha256": "7dea64f8c697d8b54b053af579f9ae161c720f2df653e90535d21119275897a6"
+      }
+    },
+    {
+      "id": "ui_journal_panel_v17_living_city_street_block_01",
+      "category": "generated_ui",
+      "sourceType": "codex_builtin_image_gen",
+      "productionBatch": "ai_image_v17",
+      "sourcePath": "art/production/ai_image_v17/sources/ui_journal_panel_v17.png",
+      "promptPath": "art/production/ai_image_v17/prompts/ui_journal_panel_v17.md",
+      "sourceSha256": "b1ea0fb867e84563cd143878ac6478b5c8b869a50cef83b2438cde73b4bb1ee3",
+      "sourceSize": {
+        "width": 1860,
+        "height": 845
+      },
+      "path": "assets/generated/ui_journal_panel_v17.png",
+      "runtimePath": "assets/bundles/city_living_city_street_block_01/ui/ui_journal_panel_v17.png",
+      "size": {
+        "width": 1024,
+        "height": 480
+      },
+      "sha256": "2d9f12002421afd8c5177dc24736fda9b24d21a8a0003091bd40d1ace7f15364",
+      "uuid": "952e37a7-4f82-438d-a7f9-a58fc120f73a",
+      "status": "runtime_verified_visual_unapproved",
+      "runtimeVerification": {
+        "status": "web_mobile_verified",
+        "playerVisualApproval": "pending",
+        "wechatPhone": "not_run",
+        "reports": {
+          "tray_verified/tray_report.json": {
+            "path": "art/review/ai_image_v17/tray_verified/tray_report.json",
+            "sha256": "c35e989fdd0343b64a3d76a0984b72e9633ec59fd9d05bedca08e292d38cf635"
+          },
+          "three_chapters/runtime_report.json": {
+            "path": "art/review/ai_image_v17/three_chapters/runtime_report.json",
+            "sha256": "e2003f5107dc8f9b665be0b9ba5ae6a9c853117c36830ec86dfac7d349b32eb3"
+          }
+        }
+      }
+    },
+    {
+      "id": "ui_journal_card_v17_living_city_street_block_01",
+      "category": "generated_ui",
+      "sourceType": "codex_builtin_image_gen",
+      "productionBatch": "ai_image_v17",
+      "sourcePath": "art/production/ai_image_v17/sources/ui_journal_card_v17.png",
+      "promptPath": "art/production/ai_image_v17/prompts/ui_journal_card_v17.md",
+      "sourceSha256": "f3c8af4958fb494af539e94e8a8a1f236d0255448305f1a6d3bfcdee1684b0f3",
+      "sourceSize": {
+        "width": 1230,
+        "height": 1278
+      },
+      "path": "assets/generated/ui_journal_card_v17.png",
+      "runtimePath": "assets/bundles/city_living_city_street_block_01/ui/ui_journal_card_v17.png",
+      "size": {
+        "width": 192,
+        "height": 208
+      },
+      "sha256": "d838e00e55c0b0a96108fd7e520f8b7f28c9b12e6059b3e96a454f2eb88ddae8",
+      "uuid": "23e93280-42a7-4b33-a771-79142c57ef68",
+      "status": "runtime_verified_visual_unapproved",
+      "runtimeVerification": {
+        "status": "web_mobile_verified",
+        "playerVisualApproval": "pending",
+        "wechatPhone": "not_run",
+        "reports": {
+          "tray_verified/tray_report.json": {
+            "path": "art/review/ai_image_v17/tray_verified/tray_report.json",
+            "sha256": "c35e989fdd0343b64a3d76a0984b72e9633ec59fd9d05bedca08e292d38cf635"
+          },
+          "three_chapters/runtime_report.json": {
+            "path": "art/review/ai_image_v17/three_chapters/runtime_report.json",
+            "sha256": "e2003f5107dc8f9b665be0b9ba5ae6a9c853117c36830ec86dfac7d349b32eb3"
+          }
+        }
+      }
+    },
+    {
+      "id": "ui_journal_panel_v17_living_city_garden_market_02",
+      "category": "generated_ui",
+      "sourceType": "codex_builtin_image_gen",
+      "productionBatch": "ai_image_v17",
+      "sourcePath": "art/production/ai_image_v17/sources/ui_journal_panel_v17.png",
+      "promptPath": "art/production/ai_image_v17/prompts/ui_journal_panel_v17.md",
+      "sourceSha256": "b1ea0fb867e84563cd143878ac6478b5c8b869a50cef83b2438cde73b4bb1ee3",
+      "sourceSize": {
+        "width": 1860,
+        "height": 845
+      },
+      "path": "assets/generated/ui_journal_panel_v17.png",
+      "runtimePath": "assets/bundles/city_living_city_garden_market_02/ui/ui_journal_panel_v17.png",
+      "size": {
+        "width": 1024,
+        "height": 480
+      },
+      "sha256": "2d9f12002421afd8c5177dc24736fda9b24d21a8a0003091bd40d1ace7f15364",
+      "uuid": "ccd7cf6d-b9e8-45d0-ad84-56f669c083b1",
+      "status": "runtime_verified_visual_unapproved",
+      "runtimeVerification": {
+        "status": "web_mobile_verified",
+        "playerVisualApproval": "pending",
+        "wechatPhone": "not_run",
+        "reports": {
+          "tray_verified/tray_report.json": {
+            "path": "art/review/ai_image_v17/tray_verified/tray_report.json",
+            "sha256": "c35e989fdd0343b64a3d76a0984b72e9633ec59fd9d05bedca08e292d38cf635"
+          },
+          "three_chapters/runtime_report.json": {
+            "path": "art/review/ai_image_v17/three_chapters/runtime_report.json",
+            "sha256": "e2003f5107dc8f9b665be0b9ba5ae6a9c853117c36830ec86dfac7d349b32eb3"
+          }
+        }
+      }
+    },
+    {
+      "id": "ui_journal_card_v17_living_city_garden_market_02",
+      "category": "generated_ui",
+      "sourceType": "codex_builtin_image_gen",
+      "productionBatch": "ai_image_v17",
+      "sourcePath": "art/production/ai_image_v17/sources/ui_journal_card_v17.png",
+      "promptPath": "art/production/ai_image_v17/prompts/ui_journal_card_v17.md",
+      "sourceSha256": "f3c8af4958fb494af539e94e8a8a1f236d0255448305f1a6d3bfcdee1684b0f3",
+      "sourceSize": {
+        "width": 1230,
+        "height": 1278
+      },
+      "path": "assets/generated/ui_journal_card_v17.png",
+      "runtimePath": "assets/bundles/city_living_city_garden_market_02/ui/ui_journal_card_v17.png",
+      "size": {
+        "width": 192,
+        "height": 208
+      },
+      "sha256": "d838e00e55c0b0a96108fd7e520f8b7f28c9b12e6059b3e96a454f2eb88ddae8",
+      "uuid": "110ad295-740e-4475-92b9-bc37fb161d38",
+      "status": "runtime_verified_visual_unapproved",
+      "runtimeVerification": {
+        "status": "web_mobile_verified",
+        "playerVisualApproval": "pending",
+        "wechatPhone": "not_run",
+        "reports": {
+          "tray_verified/tray_report.json": {
+            "path": "art/review/ai_image_v17/tray_verified/tray_report.json",
+            "sha256": "c35e989fdd0343b64a3d76a0984b72e9633ec59fd9d05bedca08e292d38cf635"
+          },
+          "three_chapters/runtime_report.json": {
+            "path": "art/review/ai_image_v17/three_chapters/runtime_report.json",
+            "sha256": "e2003f5107dc8f9b665be0b9ba5ae6a9c853117c36830ec86dfac7d349b32eb3"
+          }
+        }
+      }
+    },
+    {
+      "id": "ui_journal_panel_v17_living_city_harbor_walk_03",
+      "category": "generated_ui",
+      "sourceType": "codex_builtin_image_gen",
+      "productionBatch": "ai_image_v17",
+      "sourcePath": "art/production/ai_image_v17/sources/ui_journal_panel_v17.png",
+      "promptPath": "art/production/ai_image_v17/prompts/ui_journal_panel_v17.md",
+      "sourceSha256": "b1ea0fb867e84563cd143878ac6478b5c8b869a50cef83b2438cde73b4bb1ee3",
+      "sourceSize": {
+        "width": 1860,
+        "height": 845
+      },
+      "path": "assets/generated/ui_journal_panel_v17.png",
+      "runtimePath": "assets/bundles/city_living_city_harbor_walk_03/ui/ui_journal_panel_v17.png",
+      "size": {
+        "width": 1024,
+        "height": 480
+      },
+      "sha256": "2d9f12002421afd8c5177dc24736fda9b24d21a8a0003091bd40d1ace7f15364",
+      "uuid": "147772c8-0ced-4a9b-9102-07c4ce22d695",
+      "status": "runtime_verified_visual_unapproved",
+      "runtimeVerification": {
+        "status": "web_mobile_verified",
+        "playerVisualApproval": "pending",
+        "wechatPhone": "not_run",
+        "reports": {
+          "tray_verified/tray_report.json": {
+            "path": "art/review/ai_image_v17/tray_verified/tray_report.json",
+            "sha256": "c35e989fdd0343b64a3d76a0984b72e9633ec59fd9d05bedca08e292d38cf635"
+          },
+          "three_chapters/runtime_report.json": {
+            "path": "art/review/ai_image_v17/three_chapters/runtime_report.json",
+            "sha256": "e2003f5107dc8f9b665be0b9ba5ae6a9c853117c36830ec86dfac7d349b32eb3"
+          }
+        }
+      }
+    },
+    {
+      "id": "ui_journal_card_v17_living_city_harbor_walk_03",
+      "category": "generated_ui",
+      "sourceType": "codex_builtin_image_gen",
+      "productionBatch": "ai_image_v17",
+      "sourcePath": "art/production/ai_image_v17/sources/ui_journal_card_v17.png",
+      "promptPath": "art/production/ai_image_v17/prompts/ui_journal_card_v17.md",
+      "sourceSha256": "f3c8af4958fb494af539e94e8a8a1f236d0255448305f1a6d3bfcdee1684b0f3",
+      "sourceSize": {
+        "width": 1230,
+        "height": 1278
+      },
+      "path": "assets/generated/ui_journal_card_v17.png",
+      "runtimePath": "assets/bundles/city_living_city_harbor_walk_03/ui/ui_journal_card_v17.png",
+      "size": {
+        "width": 192,
+        "height": 208
+      },
+      "sha256": "d838e00e55c0b0a96108fd7e520f8b7f28c9b12e6059b3e96a454f2eb88ddae8",
+      "uuid": "cd0e83d2-7767-46f2-a7c8-c7830fc50cc3",
+      "status": "runtime_verified_visual_unapproved",
+      "runtimeVerification": {
+        "status": "web_mobile_verified",
+        "playerVisualApproval": "pending",
+        "wechatPhone": "not_run",
+        "reports": {
+          "tray_verified/tray_report.json": {
+            "path": "art/review/ai_image_v17/tray_verified/tray_report.json",
+            "sha256": "c35e989fdd0343b64a3d76a0984b72e9633ec59fd9d05bedca08e292d38cf635"
+          },
+          "three_chapters/runtime_report.json": {
+            "path": "art/review/ai_image_v17/three_chapters/runtime_report.json",
+            "sha256": "e2003f5107dc8f9b665be0b9ba5ae6a9c853117c36830ec86dfac7d349b32eb3"
+          }
+        }
+      }
     }
   ],
-  "currentProductionId": "ai_image_v13",
+  "currentProductionId": "ai_image_v17",
   "activeProductionByChapter": {
     "living_city_street_block_01": {
       "sceneBase": "ai_image_v5",
@@ -30876,48 +31186,24 @@
         "visiting_child": "ai_image_v12"
       },
       "targetsById": {
-        "tea_clay_whistle": "ai_image_v8",
-        "tailor_thimble": "ai_image_v8",
-        "banner_knot": "ai_image_v8",
-        "chestnut_tongs": "ai_image_v8",
         "pocket_watch": "ai_image_v8",
         "sewing_scissors": "ai_image_v8",
-        "blue_feather": "ai_image_v8",
         "sealed_letter": "ai_image_v8",
-        "honey_dipper": "ai_image_v8",
         "seed_packet": "ai_image_v8",
-        "orchard_apple": "ai_image_v8",
         "golden_bun": "ai_image_v8",
         "reading_glasses": "ai_image_v11",
-        "bookmark": "ai_image_v6",
         "garden_glove": "ai_image_v10",
-        "seedling_spade": "ai_image_v6",
-        "wooden_bird": "ai_image_v10",
-        "pink_watering_can": "ai_image_v10",
         "postcard": "ai_image_v11",
-        "stamp_roll": "ai_image_v6",
         "tiny_camera": "ai_image_v10",
-        "yarn_ball": "ai_image_v11",
         "picnic_cookie": "ai_image_v6",
-        "laundry_peg": "ai_image_v11",
-        "fountain_pen": "ai_image_v9",
         "paper_boat": "ai_image_v9",
-        "knit_hat": "ai_image_v9",
-        "enamel_mug": "ai_image_v9",
-        "thread_spool": "ai_image_v9",
-        "brass_key": "ai_image_v9",
-        "lemonade_bottle": "ai_image_v9",
-        "lemon_candy": "ai_image_v9"
+        "enamel_mug": "ai_image_v9"
       },
       "interactionsById": {
         "parcel_chest": "ai_image_v4",
         "flower_leaves": "ai_image_v4",
         "bun_lid": "ai_image_v4",
-        "book_satchel": "ai_image_v6",
-        "garden_toolbox": "ai_image_v6",
-        "picnic_basket": "ai_image_v6",
-        "biscuit_tin": "ai_image_v9",
-        "trinket_box": "ai_image_v9"
+        "picnic_basket": "ai_image_v6"
       },
       "polishedFixturesAndAdditionalTargets": "ai_image_v9",
       "newResidentTapActivities": [
@@ -30993,15 +31279,117 @@
       },
       "refinedExistingTargets": "ai_image_v11",
       "residentMotion": "ai_image_v12",
-      "sceneStaging": "ai_image_v13"
+      "sceneStaging": "scene_staging_v15",
+      "scenePlacementOverrides": {
+        "lc5_street_water_station": {
+          "center": {
+            "x": -610,
+            "y": 145
+          },
+          "size": {
+            "width": 110,
+            "height": 150
+          },
+          "textureScale": 3,
+          "revision": "scene_staging_v15"
+        },
+        "lc6_central_water": {
+          "center": {
+            "x": -565,
+            "y": -820
+          },
+          "size": {
+            "width": 110,
+            "height": 150
+          },
+          "textureScale": 3,
+          "revision": "scene_staging_v15"
+        },
+        "lc5_east_storefront_back": {
+          "center": {
+            "x": 535,
+            "y": 745
+          },
+          "size": {
+            "width": 296,
+            "height": 344
+          },
+          "textureScale": 3,
+          "revision": "scene_staging_v15"
+        },
+        "lc6_central_table": {
+          "center": {
+            "x": 700,
+            "y": 540
+          },
+          "size": {
+            "width": 170,
+            "height": 130
+          },
+          "textureScale": 3,
+          "revision": "scene_staging_v15"
+        },
+        "lc8_sweets_shrub": {
+          "center": {
+            "x": 590,
+            "y": 325
+          },
+          "size": {
+            "width": 140,
+            "height": 100
+          },
+          "textureScale": 3,
+          "revision": "scene_staging_v15"
+        },
+        "lc5_curb_produce_east": {
+          "center": {
+            "x": 505,
+            "y": -795
+          },
+          "size": {
+            "width": 140,
+            "height": 130
+          },
+          "textureScale": 3,
+          "revision": "scene_staging_v15"
+        },
+        "lc5_curb_flower_display": {
+          "center": {
+            "x": -1015,
+            "y": -90
+          },
+          "size": {
+            "width": 150,
+            "height": 140
+          },
+          "textureScale": 3,
+          "revision": "scene_staging_v15"
+        },
+        "lc5_street_banner_front": {
+          "center": {
+            "x": -400,
+            "y": 620
+          },
+          "size": {
+            "width": 285,
+            "height": 45
+          },
+          "textureScale": 4,
+          "revision": "scene_staging_v15"
+        }
+      },
+      "targetSelection": "target_reduction_v16",
+      "targetTray": "ai_image_v17"
     },
     "living_city_garden_market_02": {
       "scene": "ai_image_v4",
-      "sharedActorsTargetsInteractionsUi": "ai_image_v4"
+      "sharedActorsTargetsInteractionsUi": "ai_image_v4",
+      "targetTray": "ai_image_v17"
     },
     "living_city_harbor_walk_03": {
       "scene": "ai_image_v4",
-      "sharedActorsTargetsInteractionsUi": "ai_image_v4"
+      "sharedActorsTargetsInteractionsUi": "ai_image_v4",
+      "targetTray": "ai_image_v17"
     }
   }
 }

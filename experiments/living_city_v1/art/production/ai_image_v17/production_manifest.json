@@ -1,0 +1,230 @@
+{
+  "batchId": "ai_image_v17",
+  "sourceType": "codex_builtin_image_gen",
+  "styleId": "cozy_handdrawn_journal_v17",
+  "generationCalls": 2,
+  "uniqueGeneratedPngs": 2,
+  "assets": [
+    {
+      "name": "ui_journal_panel_v17",
+      "stage": "ui",
+      "source": "art/production/ai_image_v17/sources/ui_journal_panel_v17.png",
+      "width": 1024,
+      "height": 480,
+      "inset": 2,
+      "resizeFit": "fill",
+      "nineSliceBorder": 76,
+      "bundle": "assets/bundles/city_living_city_street_block_01",
+      "runtime": "assets/bundles/city_living_city_street_block_01/ui/ui_journal_panel_v17.png",
+      "transparent": true,
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v17/prompts/ui_journal_panel_v17.md",
+      "sourceSha256": "b1ea0fb867e84563cd143878ac6478b5c8b869a50cef83b2438cde73b4bb1ee3",
+      "sourceSize": {
+        "width": 1860,
+        "height": 845
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/ui_journal_panel_v17.png",
+      "sha256": "2d9f12002421afd8c5177dc24736fda9b24d21a8a0003091bd40d1ace7f15364",
+      "alphaBounds": {
+        "left": 2,
+        "top": 2,
+        "width": 1020,
+        "height": 476,
+        "transparent": 10535,
+        "visible": 480985
+      },
+      "uuid": "952e37a7-4f82-438d-a7f9-a58fc120f73a",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_trial_unapproved"
+    },
+    {
+      "name": "ui_journal_card_v17",
+      "stage": "ui",
+      "source": "art/production/ai_image_v17/sources/ui_journal_card_v17.png",
+      "width": 192,
+      "height": 208,
+      "inset": 2,
+      "resizeFit": "fill",
+      "nineSliceBorder": 24,
+      "bundle": "assets/bundles/city_living_city_street_block_01",
+      "runtime": "assets/bundles/city_living_city_street_block_01/ui/ui_journal_card_v17.png",
+      "transparent": true,
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v17/prompts/ui_journal_card_v17.md",
+      "sourceSha256": "f3c8af4958fb494af539e94e8a8a1f236d0255448305f1a6d3bfcdee1684b0f3",
+      "sourceSize": {
+        "width": 1230,
+        "height": 1278
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/ui_journal_card_v17.png",
+      "sha256": "d838e00e55c0b0a96108fd7e520f8b7f28c9b12e6059b3e96a454f2eb88ddae8",
+      "alphaBounds": {
+        "left": 2,
+        "top": 2,
+        "width": 188,
+        "height": 204,
+        "transparent": 1959,
+        "visible": 37977
+      },
+      "uuid": "23e93280-42a7-4b33-a771-79142c57ef68",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_trial_unapproved"
+    },
+    {
+      "name": "ui_journal_panel_v17",
+      "stage": "ui",
+      "source": "art/production/ai_image_v17/sources/ui_journal_panel_v17.png",
+      "width": 1024,
+      "height": 480,
+      "inset": 2,
+      "resizeFit": "fill",
+      "nineSliceBorder": 76,
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "runtime": "assets/bundles/city_living_city_garden_market_02/ui/ui_journal_panel_v17.png",
+      "transparent": true,
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v17/prompts/ui_journal_panel_v17.md",
+      "sourceSha256": "b1ea0fb867e84563cd143878ac6478b5c8b869a50cef83b2438cde73b4bb1ee3",
+      "sourceSize": {
+        "width": 1860,
+        "height": 845
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/ui_journal_panel_v17.png",
+      "sha256": "2d9f12002421afd8c5177dc24736fda9b24d21a8a0003091bd40d1ace7f15364",
+      "alphaBounds": {
+        "left": 2,
+        "top": 2,
+        "width": 1020,
+        "height": 476,
+        "transparent": 10535,
+        "visible": 480985
+      },
+      "uuid": "ccd7cf6d-b9e8-45d0-ad84-56f669c083b1",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_trial_unapproved"
+    },
+    {
+      "name": "ui_journal_card_v17",
+      "stage": "ui",
+      "source": "art/production/ai_image_v17/sources/ui_journal_card_v17.png",
+      "width": 192,
+      "height": 208,
+      "inset": 2,
+      "resizeFit": "fill",
+      "nineSliceBorder": 24,
+      "bundle": "assets/bundles/city_living_city_garden_market_02",
+      "runtime": "assets/bundles/city_living_city_garden_market_02/ui/ui_journal_card_v17.png",
+      "transparent": true,
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v17/prompts/ui_journal_card_v17.md",
+      "sourceSha256": "f3c8af4958fb494af539e94e8a8a1f236d0255448305f1a6d3bfcdee1684b0f3",
+      "sourceSize": {
+        "width": 1230,
+        "height": 1278
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/ui_journal_card_v17.png",
+      "sha256": "d838e00e55c0b0a96108fd7e520f8b7f28c9b12e6059b3e96a454f2eb88ddae8",
+      "alphaBounds": {
+        "left": 2,
+        "top": 2,
+        "width": 188,
+        "height": 204,
+        "transparent": 1959,
+        "visible": 37977
+      },
+      "uuid": "110ad295-740e-4475-92b9-bc37fb161d38",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_trial_unapproved"
+    },
+    {
+      "name": "ui_journal_panel_v17",
+      "stage": "ui",
+      "source": "art/production/ai_image_v17/sources/ui_journal_panel_v17.png",
+      "width": 1024,
+      "height": 480,
+      "inset": 2,
+      "resizeFit": "fill",
+      "nineSliceBorder": 76,
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "runtime": "assets/bundles/city_living_city_harbor_walk_03/ui/ui_journal_panel_v17.png",
+      "transparent": true,
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v17/prompts/ui_journal_panel_v17.md",
+      "sourceSha256": "b1ea0fb867e84563cd143878ac6478b5c8b869a50cef83b2438cde73b4bb1ee3",
+      "sourceSize": {
+        "width": 1860,
+        "height": 845
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/ui_journal_panel_v17.png",
+      "sha256": "2d9f12002421afd8c5177dc24736fda9b24d21a8a0003091bd40d1ace7f15364",
+      "alphaBounds": {
+        "left": 2,
+        "top": 2,
+        "width": 1020,
+        "height": 476,
+        "transparent": 10535,
+        "visible": 480985
+      },
+      "uuid": "147772c8-0ced-4a9b-9102-07c4ce22d695",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_trial_unapproved"
+    },
+    {
+      "name": "ui_journal_card_v17",
+      "stage": "ui",
+      "source": "art/production/ai_image_v17/sources/ui_journal_card_v17.png",
+      "width": 192,
+      "height": 208,
+      "inset": 2,
+      "resizeFit": "fill",
+      "nineSliceBorder": 24,
+      "bundle": "assets/bundles/city_living_city_harbor_walk_03",
+      "runtime": "assets/bundles/city_living_city_harbor_walk_03/ui/ui_journal_card_v17.png",
+      "transparent": true,
+      "alphaFloor": 32,
+      "prompt": "art/production/ai_image_v17/prompts/ui_journal_card_v17.md",
+      "sourceSha256": "f3c8af4958fb494af539e94e8a8a1f236d0255448305f1a6d3bfcdee1684b0f3",
+      "sourceSize": {
+        "width": 1230,
+        "height": 1278
+      },
+      "sourceHasAlpha": true,
+      "output": "assets/generated/ui_journal_card_v17.png",
+      "sha256": "d838e00e55c0b0a96108fd7e520f8b7f28c9b12e6059b3e96a454f2eb88ddae8",
+      "alphaBounds": {
+        "left": 2,
+        "top": 2,
+        "width": 188,
+        "height": 204,
+        "transparent": 1959,
+        "visible": 37977
+      },
+      "uuid": "cd0e83d2-7767-46f2-a7c8-c7830fc50cc3",
+      "method": "builtin_image_gen_then_mechanical_crop_resize_registration",
+      "status": "runtime_trial_unapproved"
+    }
+  ],
+  "playerApproval": "pending",
+  "processing": "Alpha bounds crop, resize, transparent inset, nine-slice registration; no drawing.",
+  "runtimeVerification": {
+    "status": "web_mobile_verified",
+    "playerVisualApproval": "pending",
+    "wechatPhone": "not_run",
+    "reports": {
+      "tray_verified/tray_report.json": {
+        "path": "art/review/ai_image_v17/tray_verified/tray_report.json",
+        "sha256": "c35e989fdd0343b64a3d76a0984b72e9633ec59fd9d05bedca08e292d38cf635"
+      },
+      "three_chapters/runtime_report.json": {
+        "path": "art/review/ai_image_v17/three_chapters/runtime_report.json",
+        "sha256": "e2003f5107dc8f9b665be0b9ba5ae6a9c853117c36830ec86dfac7d349b32eb3"
+      }
+    }
+  }
+}

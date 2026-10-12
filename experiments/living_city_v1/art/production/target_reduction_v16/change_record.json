@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-05",
+  "authorization": "User accepted reducing the first chapter to twelve targets.",
+  "retainedTargetIds": [
+    "reading_glasses",
+    "seed_packet",
+    "pocket_watch",
+    "golden_bun",
+    "postcard",
+    "paper_boat",
+    "tiny_camera",
+    "sewing_scissors",
+    "sealed_letter",
+    "garden_glove",
+    "picnic_cookie",
+    "enamel_mug"
+  ],
+  "removedTargetIds": [
+    "tea_clay_whistle",
+    "tailor_thimble",
+    "banner_knot",
+    "chestnut_tongs",
+    "blue_feather",
+    "honey_dipper",
+    "orchard_apple",
+    "bookmark",
+    "seedling_spade",
+    "wooden_bird",
+    "pink_watering_can",
+    "stamp_roll",
+    "yarn_ball",
+    "laundry_peg",
+    "fountain_pen",
+    "knit_hat",
+    "thread_spool",
+    "brass_key",
+    "lemonade_bottle",
+    "lemon_candy"
+  ],
+  "retainedInteractionIds": [
+    "flower_leaves",
+    "bun_lid",
+    "parcel_chest",
+    "picnic_basket"
+  ],
+  "retiredInteractionIds": [
+    "book_satchel",
+    "garden_toolbox",
+    "biscuit_tin",
+    "trinket_box"
+  ],
+  "baselineSha256": "420b67ea04508cb9f412e63da0b2eb66bd0815735a6800d30593b608cf956773",
+  "sceneBlueprintSha256": "53fc92d84c5d1cd5f40728168919871ead2f7c1c1f9928121fcb060e70debbbc",
+  "assetFilesDeleted": 0,
+  "newArt": 0,
+  "scenePlacementsChanged": 0,
+  "visualApproval": "pending",
+  "verification": {
+    "status": "web_mobile_verified",
+    "playerApproval": "pending",
+    "wechatPhone": "not_run",
+    "report": "art/review/ai_image_v16/three_chapters/runtime_report.json",
+    "sha256": "7dea64f8c697d8b54b053af579f9ae161c720f2df653e90535d21119275897a6"
+  }
+}

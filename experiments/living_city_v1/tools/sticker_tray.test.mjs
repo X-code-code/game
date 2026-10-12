@@ -77,7 +77,8 @@ test('all pending objects stay full-color; completion uses a distinct check and 
     assert.equal(visible(view).length, 12);
     for (const [id, card] of view.stickerCards) {
         assert.deepEqual(card.icon.color, Color.WHITE);
-        assert.equal(card.background.enabled, id === 'item_2');
+        assert.equal(card.background.enabled, true);
+        assert.equal(card.background.color.g > card.background.color.r, id === 'item_2');
         assert.equal(card.check.node.active, id === 'item_2');
         assert.equal(card.collected, id === 'item_2');
         assert.ok(card.icon.node.getComponent(UITransform).width >= 80);
@@ -95,8 +96,8 @@ test('an expanded 24-target tray preserves 12 restored discoveries and exposes 1
     assert.equal(view.stickerPageLabel.string,'‹  2/2  ›');
     assert.equal(visible(view).length,12);
     assert.ok(visible(view).every(card=>!card.collected&&!card.check.node.active));
-    assert.ok(visible(view).every(card=>card.icon.color.a===255&&!card.background.enabled));
-    assert.ok(view.taskTitleLabel.string.includes('12/24'));
+    assert.ok(visible(view).every(card=>card.icon.color.a===255&&card.background.enabled));
+    assert.ok(view.journalProgressLabel.string.includes('12/24'));
     view.showStickerPageFor('item_0');assert.equal(view.stickerPage,0);
     view.showStickerPageFor('item_23');assert.equal(view.stickerPage,1);
 });
@@ -183,4 +184,39 @@ test('external overlays block both card clues and tray page gestures', () => {
     assert.equal(view.stickerClueLabel.string, '轻点物品看线索');
     view.onStickerMouseDown(eventAt(point)); view.onStickerMouseUp(eventAt({ x: point.x - 100, y: point.y }));
     assert.equal(view.stickerPage, 0);
+});
+
+test('selection follows the last pending card and clears after collection without losing its acknowledgement', () => {
+    const completed=[];
+    const view=fixture(32,completed);
+    view.showStickerClue('item_2');
+    assert.equal(view.selectedStickerId,'item_2');
+    assert.notDeepEqual(view.stickerCards.get('item_2').background.color,Color.WHITE);
+    view.showStickerClue('item_7');
+    assert.deepEqual(view.stickerCards.get('item_2').background.color,Color.WHITE);
+    assert.equal(view.selectedStickerId,'item_7');
+    completed.push('item_7');view.renderTaskPanel();
+    assert.equal(view.selectedStickerId,null);
+    assert.equal(view.stickerClueLabel.string,'物品7已找到，收入贴纸册啦');
+    assert.equal(view.stickerCards.get('item_7').check.node.active,true);
+});
+
+test('journal separates progress, cards and clues and does not report an in-flight item as stored', () => {
+    const view=fixture(12,['item_2']);
+    view.collectionFlights.set('item_2',{});view.renderTaskPanel();
+    assert.equal(view.journalProgressLabel.string,'已找到 0/12');
+    assert.equal(view.stickerCards.get('item_2').check.node.active,false);
+    view.collectionFlights.clear();view.renderTaskPanel();
+    assert.equal(view.journalProgressLabel.string,'已找到 1/12');
+    for(const [width,height] of [[1080,2340],[1332,2880],[1280,720]]) {
+        view.node.getComponent(UITransform).setContentSize(width,height);view.resizeDisplay();
+        const badge=view.journalProgressLabel.node.parent;
+        const badgeBottom=badge.position.y-badge.getComponent(UITransform).height/2;
+        const clueTop=view.journalCluePaper.position.y+view.journalCluePaper.getComponent(UITransform).height/2;
+        for(const card of visible(view)) {
+            const size=card.node.getComponent(UITransform);
+            assert.ok(card.node.position.y+size.height/2<badgeBottom,'Header overlaps card');
+            assert.ok(card.node.position.y-size.height/2>clueTop,'Clue overlaps card');
+        }
+    }
 });

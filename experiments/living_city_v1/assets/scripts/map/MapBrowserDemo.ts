@@ -104,10 +104,13 @@ export class MapBrowserDemo extends Component {
     private taskPanelGraphics: Graphics | Sprite | null = null;
     private viewportBackground: Sprite | null = null;
     private taskTitleLabel: Label | null = null;
+    private journalProgressLabel: Label | null = null;
+    private journalCluePaper: Node | null = null;
     private taskItemsLabel: Label | null = null;
     private stickerClueLabel: Label | null = null;
     private stickerPageLabel: Label | null = null;
     private stickerPage = 0;
+    private selectedStickerId: string | null = null;
     private missedTapFeedback: Node | null = null;
     private blocksExternalInput: ((x: number, y: number) => boolean) | null = null;
     private readonly stickerCards = new Map<string, StickerCard>();
@@ -316,7 +319,7 @@ export class MapBrowserDemo extends Component {
         this.cancelGestures();
         this.livingGreybox?.dismissClue();
         this.conversations?.dismiss();
-        const result = this.hintManager?.requestHint();
+        const result = this.hintManager?.requestHint(this.selectedStickerId);
         if (!result) return;
         if (result.status === 'shown') this.controller?.focusAt(result.hint.position.x, result.hint.position.y);
         this.hintPanel?.showResult(result);
@@ -461,7 +464,7 @@ export class MapBrowserDemo extends Component {
         const compact = this.cityConfig?.cityId === 'demo_city';
         const margin = portrait ? 18 : 12;
         const width = portrait ? Math.max(280, size.width - margin * 2) : Math.min(400, Math.max(280, size.width - 24));
-        const height = greybox ? (portrait ? 350 : 220) : trial ? (portrait ? 200 : 116)
+        const height = greybox ? (portrait ? width * 0.51 : 264) : trial ? (portrait ? 200 : 116)
             : compact ? (portrait ? 390 : 182) : (portrait ? 590 : 268);
         panel.setPosition(-size.width / 2 + width / 2 + margin,
             ((trial || greybox) ? -size.height / 2 + height / 2 + margin : size.height / 2 - height / 2 - margin), 0);
@@ -479,16 +482,18 @@ export class MapBrowserDemo extends Component {
         else graphics.rect(-width / 2, -height / 2, width, height);
         graphics.stroke();
         }
-        const padding = greybox ? 18 : portrait ? 30 : 16;
+        const padding = greybox ? width * 0.045 : portrait ? 30 : 16;
         if (this.taskTitleLabel) {
-            this.taskTitleLabel.fontSize = greybox ? (portrait ? 34 : 23) : trial ? (portrait ? 34 : 24)
+            this.taskTitleLabel.fontSize = greybox ? (portrait ? width * 0.038 : 20) : trial ? (portrait ? 34 : 24)
                 : compact ? (portrait ? 62 : 28) : (portrait ? 70 : 32);
-            this.taskTitleLabel.lineHeight = greybox ? (portrait ? 42 : 28) : trial ? (portrait ? 42 : 29)
+            this.taskTitleLabel.lineHeight = greybox ? (portrait ? width * 0.05 : 28) : trial ? (portrait ? 42 : 29)
                 : compact ? (portrait ? 72 : 34) : (portrait ? 82 : 38);
             this.taskTitleLabel.node.setPosition(-width / 2 + padding,
-                height / 2 - (greybox ? 12 : trial ? 14 : portrait ? 27 : 14), 0);
+                height / 2 - (greybox ? (portrait ? width * 0.025 : 15) : trial ? 14 : portrait ? 27 : 14), 0);
             this.taskTitleLabel.node.getComponent(UITransform)?.setContentSize(width - padding * 2,
-                greybox ? (portrait ? 45 : 29) : trial ? (portrait ? 48 : 30) : portrait ? 90 : 46);
+                greybox ? (portrait ? width * 0.06 : 29) : trial ? (portrait ? 48 : 30) : portrait ? 90 : 46);
+            if (greybox) this.taskTitleLabel.node.getComponent(UITransform)?.setContentSize(
+                width * 0.48, portrait ? width * 0.06 : 29);
         }
         if (this.taskItemsLabel) {
             this.taskItemsLabel.fontSize = greybox ? (portrait ? 44 : 25) : trial ? (portrait ? 28 : 19)
@@ -521,7 +526,7 @@ export class MapBrowserDemo extends Component {
         this.node.addChild(panel);
         panel.addComponent(UITransform);
         this.taskPanelGraphics = this.isLivingCity
-            ? generatedUi(panel, 'ui_panel', this.artBundle!) : panel.addComponent(Graphics);
+            ? generatedUi(panel, 'ui_journal_panel_v17', this.artBundle!, false) : panel.addComponent(Graphics);
         this.taskPanel = panel;
 
         const title = new Node('TaskTitle');
@@ -529,6 +534,7 @@ export class MapBrowserDemo extends Component {
         title.addComponent(UITransform).setAnchorPoint(0, 1);
         const titleLabel = title.addComponent(Label);
         titleLabel.fontSize = 32;
+        titleLabel.isBold = this.isLivingCity;
         titleLabel.lineHeight = 38;
         titleLabel.color = new Color(75, 54, 39, 255);
         titleLabel.horizontalAlign = Label.HorizontalAlign.LEFT;
@@ -536,6 +542,19 @@ export class MapBrowserDemo extends Component {
         this.taskTitleLabel = titleLabel;
 
         if (this.isLivingCity) {
+            const badge = new Node('JournalProgress');
+            panel.addChild(badge);
+            badge.addComponent(UITransform);
+            generatedUi(badge, 'ui_journal_card_v17', this.artBundle!).color = new Color(219, 233, 209, 255);
+            const count = new Node('Count');
+            badge.addChild(count);
+            count.addComponent(UITransform);
+            const label = count.addComponent(Label);
+            label.color = new Color(67, 91, 57, 255);
+            label.horizontalAlign = Label.HorizontalAlign.CENTER;
+            label.verticalAlign = Label.VerticalAlign.CENTER;
+            label.overflow = Label.Overflow.SHRINK;
+            this.journalProgressLabel = label;
             this.createStickerCards(panel);
             this.attachStickerInput();
         } else {
@@ -558,14 +577,20 @@ export class MapBrowserDemo extends Component {
         if (!manager || !this.taskTitleLabel) return;
         const progress = manager.getProgress();
         if (this.isLivingCity) {
-            this.taskTitleLabel.string = `${this.cityConfig?.cityName ?? '寻物贴纸'}  ${Math.max(0, progress.requiredCompleted - this.collectionFlights.size)}/${progress.requiredTotal}`;
+            this.taskTitleLabel.string = '寻物手账';
+            if (this.journalProgressLabel) this.journalProgressLabel.string = `已找到 ${Math.max(0, progress.requiredCompleted - this.collectionFlights.size)}/${progress.requiredTotal}`;
             this.taskTitleLabel.overflow = Label.Overflow.SHRINK;
             const states = manager.getTaskStates();
             for (const sticker of this.stickers) {
                 const completed = states.some(state => state.config.type === 'hiddenObject' &&
                     state.config.targetId === sticker.id && state.completed);
                 const card = this.stickerCards.get(sticker.id);
-                if (card) this.drawStickerCard(card, completed && !this.collectionFlights.has(sticker.id));
+                if (card) this.drawStickerCard(card, completed && !this.collectionFlights.has(sticker.id),
+                    sticker.id === this.selectedStickerId);
+                if (completed && sticker.id === this.selectedStickerId && !this.collectionFlights.has(sticker.id)) {
+                    this.selectedStickerId = null;
+                    if (this.stickerClueLabel) this.stickerClueLabel.string = `${sticker.name}已找到，收入贴纸册啦`;
+                }
             }
             return;
         }
@@ -581,6 +606,11 @@ export class MapBrowserDemo extends Component {
     }
 
     private createStickerCards(panel: Node): void {
+        const cluePaper = new Node('CluePaper');
+        panel.addChild(cluePaper);
+        cluePaper.addComponent(UITransform);
+        generatedUi(cluePaper, 'ui_journal_card_v17', this.artBundle!).color = new Color(245, 238, 215, 255);
+        this.journalCluePaper = cluePaper;
         const clueNode = new Node('StickerClue');
         panel.addChild(clueNode);
         clueNode.addComponent(UITransform).setAnchorPoint(0, 1);
@@ -599,13 +629,14 @@ export class MapBrowserDemo extends Component {
         page.color = new Color(117, 103, 79, 255);
         page.horizontalAlign = Label.HorizontalAlign.CENTER;
         page.verticalAlign = Label.VerticalAlign.CENTER;
+        page.overflow = Label.Overflow.SHRINK;
         this.stickerPageLabel = page;
 
         for (const sticker of this.stickers) {
             const cardNode = new Node(`Sticker_${sticker.id}`);
             panel.addChild(cardNode);
             cardNode.addComponent(UITransform);
-            const background = generatedUi(cardNode, 'ui_panel', this.artBundle!);
+            const background = generatedUi(cardNode, 'ui_journal_card_v17', this.artBundle!, false);
 
             const artNode = new Node('ItemArt');
             cardNode.addChild(artNode);
@@ -618,7 +649,9 @@ export class MapBrowserDemo extends Component {
             cardNode.addChild(nameNode);
             nameNode.addComponent(UITransform);
             const name = nameNode.addComponent(Label);
-            name.string = sticker.name;
+            const shortNames: Record<string, string> = { reading_glasses: '眼镜', postcard: '明信片',
+                tiny_camera: '相机', garden_glove: '手套', picnic_cookie: '曲奇' };
+            name.string = shortNames[sticker.id] ?? sticker.name;
             name.color = new Color(72, 54, 41, 255);
             name.horizontalAlign = Label.HorizontalAlign.CENTER;
             name.verticalAlign = Label.VerticalAlign.CENTER;
@@ -646,28 +679,41 @@ export class MapBrowserDemo extends Component {
     }
 
     private layoutStickerCards(width: number, height: number, portrait: boolean): void {
-        const inset = portrait ? 16 : 12;
-        const gap = portrait ? 12 : 6;
+        const inset = portrait ? width * 0.035 : 14;
+        const gap = portrait ? width * 0.012 : 6;
         const columns = 6;
         const cardWidth = (width - inset * 2 - gap * (columns - 1)) / columns;
-        const cardHeight = portrait ? 110 : 62;
+        const cardHeight = portrait ? width * 0.14 : 70;
         const pageCount = Math.max(1, Math.ceil(this.stickers.length / STICKERS_PER_PAGE));
         this.stickerPage = Math.min(this.stickerPage, pageCount - 1);
+        const progress = this.journalProgressLabel;
+        if (progress) {
+            const badge = progress.node.parent!;
+            const badgeWidth = width * (pageCount > 1 ? 0.28 : 0.31);
+            const badgeHeight = portrait ? width * 0.063 : 30;
+            badge.setPosition(width * (pageCount > 1 ? 0.07 : 0.30), height / 2 - (portrait ? width * 0.052 : 29), 0);
+            badge.getComponent(UITransform)?.setContentSize(badgeWidth, badgeHeight);
+            progress.node.getComponent(UITransform)?.setContentSize(badgeWidth - 12, badgeHeight - 4);
+            progress.fontSize = portrait ? width * 0.031 : 15;
+            progress.lineHeight = portrait ? width * 0.043 : 21;
+        }
         if (this.stickerPageLabel) {
             const page = this.stickerPageLabel;
             page.node.active = pageCount > 1;
             page.string = `‹  ${this.stickerPage + 1}/${pageCount}  ›`;
-            page.fontSize = portrait ? 26 : 18;
-            page.lineHeight = portrait ? 32 : 24;
-            page.node.setPosition(width / 2 - (portrait ? 96 : 72), -height / 2 + (portrait ? 22 : 16), 0);
-            page.node.getComponent(UITransform)?.setContentSize(portrait ? 152 : 112, portrait ? 40 : 28);
+            page.fontSize = portrait ? width * 0.034 : 18;
+            page.lineHeight = portrait ? width * 0.045 : 24;
+            page.node.setPosition(width * 0.36, height / 2 - (portrait ? width * 0.039 : 25), 0);
+            page.node.getComponent(UITransform)?.setContentSize(width * 0.25, portrait ? width * 0.075 : 40);
         }
         const clue = this.stickerClueLabel;
+        this.journalCluePaper?.setPosition(0, -height / 2 + (portrait ? width * 0.063 : 31), 0);
+        this.journalCluePaper?.getComponent(UITransform)?.setContentSize(width - inset * 2, portrait ? width * 0.098 : 49);
         if (clue) {
-            clue.fontSize = portrait ? 24 : 16;
-            clue.lineHeight = portrait ? 30 : 20;
-            clue.node.setPosition(-width / 2 + 20, -height / 2 + (portrait ? 36 : 28), 0);
-            clue.node.getComponent(UITransform)?.setContentSize(width - 40 - (pageCount > 1 ? (portrait ? 168 : 126) : 0), portrait ? 31 : 22);
+            clue.fontSize = portrait ? width * 0.035 : 16;
+            clue.lineHeight = portrait ? width * 0.043 : 20;
+            clue.node.setPosition(-width / 2 + width * 0.052, -height / 2 + (portrait ? width * 0.108 : 53), 0);
+            clue.node.getComponent(UITransform)?.setContentSize(width * 0.896, portrait ? width * 0.09 : 44);
         }
         this.stickers.forEach((sticker, index) => {
             const card = this.stickerCards.get(sticker.id);
@@ -676,18 +722,18 @@ export class MapBrowserDemo extends Component {
             const pageIndex = index % STICKERS_PER_PAGE;
             const column = pageIndex % columns;
             const x = -width / 2 + inset + cardWidth / 2 + column * (cardWidth + gap);
-            const y = height / 2 - (portrait ? 110 : 70) - Math.floor(pageIndex / columns) * (cardHeight + gap);
+            const y = height / 2 - (portrait ? width * 0.16 : 84) - Math.floor(pageIndex / columns) * (cardHeight + gap);
             card.node.setPosition(x, y, 0);
             card.node.getComponent(UITransform)?.setContentSize(cardWidth, cardHeight);
-            const artSize = portrait ? Math.min(86, cardWidth - 18) : Math.min(42, cardWidth - 12);
+            const artSize = portrait ? Math.min(width * 0.087, cardWidth - 18) : Math.min(42, cardWidth - 12);
             card.iconSize = artSize;
             this.fitStickerIcon(card);
             if (portrait) {
-                card.icon.node.setPosition(0, 12, 0);
-                card.name.node.setPosition(0, -35, 0);
-                card.name.node.getComponent(UITransform)?.setContentSize(cardWidth - 10, 36);
-                card.name.fontSize = 24;
-                card.name.lineHeight = 30;
+                card.icon.node.setPosition(0, width * 0.02, 0);
+                card.name.node.setPosition(0, -width * 0.041, 0);
+                card.name.node.getComponent(UITransform)?.setContentSize(cardWidth - 6, width * 0.044);
+                card.name.fontSize = width * 0.032;
+                card.name.lineHeight = width * 0.041;
             } else {
                 card.icon.node.setPosition(0, 8, 0);
                 card.name.node.setPosition(0, -21, 0);
@@ -695,10 +741,11 @@ export class MapBrowserDemo extends Component {
                 card.name.fontSize = 17;
                 card.name.lineHeight = 21;
             }
-            card.check.node.setPosition(cardWidth / 2 - (portrait ? 18 : 11), cardHeight / 2 - (portrait ? 18 : 10), 0);
-            card.check.node.getComponent(UITransform)?.setContentSize(portrait ? 36 : 22, portrait ? 32 : 22);
-            card.check.fontSize = portrait ? 26 : 17;
-            card.check.lineHeight = portrait ? 32 : 22;
+            const markSize = portrait ? width * 0.04 : 20;
+            card.check.node.setPosition(cardWidth / 2 - markSize * 0.6, cardHeight / 2 - markSize * 0.6, 0);
+            card.check.node.getComponent(UITransform)?.setContentSize(markSize, markSize);
+            card.check.fontSize = markSize * 0.85;
+            card.check.lineHeight = markSize;
         });
         this.renderTaskPanel();
     }
@@ -712,15 +759,16 @@ export class MapBrowserDemo extends Component {
         card.icon.node.getComponent(UITransform)?.setContentSize(width * fit, height * fit);
     }
 
-    private drawStickerCard(card: StickerCard, completed: boolean): void {
+    private drawStickerCard(card: StickerCard, completed: boolean, selected = false): void {
         const size = card.node.getComponent(UITransform)?.contentSize;
         if (!size || size.width <= 0 || size.height <= 0) return;
         // Searching depends on recognizing the object, so keep its actual colors
         // visible before collection. State belongs to the soft card and check mark.
-        card.background.enabled = completed;
-        card.background.color = new Color(208, 230, 194, 150);
+        card.background.enabled = true;
+        card.background.color = completed ? new Color(215, 235, 200, 255)
+            : selected ? new Color(255, 218, 144, 255) : Color.WHITE;
         card.icon.color = Color.WHITE;
-        card.name.color = completed ? new Color(87, 112, 72, 255) : new Color(109, 94, 75, 255);
+        card.name.color = completed ? new Color(87, 112, 72, 255) : new Color(72, 54, 41, 255);
         card.check.node.active = completed;
         card.collected = completed;
     }
@@ -905,6 +953,8 @@ export class MapBrowserDemo extends Component {
         if (!sticker || !this.stickerClueLabel) return;
         const found = this.taskManager?.getTaskStates().some(state => state.config.type === 'hiddenObject' &&
             state.config.targetId === id && state.completed);
+        this.selectedStickerId = found ? null : id;
+        this.renderTaskPanel();
         this.stickerClueLabel.string = found ? `${sticker.name}已找到，收入贴纸册啦`
             : `${sticker.name}：${sticker.clue}`;
     }

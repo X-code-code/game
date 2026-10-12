@@ -258,7 +258,7 @@ try {
                 completionArtReady:[manager.ui.card,manager.ui.continueButton,manager.ui.nextButton,
                     manager.ui.modal.getChildByName('CompletionDimmer')].every(n=>!!n.getComponent(cc.Sprite)?.spriteFrame),
                 flights:view.collectionFlights.size,landing:view.collectionLandingAnimations,completion:manager.ui.isOpen,
-                hint:view.hintManager?.active?{id:view.hintManager.active.id,kind:view.hintManager.active.kind}:null,
+                hint:view.hintManager?.active?{id:view.hintManager.active.targetId,kind:view.hintManager.active.kind}:null,
                 hintUi:view.hintPanel?{button:screen(view.hintPanel.button),marker:view.hintPanel.marker.activeInHierarchy,
                     markerLoaded:!!view.hintPanel.ring?.spriteFrame,
                     visible:view.hintPanel.root.activeInHierarchy,message:view.hintPanel.message.string}:null,
@@ -273,7 +273,8 @@ try {
         throw new Error(`${description}: ${JSON.stringify({current,errors,warnings,failedRequests})}`);
     }
     async function click(point, settle = 100) {
-        assert.ok(point.x>0&&point.x<444&&point.y>0&&point.y<960,JSON.stringify(point));
+        const viewport=await evaluate('({width:innerWidth,height:innerHeight})');
+        assert.ok(point.x>0&&point.x<viewport.width&&point.y>0&&point.y<viewport.height,JSON.stringify(point));
         await send('Input.dispatchMouseEvent',{type:'mousePressed',...point,button:'left',clickCount:1});
         await send('Input.dispatchMouseEvent',{type:'mouseReleased',...point,button:'left',clickCount:1});
         if(settle)await wait(settle);
@@ -553,12 +554,12 @@ try {
         const current=await until(s=>s.ready&&s.expectedResidents===expectedFirstBlueprint.npcPlans.length&&
             s.npcs.every(actor=>actor.celsReady)&&s.targets.every(target=>target.loaded)&&s.stickers.every(card=>card.loaded)&&s.completion===!expanded,
             'Completed previous-version save failed to restore in the current town');
-        assert.equal(current.progress.requiredCompleted,previousFirstChapter.targets);
+        const retainedFound=original.foundHiddenObjectIds.filter(id=>expectedFirstBlueprint.hiddenObjectSlots.some(t=>t.id===id));
+        assert.equal(current.progress.requiredCompleted,retainedFound.length);
         assert.ok(current.stickers.filter(card=>original.foundHiddenObjectIds.includes(card.id)).every(card=>card.collected),'Previously collected stickers became pending');
         assert.ok(current.stickers.filter(card=>!original.foundHiddenObjectIds.includes(card.id)).every(card=>!card.collected),'New objects were incorrectly completed');
-        assert.deepEqual([...current.snapshot.foundHiddenObjectIds].sort(),[...original.foundHiddenObjectIds].sort());
-        const expectedStates=Object.fromEntries(expectedFirstBlueprint.interactiveSlots.map(slot=>[slot.id,'closed']));
-        Object.assign(expectedStates,original.interactiveStates);
+        assert.deepEqual([...current.snapshot.foundHiddenObjectIds].sort(),[...retainedFound].sort());
+        const expectedStates=Object.fromEntries(expectedFirstBlueprint.interactiveSlots.map(slot=>[slot.id,original.interactiveStates[slot.id]??'closed']));
         assert.deepEqual(current.snapshot.interactiveStates,expectedStates);
         assert.deepEqual([...current.snapshot.sceneDiscoveryIds].sort(),[...(original.sceneDiscoveryIds??[])].sort());
         const saved=await evaluate("JSON.parse(localStorage.getItem('chriken_living_city_v1_save_v1'))");
@@ -1030,7 +1031,82 @@ try {
     const chapterIds=chapterOneOnly?['living_city_street_block_01']:
         ['living_city_street_block_01','living_city_garden_market_02','living_city_harbor_walk_03'];
     await until(s=>s.ready&&s.cityId===chapterIds[0], 'Fresh journey did not start');
-    if(surfacesOnly){
+    if(process.argv.includes('--staging-only')){
+        await until(s=>s.sceneLayers===s.expectedLayers&&s.targets.every(t=>t.loaded),'Staging assets not ready');
+        const samples=[];
+        for(const [width,height] of [[444,960],[360,780]]){
+            await send('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:true});await wait(200);
+            for(const [zone,x,y] of [['tea_street',-80,440],['shared_courtyard',650,600],['food_shop',400,-630],['garden_utility',-600,-790],['flower_lane',-700,-100]]){
+                await setZoom('initial');
+                await evaluate(`(()=>{${context}view.controller.focusAt(${x},${y});return true;})()`);await wait(150);
+                const file=`${zone}_${width}x${height}.png`;await screenshot(file);samples.push({zone,width,height,file});
+            }
+        }
+        await send('Emulation.setDeviceMetricsOverride',{width:1152,height:1024,deviceScaleFactor:1,mobile:true});await wait(200);
+        await evaluate(`(()=>{${context}view.enabled=false;view.taskPanel.active=false;view.hintPanel.root.active=false;
+            const v=view.node.getComponent('cc.UITransform'),scale=Math.min(v.width/2304,v.height/2048);map.setScale(scale,scale,1);map.setPosition(0,0);return true;})()`);
+        await wait(100);await screenshot('whole_town_layout.png');
+        fs.writeFileSync(path.join(out,'staging_report.json'),JSON.stringify({status:'captured',samples,overview:'whole_town_layout.png',overviewNote:'Audit-only full-map camera with HUD hidden; not a gameplay screenshot.',errors,warnings,failedRequests},null,2)+'\n');
+        assert.deepEqual(errors,[]);assert.deepEqual(warnings,[]);assert.deepEqual(failedRequests,[]);
+        console.log(JSON.stringify({status:'captured',screens:samples.length+1,directory:out}));
+    }else if(process.argv.includes('--tray-only')){
+        const baseline=process.argv.includes('--tray-baseline'), samples=[];
+        await until(s=>s.stickers.every(c=>c.loaded),'Tray assets not ready');
+        for(const [width,height] of [[360,780],[444,960],[960,540]]){
+            await send('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:true});await wait(250);
+            await screenshot(`tray_initial_${width}x${height}.png`);
+            const initial=await state();
+            const choice=initial.stickers.find(c=>c.active&&c.id==='sealed_letter')??initial.stickers.filter(c=>c.active)[7];
+            await click(choice.screen);
+            await screenshot(`tray_selected_${width}x${height}.png`);
+            const selected=await evaluate(`(()=>{${context}const label=view.stickerClueLabel;
+                const bounds=screenBounds(label.node),card=view.stickerCards.get(${JSON.stringify(choice.id)});
+                return {id:view.selectedStickerId,clue:label.string,clueBounds:bounds,
+                    fontPixels:(label.actualFontSize||label.fontSize)*(bounds.right-bounds.left)/label.node.getComponent('cc.UITransform').width,
+                    selectedBackground:card.background.enabled,pageBounds:screenBounds(view.stickerPageLabel.node),
+                    trayBounds:screenBounds(view.taskPanel)};})()`);
+            if(!baseline){assert.equal(selected.id,choice.id);assert.ok(selected.selectedBackground);
+                assert.ok(selected.fontPixels>=11);assert.ok(selected.clueBounds.bottom<=height);
+                assert.ok(selected.pageBounds.bottom<selected.clueBounds.top);}
+            await click((await state()).hintUi.button);
+            const hint=await evaluate(`(()=>{${context}return view.hintManager.active;})()`);
+            if(!baseline){const taskId=await evaluate(`(()=>{${context}return view.taskManager.getTaskStates().find(t=>t.config.targetId===${JSON.stringify(choice.id)}).config.id;})()`);
+                assert.ok(hint);assert.equal(hint.taskId,taskId);
+                if(choice.id==='sealed_letter')assert.equal(hint.kind,'interactiveObject');}
+            await screenshot(`tray_hint_${width}x${height}.png`);
+            await until(s=>!s.hint,'Hint did not expire');
+            const before=await state();await swipeTray(-1);const after=await state();
+            const expectedPage=Math.min(1,Math.ceil(after.stickers.length/12)-1);
+            assert.equal(after.stickerPage,expectedPage);assert.equal(after.progress.requiredCompleted,before.progress.requiredCompleted);
+            await screenshot(`tray_page_${expectedPage+1}_${width}x${height}.png`);
+            const longChoice=after.stickers.find(c=>c.id==='postcard');
+            assert.ok(longChoice?.active);await click(longChoice.screen);
+            const longClue=await evaluate(`(()=>{${context}const label=view.stickerClueLabel,bounds=screenBounds(label.node);
+                return {text:label.string,fontPixels:(label.actualFontSize||label.fontSize)*(bounds.right-bounds.left)/label.node.getComponent('cc.UITransform').width};})()`);
+            if(!baseline)assert.ok(longClue.fontPixels>=11);
+            await screenshot(`tray_long_clue_${width}x${height}.png`);
+            await click((await state()).hintUi.button);
+            const directHint=await evaluate(`(()=>{${context}return view.hintManager.active;})()`);
+            if(!baseline)assert.equal(directHint.targetId,'postcard');
+            await screenshot(`tray_direct_hint_${width}x${height}.png`);
+            await until(s=>!s.hint,'Direct hint did not expire');await swipeTray(1);
+            samples.push({width,height,selected,hint,longClue,directHint,actualCardClick:true,actualHintClick:true,actualSwipe:true});
+        }
+        const journal=await evaluate(`(()=>{${context}return {panel:view.taskPanelGraphics.spriteFrame?.uuid,
+            cards:[...view.stickerCards.values()].map(c=>c.background.spriteFrame?.uuid),progress:view.journalProgressLabel?.string};})()`);
+        assert.equal(journal.panel,JSON.parse(fs.readFileSync('assets/bundles/city_living_city_street_block_01/ui/ui_journal_panel_v17.png.meta')).subMetas.f9941.uuid);
+        assert.equal(journal.cards.length,12);assert.ok(journal.cards.every(Boolean));assert.equal(journal.progress,'已找到 0/12');
+        await send('Emulation.setDeviceMetricsOverride',{width:360,height:780,deviceScaleFactor:1,mobile:true});await wait(250);
+        const pickup=await focus('reading_glasses');await click(pickup.targets.find(t=>t.id==='reading_glasses').screen);
+        await until(s=>s.saved.foundHiddenObjectIds.includes('reading_glasses')&&s.flights===0&&s.landing===0,'Journal pickup did not finish');
+        await screenshot('tray_collected_360x780.png');
+        await send('Page.reload');await until(s=>s.ready&&s.saved.foundHiddenObjectIds.includes('reading_glasses'),'Journal pickup did not restore');
+        const restored=await evaluate(`(()=>{${context}return {progress:view.journalProgressLabel.string,checked:view.stickerCards.get('reading_glasses').check.node.active};})()`);
+        assert.deepEqual(restored,{progress:'已找到 1/12',checked:true});
+        assert.deepEqual(errors,[]);assert.deepEqual(failedRequests,[]);
+        fs.writeFileSync(path.join(out,'tray_report.json'),JSON.stringify({status:'passed',baseline,samples,journal,restored,errors,warnings,failedRequests},null,2)+'\n');
+        console.log(JSON.stringify({status:'passed',baseline,screens:19,directory:out}));
+    }else if(surfacesOnly){
         const jobs=JSON.parse(fs.readFileSync(process.env.LIVING_CITY_SURFACE_PLAN??'art/production/ai_image_v10/generation_plan.json')).jobs;
         await until(s=>s.targets.every(t=>t.loaded)&&s.interactions.every(i=>i.loaded),'Surface assets not ready');
         const samples=[];
@@ -1094,6 +1170,27 @@ try {
     reports.retiredCityResume='active_chapter_1_with_old_progress_retained';
     reports.previousVersionRestore=await verifyPreviousVersionRestore();
     if(expectedFirstBlueprint.hiddenObjectSlots.length>12)reports.legacyCompletionUpgrade=await verifyLegacyCompletionUpgrade();
+    if(expectedFirstBlueprint.targetRevision==='relaxed_twelve_v16'){
+        const fixture=structuredClone(previousVersion.savedJourney),first=expectedFirstBlueprint.id;
+        const kept=expectedFirstBlueprint.hiddenObjectSlots.slice(0,3).map(t=>t.id);
+        const retired=fixture.cities[first].foundHiddenObjectIds.filter(id=>!expectedFirstBlueprint.hiddenObjectSlots.some(t=>t.id===id));
+        fixture.currentCityId=first;fixture.completedCityIds=fixture.completedCityIds.filter(id=>id!==first);
+        fixture.cities[first].foundHiddenObjectIds=[...kept,...retired];
+        // Deliberately leave the old completion cache full: only actual found IDs count.
+        await evaluate(`(()=>{localStorage.setItem('chriken_living_city_v1_save_v1',${JSON.stringify(JSON.stringify(fixture))});return true;})()`);
+        await send('Page.reload');
+        let partial=await until(s=>s.ready&&s.progress.requiredTotal===12&&s.progress.requiredCompleted===3&&!s.completion,'Partial 32-target save did not migrate to 3/12');
+        assert.deepEqual([...partial.snapshot.foundHiddenObjectIds].sort(),[...kept].sort());
+        await screenshot('chapter_1_partial_old_save_3_of_12.png');
+        await send('Page.reload');await until(s=>s.ready&&s.progress.requiredCompleted===3&&!s.completion,'Reduced partial save did not survive refresh');
+        const migrated=await evaluate("JSON.parse(localStorage.getItem('chriken_living_city_v1_save_v1'))");
+        assert.deepEqual(migrated.unlockedCityIds,fixture.unlockedCityIds);
+        for(const [id,progress]of Object.entries(fixture.cities))if(id!==first)assert.deepEqual(migrated.cities[id],progress);
+        reports.reducedPartialRestore={previousFound:kept.length+retired.length,retainedFound:3,total:12,refreshed:true,otherCitiesUnchanged:true};
+        const fresh={...fixture,currentCityId:first,completedCityIds:[],cities:{demo_city:fixture.cities.demo_city??{completedTaskIds:[],foundHiddenObjectIds:[],discoveredChickenIds:[],interactiveStates:{}}}};
+        await evaluate(`(()=>{localStorage.setItem('chriken_living_city_v1_save_v1',${JSON.stringify(JSON.stringify(fresh))});return true;})()`);
+        await send('Page.reload');await until(s=>s.ready&&s.progress.requiredCompleted===0&&!s.completion,'Fresh reduced chapter did not reset');
+    }
     residentObservations.clear();
     reports.chapters=[];
     for(let chapter=0;chapter<chapterIds.length;chapter++) {
@@ -1153,6 +1250,16 @@ try {
             }
         }
         assert.equal(current.stickers.length,current.expectedTargets);
+        if(reviewBatch==='ai_image_v17') {
+            const journal=await evaluate(`(()=>{${context}return {panel:view.taskPanelGraphics.spriteFrame?.uuid,
+                cards:[...view.stickerCards.values()].map(c=>c.background.spriteFrame?.uuid),progress:view.journalProgressLabel?.string};})()`);
+            const uiBase=`assets/bundles/city_${cityId}/ui`;
+            assert.equal(journal.panel,JSON.parse(fs.readFileSync(`${uiBase}/ui_journal_panel_v17.png.meta`)).subMetas.f9941.uuid);
+            const cardUuid=JSON.parse(fs.readFileSync(`${uiBase}/ui_journal_card_v17.png.meta`)).subMetas.f9941.uuid;
+            assert.ok(journal.cards.every(id=>id===cardUuid));
+            assert.equal(journal.progress,`已找到 0/${current.expectedTargets}`);
+            result.journal=journal;
+        }
         for(const group of current.lifeGroups) {
             assert.ok(group.artSlotIds.length>0,`${group.id}: life group has no PNGs`);
             assert.equal(group.loadedArtSlotIds.length,group.artSlotIds.length,`${group.id}: life group is text-only or missing PNGs`);

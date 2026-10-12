@@ -7,6 +7,7 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const blueprintPath = path.resolve(here, '../design/street_block_01.json');
 const scene = JSON.parse(readFileSync(blueprintPath, 'utf8'));
 const polishLayout = scene.layoutVersion === 'street_polish_v9';
+const relaxedTargets = scene.targetRevision === 'relaxed_twelve_v16';
 const richLayout = scene.layoutVersion === 'street_content_v6';
 const courtyardLayout = ['street_courtyards_v8','street_polish_v9'].includes(scene.layoutVersion);
 const neighborhoodLayout = scene.layoutVersion === 'street_neighborhood_v7' || courtyardLayout;
@@ -342,16 +343,16 @@ if (richLayout || neighborhoodLayout) {
         if (slot.instanceOfSlotId) check(slot.instanceOfSlotId.startsWith('lc5_') &&
             slot.reusedGeneratedSourceBatch === 'ai_image_v5', `${slot.id}: shared source provenance missing`);
     }
-    check(scene.hiddenObjectSlots.length === (polishLayout ? 32 : 24) && scene.interactiveSlots.length === (polishLayout ? 8 : 6),
-        polishLayout ? 'Polish stage needs thirty-two targets and eight reveals' : 'Content stage needs twenty-four targets and six independent reveal objects');
+    check(scene.hiddenObjectSlots.length === (relaxedTargets ? 12 : polishLayout ? 32 : 24) && scene.interactiveSlots.length === (relaxedTargets ? 4 : polishLayout ? 8 : 6),
+        relaxedTargets ? 'Relaxed chapter needs twelve targets and four reveals' : polishLayout ? 'Polish stage needs thirty-two targets and eight reveals' : 'Content stage needs twenty-four targets and six independent reveal objects');
     check(scene.lifeGroups?.length === 6, 'Content stage needs six living groups');
     const groupIds = new Set();
     for (const group of scene.lifeGroups ?? []) {
         check(!groupIds.has(group.id), `${group.id}: duplicated living group`);
         groupIds.add(group.id);
         check(point(group.at) && inBounds(group.at), `${group.id}: invalid group focus`);
-        check(group.artSlotIds?.length >= (neighborhoodLayout ? 2 : 5) && group.targetIds?.length >= 2,
-            `${group.id}: group needs purposeful placements and two targets`);
+        check(group.artSlotIds?.length >= (neighborhoodLayout ? 2 : 5) && Array.isArray(group.targetIds) && group.targetIds.length >= (relaxedTargets ? 0 : 2),
+            `${group.id}: group needs purposeful placements and valid target membership`);
         for (const id of group.artSlotIds ?? []) check(art.get(id)?.lifeGroupId === group.id,
             `${group.id}: unrelated or missing scene placement ${id}`);
         for (const id of group.targetIds ?? []) check(scene.hiddenObjectSlots.some(target =>
@@ -401,7 +402,7 @@ if (neighborhoodLayout) {
         'orchard_apple', 'golden_bun', 'reading_glasses', 'bookmark', 'garden_glove', 'seedling_spade',
         'wooden_bird', 'pink_watering_can', 'postcard', 'stamp_roll', 'tiny_camera', 'yarn_ball',
         'picnic_cookie', 'laundry_peg'];
-    check(retainedTargetIds.every(id => scene.hiddenObjectSlots.some(target => target.id === id)),
+    check(relaxedTargets || retainedTargetIds.every(id => scene.hiddenObjectSlots.some(target => target.id === id)),
         'Neighborhood upgrade changed a saved target ID');
 }
 
