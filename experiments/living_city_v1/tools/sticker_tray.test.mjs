@@ -27,6 +27,7 @@ class Node {
             position: new Vec3(), scale: new Vec3(1, 1, 1) });
     }
     addChild(node) { node.parent = this; this.children.push(node); }
+    getChildByName(name) { return this.children.find(child => child.name === name) ?? null; }
     addComponent(Type) { const c = new Type(); c.node = this; this.components.set(Type, c); return c; }
     getComponent(Type) { return this.components.get(Type) ?? null; }
     setPosition(x, y, z = 0) { this.position = typeof x === 'object' ? x : new Vec3(x, y, z); }
@@ -56,11 +57,15 @@ function fixture(count = 12, completed = []) {
     view.node = new Node('CityRoot');
     view.node.addComponent(UITransform).setContentSize(1080, 2335);
     view.cityConfig = { cityId: 'living_city_street_block_01', cityName: '茶摊街区',
+        mapSize: { width: 2304, height: 2048 },
         hiddenObjects: Array.from({ length: count }, (_, i) => ({ id: `item_${i}`, displayName: `物品${i}`,
-            clue: `陈列${i}`, visualSize: { width: 32, height: 28 } })) };
+            clue: `陈列${i}`, visualSize: { width: 32, height: 28 },
+            targetable: true, x: 0.25, y: 0.75 })) };
+    view.foundCount = completed.length;
     view.artBundle = {};
     view.taskManager = {
-        getProgress: () => ({ requiredCompleted: completed.length, requiredTotal: count }),
+        getProgress: () => ({ requiredCompleted: completed.length, requiredTotal: count,
+            allRequiredComplete: completed.length === count }),
         getTaskStates: () => view.cityConfig.hiddenObjects.map(c => ({ config: { type: 'hiddenObject', targetId: c.id },
             completed: completed.includes(c.id) })),
     };
@@ -141,12 +146,12 @@ test('clicking a card keeps its clue, while a horizontal swipe changes page with
     const point = view.stickerCards.get('item_2').node.worldPosition;
     view.onStickerMouseDown(eventAt(point)); view.onStickerMouseUp(eventAt(point));
     assert.equal(view.stickerClueLabel.string, '物品2：陈列2');
-    view.stickerClueLabel.string = '轻点物品看线索';
+    view.stickerClueLabel.string = '点卡片看线索，卡住时点「帮我找」。';
     view.onStickerMouseDown(eventAt(point));
     view.onStickerMouseMove(eventAt({ x: point.x - 100, y: point.y }));
     view.onStickerMouseUp(eventAt({ x: point.x - 100, y: point.y }));
     assert.equal(view.stickerPage, 1);
-    assert.equal(view.stickerClueLabel.string, '轻点物品看线索');
+    assert.equal(view.stickerClueLabel.string, '点卡片看线索，卡住时点「帮我找」。');
 });
 
 test('pinches, vertical drags and drags beginning outside the tray never change page', () => {
@@ -181,7 +186,7 @@ test('external overlays block both card clues and tray page gestures', () => {
     view.blocksExternalInput = () => true;
     const point = view.stickerCards.get('item_2').node.worldPosition;
     view.onStickerMouseDown(eventAt(point)); view.onStickerMouseUp(eventAt(point));
-    assert.equal(view.stickerClueLabel.string, '轻点物品看线索');
+    assert.equal(view.stickerClueLabel.string, '点卡片看线索，卡住时点「帮我找」。');
     view.onStickerMouseDown(eventAt(point)); view.onStickerMouseUp(eventAt({ x: point.x - 100, y: point.y }));
     assert.equal(view.stickerPage, 0);
 });
@@ -197,8 +202,67 @@ test('selection follows the last pending card and clears after collection withou
     assert.equal(view.selectedStickerId,'item_7');
     completed.push('item_7');view.renderTaskPanel();
     assert.equal(view.selectedStickerId,null);
-    assert.equal(view.stickerClueLabel.string,'物品7已找到，收入贴纸册啦');
+    assert.equal(view.stickerClueLabel.string,'物品7已收进手账，接着慢慢找。');
     assert.equal(view.stickerCards.get('item_7').check.node.active,true);
+});
+
+test('a fresh first city offers an uncovered existing item without awarding progress', () => {
+    const view = fixture();
+    view.cityConfig.hiddenObjects[0].visibleCondition = { objectId: 'cover', state: 'opened' };
+    const focus = [];
+    view.controller = { focusAt: (x, y) => focus.push({ x, y }) };
+    view.createWelcomePrompt();
+    view.offerFirstFind();
+    assert.equal(view.welcomePrompt.active, true);
+    assert.equal(view.selectedStickerId, 'item_1');
+    assert.deepEqual(focus, [{ x: -576, y: 512 }]);
+    assert.equal(view.progress.requiredCompleted, 0);
+    assert.equal(view.foundCount, 0);
+    view.showStickerClue('item_3');
+    view.offerFirstFind();
+    assert.equal(view.selectedStickerId, 'item_3', 'Late scene readiness must not overwrite a player choice');
+    assert.equal(focus.length, 1);
+});
+
+test('returning players and later cities skip the welcome and first-find focus', () => {
+    for (const view of [fixture(12, ['item_2']), fixture(12, Array.from({ length: 12 }, (_, i) => `item_${i}`)),
+        fixture()]) {
+        if (view.foundCount === 0) view.cityConfig.cityId = 'living_city_garden_market_02';
+        view.controller = { focusAt: () => assert.fail('Returning player was redirected') };
+        view.createWelcomePrompt();
+        view.offerFirstFind();
+        assert.equal(view.welcomePrompt, null);
+        assert.equal(view.selectedStickerId, null);
+    }
+});
+
+test('a complete journal invites strolling instead of asking the player to find more items', () => {
+    const view = fixture(12, Array.from({ length: 12 }, (_, i) => `item_${i}`));
+    assert.equal(view.stickerClueLabel.string, '小东西都找齐了，可以再逛一会儿。');
+    view.showStickerClue('item_1');
+    assert.equal(view.selectedStickerId, null);
+    assert.equal(view.stickerClueLabel.string, '小东西都找齐了，可以再逛一会儿。');
+});
+
+test('the welcome fits phone and landscape screens and retires without blocking map input', () => {
+    const view = fixture();
+    view.createWelcomePrompt();
+    for (const [width, height] of [[1080, 2340], [1332, 2880], [1280, 720]]) {
+        view.node.getComponent(UITransform).setContentSize(width, height);
+        view.resizeDisplay();
+        const prompt = view.welcomePrompt;
+        const bounds = prompt.getComponent(UITransform);
+        assert.ok(Math.abs(prompt.position.x) + bounds.width / 2 <= width / 2);
+        assert.ok(prompt.position.y + bounds.height / 2 <= height / 2);
+        assert.ok(prompt.position.y - bounds.height / 2 > view.taskPanel.position.y +
+            view.taskPanel.getComponent(UITransform).height / 2);
+        assert.equal(view.isOverWelcomePrompt(prompt.worldPosition.x, prompt.worldPosition.y), true);
+        assert.equal(view.isOverWelcomePrompt(prompt.worldPosition.x, prompt.worldPosition.y - bounds.height), false);
+    }
+    view.lateUpdate(16);
+    assert.equal(view.welcomePrompt.active, false);
+    assert.equal(view.isOverWelcomePrompt(view.welcomePrompt.worldPosition.x, view.welcomePrompt.worldPosition.y), false);
+    assert.equal(view.progress.requiredCompleted, 0);
 });
 
 test('journal separates progress, cards and clues and does not report an in-flight item as stored', () => {

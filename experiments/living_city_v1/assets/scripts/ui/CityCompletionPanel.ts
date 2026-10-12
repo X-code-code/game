@@ -42,11 +42,11 @@ export class CityCompletionPanel {
         this.title = this.label(this.card, 'CompletionTitle', 37, 166, 580, 64);
         this.summary = this.label(this.card, 'CompletionSummary', 27, 73, 580, 106);
         this.message = this.label(this.card, 'CompletionMessage', 23, -15, 580, 58);
-        this.continueButton = this.button(this.card, 'ContinueExploring', '继续探索', 540, onContinue);
+        this.continueButton = this.button(this.card, 'ContinueExploring', '再逛一会儿', 540, onContinue);
         this.continueButton.setPosition(0, -100, 0);
-        this.nextButton = this.button(this.card, 'NextCity', '前往下一座城市', 540, onNext);
+        this.nextButton = this.button(this.card, 'NextCity', '去下一站', 540, onNext);
         this.nextButton.setPosition(0, -184, 0);
-        this.entry = this.button(this.root, 'OpenCompletion', '探索完成 · 查看旅程', 340, onOpen);
+        this.entry = this.button(this.root, 'OpenCompletion', '寻物完成 · 查看旅程', 340, onOpen);
         this.modal.active = false;
         this.entry.active = false;
         this.resize();
@@ -57,22 +57,22 @@ export class CityCompletionPanel {
     public show(data: CompletionSummary, loading = false, failed = false): void {
         this.modal.active = true;
         this.entry.active = false;
-        this.title.string = `${data.cityName}探索完成`;
+        this.title.string = `${data.cityName} · 寻物完成`;
         const p = data.progress;
         this.summary.string = data.chapterIndex && data.chapterCount
-            ? `本关贴纸已集齐：${p.requiredCompleted} / ${p.requiredTotal}\n` +
-                `旅程：第 ${data.chapterIndex} 关 / 共 ${data.chapterCount} 关`
+            ? `${p.requiredCompleted} 件物品已找到\n` +
+                `第 ${data.chapterIndex} 站 · 共 ${data.chapterCount} 站`
             : `主要目标：${p.requiredCompleted} / ${p.requiredTotal}\n` +
                 `发现小鸡：${data.chickens}    隐藏物：${data.objects}\n` +
                 `隐藏目标：${p.optionalCompleted} / ${p.optionalTotal}`;
-        this.message.string = loading ? '正在准备下一座城市…\n也可以留在当前城市继续探索' : failed
-            ? '下一座城市暂时未能加载\n当前进度已保留，可以重试' : data.hasNext
-                ? '可以继续寻找，也可以启程前往下一站' : '已到达本次旅程的最后一站\n仍可留在这里继续探索';
+        this.message.string = loading ? '正在准备下一站…\n也可以留在这里，再逛一会儿' : failed
+            ? '下一站暂时未能加载\n可以再试一次，或留在这里逛逛' : data.hasNext
+                ? '今天的寻找完成啦\n可以再逛一会儿，也可以去下一站' : '这里的物品都找到啦\n可以留在这里，慢慢逛逛';
         this.nextButton.active = data.hasNext;
         this.nextButton.getComponent(Button)!.interactable = !loading;
         this.nextButton.getChildByName('Text')!.getComponent(Label)!.string = loading
-            ? '正在准备…' : failed ? '重试前往下一座城市' : '前往下一座城市';
-        this.continueButton.getChildByName('Text')!.getComponent(Label)!.string = loading ? '留在当前城市' : '继续探索';
+            ? '正在准备…' : failed ? '重试去下一站' : '去下一站';
+        this.continueButton.getChildByName('Text')!.getComponent(Label)!.string = '再逛一会儿';
         this.resize();
     }
 
@@ -106,7 +106,9 @@ export class CityCompletionPanel {
         this.card.setScale(scale, scale, 1);
         const entryScale = size.height > size.width ? size.width * 0.7 / 340 : 1;
         this.entry.setScale(entryScale, entryScale, 1);
-        this.entry.setPosition(0, -size.height / 2 + 54 * entryScale, 0);
+        const portrait = size.height > size.width;
+        this.entry.setPosition(portrait ? 0 : size.width / 2 - 170 * entryScale - 18,
+            size.height / 2 - (portrait ? size.width * 0.14 : 18) - 32 * entryScale, 0);
     }
 
     public dispose(): void {

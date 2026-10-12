@@ -7,6 +7,7 @@ import { createHash } from 'node:crypto';
 
 // Real Cocos input, sprites and persistence in an isolated disposable browser.
 const root = path.resolve('build/web-mobile');
+const completionLayoutOnly = process.argv.includes('--completion-layout-only');
 const chapterOneOnly = process.argv.includes('--chapter-one-only');
 const rimsOnly = process.argv.includes('--rims-only');
 const surfacesOnly = process.argv.includes('--surfaces-only');
@@ -14,8 +15,9 @@ const surfaceBaseline = process.argv.includes('--surface-baseline');
 const reviewBatch = process.env.LIVING_CITY_REVIEW_BATCH ?? 'ai_image_v9';
 assert.match(reviewBatch, /^ai_image_v\d+$/, 'Invalid review batch');
 const reviewBase = `art/review/${reviewBatch}`;
-const out = path.resolve(process.env.LIVING_CITY_REVIEW_DIR ?? (chapterOneOnly
-    ? `${reviewBase}/chapter_1_followup` : `${reviewBase}/three_chapters`));
+const out = path.resolve(process.env.LIVING_CITY_REVIEW_DIR ?? (completionLayoutOnly
+    ? 'art/review/basic_loop_v18/completion_layout' : chapterOneOnly
+        ? `${reviewBase}/chapter_1_followup` : `${reviewBase}/three_chapters`));
 const expectedFirstBlueprint = JSON.parse(fs.readFileSync(path.resolve('design/street_block_01.json'), 'utf8'));
 const previousVersionPath = path.resolve(process.env.LIVING_CITY_PREVIOUS_REPORT ??
     'art/review/ai_image_v9/baseline_v8/runtime_report.json');
@@ -87,7 +89,7 @@ function observeResidents(current) {
 }
 let socket;
 let failureCapture;
-const reports = { startedAt:new Date().toISOString(),scope:chapterOneOnly?'chapter_1_followup':'full_three_chapter',
+const reports = { startedAt:new Date().toISOString(),scope:completionLayoutOnly?'completion_layout_only':chapterOneOnly?'chapter_1_followup':'full_three_chapter',
     expectedFirstChapter:{map:expectedFirstBlueprint.map,layers:expectedFirstBlueprint.artSlots.length,
         residents:expectedFirstBlueprint.npcPlans.length,newResidentIds:expectedNewResidentIds,
         newBuildingIds:expectedNewBuildingIds,
@@ -187,7 +189,7 @@ try {
                 id:slot.id,layer:slot.layer,loaded:!!n?.getComponent(cc.Sprite)?.spriteFrame,active:!!n?.activeInHierarchy,
                 screen:n?screen(n):null,center:slot.center,size:slot.size,textureScale:slot.textureScale??1,
                 sprite:spriteInfo(n?.getComponent(cc.Sprite))};});
-            return {ready:true,viewport:{width:innerWidth,height:innerHeight},
+            return {ready:true,pageStartedAt:performance.timeOrigin,viewport:{width:innerWidth,height:innerHeight},
                 cityId:config.cityId,mapSize:config.mapSize,blueprintMap:box.blueprint.map,
                 expectedLayers:box.blueprint.artSlots.length,
                 expectedTargets:config.hiddenObjects.length,expectedReveals:config.interactiveObjects.length,
@@ -252,14 +254,23 @@ try {
                     active:c.node.activeInHierarchy,collected:c.collected,alpha:c.icon.color.a,
                     sprite:spriteInfo(c.icon),iconSize:c.icon.node.getComponent('cc.UITransform')?.contentSize})),
                 clue:view.stickerClueLabel?.string,title:view.taskTitleLabel?.string,
+                selectedStickerId:view.selectedStickerId,
+                welcome:{visible:!!view.welcomePrompt?.activeInHierarchy,bounds:screenBounds(view.welcomePrompt),
+                    title:view.welcomePrompt?.getChildByName('WelcomeTitle')?.getComponent(cc.Label)?.string,
+                    body:view.welcomePrompt?.getChildByName('WelcomeBody')?.getComponent(cc.Label)?.string,
+                    loaded:!!view.welcomePrompt?.getComponent(cc.Sprite)?.spriteFrame},
                 stickerPage:view.stickerPage,stickerPages:Math.ceil(view.stickerCards.size/12),
                 missedTapFeedback:!!view.missedTapFeedback?.activeInHierarchy,
                 completionText:manager.ui.summary.string,
+                completionEntryVisible:manager.ui.entry.activeInHierarchy,
+                completionEntry:screen(manager.ui.entry),
+                completionEntryBounds:screenBounds(manager.ui.entry),
                 completionArtReady:[manager.ui.card,manager.ui.continueButton,manager.ui.nextButton,
                     manager.ui.modal.getChildByName('CompletionDimmer')].every(n=>!!n.getComponent(cc.Sprite)?.spriteFrame),
                 flights:view.collectionFlights.size,landing:view.collectionLandingAnimations,completion:manager.ui.isOpen,
                 hint:view.hintManager?.active?{id:view.hintManager.active.targetId,kind:view.hintManager.active.kind}:null,
                 hintUi:view.hintPanel?{button:screen(view.hintPanel.button),marker:view.hintPanel.marker.activeInHierarchy,
+                    caption:view.hintPanel.button.getChildByName('Text').getComponent(cc.Label).string,
                     markerLoaded:!!view.hintPanel.ring?.spriteFrame,
                     visible:view.hintPanel.root.activeInHierarchy,message:view.hintPanel.message.string}:null,
                 proof:window.__lastLandingProof??null};
@@ -552,7 +563,8 @@ try {
         await evaluate(`(()=>{localStorage.setItem('chriken_living_city_v1_save_v1',${JSON.stringify(JSON.stringify(fixture))});return true;})()`);
         await send('Page.reload');
         const current=await until(s=>s.ready&&s.expectedResidents===expectedFirstBlueprint.npcPlans.length&&
-            s.npcs.every(actor=>actor.celsReady)&&s.targets.every(target=>target.loaded)&&s.stickers.every(card=>card.loaded)&&s.completion===!expanded,
+            s.npcs.every(actor=>actor.celsReady)&&s.targets.every(target=>target.loaded)&&s.stickers.every(card=>card.loaded)&&
+            !s.completion&&s.completionEntryVisible===!expanded,
             'Completed previous-version save failed to restore in the current town');
         const retainedFound=original.foundHiddenObjectIds.filter(id=>expectedFirstBlueprint.hiddenObjectSlots.some(t=>t.id===id));
         assert.equal(current.progress.requiredCompleted,retainedFound.length);
@@ -1031,7 +1043,283 @@ try {
     const chapterIds=chapterOneOnly?['living_city_street_block_01']:
         ['living_city_street_block_01','living_city_garden_market_02','living_city_harbor_walk_03'];
     await until(s=>s.ready&&s.cityId===chapterIds[0], 'Fresh journey did not start');
-    if(process.argv.includes('--staging-only')){
+    if(completionLayoutOnly){
+        assert.equal(chapterIds.length,3,'Completion layout checks require all three cities');
+        const baselinePath=path.resolve(process.env.LIVING_CITY_BASIC_LOOP_BASELINE??
+            'art/review/basic_loop_v18/basic_loop_report.json');
+        const baselineBytes=fs.readFileSync(baselinePath),baseline=JSON.parse(baselineBytes);
+        assert.equal(baseline.status,'passed','Completion layout requires a passing basic-loop baseline');
+        assert.equal(baseline.totalUniqueCollected,36);
+        assert.equal(baseline.totalReveals,10);
+        assert.ok(baseline.savedJourney?.cities,'Basic-loop baseline has no saved journey');
+        const baselineReference={path:path.relative(process.cwd(),baselinePath).replaceAll('\\','/'),
+            sha256:createHash('sha256').update(baselineBytes).digest('hex'),status:baseline.status,
+            collections:baseline.totalUniqueCollected,reveals:baseline.totalReveals,
+            note:'Previous full 36-collection/10-reveal run; reused only as a saved-progress fixture and historical evidence.'};
+        reports.baseline=baselineReference;
+        const ready=s=>s.ready&&s.sceneLayers===s.expectedLayers&&s.targets.every(t=>t.loaded)&&
+            s.stickers.every(c=>c.loaded)&&s.interactions.every(i=>i.loaded)&&s.npcs.every(n=>n.celsReady);
+        const chapters=[],samples=[];
+        let current=await until(ready,'Initial completion-layout assets did not load');
+        const reload=async(predicate,description)=>{
+            const oldPage=current.pageStartedAt;
+            await send('Page.reload');
+            current=await until(s=>ready(s)&&s.pageStartedAt!==oldPage&&predicate(s),description,200);
+            return current;
+        };
+        const assertCompletedLayout=(state,width,height)=>{
+            assert.equal(state.completion,false,'Staying/restoring must not leave the completion modal open');
+            assert.equal(state.completionEntryVisible,true,'Completed journey entry is missing');
+            assert.equal(state.progress.requiredCompleted,12);
+            assert.equal(state.progress.allRequiredComplete,true);
+            assert.ok(state.clue.includes('都找齐了'),'Completed journal asks the player to keep looking');
+            assert.ok(state.completionEntryBounds&&state.trayBounds,'Missing completion entry or tray bounds');
+            const entry=state.completionEntryBounds;
+            assert.ok(entry.left>=0&&entry.right<=width&&entry.top>=0&&entry.bottom<=height,
+                `Completion entry is outside ${width}x${height}: ${JSON.stringify(entry)}`);
+            assert.ok(entry.bottom<state.trayBounds.top,'Journey entry covers the completed journal');
+        };
+        for(let chapter=0;chapter<chapterIds.length;chapter++){
+            const cityId=chapterIds[chapter];
+            const config=JSON.parse(fs.readFileSync(`assets/bundles/city_${cityId}/city.json`,'utf8'));
+            assert.equal(config.hiddenObjects.length,12);
+            assert.equal(config.interactiveObjects.length,chapter===0?4:3);
+            const last=config.hiddenObjects[config.hiddenObjects.length-1];
+            const lastTask=config.tasks.find(task=>task.type==='hiddenObject'&&task.targetId===last.id);
+            assert.ok(last.targetable&&lastTask?.required,'The final fixture object must be an existing required target');
+            const fixture=structuredClone(baseline.savedJourney),original=structuredClone(fixture.cities[cityId]);
+            assert.equal(original.foundHiddenObjectIds.length,12,'Baseline city must already contain every current target');
+            for(const interaction of config.interactiveObjects){
+                assert.equal(original.interactiveStates[interaction.id],'opened','Baseline container must remain open');
+            }
+            fixture.currentCityId=cityId;
+            fixture.completedCityIds=fixture.completedCityIds.filter(id=>id!==cityId);
+            fixture.cities[cityId].foundHiddenObjectIds=original.foundHiddenObjectIds.filter(id=>id!==last.id);
+            fixture.cities[cityId].completedTaskIds=original.completedTaskIds.filter(id=>id!==lastTask.id);
+            await send('Emulation.setDeviceMetricsOverride',{width:444,height:960,deviceScaleFactor:1,mobile:true});
+            await evaluate(`(()=>{localStorage.setItem('chriken_living_city_v1_save_v1',${JSON.stringify(JSON.stringify(fixture))});return true;})()`);
+            await reload(s=>s.cityId===cityId&&s.progress.requiredCompleted===11&&!s.completion,
+                `${cityId}: 11/12 fixture did not restore`);
+            assert.equal(current.completionEntryVisible,false);
+            assert.equal(current.expectedTargets,12);
+            assert.equal(current.expectedReveals,chapter===0?4:3);
+            assert.deepEqual(current.snapshot.interactiveStates,original.interactiveStates);
+            current=await focus(last.id);
+            const target=current.targets.find(item=>item.id===last.id);
+            assert.ok(target.loaded&&target.active,'Final existing target is not visible after restoration');
+            assert.ok(target.screen.y<current.trayBounds.top,'Final target is covered by the journal');
+            await click(target.screen,0);
+            current=await until(s=>s.progress.requiredCompleted===12&&(s.flights>0||s.completion),
+                `${cityId}: final collection did not begin`);
+            assert.ok(current.flights>0,'Final collection did not display its existing PNG flight');
+            assert.equal(current.completion,false,'Completion appeared before the object landed');
+            assert.ok(current.saved.foundHiddenObjectIds.includes(last.id),'Final object was not saved immediately');
+            current=await until(s=>s.completion&&s.progress.allRequiredComplete&&s.flights===0&&s.landing===0,
+                `${cityId}: final pickup did not celebrate after landing`);
+            assert.ok(current.completionText.includes(`第 ${chapter+1} 站 · 共 3 站`));
+            const completionScreenshot=`completion_layout_city_${chapter+1}_automatic.png`;
+            await screenshot(completionScreenshot);
+            for(const [width,height] of [[360,780],[444,960],[960,540]]){
+                await send('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:true});
+                await wait(200);
+                current=await until(s=>ready(s)&&s.viewport.width===width&&s.viewport.height===height,
+                    `${cityId}: completion viewport did not resize`);
+                assert.equal(current.completion,true,'Completion modal must remain open until the player chooses to stay');
+                const stay=await evaluate(`(()=>{${context}return screen(manager.ui.continueButton);})()`);
+                await click(stay);
+                current=await until(s=>!s.completion&&s.completionEntryVisible,
+                    `${cityId}: actual stay button did not return to the street`);
+                assertCompletedLayout(current,width,height);
+                const stayed={entryBounds:current.completionEntryBounds,trayBounds:current.trayBounds,clue:current.clue};
+                const stayScreenshot=`completion_layout_city_${chapter+1}_stay_${width}x${height}.png`;
+                await screenshot(stayScreenshot);
+                await reload(s=>s.cityId===cityId&&s.progress.requiredCompleted===12&&
+                    !s.completion&&s.completionEntryVisible,`${cityId}: completed save reopened a modal after refresh`);
+                assertCompletedLayout(current,width,height);
+                assert.equal(current.welcome.visible,false,'Completed save was shown first-play guidance');
+                const restoredScreenshot=`completion_layout_city_${chapter+1}_restored_${width}x${height}.png`;
+                await screenshot(restoredScreenshot);
+                const restored={entryBounds:current.completionEntryBounds,trayBounds:current.trayBounds,clue:current.clue};
+                await click(current.completionEntry);
+                current=await until(s=>s.completion,`${cityId}: actual journey entry did not reopen completion`);
+                samples.push({cityId,width,height,stayed,restored,
+                    stayScreenshot,restoredScreenshot,actualStayInput:true,
+                    refreshPreserved12:true,refreshDidNotOpenModal:true,actualEntryReopenedModal:true});
+            }
+            const saved=await evaluate("JSON.parse(localStorage.getItem('chriken_living_city_v1_save_v1'))");
+            assert.deepEqual(saved.unlockedCityIds,baseline.savedJourney.unlockedCityIds);
+            assert.deepEqual([...saved.completedCityIds].sort(),[...baseline.savedJourney.completedCityIds].sort());
+            assert.deepEqual(saved.cities[cityId].interactiveStates,original.interactiveStates);
+            assert.deepEqual(saved.cities[cityId].sceneDiscoveryIds,original.sceneDiscoveryIds);
+            assert.deepEqual([...saved.cities[cityId].foundHiddenObjectIds].sort(),[...original.foundHiddenObjectIds].sort());
+            for(const [otherId,progress] of Object.entries(baseline.savedJourney.cities)){
+                if(otherId!==cityId)assert.deepEqual(saved.cities[otherId],progress,'Layout follow-up changed another city');
+            }
+            chapters.push({cityId,targets:12,existingOpenContainers:config.interactiveObjects.length,
+                finalCollectedId:last.id,collectionsThisRun:1,revealsThisRun:0,completionScreenshot,
+                savedImmediately:true,celebratedAfterFlight:true,otherCitiesAndUnlocksPreserved:true});
+            console.log(JSON.stringify({stage:'completion_layout_city_verified',city:chapter+1,
+                finalCollectedId:last.id,actualCollections:1,viewports:3}));
+        }
+        assert.equal(chapters.length,3);assert.equal(samples.length,9);
+        assert.deepEqual(errors,[]);assert.deepEqual(warnings,[]);assert.deepEqual(failedRequests,[]);
+        const report={status:'passed',scope:'completion_layout_only',startedAt:reports.startedAt,
+            finishedAt:new Date().toISOString(),baseline:baselineReference,chapters,samples,
+            collectionsThisRun:3,revealsThisRun:0,
+            fixtureNote:'One 11/12 fixture per city, retaining open containers, all other city progress and unlocks; one real final pickup per city, then three viewport checks.',
+            fullThreeChapterCollectionRerun:false,errors,warnings,failedRequests,wechat:'not_run'};
+        fs.writeFileSync(path.join(out,'completion_layout_report.json'),JSON.stringify(report,null,2)+'\n');
+        console.log(JSON.stringify({status:'passed',scope:report.scope,collectionsThisRun:3,
+            revealsThisRun:0,layoutSamples:9,report:path.join(out,'completion_layout_report.json')}));
+    }else if(process.argv.includes('--basic-loop-only')){
+        const samples=[],chapters=[];
+        const ready=s=>s.ready&&s.sceneLayers===s.expectedLayers&&s.targets.every(t=>t.loaded)&&
+            s.stickers.every(c=>c.loaded)&&s.interactions.every(i=>i.loaded)&&s.npcs.every(n=>n.celsReady);
+        for(const [width,height] of [[360,780],[444,960],[960,540]]){
+            await send('Emulation.setDeviceMetricsOverride',{width,height,deviceScaleFactor:1,mobile:true});
+            await send('Page.reload');
+            const current=await until(s=>ready(s)&&s.welcome.loaded,'Fresh basic-loop art did not load');
+            assert.equal(current.progress.requiredCompleted,0);
+            assert.equal(current.selectedStickerId,'reading_glasses');
+            assert.ok(current.welcome.visible&&current.welcome.loaded,'Fresh welcome did not display its generated PNG');
+            assert.equal(current.hintUi.caption,'帮我找');
+            const bounds=current.welcome.bounds;
+            assert.ok(bounds.left>=0&&bounds.right<=width&&bounds.top>=0&&bounds.bottom<height);
+            const first=current.targets.find(t=>t.id==='reading_glasses').screen;
+            assert.ok(first.x>0&&first.x<width&&first.y>bounds.bottom&&first.y<current.trayBounds.top,
+                'First existing target is hidden behind welcome/tray');
+            const file=`basic_welcome_${width}x${height}.png`;
+            await screenshot(file);samples.push({width,height,file,welcome:current.welcome,firstTarget:first});
+        }
+        await send('Emulation.setDeviceMetricsOverride',{width:444,height:960,deviceScaleFactor:1,mobile:true});
+        await send('Page.reload');
+        let current=await until(ready,'Fresh phone did not reload');
+        const paper=current.welcome.bounds;
+        const paperPoint={x:(paper.left+paper.right)/2,y:(paper.top+paper.bottom)/2};
+        await click(paperPoint);
+        assert.equal((await state()).progress.requiredCompleted,0,'Welcome text collected a covered target');
+        const beforePaperDrag=(await state()).map;
+        await send('Input.dispatchMouseEvent',{type:'mousePressed',...paperPoint,button:'left',clickCount:1});
+        await wait(60);
+        await send('Input.dispatchMouseEvent',{type:'mouseMoved',x:paperPoint.x-70,y:paperPoint.y+100,button:'left',buttons:1});
+        await wait(60);
+        await send('Input.dispatchMouseEvent',{type:'mouseReleased',x:paperPoint.x-70,y:paperPoint.y+100,button:'left',clickCount:1});
+        await wait(150);
+        current=await state();
+        assert.equal(current.progress.requiredCompleted,0);
+        assert.notDeepEqual(current.map,beforePaperDrag,'Welcome prevented map dragging');
+        await send('Page.reload');
+        current=await until(ready,'Fresh view did not reload after welcome drag');
+        let point=current.targets.find(t=>t.id==='reading_glasses').screen;
+        await send('Input.dispatchMouseEvent',{type:'mousePressed',...point,button:'left',clickCount:1});
+        await send('Input.dispatchMouseEvent',{type:'mouseMoved',x:point.x+60,y:point.y+25,button:'left',buttons:1});
+        await send('Input.dispatchMouseEvent',{type:'mouseReleased',x:point.x+60,y:point.y+25,button:'left',clickCount:1});
+        assert.equal((await state()).progress.requiredCompleted,0,'Map drag collected the introductory target');
+        await send('Page.reload');
+        current=await until(ready,'Introductory target did not reload');
+        await click(current.targets.find(t=>t.id==='reading_glasses').screen,0);
+        current=await until(s=>s.progress.requiredCompleted===1&&s.flights===0&&s.landing===0,'First pickup did not land');
+        assert.equal(current.welcome.visible,false);
+        await screenshot('basic_first_pickup_444x960.png');
+        await send('Page.reload');
+        current=await until(s=>ready(s)&&s.progress.requiredCompleted===1,'First pickup did not survive reload');
+        assert.equal(current.welcome.visible,false);
+        assert.equal(current.selectedStickerId,null,'Returning player was assigned a target');
+        await click(current.stickers.find(t=>t.id==='sealed_letter').screen);
+        await click((await state()).hintUi.button);
+        current=await until(s=>s.hint?.kind==='interactiveObject','Selected concealed target did not hint its cover');
+        const letterCover=await evaluate(`(()=>{${context}return city.content.config.hiddenObjects.find(t=>t.id==='sealed_letter').visibleCondition.objectId;})()`);
+        assert.equal(current.hint.id,letterCover);
+        await screenshot('basic_selected_cover_hint.png');
+        await click(current.interactions.find(i=>i.id===letterCover).screen);
+        current=await until(s=>s.interactions.find(i=>i.id===letterCover).state==='opened','Cover did not open');
+        assert.equal(current.selectedStickerId,'sealed_letter');
+        assert.ok(current.clue.includes('露出来了'));
+        await screenshot('basic_revealed_letter.png');
+        const selectionProof={selectedId:current.selectedStickerId,coverId:letterCover,clue:current.clue,
+            actualCardAndHintInput:true,freeHint:true};
+        for(let chapter=0;chapter<chapterIds.length;chapter++){
+            current=await until(s=>ready(s)&&s.cityId===chapterIds[chapter],'Journey city did not load');
+            const definitions=await evaluate(`(()=>{${context}return city.content.config.hiddenObjects;})()`);
+            const collected=[...current.snapshot.foundHiddenObjectIds],reveals=[];
+            for(const item of definitions){
+                if(collected.includes(item.id))continue;
+                if(item.visibleCondition){
+                    const coverId=item.visibleCondition.objectId;
+                    current=await state();
+                    if(current.interactions.find(i=>i.id===coverId).state!==item.visibleCondition.state){
+                        current=await focus(coverId);await click(current.interactions.find(i=>i.id===coverId).screen);
+                        current=await until(s=>s.interactions.find(i=>i.id===coverId).state===item.visibleCondition.state,
+                            `${coverId} did not reveal its target`);
+                        assert.ok(current.targets.find(t=>t.id===item.id).active);
+                        assert.equal(current.selectedStickerId,item.id);
+                    }
+                    if(!reveals.includes(coverId))reveals.push(coverId);
+                }
+                current=await focus(item.id);point=current.targets.find(t=>t.id===item.id).screen;
+                await click(point,0);await click(point,0);
+                collected.push(item.id);
+                current=await until(s=>s.progress.requiredCompleted===collected.length&&s.flights===0&&s.landing===0,
+                    `${item.id} did not collect exactly once`);
+                assert.ok(current.stickers.find(t=>t.id===item.id).collected);
+                assert.equal(current.targets.find(t=>t.id===item.id).active,false);
+            }
+            current=await until(s=>s.completion&&s.progress.allRequiredComplete,'Final pickup did not celebrate');
+            assert.equal(current.progress.requiredCompleted,12);
+            assert.ok(current.completionText.includes(`第 ${chapter+1} 站 · 共 3 站`));
+            await screenshot(`basic_city_${chapter+1}_completed.png`);
+            let stay=await evaluate(`(()=>{${context}return screen(manager.ui.continueButton);})()`);
+            await click(stay);
+            current=await until(s=>!s.completion&&s.completionEntryVisible,'Stay did not keep the completed city playable');
+            assert.equal(current.cityId,chapterIds[chapter]);
+            await send('Page.reload');
+            current=await until(s=>ready(s)&&s.progress.requiredCompleted===12&&!s.completion&&s.completionEntryVisible,
+                'Completed save interrupted the returning player');
+            assert.equal(current.welcome.visible,false);
+            assert.ok(current.clue.includes('都找齐了'));
+            assert.ok(current.completionEntryBounds.bottom<current.trayBounds.top,'Journey entry covers completed journal cards');
+            await screenshot(`basic_city_${chapter+1}_restored.png`);
+            chapters.push({cityId:current.cityId,collectedIds:collected,openedCovers:reveals,
+                residents:current.npcs.length,sceneLayers:current.sceneLayers,
+                completedSaveRestoredWithoutModal:true,stayPlayable:true});
+            if(chapter<chapterIds.length-1){
+                await click(current.completionEntry);
+                current=await until(s=>s.completion,'Journey entry did not open');
+                const next=await evaluate(`(()=>{${context}return screen(manager.ui.nextButton);})()`);
+                await click(next);
+                await until(s=>ready(s)&&s.cityId===chapterIds[chapter+1],'Next city did not load',200);
+            }
+            console.log(JSON.stringify({stage:'basic_city_verified',city:chapter+1,targets:collected.length,reveals:reveals.length}));
+        }
+        const savedJourney=await evaluate("JSON.parse(localStorage.getItem('chriken_living_city_v1_save_v1'))");
+        assert.ok(chapterIds.every(id=>savedJourney.unlockedCityIds.includes(id)));
+        const legacy=structuredClone(savedJourney),first=chapterIds[0];
+        const oldBlueprint=JSON.parse(fs.readFileSync('art/production/target_reduction_v16/baseline_blueprint_v15.json'));
+        const kept=expectedFirstBlueprint.hiddenObjectSlots.slice(0,3).map(item=>item.id);
+        const retired=oldBlueprint.hiddenObjectSlots.filter(t=>!expectedFirstBlueprint.hiddenObjectSlots.some(k=>k.id===t.id)).map(t=>t.id);
+        legacy.currentCityId=first;
+        legacy.cities[first].foundHiddenObjectIds=[...kept,...retired];
+        legacy.cities[first].completedTaskIds=oldBlueprint.hiddenObjectSlots.map(t=>`find_${t.id}`);
+        await evaluate(`(()=>{localStorage.setItem('chriken_living_city_v1_save_v1',${JSON.stringify(JSON.stringify(legacy))});return true;})()`);
+        await send('Page.reload');
+        current=await until(s=>ready(s)&&s.progress.requiredCompleted===3,'Partial legacy save did not restore 3/12');
+        assert.equal(current.welcome.visible,false);
+        assert.equal(current.completion,false);
+        const migrated=await evaluate("JSON.parse(localStorage.getItem('chriken_living_city_v1_save_v1'))");
+        assert.deepEqual(migrated.unlockedCityIds,legacy.unlockedCityIds);
+        for(const id of chapterIds.slice(1))assert.deepEqual(migrated.cities[id],legacy.cities[id]);
+        await screenshot('basic_legacy_partial_3_of_12.png');
+        assert.deepEqual(errors,[]);assert.deepEqual(warnings,[]);assert.deepEqual(failedRequests,[]);
+        const report={status:'passed',scope:'basic_loop_v18',samples,selectionProof,chapters,savedJourney,
+            totalUniqueCollected:chapters.reduce((sum,c)=>sum+c.collectedIds.length,0),
+            totalReveals:chapters.reduce((sum,c)=>sum+c.openedCovers.length,0),
+            dragDidNotCollect:true,welcomeAllowsDragAndPreventsTapThrough:true,
+            firstPickupSaved:true,legacyPartialRestored:3,otherCitiesAndUnlocksPreserved:true,
+            errors,warnings,failedRequests,wechat:'not_run'};
+        fs.writeFileSync(path.join(out,'basic_loop_report.json'),JSON.stringify(report,null,2)+'\n');
+        console.log(JSON.stringify({status:'passed',scope:report.scope,collections:report.totalUniqueCollected,
+            reveals:report.totalReveals,report:path.join(out,'basic_loop_report.json')}));
+    }else if(process.argv.includes('--staging-only')){
         await until(s=>s.sceneLayers===s.expectedLayers&&s.targets.every(t=>t.loaded),'Staging assets not ready');
         const samples=[];
         for(const [width,height] of [[444,960],[360,780]]){
@@ -1383,14 +1671,17 @@ try {
         current=await until(s=>s.completion,'Completion did not open');
         assert.equal(current.progress.allRequiredComplete,true);
         assert.equal(current.completionArtReady,true);
-        assert.ok(current.completionText.includes(`第 ${chapter+1} 关 / 共 3 关`));
+        assert.ok(current.completionText.includes(`第 ${chapter+1} 站 · 共 3 站`));
         await screenshot(`chapter_${chapter+1}_completed.png`);
         reports.chapters.push(result);
         await send('Page.reload');
-        current=await until(s=>s.ready&&s.cityId===cityId&&s.stickers.length===s.expectedTargets&&s.stickers.every(c=>c.collected&&c.loaded)&&s.completion,
+        current=await until(s=>s.ready&&s.cityId===cityId&&s.stickers.length===s.expectedTargets&&
+            s.stickers.every(c=>c.collected&&c.loaded)&&!s.completion&&s.completionEntryVisible,
             'Completed chapter save did not restore');
         assert.equal(current.progress.requiredCompleted,result.targets);assert.equal(current.flights,0);
         assert.equal(current.completionArtReady,true,'Restored chapter completion PNGs did not load');
+        await click(current.completionEntry);
+        current=await until(s=>s.completion,'Restored journey entry did not reopen completion');
         if(chapter<chapterIds.length-1) {
             point=await evaluate(`(()=>{${context}return screen(manager.ui.nextButton);})()`);
             await click(point);

@@ -111,6 +111,8 @@ export class MapBrowserDemo extends Component {
     private stickerPageLabel: Label | null = null;
     private stickerPage = 0;
     private selectedStickerId: string | null = null;
+    private welcomePrompt: Node | null = null;
+    private welcomeSeconds = 0;
     private missedTapFeedback: Node | null = null;
     private blocksExternalInput: ((x: number, y: number) => boolean) | null = null;
     private readonly stickerCards = new Map<string, StickerCard>();
@@ -189,7 +191,10 @@ export class MapBrowserDemo extends Component {
         const chickens = config.chickens.map(chicken => this.createChicken(sceneDepth, chicken, mapSize));
         if (this.isLivingCity) {
             this.livingGreybox = new LivingCityGreybox(map, sceneDepth, artBundle,
-                objects.map(object => object.node), focus => this.controller?.focusAt(focus.x, focus.y),
+                objects.map(object => object.node), focus => {
+                    this.controller?.focusAt(focus.x, focus.y);
+                    this.offerFirstFind();
+                },
                 config.sceneBlueprint, config.cityId, {
                     hasFoundTarget: id => this.foundHiddenObjectIds.has(id),
                     hasDiscovery: id => this.sceneDiscoveryIds.has(id),
@@ -260,7 +265,12 @@ export class MapBrowserDemo extends Component {
                     for (const action of interaction.config.actions) this.interactions.get(action.objectId)?.setState(action.state);
                     this.applyInteractionVisibility(objects);
                     this.hintManager?.clear();
-                    if (this.stickerClueLabel) this.stickerClueLabel.string = '好像有点东西露出来了。';
+                    const revealed = config.hiddenObjects.find(item => item.visibleCondition?.objectId === hit.id &&
+                        !this.foundHiddenObjectIds.has(item.id));
+                    if (revealed) this.showStickerClue(revealed.id);
+                    if (this.stickerClueLabel) this.stickerClueLabel.string = revealed
+                        ? `${revealed.displayName ?? revealed.id}露出来了，点一下收进手账。`
+                        : '打开了，再仔细看看里面。';
                     this.onProgress?.(this.taskManager!.getProgress());
                     return;
                 }
@@ -285,11 +295,13 @@ export class MapBrowserDemo extends Component {
             }
             const update = this.taskManager?.handleTargetClicked(hit);
             if (update?.completedTaskIds.length) this.renderTaskPanel();
+            if (newlyDiscovered && hit.type === 'hiddenObject') this.hideWelcomePrompt();
             if (update?.completedTaskIds.length) this.conversations?.dismiss();
             if (update && (newlyDiscovered || update.completedTaskIds.length)) this.onProgress?.(update.progress);
-        }, (x, y) => isBlocked(x, y) || (this.stickers.length > STICKERS_PER_PAGE &&
+        }, (x, y) => isBlocked(x, y) || this.isOverWelcomePrompt(x, y) || (this.stickers.length > STICKERS_PER_PAGE &&
             (this.collectionFlights.size > 0 || this.collectionLandingAnimations > 0)),
         (x, y) => this.showMissedTapFeedback(x, y));
+        this.createWelcomePrompt();
         this.resizeDisplay();
     }
 
@@ -300,6 +312,10 @@ export class MapBrowserDemo extends Component {
     }
 
     protected lateUpdate(deltaTime: number): void {
+        if (this.welcomePrompt?.active) {
+            this.welcomeSeconds += Math.max(0, deltaTime);
+            if (this.welcomeSeconds >= 16) this.hideWelcomePrompt();
+        }
         this.livingGreybox?.update(deltaTime);
         this.teaEvent?.update(deltaTime);
         this.sceneDepth?.sort();
@@ -406,6 +422,8 @@ export class MapBrowserDemo extends Component {
         this.collectionLandingAnimations = 0;
         this.collectionCompletionCallbacks.length = 0;
         this.stickerCards.clear();
+        if (this.welcomePrompt?.isValid) this.welcomePrompt.destroy();
+        this.welcomePrompt = null;
         this.stickerPageLabel = null;
         if (this.missedTapFeedback?.isValid) {
             const opacity = this.missedTapFeedback.getComponent(UIOpacity);
@@ -455,6 +473,7 @@ export class MapBrowserDemo extends Component {
         this.controller?.resizeIfNeeded();
         this.hintPanel?.resize();
         this.conversations?.resize();
+        this.layoutWelcomePrompt(size);
         const panel = this.taskPanel;
         const graphics = this.taskPanelGraphics;
         if (!panel || !graphics) return;
@@ -589,8 +608,11 @@ export class MapBrowserDemo extends Component {
                     sticker.id === this.selectedStickerId);
                 if (completed && sticker.id === this.selectedStickerId && !this.collectionFlights.has(sticker.id)) {
                     this.selectedStickerId = null;
-                    if (this.stickerClueLabel) this.stickerClueLabel.string = `${sticker.name}已找到，收入贴纸册啦`;
+                    if (this.stickerClueLabel) this.stickerClueLabel.string = `${sticker.name}已收进手账，接着慢慢找。`;
                 }
+            }
+            if (progress.allRequiredComplete && this.stickerClueLabel) {
+                this.stickerClueLabel.string = '小东西都找齐了，可以再逛一会儿。';
             }
             return;
         }
@@ -619,7 +641,7 @@ export class MapBrowserDemo extends Component {
         clue.horizontalAlign = Label.HorizontalAlign.LEFT;
         clue.verticalAlign = Label.VerticalAlign.CENTER;
         clue.overflow = Label.Overflow.SHRINK;
-        clue.string = '轻点物品看线索';
+        clue.string = '点卡片看线索，卡住时点「帮我找」。';
         this.stickerClueLabel = clue;
 
         const pageNode = new Node('StickerPages');
@@ -955,8 +977,86 @@ export class MapBrowserDemo extends Component {
             state.config.targetId === id && state.completed);
         this.selectedStickerId = found ? null : id;
         this.renderTaskPanel();
-        this.stickerClueLabel.string = found ? `${sticker.name}已找到，收入贴纸册啦`
+        this.stickerClueLabel.string = found ? this.taskManager?.getProgress().allRequiredComplete
+            ? '小东西都找齐了，可以再逛一会儿。' : `${sticker.name}已收进手账，接着慢慢找。`
             : `${sticker.name}：${sticker.clue}`;
+    }
+
+    /** A short, optional introduction. Found IDs already distinguish returning players. */
+    private createWelcomePrompt(): void {
+        if (this.cityConfig?.cityId !== 'living_city_street_block_01' || this.foundCount > 0) return;
+        const prompt = new Node('ExplorationWelcome');
+        this.node.addChild(prompt);
+        prompt.addComponent(UITransform);
+        generatedUi(prompt, 'ui_journal_card_v17', this.artBundle!).color = new Color(249, 243, 226, 245);
+        const titleNode = new Node('WelcomeTitle');
+        prompt.addChild(titleNode);
+        titleNode.addComponent(UITransform);
+        const title = titleNode.addComponent(Label);
+        title.string = `${this.cityConfig.cityName} · 找回 ${this.stickers.length} 件小东西`;
+        title.isBold = true;
+        title.color = new Color(75, 54, 39, 255);
+        title.horizontalAlign = Label.HorizontalAlign.CENTER;
+        title.verticalAlign = Label.VerticalAlign.CENTER;
+        title.overflow = Label.Overflow.SHRINK;
+        const bodyNode = new Node('WelcomeBody');
+        prompt.addChild(bodyNode);
+        bodyNode.addComponent(UITransform);
+        const body = bodyNode.addComponent(Label);
+        body.string = '拖动逛街，双指缩放；点物品收集。\n不计时，点手账卡片看线索。';
+        body.color = new Color(105, 83, 62, 255);
+        body.horizontalAlign = Label.HorizontalAlign.CENTER;
+        body.verticalAlign = Label.VerticalAlign.CENTER;
+        body.overflow = Label.Overflow.SHRINK;
+        this.welcomePrompt = prompt;
+        this.welcomeSeconds = 0;
+    }
+
+    private layoutWelcomePrompt(size: Size): void {
+        const prompt = this.welcomePrompt;
+        if (!prompt) return;
+        const portrait = size.height > size.width;
+        const width = portrait ? size.width - 36 : Math.min(540, size.width - 36);
+        const height = portrait ? width * 0.22 : 108;
+        prompt.getComponent(UITransform)?.setContentSize(width, height);
+        prompt.setPosition(portrait ? 0 : size.width / 2 - width / 2 - 18,
+            size.height / 2 - (portrait ? size.width * 0.14 : 18) - height / 2, 0);
+        const title = prompt.getChildByName('WelcomeTitle')!;
+        title.setPosition(0, height * 0.27, 0);
+        title.getComponent(UITransform)?.setContentSize(width * 0.91, height * 0.29);
+        const titleLabel = title.getComponent(Label)!;
+        titleLabel.fontSize = portrait ? width * 0.042 : 24;
+        titleLabel.lineHeight = portrait ? width * 0.05 : 30;
+        const body = prompt.getChildByName('WelcomeBody')!;
+        body.setPosition(0, -height * 0.16, 0);
+        body.getComponent(UITransform)?.setContentSize(width * 0.91, height * 0.54);
+        const bodyLabel = body.getComponent(Label)!;
+        bodyLabel.fontSize = portrait ? width * 0.038 : 19;
+        bodyLabel.lineHeight = portrait ? width * 0.046 : 25;
+    }
+
+    private hideWelcomePrompt(): void {
+        if (this.welcomePrompt) this.welcomePrompt.active = false;
+    }
+
+    /** The paper can be dragged across, but taps must not collect art hidden behind it. */
+    private isOverWelcomePrompt(uiX: number, uiY: number): boolean {
+        const prompt = this.welcomePrompt;
+        const transform = prompt?.getComponent(UITransform);
+        if (!prompt?.activeInHierarchy || !transform) return false;
+        const point = transform.convertToNodeSpaceAR(new Vec3(uiX, uiY, 0));
+        return Math.abs(point.x) <= transform.width / 2 && Math.abs(point.y) <= transform.height / 2;
+    }
+
+    /** Offer one existing, uncovered object, without changing its ID, placement or task. */
+    private offerFirstFind(): void {
+        if (this.disposed || this.cityConfig?.cityId !== 'living_city_street_block_01' ||
+            this.foundCount > 0 || this.selectedStickerId) return;
+        const item = this.cityConfig.hiddenObjects.find(target => target.targetable && !target.visibleCondition);
+        if (!item) return;
+        this.showStickerClue(item.id);
+        this.controller?.focusAt((item.x - 0.5) * this.cityConfig.mapSize.width,
+            (item.y - 0.5) * this.cityConfig.mapSize.height);
     }
 
     private attachStickerInput(): void {

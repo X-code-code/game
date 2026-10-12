@@ -49,7 +49,7 @@ export class HintPanel {
         button.addChild(caption);
         caption.addComponent(UITransform).setContentSize(150, 60);
         const label = caption.addComponent(Label);
-        label.string = '提示';
+        label.string = streetCompact ? '帮我找' : '提示';
         label.fontSize = 30;
         label.lineHeight = 38;
         label.color = new Color(75, 54, 39, 255);

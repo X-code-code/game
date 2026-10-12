@@ -103,7 +103,7 @@ function fixture(snapshot, blocked = () => false, suppliedConfig = null) {
         interactiveObjects: pairs.map(([, id]) => ({ id, initialState: 'closed', tags: [],
             actions: [{ objectId: id, state: 'opened' }] })) };
     let reports = 0, misses = 0;
-    Object.assign(view, { createTaskPanel() {}, resizeDisplay() {}, renderTaskPanel() {},
+    Object.assign(view, { createTaskPanel() {}, createWelcomePrompt() {}, resizeDisplay() {}, renderTaskPanel() {},
         startCollectionFlight() {}, showMissedTapFeedback() { misses++; },
         createObject(_depth, item) {
             const index = entities.length, entity = { node: new Node(item.id), isValid: true,

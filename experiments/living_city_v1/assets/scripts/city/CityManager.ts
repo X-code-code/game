@@ -31,7 +31,7 @@ export class CityManager extends Component {
         this.current.root.active = true;
         this.persist(() => this.save?.setCurrentCity(initial.config.cityId));
         this.ui.root.setSiblingIndex(this.node.children.length - 1);
-        this.checkCompletion();
+        this.checkCompletion(false);
     }
 
     protected update(): void {
@@ -85,7 +85,7 @@ export class CityManager extends Component {
         staged.root.active = true;
         this.ui?.reset();
         this.ui?.root.setSiblingIndex(this.node.children.length - 1);
-        this.checkCompletion();
+        this.checkCompletion(false);
     }
 
     private prepare(content: LoadedCity): CityInstance {
@@ -115,14 +115,17 @@ export class CityManager extends Component {
         }
     }
 
-    private checkCompletion(): void {
+    private checkCompletion(openModal = true): void {
         const current = this.current;
         if (this.completionShown || !current?.view.progress.allRequiredComplete) return;
         this.completionShown = true;
         this.recordProgress(current);
         this.persist(() => this.save?.recordCityCompletion(current.content.config.cityId,
             current.content.config.nextCityId));
-        this.showCompletion();
+        // Restoring a finished street should let the player keep strolling.
+        // A new final pickup still opens its celebration after the item lands.
+        if (openModal) this.showCompletion();
+        else this.ui?.close();
     }
 
     private recordProgress(instance: CityInstance): void {
